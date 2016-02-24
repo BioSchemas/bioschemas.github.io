@@ -76,7 +76,7 @@ h2 {
   padding-bottom: 5px;
   padding-top: 0.75em;
   font-size: 26px;
-  color: #777;
+  color: #888;
 }
 
 h3 {
@@ -236,21 +236,20 @@ hr {
 }
 
 table {
-  border: 1px solid #373737;
+  border: 1px solid #888;
   margin-bottom: 20px;
   text-align: left;
  }
 
 th {
-  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 10px;
-  background: #777;
+  background: #888;
   color: #fff;
  }
 
 td {
   padding: 10px;
-  border: 1px solid #373737;
+  border: 1px solid #888;
   vertical-align: top;
  }
 
