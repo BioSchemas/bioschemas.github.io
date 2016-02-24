@@ -72,7 +72,7 @@ h1 {
 }
 
 h2 {
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   font-size: 26px;
 }
 
@@ -292,6 +292,7 @@ Full-Width Styles
   background: -ms-linear-gradient(top, #373737, #212121);
   background: -o-linear-gradient(top, #373737, #212121);
   background: linear-gradient(top, #373737, #212121);
+  background: #2bb673;
 }
 
 #header_wrap .inner {
