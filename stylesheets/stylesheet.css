@@ -74,6 +74,7 @@ h1 {
 h2 {
   padding-bottom: 5px;
   font-size: 26px;
+  color: #777;
 }
 
 h3 {
@@ -304,7 +305,7 @@ Full-Width Styles
   color: #fff;
   font-size: 42px;
   font-weight: 700;
-  text-shadow: #111 0px 0px 10px;
+  /*text-shadow: #111 0px 0px 10px;*/
 }
 
 #project_tagline {
@@ -365,7 +366,7 @@ Full-Width Styles
 }
 
 #footer_wrap {
-  background: #212121;
+  background: #0b794b;
 }
 
 
