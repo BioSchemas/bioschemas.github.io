@@ -73,6 +73,7 @@ h1 {
 
 h2 {
   padding-bottom: 5px;
+  padding-top: 1.5em;
   font-size: 26px;
   color: #777;
 }
@@ -242,7 +243,7 @@ table {
 th {
   font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 10px;
-  background: #373737;
+  background: #0b794b;
   color: #fff;
  }
 
