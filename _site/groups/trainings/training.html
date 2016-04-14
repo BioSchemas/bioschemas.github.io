@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+  <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+  			BioSchemas - Training Material Group
+  		
+  </title>
+  <meta name="description" content="BioSchemas relies and extends from schema.org and aims to reuse existing  standards and reach consensus among a wide number of life sciences organizations and communities.
+">
+
+  <link rel="icon" type="icon/png" href="/images/favicon.png">
+  <link rel="stylesheet" href="/css/stylesheet.css">
+  <link rel="canonical" href="http://bioschemas.org/groups/trainings/training.html">
+  <link rel="alternate" type="application/rss+xml" title="BioSchemas" href="http://bioschemas.org/feed.xml">
+</head>
+
+
+    <body>
+
+        <a name="top"></a>
+
+<div itemscope itemtype="http://schema.org/Organization">
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+
+            <meta itemprop="name" content="BioSchemas" />
+            <meta itemprop="url" content="http://bioschemas.org" />
+            <a itemprop="sameAs" id="forkme_banner" href="https://github.com/BioSchemas">GitHub</a>
+            <a itemprop="sameAs" id="twitter_banner" href="https://twitter.com/bioschemas">Twitter</a>
+
+
+          <a href="/index.html"><img itemprop="logo" class="rotation" src="/images/square_logo2.png" alt="BioSchemas" style="width: 15%; height: 15%;"></a>
+          <a href="/index.html"><img src="/images/name_big.png" alt="BioSchemas" style="width: 59%; height: 59%;"></a>
+
+        </header>
+    </div>
+</div>
+        <div class="trigger">
+  <div class="trigger_links">
+    <a href="/about/index.html" class="page-link"><div class="nav_buttons">About Us</div></a>
+    <a href="/groups/index.html" class="page-link"><div class="nav_buttons" id="nav_active">Groups</div></a>
+    <a href="/howtojoin/index.html" class="page-link"><div class="nav_buttons">Joining</div></a>
+    <a href="/meetings/index.html" class="page-link"><div class="nav_buttons">Meetings</div></a>
+    <a href="/review/index.html" class="page-link"><div class="nav_buttons">Review</div></a>
+    <a href="/examples/index.html" class="page-link"><div class="nav_buttons">Examples</div></a>
+    <a href="/projects/index.html" class="page-link"><div class="nav_buttons">Projects</div></a>
+  </div>
+
+    <div id="mobile_cont">
+
+    <div class="mobile_nav">
+        <a id="hamb_menu"><img src="/images/menu-alt-512.png" alt="Menu"></a>
+    </div>
+
+    <div id="mobile_links">
+        <a href="/about/index.html" class="page-link"><div class="mobile_buttons">About Us</div></a>
+        <a href="/groups/index.html" class="page-link"><div class="mobile_buttons">Groups</div></a>
+        <a href="/howtojoin/index.html" class="page-link"><div class="mobile_buttons">Joining</div></a>
+        <a href="/meetings/index.html" class="page-link"><div class="mobile_buttons">Meetings</div></a>
+        <a href="/review/index.html" class="page-link"><div class="mobile_buttons">Review</div></a>
+        <a href="/examples/index.html" class="page-link"><div class="mobile_buttons">Examples</div></a>
+        <a href="/projects/index.html" class="page-link"><div class="mobile_buttons">Projects</div></a>
+    </div>
+
+</div>
+
+</div>
+
+
+
+        <div class="page-content">
+            <div class="wrapper">
+                <div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
+
+    	<h1>Training Material Group</h1>
+
+    	<p>The BioSchemas Training Material Group develops and mantains a community specification for describing training materials in biosciences available on the internet.</p>
+
+        <p>Training materials tend to be dispersed in an unstructured way around the Internet. They are mainly available off manually crafted web pages with a general lack of programmatic interfaces. Even though some training material providers make efforts to curate and structure their content, materials are still not described in a consistent manner that would make them easy to discover, exchange or compare programmatically.</p>
+
+    	<h2>Purpose</h2>
+
+    	<ul>
+    		<li>To develop a common schema to facilitate the description and dissemination of life science training material, using <a href="http://schema.org/">schema.org</a>.</li>
+    		<li>To define a set of metadata and vocabularies, built on top of existing technologies and standards, that can be used to represent training materials in web pages and applications.</li>
+    		<li>To make it easier to discover, exchange and integrate life science training material information across the internet.</li>
+    	</ul>
+
+    	<h2>Specifications</h2>
+
+    	<p>The current specifications can be found in the <a href="https://docs.google.com/document/d/1HG2fEjCoDUE4tn1XZ_ZIeWLEFXnI3YtS_FRIIFIbv-s/edit">Training Material Specification</a> document, or you can check the entire list of <a href="full_training.html">BioSchemas Training Material properties</a>. Usage examples can be found on the <a href="/examples/index.html#training">Examples</a> page.</p>
+
+        <div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Expected Type</th>
+                        <th>Description</th>
+                        <th>Cardinality</th>
+                        <th>Content Guideline</th>
+                        <th>Controlled Vocabulary</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>level</td>
+                        <td>Text</td>
+                        <td>Difficulty level; level of experience of users in the subject.</td>
+                        <td>One</td>
+                        <td class="ex_rec">Recommended</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>pid</td>
+                        <td>Text</td>
+                        <td>Permanent identifier, such as DOIs.</td>
+                        <td>One</td>
+                        <td class="ex_opt">Optional</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    	<h2>Membership</h2>
+
+    	<p>This group is open to any organization or individual willing to contribute to the goals of this group. To become a member please send an email to <a href="mailto:training-material@bioschemas.org">training-material@bioschemas.org</a>.</p>
+
+    	<h3>Chair</h3>
+
+    	<ul>
+    		<li><a href="https://github.com/anenadic">Aleksandra Nenadic</a></li>
+    	</ul>
+
+    	<h3>Members</h3>
+
+    	<ul>
+    		<li><a href="https://github.com/anenadic">Aleksandra Nenadic</a></li>
+    		<li><a href="https://github.com/gr231">Gabriella Rustici</a></li>
+    		<li><a href="https://github.com/CarlosHorro">Carlos Horro</a></li>
+    		<li><a href="https://github.com/martin-nc">Martin Cook</a></li>
+    		<li><a href="https://github.com/njall">Niall Beard</a></li>
+    		<li><a href="https://github.com/rajido">Rafael C Jimenez</a></li>
+    	</ul>
+
+    	<h2>Communication</h2>
+
+    	<p>Use the <a href="mailto:training-material@bioschemas.org">training-material@bioschemas.org</a> mailing list for internal and external communication. You can apply to join this mailing list or see previous messages on the <a href="https://groups.google.com/a/bioschemas.org/forum/#!forum/training-material">Google group Training Material</a> web page.</p>
+    	<p>Tasks and issues related to this group are available in GitHub issues section tagged with "<a href="https://github.com/BioSchemas/bioschemas/labels/type%3A%20training%20material">type: training material</a>".</p>
+    	<p>This group has regular calls as well as face to face meetings with the rest of BioSchemas groups. These can be followed on the <a href="/meetings/index.html">Meetings</a> page.</p>
+
+    </section>
+</div>
+
+            </div>
+        </div>
+
+        <div class="inner footer_buttons">
+
+    <div class="inner footer_links">
+
+        <a href="#top" id="top_link"><div>Top &#9650;</div></a>
+
+    </div>
+
+    <div class="inner footer_links">
+
+        <a href="/groups/index.html" id="back_groups"><div>&#9668; Groups</div></a>
+
+    </div>
+
+</div>
+
+<div itemscope itemtype="http://schema.org/Organization">
+    <div id="footer_wrap" class="outer">
+        <footer class="inner">
+
+            <meta itemprop="name" content="BioSchemas" />
+            <meta itemprop="url" content="http://bioschemas.org" />
+            <img itemprop="logo" class="img_bottom rotation" src="/images/square_logo2.png" alt="BioSchemas">
+            <p class="p_bottom">Hugs &amp; bugs: <a href="mailto:all@bioschemas.org"><span itemprop="email">all@bioschemas.org</span></a></p>
+            <p class="p_bottom">&copy; 2016</p>
+
+
+        </footer>
+    </div>
+</div>
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+        <script src="/js/scripts.js"></script>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+  <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+  			BioSchemas - Training Material Properties
+  		
+  </title>
+  <meta name="description" content="BioSchemas relies and extends from schema.org and aims to reuse existing  standards and reach consensus among a wide number of life sciences organizations and communities.
+">
+
+  <link rel="icon" type="icon/png" href="/images/favicon.png">
+  <link rel="stylesheet" href="/css/stylesheet.css">
+  <link rel="canonical" href="http://bioschemas.org/groups/trainings/full_training.html">
+  <link rel="alternate" type="application/rss+xml" title="BioSchemas" href="http://bioschemas.org/feed.xml">
+</head>
+
+
+    <body>
+
+        <a name="top"></a>
+
+<div itemscope itemtype="http://schema.org/Organization">
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+
+            <meta itemprop="name" content="BioSchemas" />
+            <meta itemprop="url" content="http://bioschemas.org" />
+            <a itemprop="sameAs" id="forkme_banner" href="https://github.com/BioSchemas">GitHub</a>
+            <a itemprop="sameAs" id="twitter_banner" href="https://twitter.com/bioschemas">Twitter</a>
+
+
+          <a href="/index.html"><img itemprop="logo" class="rotation" src="/images/square_logo2.png" alt="BioSchemas" style="width: 15%; height: 15%;"></a>
+          <a href="/index.html"><img src="/images/name_big.png" alt="BioSchemas" style="width: 59%; height: 59%;"></a>
+
+        </header>
+    </div>
+</div>
+        <div class="trigger">
+  <div class="trigger_links">
+    <a href="/about/index.html" class="page-link"><div class="nav_buttons">About Us</div></a>
+    <a href="/groups/index.html" class="page-link"><div class="nav_buttons" id="nav_active">Groups</div></a>
+    <a href="/howtojoin/index.html" class="page-link"><div class="nav_buttons">Joining</div></a>
+    <a href="/meetings/index.html" class="page-link"><div class="nav_buttons">Meetings</div></a>
+    <a href="/review/index.html" class="page-link"><div class="nav_buttons">Review</div></a>
+    <a href="/examples/index.html" class="page-link"><div class="nav_buttons">Examples</div></a>
+    <a href="/projects/index.html" class="page-link"><div class="nav_buttons">Projects</div></a>
+  </div>
+
+    <div id="mobile_cont">
+
+    <div class="mobile_nav">
+        <a id="hamb_menu"><img src="/images/menu-alt-512.png" alt="Menu"></a>
+    </div>
+
+    <div id="mobile_links">
+        <a href="/about/index.html" class="page-link"><div class="mobile_buttons">About Us</div></a>
+        <a href="/groups/index.html" class="page-link"><div class="mobile_buttons">Groups</div></a>
+        <a href="/howtojoin/index.html" class="page-link"><div class="mobile_buttons">Joining</div></a>
+        <a href="/meetings/index.html" class="page-link"><div class="mobile_buttons">Meetings</div></a>
+        <a href="/review/index.html" class="page-link"><div class="mobile_buttons">Review</div></a>
+        <a href="/examples/index.html" class="page-link"><div class="mobile_buttons">Examples</div></a>
+        <a href="/projects/index.html" class="page-link"><div class="mobile_buttons">Projects</div></a>
+    </div>
+
+</div>
+
+</div>
+
+
+
+        <div class="page-content">
+            <div class="wrapper">
+                <div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
+
+        <h1>Training Material Properties</h1>
+
+        <p>Here you can find all BioSchemas Training Material new properties, as well as existent schema.org Training Material properties and properties inherited from the Thing specification.</p>
+
+        <h2 class="groups_h">Proposed new properties for the Training Material type</h2>
+
+        <div>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Expected Type</th>
+                    <th>Description</th>
+                    <th>Cardinality</th>
+                    <th>Content Guideline</th>
+                    <th>Controlled Vocabulary</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>level</td>
+                    <td>Text</td>
+                    <td>Difficulty level; level of experience of users in the subject.</td>
+                    <td>One</td>
+                    <td class="ex_rec">Recommended</td>
+                    <td>Yes</td>
+                </tr>
+
+                <tr>
+                    <td>pid</td>
+                    <td>Text</td>
+                    <td>Permanent identifier, such as DOIs.</td>
+                    <td>One</td>
+                    <td class="ex_opt">Optional</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <h2 class="groups_h">Properties inherited from schema.org/CreativeWork</h2>
+
+        <div>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Expected Type</th>
+                    <th>Description</th>
+                    <th>Cardinality</th>
+                    <th>Content Guideline</th>
+                    <th>Controlled Vocabulary</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>about</td>
+                    <td>Thing</td>
+                    <td>The subject matter of the content.</td>
+                    <td>One</td>
+                    <td class="ex_min">Minimum</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>audience</td>
+                    <td>Audience</td>
+                    <td>An intended audience, i.e. a group for whom something was created.</td>
+                    <td>Many</td>
+                    <td class="ex_min">Minimum</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>dateModified</td>
+                    <td>Date or DateTime</td>
+                    <td>The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.</td>
+                    <td>One</td>
+                    <td class="ex_min">Minimum</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>genre</td>
+                    <td>Text or URL</td>
+                    <td>Genre of the creative work or group.</td>
+                    <td>Many</td>
+                    <td class="ex_min">Minimum</td>
+                    <td>Yes</td>
+                </tr>
+
+                <tr>
+                    <td>author</td>
+                    <td>Person or Organization</td>
+                    <td>The author of this content.</td>
+                    <td>Many</td>
+                    <td class="ex_rec">Recommended</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>contributor</td>
+                    <td>Person or Organization</td>
+                    <td>A secondary contributor to the CreativeWork.</td>
+                    <td>Many</td>
+                    <td class="ex_rec">Recommended</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>keywords</td>
+                    <td>Text</td>
+                    <td>Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.</td>
+                    <td>Many</td>
+                    <td class="ex_rec">Recommended</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>license</td>
+                    <td>URL or CreativeWork</td>
+                    <td>A license document that applies to this content, typically indicated by URL.</td>
+                    <td>One</td>
+                    <td class="ex_rec">Recommended</td>
+                    <td>Yes</td>
+                </tr>
+
+                <tr>
+                    <td>aggregateRating</td>
+                    <td>AggregateRating</td>
+                    <td>The overall rating, based on a collection of reviews or ratings, of the item.</td>
+                    <td>One</td>
+                    <td class="ex_opt">Optional</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>dateCreated</td>
+                    <td>Date or DateTime</td>
+                    <td>The date on which the CreativeWork was created or the item was added to a DataFeed.</td>
+                    <td>One</td>
+                    <td class="ex_opt">Optional</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>hasPart</td>
+                    <td>CreativeWork</td>
+                    <td>Indicates a CreativeWork that is (in some sense) a part of this CreativeWork.</td>
+                    <td>Many</td>
+                    <td class="ex_opt">Optional</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>inLanguage</td>
+                    <td>Text or Language</td>
+                    <td>The language of the content or performance or used in an action, using one of the language codes from the IETF BCP 47 standard.</td>
+                    <td>One</td>
+                    <td class="ex_opt">Optional</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>isPartOf</td>
+                    <td>CreativeWork</td>
+                    <td>Indicates a CreativeWork that this CreativeWork is (in some sense) part of.</td>
+                    <td>Many</td>
+                    <td class="ex_opt">Optional</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>learningResourceType</td>
+                    <td>Text</td>
+                    <td>The predominant type or kind characterizing the learning resource (e.g. presentation, handout).</td>
+                    <td>Many</td>
+                    <td class="ex_opt">Optional</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>mentions</td>
+                    <td>Thing</td>
+                    <td>Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.</td>
+                    <td>Many</td>
+                    <td class="ex_opt">Optional</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>review</td>
+                    <td>Review</td>
+                    <td>A review of the item.</td>
+                    <td>Many</td>
+                    <td class="ex_opt">Optional</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>timeRequired</td>
+                    <td>Duration</td>
+                    <td>Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience (e.g. "P30M", "P1H25M").</td>
+                    <td>One</td>
+                    <td class="ex_opt">Optional</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>version</td>
+                    <td>Number</td>
+                    <td>The version of the CreativeWork embodied by a specified resource.</td>
+                    <td>One</td>
+                    <td class="ex_opt">Optional</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <h2 class="groups_h">Properties inherited from schema.org/Thing</h2>
+
+        <div>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Expected Type</th>
+                    <th>Description</th>
+                    <th>Cardinality</th>
+                    <th>Content Guideline</th>
+                    <th>Controlled Vocabulary</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>name</td>
+                    <td>Text</td>
+                    <td>The name of the item.</td>
+                    <td>One</td>
+                    <td class="ex_min">Minimum</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>description</td>
+                    <td>Text</td>
+                    <td>A short description of the item.</td>
+                    <td>One</td>
+                    <td class="ex_rec">Recommended</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td>URL</td>
+                    <td>URL of the item.</td>
+                    <td>Many</td>
+                    <td class="ex_rec">Recommended</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>sameAs</td>
+                    <td>URL</td>
+                    <td>URL of a reference web page that unambiguously indicates the item's identity (e.g. the URL of the item's Wikipedia page, Freebase page or official website).</td>
+                    <td>One</td>
+                    <td class="ex_opt">Optional</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+            </div>
+        </div>
+
+        <div class="inner footer_buttons">
+
+    <div class="inner footer_links">
+
+        <a href="#top" id="top_link"><div>Top &#9650;</div></a>
+
+    </div>
+
+    <div class="inner footer_links">
+
+        <a href="/groups/index.html" id="back_groups"><div>&#9668; Groups</div></a>
+
+    </div>
+
+</div>
+
+<div itemscope itemtype="http://schema.org/Organization">
+    <div id="footer_wrap" class="outer">
+        <footer class="inner">
+
+            <meta itemprop="name" content="BioSchemas" />
+            <meta itemprop="url" content="http://bioschemas.org" />
+            <img itemprop="logo" class="img_bottom rotation" src="/images/square_logo2.png" alt="BioSchemas">
+            <p class="p_bottom">Hugs &amp; bugs: <a href="mailto:all@bioschemas.org"><span itemprop="email">all@bioschemas.org</span></a></p>
+            <p class="p_bottom">&copy; 2016</p>
+
+
+        </footer>
+    </div>
+</div>
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+        <script src="/js/scripts.js"></script>
+
+
+    </body>
+
+</html>
