@@ -400,6 +400,11 @@ GitHub Button
     text-decoration: none;
 }
 
+#forkme_banner:active {
+    background-color: rgb(29, 95, 226);
+    text-decoration: none;
+}
+
 /*******************************************************************************
 Twitter Button
 *******************************************************************************/
@@ -423,6 +428,12 @@ Twitter Button
 }
 
 #twitter_banner:hover {
+    background-color: rgb(28, 150, 202);
+    background-size: 35% 65%;
+    text-decoration: none;
+}
+
+#twitter_banner:active {
     background-color: rgb(28, 150, 202);
     background-size: 35% 65%;
     text-decoration: none;
