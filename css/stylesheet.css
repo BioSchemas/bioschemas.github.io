@@ -639,8 +639,8 @@ Specifications
 *******************************************************************************/
 
 .ex_min {
-    background-color: rgb(255, 182, 193);
-    background-color: rgba(255, 182, 193, .5);
+    background-color: rgb(11, 121, 75);
+    background-color: rgba(11, 121, 75, .5);
 }
 
 .ex_rec {

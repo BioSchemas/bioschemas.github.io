@@ -293,6 +293,7 @@ th {
     font-size: 1.1em;
     border: 1px solid #555;
     text-align: center;
+    vertical-align: middle;
 }
 
 th:first-child {
@@ -370,6 +371,10 @@ Full-Width Styles
     height: 1.25em;
 }
 
+#twit_git_p {
+    display: none;
+}
+
 /*******************************************************************************
 GitHub Button
 *******************************************************************************/
@@ -392,6 +397,11 @@ GitHub Button
 }
 
 #forkme_banner:hover {
+    background-color: rgb(29, 95, 226);
+    text-decoration: none;
+}
+
+#forkme_banner:active {
     background-color: rgb(29, 95, 226);
     text-decoration: none;
 }
@@ -419,6 +429,12 @@ Twitter Button
 }
 
 #twitter_banner:hover {
+    background-color: rgb(28, 150, 202);
+    background-size: 35% 65%;
+    text-decoration: none;
+}
+
+#twitter_banner:active {
     background-color: rgb(28, 150, 202);
     background-size: 35% 65%;
     text-decoration: none;
@@ -623,8 +639,8 @@ Specifications
 *******************************************************************************/
 
 .ex_min {
-    background-color: rgb(255, 182, 193);
-    background-color: rgba(255, 182, 193, .5);
+    background-color: rgb(11, 121, 75);
+    background-color: rgba(11, 121, 75, .5);
 }
 
 .ex_rec {
@@ -967,6 +983,10 @@ Small Device Styles
         text-decoration: none;
     }
 
+    #twit_git_p {
+        display: none;
+    }
+
     .img_bottom {
         display: none;
     }
@@ -1050,6 +1070,10 @@ Small Device Styles
         padding-left: 0;
         margin-left: 0;
         box-shadow: none;
+    }
+
+    #twit_git_p {
+        display: block;
     }
 
     #twitter_banner {
