@@ -370,6 +370,10 @@ Full-Width Styles
     height: 1.25em;
 }
 
+#twit_git_p {
+    display: none;
+}
+
 /*******************************************************************************
 GitHub Button
 *******************************************************************************/
@@ -967,6 +971,10 @@ Small Device Styles
         text-decoration: none;
     }
 
+    #twit_git_p {
+        display: none;
+    }
+
     .img_bottom {
         display: none;
     }
@@ -1050,6 +1058,10 @@ Small Device Styles
         padding-left: 0;
         margin-left: 0;
         box-shadow: none;
+    }
+
+    #twit_git_p {
+        display: block;
     }
 
     #twitter_banner {
