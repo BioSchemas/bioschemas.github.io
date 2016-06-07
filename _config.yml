@@ -19,9 +19,6 @@ github_username:  BioSchemas
 # Build settings
 markdown: kramdown
 
-# Twitter Plugin
-#twitter:
-  #consumer_key: boh
-  #consumer_secret: boh
-  #access_token: boh
-  #access_token_secret: boh
+# Gems
+gems:
+ - jekyll-redirect-from
