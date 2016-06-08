@@ -466,8 +466,8 @@ Navigation Bar
 *******************************************************************************/
 
 .trigger {
-    border-bottom-left-radius: 0.625em;
-    border-bottom-right-radius: 0.625em;
+    /*border-bottom-left-radius: 0.625em;
+    border-bottom-right-radius: 0.625em;*/
     background-color: #0B794B;
     width: auto;
     height: 2.5em;
@@ -545,8 +545,8 @@ Footer
 *******************************************************************************/
 
 #footer_wrap {
-    border-top-left-radius: 0.625em;
-    border-top-right-radius: 0.625em;
+    /*border-top-left-radius: 0.625em;
+    border-top-right-radius: 0.625em;*/
     background-color: #0B794B;
     text-align: right;
     margin-top: 1em;
@@ -586,8 +586,8 @@ Back to Top Button
 
 #top_link {
     border: 2px solid #0B794B;
-    border-top-left-radius: 0.625em;
-    border-top-right-radius: 0.625em;
+    /*border-top-left-radius: 0.625em;
+    border-top-right-radius: 0.625em;*/
     float: right;
     text-align: center;
     width: 15%;
@@ -612,8 +612,8 @@ Back to Groups Button
 
 #back_groups {
     border: 2px solid #0B794B;
-    border-top-left-radius: 0.625em;
-    border-top-right-radius: 0.625em;
+    /*border-top-left-radius: 0.625em;
+    border-top-right-radius: 0.625em;*/
     float: right;
     margin-right: 0.625em;
     margin-left: 0.625em;

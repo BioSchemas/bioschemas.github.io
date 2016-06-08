@@ -25,34 +25,25 @@
 
     <a name="top"></a>
 
-<div itemscope itemtype="http://schema.org/Organization">
-    <div id="header_wrap" class="outer">
-        <header class="inner">
+<div id="header_wrap" class="outer">
+    <header class="inner">
 
-            <meta itemprop="name" content="BioSchemas" />
-            <meta itemprop="url" content="http://bioschemas.org" />
-            <a itemprop="sameAs" id="forkme_banner" href="https://github.com/BioSchemas">GitHub</a>
-            <a itemprop="sameAs" id="twitter_banner" href="https://twitter.com/bioschemas">Twitter</a>
+        <a id="forkme_banner" href="https://github.com/BioSchemas">GitHub</a>
+        <a id="twitter_banner" href="https://twitter.com/bioschemas">Twitter</a>
 
+        <a href="/index.html"><img class="rotation" src="/images/square_logo2.png" alt="Bioschemas" style="width: 15%; height: 15%;"></a>
+        <a href="/index.html"><img src="/images/name_lower.png" alt="Bioschemas" style="width: 59%; height: 59%;"></a>
 
-          <a href="/index.html"><img itemprop="logo" class="rotation" src="/images/square_logo2.png" alt="BioSchemas" style="width: 15%; height: 15%;"></a>
-          <a href="/index.html"><img src="/images/name_big.png" alt="BioSchemas" style="width: 59%; height: 59%;"></a>
-
-        </header>
-    </div>
+    </header>
 </div>
+
     <div class="trigger">
-  <div class="trigger_links">
-
-    <a href="/about/index.html" class="page-link"><div class="nav_buttons">About Us</div></a>
-    <a href="/groups/index.html" class="page-link"><div class="nav_buttons">Groups</div></a>
-    <a href="/howtojoin/index.html" class="page-link"><div class="nav_buttons">Joining</div></a>
-    <a href="/meetings/index.html" class="page-link"><div class="nav_buttons">Meetings</div></a>
-    <a href="/review/index.html" class="page-link"><div class="nav_buttons">Review</div></a>
-    <a href="/examples/index.html" class="page-link"><div class="nav_buttons">Examples</div></a>
-    <a href="/projects/index.html" class="page-link"><div class="nav_buttons">Projects</div></a>
-
-  </div>
+    <div class="trigger_links">
+        <a href="/index.html" class="page-link"><div class="nav_buttons" id="nav_active">Home</div></a>
+        <a href="/groups/index.html" class="page-link"><div class="nav_buttons">Groups</div></a>
+        <a href="/specifications/index.html" class="page-link"><div class="nav_buttons">Specifications</div></a>
+        <a href="/community/index.html" class="page-link"><div class="nav_buttons">Community</div></a>
+    </div>
 
     <div id="mobile_cont">
 
@@ -61,20 +52,15 @@
     </div>
 
     <div id="mobile_links">
-        <a href="/about/index.html" class="page-link"><div class="mobile_buttons">About Us</div></a>
+        <a href="/index.html" class="page-link"><div class="mobile_buttons">Home</div></a>
         <a href="/groups/index.html" class="page-link"><div class="mobile_buttons">Groups</div></a>
-        <a href="/howtojoin/index.html" class="page-link"><div class="mobile_buttons">Joining</div></a>
-        <a href="/meetings/index.html" class="page-link"><div class="mobile_buttons">Meetings</div></a>
-        <a href="/review/index.html" class="page-link"><div class="mobile_buttons">Review</div></a>
-        <a href="/examples/index.html" class="page-link"><div class="mobile_buttons">Examples</div></a>
-        <a href="/projects/index.html" class="page-link"><div class="mobile_buttons">Projects</div></a>
+        <a href="/specifications/index.html" class="page-link"><div class="mobile_buttons">Specifications</div></a>
+        <a href="/community/index.html" class="page-link"><div class="mobile_buttons">Community</div></a>
     </div>
 
 </div>
 
 </div>
-
-
 
     <div class="page-content">
       <div class="wrapper">
@@ -82,21 +68,24 @@
     <div id="main_content_wrap" class="outer">
         <section id="main_content" class="inner">
 
-            <h1 itemprop="name">BioSchemas</h1>
+            <h1 itemprop="name">Bioschemas</h1>
+            <meta itemprop="logo" content="http://bioschemas.org/images/square_logo2.png"/>
             <meta itemprop="url" content="http://bioschemas.org"/>
 
-            <p itemprop="description"><strong>BioSchemas</strong> is a joint initiative from several organizations and comunities in life science that relies and extends from <a href="http://schema.org"><span itemprop="parentOrganization">schema.org</span></a> in order to facilitate the description, information sharing and promotion of life science activities. BioSchemas is hoping to encourage life science organizations to adopt schema.org markup, since it doesn't require programming skills, it is widely adopted and well documented, and it makes sense anyway for SEO (Search Engine Optimization). It is then possible to scrape web pages in order to access consistently formatted information.</p>
+            <p><strong>Bioschemas</strong> is an open initiative aiming to engage the life science community to provide structured data using <a href="https://schema.org" title="schema.org">schema.org</a>. Bioschemas seeks to reuse existing schema.org types (and propose new types when necessary) relying on existing community agreements and standards formats. Bioschemas also aims to provide a layer of quality and compliance on top of schema.org, via specifications defining vocabularies, cardinality and minimum fields within types.</p>
 
-            <p>Visit the <a href="/about/index.html">About Us</a> page if you want to know more about BioSchemas.</p>
+            <!--
+            <p itemprop="description"><strong>Bioschemas</strong> is a joint initiative from several organizations and comunities in life science that relies and extends from <span itemprop="parentOrganization" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="Schema.org" /><a href="http://schema.org" itemprop="url">schema.org</a></span> in order to facilitate the description, information sharing and promotion of life science activities. Bioschemas is hoping to encourage life science organizations to adopt schema.org markup, since it doesn't require programming skills, it is widely adopted and well documented, and it makes sense anyway for SEO (Search Engine Optimization). It is then possible to scrape web pages in order to access consistently formatted information.</p>
 
-            <p id="twit_git_p">You can also follow BioSchemas on <a href="https://twitter.com/bioschemas">Twitter</a> or fork the BioSchemas repository on <a href="https://github.com/BioSchemas">GitHub</a>.</p>
+            <p>Visit the <a href="/about/index.html">About Us</a> page if you want to know more about Bioschemas.</p>
+
+            <p id="twit_git_p">You can also follow Bioschemas on <a itemprop="sameAs" href="https://twitter.com/bioschemas">Twitter</a> or fork the Bioschemas repository on <a itemprop="sameAs" href="https://github.com/BioSchemas">GitHub</a>.</p>
 
             <h2>Collaboration</h2>
 
-            <p>BioSchemas is an open community and welcomes any organization or individual to join this community effort. Members of BioSchemas groups have regular calls as well as face-to-face meetings, so if you want to get in touch, join a group or provide feedback please have a look at the <a href="/meetings/index.html">Meetings</a> page or feel free to contact directly a group of interest through the
-                <a href="howtojoin/index.html">Joining BioSchemas</a> page.</p>
+            <p>Bioschemas is an open community and welcomes any organization or individual to join this community effort. Members of Bioschemas groups have regular calls as well as face-to-face meetings, so if you want to get in touch, join a group or provide feedback please have a look at the <a href="/meetings/index.html">Meetings</a> page or feel free to contact directly a group of interest through the <a href="howtojoin/index.html">Joining Bioschemas</a> page. For general information about Bioschemas, send an email to <a href="mailto:all@bioschemas.org"><span itemprop="email">all@bioschemas.org</span></a>.</p>
 
-            <h2>Groups and related information</h2>
+            <h2>Groups and specifications</h2>
 
             <table id="groups_table">
                 <thead>
@@ -106,7 +95,7 @@
                         <th>Email</th>
                         <th>Tasks/issues</th>
                     </tr>
-                </thead>   
+                </thead>
                 <tbody>
                     <tr itemprop="subOrganization" itemscope itemtype="http://schema.org/Organization">
                         <td><a itemprop="sameAs" href="https://github.com/BioSchemas/bioschemas/wiki/Event-Group"><span itemprop="name">Event</span></a></td>
@@ -133,26 +122,14 @@
                         <td class="gitlink"><a href="https://github.com/BioSchemas/bioschemas/labels/type%3A%20person"><img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link"></a></td>
                     </tr>
                     <tr itemprop="subOrganization" itemscope itemtype="http://schema.org/Organization">
-                        <td><span itemprop="name">Standard</span></td>
+                        <td><a itemprop="sameAs" href="groups/standard/standard.html"><span itemprop="name">Standard</span></a></td>
                         <td>Coming soon from <a href="http://biosharing.org">BioSharing</a></td>
                         <td><a href="mailto:standard@bioschemas.org"><span itemprop="email">standard@bioschemas.org</span></a></td>
                         <td class="gitlink"><a href="https://github.com/BioSchemas/bioschemas/labels/type%3A%20standard"><img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link"></a></td>
                     </tr>
-                    <tr itemprop="subOrganization" itemscope itemtype="http://schema.org/Organization">  
-                        <td><span itemprop="name">Commons</span></td>
-                        <td></td>
-                        <td><a href="mailto:commons@bioschemas.org"><span itemprop="email">commons@bioschemas.org</span></a></td>
-                        <td class="gitlink"><a href="https://github.com/BioSchemas/bioschemas/labels/commons"><img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link"></a></td>
-                    </tr>
                     <tr itemprop="subOrganization" itemscope itemtype="http://schema.org/Organization">
-                        <td><span itemprop="name">Community</span></td>
-                        <td><a href="https://docs.google.com/document/d/1eDHBfw6frl9xAjIduLYRwcqUY3jehfzJ-xSKCc1nSsc/edit?usp=sharing">Specifications Process 0.1</a></td>
-                        <td><a href="mailto:community@bioschemas.org"><span itemprop="email">community@bioschemas.org</span></a></td>
-                        <td class="gitlink"><a href="https://github.com/BioSchemas/bioschemas/labels/community"><img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link"></a></td>
-                    </tr>
-                    <tr itemprop="subOrganization" itemscope itemtype="http://schema.org/Organization">
-                        <td><span itemprop="name">DATS for Data Discovery</span></td>
-                        <td>Coming soon from <a href="https://biocaddie.org/workgroup-3-group-links">NIH BD2K bioCADDIE WG3</a></td>
+                        <td><a itemprop="sameAs" href="groups/data/data.html"><span itemprop="name">Data</span></a></td>
+                        <td>See <a href="groups/data/data.html">group page</a> for guidelines</a></td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -161,107 +138,48 @@
 
             <ul class="mobile_list">
 
-                <li>
-                    <a href="https://github.com/BioSchemas/bioschemas/wiki/Event-Group">Event</a>
+                <li itemprop="subOrganization" itemscope itemtype="http://schema.org/Organization">
+                    <a itemprop="sameAs" href="https://github.com/BioSchemas/bioschemas/wiki/Event-Group"><span itemprop="name">Event</span></a>
                     <ul>
                         <li><a href="https://drive.google.com/open?id=12O8gsOuH2qHKpis6vTHxXExraNH5XZEnoilwNgWWgaQ">Event Specification 0.1</a></li>
-                        <li>mail: <a href="mailto:events@bioschemas.org">events@bioschemas.org</a></li>
+                        <li>mail: <a href="mailto:events@bioschemas.org"><span itemprop="email">events@bioschemas.org</span></a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="https://github.com/BioSchemas/bioschemas/wiki/Training-Material-Group">Training Material</a>
+                <li itemprop="subOrganization" itemscope itemtype="http://schema.org/Organization">
+                    <a itemprop="sameAs" href="https://github.com/BioSchemas/bioschemas/wiki/Training-Material-Group"><span itemprop="name">Training Material</span></a>
                     <ul>
                         <li><a href="https://docs.google.com/document/d/1HG2fEjCoDUE4tn1XZ_ZIeWLEFXnI3YtS_FRIIFIbv-s/edit">Training Material Specification 0.1</a></li>
-                        <li>mail: <a href="mailto:training-material@bioschemas.org">training-material@bioschemas.org</a></li>
+                        <li>mail: <a href="mailto:training-material@bioschemas.org"><span itemprop="email">training-material@bioschemas.org</span></a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="https://github.com/BioSchemas/bioschemas/wiki/Organization-Group">Organization</a>
+                <li itemprop="subOrganization" itemscope itemtype="http://schema.org/Organization">
+                    <a itemprop="sameAs" href="https://github.com/BioSchemas/bioschemas/wiki/Organization-Group"><span itemprop="name">Organization</span></a>
                     <ul>
                         <li><a href="https://docs.google.com/document/d/1nR3TS6xwtOH9IwXHnTbNW2kGi_APfLT0uid-6Ky7XDo/edit?usp=sharing">Organization Specification 0.1</a></li>
-                        <li>mail: <a href="mailto:organization@bioschemas.org">organization@bioschemas.org</a></li>
+                        <li>mail: <a href="mailto:organization@bioschemas.org"><span itemprop="email">organization@bioschemas.org</span></a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="https://github.com/BioSchemas/bioschemas/wiki/Person-Group">Person</a>
+                <li itemprop="subOrganization" itemscope itemtype="http://schema.org/Organization" >
+                    <a itemprop="sameAs" href="https://github.com/BioSchemas/bioschemas/wiki/Person-Group"><span itemprop="name">Person</span></a>
                     <ul>
                         <li><a href="https://docs.google.com/document/d/1Hhm9uZ85eJvH6JG1ZoPz83E9bx-B95r2rW8vPZ2_XJE/edit#heading=h.udykbimgtwao">Person Specification 0.1</a></li>
-                        <li>mail: <a href="mailto:person@bioschemas.org">person@bioschemas.org</a></li>
+                        <li>mail: <a href="mailto:person@bioschemas.org"><span itemprop="email">person@bioschemas.org</span></a></li>
                     </ul>
                 </li>
-                <li>Standard
+                <li itemprop="subOrganization" itemscope itemtype="http://schema.org/Organization"><a itemprop="sameAs" href="groups/standard/standard.html"><span itemprop="name">Standard</span></a>
                     <ul>
-                        <li>Coming soon from <a href="http://biosharing.org/">BioSharing</a></li>
-                        <li>mail: <a href="mailto:standard@bioschemas.org">standard@bioschemas.org</a></li>
+                        <li>Coming soon from <a itemprop="sameAs" href="http://biosharing.org/">BioSharing</a></li>
+                        <li>mail: <a href="mailto:standard@bioschemas.org"><span itemprop="email">standard@bioschemas.org</span></a></li>
                     </ul>
                 </li>
-                <li>Commons
+                <li itemprop="subOrganization" itemscope itemtype="http://schema.org/Organization"><a itemprop="sameAs" href="groups/data/data.html"><span itemprop="name">Data</span></a>
                     <ul>
-                        <li>mail: <a href="mailto:commons@bioschemas.org">commons@bioschemas.org</a></li>
-                    </ul>
-                </li>
-                <li>Community
-                    <ul>
-                        <li><a href="https://docs.google.com/document/d/1eDHBfw6frl9xAjIduLYRwcqUY3jehfzJ-xSKCc1nSsc/edit?usp=sharing">Specification Process 0.1</a></li>
-                        <li>mail: <a href="mailto:community@bioschemas.org">community@bioschemas.org</a></li>
-                    </ul>
-                </li>
-                <li>DATS for Data Discovery
-                    <ul>
-                        <li>Coming soon from <a href="https://biocaddie.org/workgroup-3-group-links">NIH BD2K bioCADDIE WG3</a></li>
+                        <li><a href="https://biocaddie.org/workgroup-3-group-links" itemprop="sameAs">NIH BD2K bioCADDIE WG3</a></li>
                     </ul>
                 </li>
             </ul>
 
-            <p>Find out more about BioSchemas working groups on the <a href="/groups/index.html">Groups</a> page.</p>
-
-            <!--
-
-            <h2>Organizations involved</h2>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Organization/Community</th>
-                        <th>Representative</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td itemprop="subOrganization" itemscope itemtype="http://schema.org/Organization"><a itemprop="url" href="https://www.elixir-europe.org/"><span itemprop="name">ELIXIR</span></a></td>
-                        <td itemprop="member" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Premysl Velek</span></td>
-                    </tr>
-                    <tr>
-                        <td itemprop="subOrganization" itemscope itemtype="http://schema.org/Organization"><a itemprop="sameAS" href="http://www.pistoiaalliance.org/"><span itemprop="name">Pistoia Alliance</span></a></td>
-                        <td itemprop="member" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Richard Holland</span></td>
-                    </tr>
-                    <tr>
-                        <td itemprop="subOrganization" itemscope itemtype="http://schema.org/Organization"><a itemprop="url" href="http://mygoblet.org/"><span itemprop="name">GOBLET</span></a></td>
-                        <td itemprop="member" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Terri Attwood</span></td>
-                    </tr>
-                    <tr>
-                        <td itemprop="subOrganization" itemscope itemtype="http://schema.org/Organization"><a itemprop="url" href="https://tess.elixir-uk.org/"><span itemprop="name">TeSS</span></a></td>
-                        <td itemprop="member" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Aleksandra Nenadic</span></td>
-                    </tr>
-                    <tr>
-                        <td itemprop="subOrganization" itemscope itemtype="http://schema.org/Organization"><a itemprop="url" href="https://biosharing.org/"><span itemprop="name">BioSharing</span></a></td>
-                        <td itemprop="member" itemscope itemtype="http://schema.org/Person"><span itemprop="name">SA Sansone</span>, <span itemprop="name">A Gonzalez-Beltran</span>, <span itemprop="name">P McQuilton</span>, <span itemprop="name">P Rocca-Serra</span></td>
-                    </tr>
-                    <tr>
-                        <td itemprop="subOrganization" itemscope itemtype="http://schema.org/Organization"><a itemprop="url" href="https://biocaddie.org/"><span itemprop="name">NIH BD2K bioCADDIE</span></a></td>
-                        <td itemprop="member" itemscope itemtype="http://schema.org/Person"><span itemprop="name">SA Sansone</span>, <span itemprop="name">A Gonzalez-Beltran</span>, <span itemprop="name">Jeff Grethe</span></td>
-                    </tr>
-                    <tr>
-                        <td itemprop="subOrganization" itemscope itemtype="http://schema.org/Organization"><a itemprop="url" href="http://www.bbmri.nl/"><span itemprop="name">BBMRI</span></a></td>
-                        <td itemprop="member" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Michaela Mayrhofer</span></td>
-                    </tr>   
-                </tbody>
-            </table>
-
-            <p>Further details about involved organizations can be found on the <a href="/about/index.html#organizations">About Us</a> page.</p>
-            
-            <br>
-
+            <p>Find out more about Bioschemas working groups on the <a href="/groups/index.html">Groups</a> page.</p>
             -->
 
         </section>
@@ -278,19 +196,14 @@
 
 </div>
 
-<div itemscope itemtype="http://schema.org/Organization">
-    <div id="footer_wrap" class="outer">
-        <footer class="inner">
+<div id="footer_wrap" class="outer">
+    <footer class="inner">
 
-            <meta itemprop="name" content="BioSchemas" />
-            <meta itemprop="url" content="http://bioschemas.org" />
-            <img itemprop="logo" class="img_bottom rotation" src="/images/square_logo2.png" alt="BioSchemas">
-            <p class="p_bottom">Hugs &amp; bugs: <a href="mailto:all@bioschemas.org"><span itemprop="email">all@bioschemas.org</span></a></p>
-            <p class="p_bottom">&copy; 2016</p>
+        <img class="img_bottom rotation" src="/images/square_logo2.png" alt="Bioschemas">
+        <p class="p_bottom">Hugs &amp; bugs: <a href="mailto:community@bioschemas.org" itemprop="email">community@bioschemas.org</a></p>
+        <p class="p_bottom">&copy; 2016</p>
 
-
-        </footer>
-    </div>
+    </footer>
 </div>
 
 
