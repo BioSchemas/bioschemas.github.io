@@ -48,6 +48,7 @@ function removeName(el, name) {
 $('.mobile_nav').on('click', function () {
     $('.trigger').toggleClass('trigger_mobile');
     $('#mobile_links').fadeToggle(200);
+    $('#mobile_links').css("display", "inline");
 });
 
 /**
