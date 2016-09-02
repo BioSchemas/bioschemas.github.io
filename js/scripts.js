@@ -50,34 +50,3 @@ $('.mobile_nav').on('click', function () {
     $('#mobile_links').fadeToggle(200);
     $('#mobile_links').css("display", "inline");
 });
-
-/**
-$('#mobile_nav').click(function () {
-    $header = $(this);
-    $content = $header.next();
-    $('.trigger').toggleClass('trigger_mobile');
-    $content.slideToggle(400);
-})
-*/
-
-/**
-$(document).ready(function () {
-    $('.eachExample').find('.insideExample').hide();
-
-    $('.h3Example').on({
-        mouseenter: function() {
-            //$(this).css('color', '#0B794B');
-            $(this).css('cursor', 'pointer');
-        }
-    });
-
-    $('.h3Example').on('click', function () {
-        $(this).toggleClass('activeExample');
-        $(this).siblings('.insideExample').toggle(400);
-    });
-
-    $('.h3Example').tooltip({
-        position: { my: "right-10% bottom-15%" },
-    });
-});
-*/
