@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+    {% include head.html %}
+
+    <body>
+
+        {% include header.html %}
+        {% include navbar.html %}
+
+        <div class="page-content">
+            <div class="wrapper">
+              <div id="main_content_wrap" class="outer">
+                <section id="main_content" class="inner">
+                  <h1>{{ page.name }} Group</h1>
+                  <p>{{ page.abstract }}</p>
+
+                  <h2>Purpose</h2>
+                  <ul>
+                    {% for item in page.objectives %}
+                      <li>
+                          {{ item }}
+                      </li>
+                    {% endfor %}
+
+                  </ul>
+<!--
+                  <h2>Products</h2>
+
+                  <h3>Specification</h3>
+                  <p>The {{ page.name }} specification is the main product of this group.</p>
+
+                  <div>
+                      <table>
+                          <thead>
+                          <tr>
+                              <th>Document type</th>
+                              <th>Location</th>
+                              <th>Date</th>
+                              <th>Version</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                              <td>Living document</td>
+                              <td>Google doc</td>
+                              <td></td>
+                              <td><a href="https://docs.google.com/document/d/12O8gsOuH2qHKpis6vTHxXExraNH5XZEnoilwNgWWgaQ/edit">0.1</a></td>
+                          </tr>
+                          <tr>
+                              <td>Snapshot</td>
+                              <td>Bioschemas website</td>
+                              <td>2016-01-27</td>
+                              <td><a href="full_event.html">0.1</a></td>
+                          </tr>
+                          </tbody>
+                      </table>
+                  </div>
+
+                  <p>We keep snapshots to have a reference of previous versions and modifications. Feel free to provide feedback in the living document.</p>
+-->
+                  <h2>Membership</h2>
+
+                  <p>The {{ page.name }} Group is open to any organization or individual willing to contribute to the goals of this group. To become a member please follow the instructions to "<a href="../index.html#join_a_group">Join a group</a>".</p>
+
+                  <h3>Chair</h3>
+                  <ul>
+                    {% for lead in page.lead %}
+                      <li>
+                        {% if page.lead-url[forloop.index0] != '' %}
+                          <a href="{{ page.lead-url[forloop.index0] }}">{{ lead }}</a>
+                        {% else %}
+                          {{ lead }}
+                        {% endif %}
+                      </li>
+                    {% endfor %}
+                  </ul>
+
+                </section>
+              </div>
+            </div>
+        </div>
+
+        {% include groups_footer.html %}
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+        <script src="/js/scripts.js"></script>
+
+
+    </body>
+
+</html>
