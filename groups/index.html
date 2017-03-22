@@ -34,7 +34,17 @@ permalink: /groups/
                 {% endif %}
                 {{ group.name }}
                 <!-- <a href="{{ group.path }}">{{ group.name }}</a></td> -->
-                <td>{{ group.lead }}</td>
+                <td>
+                  {% for lead in group.lead %}
+                    {% if forloop.first and forloop.last %}
+                      {{ lead }}
+                    {% elsif forloop.last %}
+                      and {{ lead }}
+                    {% else %}
+                      {{ lead }}
+                    {% endif %}
+                  {% endfor %}
+                </td>
                 <td class="gitlink">
                   <a href="{{ group.issues }}"  title="{{ group.name }} Issues" target="_blank">
                     <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
@@ -75,7 +85,17 @@ permalink: /groups/
                   <td style="background-color: ##FFFFF0">
                 {% endif %}
                 <a href="{{ group.url }}">{{ group.name }}</a>
-                <td>{{ group.lead }}</td>
+                <td>
+                  {% for lead in group.lead %}
+                    {% if forloop.first and forloop.last %}
+                      {{ lead }}
+                    {% elsif forloop.last %}
+                      and {{ lead }}
+                    {% else %}
+                      {{ lead }}
+                    {% endif %}
+                  {% endfor %}
+                </td>
                 <td class="gitlink">
                   <a href="{{ group.issues }}"  title="{{ group.name }} Issues" target="_blank">
                     <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
