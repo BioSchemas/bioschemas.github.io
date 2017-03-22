@@ -12,167 +12,44 @@ title: Groups
 
         <h2>Active Groups</h2>
         <table id="groups_table">
-            <thead>
-                <tr>
-                    <th>Group</th>
-                    <th>Lead</th>
-                    <th>Tasks/Issues</th>
-                    <th>Shared Folder</th>
-                </tr>
-            </thead>
-            <tbody>
-              <!-- Data Repositories -->
+          <thead>
+            <tr>
+              <th>Group</th>
+              <th>Lead</th>
+              <th>Tasks/Issues</th>
+              <th>Shared Folder</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for group in site.groups %}
+            {% if group.active %}
               <tr>
+                {% if group.type == 'generic' %}
                   <td style="background-color: #F0FFF0">
-                      <a href="datareps/datarep.html" title="Data Repositories Group">Data Repositories</a>
-                  </td>
-                  <td>
-                    Henning Hermjakob
-                  </td>
-                  <td class="gitlink">
-                      <a href="https://github.com/BioSchemas/bioschemas/labels/type%3A%20datarepository" title="Data Repositories Issues" target="_blank">
-                          <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
-                      </a>
-                  </td>
-                  <td class="gitlink">
-                      <a href="https://drive.google.com/drive/u/2/folders/0ByZjzHhAz30TV1VOYWZ6eFNHbnM" title="Data Repositories Shared Folder" target="_blank">
-                          <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
-                      </a>
-                  </td>
-              </tr>
-              <!-- Data -->
-              <tr>
-                  <td style="background-color: #F0FFF0">
-                      <a href="data/data.html" title="Data Group">Data</a>
-                  </td>
-                  <td>
-                    Susanna Sansone
-                  </td>
-                  <td class="gitlink">
-                      <a href="https://github.com/BioSchemas/bioschemas/labels/type%3A%20data" title="Data Issues" target="_blank">
-                          <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
-                      </a>
-                  </td>
-                  <td class="gitlink">
-                      <a href="https://drive.google.com/drive/u/1/folders/0ByZjzHhAz30TTnljNHZlbEJETHc" title="Data Shared Folder" target="_blank">
-                          <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
-                      </a>
-                  </td>
-              </tr>
-              <!-- Beacons -->
-              <tr>
-                  <td style="background-color: #F0FFF0">
-                      Beacons
-                  </td>
-                  <td>
-                    Serena Scollen and Audald Lloret
-                  </td>
-                  <td class="gitlink">
-                      <a href="https://github.com/BioSchemas/bioschemas/labels/type%3A%20beacons" title="Beacons Issues" target="_blank">
-                          <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
-                      </a>
-                  </td>
-                  <td class="gitlink">
-                      <!--<a href="https://drive.google.com/drive/u/2/folders/0ByZjzHhAz30TV1VOYWZ6eFNHbnM" title="Beacons Shared Folder" target="_blank">
-                          <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
-                      </a>-->
-                  </td>
-              </tr>
-              <!-- Samples -->
-              <tr>
+                {% elsif group.type == 'biological' %}
                   <td style="background-color: #E0FFFF">
-                      Samples
-                  </td>
-                  <td>
-                    Helen Parkinson
-                  </td>
-                  <td class="gitlink">
-                      <a href="https://github.com/BioSchemas/bioschemas/labels/type%3A%20samples" title="Samples Issues" target="_blank">
-                          <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
-                      </a>
-                  </td>
-                  <td class="gitlink">
-                      <!--<a href="https://drive.google.com/drive/u/2/folders/0ByZjzHhAz30TV1VOYWZ6eFNHbnM" title="Samples Shared Folder" target="_blank">
-                          <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
-                      </a>-->
-                  </td>
+                {% else %}
+                  <td style="background-color: ##FFFFF0">
+                {% endif %}
+                {{ group.name }}
+                <!-- <a href="{{ group.path }}">{{ group.name }}</a></td> -->
+                <td>{{ group.lead }}</td>
+                <td class="gitlink">
+                  <a href="{{ group.issues }}"  title="{{ group.name }} Issues" target="_blank">
+                    <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
+                  </a>
+                </td>
+                <td class="gitlink">
+                  {% unless group.folder == null %}
+                  <a href="{{ group.folder }}" title="{{ group.name }} Shared Folder" target="_blank">
+                    <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
+                  </a>
+                  {% endunless %}
+                </td>
               </tr>
-              <!-- Plant Phenotypes -->
-              <tr>
-                  <td style="background-color: #E0FFFF">
-                      Plant Phenotypes
-                  </td>
-                  <td>
-                  </td>
-                  <td class="gitlink">
-                      <a href="https://github.com/BioSchemas/bioschemas/labels/type%3A%20plantphenotypes" title="Plant Phenotypes Issues" target="_blank">
-                          <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
-                      </a>
-                  </td>
-                  <td class="gitlink">
-                      <!--<a href="https://drive.google.com/drive/u/2/folders/0ByZjzHhAz30TV1VOYWZ6eFNHbnM" title="Plant Phenotypes Shared Folder" target="_blank">
-                          <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
-                      </a>-->
-                  </td>
-              </tr>
-              <!-- Protein Annotations -->
-              <tr>
-                  <td style="background-color: #E0FFFF">
-                      Protein Annotations
-                  </td>
-                  <td>
-                    Maria Martin
-                  </td>
-                  <td class="gitlink">
-                      <a href="https://github.com/BioSchemas/bioschemas/labels/type%3A%20proteinannotations" title="Protein Annotations Issues" target="_blank">
-                          <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
-                      </a>
-                  </td>
-                  <td class="gitlink">
-                      <!--<a href="https://drive.google.com/drive/u/2/folders/0ByZjzHhAz30TV1VOYWZ6eFNHbnM" title="Protein Annotations Shared Folder" target="_blank">
-                          <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
-                      </a>-->
-                  </td>
-              </tr>
-              <!-- Validation -->
-              <tr>
-                  <td style="background-color: #F0FFF0">
-                      Validation
-                  </td>
-                  <td>
-                    Alasdair Gray
-                  </td>
-                  <td class="gitlink">
-                      <a href="https://github.com/BioSchemas/bioschemas/labels/type%3A%20validation" title="Validation Issues" target="_blank">
-                          <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
-                      </a>
-                  </td>
-                  <td class="gitlink">
-                      <!--<a href="https://drive.google.com/drive/u/2/folders/0ByZjzHhAz30TV1VOYWZ6eFNHbnM" title="Validation Shared Folder" target="_blank">
-                          <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
-                      </a>-->
-                  </td>
-              </tr>
-              <!-- Community -->
-              <tr>
-                  <td style="background-color: #FFFFF0">
-                      <a href="../community/index.html" title="Community Group">Community</a>
-                  </td>
-                  <td>
-                    Carole Goble and Alasdair Gray
-                  </td>
-                  <td class="gitlink">
-                      <a href="https://github.com/BioSchemas/bioschemas/labels/topic%3A%20community" title="Community Issues" target="_blank">
-                          <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
-                      </a>
-                  </td>
-                  <td class="gitlink">
-                      <a href="https://drive.google.com/drive/u/1/folders/0Bw_p-HKWUjHoRWgxWHcwVHNQUGM" title="Community Shared Folder" target="_blank">
-                          <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
-                      </a>
-                  </td>
-              </tr>
-            </tbody>
+            {% endif %}
+            {% endfor %}
+          </tbody>
         </table>
 
         <h2>Past Groups</h2>
