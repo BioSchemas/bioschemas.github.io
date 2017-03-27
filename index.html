@@ -18,6 +18,7 @@ layout: default
                 {% if currentDate <= meetingDate %}
                   <li><strong>{{ meeting.name}}.</strong> <br/> {{ meeting.dates }} <br/> {{ meeting.venue }}</li>
                   {% assign count = count | plus: 1 %}
+                  <!-- Limit upcoming meetings to the next three meetings -->
                   {% if count == 3 %}
                     {% break %}
                   {% endif %}
