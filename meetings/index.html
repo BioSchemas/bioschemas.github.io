@@ -19,6 +19,17 @@ title: Meetings
           {% endfor %}
         </ul>
 
+        <h2>Past Meetings</h2>
+        <ul>
+          {% for meeting in sorted_meetings reversed %}
+            {% assign currentDate = site.time | date: '%F' %}
+            {% assign meetingDate = meeting.start_date | date: '%F' %}
+            {% if currentDate >= meetingDate %}
+              <li><strong>{{ meeting.name}}.</strong> <br/> {{ meeting.dates }} <br/> {{ meeting.venue }}</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+
 
         <h2>Bioschemas Google Calendar</h2>
 
