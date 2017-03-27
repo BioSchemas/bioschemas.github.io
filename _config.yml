@@ -28,3 +28,6 @@ collections:
   groups:
     output: true
     permalink: /:collection/:path/ #Note, trailing / needed to avoid .html
+  meetings:
+    output: true
+    permalink: /:collection/:path/ #Note, trailing / needed to avoid .html

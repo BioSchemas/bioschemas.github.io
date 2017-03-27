@@ -8,38 +8,37 @@ layout: default
 
         <div style="border: 1px solid #0B794B; margin-bottom:20px;">
             <h3 style="padding-left: 10px;">Upcoming events</h3>
-          <ul>
-             <!--<li style="padding-bottom: 5px;">
-                <a href="http://www.igst.it/nettab/2016/programme/hackathon/#biotools">Biosoftware description using bio.tools and schema.org (NETTAB 2016 Workshop)</a>. October 25-26, 2016, Rome, Italy
-             </li>
-             <li style="padding-bottom: 5px;">  
-                <a href="http://tinyurl.com/bioschemas-2016-11-08">Bioschemas hands-on meeting</a>. November 8-9, 2016, Harpenden, Hertfordshire, UK
-              </li>-->  
-              <!--<li style="padding-bottom: 5px;">  
-                <a href="https://docs.google.com/document/d/1z1YqqLVntc0wpYCwvHTs5JPPgvfGjUrGdCoVSAAtFE0/edit#">Bioschemas implementation study planning meeting</a>. March 6-8, 2017, EBI, UK
-              </li>-->
-              <li style="padding-bottom: 5px;">  
-                <a href="https://www.elixir-europe.org/events/elixir-all-hands-2017">Bioschemas for Datasets</a>. March 23, 2017, Barceló Aran Mantegna, Rome, Italy
-              </li>
-              <li style="padding-bottom: 5px;">  
-                Bioschemas implementation study agreement meeting. May/June (TBC), 2017, EBI, UK
-              </li>
-          </ul>
-        </div>    
+            <ul>
+
+              {% assign sorted_meetings = (site.meetings | sort: 'start_date') %}
+              {% assign count = 0 %}
+              {% for meeting in sorted_meetings %}
+                {% assign currentDate = site.time | date: '%F' %}
+                {% assign meetingDate = meeting.start_date | date: '%F' %}
+                {% if currentDate <= meetingDate %}
+                  <li><strong>{{ meeting.name}}.</strong> <br/> {{ meeting.dates }} <br/> {{ meeting.venue }}</li>
+                  {% assign count = count | plus: 1 %}
+                  {% if count == 3 %}
+                    {% break %}
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            </ul>
+        </div>
             <meta itemprop="logo" content="http://bioschemas.org/images/square_logo2.png"/>
             <meta itemprop="url" content="http://bioschemas.org"/>
 
 
-Bioschemas aims to improve data interoperability in life sciences. It does this by encouraging people in life science to use schema.org markup, so that their websites and services contain consistently structured information. This structured information then makes it easier to discover, collate and analyse distributed data. 
+Bioschemas aims to improve data interoperability in life sciences. It does this by encouraging people in life science to use schema.org markup, so that their websites and services contain consistently structured information. This structured information then makes it easier to discover, collate and analyse distributed data.
 
-The main outcome of Bioschemas is a collection of specifications that provide guidelines to  facilitate a more consistent adoption of schema.org markup within the life sciences. 
+The main outcome of Bioschemas is a collection of specifications that provide guidelines to  facilitate a more consistent adoption of schema.org markup within the life sciences.
 
-Bioschemas operates as an open community initiative. You are welcome to <a href="http://bioschemas.org/groups/index.html">join a community group</a>. 
+Bioschemas operates as an open community initiative. You are welcome to <a href="http://bioschemas.org/groups/index.html">join a community group</a>.
 
 <h2>Schema.org</h2>
-Schema.org provides a way for us to add semantic markup to web pages. It describes ‘types’ of information, which then have ‘properties’. For example, ‘Event’ is a type that has properties like ‘startDate’, ‘endDate’ and ‘description’. If types or properties needed in the life sciences are missing, then Bioschemas proposes their adoption by Schema.org. 
+Schema.org provides a way for us to add semantic markup to web pages. It describes ‘types’ of information, which then have ‘properties’. For example, ‘Event’ is a type that has properties like ‘startDate’, ‘endDate’ and ‘description’. If types or properties needed in the life sciences are missing, then Bioschemas proposes their adoption by Schema.org.
 
-Schema.org is a community effort supported by the main search engines, and is already widely implemented across the web. 
+Schema.org is a community effort supported by the main search engines, and is already widely implemented across the web.
 
 <h2>Bioschemas for generic types</h2>
 Schema.org defines common generic types like events and datasets which can be used not just in life sciences but in many other disciplines. Bioschemas is working on specifications to improve the description of generic types in life sciences.
