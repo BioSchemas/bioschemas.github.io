@@ -5,8 +5,10 @@ title: Metadata Searching Satellite Meeting
 dates: 9-10 March 2016
 start_date: 2016-03-09
 venue: CCIB - Centre Convencions Internacional de Barcelona, Barcelona, Spain
-url: https://docs.google.com/document/d/11A9o3tv8ES43LenQ-Tvssu1YwEnLHdxRWixn9I-0S3E/edit#heading=h.kvtgsjfrl35u
-presentations:
-  - presentation: https://drive.google.com/file/d/0Bw_p-HKWUjHoSlpYM2tzTmNBNTQ/view?usp=sharing
-  - presentation: https://drive.google.com/file/d/0Bw_p-HKWUjHoYTRvVWN0T0pMTEk/view?usp=sharing
+meeting-url: https://docs.google.com/document/d/11A9o3tv8ES43LenQ-Tvssu1YwEnLHdxRWixn9I-0S3E/edit#heading=h.kvtgsjfrl35u
 ---
+<h2>Presentations</h2>
+
+<iframe src="https://drive.google.com/file/d/0Bw_p-HKWUjHoSlpYM2tzTmNBNTQ/preview" width="640" height="480"></iframe>
+
+<iframe src="https://drive.google.com/file/d/0Bw_p-HKWUjHoYTRvVWN0T0pMTEk/preview" width="640" height="480"></iframe>
