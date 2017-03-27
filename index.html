@@ -9,7 +9,6 @@ layout: default
         <div style="border: 1px solid #0B794B; margin-bottom:20px;">
             <h3 style="padding-left: 10px;">Upcoming events</h3>
             <ul>
-
               {% assign sorted_meetings = (site.meetings | sort: 'start_date') %}
               {% assign count = 0 %}
               {% for meeting in sorted_meetings %}

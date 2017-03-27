@@ -7,6 +7,18 @@ title: Meetings
     <section id="main_content" class="inner">
 
         <h1>Meetings</h1>
+        <h2>Upcoming Meetings</h2>
+        <ul>
+          {% assign sorted_meetings = (site.meetings | sort: 'start_date') %}
+          {% for meeting in sorted_meetings %}
+            {% assign currentDate = site.time | date: '%F' %}
+            {% assign meetingDate = meeting.start_date | date: '%F' %}
+            {% if currentDate <= meetingDate %}
+              <li><strong>{{ meeting.name}}.</strong> <br/> {{ meeting.dates }} <br/> {{ meeting.venue }}</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+
 
         <h2>Bioschemas Google Calendar</h2>
 
@@ -117,7 +129,7 @@ title: Meetings
     	</table>
 
         <ul class="mobile_list">
-            
+
             <li>Bioschemas TC - TBD</li>
             <li><a href="https://docs.google.com/document/d/1vcFfrvbRcgw9La3X1My3EE-Lm4kyAqzuxCSRp3xLdvo/edit?usp=sharing">FORCE2016 searchathon</a> - 2016/04/17
                 <ul>
@@ -160,6 +172,6 @@ title: Meetings
             </li>
 
         </ul>
-        
+
     </section>
 </div>
