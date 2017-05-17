@@ -6,9 +6,10 @@ collection: groups
 active: true
 type: generic
 description: Specification for describing training materials
-lead: Vicky Schneider and Gabriella Rustici
+lead: [Vicky Schneider, Gabriella Rustici]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20training%20material
 folder: https://drive.google.com/drive/u/1/folders/0B6crv12s8piRT0w5VXRUc09VTFU
+usecase: true
 ---
 
 
@@ -71,7 +72,9 @@ folder: https://drive.google.com/drive/u/1/folders/0B6crv12s8piRT0w5VXRUc09VTFU
     	<h3>Chair</h3>
 
     	<ul>
-    		<li>{{ page.lead }}</li>
+        {% for lead in page.lead %}
+    		  <li>{{ lead }}</li>
+        {% endfor %}
     	</ul>
 
     </section>

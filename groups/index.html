@@ -10,6 +10,61 @@ permalink: /groups/
         <h1>Groups</h1>
 
         <p>Different groups are working on different topics in Bioschemas; you can view details and full specifications for each group using the following links:</p>
+        <table id="groups_table">
+          <thead>
+            <tr>
+              <th>Group</th>
+              <th>Lead</th>
+              <th>Tasks/Issues</th>
+              <th>Shared Folder</th>
+              <th>Use Case</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for group in site.groups %}
+              <tr>
+                {% if group.type == 'generic' %}
+                  <td style="background-color: #F0FFF0">
+                {% elsif group.type == 'biological' %}
+                  <td style="background-color: #E0FFFF">
+                {% else %}
+                  <td style="background-color: ##FFFFF0">
+                {% endif %}
+                <a href="{{ group.url }}">{{ group.name }}</a>
+                <td>
+                  {% for lead in group.lead %}
+                    {% if forloop.first and forloop.last %}
+                      {{ lead }}
+                    {% elsif forloop.first %}
+                      {{ lead }}<br/>
+                    {% elsif forloop.last %}
+                      {{ lead }}
+                    {% else %}
+                      {{ lead }}<br/>
+                    {% endif %}
+                  {% endfor %}
+                </td>
+                <td class="gitlink">
+                  <a href="{{ group.issues }}"  title="{{ group.name }} Issues" target="_blank">
+                    <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
+                  </a>
+                </td>
+                <td class="gitlink">
+                  {% unless group.folder == null %}
+                  <a href="{{ group.folder }}" title="{{ group.name }} Shared Folder" target="_blank">
+                    <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
+                  </a>
+                  {% endunless %}
+                </td>
+                <td class="gitlink">
+                  {% if group.usecase %}
+                    &#10003;
+                  {% endif %}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
 
         <h2>Active Groups</h2>
         <table id="groups_table">
