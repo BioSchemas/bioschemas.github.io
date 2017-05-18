@@ -76,6 +76,28 @@ permalink: /groups/
                     &#10003;
                   {% endif %}
                 </td>
+                <td class="gitlink">
+                  {% if group.spec-num %}
+                    <a href="{{ group.spec-url }}" title="{{ group.name }} Specification version {{ group.spec-num }}" target="_blank">
+                      {{ group.spec-num }}
+                    </a>
+                  {% endif %}
+                </td>
+                <td class="gitlink">
+                  {% if group.test %}
+                    &#10003;
+                  {% endif %}
+                </td>
+                <td class="gitlink">
+                  {% if group.adoption %}
+                    &#10003;
+                  {% endif %}
+                </td>
+                <td class="gitlink">
+                  {% if group.applications %}
+                    &#10003;
+                  {% endif %}
+                </td>
               </tr>
             {% endfor %}
           </tbody>
