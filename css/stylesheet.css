@@ -540,6 +540,10 @@ Navigation Bar
     display: none;
 }
 
+#mobile_list {
+    display: none;
+}
+
 /*******************************************************************************
 Footer
 *******************************************************************************/
@@ -1056,7 +1060,7 @@ Small Device Styles
     ul li ul li::before {
         content: '';
     }
-    
+
     ol {
         padding-left: 1em;
     }
@@ -1079,7 +1083,7 @@ Small Device Styles
     #twitter_banner {
         display: none;
     }
-    
+
     #forkme_banner {
         display: none;
     }
@@ -1106,11 +1110,11 @@ Small Device Styles
     .mobile_nav {
         display: inline;
     }
-    
+
     #hamb_menu {
         cursor: pointer;
     }
-    
+
     .mobile_nav img {
         height: 1.725em;
         width: 1.725em;
@@ -1124,7 +1128,7 @@ Small Device Styles
         text-align: center;
         font-size: 0.9em;
     }
-    
+
     .mobile_buttons {
         display: inline;
         padding-right: 0.625em;
@@ -1138,24 +1142,28 @@ Small Device Styles
     .mobile_buttons:last-of-type {
         margin-right: 0;
     }
-    
+
     #groups_table {
         display: none;
     }
-    
+
+    #mobile_list {
+        display: block;
+    }
+
     #meetings_table {
         display: none;
     }
-    
+
     .mobile_list {
         display: block;
         margin-top: 1.625em;
     }
-    
+
     .organs_inv {
         display: inline-block;
     }
-    
+
     .organs_inv img {
         display: inline-block;
         margin: 1em auto;
@@ -1176,7 +1184,7 @@ Small Device Styles
         width: 25%;
         margin: 0;
     }
-    
+
     #top_link {
         display: none;
     }
@@ -1184,7 +1192,7 @@ Small Device Styles
     #footer_wrap p {
         text-align: center;
     }
-    
+
     .img_bottom {
         display: none;
     }

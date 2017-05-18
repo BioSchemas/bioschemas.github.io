@@ -103,7 +103,14 @@ permalink: /groups/
             {% endfor %}
           </tbody>
         </table>
-
+        <!-- Table doesn't display on mobile devices. Show list instead -->
+        <div id="mobile_list">
+          <ul>
+            {% for group in site.groups %}
+              <li><a href="{{ group.url }}">{{ group.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
         <a name="join_a_group"></a>
 
         <h2>Join a group</h2>
