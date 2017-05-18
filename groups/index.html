@@ -40,7 +40,8 @@ permalink: /groups/
                 {% else %}
                   <td style="background-color: ##FFFFF0">
                 {% endif %}
-                <a href="{{ group.url }}">{{ group.name }}</a>
+                  <a href="{{ group.url }}">{{ group.name }}</a>
+                </td>
                 <td>
                   {% for lead in group.lead %}
                     {% if forloop.first and forloop.last %}
