@@ -10,6 +10,17 @@ lead: Alasdair Gray
 lead-url: ['http://www.macs.hw.ac.uk/~ajg33/']
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20validation
 folder:
+
+# Progress status
+usecase:
+crosswalk:
+spec-num:
+spec-url:
+test: false
+adoption: false
+applications: false
+
+# Page attributes
 abstract: 'Though search engines provide validation of the schema.org structured data provided in a page it does not make an analysis of the content of a site and do not validate important features in Bioschemas like compliance with content guidelines, vocabularies or cardinality.'
 objectives:
   [
