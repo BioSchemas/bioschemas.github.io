@@ -13,7 +13,7 @@ folder:
 
 # Progress status
 usecase:
-crosswalk:
+crosswalk: https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAvaADLmI_FrIk7O3BEkxY/edit#gid=0
 spec-num:
 spec-url:
 test: false

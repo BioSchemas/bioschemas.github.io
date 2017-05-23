@@ -12,8 +12,8 @@ issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20datarepository
 folder: 
 
 # Progress status
-usecase:
-crosswalk:
+usecase: https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAvaADLmI_FrIk7O3BEkxY/edit#gid=1439268036
+crosswalk: https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAvaADLmI_FrIk7O3BEkxY/edit#gid=1439268036
 spec-num:
 spec-url:
 test: false
