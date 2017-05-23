@@ -14,8 +14,8 @@ folder: https://drive.google.com/drive/folders/0BwpCuN9mloG8WTl6X3hkeFIwems
 # Progress status
 usecase:
 crosswalk:
-spec-num:
-spec-url: 
+spec-num: 0.1
+spec-url: https://docs.google.com/document/d/1kQE3lixvBjBiZ8X3I1Mi44c3dcdgf4SshoGdNX5-_TE/edit
 test: false
 adoption: false
 applications: false
