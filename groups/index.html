@@ -68,8 +68,12 @@ permalink: /groups/
                   {% endunless %}
                 </td>
                 <td class="gitlink">
-                  {% if group.usecase %}
+                  {% if group.usecase == true %}
                     &#10003;
+                  {% elsif group.usecase %}
+                    <a href="{{ group.usecase }}" title="{{ group.name }} Use Cases" target="_blank">
+                      <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
+                    </a>
                   {% endif %}
                 </td>
                 <td class="gitlink">

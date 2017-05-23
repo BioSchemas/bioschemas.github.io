@@ -10,6 +10,17 @@ lead: Helen Parkinson
 lead-url: ['https://www.ebi.ac.uk/about/people/helen-parkinson']
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20samples
 folder:
+
+# Progress status
+usecase: https://docs.google.com/document/d/1JS7ofrdO3UzkAI12C702AdniJ5fr-CRGIC84bQC-_VI/edit#heading=h.a4qqs3w7ptjr
+crosswalk: https://docs.google.com/spreadsheets/d/1NltFMzjqezpKhobmqEBEvASLziZjq73a_AqWnNi3IOs/edit#gid=0
+spec-num: 0.1
+spec-url: https://docs.google.com/document/d/1JS7ofrdO3UzkAI12C702AdniJ5fr-CRGIC84bQC-_VI/edit
+test: false
+adoption: false
+applications: false
+
+# Page attributes
 abstract: 'Information of samples is scattered in multiple and dispersed samples data repositories.
 Not all the sample data repositories have a programmatic interface and the existing variety of programmatic interfaces are diverse and changeable.'
 objectives:
