@@ -9,7 +9,7 @@ description: Specification for data repositories
 lead: [Henning Hermjakob]
 lead-url: ['']
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20datarepository
-folder: https://drive.google.com/drive/u/2/folders/0ByZjzHhAz30TV1VOYWZ6eFNHbnM
+folder: 
 
 # Progress status
 usecase:
