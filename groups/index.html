@@ -77,8 +77,12 @@ permalink: /groups/
                   {% endif %}
                 </td>
                 <td class="gitlink">
-                  {% if group.crosswalk %}
+                  {% if group.crosswalk == true %}
                     &#10003;
+                  {% elsif group.crosswalk %}
+                    <a href="{{ group.crosswalk }}" title="{{ group.name }} Crosswalk" target="_blank">
+                      <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
+                    </a>
                   {% endif %}
                 </td>
                 <td class="gitlink">
@@ -89,18 +93,30 @@ permalink: /groups/
                   {% endif %}
                 </td>
                 <td class="gitlink">
-                  {% if group.test %}
+                  {% if group.test == true  %}
                     &#10003;
+                  {% elsif group.test %}
+                    <a href="{{ group.test }}" title="{{ group.name }} Test" target="_blank">
+                      <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
+                    </a>
                   {% endif %}
                 </td>
                 <td class="gitlink">
-                  {% if group.adoption %}
+                  {% if group.adoption == true  %}
                     &#10003;
+                  {% elsif group.adoption %}
+                    <a href="{{ group.adoption }}" title="{{ group.name }} Adoption" target="_blank">
+                      <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
+                    </a>
                   {% endif %}
                 </td>
                 <td class="gitlink">
-                  {% if group.applications %}
+                  {% if group.applications == true  %}
                     &#10003;
+                  {% elsif group.applications %}
+                    <a href="{{ group.applications }}" title="{{ group.name }} Applications" target="_blank">
+                      <img src="https://raw.githubusercontent.com/BioSchemas/bioschemas/master/images/icon-link.png" alt="link">
+                    </a>
                   {% endif %}
                 </td>
               </tr>
