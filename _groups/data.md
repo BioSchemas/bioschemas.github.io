@@ -9,13 +9,13 @@ description: Specification for data
 lead: [Susanna Sansone]
 lead-url: ['http://www.oerc.ox.ac.uk/people/susanna-assunta-sansone']
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20data
-folder: 
+folder:
 
 # Progress status
 usecase:
 crosswalk: https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAvaADLmI_FrIk7O3BEkxY/edit#gid=0
-spec-num:
-spec-url:
+spec-num: 0.1
+spec-url: https://docs.google.com/document/d/1klUdYkCK-7YmbfKv2FNvBIOXZ1Pq9EhxvjceO7gWzfQ/edit#heading=h.esim87b96w1t
 test: false
 adoption: false
 applications: false
