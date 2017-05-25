@@ -9,11 +9,11 @@ description: Specification for data repositories
 lead: [Henning Hermjakob]
 lead-url: ['']
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20datarepository
-folder: 
+folder: https://drive.google.com/open?id=0Bw_p-HKWUjHoNDJNUWltYVBkV1k
 
 # Progress status
 usecase: https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAvaADLmI_FrIk7O3BEkxY/edit#gid=1439268036
-crosswalk: https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAvaADLmI_FrIk7O3BEkxY/edit#gid=1439268036
+crosswalk: https://docs.google.com/spreadsheets/d/1H12h5VpVNJFzNs2RQJWjXkauCEn3qEsVFzKRoiHHffY/edit
 spec-num:
 spec-url:
 test: false
