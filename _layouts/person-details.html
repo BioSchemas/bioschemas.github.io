@@ -12,8 +12,13 @@
             <div class="wrapper">
               <div id="main_content_wrap" class="outer">
                 <section id="main_content" class="inner">
-                  <h1>{{ page.name }}</h1>
-
+                  <h1>{{ page.first-name }} {{ page.last-name }}</h1>
+                  <p>{{ page.affiliation }}</p>
+                  <ul>
+                    <li>Home page: <a href="page.homepage">{{ page.homepage }}</a></li>
+                    <li>ORCID: <a href="{{ "http://orcid.org/" | append: page.orcid }}">{{ page.orcid }}</a></li>
+                    <li>GitHub: <a href="{{ "http://github.com/" | append: page.github_username }}">{{ page.github_username }}</a></li>
+                  </ul>
                   <h2>Groups</h2>
                   <ul>
                     {% for group in page.groups %}

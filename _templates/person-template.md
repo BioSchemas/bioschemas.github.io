@@ -4,6 +4,7 @@ id:
 first-name:
 last-name:
 collection: people
+affiliation: 
 homepage:
 github_username:
 orcid:

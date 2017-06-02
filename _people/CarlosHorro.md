@@ -4,6 +4,7 @@ id: CarlosHorro
 first-name: Carlos
 last-name: Horro
 collection: people
+affiliation: Earlham Institute, UK
 homepage:
 github_username:
 orcid:
