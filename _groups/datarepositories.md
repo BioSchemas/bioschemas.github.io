@@ -1,5 +1,6 @@
 ---
 layout: group-details
+id: datarepositories
 name: Data Repositories
 path: datarepositories.html
 collection: groups

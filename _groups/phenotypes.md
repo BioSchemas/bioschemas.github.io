@@ -1,5 +1,6 @@
 ---
 layout: group-details
+id: phenotypes
 name: Phenotypes
 path: phenotypes.html
 collection: groups

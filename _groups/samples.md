@@ -1,5 +1,6 @@
 ---
 layout: group-details
+id: samples
 name: Samples
 path: samples.html
 collection: groups

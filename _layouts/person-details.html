@@ -21,9 +21,11 @@
                   </ul>
                   <h2>Groups</h2>
                   <ul>
-                    {% for group in page.groups %}
+                    {% for grp in page.groups %}
+                      {% assign group-id = "/groups/" | append: grp %}
+                      {% assign group = site.groups | where:"id", group-id | first %}
                       <li>
-                          {{ group }}
+                          <a href="{{group.url}}">{{ group.name }}</a>
                       </li>
                     {% endfor %}
 

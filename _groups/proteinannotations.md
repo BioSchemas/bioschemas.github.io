@@ -1,5 +1,6 @@
 ---
 layout: group-details
+id: proteinannotations
 name: Protein Annotations
 path: proteinannotations.html
 collection: groups

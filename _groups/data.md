@@ -1,5 +1,6 @@
 ---
 layout: group-details
+id: data
 name: Data
 path: data.html
 collection: groups

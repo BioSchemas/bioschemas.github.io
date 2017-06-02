@@ -1,5 +1,6 @@
 ---
 layout: group-details
+id: beacons
 name: Beacons
 path: beacons.html
 collection: groups
