@@ -10,7 +10,7 @@ title: People
         <ul>
           {% assign sorted_people = (site.people | sort: 'last-name') %}
           {% for person in sorted_people %}
-            <li><strong><a href="{{ person.url }}">{{ person.first-name }} {{ person.last-name }}</a></strong></li>
+            <li><a href="{{ person.url }}">{{ person.first-name }} {{ person.last-name }}</a></li>
           {% endfor %}
         </ul>
     </section>
