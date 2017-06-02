@@ -1,5 +1,6 @@
 ---
 layout: person-details
+id: AlasdairGray
 name: Alasdair Gray
 collection: people
 homepage: http://www.macs.hw.ac.uk/~ajg33

@@ -6,12 +6,11 @@ collection: groups
 active: true
 type: other
 description: Tools for validating markup against a specification
-lead: Alasdair Gray
-lead-url: ['http://www.macs.hw.ac.uk/~ajg33/']
-issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20validation
-folder:
+lead: [AlasdairGray]
 
 # Progress status
+issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20validation
+folder:
 usecase:
 crosswalk:
 spec-num:

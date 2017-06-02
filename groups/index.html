@@ -45,7 +45,9 @@ permalink: /groups/
                 <td>
                   {% for lead in group.lead %}
                     {% if forloop.first and forloop.last %}
-                      {{ lead }}
+                      {% assign lead-id = "/people/" | append: lead %}
+                      {% assign author = site.people | where:"id", lead-id | first %}
+                      <a href="{{ author.url }}">{{ author.name }}</a>
                     {% elsif forloop.first %}
                       {{ lead }}<br/>
                     {% elsif forloop.last %}
