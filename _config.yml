@@ -31,3 +31,6 @@ collections:
   meetings:
     output: true
     permalink: /:collection/:path/ #Note, trailing / needed to avoid .html
+  people:
+    output: true
+    permalink: /:collection/:path/
