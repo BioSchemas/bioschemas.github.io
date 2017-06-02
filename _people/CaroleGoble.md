@@ -1,6 +1,8 @@
 ---
 layout: person-details
-name: Carole Goble
+id: CaroleGoble
+first-name: Carole
+last-name: Goble
 collection: people
 homepage: http://www.manchester.ac.uk/research/Carole.goble/
 github_username:

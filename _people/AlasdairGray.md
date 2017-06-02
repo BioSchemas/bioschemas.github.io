@@ -1,7 +1,8 @@
 ---
 layout: person-details
 id: AlasdairGray
-name: Alasdair Gray
+first-name: Alasdair
+last-name: Gray
 collection: people
 homepage: http://www.macs.hw.ac.uk/~ajg33
 github_username: AlasdairGray
