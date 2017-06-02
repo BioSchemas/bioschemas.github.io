@@ -44,16 +44,16 @@ permalink: /groups/
                 </td>
                 <td>
                   {% for lead in group.lead %}
+                    {% assign lead-id = "/people/" | append: lead %}
+                    {% assign author = site.people | where:"id", lead-id | first %}
                     {% if forloop.first and forloop.last %}
-                      {% assign lead-id = "/people/" | append: lead %}
-                      {% assign author = site.people | where:"id", lead-id | first %}
-                      <a href="{{ author.url }}">{{ author.name }}</a>
+                      <a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a>
                     {% elsif forloop.first %}
-                      {{ lead }}<br/>
+                      <a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name  }}</a><br/>
                     {% elsif forloop.last %}
-                      {{ lead }}
+                      <a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name  }}</a>
                     {% else %}
-                      {{ lead }}<br/>
+                      <a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name  }}</a><br/>
                     {% endif %}
                   {% endfor %}
                 </td>
