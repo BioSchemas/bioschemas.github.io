@@ -6,8 +6,7 @@ collection: groups
 active: true
 type: generic
 description: Specification for beacons
-lead: [Serena Scollen, Audald Lloret]
-lead-url: ['','']
+lead: [SerenaScollen, AudaldLloret]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20beacons
 folder: https://drive.google.com/drive/folders/0BwpCuN9mloG8WTl6X3hkeFIwems
 
