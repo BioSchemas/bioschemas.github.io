@@ -8,9 +8,9 @@ title: People
 
         <h1>People</h1>
         <ul>
-          {% assign sorted_people = (site.people | sort: 'name') %}
-          {% for people in sorted_people %}
-            <li><strong><a href="{{ people.url }}">{{ people.name}}</a></strong></li>
+          {% assign sorted_people = (site.people | sort: 'person.name') %}
+          {% for person in sorted_people %}
+            <li><strong><a href="{{ person.url }}">{{ person.name}}</a></strong></li>
           {% endfor %}
         </ul>
     </section>
