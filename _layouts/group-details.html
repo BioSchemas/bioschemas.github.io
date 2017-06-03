@@ -76,6 +76,16 @@
                   <ul>
                     {% for person in site.people %}
                       {% assign member = false %}
+                      {% assign lead = false %}
+                      {% for lperson in page.lead %}
+                        {% if person.id contains lperson %}
+                          {% assign lead = true %}
+                          {% break %}
+                        {% endif %}
+                      {% endfor %}
+                      {% if lead %}
+                        {% continue %}
+                      {% endif %}
                       {% for group in person.groups %}
                         {% assign groupid = "/groups/" | append: group %}
                         {% if page.id == groupid %}
@@ -84,8 +94,10 @@
                         {% endif %}
                       {% endfor %}
                       {% if member %}
+                        {% unless lead %}
                     <!-- Need to have the if statement straight after the person details otherwise you get a space before the comma -->
                         <li><a href="{{ person.url }}">{{ person.first-name }} {{ person.last-name }}</a>{% if person.affiliation %}, {{ person.affiliation }}{% endif %}</li>
+                        {% endunless %}
                       {% endif %}
                     {% endfor %}
                   </ul>
