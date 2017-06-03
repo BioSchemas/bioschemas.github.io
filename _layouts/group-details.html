@@ -66,13 +66,9 @@
                   <h3>Chair</h3>
                   <ul>
                     {% for lead in page.lead %}
-                      <li>
-                        {% if page.lead-url[forloop.index0] != '' %}
-                          <a href="{{ page.lead-url[forloop.index0] }}">{{ lead }}</a>
-                        {% else %}
-                          {{ lead }}
-                        {% endif %}
-                      </li>
+                      {% assign lead-id = "/people/" | append: lead %}
+                      {% assign author = site.people | where:"id", lead-id | first %}
+                      <li><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a>, {{ author.affiliation }}</li>
                     {% endfor %}
                   </ul>
 
