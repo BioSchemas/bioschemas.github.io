@@ -68,7 +68,8 @@
                     {% for lead in page.lead %}
                       {% assign lead-id = "/people/" | append: lead %}
                       {% assign author = site.people | where:"id", lead-id | first %}
-                      <li><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a>, {{ author.affiliation }}</li>
+                      <!-- Need to have the if statement straight after the person details otherwise you get a space before the comma -->
+                      <li><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a>{% if author.affiliation %}, {{ author.affiliation }}{% endif %}</li>
                     {% endfor %}
                   </ul>
                   <h3>Members</h3>
