@@ -71,6 +71,14 @@
                       <li><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a>, {{ author.affiliation }}</li>
                     {% endfor %}
                   </ul>
+                  <h3>Members</h3>
+                  <ul>
+                    {% for author in site.people %}
+                    <!-- Need to have the if statement straight after the author details otherwise you get a space before the comma -->
+                      <li><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a>{% if author.affiliation %}, {{ author.affiliation }}{% endif %}
+                      </li>
+                    {% endfor %}
+                  </ul>
 
                 </section>
               </div>
