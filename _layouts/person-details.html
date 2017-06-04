@@ -13,11 +13,19 @@
               <div id="main_content_wrap" class="outer">
                 <section id="main_content" class="inner">
                   <h1>{{ page.first-name }} {{ page.last-name }}</h1>
-                  <p>{{ page.affiliation }}</p>
+                  {% if page.affiliation %}
+                    <p>{{ page.affiliation }}</p>
+                  {% endif %}
                   <ul>
-                    <li>Home page: <a href="page.homepage">{{ page.homepage }}</a></li>
-                    <li>ORCID: <a href="{{ "http://orcid.org/" | append: page.orcid }}">{{ page.orcid }}</a></li>
-                    <li>GitHub: <a href="{{ "http://github.com/" | append: page.github_username }}">{{ page.github_username }}</a></li>
+                    {% if page.homepage %}
+                      <li>Home page: <a href="page.homepage">{{ page.homepage }}</a></li>
+                    {% endif %}
+                    {% if page.orcid %}
+                      <li>ORCID: <a href="{{ "http://orcid.org/" | append: page.orcid }}">{{ page.orcid }}</a></li>
+                    {% endif %}
+                    {% if page.github_username %}
+                      <li>GitHub: <a href="{{ "http://github.com/" | append: page.github_username }}">{{ page.github_username }}</a></li>
+                    {% endif %}
                   </ul>
                   <h2>Groups</h2>
                   <ul>
