@@ -7,8 +7,7 @@ collection: groups
 active: true
 type: generic
 description: Specification for data repositories
-lead: [Henning Hermjakob]
-lead-url: ['']
+lead: [HenningHermjakob]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20datarepository
 folder: https://drive.google.com/open?id=0Bw_p-HKWUjHoNDJNUWltYVBkV1k
 
