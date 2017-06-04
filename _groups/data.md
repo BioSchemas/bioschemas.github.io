@@ -7,8 +7,7 @@ collection: groups
 active: true
 type: generic
 description: Specification for data
-lead: [Susanna Sansone]
-lead-url: ['http://www.oerc.ox.ac.uk/people/susanna-assunta-sansone']
+lead: [SusannaSansone]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20data
 folder:
 
