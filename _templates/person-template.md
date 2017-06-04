@@ -4,9 +4,9 @@ id:
 first-name:
 last-name:
 collection: people
-affiliation: 
+affiliation:
 homepage:
 github_username:
 orcid:
-groups: [beacons, biologicalentity, community, data, datarepositories, event, organisation, person, phenotypes, proteinannotations, samples, standards, tool, trainingmaterial, validation]
+groups: [beacons, biologicalentity, community, data, datarepositories, event, organisation, person, phenotypes, proteinannotations, samples, standard, tool, trainingmaterial, validation]
 ---
