@@ -7,8 +7,7 @@ collection: groups
 active: true
 type: biological
 description: Specification for samples
-lead: Helen Parkinson
-lead-url: ['https://www.ebi.ac.uk/about/people/helen-parkinson']
+lead: [HelenParkinson]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20samples
 folder:
 
