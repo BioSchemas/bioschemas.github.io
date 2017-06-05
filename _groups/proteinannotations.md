@@ -7,8 +7,7 @@ collection: groups
 active: true
 type: biological
 description: Specification for protein annotations
-lead: Maria Martin
-lead-url: ['']
+lead: [MariaMartin]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20proteinannotations
 folder:
 
