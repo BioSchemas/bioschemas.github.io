@@ -8,5 +8,5 @@ affiliation: Earlham Institute, UK
 homepage:
 github_username:
 orcid:
-groups: [biologicalentity, phenotypes, samples]
+groups: [biologicalentity, event, organisation, phenotypes, samples, trainingmaterial]
 ---

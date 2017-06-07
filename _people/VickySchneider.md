@@ -6,7 +6,7 @@ last-name: Schneider
 collection: people
 affiliation:
 homepage:
-github_username:
+github_username: VickySBio
 orcid:
-groups: [trainingmaterial]
+groups: [event, trainingmaterial, data, datarepositories, standard, tool, community, validation]
 ---
