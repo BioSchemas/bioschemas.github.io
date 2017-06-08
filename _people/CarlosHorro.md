@@ -5,8 +5,8 @@ first-name: Carlos
 last-name: Horro
 collection: people
 affiliation: Earlham Institute, UK
-homepage:
-github_username:
-orcid:
-groups: [biologicalentity, event, organisation, phenotypes, samples, trainingmaterial]
+homepage: http://www.earlham.ac.uk/carlos-horro
+github_username: CarlosHorro
+orcid: 0000-0002-0386-6390
+groups: [biologicalentity, phenotypes, samples]
 ---
