@@ -5,8 +5,8 @@ first-name: Alejandra
 last-name: Gonzalez-Beltran
 collection: people
 affiliation: University of Oxford
-homepage:
-github_username:
-orcid:
+homepage: http://oerc.ox.ac.uk/people/alejandra
+github_username: agbeltran
+orcid: 0000-0003-3499-8262
 groups: [event, organisation, person, trainingmaterial, data, datarepositories, standard, tool, community]
 ---
