@@ -9,7 +9,7 @@ type: biological
 description: Specification for protein annotations
 lead: [MariaMartin]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20proteinannotations
-folder:
+folder: https://drive.google.com/drive/folders/0B0fE3oOZIq44c2dqVVRkaVZ6X2M
 
 # Progress status
 usecase:

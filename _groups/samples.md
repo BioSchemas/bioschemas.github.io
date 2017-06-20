@@ -7,9 +7,9 @@ collection: groups
 active: true
 type: biological
 description: Specification for samples
-lead: [HelenParkinson]
+lead: [HelenParkinson, TonyBurdett]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20samples
-folder:
+folder: https://drive.google.com/drive/folders/0Bw_p-HKWUjHoaWhkTnBka2FWRE0
 
 # Progress status
 usecase: https://docs.google.com/document/d/1JS7ofrdO3UzkAI12C702AdniJ5fr-CRGIC84bQC-_VI/edit#heading=h.a4qqs3w7ptjr
