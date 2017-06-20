@@ -8,7 +8,6 @@ active: true
 type: biological
 description: Specification for biological entities
 lead: [CarlosHorro, LeylaGarcia, PhilippeRocca-Serra]
-lead-url: ['']
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20biologicalentity
 folder: https://drive.google.com/open?id=0B7X2x2IPBve7R3Uza1d6MGpuYVE
 
