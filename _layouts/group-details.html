@@ -24,41 +24,26 @@
                     {% endfor %}
 
                   </ul>
-<!--
                   <h2>Products</h2>
 
-                  <h3>Specification</h3>
-                  <p>The {{ page.name }} specification is the main product of this group.</p>
+                  <ul>
+                    <li><a href="{{ page.folder }}">Shared working folder</a></li>
+                    <li><a href="{{ page.github }}">GitHub repository</a></li>
+                    <li><a href="{{ page.issues }}">Issue tracker</a></li>
+                    <li><a href="{{ page.usecase }}">Use case document</a></li>
+                    <li><a href="{{ page.crosswalk }}">Crosswalk document</a></li>
+                    <li>Specifications
+                      <ul>
+                        {% for spec-version in page.spec-versions %}
+                          {% for spec in spec-version %}
+                            <li>
+                              <a href="{{ spec.spec-url }}">{{ spec.spec-num }}</a>
+                            </li>
+                          {% endfor %}
+                        {% endfor %}
+                      </ul>
+                  </ul>
 
-                  <div>
-                      <table>
-                          <thead>
-                          <tr>
-                              <th>Document type</th>
-                              <th>Location</th>
-                              <th>Date</th>
-                              <th>Version</th>
-                          </tr>
-                          </thead>
-                          <tbody>
-                          <tr>
-                              <td>Living document</td>
-                              <td>Google doc</td>
-                              <td></td>
-                              <td><a href="https://docs.google.com/document/d/12O8gsOuH2qHKpis6vTHxXExraNH5XZEnoilwNgWWgaQ/edit">0.1</a></td>
-                          </tr>
-                          <tr>
-                              <td>Snapshot</td>
-                              <td>Bioschemas website</td>
-                              <td>2016-01-27</td>
-                              <td><a href="full_event.html">0.1</a></td>
-                          </tr>
-                          </tbody>
-                      </table>
-                  </div>
-
-                  <p>We keep snapshots to have a reference of previous versions and modifications. Feel free to provide feedback in the living document.</p>
--->
                   <h2>Membership</h2>
 
                   <p>The {{ page.name }} Group is open to any organization or individual willing to contribute to the goals of this group. To become a member please follow the instructions to "<a href="../index.html#join_a_group">Join a group</a>".</p>
