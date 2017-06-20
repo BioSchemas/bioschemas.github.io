@@ -7,7 +7,7 @@ collection: groups
 active: true
 type: biological
 description: Specification for phenotypes
-lead:
+lead: [CarlosHorro]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20phenotypes
 folder:
 
