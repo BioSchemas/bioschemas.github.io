@@ -9,7 +9,7 @@ type: generic
 description: Specification for data
 lead: [SusannaSansone]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20data
-folder:
+folder: https://drive.google.com/open?id=0B2tKthYRS0f5aEhkU1Q4aEE5TEU
 
 # Progress status
 usecase:
