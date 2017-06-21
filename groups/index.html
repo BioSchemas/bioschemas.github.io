@@ -88,10 +88,16 @@ permalink: /groups/
                   {% endif %}
                 </td>
                 <td class="gitlink">
-                  {% if group.spec-num %}
-                    <a href="{{ group.spec-url }}" title="{{ group.name }} Specification version {{ group.spec-num }}" target="_blank">
-                      {{ group.spec-num }}
-                    </a>
+                  {% if group.spec-versions %}
+                    {% for spec-version in group.spec-versions %}
+                      {% if forloop.last %}
+                        {% for spec in spec-version %}
+                          <a href="{{ spec.spec-url }}" title="{{ group.name }} Specification version {{ spec.spec-url }}" target="_blank">
+                            {{ spec.spec-num }}
+                          </a>
+                        {% endfor %}
+                      {% endif %}
+                    {% endfor %}
                   {% endif %}
                 </td>
                 <td class="gitlink">

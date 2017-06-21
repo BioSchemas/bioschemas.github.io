@@ -34,7 +34,7 @@
                     <li><a href="{{ page.crosswalk }}">Crosswalk document</a></li>
                     <li>Specifications
                       <ul>
-                        {% for spec-version in page.spec-versions %}
+                        {% for spec-version in page.spec-versions reversed %}
                           {% for spec in spec-version %}
                             <li>
                               <a href="{{ spec.spec-url }}">{{ spec.spec-num }}</a>

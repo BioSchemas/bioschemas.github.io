@@ -14,8 +14,10 @@ folder: https://drive.google.com/open?id=0B2tKthYRS0f5aEhkU1Q4aEE5TEU
 # Progress status
 usecase:
 crosswalk: https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAvaADLmI_FrIk7O3BEkxY/edit#gid=0
-spec-num: 0.1
-spec-url: https://docs.google.com/document/d/1klUdYkCK-7YmbfKv2FNvBIOXZ1Pq9EhxvjceO7gWzfQ/edit#heading=h.esim87b96w1t
+spec-versions: [
+  [{"spec-num": "0.1", "spec-url": "https://docs.google.com/document/d/1klUdYkCK-7YmbfKv2FNvBIOXZ1Pq9EhxvjceO7gWzfQ"}]#,
+  #[{"spec-num": "0.2", "spec-url": "https://docs.google.com/document/d/1fn-of4cxGJLYiw1G3-KepZsIE0Ptq4GSx-h3jPmvdvc"}]
+]
 test: false
 adoption: false
 applications: false

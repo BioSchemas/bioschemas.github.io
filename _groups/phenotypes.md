@@ -14,8 +14,10 @@ folder:
 # Progress status
 usecase:
 crosswalk:
-spec-num:
-spec-url:
+#spec-versions: [
+#  [{"spec-num": "0.1", "spec-url": "https://docs.google.com/document/d/1kQE3lixvBjBiZ8X3I1Mi44c3dcdgf4SshoGdNX5-_TE"}]#,
+  #[{"spec-num": "0.2", "spec-url": "https://docs.google.com/document/d/1fn-of4cxGJLYiw1G3-KepZsIE0Ptq4GSx-h3jPmvdvc"}]
+#]
 test: false
 adoption: false
 applications: false
