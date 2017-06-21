@@ -27,11 +27,21 @@
                   <h2>Products</h2>
 
                   <ul>
-                    <li><a href="{{ page.folder }}">Shared working folder</a></li>
-                    <li><a href="{{ page.github }}">GitHub repository</a></li>
+                    {% if page.folder %}
+                      <li><a href="{{ page.folder }}">Shared working folder</a></li>
+                    {% endif %}
+                    {% if page.github %}
+                      <li><a href="{{ page.github }}">GitHub repository</a></li>
+                    {% endif %}
+                    {% if page.issues %}
                     <li><a href="{{ page.issues }}">Issue tracker</a></li>
-                    <li><a href="{{ page.usecase }}">Use case document</a></li>
+                    {% endif %}
+                    {% if page.usecase %}
+                    <li><a href="{{ page.usecase }}">Use case document</a></li>{% endif %}
+                    {% if page.crosswalk %}
                     <li><a href="{{ page.crosswalk }}">Crosswalk document</a></li>
+                    {% endif %}
+                    {% if page.spec-versions %}
                     <li>Specifications
                       <ul>
                         {% for spec-version in page.spec-versions reversed %}
@@ -42,6 +52,7 @@
                           {% endfor %}
                         {% endfor %}
                       </ul>
+                    {% endif %}
                   </ul>
 
                   <h2>Membership</h2>
