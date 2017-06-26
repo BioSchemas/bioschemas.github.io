@@ -1,7 +1,7 @@
 ---
 layout: group-details
 id: data
-name: Data
+name: Datasets
 path: data.html
 collection: groups
 active: true
