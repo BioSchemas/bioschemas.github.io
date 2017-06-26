@@ -1,22 +1,22 @@
 ---
 layout: group-details
-id: proteinannotations
-name: Protein Annotations
-path: proteinannotations.html
+id: proteinstructure
+name: Protein Structure
+path: proteinstructure.html
 collection: groups
 active: true
 type: biological
-description: Specification for protein annotations
+description: Specification for protein structure
 lead: [MariaMartin]
-issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20proteinannotations
-folder: https://drive.google.com/drive/folders/0B0fE3oOZIq44c2dqVVRkaVZ6X2M
+issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20proteinstructure
+folder: https://drive.google.com/drive/folders/0B0fE3oOZIq44U1gzLWgtV0VBaTQ
 
 # Progress status
 usecase: https://docs.google.com/document/d/1MNU-r7CMAvKdGav1VT3XeyQXr2XwRA6JXDsoWoA0R1E
 crosswalk: https://docs.google.com/spreadsheets/d/1QQH4AkzdwPT1Qt5OLmH5HosLpkFU7khwE4Ql9_Cb9ZQ
-spec-versions: [#
-  [{"spec-num": "0.0.3", "spec-url": "https://docs.google.com/document/d/1EBKwUEJ3QEtcj5cdqz0vOeF_p9foGpOFspcpwI0sOhY/"}]#,
-  #[{"spec-num": "0.2", "spec-url":
+spec-versions: [
+  [{"spec-num": "0.0.3", "spec-url": "https://docs.google.com/document/d/17WF8wE82TNFA9loHg05WasyjcePNBMkUUcY8LhUo8JA"}]#,
+  #[{"spec-num": "0.2", "spec-url": "https://docs.google.com/document/d/1fn-of4cxGJLYiw1G3-KepZsIE0Ptq4GSx-h3jPmvdvc"}]
 ]
 test: false
 adoption: false
