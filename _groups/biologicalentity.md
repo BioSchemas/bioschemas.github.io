@@ -15,8 +15,8 @@ folder: https://drive.google.com/open?id=0B7X2x2IPBve7R3Uza1d6MGpuYVE
 usecase:
 crosswalk: https://docs.google.com/spreadsheets/d/1h0-fgqnRe25-tVCmu2yWNQjthLzgkW4a1TVNMpCABlc
 spec-versions: [
-  [{"spec-num": "0.0.2", "spec-url": "https://docs.google.com/document/d/1fn-of4cxGJLYiw1G3-KepZsIE0Ptq4GSx-h3jPmvdvc"}]#,
-  #[{"spec-num": "0.2", "spec-url": "https://docs.google.com/document/d/1fn-of4cxGJLYiw1G3-KepZsIE0Ptq4GSx-h3jPmvdvc"}]
+  [{"spec-num": "0.0.2", "spec-url": "https://docs.google.com/document/d/1fn-of4cxGJLYiw1G3-KepZsIE0Ptq4GSx-h3jPmvdvc"}],
+  [{"spec-num": "0.0.3", "spec-url": "https://docs.google.com/document/d/1XASuESIHU3bi1aXMxQS5-rCOQX0ugjMNkh68VF4co4Q/edit#heading=h.6oipgccr4ak8"}]
 ]
 test: false
 adoption: false
