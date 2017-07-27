@@ -845,11 +845,9 @@ Others (Not Used)
 .tar_download_link:hover {
     background: url(../images/sprite_download.png) no-repeat top right;
 }
-
+/***
 .icon {
 
-
->
 svg {
     display: inline-block;
     width: 1em;
@@ -857,12 +855,12 @@ svg {
     vertical-align: middle;
 
 path {
-    fill: $ grey-color;
+    fill: grey-color;
 }
 
 }
 }
-
+**/
 
 /**
 
@@ -1197,3 +1195,22 @@ Small Device Styles
         display: none;
     }
 }
+/*******************************************************************************
+Specification Properties
+*******************************************************************************/
+
+.new_sdo h4, .reu_sdo h4{
+    color: #990000;
+}
+
+.new_sdo table th, .reu_sdo table th{
+    color: #ffffff;
+    background: rgba(176, 0, 0, 0.8);
+}
+
+.new_bsc table th, .reu_bsc table th{
+    color: #ffffff;
+    background: rgba(11, 121, 75, 0.8);
+}
+
+

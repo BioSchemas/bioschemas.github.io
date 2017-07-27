@@ -1,0 +1,33 @@
+---
+layout: new_specs
+title: BioSchemas Specifications
+---
+
+<div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
+        <h1>Bioschemas Types</h1>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Version</th>
+                <th>Mapping File</th>
+                <th>Specification File</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for spec in site.newSpecs %}
+            <tr>
+                <td><a href="{{spec.url}}">{{spec.name}}</a></td>
+                <td>{{ spec.description }}</td>
+                <td>{{ spec.version }}</td>
+                <td><a target="_blank" href="{{ spec.spec_mapping }}" style="text-align: center; display: block"><img src="/images/gsheets_icon.png" alt="BioSchemas {{ spec.name }} Mapping" style="width: 70%"></a></td>
+                <td><a target="_blank" href="{{ spec.spec_doc }}" style="text-align: center; display: block"><img src="/images/gdocs_icon.png" alt="BioSchemas {{ spec.name }} Specification" style="width: 50%"></a></td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </section>
+</div>

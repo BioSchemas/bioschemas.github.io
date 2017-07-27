@@ -25,6 +25,9 @@ gems:
 
 # Collections
 collections:
+  newSpecs:
+    output: true
+    permalink: /:collection/:path/
   groups:
     output: true
     permalink: /:collection/:path/ #Note, trailing / needed to avoid .html
