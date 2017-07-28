@@ -12,13 +12,20 @@
     <div class="wrapper">
         <div id="main_content_wrap" class="outer">
             <section id="main_content" class="inner">
+
+
                 <h1>Specification for {{page.name}} Type</h1>
                 <h2>Version: {{page.version}}</h2>
                 <br>
+
+                
                 <h3>Description: </h3>
                 <p>{{page.description}}</p>
                 <h3>List of properties</h3>
                 <br>
+
+
+                {% if page.reu_sdo %}
                 <div class="reu_sdo">
                 <h4>Reused from schema.org</h4>
                 <table>
@@ -47,6 +54,10 @@
                 </table>
                 </div>
                 <br>
+                {% endif %}
+
+
+                {% if page.reu_bsc %}
                 <div class="reu_bsc">
                 <h4>Reused from BioSchemas</h4>
                 <table>
@@ -75,6 +86,9 @@
                 </table>
                 </div>
                 <br>
+                {% endif %}
+
+                {% if page.new_sdo %}
                 <div class="new_sdo">
                 <h4>New for schema.org</h4>
                 <table>
@@ -103,6 +117,9 @@
                 </table>
                 </div>
                 <br>
+                {% endif %}
+
+                {% if page.new_bsc %}
                 <div class="new_bsc">
                 <h4>New for BioSchemas</h4>
                 <table>
@@ -130,6 +147,8 @@
                     </tbody>
                 </table>
                 </div>
+                {% endif %}
+
             </section>
         </div>
     </div>
