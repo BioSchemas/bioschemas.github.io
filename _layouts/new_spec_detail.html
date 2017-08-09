@@ -23,7 +23,39 @@
                 <p>{{page.description}}</p>
                 <h3>List of properties</h3>
                 <br>
-                
+
+                {% if page.new_bsc %}
+                <div class="new_bsc">
+                    <h4>New for BioSchemas</h4>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Domain</th>
+                            <th>Expected Type</th>
+                            <th>Description</th>
+                            <th>MG</th>
+                            <th>CD</th>
+                            <th>CV</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for prop in page.new_bsc%}
+                        <tr>
+                            <td><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></td>
+                            <td><a href="http://schema.org/{{prop.domain}}">{{prop.domain}}</a></td>
+                            <td>{{prop.expected_type}}</td>
+                            <td>{{prop.sdo_desc}}<br>{{prop.bsc_dec}}</td>
+                            <td>{{prop.marginality}}</td>
+                            <td>{{prop.cardinality}}</td>
+                            <td>{{prop.controlled_vocab}}</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% endif %}
+
                 {% if page.reu_bsc %}
                 <div class="reu_bsc">
                 <h4>Reused from BioSchemas</h4>
@@ -57,36 +89,37 @@
                 <br>
                 {% endif %}
 
-                {% if page.new_bsc %}
-                <div class="new_bsc">
-                <h4>New for BioSchemas</h4>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Property</th>
-                        <th>Domain</th>
-                        <th>Expected Type</th>
-                        <th>Description</th>
-                        <th>MG</th>
-                        <th>CD</th>
-                        <th>CV</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {% for prop in page.new_bsc%}
-                    <tr>
-                        <td><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></td>
-                        <td><a href="http://schema.org/{{prop.domain}}">{{prop.domain}}</a></td>
-                        <td>{{prop.expected_type}}</td>
-                        <td>{{prop.sdo_desc}}<br>{{prop.bsc_dec}}</td>
-                        <td>{{prop.marginality}}</td>
-                        <td>{{prop.cardinality}}</td>
-                        <td>{{prop.controlled_vocab}}</td>
-                    </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
+                {% if page.new_sdo %}
+                <div class="new_sdo">
+                    <h4>New for schema.org</h4>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Domain</th>
+                            <th>Expected Type</th>
+                            <th>Description</th>
+                            <th>MG</th>
+                            <th>CD</th>
+                            <th>CV</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for prop in page.new_sdo%}
+                        <tr>
+                            <td><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></td>
+                            <td><a href="http://schema.org/{{prop.domain}}">{{prop.domain}}</a></td>
+                            <td>{{prop.expected_type}}</td>
+                            <td>{{prop.sdo_desc}}<br>{{prop.bsc_dec}}</td>
+                            <td>{{prop.marginality}}</td>
+                            <td>{{prop.cardinality}}</td>
+                            <td>{{prop.controlled_vocab}}</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
+                <br>
                 {% endif %}
 
                 {% if page.reu_sdo %}
@@ -106,39 +139,6 @@
                         </thead>
                         <tbody>
                         {% for prop in page.reu_sdo%}
-                        <tr>
-                            <td><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></td>
-                            <td><a href="http://schema.org/{{prop.domain}}">{{prop.domain}}</a></td>
-                            <td>{{prop.expected_type}}</td>
-                            <td>{{prop.sdo_desc}}<br>{{prop.bsc_dec}}</td>
-                            <td>{{prop.marginality}}</td>
-                            <td>{{prop.cardinality}}</td>
-                            <td>{{prop.controlled_vocab}}</td>
-                        </tr>
-                        {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-                <br>
-                {% endif %}
-
-                {% if page.new_sdo %}
-                <div class="new_sdo">
-                    <h4>New for schema.org</h4>
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>Property</th>
-                            <th>Domain</th>
-                            <th>Expected Type</th>
-                            <th>Description</th>
-                            <th>MG</th>
-                            <th>CD</th>
-                            <th>CV</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {% for prop in page.new_sdo%}
                         <tr>
                             <td><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></td>
                             <td><a href="http://schema.org/{{prop.domain}}">{{prop.domain}}</a></td>
