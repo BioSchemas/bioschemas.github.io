@@ -11,8 +11,7 @@ new_bsc:
   - citation
   marginality: Recommended
   name: supportedReference
-  sdo_desc: A citation or reference to another creative work, such as another publication,
-    web page, scholarly article, etc.
+  sdo_desc: A citation or reference to another creative work, such as another publication web page, scholarly article, etc.
 new_sdo: []
 reu_bsc: []
 reu_sdo:
