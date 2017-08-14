@@ -15,16 +15,11 @@
                 <h1>Specification for {{page.name}} Type</h1>
                 <h2>Version: {{page.version}}</h2>
                 <br>
-<<<<<<< HEAD
 
-
-=======
->>>>>>> parent of d812043... Beacon Specification Defined
                 <h3>Description: </h3>
                 <p>{{page.description}}</p>
                 <h3>List of properties</h3>
                 <br>
-<<<<<<< HEAD
 
                 {% if page.new_bsc %}
                 <div class="new_bsc">
@@ -46,7 +41,11 @@
                         <tr>
                             <td><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></td>
                             <td><a href="http://schema.org/{{prop.domain}}">{{prop.domain}}</a></td>
-                            <td>{{prop.expected_type}}</td>
+                            <td>
+                                {% for temp_exp_type in prop.expected_type %}
+                                <a href="http://schema.org/{{temp_exp_type}}">{{temp_exp_type}}</a><br>
+                                {% endfor %}
+                            </td>
                             <td>{{prop.sdo_desc}}<br>{{prop.bsc_dec}}</td>
                             <td>{{prop.marginality}}</td>
                             <td>{{prop.cardinality}}</td>
@@ -59,66 +58,42 @@
                 {% endif %}
 
                 {% if page.reu_bsc %}
-=======
-                <div class="reu_sdo">
-                <h4>Reused from schema.org</h4>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Property</th>
-                        <th>Expected Type</th>
-                        <th>Description</th>
-                        <th>MG</th>
-                        <th>CD</th>
-                        <th>Controlled Vocab.</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {% for prop in page.reu_sdo%}
-                    <tr>
-                        <td>{{prop.name}}</td>
-                        <td>{{prop.expected_type}}</td>
-                        <td>{{prop.sdo_desc}}<br>{{prop.bsc_dec}}</td>
-                        <td>{{prop.marginality}}</td>
-                        <td>{{prop.cardinality}}</td>
-                        <td>{{prop.controlled_vocab}}</td>
-                    </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
-                </div>
-                <br>
->>>>>>> parent of d812043... Beacon Specification Defined
                 <div class="reu_bsc">
-                <h4>Reused from BioSchemas</h4>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Property</th>
-                        <th>Domain</th>
-                        <th>Expected Type</th>
-                        <th>Description</th>
-                        <th>MG</th>
-                        <th>CD</th>
-                        <th>CV</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {% for prop in page.reu_bsc%}
-                    <tr>
-                        <td><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></td>
-                        <td><a href="http://schema.org/{{prop.domain}}">{{prop.domain}}</a></td>
-                        <td>{{prop.expected_type}}</td>
-                        <td>{{prop.sdo_desc}}<br>{{prop.bsc_dec}}</td>
-                        <td>{{prop.marginality}}</td>
-                        <td>{{prop.cardinality}}</td>
-                        <td>{{prop.controlled_vocab}}</td>
-                    </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
+                    <h4>Reused from BioSchemas</h4>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Domain</th>
+                            <th>Expected Type</th>
+                            <th>Description</th>
+                            <th>MG</th>
+                            <th>CD</th>
+                            <th>CV</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for prop in page.new_bsc%}
+                        <tr>
+                            <td><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></td>
+                            <td><a href="http://schema.org/{{prop.domain}}">{{prop.domain}}</a></td>
+                            <td>
+                                {% for temp_exp_type in prop.expected_type %}
+                                <a href="http://schema.org/{{temp_exp_type}}">{{temp_exp_type}}</a><br>
+                                {% endfor %}
+                            </td>
+                            <td>{{prop.sdo_desc}}<br>{{prop.bsc_dec}}</td>
+                            <td>{{prop.marginality}}</td>
+                            <td>{{prop.cardinality}}</td>
+                            <td>{{prop.controlled_vocab}}</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
-                <br>
+                {% endif %}
+
+                {% if page.new_sdo %}
                 <div class="new_sdo">
                     <h4>New for schema.org</h4>
                     <table>
@@ -134,11 +109,15 @@
                         </tr>
                         </thead>
                         <tbody>
-                        {% for prop in page.new_sdo%}
+                        {% for prop in page.new_bsc%}
                         <tr>
                             <td><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></td>
                             <td><a href="http://schema.org/{{prop.domain}}">{{prop.domain}}</a></td>
-                            <td>{{prop.expected_type}}</td>
+                            <td>
+                                {% for temp_exp_type in prop.expected_type %}
+                                <a href="http://schema.org/{{temp_exp_type}}">{{temp_exp_type}}</a><br>
+                                {% endfor %}
+                            </td>
                             <td>{{prop.sdo_desc}}<br>{{prop.bsc_dec}}</td>
                             <td>{{prop.marginality}}</td>
                             <td>{{prop.cardinality}}</td>
@@ -148,9 +127,8 @@
                         </tbody>
                     </table>
                 </div>
-                <br>
-<<<<<<< HEAD
                 {% endif %}
+
 
                 {% if page.reu_sdo %}
                 <div class="reu_sdo">
@@ -172,7 +150,11 @@
                         <tr>
                             <td><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></td>
                             <td><a href="http://schema.org/{{prop.domain}}">{{prop.domain}}</a></td>
-                            <td>{{prop.expected_type}}</td>
+                            <td>
+                                {% for temp_exp_type in prop.expected_type %}
+                                <a href="http://schema.org/{{temp_exp_type}}">{{temp_exp_type}}</a><br>
+                                {% endfor %}
+                            </td>
                             <td>{{prop.sdo_desc}}<br>{{prop.bsc_dec}}</td>
                             <td>{{prop.marginality}}</td>
                             <td>{{prop.cardinality}}</td>
@@ -185,35 +167,7 @@
                 <br>
                 {% endif %}
 
-=======
-                <div class="new_bsc">
-                <h4>New for BioSchemas</h4>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Property</th>
-                        <th>Expected Type</th>
-                        <th>Description</th>
-                        <th>MG</th>
-                        <th>CD</th>
-                        <th>Controlled Vocab.</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {% for prop in page.new_bsc%}
-                    <tr>
-                        <td>{{prop.name}}</td>
-                        <td>{{prop.expected_type}}</td>
-                        <td>{{prop.sdo_desc}}<br>{{prop.bsc_dec}}</td>
-                        <td>{{prop.marginality}}</td>
-                        <td>{{prop.cardinality}}</td>
-                        <td>{{prop.controlled_vocab}}</td>
-                    </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
-                </div>
->>>>>>> parent of d812043... Beacon Specification Defined
+
             </section>
         </div>
     </div>

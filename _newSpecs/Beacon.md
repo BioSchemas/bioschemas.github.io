@@ -1,10 +1,9 @@
 ---
 description: Some description.
+layout: new_spec_detail
 name: Beacon
 new_bsc:
-<<<<<<< HEAD
-- name: supportedReference
-  bsc_dec: supportedRefs
+- bsc_dec: supportedRefs
   cardinality: MANY
   controlled_vocab: 'YES'
   domain: Beacon
@@ -12,7 +11,9 @@ new_bsc:
   expected_type:
   - citation
   marginality: Recommended
-  sdo_desc: A citation or reference to another creative work, such as another publication web page, scholarly article, etc.
+  name: supportedReference
+  sdo_desc: A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
 new_sdo: []
 reu_bsc: []
 reu_sdo:
@@ -25,21 +26,7 @@ reu_sdo:
   - Dataset
   marginality: Minimum
   name: dataset
-  sdo_desc: 'A dataset contained in this catalog.
-=======
-new_sdo:
-reu_bsc:
-reu_sdo:
----
-
-
-
-
-
-
->>>>>>> parent of d812043... Beacon Specification Defined
-
-    Inverse property: includedInDataCatalog.'
+  sdo_desc: 'A dataset contained in this catalog. Inverse property: includedInDataCatalog.'
 - bsc_dec: provider
   cardinality: MANY
   controlled_vocab: 'NO'
