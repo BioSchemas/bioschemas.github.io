@@ -2,7 +2,8 @@
 description: Some description.
 name: Beacon
 new_bsc:
-- bsc_dec: supportedRefs
+- name: supportedReference
+  bsc_dec: supportedRefs
   cardinality: MANY
   controlled_vocab: 'YES'
   domain: Beacon
@@ -10,7 +11,6 @@ new_bsc:
   expected_type:
   - citation
   marginality: Recommended
-  name: supportedReference
   sdo_desc: A citation or reference to another creative work, such as another publication web page, scholarly article, etc.
 new_sdo: []
 reu_bsc: []
