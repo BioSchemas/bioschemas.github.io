@@ -2,6 +2,7 @@
 description: Some description.
 name: Beacon
 new_bsc:
+<<<<<<< HEAD
 - name: supportedReference
   bsc_dec: supportedRefs
   cardinality: MANY
@@ -25,6 +26,18 @@ reu_sdo:
   marginality: Minimum
   name: dataset
   sdo_desc: 'A dataset contained in this catalog.
+=======
+new_sdo:
+reu_bsc:
+reu_sdo:
+---
+
+
+
+
+
+
+>>>>>>> parent of d812043... Beacon Specification Defined
 
     Inverse property: includedInDataCatalog.'
 - bsc_dec: provider
