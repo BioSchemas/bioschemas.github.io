@@ -1,5 +1,10 @@
 ---
-description: Some description.
+description: "This protein structure specification presents the usage of the generic\
+  \ type BiologicalEntity for the biological type \u201Cprotein structure\u201D. The\
+  \ biological type makes use of additionalProperty so please read carefully the extra\
+  \ documentation provided here for the correct and expected usage of that property.\
+  \ Please be aware that \u201Cprotein structure\u201D is NOT a schema.org type but\
+  \ a BiologicalEntity profile."
 layout: new_spec_detail
 name: ProteinStructure
 new_bsc:

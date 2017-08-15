@@ -1,5 +1,7 @@
 ---
-description: Some description.
+description: "[One paragraph description]\n[References to supporting information like\
+  \ \u201Cuse cases\u201D, \u201Cbioschemas mapping\u201D and \u201Cschema.org posted\
+  \ issues\u201D]\n"
 layout: new_spec_detail
 name: Tool
 new_bsc:

@@ -1,5 +1,7 @@
 ---
-description: Some description.
+description: "This protein specification presents the usage of the generic type BiologicalEntity\
+  \ by the biological type \u201Cprotein\u201D. Please be aware \u201Cprotein\u201D\
+  \ is NOT a schema.org type but a BiologicalEntity profile."
 layout: new_spec_detail
 name: Protein
 new_bsc:

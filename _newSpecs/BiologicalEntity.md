@@ -1,5 +1,11 @@
 ---
-description: Some description.
+description: "The BiologicalEntity aims to encompasses as much as possible biological\
+  \ types such as \u201Csamples\u201D, \u201Cprotein\u201D, \u201Cprotein annotation\u201D\
+  , \u201Cprotein structure\u201D, \u201Cphenotype\u201D and so on. Most of the properties\
+  \ here will be optional as the specific profiles, i.e., a tailored usage of BiologicalEntitty,\
+  \ will provide stronger requirements whenever needed.\nMost of the new properties\
+  \ belong to BiologicalEntity but some required changes at a different level in schema.org.\
+  \ That is why we also have some new properties for CreativeWork and Thing."
 layout: new_spec_detail
 name: BiologicalEntity
 new_bsc:
