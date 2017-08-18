@@ -18,7 +18,7 @@
                   {% endif %}
                   <ul>
                     {% if page.homepage %}
-                      <li>Home page: <a href="page.homepage">{{ page.homepage }}</a></li>
+                      <li>Home page: <a href="{{ page.homepage }}">{{ page.homepage }}</a></li>
                     {% endif %}
                     {% if page.orcid %}
                       <li>ORCID: <a href="{{ "http://orcid.org/" | append: page.orcid }}">{{ page.orcid }}</a></li>
