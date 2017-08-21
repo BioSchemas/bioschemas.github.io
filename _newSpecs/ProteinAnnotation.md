@@ -3,9 +3,88 @@ description: In this document we propose a simple way for a beacons to self-desc
   their genetic variant cardinality service for better integration with other beacons
   within the beacon-network. It builds upon the Beacon service API and uses existing
   schema.org entities and properties.
+g_mapping_file: ProteinAnnotation Mapping
+github_url: https://github.com/BioSchemas/Proteins
 layout: new_spec_detail
 name: ProteinAnnotation
 new_bsc:
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  domain: invalid domain type
+  domain_case: new_bsc
+  expected_type:
+  - Thing
+  marginality: Recommended
+  name: isMentionedIn
+  sdo_desc: CretiveWork, Dataset, collection mentioning this entity  Inverse of:mentions
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  domain: invalid domain type
+  domain_case: new_bsc
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: alternateName
+  sdo_desc: An alias for the item.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  domain: invalid domain type
+  domain_case: new_bsc
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: description
+  sdo_desc: A description of the item.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  domain: invalid domain type
+  domain_case: new_bsc
+  expected_type:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Minimum
+  name: identifier
+  sdo_desc: 'The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See background notes for more details. Recommendation: identifiers.org
+    whenever possible'
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  domain: invalid domain type
+  domain_case: new_bsc
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: name
+  sdo_desc: The name of the item.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  domain: invalid domain type
+  domain_case: new_bsc
+  expected_type:
+  - URL
+  marginality: Optional
+  name: sameAs
+  sdo_desc: URL of a reference Web page that unambiguously indicates the item's identity.
+    E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  domain: invalid domain type
+  domain_case: new_bsc
+  expected_type:
+  - URL
+  marginality: Optional
+  name: url
+  sdo_desc: URL of the item.
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
@@ -79,23 +158,14 @@ new_bsc:
   marginality: Optional
   name: taxon
   sdo_desc: A url pointing to NCBI Taxonomy or a taxonomic resource
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab: ''
-  domain: invalid domain type
-  domain_case: new_bsc
-  expected_type:
-  - Thing
-  marginality: Recommended
-  name: isMentionedIn
-  sdo_desc: CretiveWork, Dataset, collection mentioning this entity  Inverse of:mentions
 new_sdo: []
-reu_bsc:
+reu_bsc: []
+reu_sdo:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: various in BiologicalEntity
-  domain_case: reu_bsc
+  domain: CreativeWork
+  domain_case: reu_sdo
   expected_type:
   - CreativeWork
   - URL
@@ -106,8 +176,8 @@ reu_bsc:
 - bsc_dec: ''
   cardinality: ONE
   controlled_vocab: ''
-  domain: various in BiologicalEntity
-  domain_case: reu_bsc
+  domain: CreativeWork
+  domain_case: reu_sdo
   expected_type:
   - Date
   - DateTime
@@ -118,8 +188,8 @@ reu_bsc:
 - bsc_dec: ''
   cardinality: ONE
   controlled_vocab: ''
-  domain: various in BiologicalEntity
-  domain_case: reu_bsc
+  domain: CreativeWork
+  domain_case: reu_sdo
   expected_type:
   - Date
   - DateTime
@@ -130,8 +200,8 @@ reu_bsc:
 - bsc_dec: ''
   cardinality: ONE
   controlled_vocab: ''
-  domain: various in BiologicalEntity
-  domain_case: reu_bsc
+  domain: CreativeWork
+  domain_case: reu_sdo
   expected_type:
   - Date
   marginality: Optional
@@ -140,8 +210,8 @@ reu_bsc:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: various in BiologicalEntity
-  domain_case: reu_bsc
+  domain: CreativeWork
+  domain_case: reu_sdo
   expected_type:
   - DataDownload
   marginality: Optional
@@ -151,8 +221,8 @@ reu_bsc:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: various in BiologicalEntity
-  domain_case: reu_bsc
+  domain: CreativeWork
+  domain_case: reu_sdo
   expected_type:
   - CreativeWork
   - URL
@@ -165,8 +235,8 @@ reu_bsc:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: various in BiologicalEntity
-  domain_case: reu_bsc
+  domain: CreativeWork
+  domain_case: reu_sdo
   expected_type:
   - BiologicalEntity
   marginality: Optional
@@ -176,8 +246,8 @@ reu_bsc:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: various in BiologicalEntity
-  domain_case: reu_bsc
+  domain: CreativeWork
+  domain_case: reu_sdo
   expected_type:
   - Text, url, PropertyValue
   marginality: Optional
@@ -185,73 +255,9 @@ reu_bsc:
   sdo_desc: To describe the process used to obtain a biological entity or which is
     associated with that entity (i.e procedure to obtain it or measure/characterise
     it)
-reu_sdo:
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
-  expected_type:
-  - Text
-  marginality: Recommended
-  name: alternateName
-  sdo_desc: An alias for the item.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
-  expected_type:
-  - Text
-  marginality: Recommended
-  name: description
-  sdo_desc: A description of the item.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
-  expected_type:
-  - PropertyValue
-  - Text
-  - URL
-  marginality: Minimum
-  name: identifier
-  sdo_desc: 'The identifier property represents any kind of identifier for any kind
-    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
-    properties for representing many of these, either as textual strings or as URL
-    (URI) links. See background notes for more details. Recommendation: identifiers.org
-    whenever possible'
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
-  expected_type:
-  - Text
-  marginality: Recommended
-  name: name
-  sdo_desc: The name of the item.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
-  expected_type:
-  - URL
-  marginality: Optional
-  name: sameAs
-  sdo_desc: URL of a reference Web page that unambiguously indicates the item's identity.
-    E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
-  expected_type:
-  - URL
-  marginality: Optional
-  name: url
-  sdo_desc: URL of the item.
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1KNVv3xedOpckk3ZcILnPmlys2DTzpk8KnkRwVFR2SL0/edit?usp=drivesdk
+status: revision
+stereotype: BiologicalEntity
+subtitle: 'A convention for beacon to self-describe. '
 version: 0.0.1
 ---

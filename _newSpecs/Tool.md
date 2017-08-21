@@ -2,6 +2,8 @@
 description: "[One paragraph description]\n[References to supporting information like\
   \ \u201Cuse cases\u201D, \u201Cbioschemas mapping\u201D and \u201Cschema.org posted\
   \ issues\u201D]\n"
+g_mapping_file: Tool Mapping
+github_url: None
 layout: new_spec_detail
 name: Tool
 new_bsc:
@@ -99,12 +101,18 @@ new_bsc:
   domain: invalid domain type
   domain_case: new_bsc
   expected_type:
-  - ''
+  - PublicationEvent
   marginality: Recommended
-  name: ''
-  sdo_desc: ''
+  name: publication
+  sdo_desc: A PublicationEvent corresponds indifferently to the event of publication
+    for a CreativeWork of any type e.g. a broadcast event, an on-demand event, a book/journal
+    publication via a variety of delivery media.
 new_sdo: []
 reu_bsc: []
 reu_sdo: []
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1D0aQl-Ocp8Fi7a-drKV1Faed6tYUgGwzEM8xypa8S2Y/edit?usp=drivesdk
+status: revision
+stereotype: None
+subtitle: Bioschemas specification for describing SoftwareApplication in the life-science.
 version: 0.0.1
 ---

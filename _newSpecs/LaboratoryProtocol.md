@@ -12,13 +12,15 @@ description: 'An experimental protocol is a sequence of tasks and operations exe
   on Linked Science 2014- Making Sense Out of Data (LISC2014)
 
   '
+g_mapping_file: LabProtocol Mapping
+github_url: https://github.com/BioSchemas/LaboratoryProtocol
 layout: new_spec_detail
-name: LabProtocol
+name: LaboratoryProtocol
 new_bsc:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: LabProtocol
+  domain: invalid domain type
   domain_case: new_bsc
   expected_type:
   - Text
@@ -29,7 +31,7 @@ new_bsc:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: LabProtocol
+  domain: invalid domain type
   domain_case: new_bsc
   expected_type:
   - Text
@@ -40,7 +42,7 @@ new_bsc:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: LabProtocol
+  domain: invalid domain type
   domain_case: new_bsc
   expected_type:
   - Text
@@ -52,7 +54,7 @@ new_bsc:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: LabProtocol
+  domain: invalid domain type
   domain_case: new_bsc
   expected_type:
   - BiologicalEntity (chemicals)
@@ -67,17 +69,25 @@ new_bsc:
   domain: invalid domain type
   domain_case: new_bsc
   expected_type:
-  - Thing
-  marginality: Recommended
-  name: isMentionedIn
-  sdo_desc: CretiveWork, Dataset, collection mentioning this entity  Inverse of:mentions
-new_sdo: []
-reu_bsc:
+  - Text
+  marginality: Minimum
+  name: purpose
+  sdo_desc: A goal towards an action is taken. Can be concrete or abstract.
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: Product/Service
-  domain_case: reu_bsc
+  domain: invalid domain type
+  domain_case: new_bsc
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: outcome
+  sdo_desc: outcome or expected result by a protocol execution.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  domain: invalid domain type
+  domain_case: new_bsc
   expected_type:
   - Text
   marginality: Recommended
@@ -87,35 +97,61 @@ reu_bsc:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: BiologicalEntity
-  domain_case: reu_bsc
+  domain: invalid domain type
+  domain_case: new_bsc
+  expected_type:
+  - Thing
+  marginality: Recommended
+  name: isMentionedIn
+  sdo_desc: CretiveWork, Dataset, collection mentioning this entity  Inverse of:mentions
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  domain: invalid domain type
+  domain_case: new_bsc
+  expected_type:
+  - Text
+  - URL
+  marginality: Minimum
+  name: device
+  sdo_desc: Device required to run the application. Used in cases where a specific
+    make/model is required to run the application.  For LabProtocols it would be a
+    laboratory equipment.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  domain: invalid domain type
+  domain_case: new_bsc
   expected_type:
   - BiologicalEntity
   - URL
   marginality: Minimum
   name: sample
   sdo_desc: Samples used in the protocol
-reu_sdo:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: MedicalDevice
-  domain_case: reu_sdo
+  domain: invalid domain type
+  domain_case: new_bsc
   expected_type:
-  - Text
-  marginality: Minimum
-  name: purpose
-  sdo_desc: A goal towards an action is taken. Can be concrete or abstract.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab: ''
-  domain: MedicalStudy
-  domain_case: reu_sdo
-  expected_type:
-  - Text
+  - SoftwareApplication
   marginality: Recommended
-  name: outcome
-  sdo_desc: outcome or expected result by a protocol execution.
+  name: actionApplication
+  sdo_desc: An application that can complete the request.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  domain: invalid domain type
+  domain_case: new_bsc
+  expected_type:
+  - Duration
+  marginality: Recommended
+  name: duration
+  sdo_desc: The time it takes to actually carry on the protocol, in ISO 8601 duration
+    format.
+new_sdo: []
+reu_bsc: []
+reu_sdo:
 - bsc_dec: ''
   cardinality: ONE
   controlled_vocab: ''
@@ -166,39 +202,9 @@ reu_sdo:
   sdo_desc: A resource that was used in the creation of this resource. This term can
     be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
     Supersedes isBasedOnUrl.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab: ''
-  domain: SoftwareApplication
-  domain_case: reu_sdo
-  expected_type:
-  - Text
-  - URL
-  marginality: Minimum
-  name: device
-  sdo_desc: Device required to run the application. Used in cases where a specific
-    make/model is required to run the application.  For LabProtocols it would be a
-    laboratory equipment.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab: ''
-  domain: EntryPoint
-  domain_case: reu_sdo
-  expected_type:
-  - SoftwareApplication
-  marginality: Recommended
-  name: actionApplication
-  sdo_desc: An application that can complete the request.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab: ''
-  domain: Event
-  domain_case: reu_sdo
-  expected_type:
-  - Duration
-  marginality: Recommended
-  name: duration
-  sdo_desc: The time it takes to actually carry on the protocol, in ISO 8601 duration
-    format.
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1julB0P6kjXK_mL2dU8EDU9zMxIMah0_dYYeGt2Spllo/edit?usp=drivesdk
+status: revision
+stereotype: None
+subtitle: Bioschemas specification describing LabProtocol in the life-science.
 version: 0.0.1
 ---

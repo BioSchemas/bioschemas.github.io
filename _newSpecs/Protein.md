@@ -2,6 +2,8 @@
 description: "This protein specification presents the usage of the generic type BiologicalEntity\
   \ by the biological type \u201Cprotein\u201D. Please be aware \u201Cprotein\u201D\
   \ is NOT a schema.org type but a BiologicalEntity profile."
+g_mapping_file: Protein Mapping
+github_url: https://github.com/BioSchemas/Proteins
 layout: new_spec_detail
 name: Protein
 new_bsc:
@@ -76,93 +78,21 @@ new_bsc:
   marginality: Optional
   name: taxon
   sdo_desc: A url pointing to NCBI Taxonomy or a taxonomic resource
-new_sdo:
 - bsc_dec: ''
   cardinality: ONE
   controlled_vocab: ''
-  domain: Thing
-  domain_case: new_sdo
+  domain: BiologicalEntity
+  domain_case: new_bsc
   expected_type:
   - Thing
   marginality: Recommended
   name: isMentionedIn
   sdo_desc: CreativeWork, Dataset, collection mentioning this entity  Inverse of:mentions
-reu_bsc:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: various in BiologicalEntity
-  domain_case: reu_bsc
-  expected_type:
-  - CreativeWork
-  - URL
-  marginality: Recommended
-  name: citation
-  sdo_desc: A citation or reference to a creative work, such as a publication, web
-    page, scholarly article, etc.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab: ''
-  domain: various in BiologicalEntity
-  domain_case: reu_bsc
-  expected_type:
-  - Date
-  - DateTime
-  marginality: Optional
-  name: dateCreated
-  sdo_desc: The date on which the BiologicalEntity was created or the item was added
-    to a DataFeed.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab: ''
-  domain: various in BiologicalEntity
-  domain_case: reu_bsc
-  expected_type:
-  - Date
-  - DateTime
-  marginality: Optional
-  name: dateModified
-  sdo_desc: The date on which the BiologicalEntity was most recently modified or when
-    the item's entry was modified within a DataFeed.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab: ''
-  domain: various in BiologicalEntity
-  domain_case: reu_bsc
-  expected_type:
-  - DataDownload
-  marginality: Optional
-  name: distribution
-  sdo_desc: A downloadable form of this entity, at a specific location, in a specific
-    format
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab: ''
-  domain: various in BiologicalEntity
-  domain_case: reu_bsc
-  expected_type:
-  - BiologicalEntity
-  marginality: Optional
-  name: hasPart
-  sdo_desc: 'Indicates a BiologicalEntity that is (in some sense) a part of this BiologicalEntity.
-    Inverse property: isPartOf.'
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab: ''
-  domain: various in BiologicalEntity
-  domain_case: reu_bsc
-  expected_type:
-  - BiologicalEntity
-  marginality: Optional
-  name: isPartOf
-  sdo_desc: 'Indicates a BiologicalEntity that this BiologicalEntity is (in some sense)
-    part of.  Inverse property: hasPart.'
-reu_sdo:
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
+  domain: BiologicalEntity
+  domain_case: new_bsc
   expected_type:
   - PropertyValue
   marginality: Optional
@@ -175,8 +105,8 @@ reu_sdo:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
+  domain: BiologicalEntity
+  domain_case: new_bsc
   expected_type:
   - Text
   marginality: Recommended
@@ -185,8 +115,8 @@ reu_sdo:
 - bsc_dec: ''
   cardinality: ONE
   controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
+  domain: BiologicalEntity
+  domain_case: new_bsc
   expected_type:
   - Text
   marginality: Recommended
@@ -195,8 +125,8 @@ reu_sdo:
 - bsc_dec: ''
   cardinality: ONE
   controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
+  domain: BiologicalEntity
+  domain_case: new_bsc
   expected_type:
   - PropertyValue
   - Text
@@ -211,8 +141,8 @@ reu_sdo:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
+  domain: BiologicalEntity
+  domain_case: new_bsc
   expected_type:
   - ImageObject
   - URL
@@ -222,8 +152,8 @@ reu_sdo:
 - bsc_dec: ''
   cardinality: ONE
   controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
+  domain: BiologicalEntity
+  domain_case: new_bsc
   expected_type:
   - Text
   marginality: Recommended
@@ -232,8 +162,8 @@ reu_sdo:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
+  domain: BiologicalEntity
+  domain_case: new_bsc
   expected_type:
   - URL
   marginality: Recommended
@@ -243,12 +173,89 @@ reu_sdo:
 - bsc_dec: ''
   cardinality: ONE
   controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
+  domain: BiologicalEntity
+  domain_case: new_bsc
   expected_type:
   - URL
   marginality: Recommended
   name: url
   sdo_desc: URL of the item.
+new_sdo: []
+reu_bsc: []
+reu_sdo:
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  domain: CreativeWork
+  domain_case: reu_sdo
+  expected_type:
+  - CreativeWork
+  - URL
+  marginality: Recommended
+  name: citation
+  sdo_desc: A citation or reference to a creative work, such as a publication, web
+    page, scholarly article, etc.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  domain: CreativeWork
+  domain_case: reu_sdo
+  expected_type:
+  - Date
+  - DateTime
+  marginality: Optional
+  name: dateCreated
+  sdo_desc: The date on which the BiologicalEntity was created or the item was added
+    to a DataFeed.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  domain: CreativeWork
+  domain_case: reu_sdo
+  expected_type:
+  - Date
+  - DateTime
+  marginality: Optional
+  name: dateModified
+  sdo_desc: The date on which the BiologicalEntity was most recently modified or when
+    the item's entry was modified within a DataFeed.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  domain: CreativeWork
+  domain_case: reu_sdo
+  expected_type:
+  - DataDownload
+  marginality: Optional
+  name: distribution
+  sdo_desc: A downloadable form of this entity, at a specific location, in a specific
+    format
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  domain: CreativeWork
+  domain_case: reu_sdo
+  expected_type:
+  - BiologicalEntity
+  marginality: Optional
+  name: hasPart
+  sdo_desc: 'Indicates a BiologicalEntity that is (in some sense) a part of this BiologicalEntity.
+    Inverse property: isPartOf.'
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  domain: CreativeWork
+  domain_case: reu_sdo
+  expected_type:
+  - BiologicalEntity
+  marginality: Optional
+  name: isPartOf
+  sdo_desc: 'Indicates a BiologicalEntity that this BiologicalEntity is (in some sense)
+    part of.  Inverse property: hasPart.'
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1QQH4AkzdwPT1Qt5OLmH5HosLpkFU7khwE4Ql9_Cb9ZQ/edit?usp=drivesdk
+status: revision
+stereotype: BiologicalEntity
+subtitle: "Bioschemas specification describing the usage of BiologicalEntity for the\
+  \ \u201CProtein\u201D biological type. "
 version: 0.0.1
 ---

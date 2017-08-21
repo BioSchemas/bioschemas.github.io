@@ -6,13 +6,15 @@ description: "The BiologicalEntity aims to encompasses as much as possible biolo
   \ will provide stronger requirements whenever needed.\nMost of the new properties\
   \ belong to BiologicalEntity but some required changes at a different level in schema.org.\
   \ That is why we also have some new properties for CreativeWork and Thing."
+g_mapping_file: BiologicalEntity Mapping
+github_url: https://github.com/BioSchemas/BiologicalEntity
 layout: new_spec_detail
 name: BiologicalEntity
 new_bsc:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: BiologicalEntity
+  domain: invalid domain type
   domain_case: new_bsc
   expected_type:
   - MedicalCondition
@@ -23,7 +25,7 @@ new_bsc:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: BiologicalEntity
+  domain: invalid domain type
   domain_case: new_bsc
   expected_type:
   - QuantitativeValue
@@ -36,7 +38,7 @@ new_bsc:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: BiologicalEntity
+  domain: invalid domain type
   domain_case: new_bsc
   expected_type:
   - Text
@@ -50,7 +52,7 @@ new_bsc:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: BiologicalEntity
+  domain: invalid domain type
   domain_case: new_bsc
   expected_type:
   - Thing
@@ -61,7 +63,7 @@ new_bsc:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: BiologicalEntity
+  domain: invalid domain type
   domain_case: new_bsc
   expected_type:
   - Text, Url, PropertyValue
@@ -72,7 +74,7 @@ new_bsc:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: BiologicalEntity
+  domain: invalid domain type
   domain_case: new_bsc
   expected_type:
   - Text
@@ -84,7 +86,7 @@ new_bsc:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: BiologicalEntity
+  domain: invalid domain type
   domain_case: new_bsc
   expected_type:
   - BiologicalEntity
@@ -95,19 +97,18 @@ new_bsc:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: 'Yes'
-  domain: BiologicalEntity
+  domain: invalid domain type
   domain_case: new_bsc
   expected_type:
   - URL
   marginality: Optional
   name: taxon
   sdo_desc: A url pointing to NCBI Taxonomy or a taxonomic resource
-new_sdo:
 - bsc_dec: ''
   cardinality: ONE
   controlled_vocab: ''
-  domain: Thing
-  domain_case: new_sdo
+  domain: invalid domain type
+  domain_case: new_bsc
   expected_type:
   - Thing
   marginality: Recommended
@@ -116,8 +117,8 @@ new_sdo:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
-  domain: CreativeWork
-  domain_case: new_sdo
+  domain: invalid domain type
+  domain_case: new_bsc
   expected_type:
   - CreativeWork
   - URL
@@ -126,6 +127,97 @@ new_sdo:
   name: isBasisFor
   sdo_desc: 'A resource for which this resource has been used for the creation of
     the former.  Inverse property: isBasedOn'
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  domain: invalid domain type
+  domain_case: new_bsc
+  expected_type:
+  - PropertyValue
+  marginality: Optional
+  name: additionalProperty
+  sdo_desc: A property-value pair representing an additional characteristics of the
+    entitity, e.g. a product feature or another characteristic for which there is
+    no matching property in schema.org.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  domain: invalid domain type
+  domain_case: new_bsc
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: alternateName
+  sdo_desc: An alias for the item.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  domain: invalid domain type
+  domain_case: new_bsc
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: description
+  sdo_desc: A description of the item.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  domain: invalid domain type
+  domain_case: new_bsc
+  expected_type:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Minimum
+  name: identifier
+  sdo_desc: 'The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See background notes for more details. Recommendation: identifiers.org
+    whenever possible'
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  domain: invalid domain type
+  domain_case: new_bsc
+  expected_type:
+  - ImageObject
+  - URL
+  marginality: Optional
+  name: image
+  sdo_desc: An image of the item. This can be a URL or a fully described ImageObject.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  domain: invalid domain type
+  domain_case: new_bsc
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: name
+  sdo_desc: The name of the item.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  domain: invalid domain type
+  domain_case: new_bsc
+  expected_type:
+  - URL
+  marginality: Optional
+  name: sameAs
+  sdo_desc: URL of a reference Web page that unambiguously indicates the item's identity.
+    E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  domain: invalid domain type
+  domain_case: new_bsc
+  expected_type:
+  - URL
+  marginality: Optional
+  name: url
+  sdo_desc: URL of the item.
+new_sdo: []
 reu_bsc: []
 reu_sdo:
 - bsc_dec: ''
@@ -246,95 +338,9 @@ reu_sdo:
   sdo_desc: To describe the process used to obtain a biological entity or which is
     associated with that entity (i.e procedure to obtain it or measure/characterise
     it)
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
-  expected_type:
-  - PropertyValue
-  marginality: Optional
-  name: additionalProperty
-  sdo_desc: A property-value pair representing an additional characteristics of the
-    entitity, e.g. a product feature or another characteristic for which there is
-    no matching property in schema.org.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
-  expected_type:
-  - Text
-  marginality: Recommended
-  name: alternateName
-  sdo_desc: An alias for the item.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
-  expected_type:
-  - Text
-  marginality: Recommended
-  name: description
-  sdo_desc: A description of the item.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
-  expected_type:
-  - PropertyValue
-  - Text
-  - URL
-  marginality: Minimum
-  name: identifier
-  sdo_desc: 'The identifier property represents any kind of identifier for any kind
-    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
-    properties for representing many of these, either as textual strings or as URL
-    (URI) links. See background notes for more details. Recommendation: identifiers.org
-    whenever possible'
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
-  expected_type:
-  - ImageObject
-  - URL
-  marginality: Optional
-  name: image
-  sdo_desc: An image of the item. This can be a URL or a fully described ImageObject.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
-  expected_type:
-  - Text
-  marginality: Recommended
-  name: name
-  sdo_desc: The name of the item.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
-  expected_type:
-  - URL
-  marginality: Optional
-  name: sameAs
-  sdo_desc: URL of a reference Web page that unambiguously indicates the item's identity.
-    E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab: ''
-  domain: Thing
-  domain_case: reu_sdo
-  expected_type:
-  - URL
-  marginality: Optional
-  name: url
-  sdo_desc: URL of the item.
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1h0-fgqnRe25-tVCmu2yWNQjthLzgkW4a1TVNMpCABlc/edit?usp=drivesdk
+status: revision
+stereotype: None
+subtitle: Bioschemas specification describing BiologicalEntity in the life-science
 version: 0.0.1
 ---

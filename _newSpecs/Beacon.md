@@ -3,13 +3,15 @@ description: In this document we propose a simple way for a beacons to self-desc
   their genetic variant cardinality service for better integration with other beacons
   within the beacon-network. It builds upon the Beacon service API and uses existing
   schema.org entities and properties.
+g_mapping_file: Beacon Mapping
+github_url: None
 layout: new_spec_detail
 name: Beacon
 new_bsc:
 - bsc_dec: supportedRefs
   cardinality: MANY
   controlled_vocab: 'YES'
-  domain: Beacon
+  domain: invalid domain type
   domain_case: new_bsc
   expected_type:
   - citation
@@ -33,7 +35,7 @@ reu_sdo:
 - bsc_dec: provider
   cardinality: MANY
   controlled_vocab: 'NO'
-  domain: CreativeWork
+  domain: DataCatalog
   domain_case: reu_sdo
   expected_type:
   - Organization
@@ -46,7 +48,7 @@ reu_sdo:
 - bsc_dec: version
   cardinality: ONE
   controlled_vocab: 'NO'
-  domain: CreativeWork
+  domain: DataCatalog
   domain_case: reu_sdo
   expected_type:
   - Number
@@ -100,5 +102,9 @@ reu_sdo:
   marginality: Minimum
   name: url
   sdo_desc: URL of the item.
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1WVVQ9UzEWz7hxreJwqf5SIyYO6YalZuASRX9njv7hYE/edit?usp=drivesdk
+status: revision
+stereotype: None
+subtitle: 'A convention for beacon to self-describe. '
 version: 0.0.1
 ---
