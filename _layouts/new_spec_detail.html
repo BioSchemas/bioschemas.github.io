@@ -14,40 +14,74 @@
             <section id="main_content" class="inner">
                 <h1>{{page.name}} Specification v. {{page.version}}</h1>
                 <h2>{{page.subtitle}}</h2>
-                <h3>{{page.stereotype}}</h3>
+                <h3>{{page.spec_type}} of {{page.parent_type}}</h3>
+
+
+                {%if page.spec_type == 'Type'%}
+                <a href="#">{{page.name}}</a> >
+                {%endif%}
+                {%for path in page.extended_props%}
+                {%for path_element in path%}
+                <a href="#">{{path_element[0]}}</a> >
+                {%endfor%}
+                {%endfor%}
+
                 <br>
 
                 <h3>Description: </h3>
                 <p>{{page.description}}</p>
                 <br>
+
                 <table>
                     <thead>
                     <tr>
                         <th>Property</th>
-                        <th>Domain</th>
                         <th>Expected Type</th>
-                        <th>Description</th>
                         <th>MG</th>
                         <th>CD</th>
                         <th>CV</th>
+                        <th>Description</th>
                     </tr>
                     </thead>
                     <tbody>
-                    {% for prop in page.new_bsc%}
-                    <tr>
-                        <td><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></td>
-                        <td><a href="http://schema.org/{{prop.domain}}">{{prop.domain}}</a></td>
-                        <td>
-                            {% for temp_exp_type in prop.expected_type %}
-                            <a href="http://schema.org/{{temp_exp_type}}">{{temp_exp_type}}</a><br>
-                            {% endfor %}
-                        </td>
-                        <td>{{prop.sdo_desc}}<br>{{prop.bsc_dec}}</td>
-                        <td>{{prop.marginality}}</td>
-                        <td>{{prop.cardinality}}</td>
-                        <td>{{prop.controlled_vocab}}</td>
-                    </tr>
-                    {% endfor %}
+                        {% for new_prop in page.new_props%}
+                            {% for parent_type in new_prop%}
+                                <tr><td colspan="6"><a href="#">{{parent_type[0]}}</a> new Properties (Pending to add in schema.org vocabulary)</td></tr>
+                                {% for prop in parent_type[1]%}
+                                    <tr>
+                                        <td><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></td>
+                                        <td>
+                                            {% for temp_exp_type in prop.expected_type %}
+                                            <a href="http://schema.org/{{temp_exp_type}}">{{temp_exp_type}}</a><br>
+                                            {% endfor %}
+                                        </td>
+                                        <td>{{prop.marginality}}</td>
+                                        <td>{{prop.cardinality}}</td>
+                                        <td>{{prop.controlled_vocab}}</td>
+                                        <td>{{prop.sdo_desc}}<br>{{prop.bsc_dec}}</td>
+                                    </tr>
+                                {% endfor %}
+                            {% endfor%}
+                        {% endfor %}
+                        {% for prop in page.extended_props%}
+                        {% for parent_type in prop%}
+                        <tr><td colspan="6">Properties from <a href="http://schema.org/{{parent_type[0]}}">{{parent_type[0]}}</a></td></tr>
+                        {% for prop in parent_type[1]%}
+                        <tr>
+                            <td><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></td>
+                            <td>
+                                {% for temp_exp_type in prop.expected_type %}
+                                <a href="http://schema.org/{{temp_exp_type}}">{{temp_exp_type}}</a><br>
+                                {% endfor %}
+                            </td>
+                            <td>{{prop.marginality}}</td>
+                            <td>{{prop.cardinality}}</td>
+                            <td>{{prop.controlled_vocab}}</td>
+                            <td>{{prop.sdo_desc}}<br>{{prop.bsc_dec}}</td>
+                        </tr>
+                        {% endfor %}
+                        {% endfor%}
+                        {% endfor %}
                     </tbody>
                 </table>
             </section>
