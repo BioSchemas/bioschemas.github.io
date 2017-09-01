@@ -16,6 +16,10 @@ gh_folder: https://github.com/BioSchemas/Beacon
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20beacon
 edit_url: https://github.com/BioSchemas/bioschemas.github.io/edit/master/_newSpecs/Beacon.md
 version: 0.0.1
+hierarchy:
+- Thing
+- CreativeWork
+- DataCatalog
 new_props:
 - Beacon:
   - bsc_dec: supportedRefs

@@ -17,14 +17,12 @@
                 <h3>{{page.spec_type}} of {{page.parent_type}}</h3>
 
 
+                {%for branch_name in page.hierarchy%}
+                <a href="#">{{branch_name}}</a> >
+                {%endfor%}
                 {%if page.spec_type == 'Type'%}
                 <a href="#">{{page.name}}</a> >
                 {%endif%}
-                {%for path in page.extended_props%}
-                {%for path_element in path%}
-                <a href="#">{{path_element[0]}}</a> >
-                {%endfor%}
-                {%endfor%}
 
                 <br>
 
