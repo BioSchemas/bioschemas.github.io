@@ -18,6 +18,7 @@ spec_mapping_url: https://docs.google.com/spreadsheets/d/1h0-fgqnRe25-tVCmu2yWNQ
 gh_folder: https://github.com/BioSchemas/BiologicalEntity
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20biologicalEntity
 edit_url: https://github.com/BioSchemas/bioschemas.github.io/edit/master/_newSpecs/BiologicalEntity.md
+use_cases_url: https://docs.google.com/document/d/1VxuYEcmjdFba4j9Klmuw0JFY_uCCYYTVsLfC5IbUneE/edit?usp=sharing
 hierarchy:
 - Thing
 - CreativeWork

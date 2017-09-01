@@ -15,6 +15,7 @@ subtitle: 'A convention for beacon to self-describe.'
 gh_folder: https://github.com/BioSchemas/Beacon
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20beacon
 edit_url: https://github.com/BioSchemas/bioschemas.github.io/edit/master/_newSpecs/Beacon.md
+use_cases_url: https://drive.google.com/open?id=0BwpCuN9mloG8WTl6X3hkeFIwems
 version: 0.0.1
 hierarchy:
 - Thing
