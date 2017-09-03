@@ -29,7 +29,6 @@
                 <h3>Description: </h3>
                 <p>{{page.description}}</p>
                 <br>
-                
 
                 <table>
                     <thead>
@@ -45,7 +44,7 @@
                     <tbody>
                         {% for new_prop in page.new_props%}
                             {% for parent_type in new_prop%}
-                                <tr><td colspan="6"><a href="#">{{parent_type[0]}}</a> new Properties (Pending to add in schema.org vocabulary)</td></tr>
+                                <tr class="new_props_sdo"><td colspan="6">New properties for <a href="#">{{parent_type[0]}}</a> (Pending to add in schema.org vocabulary)</td></tr>
                                 {% for prop in parent_type[1]%}
                                     <tr>
                                         <td><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></td>
@@ -64,7 +63,7 @@
                         {% endfor %}
                         {% for prop in page.extended_props%}
                         {% for parent_type in prop%}
-                        <tr><td colspan="6">Properties from <a href="http://schema.org/{{parent_type[0]}}">{{parent_type[0]}}</a></td></tr>
+                        <tr class="reu_props_sdo"><td colspan="6">Properties from <a href="http://schema.org/{{parent_type[0]}}">{{parent_type[0]}}</a></td></tr>
                         {% for prop in parent_type[1]%}
                         <tr>
                             <td><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></td>

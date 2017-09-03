@@ -1203,14 +1203,25 @@ Specification Properties
     color: #990000;
 }
 
-.new_sdo table th, .reu_sdo table th{
+.reu_props_sdo td {
     color: #ffffff;
-    background: rgba(176, 0, 0, 0.8);
+    font-weight: bold;
+    background: rgb(176, 0, 0);
 }
 
-.new_bsc table th, .reu_bsc table th{
+.new_props_sdo td{
     color: #ffffff;
-    background: rgba(11, 121, 75, 0.8);
+    font-weight: bold;
+    background: rgb(11, 121, 75);
 }
 
+.reu_props_sdo td a, .new_props_sdo td a{
+      font-weight: bold;
+      color: rgb(255, 237, 65);
+  }
+
+.reu_props_sdo td a:hover, .new_props_sdo td a:hover{
+    font-weight: bold;
+    color: #ffffff;
+}
 
