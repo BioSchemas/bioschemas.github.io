@@ -20,7 +20,7 @@
                     >
                 {%endif%}
                 {%for branch_name in page.hierarchy%}
-                    <a href="#">{{branch_name}}</a>
+                    <a href="http://schema.org/{{branch_name}}">{{branch_name}}</a>
                     {%if forloop.index < page.hierarchy.size%}
                         >
                     {%endif%}
@@ -44,7 +44,9 @@
                     </tr>
                     </thead>
                     <tbody>
-                        <tr class="new_props_sdo"><td colspan="6">New properties for <a href="#">{{page.name}} </a> (Pending schema.org integration.)</td></tr>
+                    {%if page.new_props.size > 0%}
+                        <tr class="new_props_sdo"><td colspan="6">New properties (pending schema.org integration)</td></tr>
+                    {%endif%}
                         {% for new_prop in page.new_props%}
                             <tr>
                                 <td><a href="#">{{new_prop.name}}</a></td>
