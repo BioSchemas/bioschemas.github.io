@@ -12,16 +12,74 @@ description: 'An experimental protocol is a sequence of tasks and operations exe
   on Linked Science 2014- Making Sense Out of Data (LISC2014)
 
   '
+edit_url: https://github.com/BioSchemas/bioschemas.github.io/edit/master/_newSpecs/LaboratoryProtocol.md
+extended_props:
+  CreativeWork:
+  - bsc_dec: ''
+    cardinality: MANY
+    controlled_vocab:
+      ontologies: []
+      terms: []
+    expected_type:
+    - CreativeWork
+    - URL
+    marginality: Recommended
+    name: citation
+    sdo_desc: A citation or reference to another creative work, such as another publication,
+      web page, scholarly article, etc.
+  - bsc_dec: ''
+    cardinality: ONE
+    controlled_vocab:
+      ontologies: []
+      terms: []
+    expected_type:
+    - CreativeWork
+    - URL
+    marginality: Minimum
+    name: license
+    sdo_desc: A license document that applies to this content, typically indicated
+      by URL.
+  - bsc_dec: ''
+    cardinality: MANY
+    controlled_vocab:
+      ontologies: []
+      terms: []
+    expected_type:
+    - CreativeWork
+    - URL
+    marginality: Recommended
+    name: isBasedOn
+    sdo_desc: A resource that was used in the creation of this resource. This term
+      can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+  Thing:
+  - bsc_dec: ''
+    cardinality: ONE
+    controlled_vocab:
+      ontologies: []
+      terms: []
+    expected_type:
+    - PropertyValue, Text, URL
+    marginality: Minimum
+    name: identifier
+    sdo_desc: The identifier property represents any kind of identifier for any kind
+      of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
+      GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
+      many of these, either as textual strings or as URL (URI) links. See <a href="/docs/datamodel.html#identifierBg">background
+      notes</a> for more details.
 g_mapping_file: LabProtocol Mapping
-github_url: https://github.com/BioSchemas/LaboratoryProtocol
+gh_folder: https://github.com/BioSchemas/LaboratoryProtocol
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20LaboratoryProtocol
+hierarchy:
+- CreativeWork
+- Thing
 layout: new_spec_detail
 name: LaboratoryProtocol
-new_bsc:
+new_props:
 - bsc_dec: ''
   cardinality: MANY
-  controlled_vocab: ''
-  domain: invalid domain type
-  domain_case: new_bsc
+  controlled_vocab:
+    ontologies: []
+    terms: []
   expected_type:
   - Text
   marginality: Recommended
@@ -30,9 +88,9 @@ new_bsc:
     employed.
 - bsc_dec: ''
   cardinality: MANY
-  controlled_vocab: ''
-  domain: invalid domain type
-  domain_case: new_bsc
+  controlled_vocab:
+    ontologies: []
+    terms: []
   expected_type:
   - Text
   marginality: Recommended
@@ -41,9 +99,9 @@ new_bsc:
     or otherwise unsuccessful.
 - bsc_dec: ''
   cardinality: MANY
-  controlled_vocab: ''
-  domain: invalid domain type
-  domain_case: new_bsc
+  controlled_vocab:
+    ontologies: []
+    terms: []
   expected_type:
   - Text
   marginality: Recommended
@@ -53,9 +111,9 @@ new_bsc:
     the protocol. e.g. northern blot assays, sequencing, etc.
 - bsc_dec: ''
   cardinality: MANY
-  controlled_vocab: ''
-  domain: invalid domain type
-  domain_case: new_bsc
+  controlled_vocab:
+    ontologies: []
+    terms: []
   expected_type:
   - BiologicalEntity (chemicals)
   - URL
@@ -65,9 +123,9 @@ new_bsc:
     used whenever available. Commercial names are also acceptable (URL if possible)
 - bsc_dec: ''
   cardinality: MANY
-  controlled_vocab: ''
-  domain: invalid domain type
-  domain_case: new_bsc
+  controlled_vocab:
+    ontologies: []
+    terms: []
   expected_type:
   - Text
   marginality: Minimum
@@ -75,9 +133,9 @@ new_bsc:
   sdo_desc: A goal towards an action is taken. Can be concrete or abstract.
 - bsc_dec: ''
   cardinality: MANY
-  controlled_vocab: ''
-  domain: invalid domain type
-  domain_case: new_bsc
+  controlled_vocab:
+    ontologies: []
+    terms: []
   expected_type:
   - Text
   marginality: Recommended
@@ -85,9 +143,9 @@ new_bsc:
   sdo_desc: outcome or expected result by a protocol execution.
 - bsc_dec: ''
   cardinality: MANY
-  controlled_vocab: ''
-  domain: invalid domain type
-  domain_case: new_bsc
+  controlled_vocab:
+    ontologies: []
+    terms: []
   expected_type:
   - Text
   marginality: Recommended
@@ -96,9 +154,9 @@ new_bsc:
     indicate a category hierarchy.
 - bsc_dec: ''
   cardinality: MANY
-  controlled_vocab: ''
-  domain: invalid domain type
-  domain_case: new_bsc
+  controlled_vocab:
+    ontologies: []
+    terms: []
   expected_type:
   - Thing
   marginality: Recommended
@@ -106,9 +164,9 @@ new_bsc:
   sdo_desc: CretiveWork, Dataset, collection mentioning this entity  Inverse of:mentions
 - bsc_dec: ''
   cardinality: MANY
-  controlled_vocab: ''
-  domain: invalid domain type
-  domain_case: new_bsc
+  controlled_vocab:
+    ontologies: []
+    terms: []
   expected_type:
   - Text
   - URL
@@ -119,9 +177,9 @@ new_bsc:
     laboratory equipment.
 - bsc_dec: ''
   cardinality: MANY
-  controlled_vocab: ''
-  domain: invalid domain type
-  domain_case: new_bsc
+  controlled_vocab:
+    ontologies: []
+    terms: []
   expected_type:
   - BiologicalEntity
   - URL
@@ -130,9 +188,9 @@ new_bsc:
   sdo_desc: Samples used in the protocol
 - bsc_dec: ''
   cardinality: MANY
-  controlled_vocab: ''
-  domain: invalid domain type
-  domain_case: new_bsc
+  controlled_vocab:
+    ontologies: []
+    terms: []
   expected_type:
   - SoftwareApplication
   marginality: Recommended
@@ -140,71 +198,19 @@ new_bsc:
   sdo_desc: An application that can complete the request.
 - bsc_dec: ''
   cardinality: ONE
-  controlled_vocab: ''
-  domain: invalid domain type
-  domain_case: new_bsc
+  controlled_vocab:
+    ontologies: []
+    terms: []
   expected_type:
   - Duration
   marginality: Recommended
   name: duration
   sdo_desc: The time it takes to actually carry on the protocol, in ISO 8601 duration
     format.
-new_sdo: []
-reu_bsc: []
-reu_sdo:
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab: ''
-  domain: CreativeWork
-  domain_case: reu_sdo
-  expected_type:
-  - PropertyValue, Text, URL
-  marginality: Minimum
-  name: identifier
-  sdo_desc: The identifier property represents any kind of identifier for any kind
-    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
-    properties for representing many of these, either as textual strings or as URL
-    (URI) links. See background notes for more details.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab: ''
-  domain: CreativeWork
-  domain_case: reu_sdo
-  expected_type:
-  - CreativeWork
-  - URL
-  marginality: Recommended
-  name: citation
-  sdo_desc: A citation or reference to a creative work, such as a publication, web
-    page, scholarly article, etc.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab: ''
-  domain: CreativeWork
-  domain_case: reu_sdo
-  expected_type:
-  - CreativeWork
-  - URL
-  marginality: Minimum
-  name: license
-  sdo_desc: A license document that applies to this content, typically indicated by
-    URL.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab: ''
-  domain: CreativeWork
-  domain_case: reu_sdo
-  expected_type:
-  - CreativeWork
-  - URL
-  marginality: Recommended
-  name: isBasedOn
-  sdo_desc: A resource that was used in the creation of this resource. This term can
-    be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
-    Supersedes isBasedOnUrl.
+parent_type: CreativeWork
 spec_mapping_url: https://docs.google.com/spreadsheets/d/1julB0P6kjXK_mL2dU8EDU9zMxIMah0_dYYeGt2Spllo/edit?usp=drivesdk
+spec_type: Type
 status: revision
-stereotype: None
 subtitle: Bioschemas specification describing LabProtocol in the life-science.
 version: 0.0.1
 ---

@@ -35,51 +35,65 @@
                     <tr>
                         <th>Property</th>
                         <th>Expected Type</th>
+                        <th>Description</th>
                         <th>MG</th>
                         <th>CD</th>
                         <th>CV</th>
-                        <th>Description</th>
                     </tr>
                     </thead>
                     <tbody>
+                        <tr class="new_props_sdo"><td colspan="6">New properties for <a href="#">{{page.name}} </a> (Pending to add in schema.org vocabulary)</td></tr>
                         {% for new_prop in page.new_props%}
-                            {% for parent_type in new_prop%}
-                                <tr class="new_props_sdo"><td colspan="6">New properties for <a href="#">{{parent_type[0]}}</a> (Pending to add in schema.org vocabulary)</td></tr>
-                                {% for prop in parent_type[1]%}
-                                    <tr>
-                                        <td><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></td>
-                                        <td>
-                                            {% for temp_exp_type in prop.expected_type %}
-                                            <a href="http://schema.org/{{temp_exp_type}}">{{temp_exp_type}}</a><br>
-                                            {% endfor %}
-                                        </td>
-                                        <td>{{prop.marginality}}</td>
-                                        <td>{{prop.cardinality}}</td>
-                                        <td>{{prop.controlled_vocab}}</td>
-                                        <td>{{prop.sdo_desc}}<br>{{prop.bsc_dec}}</td>
-                                    </tr>
-                                {% endfor %}
-                            {% endfor%}
-                        {% endfor %}
-                        {% for prop in page.extended_props%}
-                        {% for parent_type in prop%}
-                        <tr class="reu_props_sdo"><td colspan="6">Properties from <a href="http://schema.org/{{parent_type[0]}}">{{parent_type[0]}}</a></td></tr>
-                        {% for prop in parent_type[1]%}
-                        <tr>
-                            <td><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></td>
-                            <td>
-                                {% for temp_exp_type in prop.expected_type %}
-                                <a href="http://schema.org/{{temp_exp_type}}">{{temp_exp_type}}</a><br>
-                                {% endfor %}
-                            </td>
-                            <td>{{prop.marginality}}</td>
-                            <td>{{prop.cardinality}}</td>
-                            <td>{{prop.controlled_vocab}}</td>
-                            <td>{{prop.sdo_desc}}<br>{{prop.bsc_dec}}</td>
-                        </tr>
-                        {% endfor %}
+                            <tr>
+                                <td><a href="#">{{new_prop.name}}</a></td>
+                                <td>
+                                    {% for temp_exp_type in new_prop.expected_type %}
+                                    <a href="http://schema.org/{{temp_exp_type}}">{{temp_exp_type}}</a><br>
+                                    {% endfor %}
+                                </td>
+                                <td>{{new_prop.sdo_desc}}<br>{{new_prop.bsc_dec}}</td>
+                                <td>{{new_prop.marginality}}</td>
+                                <td>{{new_prop.cardinality}}</td>
+                                <td>
+                                    {% for cv in new_prop.controlled_vocab%}
+                                    {% for ontology in cv[1]%}
+                                    <a href="{{ontology.url}}">{{ontology.name}}</a>
+                                    {%endfor%}
+                                    {% for term in cv[2]%}
+                                    <a href="#">{{term}}</a>
+                                    {%endfor%}
+                                    {%endfor%}
+                                </td>
+                            </tr>
                         {% endfor%}
-                        {% endfor %}
+
+                        {% for parent_type in page.extended_props%}
+                            <tr class="reu_props_sdo"><td colspan="6">Properties from <a href="http://schema.org/{{parent_type[0]}}">{{parent_type[0]}}</a></td></tr>
+                            {% for prop in parent_type[1]%}
+                            <tr>
+                                <td><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></td>
+                                <td>
+                                    {% for temp_exp_type in prop.expected_type %}
+                                    <a href="http://schema.org/{{temp_exp_type}}">{{temp_exp_type}}</a><br>
+                                    {% endfor %}
+                                </td>
+                                <td>{{prop.sdo_desc}}<br>{{prop.bsc_dec}}</td>
+                                <td>{{prop.marginality}}</td>
+                                <td>{{prop.cardinality}}</td>
+                                <td>
+                                    {% for cv in prop.controlled_vocab%}
+                                    {% for ontology in cv[0]%}
+                                    <a href="{{ontology.url}}">{{ontology.name}}</a>
+                                    {%endfor%}
+                                    {% for term in cv[1]%}
+                                    <a href="#">{{term}}</a>
+                                    {%endfor%}
+                                    {%endfor%}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        {% endfor%}
+
                     </tbody>
                 </table>
             </section>
