@@ -14,15 +14,17 @@
             <section id="main_content" class="inner">
                 <h1>{{page.name}} Specification v. {{page.version}}</h1>
                 <h2>{{page.subtitle}}</h2>
-                <h3>{{page.spec_type}} of {{page.parent_type}}</h3>
-
-
-                {%for branch_name in page.hierarchy%}
-                <a href="#">{{branch_name}}</a> >
-                {%endfor%}
+                <h3>{{page.parent_type}}</h3>
                 {%if page.spec_type == 'Type'%}
-                <a href="#">{{page.name}}</a> >
+                    <a href="#">{{page.name}}</a>
+                    >
                 {%endif%}
+                {%for branch_name in page.hierarchy%}
+                    <a href="#">{{branch_name}}</a>
+                    {%if forloop.index < page.hierarchy.size%}
+                        >
+                    {%endif%}
+                {%endfor%}
 
                 <br>
 
@@ -42,7 +44,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                        <tr class="new_props_sdo"><td colspan="6">New properties for <a href="#">{{page.name}} </a> (Pending to add in schema.org vocabulary)</td></tr>
+                        <tr class="new_props_sdo"><td colspan="6">New properties for <a href="#">{{page.name}} </a> (Pending schema.org integration.)</td></tr>
                         {% for new_prop in page.new_props%}
                             <tr>
                                 <td><a href="#">{{new_prop.name}}</a></td>
