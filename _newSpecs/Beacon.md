@@ -10,8 +10,7 @@ extended_props:
     cardinality: MANY
     controlled_vocab:
       ontologies: []
-      terms:
-      - 'NO'
+      terms: []
     expected_type:
     - Organization
     - Person
@@ -24,8 +23,7 @@ extended_props:
     cardinality: ONE
     controlled_vocab:
       ontologies: []
-      terms:
-      - 'NO'
+      terms: []
     expected_type:
     - Number
     - Text
@@ -37,8 +35,7 @@ extended_props:
     cardinality: MANY
     controlled_vocab:
       ontologies: []
-      terms:
-      - 'NO'
+      terms: []
     expected_type:
     - Dataset
     marginality: Minimum
@@ -49,8 +46,7 @@ extended_props:
     cardinality: MANY
     controlled_vocab:
       ontologies: []
-      terms:
-      - 'NO'
+      terms: []
     expected_type:
     - PropertyValue
     - Text
@@ -66,8 +62,7 @@ extended_props:
     cardinality: MANY
     controlled_vocab:
       ontologies: []
-      terms:
-      - 'NO'
+      terms: []
     expected_type:
     - Text
     marginality: Recommended
@@ -77,8 +72,7 @@ extended_props:
     cardinality: ONE
     controlled_vocab:
       ontologies: []
-      terms:
-      - 'NO'
+      terms: []
     expected_type:
     - URL
     marginality: Optional
@@ -90,8 +84,7 @@ extended_props:
     cardinality: ONE
     controlled_vocab:
       ontologies: []
-      terms:
-      - 'NO'
+      terms: []
     expected_type:
     - URL
     marginality: Minimum
@@ -111,8 +104,7 @@ new_props:
   cardinality: MANY
   controlled_vocab:
     ontologies: []
-    terms:
-    - 'YES'
+    terms: []
   expected_type:
   - citation
   marginality: Recommended
