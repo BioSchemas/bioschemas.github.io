@@ -1198,30 +1198,81 @@ Small Device Styles
 /*******************************************************************************
 Specification Properties
 *******************************************************************************/
+table.bioschemas_properties {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    margin: 1em 0 0 0;
+    border: 1px solid #98A0A6;
+    border-spacing: 3px;
+    display: table;
+    font-family: "Lucida Grande" , "Lucida Sans Unicode" , Verdana, Tahoma, Arial, sans-serif;
+    line-height: 160%;
+    font-size: 100%;
+}
 
-.new_sdo h4, .reu_sdo h4{
+.bioschemas_properties tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    font-size: 100%;
+}
+
+.bioschemas_properties th {
+    padding-left: 5px;
+    background: #C7CBCE;
+    color: #3A4956;
+    font-weight: bold;
+    display: table-cell;
+    text-align: left;
+    border: none;
+    vertical-align: middle;
+    font-size: 100%;
+}
+
+.bioschemas_properties th:first-child {
+    border-top-left-radius: 0;
+}
+
+.bioschemas_properties th:last-child {
+    border-top-right-radius: 0;
+}
+
+.bioschemas_properties td {
+    border: 0;
+    padding: 0.625em;
+    min-height: 1.25em;
+    max-height: 2.5em;
+    vertical-align: middle;
+    font-size: 100%;
+}
+
+.bioschemas_properties .reu_props_sdo td, .bioschemas_properties .new_props_sdo td{
+    font-weight: bold;
+    background: #C7CBCE;
+    font-size: 100%;
+}
+
+.bioschemas_properties .new_props_sdo td{
+    color: #0B794B;
+}
+
+.bioschemas_properties .new_props_sdo td{
+
+}
+
+.bioschemas_properties a{
+    color: #660000;
+    text-decoration: none;
+    border-bottom: dotted 1px #660000;
+}
+
+.bioschemas_properties a:link{
     color: #990000;
+    text-decoration: none;
+    border-bottom: dotted 1px #990000;
 }
 
-.reu_props_sdo td {
-    color: #ffffff;
-    font-weight: bold;
-    background: rgb(176, 0, 0);
+.bioschemas_properties .reu_props_sdo td a:link, .new_props_sdo td a:link{
+
 }
-
-.new_props_sdo td{
-    color: #ffffff;
-    font-weight: bold;
-    background: rgb(11, 121, 75);
-}
-
-.reu_props_sdo td a, .new_props_sdo td a{
-      font-weight: bold;
-      color: rgb(255, 237, 65);
-  }
-
-.reu_props_sdo td a:hover, .new_props_sdo td a:hover{
-    font-weight: bold;
-    color: #ffffff;
-}
-

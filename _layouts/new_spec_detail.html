@@ -32,15 +32,17 @@
                 <p>{{page.description}}</p>
                 <br>
 
-                <table class="">
+                <table class="bioschemas_properties">
                     <thead>
                     <tr>
                         <th>Property</th>
                         <th>Expected Type</th>
                         <th>Description</th>
+                        {% if page.spec_type == 'Type' %}
                         <th>MG</th>
                         <th>CD</th>
                         <th>CV</th>
+                        {% endif %}
                     </tr>
                     </thead>
                     <tbody>
@@ -49,13 +51,14 @@
                     {%endif%}
                         {% for new_prop in page.new_props%}
                             <tr>
-                                <td><a href="#">{{new_prop.name}}</a></td>
+                                <th><a href="#">{{new_prop.name}}</a></th>
                                 <td>
                                     {% for temp_exp_type in new_prop.expected_type %}
                                     <a href="http://schema.org/{{temp_exp_type}}">{{temp_exp_type}}</a><br>
                                     {% endfor %}
                                 </td>
                                 <td>{{new_prop.sdo_desc}}<br>{{new_prop.bsc_dec}}</td>
+                                {% if page.spec_type == 'Type' %}
                                 <td>{{new_prop.marginality}}</td>
                                 <td>{{new_prop.cardinality}}</td>
                                 <td>
@@ -68,6 +71,7 @@
                                     {%endfor%}
                                     {%endfor%}
                                 </td>
+                                {% endif %}
                             </tr>
                         {% endfor%}
 
@@ -75,13 +79,14 @@
                             <tr class="reu_props_sdo"><td colspan="6">Properties from <a href="http://schema.org/{{h_type}}">{{h_type}}</a></td></tr>
                             {% for prop  in page.extended_props[h_type]%}
                             <tr>
-                                <td><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></td>
+                                <th><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></th>
                                 <td>
                                     {% for temp_exp_type in prop.expected_type %}
                                     <a href="http://schema.org/{{temp_exp_type}}">{{temp_exp_type}}</a><br>
                                     {% endfor %}
                                 </td>
                                 <td>{{prop.sdo_desc}}<br>{{prop.bsc_dec}}</td>
+                                {% if page.spec_type == 'Type' %}
                                 <td>{{prop.marginality}}</td>
                                 <td>{{prop.cardinality}}</td>
                                 <td>
@@ -94,6 +99,7 @@
                                     {%endfor%}
                                     {%endfor%}
                                 </td>
+                                {% endif %}
                             </tr>
                             {% endfor %}
                         {% endfor%}
