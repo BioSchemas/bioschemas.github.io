@@ -15,16 +15,16 @@
                 <h1>{{page.name}} Specification v. {{page.version}}</h1>
                 <h2>{{page.subtitle}}</h2>
                 <h3>{{page.spec_type}}</h3>
-                {%if page.spec_type == 'Type'%}
-                    <a href="#">{{page.name}}</a>
-                    >
-                {%endif%}
-                {%for branch_name in page.hierarchy%}
+                {%for branch_name in page.hierarchy reversed%}
                     <a href="http://schema.org/{{branch_name}}">{{branch_name}}</a>
                     {%if forloop.index < page.hierarchy.size%}
                         >
                     {%endif%}
                 {%endfor%}
+                {%if page.spec_type == 'Type'%}
+                >
+                <a href="#">{{page.name}}</a>
+                {%endif%}
 
                 <br>
 
@@ -71,9 +71,9 @@
                             </tr>
                         {% endfor%}
 
-                        {% for parent_type in page.extended_props%}
-                            <tr class="reu_props_sdo"><td colspan="6">Properties from <a href="http://schema.org/{{parent_type[0]}}">{{parent_type[0]}}</a></td></tr>
-                            {% for prop in parent_type[1]%}
+                        {% for h_type in page.hierarchy%}
+                            <tr class="reu_props_sdo"><td colspan="6">Properties from <a href="http://schema.org/{{h_type}}">{{h_type}}</a></td></tr>
+                            {% for prop  in page.extended_props[h_type]%}
                             <tr>
                                 <td><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></td>
                                 <td>
