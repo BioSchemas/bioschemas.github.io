@@ -38,11 +38,9 @@
                         <th>Property</th>
                         <th>Expected Type</th>
                         <th>Description</th>
-                        {% if page.spec_type == 'Type' %}
                         <th>MG</th>
                         <th>CD</th>
                         <th>CV</th>
-                        {% endif %}
                     </tr>
                     </thead>
                     <tbody>
@@ -58,7 +56,6 @@
                                     {% endfor %}
                                 </td>
                                 <td>{{new_prop.sdo_desc}}<br>{{new_prop.bsc_dec}}</td>
-                                {% if page.spec_type == 'Type' %}
                                 <td>{{new_prop.marginality}}</td>
                                 <td>{{new_prop.cardinality}}</td>
                                 <td>
@@ -71,7 +68,6 @@
                                     {%endfor%}
                                     {%endfor%}
                                 </td>
-                                {% endif %}
                             </tr>
                         {% endfor%}
 
@@ -86,7 +82,6 @@
                                     {% endfor %}
                                 </td>
                                 <td>{{prop.sdo_desc}}<br>{{prop.bsc_dec}}</td>
-                                {% if page.spec_type == 'Type' %}
                                 <td>{{prop.marginality}}</td>
                                 <td>{{prop.cardinality}}</td>
                                 <td>
@@ -99,7 +94,6 @@
                                     {%endfor%}
                                     {%endfor%}
                                 </td>
-                                {% endif %}
                             </tr>
                             {% endfor %}
                         {% endfor%}

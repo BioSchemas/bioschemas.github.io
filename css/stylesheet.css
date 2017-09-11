@@ -1245,6 +1245,8 @@ table.bioschemas_properties {
     max-height: 2.5em;
     vertical-align: middle;
     font-size: 100%;
+    display: table-cell;
+    max-width: 22em;
 }
 
 .bioschemas_properties .reu_props_sdo td, .bioschemas_properties .new_props_sdo td{
