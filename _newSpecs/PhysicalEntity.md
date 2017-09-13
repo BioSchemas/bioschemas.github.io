@@ -4,7 +4,7 @@ description: A PhysicalEntity is any object that exists in the physical world an
   to specify the nature of this physical entity, additionalProperty must be used to
   specify the nature/type of this physical entity. For instance, http://semanticscience.org/resource/SIO_010043
   can be used.
-edit_url: https://github.com/BioSchemas/bioschemas.github.io/edit/master/_newSpecs/BiologicalEntity.md
+edit_url: https://github.com/BioSchemas/bioschemas.github.io/edit/master/_newSpecs/PhysicalEntity.md
 extended_props:
   Thing:
   - bsc_dec: ''
@@ -103,12 +103,12 @@ extended_props:
       Schema.org tools may have only weaker understanding of extra types, in particular
       those defined externally.
 g_mapping_file: PhysicalEntity Mapping
-gh_folder: https://github.com/BioSchemas/BiologicalEntity
-gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20BiologicalEntity
+gh_folder: https://github.com/BioSchemas/PhysicalEntity
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20PhysicalEntity
 hierarchy:
 - Thing
 layout: new_spec_detail
-name: BiologicalEntity
+name: PhysicalEntity
 new_props:
 - bsc_dec: ''
   cardinality: MANY
