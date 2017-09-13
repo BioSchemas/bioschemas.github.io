@@ -1224,12 +1224,15 @@ table.bioschemas_properties {
     color: #3A4956;
     font-weight: bold;
     display: table-cell;
-    text-align: left;
+    text-align: center;
     border: none;
     vertical-align: middle;
     font-size: 100%;
 }
 
+.bioschemas_properties tbody th{
+    text-align: left;
+}
 .bioschemas_properties th:first-child {
     border-top-left-radius: 0;
 }
@@ -1247,6 +1250,12 @@ table.bioschemas_properties {
     font-size: 100%;
     display: table-cell;
     max-width: 22em;
+}
+
+.bioschemas_properties td a img{
+    text-align: center;
+    display: block;
+    width: 60px;
 }
 
 .bioschemas_properties .reu_props_sdo td, .bioschemas_properties .new_props_sdo td{
