@@ -13,10 +13,11 @@ title: BioSchemas Specifications
                 <th>Type</th>
                 <th>Short description</th>
                 <th>Version</th>
+                <th>Spec.</th>
                 <th>Mapping</th>
                 <th>Use Cases</th>
-                <th>GitHub</th>
                 <th>Tasks & Issues</th>
+                <th>Examples</th>
             </tr>
             </thead>
             <tbody>
@@ -25,11 +26,11 @@ title: BioSchemas Specifications
                 <td><h3><a target="_blank" href="{{spec.url}}" style="text-align: center; display: block">{{spec.name}}</a></h3></td>
                 <td>{{ spec.subtitle }}</td>
                 <td><h3>{{ spec.version }}</h3><br><b>{{ spec.status }}</b></td>
+                <td><a target="_blank" href="{{ spec.url}}" style="text-align: center; display: block"><img src="/images/logo_small.png" alt="BioSchemas {{ spec.name }} Specification" style="width: 60px"></a></td>
                 <td><a target="_blank" href="{{ spec.spec_mapping_url}}" style="text-align: center; display: block"><img src="/images/gsheets_icon.png" alt="BioSchemas {{ spec.name }} Mapping" style="width: 60px"></a></td>
                 <td><a target="_blank" href="{{spec.use_cases_url}}" style="text-align: center; display: block"><img src="/images/use_case_spec.png" alt="View BioSchemas {{ spec.name }} Use Cases" style="width: 60px"></a></a></td>
-                <td><a target="_blank" href="{{spec.gh_folder}}" style="text-align: center; display: block"><img src="/images/gh_spec.png" alt="View BioSchemas {{ spec.name }} GitHub Folder" style="width: 60px"></a></a></td>
-                <td><a target="_blank" href="{{spec.gh_tasks}}" style="text-align: center; display: block"><img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues" style="width: 60px;"></a></td>
-
+                <td><a target="_blank" href="{{spec.gh_tasks}}" style="text-align: center; display: block"><img src="/images/gh_spec.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues" style="width: 60px;"></a></td>
+                <td><a target="_blank" href="{{spec.gh_folder}}" style="text-align: center; display: block"><img src="/images/spec_examples.png" alt="View BioSchemas {{ spec.name }} Examples" style="width: 60px"></a></a></td>
             </tr>
             {% endfor %}
             </tbody>
