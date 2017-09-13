@@ -51,7 +51,46 @@ extended_props:
     name: isBasedOn
     sdo_desc: A resource that was used in the creation of this resource. This term
       can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+  - bsc_dec: ''
+    cardinality: MANY
+    controlled_vocab:
+      ontologies: []
+      terms: []
+    expected_type:
+    - CreativeWork
+    marginality: Recommended
+    name: isPartOf
+    sdo_desc: Indicates a CreativeWork that this CreativeWork is (in some sense) part
+      of.
+  - bsc_dec: ''
+    cardinality: MANY
+    controlled_vocab:
+      ontologies: []
+      terms: []
+    expected_type:
+    - Text
+    marginality: Recommended
+    name: keywords
+    sdo_desc: Keywords or tags used to describe this content. Multiple entries in
+      a keywords list are typically delimited by commas.
   Thing:
+  - bsc_dec: ''
+    cardinality: ONE
+    controlled_vocab:
+      ontologies:
+      - name: SmartProtocols (http
+        url: //bioportal.bioontology.org/ontologies/SP)
+      terms: []
+    expected_type:
+    - URL
+    marginality: Optional
+    name: additionalType
+    sdo_desc: An additional type for the item, typically used for adding more specific
+      types from external vocabularies in microdata syntax. This is a relationship
+      between something and a class that the thing is in. In RDFa syntax, it is better
+      to use the native RDFa syntax - the 'typeof' attribute - for multiple types.
+      Schema.org tools may have only weaker understanding of extra types, in particular
+      those defined externally.
   - bsc_dec: ''
     cardinality: ONE
     controlled_vocab:
@@ -78,49 +117,44 @@ new_props:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab:
-    ontologies: []
+    ontologies:
+    - name: SmartProtocols (http
+      url: //bioportal.bioontology.org/ontologies/SP)
     terms: []
   expected_type:
-  - Text
+  - CreativeWork
   marginality: Recommended
-  name: advantage
-  sdo_desc: It should be made clear in which situations the Protocol has been successfully
-    employed.
+  name: structuralElement
+  sdo_desc: A structural element refers to qualified text in a CreativeWork. It should
+    be used when plain text is not enough, for instance, to distinguish abstract,
+    sections or paragraphs. Qualification is achieved by using the additionaType property
+    which should point to an ontological term describing the element referred to by
+    this property. The text itself can be added using the property text.  Bioschemas
+    usage.  A particular case in Bioschemas is LabProtocol where structural elements
+    are used to described advantages (situations the Protocol has been successfully
+    employed), limitations (situations the Protocol would be unreliable or otherwise
+    unsuccessful), applications (Applications of the protocol list the full diversity
+    of the applications of the method and support if is possible to extend the range
+    of applications of the protocol. e.g. northern blot assays, sequencing, etc.),
+    and outcomes (outcome or expected result by a protocol execution).  For LabProtocol,
+    in the applicationType, please use http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol
+    for advantages, http://purl.org/net/SMARTprotocol#LimitationOfTheProtocol for
+    limitations, http://purl.org/net/SMARTprotocol#ApplicationOfTheProtocol for applicability,
+    and http://purl.org/net/SMARTprotocol#OutcomeOfTheProtocol for outcomes.
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab:
     ontologies: []
     terms: []
   expected_type:
-  - Text
-  marginality: Recommended
-  name: limitation
-  sdo_desc: It should be made clear in which situations the Protocol would be unreliable
-    or otherwise unsuccessful.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Recommended
-  name: applicability
-  sdo_desc: Applications of the protocol list the full diversity of the applications
-    of the method and support if is possible to extend the range of applications of
-    the protocol. e.g. northern blot assays, sequencing, etc.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - BiologicalEntity (chemicals)
+  - PhysicalEntity, Text
   - URL
   marginality: Minimum
   name: reagent
-  sdo_desc: Reagents participating in the list. ChEBI and PubChem entities can be
-    used whenever available. Commercial names are also acceptable (URL if possible)
+  sdo_desc: Reagent used in the protocol. It can be a record in a Dataset describing
+    the reagent or a PhysicalEntity corresponding to the reagent or a URL pointing
+    to the type of reagent used. ChEBI and PubChem entities can be used whenever available.
+    Commercial names are also acceptable (URL if possible)
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab:
@@ -137,55 +171,26 @@ new_props:
     ontologies: []
     terms: []
   expected_type:
-  - Text
-  marginality: Recommended
-  name: outcome
-  sdo_desc: outcome or expected result by a protocol execution.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Recommended
-  name: category
-  sdo_desc: A category for the item. Greater signs or slashes can be used to informally
-    indicate a category hierarchy.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Thing
-  marginality: Recommended
-  name: isMentionedIn
-  sdo_desc: CretiveWork, Dataset, collection mentioning this entity  Inverse of:mentions
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
+  - Thing, Text
   - URL
   marginality: Minimum
-  name: device
-  sdo_desc: Device required to run the application. Used in cases where a specific
-    make/model is required to run the application.  For LabProtocols it would be a
-    laboratory equipment.
+  name: instrument
+  sdo_desc: The object that helped the agent perform the action. e.g. John wrote a
+    book with a pen.  For LabProtocols it would be a laboratory equipment use by a
+    person to follow one or more steps described in this LabProtocol.
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab:
     ontologies: []
     terms: []
   expected_type:
-  - BiologicalEntity
+  - PhysicalEntity, Text
   - URL
   marginality: Minimum
   name: sample
-  sdo_desc: Samples used in the protocol
+  sdo_desc: Sample used in the protocol. It could be a record in a Dataset describing
+    the sample or a physical object corresponding to the sample or a URL pointing
+    to the type of sample used.
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab:
@@ -194,7 +199,7 @@ new_props:
   expected_type:
   - SoftwareApplication
   marginality: Recommended
-  name: actionApplication
+  name: software
   sdo_desc: An application that can complete the request.
 - bsc_dec: ''
   cardinality: ONE
