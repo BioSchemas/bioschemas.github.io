@@ -25,7 +25,7 @@ gems:
 
 # Collections
 collections:
-  newSpecs:
+  sdo_specs:
     output: true
     permalink: /:collection/:path/
   groups:
