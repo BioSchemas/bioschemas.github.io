@@ -1232,6 +1232,7 @@ table.bioschemas_properties {
 
 .bioschemas_properties tbody th{
     text-align: left;
+    vertical-align: top;
 }
 .bioschemas_properties th:first-child {
     border-top-left-radius: 0;
@@ -1246,7 +1247,7 @@ table.bioschemas_properties {
     padding: 0.625em;
     min-height: 1.25em;
     max-height: 2.5em;
-    vertical-align: middle;
+    vertical-align: top;
     font-size: 100%;
     display: table-cell;
     max-width: 22em;
