@@ -6,7 +6,7 @@ path: proteinstructure.html
 collection: groups
 active: true
 type: biological
-description: Specification for protein structure
+description: Specification for protein structure profile
 lead: [MariaMartin]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20proteinstructure
 folder: https://drive.google.com/drive/folders/0B0fE3oOZIq44U1gzLWgtV0VBaTQ

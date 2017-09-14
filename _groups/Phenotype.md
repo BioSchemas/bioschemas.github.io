@@ -1,12 +1,12 @@
 ---
 layout: group-details
-id: phenotypes
-name: Phenotypes
-path: phenotypes.html
+id: phenotype
+name: Phenotype
+path: phenotype.html
 collection: groups
 active: true
 type: biological
-description: Specification for phenotypes
+description: Specification for phenotype profile
 lead: [CarlosHorro]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20phenotypes
 folder:

@@ -1,12 +1,12 @@
 ---
 layout: group-details
-id: beacons
-name: Beacons
-path: beacons.html
+id: beacon
+name: Beacon
+path: beacon.html
 collection: groups
 active: true
 type: generic
-description: Specification for beacons
+description: Specification for Beacon Type
 lead: [SerenaScollen, AudaldLloret]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20beacons
 folder: https://drive.google.com/drive/folders/0BwpCuN9mloG8WTl6X3hkeFIwems

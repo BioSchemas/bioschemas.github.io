@@ -1250,13 +1250,7 @@ table.bioschemas_properties {
     vertical-align: top;
     font-size: 100%;
     display: table-cell;
-    max-width: 22em;
-}
-
-.bioschemas_properties td a img{
-    text-align: center;
-    display: block;
-    width: 60px;
+    max-width: 20em;
 }
 
 .bioschemas_properties .reu_props_sdo td, .bioschemas_properties .new_props_sdo td{
@@ -1269,22 +1263,47 @@ table.bioschemas_properties {
     color: #0B794B;
 }
 
-.bioschemas_properties .new_props_sdo td{
-
-}
-
 .bioschemas_properties a{
     color: #660000;
     text-decoration: none;
     border-bottom: dotted 1px #660000;
 }
 
+.bioschemas_properties .spec_links a:link, .bioschemas_properties .spec_links a{
+    display: inline-block;
+    border-bottom: none;
+}
+.bioschemas_properties .spec_links a img{
+    width: 3em;
+    padding: 5% 19%;
+}
+.bioschemas_properties .spec_links a{
+    zcursor: help;
+}
+
+.bioschemas_properties .spec_links a .tooltip {
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    background-color: #0B794B;
+    color: #fff;
+    text-align: center;
+    padding: 3px;
+    border-radius: 5px;
+    z-index: 10;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity .6s;
+    font-size: 80%;
+}
+
+.bioschemas_properties .spec_links a:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
 .bioschemas_properties a:link{
     color: #990000;
     text-decoration: none;
     border-bottom: dotted 1px #990000;
-}
-
-.bioschemas_properties .reu_props_sdo td a:link, .new_props_sdo td a:link{
-
 }

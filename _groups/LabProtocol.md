@@ -1,12 +1,12 @@
 ---
 layout: group-details
-id: labprotocols
-name: Laboratory Protocols
-path: labprotocols.html
+id: labprotocol
+name: Laboratory Protocol
+path: labprotocol.html
 collection: groups
 active: true
 type: generic
-description: Specification for biological laboratory protocols
+description: Specification for biological laboratory protocol Type
 lead: [OlgaXimenaGiraldo]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20labprotocols
 folder: https://drive.google.com/drive/folders/0B0fE3oOZIq44TzFwejFEbE9WdXM

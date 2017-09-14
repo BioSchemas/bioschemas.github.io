@@ -1,12 +1,12 @@
 ---
 layout: group-details
-id: samples
-name: Samples
-path: samples.html
+id: sample
+name: Sample
+path: sample.html
 collection: groups
 active: true
 type: biological
-description: Specification for samples
+description: Specification for sample profile
 lead: [HelenParkinson, TonyBurdett]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20samples
 folder: https://drive.google.com/drive/folders/0Bw_p-HKWUjHoaWhkTnBka2FWRE0

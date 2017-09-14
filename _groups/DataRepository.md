@@ -1,12 +1,12 @@
 ---
 layout: group-details
-id: datarepositories
-name: Data Repositories
-path: datarepositories.html
+id: datarepository
+name: Data Repository
+path: datarepository.html
 collection: groups
 active: true
 type: generic
-description: Specification for data repositories
+description: Specification for data repository profile
 lead: [HenningHermjakob]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20datarepository
 folder: https://drive.google.com/open?id=0Bw_p-HKWUjHoNDJNUWltYVBkV1k

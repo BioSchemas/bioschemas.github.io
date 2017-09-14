@@ -1,12 +1,12 @@
 ---
 layout: group-details
 id: data
-name: Datasets
-path: data.html
+name: Dataset
+path: dataset.html
 collection: groups
 active: true
 type: generic
-description: Specification for data
+description: Specification for Dataset
 lead: [SusannaSansone]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20data
 folder: https://drive.google.com/open?id=0B2tKthYRS0f5aEhkU1Q4aEE5TEU

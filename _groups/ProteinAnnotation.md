@@ -1,25 +1,23 @@
 ---
 layout: group-details
-id: protein
-name: Protein
-path: protein.html
+id: proteinannotation
+name: Protein Annotation
+path: proteinannotation.html
 collection: groups
 active: true
 type: biological
-description: Specification for protein
+description: Specification for protein annotation profile
 lead: [MariaMartin]
-issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20protein
-folder: https://drive.google.com/drive/folders/0B0fE3oOZIq44eFktTmhFQlhLeDA
+issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20proteinannotations
+folder: https://drive.google.com/drive/folders/0B0fE3oOZIq44c2dqVVRkaVZ6X2M
 
 # Progress status
 usecase: https://docs.google.com/document/d/1MNU-r7CMAvKdGav1VT3XeyQXr2XwRA6JXDsoWoA0R1E
 crosswalk: https://docs.google.com/spreadsheets/d/1QQH4AkzdwPT1Qt5OLmH5HosLpkFU7khwE4Ql9_Cb9ZQ
 spec-versions: [#
-  #[{"spec-num": "0.1", "spec-url": "https://docs.google.com/document/d/1fn-of4cxGJLYiw1G3-KepZsIE0Ptq4GSx-h3jPmvdvc"},
-  #[{"spec-num": "0.2", "spec-url": "https://docs.google.com/document/d/1fn-of4cxGJLYiw1G3-KepZsIE0Ptq4GSx-h3jPmvdvc"}
-  [{"spec-num": "0.3", "spec-url": "https://docs.google.com/document/d/14Wg-Rv9rri8pLRUP9FkVRq6geFuwb5mWbZos6MvxH6w"}]#,
-  ]
-#]
+  [{"spec-num": "0.0.3", "spec-url": "https://docs.google.com/document/d/1EBKwUEJ3QEtcj5cdqz0vOeF_p9foGpOFspcpwI0sOhY/"}]#,
+  #[{"spec-num": "0.2", "spec-url":
+]
 test: false
 adoption: false
 applications: false
