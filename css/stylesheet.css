@@ -1203,6 +1203,7 @@ table.bioschemas_properties {
     -moz-box-shadow: none;
     box-shadow: none;
     margin: 1em 0 0 0;
+    margin-left: -4.5em;
     border: 1px solid #98A0A6;
     border-spacing: 3px;
     display: table;
@@ -1273,33 +1274,8 @@ table.bioschemas_properties {
     display: inline-block;
     border-bottom: none;
 }
-.bioschemas_properties .spec_links a img{
-    width: 4em;
-    padding: 5% 19%;
-}
-.bioschemas_properties .spec_links a{
-    zcursor: help;
-}
-
-.bioschemas_properties .spec_links a .tooltip {
-    visibility: hidden;
-    position: absolute;
-    width: 120px;
-    background-color: #0B794B;
-    color: #fff;
-    text-align: center;
-    padding: 3px;
-    border-radius: 5px;
-    z-index: 10;
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity .6s;
-    font-size: 80%;
-}
-
-.bioschemas_properties .spec_links a:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
+.bioschemas_properties td a img{
+    width: 3.7em;
 }
 
 .bioschemas_properties a:link{
