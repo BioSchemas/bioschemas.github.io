@@ -12,7 +12,7 @@ See [installation instructions](https://jekyllrb.com/docs/installation/) for ful
 - Run the website: ```jekyll serve```
 
 ## Specifications subtree update
-1. ```git subtree pull --prefix=_bsc_specs/ --squash subtree_specs master "[commit message]"```
+1. ```git subtree pull --prefix=_bsc_specs/ --squash subtree_specs master -m "[commit message]"```
 2. ```git push origin master```
 
 
