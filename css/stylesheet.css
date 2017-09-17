@@ -1195,15 +1195,18 @@ Small Device Styles
         display: none;
     }
 }
+
+
+
+
 /*******************************************************************************
 Specification Properties
 *******************************************************************************/
-table.bioschemas_properties {
+table.bioschemas_properties, table.bioschemas_spec_list{
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
     margin: 1em 0 0 0;
-    margin-left: -4.5em;
     border: 1px solid #98A0A6;
     border-spacing: 3px;
     display: table;
@@ -1211,15 +1214,18 @@ table.bioschemas_properties {
     line-height: 160%;
     font-size: 100%;
 }
+table.bioschemas_spec_list{
+    margin-left: -4.5em;
+}
 
-.bioschemas_properties tr{
+.bioschemas_properties tr, table.bioschemas_spec_list tr{
     display: table-row;
     vertical-align: inherit;
     border-color: inherit;
     font-size: 100%;
 }
 
-.bioschemas_properties th {
+.bioschemas_properties th, table.bioschemas_spec_list th {
     padding-left: 5px;
     background: #C7CBCE;
     color: #3A4956;
@@ -1231,19 +1237,19 @@ table.bioschemas_properties {
     font-size: 100%;
 }
 
-.bioschemas_properties tbody th{
+.bioschemas_properties tbody th, table.bioschemas_spec_list th{
     text-align: left;
     vertical-align: top;
 }
-.bioschemas_properties th:first-child {
+.bioschemas_properties th:first-child, table.bioschemas_spec_list th:first-child{
     border-top-left-radius: 0;
 }
 
-.bioschemas_properties th:last-child {
+.bioschemas_properties th:last-child, table.bioschemas_spec_list th:last-child {
     border-top-right-radius: 0;
 }
 
-.bioschemas_properties td {
+.bioschemas_properties td, table.bioschemas_spec_list td{
     border: 0;
     padding: 0.625em;
     min-height: 1.25em;
@@ -1260,21 +1266,22 @@ table.bioschemas_properties {
     font-size: 100%;
 }
 
-.bioschemas_properties .new_props_sdo td{
+.bioschemas_properties .new_props_sdo td a, .bioschemas_properties .new_props_sdo td a:link{
     color: #0B794B;
 }
 
-.bioschemas_properties a{
+.bioschemas_properties a, table.bioschemas_spec_list a{
     color: #660000;
     text-decoration: none;
     border-bottom: dotted 1px #660000;
 }
 
-.bioschemas_properties .spec_links a:link, .bioschemas_properties .spec_links a{
+table.bioschemas_spec_list .spec_links a:link, table.bioschemas_spec_list .spec_links a{
     display: inline-block;
     border-bottom: none;
 }
-.bioschemas_properties td a img{
+
+table.bioschemas_spec_list td a img{
     width: 3.7em;
 }
 
