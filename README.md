@@ -5,7 +5,7 @@ This repository will contain **only** the approved Bioschemas specifications tha
 2. Mapping generation 
 3. Specification html generation
 
-This repository works as a git subtree in the Bioschemas Web Page, all the changes done here will be updated in [Bioschemas' GitHub Pages repository] (https://github.com/BioSchemas/bioschemas.github.io)
+This repository works as a git subtree in the Bioschemas Web Page, all the changes done here will be updated in [Bioschemas' GitHub Pages repository](https://github.com/BioSchemas/bioschemas.github.io)
 
 
 **Note**
