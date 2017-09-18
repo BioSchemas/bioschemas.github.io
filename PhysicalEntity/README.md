@@ -2,7 +2,7 @@
 
 **Type** 
 
-PhysicalEntity > Thing
+ThingPhysicalEntity > 
 
 **Bioschemas specification describing a physical entity.** 
 
@@ -11,5 +11,6 @@ A PhysicalEntity is any object that exists in the physical world and cannot be b
 # Links 
 - [Specification](specification.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1e_8LUQ4GYxar0-gotOXsbAUVUQkvF6GNuBdr54hbcdc/edit?usp=drivesdk)
+- [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/PhysicalEntity/examples)
 - [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20PhysicalEntity)
-> These files were generated using [ma2model](https://github.com/BioSchemas/map2model) Python Module.
+> These files were generated using [map2model](https://github.com/BioSchemas/map2model) Python Module.

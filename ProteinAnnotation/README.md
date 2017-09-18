@@ -11,5 +11,6 @@ In this document we propose a simple way for a beacons to self-describe their ge
 # Links 
 - [Specification](specification.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1KNVv3xedOpckk3ZcILnPmlys2DTzpk8KnkRwVFR2SL0/edit?usp=drivesdk)
+- [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/ProteinAnnotation/examples)
 - [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20ProteinAnnotation)
-> These files were generated using [ma2model](https://github.com/BioSchemas/map2model) Python Module.
+> These files were generated using [map2model](https://github.com/BioSchemas/map2model) Python Module.

@@ -13,5 +13,6 @@ Note that this draft will be improved progressively through the bioschemas proce
 # Links 
 - [Specification](specification.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1H12h5VpVNJFzNs2RQJWjXkauCEn3qEsVFzKRoiHHffY/edit?usp=drivesdk)
+- [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/DataRepository/examples)
 - [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20DataRepository)
-> These files were generated using [ma2model](https://github.com/BioSchemas/map2model) Python Module.
+> These files were generated using [map2model](https://github.com/BioSchemas/map2model) Python Module.
