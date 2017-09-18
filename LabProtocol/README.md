@@ -2,7 +2,7 @@
 
 **Type** 
 
-LabProtocol > CreativeWork > LabProtocol > Thing
+Thing > CreativeWork > LabProtocol
 
 **Bioschemas specification describing LabProtocol in the life-science.** 
 
@@ -12,7 +12,9 @@ Experimental protocols are fundamental information structures that support the d
 [1]  Giraldo, O., Garcia, A., Corcho, O.: SMART Protocols: SeMAntic RepresenTation for Experimental Protocols, Riva del Garda, Trentino, Italy (2014). 4th Workshop on Linked Science 2014- Making Sense Out of Data (LISC2014)
  
 # Links 
-- [Specification](specification.html)
+- [Specification](http://bioschemas.org/bsc_specs/LabProtocol/specification/)
+- [Specification source](specification.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1julB0P6kjXK_mL2dU8EDU9zMxIMah0_dYYeGt2Spllo/edit?usp=drivesdk)
+- [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/LabProtocol/examples)
 - [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20LabProtocol)
-> These files were generated using [ma2model](https://github.com/BioSchemas/map2model) Python Module.
+> These files were generated using [map2model](https://github.com/BioSchemas/map2model) Python Module.
