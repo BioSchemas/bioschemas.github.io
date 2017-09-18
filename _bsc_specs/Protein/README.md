@@ -11,5 +11,6 @@ This protein specification presents the usage of the generic type BiologicalEnti
 # Links 
 - [Specification](specification.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1QQH4AkzdwPT1Qt5OLmH5HosLpkFU7khwE4Ql9_Cb9ZQ/edit?usp=drivesdk)
+- [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/Protein/examples)
 - [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20Protein)
-> These files were generated using [ma2model](https://github.com/BioSchemas/map2model) Python Module.
+> These files were generated using [map2model](https://github.com/BioSchemas/map2model) Python Module.

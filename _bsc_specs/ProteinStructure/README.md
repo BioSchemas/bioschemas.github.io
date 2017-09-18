@@ -11,5 +11,6 @@ This protein structure specification presents the usage of the generic type Biol
 # Links 
 - [Specification](specification.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1fT-wrUdQIL9YTzyXk1zTnOjfnLKx7o0Qqg_2xB7P6Q0/edit?usp=drivesdk)
+- [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/ProteinStructure/examples)
 - [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20ProteinStructure)
-> These files were generated using [ma2model](https://github.com/BioSchemas/map2model) Python Module.
+> These files were generated using [map2model](https://github.com/BioSchemas/map2model) Python Module.
