@@ -51,9 +51,15 @@ title: BioSchemas Specifications
                     </a>
                 </td>
                 <td class="spec_links">
-                    <a target="_blank" href="{{spec.use_cases_url}}">
-                        <img src="/images/use_case_spec.png" alt="View BioSchemas {{ spec.name }} Use Cases">
-                    </a>
+                    {% if spec.use_cases_url=='err_404'%}
+                        <a target="_blank">
+                            <img src="/images/use_case_spec.png" alt="View BioSchemas {{ spec.name }} Use Cases"  style="filter: grayscale(100%);">
+                        </a>
+                    {%else%}
+                        <a target="_blank" href="{{spec.use_cases_url}}">
+                            <img src="/images/use_case_spec.png" alt="View BioSchemas {{ spec.name }} Use Cases">
+                        </a>
+                    {%endif%}
                 </td>
                 <td class="spec_links">
                     <a target="_blank" href="{{spec.gh_tasks}}">
