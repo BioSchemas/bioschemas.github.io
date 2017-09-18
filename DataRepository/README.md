@@ -11,7 +11,7 @@ This document covers the schema.org and bioschemas.org properties necessary to d
 Note that this draft will be improved progressively through the bioschemas process.
  
 # Links 
-- [Specification](https://bioschemas.org/bsc_specs/DataRepository/specification/)
+- [Specification](http://bioschemas.org/bsc_specs/DataRepository/specification/)
 - [Specification source](specification.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1H12h5VpVNJFzNs2RQJWjXkauCEn3qEsVFzKRoiHHffY/edit?usp=drivesdk)
 - [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/DataRepository/examples)

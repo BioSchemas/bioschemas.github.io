@@ -9,7 +9,7 @@ Thing > PhysicalEntity
 # Description 
 A PhysicalEntity is any object that exists in the physical world and cannot be better represented with any other existing type in schema.org. In order to specify the nature of this physical entity, additionalProperty must be used to specify the nature/type of this physical entity. For instance, http://semanticscience.org/resource/SIO_010043 can be used. 
 # Links 
-- [Specification](https://bioschemas.org/bsc_specs/PhysicalEntity/specification/)
+- [Specification](http://bioschemas.org/bsc_specs/PhysicalEntity/specification/)
 - [Specification source](specification.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1e_8LUQ4GYxar0-gotOXsbAUVUQkvF6GNuBdr54hbcdc/edit?usp=drivesdk)
 - [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/PhysicalEntity/examples)

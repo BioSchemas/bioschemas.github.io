@@ -9,7 +9,7 @@ Thing > CreativeWork
 # Description 
 This protein specification presents the usage of the generic type BiologicalEntity by the biological type “protein”. Please be aware “protein” is NOT a schema.org type but a BiologicalEntity profile. 
 # Links 
-- [Specification](https://bioschemas.org/bsc_specs/Protein/specification/)
+- [Specification](http://bioschemas.org/bsc_specs/Protein/specification/)
 - [Specification source](specification.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1QQH4AkzdwPT1Qt5OLmH5HosLpkFU7khwE4Ql9_Cb9ZQ/edit?usp=drivesdk)
 - [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/Protein/examples)
