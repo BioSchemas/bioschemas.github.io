@@ -23,7 +23,9 @@ extended_props:
     cardinality: ONE
     controlled_vocab:
       ontologies: []
-      terms: []
+      terms:
+      - 'Yes'
+      - ' as it better suits to the concept described by this entity'
     expected_type:
     - URL
     marginality: Minimum
@@ -133,6 +135,17 @@ new_props:
   name: isContainedIn
   sdo_desc: Indicates a PhysicalEntity that this PhysicalEntity is (in some sense)
     part of.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - PhysicalEntity
+  marginality: Optional
+  name: contains
+  sdo_desc: 'Indicates a PhysicalEntity that is (in some sense) a part of this PhysicalEntity.
+    Inverse property: isPartOf.'
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab:
