@@ -20,7 +20,7 @@ edit_url: https://github.com/BioSchemas/specifications/tree/master/PhysicalEntit
 extended_props:
   Thing:
   - bsc_dec: ''
-    cardinality: ONE
+    cardinality: MANY
     controlled_vocab:
       ontologies: []
       terms:
@@ -90,10 +90,45 @@ extended_props:
       ontologies: []
       terms: []
     expected_type:
+    - CreativeWork
+    - URL
+    marginality: Recommended
+    name: mainEntityOfPage
+    sdo_desc: Indicates a page (or other CreativeWork) for which this thing is the
+      main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background
+      notes</a> for details.
+  - bsc_dec: ''
+    cardinality: ONE
+    controlled_vocab:
+      ontologies: []
+      terms: []
+    expected_type:
     - Text
     marginality: Recommended
     name: name
     sdo_desc: The name of the item.
+  - bsc_dec: ''
+    cardinality: MANY
+    controlled_vocab:
+      ontologies: []
+      terms: []
+    expected_type:
+    - URL
+    marginality: Optional
+    name: sameAs
+    sdo_desc: URL of a reference Web page that unambiguously indicates the item's
+      identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+      website.
+  - bsc_dec: ''
+    cardinality: ONE
+    controlled_vocab:
+      ontologies: []
+      terms: []
+    expected_type:
+    - URL
+    marginality: Recommended
+    name: url
+    sdo_desc: URL of the item.
 g_mapping_file: PhysicalEntity Mapping
 gh_examples: https://github.com/BioSchemas/specifications/tree/master/PhysicalEntity/examples
 gh_folder: https://github.com/BioSchemas/specifications/tree/master/PhysicalEntity
@@ -111,7 +146,7 @@ new_props:
     - 'Yes'
     - ' as better suits to describe this additional property'
   expected_type:
-  - StructuredValue
+  - PropertyValue
   marginality: Optional
   name: additionalProperty
   sdo_desc: 'A property-value pair representing an additional characteristics of the
@@ -121,9 +156,10 @@ new_props:
     http://schema.org/color, http://schema.org/gtin13, ...) will typically expect
     such data to be provided using those properties, rather than using the generic
     property/value mechanism.  Bioschemas usage.  Additional to the use of name and
-    description to describe this property in a human-readable way, in Bioschemas additionalType
-    is used to specify the nature of the property/relation. For instance, if the property
-    refers to a disease association, you could use http://semanticscience.org/resource/SIO_000983.'
+    description to describe this property in a human-readable way, additionalType
+    should be used to specify the nature of the property/relation. For instance, if
+    the property refers to a gene/protein disease association, you could use http://semanticscience.org/resource/SIO_000983
+    as additionalType for the additionalProperty.'
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab:
@@ -131,6 +167,7 @@ new_props:
     terms: []
   expected_type:
   - PhysicalEntity
+  - URL
   marginality: Optional
   name: isContainedIn
   sdo_desc: Indicates a PhysicalEntity that this PhysicalEntity is (in some sense)
@@ -142,6 +179,7 @@ new_props:
     terms: []
   expected_type:
   - PhysicalEntity
+  - URL
   marginality: Optional
   name: contains
   sdo_desc: 'Indicates a PhysicalEntity that is (in some sense) a part of this PhysicalEntity.
@@ -171,13 +209,17 @@ new_props:
     - 'Yes'
     - ' as it better suits to describe the nature of the representation'
   expected_type:
-  - Record, PropertyValue, Text
+  - PropertyValue, Text
   - URL
   marginality: Optional
   name: hasRepresentation
-  sdo_desc: The location of for example where the event is happening, an organization
-    is located, or where an action takes place.  If the representation is an image,
-    it is advisable to use the property image from Thing.
+  sdo_desc: A representation for this entity other than, for instance, an image (used
+    image property for that) or the main web page/record (use mainEntityOfPage for
+    that, and see background notes, http://schema.org/docs/datamodel.html#mainEntityBackground,
+    for sameAs and url).  Bioschemas usage.  This property could be used, for instance,
+    to register a sequence protein as it is a representation of the protein. If you
+    want to better define the nature of the representation, use a PropertyValue as
+    described in additionalProperty.
 parent_type: Thing
 spec_mapping_url: https://docs.google.com/a/ebi.ac.uk/spreadsheets/d/1e_8LUQ4GYxar0-gotOXsbAUVUQkvF6GNuBdr54hbcdc/edit?usp=drivesdk
 spec_type: Type
