@@ -1215,7 +1215,7 @@ table.bioschemas_properties, table.bioschemas_spec_list{
     font-size: 100%;
 }
 table.bioschemas_spec_list{
-    margin-left: -4.5em;
+    margin-left: -2em;
 }
 
 .bioschemas_properties tr, table.bioschemas_spec_list tr{
@@ -1259,8 +1259,12 @@ table.bioschemas_spec_list{
     display: table-cell;
     max-width: 20em;
 }
+.bioschemas_properties.bsc_type td{
+    max-width: none;
+}
 
-.bioschemas_properties .reu_props_sdo td, .bioschemas_properties .new_props_sdo td{
+
+.reu_props_sdo td, .new_props_sdo td, .cardinality td{
     font-weight: bold;
     background: #C7CBCE;
     font-size: 100%;
@@ -1269,6 +1273,19 @@ table.bioschemas_spec_list{
 .bioschemas_properties .new_props_sdo td a, .bioschemas_properties .new_props_sdo td a:link{
     color: #0B794B;
 }
+
+.cardinality td b.Minimum{
+    color: #0B794B;
+}
+
+.cardinality td b.Recommended{
+    color: #98771a;
+}
+
+.cardinality td b.Optional{
+    color: #555daf;
+}
+
 
 .bioschemas_properties a, table.bioschemas_spec_list a{
     color: #660000;
