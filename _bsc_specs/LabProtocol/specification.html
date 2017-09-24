@@ -35,7 +35,7 @@ extended_props:
     expected_type:
     - CreativeWork
     - URL
-    marginality: Minimum
+    marginality: Recommended
     name: license
     sdo_desc: A license document that applies to this content, typically indicated
       by URL.
@@ -47,7 +47,7 @@ extended_props:
     expected_type:
     - CreativeWork
     - URL
-    marginality: Recommended
+    marginality: Optional
     name: isBasedOn
     sdo_desc: A resource that was used in the creation of this resource. This term
       can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
@@ -58,7 +58,7 @@ extended_props:
       terms: []
     expected_type:
     - CreativeWork
-    marginality: Recommended
+    marginality: Optional
     name: isPartOf
     sdo_desc: Indicates a CreativeWork that this CreativeWork is (in some sense) part
       of.
@@ -97,8 +97,18 @@ extended_props:
       ontologies: []
       terms: []
     expected_type:
+    - Text
+    marginality: Recommended
+    name: description
+    sdo_desc: A description of the item.
+  - bsc_dec: ''
+    cardinality: ONE
+    controlled_vocab:
+      ontologies: []
+      terms: []
+    expected_type:
     - PropertyValue, Text, URL
-    marginality: Minimum
+    marginality: Recommended
     name: identifier
     sdo_desc: The identifier property represents any kind of identifier for any kind
       of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
@@ -126,22 +136,22 @@ new_props:
   - CreativeWork
   marginality: Recommended
   name: structuralElement
-  sdo_desc: A structural element refers to qualified text in a CreativeWork. It should
-    be used when plain text is not enough, for instance, to distinguish abstract,
-    sections or paragraphs. Qualification is achieved by using the additionaType property
-    which should point to an ontological term describing the element referred to by
-    this property. The text itself can be added using the property text.  Bioschemas
-    usage.  A particular case in Bioschemas is LabProtocol where structural elements
-    are used to described advantages (situations the Protocol has been successfully
-    employed), limitations (situations the Protocol would be unreliable or otherwise
-    unsuccessful), applications (Applications of the protocol list the full diversity
-    of the applications of the method and support if is possible to extend the range
-    of applications of the protocol. e.g. northern blot assays, sequencing, etc.),
-    and outcomes (outcome or expected result by a protocol execution).  For LabProtocol,
-    in the applicationType, please use http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol
+  sdo_desc: 'Proposal: Add this property to CreativeWork.  A structural element refers
+    to qualified text in a CreativeWork. It should be used when plain text is not
+    enough, for instance, to distinguish abstract, sections or paragraphs. Qualification
+    is achieved by using the additionaType property which should point to an ontological
+    term describing the element referred to by this property. The text itself can
+    be added using the property text.  Bioschemas usage.  A particular case in Bioschemas
+    is LabProtocol where structural elements are used to described advantages (situations
+    the Protocol has been successfully employed), limitations (situations the Protocol
+    would be unreliable or otherwise unsuccessful), applications (Applications of
+    the protocol list the full diversity of the applications of the method and support
+    if is possible to extend the range of applications of the protocol. e.g. northern
+    blot assays, sequencing, etc.), and outcomes (outcome or expected result by a
+    protocol execution).  For LabProtocol, in the applicationType, please use http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol
     for advantages, http://purl.org/net/SMARTprotocol#LimitationOfTheProtocol for
     limitations, http://purl.org/net/SMARTprotocol#ApplicationOfTheProtocol for applicability,
-    and http://purl.org/net/SMARTprotocol#OutcomeOfTheProtocol for outcomes.
+    and http://purl.org/net/SMARTprotocol#OutcomeOfTheProtocol for outcomes.'
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab:
@@ -214,7 +224,7 @@ new_props:
   sdo_desc: The time it takes to actually carry on the protocol, in ISO 8601 duration
     format.
 parent_type: CreativeWork
-spec_mapping_url: https://docs.google.com/spreadsheets/d/1julB0P6kjXK_mL2dU8EDU9zMxIMah0_dYYeGt2Spllo/edit?usp=drivesdk
+spec_mapping_url: https://docs.google.com/a/ebi.ac.uk/spreadsheets/d/1julB0P6kjXK_mL2dU8EDU9zMxIMah0_dYYeGt2Spllo/edit?usp=drivesdk
 spec_type: Type
 status: revision
 subtitle: Bioschemas specification describing LabProtocol in the life-science.

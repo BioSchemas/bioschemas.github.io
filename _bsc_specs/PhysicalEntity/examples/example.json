@@ -9,15 +9,15 @@
       "@type": ["StructuredValue", "MedicalCondition"],
       "additionalType": "http://semanticscience.org/resource/SIO_010299",
       "name": "Leukemia, chronic myeloid (CML)",
-      "identifier": "http://www.omim.org/entry/608232",    
+      "identifier": "http://www.omim.org/entry/608232",
       "sameAs": "http://www.uniprot.org/diseases/DI-03735",
       "code": {
         "@type": "MedicalCode",
         "code": "608232",
         "codingSystem": "OMIM"
       }
-    }  
-  },    
+    }
+  },
   "alternateName": [
     {
     "@language": "en",
@@ -37,13 +37,20 @@
   "contains": {
     "@type": "PhysicalEntity",
     "additionalType": "http://semanticscience.org/resource/SIO_010041",
-    "description": "Proton acceptor"   
+    "description": "Proton acceptor"
   },
   "location": {
     "@type": "PropertyValue",
     "additionalType": "http://biohackathon.org/resource/faldo#ExactPosition",
     "name": "FALDO position",
-    "value": 837 
+    "value": 837
   },
-  "hasRepresentation": "http://purl.uniprot.org/uniprot/P00533"    
+  "mainEntityOfPage": {
+    "@type": "Record",
+    "@id": "http://www.identifiers.org/uniprot/P00533",
+    "additionalType": "http://purl.uniprot.org/core/Protein",
+    "identifier": "P00533",
+    "url": "http://www.uniprot.org/uniprot/P00533"
+  },
+  "url": "http://purl.uniprot.org/uniprot/P00533"
 }
