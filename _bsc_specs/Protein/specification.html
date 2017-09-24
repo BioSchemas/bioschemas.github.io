@@ -1,39 +1,24 @@
 ---
-description: 'A PhysicalEntity is any object that exists in the physical world and
-  cannot be better represented with any other existing type in schema.org. In order
-  to specify the nature of this physical entity, additionalProperty must be used to
-  specify the nature/type of this physical entity. For instance, http://semanticscience.org/resource/SIO_010043
-  can be used to refer to a protein.
-
-
-  Bioschemas usage
-
-
-  A PhysicalEntity is a flexible and extensible wrapper for Life Sciences entities.
-  Representations of physical entities in Life Sciences are usually recorded in datasets;
-  the link to a dataset should be done via properties. A particular Life Sciences
-  entity, refer to as a profile in Bioschemas, will customize PhysicalEntity by modifying
-  the marginality, cardinality and ontologies used. For instance, a protein profile
-  would recommend pointing to an organism a part of the minimum information, but not
-  necessarily to a sample or disease.'
-edit_url: https://github.com/BioSchemas/specifications/tree/master/PhysicalEntity/specification.html
-g_mapping_file: PhysicalEntity Mapping
-gh_examples: https://github.com/BioSchemas/specifications/tree/master/PhysicalEntity/examples
-gh_folder: https://github.com/BioSchemas/specifications/tree/master/PhysicalEntity
-gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20PhysicalEntity
+description: This Protein profile specification presents the PhysicalEntity usage
+  when describing a Protein.
+edit_url: https://github.com/BioSchemas/specifications/tree/master/Protein/specification.html
+g_mapping_file: Protein Mapping
+gh_examples: https://github.com/BioSchemas/specifications/tree/master/Protein/examples
+gh_folder: https://github.com/BioSchemas/specifications/tree/master/Protein
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Protein
 hierarchy:
 - Thing
-layout: new_type_detail
-name: PhysicalEntity
+layout: new_spec_detail
+name: Protein
 parent_type: Thing
 properties:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab:
-    ontologies: []
-    terms:
-    - 'Yes'
-    - ' as it better suits to the concept described by this entity'
+    ontologies:
+    - name: SIO
+      url: SIO_010043
+    terms: []
   expected_type:
   - URL
   marginality: Minimum
@@ -45,6 +30,50 @@ properties:
     the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
     tools may have only weaker understanding of extra types, in particular those defined
     externally.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies:
+    - name: SIO
+      url: SIO_000983
+    - name: SIO
+      url: SIO_010299
+    terms:
+    - ' OMIM'
+    - ' any other well-known ontology describing diseases'
+  expected_type:
+  - PropertyValue
+  marginality: Recommended
+  name: additionalProperty.disease_ association
+  parent: Protein
+  sdo_desc: "\u201CadditionalProperty\u201D : { \_\u201CadditionalType\u201D: \u201C\
+    http://semanticscience.org/resource/SIO_000983\u201D \_\u201Cname\u201D: \u201C\
+    disease association\u201D, \_\u201Cvalue\u201D: { \_\_\_\u201C@type\u201D: [\u201C\
+    StructuredValue\u201D, \u201CMedicalCondition\u201D], \_\_\_\u201CadditionalType\u201D\
+    : \u201Chttp://semanticscience.org/resource/SIO_010299\u201D, \_\_\_\u201Cname\u201D\
+    : \u201C<disease name>\u201D, \_\_\_\u201Cidentifier\u201D: \u201C<disease identifier/URL>\u201D\
+    , \_\_\_\"code\": { \_\_\_\_\_\_\_\"@type\": \"MedicalCode\", \_\_\_\_\_\_\_\"\
+    code\": \"<medical code>\", \_\_\_\_\_\_\_\"codingSystem\": \"<coding system>\"\
+    \ \_\_\_\_\_} \_} }"
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies:
+    - name: SIO
+      url: SIO_010081
+    - name: SIO
+      url: SIO_010035
+    terms: []
+  expected_type:
+  - PropertyValue
+  marginality: Minimum
+  name: additionalProperty.transcribed_from
+  parent: Protein
+  sdo_desc: "\u201CadditionalProperty\u201D : { \_\u201CadditionalType\u201D: \u201C\
+    http://semanticscience.org/resource/SIO_010081\u201D  \_\u201Cname\u201D: \u201C\
+    transcribed from\u201D, \_\u201Cvalue\u201D: { \_\_\_\u201C@type\u201D: \u201C\
+    StructuredValue\u201D \_\_\_additionalType: \u201Chttp://semanticscience.org/resource/SIO_010035\u201D\
+    , \_\_\_\u201Cname\u201D: \u201C<gene name>\u201D \_} }"
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab:
@@ -105,7 +134,7 @@ properties:
   expected_type:
   - CreativeWork
   - URL
-  marginality: Recommended
+  marginality: Optional
   name: mainEntityOfPage
   parent: Thing
   sdo_desc: Indicates a page (or other CreativeWork) for which this thing is the main
@@ -156,7 +185,7 @@ properties:
   - PropertyValue
   marginality: Optional
   name: additionalProperty
-  parent: PhysicalEntity
+  parent: Protein
   sdo_desc: 'A property-value pair representing an additional characteristics of the
     entitity, e.g. a product feature or another characteristic for which there is
     no matching property in schema.org.  Note: Publishers should be aware that applications
@@ -178,9 +207,25 @@ properties:
   - URL
   marginality: Optional
   name: isContainedIn
-  parent: PhysicalEntity
+  parent: Protein
   sdo_desc: Indicates a PhysicalEntity that this PhysicalEntity is (in some sense)
     part of.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - Recommended url should point to a well-known ontology such as NCBI taxon or
+      UniProt Taxonomy
+  expected_type:
+  - PhysicalEntity
+  marginality: Minimum
+  name: isContainedIn.organism
+  parent: Protein
+  sdo_desc: "\"isContainedIn\": { \_\_\_\"@type\": \"PhysicalEntity\", \_ \_\_\_\"\
+    additionalType\": \"http://semanticscience.org/resource/SIO_010000\", \_\_\_\"\
+    identifier\": \"<taxon ID>\", \_\_\_\"name\": \"Homo sapiens\", \_\_\_\"url\"\
+    : \"<taxon ID URL>\" \_}"
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab:
@@ -191,7 +236,7 @@ properties:
   - URL
   marginality: Optional
   name: contains
-  parent: PhysicalEntity
+  parent: Protein
   sdo_desc: 'Indicates a PhysicalEntity that is (in some sense) a part of this PhysicalEntity.
     Inverse property: isPartOf.'
 - bsc_dec: ''
@@ -206,7 +251,7 @@ properties:
   - URL
   marginality: Optional
   name: location
-  parent: PhysicalEntity
+  parent: Protein
   sdo_desc: The location of for example where the event is happening, an organization
     is located, or where an action takes place.  Bioschemas usage.  In Bioschemas
     location can be refer to a position in a chromosome or sequence or to a physical
@@ -224,7 +269,7 @@ properties:
   - URL
   marginality: Optional
   name: hasRepresentation
-  parent: PhysicalEntity
+  parent: Protein
   sdo_desc: A representation for this entity other than, for instance, an image (used
     image property for that) or the main web page/record (use mainEntityOfPage for
     that, and see background notes, http://schema.org/docs/datamodel.html#mainEntityBackground,
@@ -232,10 +277,11 @@ properties:
     to register a sequence protein as it is a representation of the protein. If you
     want to better define the nature of the representation, use a PropertyValue as
     described in additionalProperty.
-spec_mapping_url: https://docs.google.com/spreadsheets/d/1e_8LUQ4GYxar0-gotOXsbAUVUQkvF6GNuBdr54hbcdc/edit?usp=drivesdk
-spec_type: Type
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1WZmPPEPa6JE4iq3OSQOatUH5TeSvWj5lcRi_kDTSayU/edit?usp=drivesdk
+spec_type: Profile
 status: revision
-subtitle: Bioschemas specification describing a physical entity.
-use_cases_url: https://docs.google.com/a/ebi.ac.uk/document/d/1q4A8KvhdsMcTYkwQdCptGc1fbiqe4yqJB5xMt9fWRso/edit?usp=sharing
-version: 0.0.2
+subtitle: Bioschemas specification describing a Protein (PhysicalEntity profile) in
+  Life Sciences
+use_cases_url: https://docs.google.com/document/d/1MNU-r7CMAvKdGav1VT3XeyQXr2XwRA6JXDsoWoA0R1E
+version: 0.0.1
 ---
