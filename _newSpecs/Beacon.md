@@ -1,5 +1,5 @@
 ---
-description: In this document we propose a simple way for a beacons to self-describe
+description: In this document we propose a simple way for a ELIXIR/GA4GH beacons to self-describe
   their genetic variant cardinality service for better integration with other beacons
   within the beacon-network. It builds upon the Beacon service API and uses existing
   schema.org entities and properties.
