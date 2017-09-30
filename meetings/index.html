@@ -16,7 +16,10 @@ title: Meetings
           {% for meeting in sorted_meetings %}
             {% assign currentDate = site.time | date: '%F' %}
             {% assign meetingDate = meeting.start_date | date: '%F' %}
+            {% assign endDate = meeting.end_date | date: '%F' %}
             {% if currentDate <= meetingDate %}
+              <li><strong><a href="{{ meeting.url }}">{{ meeting.name}}</a></strong> <br/> {{ meeting.dates }} <br/> {{ meeting.venue }}</li>
+            {% elsif meetingDate <= currentDate and currentDate <= endDate %}
               <li><strong><a href="{{ meeting.url }}">{{ meeting.name}}</a></strong> <br/> {{ meeting.dates }} <br/> {{ meeting.venue }}</li>
             {% endif %}
           {% endfor %}
