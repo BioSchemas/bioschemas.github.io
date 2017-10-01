@@ -28,7 +28,7 @@ title: BioSchemas Specifications
             <tr class="new_props_sdo">
                 <td colspan="10">Types</td>
             </tr>
-            {% assign type_specs = site.bsc_specs | where: 'spec_type', 'Type'%}
+            {% assign type_specs = site._specifications | where: 'spec_type', 'Type'%}
             {% for spec in type_specs %}
             <tr>
                 <th>{{spec.name}}</th>
@@ -81,7 +81,7 @@ title: BioSchemas Specifications
             <tr class="new_props_sdo">
                 <td colspan="10">Profiles</td>
             </tr>
-            {% assign prof_specs = site.bsc_specs | where: 'spec_type', 'Profile'%}
+            {% assign prof_specs = site.specifications | where: 'spec_type', 'Profile'%}
             {% for spec in  prof_specs%}
             <tr>
                 <th>{{spec.name}}</th>
