@@ -25,7 +25,7 @@ gems:
 
 # Collections
 collections:
-  specifications:
+  bsc_specs:
     output: true
     permalink: /:collection/:path/
   groups:
