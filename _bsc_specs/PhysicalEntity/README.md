@@ -1,4 +1,4 @@
-## PhysicalEntity specification v. 0.0.2 
+## PhysicalEntity specification v. 0.0.1 
 
 **Type** 
 
@@ -15,7 +15,7 @@ A PhysicalEntity is a flexible and extensible wrapper for Life Sciences entities
 # Links 
 - [Specification](http://bioschemas.org/bsc_specs/PhysicalEntity/specification/)
 - [Specification source](specification.html)
-- [Mapping Spreadsheet](https://docs.google.com/a/ebi.ac.uk/spreadsheets/d/1e_8LUQ4GYxar0-gotOXsbAUVUQkvF6GNuBdr54hbcdc/edit?usp=drivesdk)
+- [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1e_8LUQ4GYxar0-gotOXsbAUVUQkvF6GNuBdr54hbcdc/edit?usp=drivesdk)
 - [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/PhysicalEntity/examples)
 - [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20PhysicalEntity)
 > These files were generated using [map2model](https://github.com/BioSchemas/map2model) Python Module.

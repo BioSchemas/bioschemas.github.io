@@ -125,40 +125,23 @@ properties:
     ontologies: []
     terms: []
   expected_type:
+  - CreativeWork
+  marginality: Recommended
+  name: hasPart
+  parent: CreativeWork
+  sdo_desc: Indicates a CreativeWork that is (in some sense) a part of this CreativeWork.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
   - Text
   marginality: Recommended
   name: keywords
   parent: CreativeWork
   sdo_desc: Keywords or tags used to describe this content. Multiple entries in a
     keywords list are typically delimited by commas.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies:
-    - name: SMART Protocols (http
-      url: //bioportal.bioontology.org/ontologies/SP)
-    terms: []
-  expected_type:
-  - CreativeWork
-  marginality: Recommended
-  name: structuralElement
-  parent: LabProtocol
-  sdo_desc: 'Proposal: Add this property to CreativeWork.  A structural element refers
-    to qualified text in a CreativeWork. It should be used when plain text is not
-    enough, for instance, to distinguish abstract, sections or paragraphs. Qualification
-    is achieved by using the additionaType property which should point to an ontological
-    term describing the element referred to by this property. The text itself can
-    be added using the property text.  Bioschemas usage.  A particular case in Bioschemas
-    is LabProtocol where structural elements are used to described advantages (situations
-    the Protocol has been successfully employed), limitations (situations the Protocol
-    would be unreliable or otherwise unsuccessful), applications (Applications of
-    the protocol list the full diversity of the applications of the method and support
-    if is possible to extend the range of applications of the protocol. e.g. northern
-    blot assays, sequencing, etc.), and outcomes (outcome or expected result by a
-    protocol execution).  For LabProtocol, in the applicationType, please use http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol
-    for advantages, http://purl.org/net/SMARTprotocol#LimitationOfTheProtocol for
-    limitations, http://purl.org/net/SMARTprotocol#ApplicationOfTheProtocol for applicability,
-    and http://purl.org/net/SMARTprotocol#OutcomeOfTheProtocol for outcomes.'
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab:

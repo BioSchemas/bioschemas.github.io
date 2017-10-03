@@ -33,50 +33,6 @@ properties:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab:
-    ontologies:
-    - name: SIO
-      url: SIO_000983
-    - name: SIO
-      url: SIO_010299
-    terms:
-    - ' OMIM'
-    - ' any other well-known ontology describing diseases'
-  expected_type:
-  - PropertyValue
-  marginality: Recommended
-  name: additionalProperty.disease_ association
-  parent: Protein
-  sdo_desc: "\u201CadditionalProperty\u201D : { \_\u201CadditionalType\u201D: \u201C\
-    http://semanticscience.org/resource/SIO_000983\u201D \_\u201Cname\u201D: \u201C\
-    disease association\u201D, \_\u201Cvalue\u201D: { \_\_\_\u201C@type\u201D: [\u201C\
-    StructuredValue\u201D, \u201CMedicalCondition\u201D], \_\_\_\u201CadditionalType\u201D\
-    : \u201Chttp://semanticscience.org/resource/SIO_010299\u201D, \_\_\_\u201Cname\u201D\
-    : \u201C<disease name>\u201D, \_\_\_\u201Cidentifier\u201D: \u201C<disease identifier/URL>\u201D\
-    , \_\_\_\"code\": { \_\_\_\_\_\_\_\"@type\": \"MedicalCode\", \_\_\_\_\_\_\_\"\
-    code\": \"<medical code>\", \_\_\_\_\_\_\_\"codingSystem\": \"<coding system>\"\
-    \ \_\_\_\_\_} \_} }"
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies:
-    - name: SIO
-      url: SIO_010081
-    - name: SIO
-      url: SIO_010035
-    terms: []
-  expected_type:
-  - PropertyValue
-  marginality: Minimum
-  name: additionalProperty.transcribed_from
-  parent: Protein
-  sdo_desc: "\u201CadditionalProperty\u201D : { \_\u201CadditionalType\u201D: \u201C\
-    http://semanticscience.org/resource/SIO_010081\u201D  \_\u201Cname\u201D: \u201C\
-    transcribed from\u201D, \_\u201Cvalue\u201D: { \_\_\_\u201C@type\u201D: \u201C\
-    StructuredValue\u201D \_\_\_additionalType: \u201Chttp://semanticscience.org/resource/SIO_010035\u201D\
-    , \_\_\_\u201Cname\u201D: \u201C<gene name>\u201D \_} }"
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
     ontologies: []
     terms: []
   expected_type:
@@ -200,6 +156,50 @@ properties:
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab:
+    ontologies:
+    - name: SIO
+      url: SIO_000983
+    - name: SIO
+      url: SIO_010299
+    terms:
+    - ' OMIM'
+    - ' any other well-known ontology describing diseases'
+  expected_type:
+  - PropertyValue
+  marginality: Recommended
+  name: additionalProperty.disease_ association
+  parent: Protein
+  sdo_desc: "\u201CadditionalProperty\u201D : { \_\u201CadditionalType\u201D: \u201C\
+    http://semanticscience.org/resource/SIO_000983\u201D \_\u201Cname\u201D: \u201C\
+    disease association\u201D, \_\u201Cvalue\u201D: { \_\_\_\u201C@type\u201D: [\u201C\
+    StructuredValue\u201D, \u201CMedicalCondition\u201D], \_\_\_\u201CadditionalType\u201D\
+    : \u201Chttp://semanticscience.org/resource/SIO_010299\u201D, \_\_\_\u201Cname\u201D\
+    : \u201C<disease name>\u201D, \_\_\_\u201Cidentifier\u201D: \u201C<disease identifier/URL>\u201D\
+    , \_\_\_\"code\": { \_\_\_\_\_\_\_\"@type\": \"MedicalCode\", \_\_\_\_\_\_\_\"\
+    code\": \"<medical code>\", \_\_\_\_\_\_\_\"codingSystem\": \"<coding system>\"\
+    \ \_\_\_\_\_} \_} }"
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies:
+    - name: SIO
+      url: SIO_010081
+    - name: SIO
+      url: SIO_010035
+    terms: []
+  expected_type:
+  - PropertyValue
+  marginality: Minimum
+  name: additionalProperty.transcribed_from
+  parent: Protein
+  sdo_desc: "\u201CadditionalProperty\u201D : { \_\u201CadditionalType\u201D: \u201C\
+    http://semanticscience.org/resource/SIO_010081\u201D  \_\u201Cname\u201D: \u201C\
+    transcribed from\u201D, \_\u201Cvalue\u201D: { \_\_\_\u201C@type\u201D: \u201C\
+    StructuredValue\u201D \_\_\_additionalType: \u201Chttp://semanticscience.org/resource/SIO_010035\u201D\
+    , \_\_\_\u201Cname\u201D: \u201C<gene name>\u201D \_} }"
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
     ontologies: []
     terms: []
   expected_type:
@@ -283,5 +283,5 @@ status: revision
 subtitle: Bioschemas specification describing a Protein (PhysicalEntity profile) in
   Life Sciences
 use_cases_url: https://docs.google.com/document/d/1MNU-r7CMAvKdGav1VT3XeyQXr2XwRA6JXDsoWoA0R1E
-version: 0.4
+version: 0.0.4
 ---
