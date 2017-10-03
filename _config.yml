@@ -28,6 +28,9 @@ collections:
   bsc_specs:
     output: true
     permalink: /:collection/:path/
+  specifications:
+    output: true
+    permalink: /:collection/:path/
   groups:
     output: true
     permalink: /:collection/:path/ #Note, trailing / needed to avoid .html
