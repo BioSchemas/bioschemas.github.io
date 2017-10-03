@@ -1,20 +1,20 @@
 ---
 layout: group-details
-name: Physical Entity
+name: BioChem Entity
 path: biologicalentity.html
 collection: groups
 active: true
 type: generic
 description: Specification for biological entities
 lead: [CarlosHorro, LeylaGarcia, PhilippeRocca-Serra]
-issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20physicalentity
+issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20biochementity
 folder: https://drive.google.com/open?id=0B7X2x2IPBve7R3Uza1d6MGpuYVE
 
 # Progress status
 usecase:
 crosswalk: https://docs.google.com/spreadsheets/d/1h0-fgqnRe25-tVCmu2yWNQjthLzgkW4a1TVNMpCABlc/edit#gid=1261485211
 spec-versions: [#
-  [{"spec-num": "0.2", "spec-url": "/bsc_specs/PhysicalEntity/specification/"}]#,
+  [{"spec-num": "0.2", "spec-url": "/specifications/BioChemEntity/specification/"}]#,
 ]
 test: false
 adoption: false
