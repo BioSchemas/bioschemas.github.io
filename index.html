@@ -6,7 +6,7 @@ layout: default
     <div id="main_content_wrap" class="outer">
         <section id="main_content" class="inner">
 
-        <!-- <div style="border: 1px solid #0B794B; margin-bottom:20px;">
+        <div style="border: 1px solid #0B794B; margin-bottom:20px;">
             <h3 style="padding-left: 10px;">Upcoming events</h3>
             <ul>
               {% assign sorted_meetings = (site.meetings | sort: 'start_date') %}
@@ -22,15 +22,13 @@ layout: default
                   <li><strong><a href="{{ meeting.url }}">{{ meeting.name}}</a></strong> <br/> {{ meeting.dates }} <br/> {{ meeting.venue }}</li>
                   {% assign count = count | plus: 1 %}
                 {% endif %}
-              -->
                 <!-- Limit upcoming meetings to the next three meetings -->
-              <!--
                 {% if count == 3 %}
                   {% break %}
                 {% endif %}
               {% endfor %}
             </ul>
-        </div> -->
+        </div>
             <meta itemprop="logo" content="http://bioschemas.org/images/square_logo2.png"/>
             <meta itemprop="url" content="http://bioschemas.org"/>
 
