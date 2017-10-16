@@ -27,18 +27,6 @@
                       <li>GitHub: <a href="{{ "http://github.com/" | append: page.github_username }}">{{ page.github_username }}</a></li>
                     {% endif %}
                   </ul>
-                  <h2>Groups</h2>
-                  <ul>
-                    {% for grp in page.groups %}
-                      {% assign group-id = "/groups/" | append: grp %}
-                      {% assign group = site.groups | where:"id", group-id | first %}
-                      <li>
-                          <a href="{{group.url}}">{{ group.name }}</a>
-                      </li>
-                    {% endfor %}
-
-                  </ul>
-
                 </section>
               </div>
             </div>
