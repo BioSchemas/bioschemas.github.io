@@ -19,7 +19,6 @@ title: BioSchemas Specifications
             <tr>
                 <th>Name</th>
                 <th>Short description</th>
-                <th>Version</th>
                 <th>Spec.</th>
                 <th>Folder</th>
                 <th>Mapping</th>
@@ -32,9 +31,8 @@ title: BioSchemas Specifications
             {% assign type_specs = site.specifications | where: 'spec_type', 'Profile'%}
             {% for spec in type_specs %}
             <tr>
-                <th>{{spec.name}}</th>
+                <th>{{ spec.name }} (v{{spec.version}})</th>
                 <td>{{ spec.subtitle }}</td>
-                <td>{{ spec.version }}</td>
                 <td class="spec_links">
                   {% if spec.hierarchy %}
                     <a target="_blank" href="{{ spec.url}}">
