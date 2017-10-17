@@ -20,7 +20,6 @@ title: BioSchemas Specifications
                 <th>Name</th>
                 <th>Short description</th>
                 <th>Version</th>
-                <th>Group</th>
                 <th>Spec.</th>
                 <th>Folder</th>
                 <th>Mapping</th>
@@ -36,11 +35,6 @@ title: BioSchemas Specifications
                 <th>{{spec.name}}</th>
                 <td>{{ spec.subtitle }}</td>
                 <td>{{ spec.version }}</td>
-                <td class="spec_links">
-                    <a target="_blank" href="../groups/{{spec.name }}" alt="BioSchemas {{ spec.name }} Group">
-                        <img src="/images/spec_group.png" alt="BioSchemas {{ spec.name }} Specification">
-                    </a>
-                </td>
                 <td class="spec_links">
                   {% if spec.hierarchy %}
                     <a target="_blank" href="{{ spec.url}}">
