@@ -12,9 +12,9 @@ title: BioSchemas Specifications
 
         <h2>Profiles</h2>
 
-        <p>The Bioschemas profiles define a community agreed layer over the Schema.org model providing additional constraints. These constraints capture (i) the minimal information properties agreed by the community which are mandatory (M), recommended (R), or optional (O), (ii) the cardinality of the property, i.e. whether it is expected to occur once or many times, and (iii) associated controlled vocabulary terms drawn from existing ontologies. </p>
+        <p>The Bioschemas' profiles define a community agreed layer over the Schema.org model providing additional constraints. These constraints capture (i) the minimal information properties agreed by the community which are mandatory (M), recommended (R), or optional (O), (ii) the cardinality of the property, i.e. whether it is expected to occur once or many times, and (iii) associated controlled vocabulary terms drawn from existing ontologies. </p>
 
-        <table class="bioschemas_spec_list">
+        <table class="bioschemas_spec_list" style="width: 100%">
             <thead>
             <tr>
                 <th>Name</th>
@@ -81,12 +81,11 @@ title: BioSchemas Specifications
         <h2>Types</h2>
         <p>We have found it necessary to propose some additional types to the Schema.org vocabulary. These are specified below and are expected to be pushed up to Schema.org once they have stabalised.</p>
 
-        <table class="bioschemas_spec_list">
+        <table class="bioschemas_spec_list" style="width: 100%;">
             <thead>
             <tr>
                 <th>Name</th>
-                <th>Short description</th>
-                <th>Version</th>
+                <th>Short description</th>            
                 <th>Group</th>
                 <th>Type</th>
             </tr>
@@ -95,9 +94,8 @@ title: BioSchemas Specifications
             {% assign prof_specs = site.specifications | where: 'spec_type', 'Type'%}
             {% for spec in  prof_specs%}
             <tr>
-                <th>{{spec.name}}</th>
-                <td>{{ spec.subtitle }}</td>
-                <td>{{ spec.version }}</td>
+                <th>{{spec.name}} (v{{ spec.version }})</th>
+                <td>{{ spec.subtitle }}</td>                
                 <td class="spec_links">
                     <a target="_blank" href="../groups/{{spec.name }}" alt="BioSchemas {{ spec.name }} Group">
                         <img src="/images/spec_group.png" alt="BioSchemas {{ spec.name }} Specification">
