@@ -22,3 +22,24 @@ title: People
     </section>
 </div>
 
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org/",
+    "@type": "Organization",
+    "name": "BioSchemas Community",
+    "url": "http://bioschemas.org/",
+    "logo": "http://bioschemas.org/images/square_logo2.png",
+    "email": "community@bioschemas.org",
+    "member": [
+        {% for person in sorted_people %}
+        {
+             "@context": "http://schema.org/",
+             "@type": "Person",
+             "givenName": "{{ person.first-name }}",
+             "familyName": "{{ person.last-name }}"                                    
+        {% if forloop.last == false %} }, {% else %} } {% endif %}
+        {% endfor %}
+    ]
+}
+</script>
