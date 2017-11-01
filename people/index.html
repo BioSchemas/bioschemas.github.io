@@ -7,7 +7,7 @@ title: People
     <section id="main_content" class="inner">
 
         <h1>People</h1>
-        <div id="peopleTable" style="column-count: 4;">
+        <div id="peopleTable">
         <ul>
           {% assign sorted_people = site.people | sort: 'last-name' %}
           {% for person in sorted_people %}
@@ -21,6 +21,21 @@ title: People
         </div>
     </section>
 </div>
+
+<!-- change number columns based on device -->
+<script type="application/x-javascript">
+    if(navigator.userAgent.match(/android/i)) {
+        document.getElementById('peopleTable').style.columnCount = 1;
+    } else if(navigator.userAgent.match(/phone/i)) {
+        document.getElementById('peopleTable').style.columnCount = 1;    
+    } else if(navigator.userAgent.match(/tablet/i)) {
+        document.getElementById('peopleTable').style.columnCount = 1;        
+    } else if(navigator.userAgent.match(/ipad/i)) {
+        document.getElementById('peopleTable').style.columnCount = 1;                      
+    } else {
+        document.getElementById('peopleTable').style.columnCount = 4;
+    }
+</script>
 
 
 <script type="application/ld+json">
