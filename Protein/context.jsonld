@@ -1,6 +1,6 @@
-[
-  "http://schema.org",
-  {
+{
+  "@context": {
+    "@vocab": "http://schema.org",
     "Gene": {
       "@id": "http://purl.obolibrary.org/obo/SO_0000704"
     },
@@ -28,4 +28,4 @@
       "@type": "@id"
     }
   }
-]
+}
