@@ -4,9 +4,9 @@ id: GiuseppeProfiti
 first-name: Giuseppe
 last-name: Profiti
 collection: people
-affiliation:
-homepage:
+affiliation: University of Bologna / Elixir Italy
+homepage: https://www.unibo.it/sitoweb/giuseppe.profiti2/en
 github_username: profgiuseppe
-orcid:
-groups: [tool, validation]
+orcid: 0000-0001-6067-6174
+groups: [biologicalentity, tool, validation]
 ---

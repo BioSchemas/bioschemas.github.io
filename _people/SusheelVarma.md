@@ -4,9 +4,9 @@ id: SusheelVarma
 first-name: Susheel
 last-name: Varma
 collection: people
-affiliation:
+affiliation: ELIXIR Hub
 homepage:
 github_username: susheel
-orcid:
-groups: [data, datarepositories, standard, tool, beacons]
+orcid: 0000-0003-1687-2754
+groups: [organization, data, datarepositories, standard, tool, beacons, WebAPI]
 ---

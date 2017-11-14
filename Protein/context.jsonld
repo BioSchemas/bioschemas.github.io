@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "Gene": {
+      "@id": "http://purl.obolibrary.org/obo/SO_0000704"
+    },
+    "Protein": {
+      "@id": "http://purl.obolibrary.org/obo/PR_000000001"
+    },
+    "transcribedFrom": {
+      "@id": "http://semanticscience.org/resource/SIO_010081",
+      "@type": "@id"
+    },
+    "associatedDisease": {
+      "@id": "http://semanticscience.org/resource/SIO_000983",
+      "@type": "@id"
+    },
+    "isRelatedTo": {
+      "@id": "http://semanticscience.org/resource/SIO_000001",
+      "@type": "@id"
+    },
+    "uniprot": {
+      "@id": "http://identifiers.org/uniprot/",
+      "@type": "@id"
+    },
+    "ncbigene": {
+      "@id": "http://identifiers.org/ncbigene/",
+      "@type": "@id"
+    }
+  }
+}
