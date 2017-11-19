@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+{% include header.html %}
+{% include navbar.html %}
+
+<div class="page-content">
+    <div class="wrapper">
+        <div id="main_content_wrap" class="outer">
+            <section id="main_content" class="inner">
+                <h1>{{page.name}} Specification v. {{page.version}}</h1>
+                <h2>{{page.subtitle}}</h2>
+                <h3>{{page.spec_type}}</h3>
+                {%for branch_name in page.hierarchy reversed%}
+                    <a href="http://schema.org/{{branch_name}}">{{branch_name}}</a>
+                    {%if forloop.index < page.hierarchy.size%}
+                        >
+                    {%endif%}
+                {%endfor%}
+                {%if page.spec_type == 'Type'%}
+                >
+                <a href="#">{{page.name}}</a>
+                {%endif%}
+
+                <br>
+
+                Bioschemas <a href="/specifications/">specifications and types list.</a>
+
+                <h3>Description: </h3>
+                <p>{{page.description}}</p>
+                <br>
+
+                <table class="bioschemas_properties">
+                    <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Expected Type</th>
+                        <th>Description</th>
+                        <th>CD</th>
+                        <th>Controlled Vocabulary</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% assign  marginality_list = "Minimum,Recommended,Optional" | split: ',' %}
+                    {% for current_mg in marginality_list %}
+                    {% assign props_list = page.properties | where: 'marginality', current_mg %}
+                        {%if props_list.size > 0%}
+                        <tr class="cardinality">
+                            <td colspan="6">
+                                Cardinality: <b class="{{current_mg}}">{{current_mg}}.</b>
+                            </td>
+                        </tr>
+                        {%endif%}
+                        {% for prop in  props_list %}
+                            <tr>
+                                <th><a href="#">{{prop.name}}</a></th>
+                                <td>
+                                    {% for temp_exp_type in prop.expected_type %}
+                                    <a>{{temp_exp_type}}</a><br>
+                                    {% endfor %}
+                                </td>
+                                <td>{{prop.sdo_desc}}<br>{{new_prop.bsc_dec}}</td>
+                                <td>{{prop.cardinality}}</td>
+                                <td>
+                                    {% for cv in prop.controlled_vocab%}
+                                    {% for ontology in cv[1]%}
+                                    <a href="{{ontology.url}}">{{ontology.name}}</a>
+                                    {%endfor%}
+                                    {% for term in cv[2]%}
+                                    <a href="#">{{term}}</a>
+                                    {%endfor%}
+                                    {%endfor%}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    {% endfor%}
+
+                    </tbody>
+                </table>
+
+
+
+            </section>
+        </div>
+    </div>
+</div>
+
+{% include footer.html %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+<script src="/js/scripts.js"></script>
+
+
+</body>
+
+</html>
