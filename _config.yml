@@ -28,6 +28,9 @@ collections:
   specifications:
     output: true
     permalink: /:collection/:path/
+  devSpecs:
+    output: true
+    permalink: /:collection/:path/
   meetings:
     output: true
     permalink: /:collection/:path/ #Note, trailing / needed to avoid .html
