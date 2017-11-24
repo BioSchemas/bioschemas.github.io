@@ -43,22 +43,22 @@ title: BioSchemas Specifications
                 </td>
                 <td class="spec_links">
                     {% if spec.use_cases_url=='err_404'%}
-                    <a target="_blank">
+                    <a>
                         <img src="/images/use_case_spec.png" alt="View BioSchemas {{ spec.name }} Use Cases"  style="filter: grayscale(100%);">
                     </a>
                     {%else%}
-                    <a target="_blank" href="{{spec.use_cases_url}}">
+                    <a href="{{spec.use_cases_url}}">
                         <img src="/images/use_case_spec.png" alt="View BioSchemas {{ spec.name }} Use Cases">
                     </a>
                     {%endif%}
                 </td>
                 <td class="spec_links">
-                    <a target="_blank" href="{{spec.gh_tasks}}">
+                    <a href="{{spec.gh_tasks}}">
                         <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues">
                     </a>
                 </td>
                 <td class="spec_links">
-                    <a target="_blank" href="{{spec.gh_examples}}">
+                    <a href="{{spec.gh_examples}}">
                         <img src="/images/spec_examples.png" alt="View BioSchemas {{ spec.name }} Examples">
                     </a>
                 </td>
@@ -75,7 +75,7 @@ title: BioSchemas Specifications
             <tr>
                 <th>Name</th>
                 <th>Short description</th>
-                <th>Type</th>
+                <th>Type spec.</th>
             </tr>
             </thead>
             <tbody>
@@ -84,7 +84,7 @@ title: BioSchemas Specifications
             <tr>
                 <th>{{spec.name}} (v{{ spec.version }})</th>
                 <td>{{ spec.subtitle }}</td>
-                <td class="spec_links">
+                <td class="spec_links" style="text-align: center;">
                     <a target="_blank" href="{{ spec.url}}">
                         <img src="/images/bsc_spec.png" alt="BioSchemas {{ spec.name }} Specification">
                     </a>
