@@ -43,7 +43,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                        {% assign new_props = page.properties | where: 'parent', page.name %}
+                        {% assign new_props = (page.properties | where: 'parent', page.name | sort: 'name') %}
                         {%if new_props.size > 0%}
                             <tr class="new_props_sdo">
                                 <td colspan="6">
@@ -65,7 +65,7 @@
 
                         {% for h_type in page.hierarchy %}
                             <tr class="reu_props_sdo"><td colspan="6">Properties from <a href="http://schema.org/{{h_type}}">{{h_type}}</a></td></tr>
-                            {% assign reu_props = page.properties | where: 'parent', h_type %}
+                            {% assign reu_props = (page.properties | where: 'parent', h_type | sort: 'name') %}
                             {% for prop  in reu_props%}
                             <tr>
                                 <th><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></th>
