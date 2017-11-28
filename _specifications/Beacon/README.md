@@ -1,4 +1,4 @@
-## Beacon specification v. 0.1 
+## Beacon specification v. 0.0.1 
 
 **Profile** 
 

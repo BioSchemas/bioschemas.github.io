@@ -91,7 +91,7 @@ title: Draft BioSchemas Specifications
             </tr>
             </thead>
             <tbody>
-            {% assign type_specs = site.devSpecs | where: 'spec_type', 'Type'%}
+            {% assign type_specs = site.devTypes | where: 'spec_type', 'Type'%}
             {% for spec in  type_specs%}
             <tr>
                 <th>{{spec.name}} (v{{ spec.version }})</th>

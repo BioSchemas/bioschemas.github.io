@@ -1,0 +1,301 @@
+---
+description: 'A BioChemEntity is any object that exists in the physical world and
+  cannot be better represented with any other existing type in schema.org. In order
+  to specify the nature of this physical entity, additionalProperty must be used to
+  specify the nature/type of this physical entity. For instance, http://semanticscience.org/resource/SIO_010043
+  can be used to refer to a protein.
+
+
+  Bioschemas usage
+
+
+  A BioChemEntity is a flexible and extensible wrapper for Life Sciences entities.
+  Representations of physical entities in Life Sciences are usually recorded in datasets;
+  the link to a dataset should be done via properties. A particular Life Sciences
+  entity, refer to as a profile in Bioschemas, will customize BioChemEntity by modifying
+  the marginality, cardinality and ontologies used. For instance, a protein profile
+  would recommend pointing to an organism a part of the minimum information, but not
+  necessarily to a sample or disease.'
+edit_url: https://github.com/BioSchemas/specifications/tree/master/BioChemEntity/specification.html
+g_mapping_file: BioChemEntity Mapping
+gh_examples: https://github.com/BioSchemas/specifications/tree/master/BioChemEntity/examples
+gh_folder: https://github.com/BioSchemas/specifications/tree/master/BioChemEntity
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20BioChemEntity
+hierarchy:
+- Thing
+layout: new_type_detail
+name: BioChemEntity
+parent_type: Thing
+properties:
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - 'Yes'
+    - ' as better suits to describe this additional property'
+  expected_type:
+  - PropertyValue
+  marginality: Optional
+  name: additionalProperty
+  parent: BioChemEntity
+  sdo_desc: 'A property-value pair representing an additional characteristics of the
+    entitity, e.g. a product feature or another characteristic for which there is
+    no matching property in schema.org.  Note: Publishers should be aware that applications
+    designed to use specific schema.org properties (e.g. http://schema.org/width,
+    http://schema.org/color, http://schema.org/gtin13, ...) will typically expect
+    such data to be provided using those properties, rather than using the generic
+    property/value mechanism.'
+- bsc_dec: Bioschemas usage.  Additional to the use of name and description to describe
+    this property in a human-readable way, additionalType should be used to specify
+    the nature of the property/relation. For instance, if the property refers to a
+    gene/protein disease association, you could use http://semanticscience.org/resource/SIO_000983
+    as additionalType for the additionalProperty.
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - BioChemEntity
+  - URL
+  marginality: Optional
+  name: isContainedIn
+  parent: BioChemEntity
+  sdo_desc: Indicates a BioChemEntity that this BioChemEntity is (in some sense) part
+    of.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - BioChemEntity
+  - URL
+  marginality: Optional
+  name: contains
+  parent: BioChemEntity
+  sdo_desc: 'Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
+    Inverse property: isContainedIn.'
+- bsc_dec: Bioschemas usage.  In Bioschemas location can be refer to a position in
+    a chromosome or sequence or to a physical place where, for instance, a sample
+    is stored. Using additionalType is advised to make the distinction. For instance,
+    FALDO can be used for sequence coordinates.
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - 'Yes'
+    - ' as it better suits to describe the location.'
+  expected_type:
+  - Place
+  - PostalAddress
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Optional
+  name: location
+  parent: BioChemEntity
+  sdo_desc: The location of for example where the event is happening, an organization
+    is located, or where an action takes place.
+- bsc_dec: Bioschemas usage.  This property could be used, for instance, to register
+    a sequence protein as it is a representation of the protein. If you want to better
+    define the nature of the representation, use a PropertyValue as described in additionalProperty.
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - 'Yes'
+    - ' as it better suits to describe the nature of the representation'
+  expected_type:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Optional
+  name: hasRepresentation
+  parent: BioChemEntity
+  sdo_desc: A representation for this entity other than, for instance, an image (used
+    image property for that) or the main web page/record (use mainEntityOfPage for
+    that, and see background notes, http://schema.org/docs/datamodel.html#mainEntityBackground,
+    for sameAs and url).
+- bsc_dec: Profile name
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - Bioschemas profiles
+  expected_type:
+  - Text
+  marginality: Minimum
+  name: preferredLabel
+  parent: BioChemEntity
+  sdo_desc: Indicates the preferred label to refer to a specific (sub)type of BioChemEntity
+- bsc_dec: Indicates a potential Action, which describes an idealized action in which
+    this thing would play an 'object' role.
+  description: Indicates a potential Action, which describes an idealized action in
+    which this thing would play an 'object' role.
+  exp_type: &id001
+  - Action
+  expected_type: *id001
+  name: potentialAction
+  parent: Thing
+  prop_name: potentialAction
+  property: http://schema.org/potentialAction
+  sdo_desc: Indicates a potential Action, which describes an idealized action in which
+    this thing would play an 'object' role.
+- bsc_dec: Indicates a page (or other CreativeWork) for which this thing is the main
+    entity being described. See <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background
+    notes</a> for details.
+  description: Indicates a page (or other CreativeWork) for which this thing is the
+    main entity being described. See <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background
+    notes</a> for details.
+  exp_type: &id002
+  - URL
+  - CreativeWork
+  expected_type: *id002
+  name: mainEntityOfPage
+  parent: Thing
+  prop_name: mainEntityOfPage
+  property: http://schema.org/mainEntityOfPage
+  sdo_desc: Indicates a page (or other CreativeWork) for which this thing is the main
+    entity being described. See <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background
+    notes</a> for details.
+- bsc_dec: A description of the item.
+  description: A description of the item.
+  exp_type: &id003
+  - Text
+  expected_type: *id003
+  name: description
+  parent: Thing
+  prop_name: description
+  property: http://schema.org/description
+  sdo_desc: A description of the item.
+- bsc_dec: An alias for the item.
+  description: An alias for the item.
+  exp_type: &id004
+  - Text
+  expected_type: *id004
+  name: alternateName
+  parent: Thing
+  prop_name: alternateName
+  property: http://schema.org/alternateName
+  sdo_desc: An alias for the item.
+- bsc_dec: An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a>
+    or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.
+  description: An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a>
+    or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.
+  exp_type: &id005
+  - ImageObject
+  - URL
+  expected_type: *id005
+  name: image
+  parent: Thing
+  prop_name: image
+  property: http://schema.org/image
+  sdo_desc: An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a>
+    or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.
+- bsc_dec: The name of the item.
+  description: The name of the item.
+  exp_type: &id006
+  - Text
+  expected_type: *id006
+  name: name
+  parent: Thing
+  prop_name: name
+  property: http://schema.org/name
+  sdo_desc: The name of the item.
+- bsc_dec: URL of the item.
+  description: URL of the item.
+  exp_type: &id007
+  - URL
+  expected_type: *id007
+  name: url
+  parent: Thing
+  prop_name: url
+  property: http://schema.org/url
+  sdo_desc: URL of the item.
+- bsc_dec: A sub property of description. A short description of the item used to
+    disambiguate from other, similar items. Information from other properties (in
+    particular, name) may be necessary for the description to be useful for disambiguation.
+  description: A sub property of description. A short description of the item used
+    to disambiguate from other, similar items. Information from other properties (in
+    particular, name) may be necessary for the description to be useful for disambiguation.
+  exp_type: &id008
+  - Text
+  expected_type: *id008
+  name: disambiguatingDescription
+  parent: Thing
+  prop_name: disambiguatingDescription
+  property: http://schema.org/disambiguatingDescription
+  sdo_desc: A sub property of description. A short description of the item used to
+    disambiguate from other, similar items. Information from other properties (in
+    particular, name) may be necessary for the description to be useful for disambiguation.
+- bsc_dec: An additional type for the item, typically used for adding more specific
+    types from external vocabularies in microdata syntax. This is a relationship between
+    something and a class that the thing is in. In RDFa syntax, it is better to use
+    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
+    tools may have only weaker understanding of extra types, in particular those defined
+    externally.
+  description: An additional type for the item, typically used for adding more specific
+    types from external vocabularies in microdata syntax. This is a relationship between
+    something and a class that the thing is in. In RDFa syntax, it is better to use
+    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
+    tools may have only weaker understanding of extra types, in particular those defined
+    externally.
+  exp_type: &id009
+  - URL
+  expected_type: *id009
+  name: additionalType
+  parent: Thing
+  prop_name: additionalType
+  property: http://schema.org/additionalType
+  sdo_desc: An additional type for the item, typically used for adding more specific
+    types from external vocabularies in microdata syntax. This is a relationship between
+    something and a class that the thing is in. In RDFa syntax, it is better to use
+    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
+    tools may have only weaker understanding of extra types, in particular those defined
+    externally.
+- bsc_dec: The identifier property represents any kind of identifier for any kind
+    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
+    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
+    many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background
+    notes</a> for more details.
+  description: The identifier property represents any kind of identifier for any kind
+    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
+    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
+    many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background
+    notes</a> for more details.
+  exp_type: &id010
+  - Text
+  - PropertyValue
+  - URL
+  expected_type: *id010
+  name: identifier
+  parent: Thing
+  prop_name: identifier
+  property: http://schema.org/identifier
+  sdo_desc: The identifier property represents any kind of identifier for any kind
+    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
+    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
+    many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background
+    notes</a> for more details.
+- bsc_dec: URL of a reference Web page that unambiguously indicates the item's identity.
+    E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  exp_type: &id011
+  - URL
+  expected_type: *id011
+  name: sameAs
+  parent: Thing
+  prop_name: sameAs
+  property: http://schema.org/sameAs
+  sdo_desc: URL of a reference Web page that unambiguously indicates the item's identity.
+    E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1e_8LUQ4GYxar0-gotOXsbAUVUQkvF6GNuBdr54hbcdc/edit?usp=drivesdk
+spec_type: Type
+status: revision
+subtitle: Bioschemas specification describing a physical entity.
+use_cases_url: https://docs.google.com/a/ebi.ac.uk/document/d/1q4A8KvhdsMcTYkwQdCptGc1fbiqe4yqJB5xMt9fWRso/edit?usp=sharing
+version: '0.1'
+---
