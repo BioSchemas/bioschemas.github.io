@@ -71,7 +71,7 @@
                                       {% endif %}
                                     {% endfor %}
                                 </td>
-                                <td>{{prop.sdo_desc}}<br>{{new_prop.bsc_dec}}</td>
+                                <td><em>Schema: </em>{{prop.sdo_desc}}<br><em>Bioschemas: </em>{{prop.bsc_dec}}</td>
                                 <td>{{prop.cardinality}}</td>
                                 <td>
                                     {% for cv in prop.controlled_vocab%}
@@ -79,7 +79,7 @@
                                     <a href="{{ontology.url}}">{{ontology.name}}</a>
                                     {%endfor%}
                                     {% for term in cv[2]%}
-                                    <a href="#">{{term}}</a>
+                                    <a href="#">{{term.name}}</a>
                                     {%endfor%}
                                     {%endfor%}
                                 </td>
