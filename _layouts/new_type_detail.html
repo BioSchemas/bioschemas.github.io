@@ -63,7 +63,7 @@
                                       {% endif %}
                                     {% endfor %}
                                 </td>
-                                <td>{{new_prop.sdo_desc}}<br>{{new_prop.bsc_dec}}</td>
+                                <td><em><u>Schema</u>: </em>{{new_prop.sdo_desc}}<br><em><u>Bioschemas</u>: </em>{{new_prop.bsc_dec}}</td>
                             </tr>
                         {% endfor%}
                         <tr>
@@ -80,7 +80,7 @@
                                     <a href="http://schema.org/{{temp_exp_type}}">{{temp_exp_type}}</a><br>
                                     {% endfor %}
                                 </td>
-                                <td>{{prop.sdo_desc}}<br>{{prop.bsc_dec}}</td>
+                                <td><em><u>Schema</u>: </em>{{prop.sdo_desc}}<br><em><u>Bioschemas</u>: </em>{{prop.bsc_dec}}</td>
                             </tr>
                             {% endfor %}
                             {% if forloop.last == false %}
