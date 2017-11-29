@@ -1,8 +1,8 @@
 ## Course specification v. 0.1 
 
-**Type** 
+**Profile** 
 
-Thing > CreativeWork > Course > Course
+Thing > CreativeWork > Course
 
 **** 
 

@@ -1,4 +1,4 @@
-## LabProtocol specification v. 0.0.1 
+## LabProtocol specification v. 0.1 
 
 **Type** 
 

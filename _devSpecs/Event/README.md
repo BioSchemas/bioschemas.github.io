@@ -1,4 +1,4 @@
-## Event specification v. 0.3 
+## Event specification v. 0.1 
 
 **Profile** 
 
