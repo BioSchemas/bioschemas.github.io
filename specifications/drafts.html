@@ -56,7 +56,7 @@ title: Draft BioSchemas Specifications
                 </td>
                 <td class="spec_links">
                     {% if spec.use_cases_url=='err_404'%}
-                    <a target="_blank">
+                    <a>
                         <img src="/images/use_case_spec.png" alt="View BioSchemas {{ spec.name }} Use Cases"  style="filter: grayscale(100%);">
                     </a>
                     {%else%}
@@ -71,10 +71,10 @@ title: Draft BioSchemas Specifications
                     </a>
                 </td>
                 <td class="spec_links">
-                    <a ref="{{spec.gh_examples}}">
+                    <a href="{{spec.gh_examples}}">
                         <img src="/images/spec_examples.png" alt="View BioSchemas {{ spec.name }} Examples">
                     </a>
-                </td>
+                </td>              
             </tr>
             {% endfor %}
             </tbody>
