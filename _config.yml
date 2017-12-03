@@ -31,6 +31,9 @@ collections:
   devSpecs:
     output: true
     permalink: /:collection/:path/
+  types:
+    output: true
+    permalink: /:collection/:path/    
   devTypes:
     output: true
     permalink: /:collection/:path/
