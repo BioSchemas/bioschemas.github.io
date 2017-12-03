@@ -4,17 +4,17 @@ description: "A Record acts itself as a dataset although it refers to what could
   a record.\n\nBioschemas usage\n\nIn Life Sciences, records will represent a BioChemEntity.
   A link to the represented physical entity should be done via \u201Crepresents\u201D
   property. "
-edit_url: https://github.com/BioSchemas/specifications/tree/master/Record/specification.html
+edit_url: https://github.com/BioSchemas/specifications/tree/master/DataRecord/specification.html
 g_mapping_file: Record Mapping
-gh_examples: https://github.com/BioSchemas/specifications/tree/master/Record/examples
-gh_folder: https://github.com/BioSchemas/specifications/tree/master/Record
-gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Record
+gh_examples: https://github.com/BioSchemas/specifications/tree/master/DataRecord/examples
+gh_folder: https://github.com/BioSchemas/specifications/tree/master/DataRecord
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20DataRecord
 hierarchy:
 - Dataset
 - CreativeWork
 - Thing
 layout: new_spec_detail
-name: Record
+name: DataRecord
 parent_type: Dataset
 properties:
 - bsc_dec: Bioschemas usage.   Although not required for Records, additionalType can
@@ -24,8 +24,8 @@ properties:
   controlled_vocab:
     ontologies: []
     terms:
-    - 'Yes'
-    - ' as it better suits to the concept described by this entity'
+    - name: 'Yes'
+    - name: as it better suits to the concept described by this entity
   expected_type:
   - URL
   marginality: Recommended
@@ -151,7 +151,7 @@ properties:
     - name: http
       url: //www.ebi.ac.uk/ols/ontologies/eco
     terms:
-    - ECO
+    - name: ECO
   expected_type:
   - Thing
   - CreativeWork
@@ -159,7 +159,7 @@ properties:
   - URL
   marginality: Optional
   name: isBasedon
-  parent: Record
+  parent: DataRecord
   sdo_desc: 'A resource that was used in the creation of this resource. This term
     can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
     Supersedes isBasedOnUrl.  Inverse property: isBasisFor.'
@@ -207,13 +207,13 @@ properties:
   controlled_vocab:
     ontologies: []
     terms:
-    - 'Yes'
-    - ' as better suits to describe this additional property'
+    - name: 'Yes'
+    - name: as better suits to describe this additional property
   expected_type:
   - PropertyValue
   marginality: Optional
   name: additionalProperty
-  parent: Record
+  parent: DataRecord
   sdo_desc: 'A property-value pair representing an additional characteristics of the
     entitity, e.g. a product feature or another characteristic for which there is
     no matching property in schema.org.  Note: Publishers should be aware that applications
@@ -231,7 +231,7 @@ properties:
   - URL
   marginality: Optional
   name: seeAlso
-  parent: Record
+  parent: DataRecord
   sdo_desc: A pointer to any somehow related Thing. To be used whenever you are not
     so sure about the nature of the relation. Otherwise, use additionalProperty that
     will allow you to specify that nature.
@@ -242,7 +242,7 @@ properties:
     - name: http
       url: //www.ebi.ac.uk/ols/ontologies/eco
     terms:
-    - ECO
+    - name: ECO
   expected_type:
   - Thing
   - CreativeWork
@@ -250,7 +250,7 @@ properties:
   - URL
   marginality: Optional
   name: isBasisFor
-  parent: Record
+  parent: DataRecord
   sdo_desc: 'Proposal: Add this property to CreativeWork.  A resource for which this
     resource is basis for. Inverse property: isBasedOn.'
 spec_mapping_url: https://docs.google.com/spreadsheets/d/1uRs-q7JAdfAxN8lkhvS12ElDTtzTrnnOSMqm3VYaB8o/edit?usp=drivesdk

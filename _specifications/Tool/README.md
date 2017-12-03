@@ -1,16 +1,16 @@
 ## Tool specification v. 0.1 
 
-**Profile**
+**Profile** 
 
 Thing > CreativeWork > SoftwareApplication
 
-**Bioschemas specification for describing SoftwareApplication in the life-science.**
+**Bioschemas specification for describing SoftwareApplication in the life-science.** 
 
-# Description
+# Description 
 [One paragraph description]
 [References to supporting information like “use cases”, “bioschemas mapping” and “schema.org posted issues”]
-
-# Links
+ 
+# Links 
 - [Specification](http://bioschemas.org/bsc_specs/Tool/specification/)
 - [Specification source](specification.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1D0aQl-Ocp8Fi7a-drKV1Faed6tYUgGwzEM8xypa8S2Y/edit?usp=drivesdk)

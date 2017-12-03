@@ -1,18 +1,18 @@
-## DataRecord specification v. 0.1
+## DataRecord specification v. 0.1 
 
-**Type**
+**Type** 
 
 Thing > CreativeWork > Dataset > DataRecord
 
-**Bioschemas specification describing a data record in a dataset.**
+**Bioschemas specification describing a record in a dataset.** 
 
-# Description
-A DataRecord acts itself as a dataset although it refers to what could be seen as the minimum compact, complete and auto-descriptive unit in a dataset, i.e., a data record.
+# Description 
+A Record acts itself as a dataset although it refers to what could be seen as the minimum compact, complete and auto-descriptive unit in a dataset, i.e., a record.
 
 Bioschemas usage
 
 In Life Sciences, records will represent a BioChemEntity. A link to the represented physical entity should be done via “represents” property.  
-# Links
+# Links 
 - [Specification](http://bioschemas.org/bsc_specs/DataRecord/specification/)
 - [Specification source](specification.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1uRs-q7JAdfAxN8lkhvS12ElDTtzTrnnOSMqm3VYaB8o/edit?usp=drivesdk)

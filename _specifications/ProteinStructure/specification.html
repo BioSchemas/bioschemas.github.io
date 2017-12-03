@@ -1,29 +1,29 @@
 ---
-description: This Protein profile specification presents the BioChemEntity usage when
-  describing a Protein.
-edit_url: https://github.com/BioSchemas/specifications/tree/master/Protein/specification.html
-g_mapping_file: Protein Mapping
-gh_examples: https://github.com/BioSchemas/specifications/tree/master/Protein/examples
-gh_folder: https://github.com/BioSchemas/specifications/tree/master/Protein
-gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Protein
+description: This ProteinStructure profile specification presents the BioChemEntity
+  usage when describing a Protein.
+edit_url: https://github.com/BioSchemas/specifications/tree/master/ProteinStructure/specification.html
+g_mapping_file: Protein Structure Mapping
+gh_examples: https://github.com/BioSchemas/specifications/tree/master/ProteinStructure/examples
+gh_folder: https://github.com/BioSchemas/specifications/tree/master/ProteinStructure
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20ProteinStructure
 hierarchy:
 - Thing
 layout: new_spec_detail
-name: Protein
+name: ProteinStructure
 parent_type: Thing
 properties:
-- bsc_dec: Bioschemas usage.   Any ontology term describing the protein concept.
-  cardinality: MANY
+- bsc_dec: Protein profile usage.   Currently, a Protein additional type should be
+    set to http://semanticscience.org/resource/SIO_011119. If you want to add other
+    terms, please contact Bioschemas.
+  cardinality: ONE
   controlled_vocab:
-    ontologies: []
-    terms:
-    - SIO
-    - ' PR'
-    - ' SO'
-    - ' others'
+    ontologies:
+    - name: SIO
+      url: 011119
+    terms: []
   expected_type:
   - URL
-  marginality: Recommended
+  marginality: Minimum
   name: additionalType
   parent: Thing
   sdo_desc: An additional type for the item, typically used for adding more specific
@@ -43,7 +43,7 @@ properties:
   name: alternateName
   parent: Thing
   sdo_desc: An alias for the item.
-- bsc_dec: Bioschemas usage.   Protein function
+- bsc_dec: ''
   cardinality: ONE
   controlled_vocab:
     ontologies: []
@@ -54,7 +54,7 @@ properties:
   name: description
   parent: Thing
   sdo_desc: A description of the item.
-- bsc_dec: ''
+- bsc_dec: 'Recommendation: identifiers.org whenever possible'
   cardinality: ONE
   controlled_vocab:
     ontologies: []
@@ -151,7 +151,7 @@ properties:
   - PropertyValue
   marginality: Optional
   name: additionalProperty
-  parent: Protein
+  parent: ProteinStructure
   sdo_desc: 'A property-value pair representing an additional characteristics of the
     entitity, e.g. a product feature or another characteristic for which there is
     no matching property in schema.org.  Note: Publishers should be aware that applications
@@ -176,11 +176,10 @@ properties:
     - ' OMIM'
     - ' any other well-known ontology describing diseases'
   expected_type:
-  - MedicalContidion
-  - URL
+  - PropertyValue
   marginality: Recommended
-  name: bioschemas:associatedDisease
-  parent: Protein
+  name: additionalProperty.disease_ association
+  parent: ProteinStructure
   sdo_desc: 'A property-value pair representing an additional characteristics of the
     entitity, e.g. a product feature or another characteristic for which there is
     no matching property in schema.org.  Note: Publishers should be aware that applications
@@ -201,12 +200,10 @@ properties:
       url: '010035'
     terms: []
   expected_type:
-  - BioChemEntity
-  - bioschemas:Gene
-  - URL
-  marginality: Recommended
-  name: bioschemas:transcribedFrom
-  parent: Protein
+  - PropertyValue
+  marginality: Minimum
+  name: additionalProperty.transcribed_from
+  parent: ProteinStructure
   sdo_desc: 'A property-value pair representing an additional characteristics of the
     entitity, e.g. a product feature or another characteristic for which there is
     no matching property in schema.org.  Note: Publishers should be aware that applications
@@ -218,15 +215,28 @@ properties:
   cardinality: MANY
   controlled_vocab:
     ontologies: []
-    terms:
-    - NCBI Taxon
-    - ' UniProt taxonomy'
+    terms: []
   expected_type:
   - BioChemEntity
   - URL
-  marginality: Recommended
+  marginality: Optional
   name: isContainedIn
-  parent: Protein
+  parent: ProteinStructure
+  sdo_desc: Indicates a BioChemEntity that this BioChemEntity is (in some sense) part
+    of.
+- bsc_dec: Protein profile usage.  * additionalType for this BioChemEntity container
+    should be set to SIO:010000 (organism)
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - Recommended url should point to a well-known ontology such as NCBI taxon or
+      UniProt Taxonomy
+  expected_type:
+  - BioChemEntity
+  marginality: Minimum
+  name: isContainedIn.organism
+  parent: ProteinStructure
   sdo_desc: Indicates a BioChemEntity that this BioChemEntity is (in some sense) part
     of.
 - bsc_dec: ''
@@ -239,7 +249,7 @@ properties:
   - URL
   marginality: Optional
   name: contains
-  parent: Protein
+  parent: ProteinStructure
   sdo_desc: 'Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
     Inverse property: isContainedIn.'
 - bsc_dec: ''
@@ -257,7 +267,7 @@ properties:
   - URL
   marginality: Optional
   name: location
-  parent: Protein
+  parent: ProteinStructure
   sdo_desc: The location of for example where the event is happening, an organization
     is located, or where an action takes place.  Bioschemas usage.  In Bioschemas
     location can be refer to a position in a chromosome or sequence or to a physical
@@ -276,7 +286,7 @@ properties:
   - URL
   marginality: Optional
   name: hasRepresentation
-  parent: Protein
+  parent: ProteinStructure
   sdo_desc: A representation for this entity other than, for instance, an image (used
     image property for that) or the main web page/record (use mainEntityOfPage for
     that, and see background notes, http://schema.org/docs/datamodel.html#mainEntityBackground,
@@ -284,11 +294,23 @@ properties:
     to register a sequence protein as it is a representation of the protein. If you
     want to better define the nature of the representation, use a PropertyValue as
     described in additionalProperty.
-spec_mapping_url: https://docs.google.com/spreadsheets/d/1WZmPPEPa6JE4iq3OSQOatUH5TeSvWj5lcRi_kDTSayU/edit?usp=drivesdk
+- bsc_dec: Profile name. For the Protein profile it MUST be "Protein"
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - Bioschemas profiles
+  expected_type:
+  - Text
+  marginality: Minimum
+  name: preferredLabel
+  parent: ProteinStructure
+  sdo_desc: Indicates the preferred label to refer to a specific (sub)type of BioChemEntity
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1rR4xxasues9xy80-x9-vhyYWnd7CXKxVSAx8-zE4KLo/edit?usp=drivesdk
 spec_type: Profile
 status: revision
-subtitle: Bioschemas specification describing a Protein (BioChemEntity profile) in
-  Life Sciences
-use_cases_url: https://docs.google.com/document/d/1MNU-r7CMAvKdGav1VT3XeyQXr2XwRA6JXDsoWoA0R1E
+subtitle: Bioschemas specification describing a ProteinStructure (BioChemEntity profile)
+  in Life Sciences
+use_cases_url: err_404
 version: '0.4'
 ---
