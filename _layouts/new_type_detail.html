@@ -28,7 +28,7 @@
 
                 <br>
 
-                Bioschemas <a href="../../../newSpecs">specifications and types list.</a>
+                Bioschemas <a href="/specifications/">specifications and types list.</a>
 
                 <h3>Description: </h3>
                 <p>{{page.description}}</p>
@@ -53,7 +53,7 @@
                         {%endif%}
                         {% for new_prop in new_props%}
                             <tr>
-                                <th><a href="#">{{new_prop.name}}</a></th>
+                                <th>{{new_prop.name}}</th>
                                 <td>
                                     {% for temp_exp_type in new_prop.expected_type %}
                                       {% if temp_exp_type == "PhysicalEntity" or temp_exp_type == "LabProtocol" or temp_exp_type == "DataRecord" or temp_exp_type == "BioChemEntity" %}
