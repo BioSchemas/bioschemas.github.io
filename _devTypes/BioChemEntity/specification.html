@@ -17,7 +17,7 @@ description: 'A BioChemEntity is any object that exists in the physical world an
   would recommend pointing to an organism a part of the minimum information, but not
   necessarily to a sample or disease.'
 edit_url: https://github.com/BioSchemas/specifications/tree/master/BioChemEntity/specification.html
-g_mapping_file: BioChemEntity Mapping
+g_mapping_file: BioChemEntity Mapping Simp
 gh_examples: https://github.com/BioSchemas/specifications/tree/master/BioChemEntity/examples
 gh_folder: https://github.com/BioSchemas/specifications/tree/master/BioChemEntity
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20BioChemEntity
@@ -42,8 +42,8 @@ properties:
   controlled_vocab:
     ontologies: []
     terms:
-    - 'Yes'
-    - ' as it better suits to the concept described by this entity'
+    - name: 'Yes'
+    - name: as it better suits to the concept described by this entity
   expected_type:
   - URL
   marginality: Minimum
@@ -166,8 +166,8 @@ properties:
   controlled_vocab:
     ontologies: []
     terms:
-    - 'Yes'
-    - ' as better suits to describe this additional property'
+    - name: 'Yes'
+    - name: as better suits to describe this additional property
   expected_type:
   - PropertyValue
   marginality: Optional
@@ -218,8 +218,8 @@ properties:
   controlled_vocab:
     ontologies: []
     terms:
-    - 'Yes'
-    - ' as it better suits to describe the location.'
+    - name: 'Yes'
+    - name: as it better suits to describe the location.
   expected_type:
   - Place
   - PostalAddress
@@ -238,8 +238,8 @@ properties:
   controlled_vocab:
     ontologies: []
     terms:
-    - 'Yes'
-    - ' as it better suits to describe the nature of the representation'
+    - name: 'Yes'
+    - name: as it better suits to describe the nature of the representation
   expected_type:
   - PropertyValue
   - Text
@@ -256,30 +256,19 @@ properties:
   controlled_vocab:
     ontologies: []
     terms:
-    - Bioschemas profiles
+    - name: Bioschemas profiles
   expected_type:
   - Text
   marginality: Minimum
   name: preferredLabel
   parent: BioChemEntity
   sdo_desc: Indicates the preferred label to refer to a specific (sub)type of BioChemEntity
-- description: Indicates a potential Action, which describes an idealized action in
-    which this thing would play an 'object' role.
-  exp_type: &id001
-  - Action
-  expected_type: *id001
-  name: potentialAction
-  parent: Thing
-  prop_name: potentialAction
-  property: http://schema.org/potentialAction
-  sdo_desc: Indicates a potential Action, which describes an idealized action in which
-    this thing would play an 'object' role.
 - description: A sub property of description. A short description of the item used
     to disambiguate from other, similar items. Information from other properties (in
     particular, name) may be necessary for the description to be useful for disambiguation.
-  exp_type: &id002
+  exp_type: &id001
   - Text
-  expected_type: *id002
+  expected_type: *id001
   name: disambiguatingDescription
   parent: Thing
   prop_name: disambiguatingDescription
@@ -287,7 +276,18 @@ properties:
   sdo_desc: A sub property of description. A short description of the item used to
     disambiguate from other, similar items. Information from other properties (in
     particular, name) may be necessary for the description to be useful for disambiguation.
-spec_mapping_url: https://docs.google.com/spreadsheets/d/1e_8LUQ4GYxar0-gotOXsbAUVUQkvF6GNuBdr54hbcdc/edit?usp=drivesdk
+- description: Indicates a potential Action, which describes an idealized action in
+    which this thing would play an 'object' role.
+  exp_type: &id002
+  - Action
+  expected_type: *id002
+  name: potentialAction
+  parent: Thing
+  prop_name: potentialAction
+  property: http://schema.org/potentialAction
+  sdo_desc: Indicates a potential Action, which describes an idealized action in which
+    this thing would play an 'object' role.
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1JUIPcHl4nx3XmYTmgFs8QWVg2y0omR5baH7PzPISBx4/edit?usp=drivesdk
 spec_type: Type
 status: revision
 subtitle: Bioschemas specification describing a physical entity.

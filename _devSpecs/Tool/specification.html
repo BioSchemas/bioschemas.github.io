@@ -1,9 +1,7 @@
 ---
-description: "[One paragraph description]\n[References to supporting information like
-  \u201Cuse cases\u201D, \u201Cbioschemas mapping\u201D and \u201Cschema.org posted
-  issues\u201D]\n"
+description: ''
 edit_url: https://github.com/BioSchemas/specifications/tree/master/Tool/specification.html
-g_mapping_file: Tool Mapping
+g_mapping_file: Tool Mapping Simp
 gh_examples: https://github.com/BioSchemas/specifications/tree/master/Tool/examples
 gh_folder: https://github.com/BioSchemas/specifications/tree/master/Tool
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Tool
@@ -16,10 +14,59 @@ name: Tool
 parent_type: SoftwareApplication
 properties:
 - bsc_dec: ''
-  cardinality: MANY
+  cardinality: ONE
   controlled_vocab:
     ontologies: []
     terms: []
+  expected_type:
+  - Text
+  marginality: Minimum
+  name: description
+  parent: Thing
+  sdo_desc: A description of the item.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Minimum
+  name: name
+  parent: Thing
+  sdo_desc: The name of the item.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - name: X
+  expected_type:
+  - CreativeWork
+  - Event
+  marginality: Minimum
+  name: subjectOf
+  parent: Tool
+  sdo_desc: 'A CreativeWork or Event about this Thing.. Inverse property: about.'
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - name: x
+  expected_type:
+  - Text
+  - URL
+  marginality: Optional
+  name: applicationCategory
+  parent: SoftwareApplication
+  sdo_desc: Type of software application, e.g. 'Game, Multimedia'.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - name: x
   expected_type:
   - Text
   - URL
@@ -28,18 +75,29 @@ properties:
   parent: SoftwareApplication
   sdo_desc: Features or modules provided by this application (and possibly required
     by other applications).
-- bsc_dec: softwareHelp:url, softwareHelp:genre, softwareHelp:description/review
+- bsc_dec: Operating systems on which the app runs
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Optional
+  name: operatingSystem
+  parent: SoftwareApplication
+  sdo_desc: Operating systems supported (Windows 7, OSX 10.6, Android 1.6).
+- bsc_dec: A documentation for the tool
   cardinality: MANY
   controlled_vocab:
     ontologies: []
     terms: []
   expected_type:
   - CreativeWork
-  marginality: Minimum
+  marginality: Optional
   name: softwareHelp
   parent: SoftwareApplication
   sdo_desc: Software application help.
-- bsc_dec: contact/email, contact/url, contact/name, contact/tel, contact/type
+- bsc_dec: ''
   cardinality: MANY
   controlled_vocab:
     ontologies: []
@@ -47,7 +105,7 @@ properties:
   expected_type:
   - Text
   - URL
-  marginality: Minimum
+  marginality: Optional
   name: softwareRequirements
   parent: SoftwareApplication
   sdo_desc: 'Component dependency requirements for application. This includes runtime
@@ -60,22 +118,11 @@ properties:
     ontologies: []
     terms: []
   expected_type:
-  - DataFeed
+  - Text
   marginality: Minimum
-  name: supportingData
+  name: softwareVersion
   parent: SoftwareApplication
-  sdo_desc: Supporting data for a SoftwareApplication.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Person
-  marginality: Minimum
-  name: accountablePerson
-  parent: CreativeWork
-  sdo_desc: Specifies the Person that is legally accountable for the CreativeWork.
+  sdo_desc: Version of the software instance.
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab:
@@ -84,48 +131,129 @@ properties:
   expected_type:
   - CreativeWork
   - Text
-  marginality: Minimum
+  marginality: Recommended
   name: citation
   parent: CreativeWork
   sdo_desc: A citation or reference to another creative work, such as another publication,
     web page, scholarly article, etc.
 - bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Date
+  - DateTime
+  marginality: Optional
+  name: dateCreated
+  parent: CreativeWork
+  sdo_desc: The date on which the CreativeWork was created or the item was added to
+    a DataFeed.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Date
+  - DateTime
+  marginality: Optional
+  name: dateModified
+  parent: CreativeWork
+  sdo_desc: The date on which the CreativeWork was most recently modified or when
+    the item's entry was modified within a DataFeed.
+- bsc_dec: Used to describe tools inclued into suites/bundles/workflows.
   cardinality: MANY
   controlled_vocab:
     ontologies: []
     terms: []
   expected_type:
+  - CreativeWork
+  marginality: Optional
+  name: hasPart
+  parent: CreativeWork
+  sdo_desc: Indicates a CreativeWork that is (in some sense) a part of this CreativeWork.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - name: x
+  expected_type:
   - Text
-  marginality: Minimum
-  name: description
-  parent: Thing
-  sdo_desc: A description of the item.
+  marginality: Optional
+  name: keywords
+  parent: CreativeWork
+  sdo_desc: Keywords or tags used to describe this content. Multiple entries in a
+    keywords list are typically delimited by commas.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - name: '?'
+  expected_type:
+  - CreativeWork
+  - URL
+  marginality: Recommended
+  name: license
+  parent: CreativeWork
+  sdo_desc: A license document that applies to this content, typically indicated by
+    URL.
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab:
     ontologies: []
     terms: []
   expected_type:
-  - Text
+  - Offer
   marginality: Optional
-  name: name
-  parent: Thing
-  sdo_desc: The name of the item.
-- bsc_dec: publication, publication/doi
+  name: offers
+  parent: CreativeWork
+  sdo_desc: An offer to provide this item&#x2014;for example, an offer to sell a product,
+    rent the DVD of a movie, perform a service, or give away tickets to an event.
+- bsc_dec: ''
   cardinality: MANY
   controlled_vocab:
     ontologies: []
     terms: []
   expected_type:
-  - PublicationEvent
+  - Organization
+  - Person
   marginality: Recommended
-  name: publication
+  name: publisher
   parent: CreativeWork
-  sdo_desc: A publication event associated with the item.
-spec_mapping_url: https://docs.google.com/spreadsheets/d/1D0aQl-Ocp8Fi7a-drKV1Faed6tYUgGwzEM8xypa8S2Y/edit?usp=drivesdk
+  sdo_desc: The publisher of the creative work.
+- bsc_dec: The input format of the data. Must be one of the EDAM Data concept labels
+    or one of its synonyms.
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - name: x
+  expected_type:
+  - URL
+  marginality: Optional
+  name: potentialAction (object of a ControlAction)
+  parent: Tool
+  sdo_desc: see potentialAction above... which has type of Action
+- bsc_dec: The output format of the data. Must be one of the EDAM Data concept labels
+    or one of its synonyms.
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - name: x
+  expected_type:
+  - URL
+  marginality: Optional
+  name: potentialAction (object of a ControlAction)
+  parent: Tool
+  sdo_desc: see potentialAction above... which has type of Action
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1GBJq4xUkd3lW8l6dmVxOzfRtKmBtjQFpthZxoIv5nZI/edit?usp=drivesdk
 spec_type: Profile
 status: revision
-subtitle: Bioschemas specification for describing SoftwareApplication in the life-science.
+subtitle: Bioschemas specification for describing a SoftwareApplication in the life-science.
 use_cases_url: err_404
 version: '0.1'
 ---

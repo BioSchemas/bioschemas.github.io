@@ -15,7 +15,7 @@ A BioChemEntity is a flexible and extensible wrapper for Life Sciences entities.
 # Links 
 - [Specification](http://bioschemas.org/bsc_specs/BioChemEntity/specification/)
 - [Specification source](specification.html)
-- [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1e_8LUQ4GYxar0-gotOXsbAUVUQkvF6GNuBdr54hbcdc/edit?usp=drivesdk)
+- [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1JUIPcHl4nx3XmYTmgFs8QWVg2y0omR5baH7PzPISBx4/edit?usp=drivesdk)
 - [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/BioChemEntity/examples)
 - [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20BioChemEntity)
 > These files were generated using [map2model](https://github.com/BioSchemas/map2model) Python Module.
