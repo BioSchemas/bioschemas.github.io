@@ -76,10 +76,10 @@
                                 <td>
                                     {% for cv in prop.controlled_vocab%}
                                     {% for ontology in cv[1]%}
-                                    <a href="{{ontology.url}}">{{ontology.name}}</a>
+                                    <a href="http://{{ontology.url}}">{{ontology.name}}</a>
                                     {%endfor%}
                                     {% for term in cv[2]%}
-                                    <a href="#">{{term.name}}</a>
+                                    {{term.name}}
                                     {%endfor%}
                                     {%endfor%}
                                 </td>
