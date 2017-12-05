@@ -98,6 +98,18 @@ properties:
   parent: CreativeWork
   sdo_desc: The creator/author of this CreativeWork. This is the same as the Author
     property for CreativeWork.
+- bsc_dec: The version number for this dataset
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  - Number
+  marginality: Recommended
+  name: version
+  parent: CreativeWork
+  sdo_desc: The version of the CreativeWork embodied by a specified resource.
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab:
