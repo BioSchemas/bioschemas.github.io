@@ -2,7 +2,7 @@
 description: This Protein profile specification presents the BioChemEntity usage when
   describing a Protein.
 edit_url: https://github.com/BioSchemas/specifications/tree/master/Protein/specification.html
-g_mapping_file: Protein Mapping
+g_mapping_file: Protein Mapping Simp
 gh_examples: https://github.com/BioSchemas/specifications/tree/master/Protein/examples
 gh_folder: https://github.com/BioSchemas/specifications/tree/master/Protein
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Protein
@@ -17,10 +17,10 @@ properties:
   controlled_vocab:
     ontologies: []
     terms:
-    - SIO
-    - ' PR'
-    - ' SO'
-    - ' others'
+    - name: SIO
+    - name: PR
+    - name: SO
+    - name: others
   expected_type:
   - URL
   marginality: Recommended
@@ -43,7 +43,7 @@ properties:
   name: alternateName
   parent: Thing
   sdo_desc: An alias for the item.
-- bsc_dec: Bioschemas usage.   Protein function
+- bsc_dec: Bioschemas usage. Protein function
   cardinality: ONE
   controlled_vocab:
     ontologies: []
@@ -61,9 +61,7 @@ properties:
     terms: []
   expected_type:
   - PropertyValue
-  - ''
   - Text
-  - ''
   - URL
   marginality: Minimum
   name: identifier
@@ -80,7 +78,6 @@ properties:
     terms: []
   expected_type:
   - ImageObject
-  - ''
   - URL
   marginality: Optional
   name: image
@@ -95,7 +92,6 @@ properties:
     terms: []
   expected_type:
   - CreativeWork
-  - ''
   - URL
   marginality: Optional
   name: mainEntityOfPage
@@ -173,10 +169,10 @@ properties:
     - name: SIO
       url: 010299
     terms:
-    - ' OMIM'
-    - ' any other well-known ontology describing diseases'
+    - name: OMIM
+    - name: any other well-known ontology describing diseases
   expected_type:
-  - MedicalContidion
+  - MedicalCondition
   - URL
   marginality: Recommended
   name: bioschemas:associatedDisease
@@ -219,8 +215,8 @@ properties:
   controlled_vocab:
     ontologies: []
     terms:
-    - NCBI Taxon
-    - ' UniProt taxonomy'
+    - name: NCBI Taxon
+    - name: UniProt taxonomy
   expected_type:
   - BioChemEntity
   - URL
@@ -247,8 +243,8 @@ properties:
   controlled_vocab:
     ontologies: []
     terms:
-    - 'Yes'
-    - ' as it better suits to describe the location.'
+    - name: 'Yes'
+    - name: as it better suits to describe the location.
   expected_type:
   - Place
   - PostalAddress
@@ -268,8 +264,8 @@ properties:
   controlled_vocab:
     ontologies: []
     terms:
-    - 'Yes'
-    - ' as it better suits to describe the nature of the representation'
+    - name: 'Yes'
+    - name: as it better suits to describe the nature of the representation
   expected_type:
   - PropertyValue
   - Text
@@ -284,11 +280,11 @@ properties:
     to register a sequence protein as it is a representation of the protein. If you
     want to better define the nature of the representation, use a PropertyValue as
     described in additionalProperty.
-spec_mapping_url: https://docs.google.com/spreadsheets/d/1WZmPPEPa6JE4iq3OSQOatUH5TeSvWj5lcRi_kDTSayU/edit?usp=drivesdk
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1yBhoUrA3uy3CQlxvQUf9cpmLekvR9L_5WVWUBZweWE0/edit?usp=drivesdk
 spec_type: Profile
 status: revision
 subtitle: Bioschemas specification describing a Protein (BioChemEntity profile) in
   Life Sciences
-use_cases_url: https://docs.google.com/document/d/1MNU-r7CMAvKdGav1VT3XeyQXr2XwRA6JXDsoWoA0R1E
+use_cases_url: err_404
 version: '0.4'
 ---
