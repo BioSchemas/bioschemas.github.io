@@ -15,7 +15,7 @@ In Life Sciences, records will represent a BioChemEntity. A link to the represen
 # Links 
 - [Specification](http://bioschemas.org/bsc_specs/DataRecord/specification/)
 - [Specification source](specification.html)
-- [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1uRs-q7JAdfAxN8lkhvS12ElDTtzTrnnOSMqm3VYaB8o/edit?usp=drivesdk)
+- [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1RVMRrhdkNKVSKEubMuvX3xxZ3_ohpHggJpINAVLsMuI/edit?usp=drivesdk)
 - [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/DataRecord/examples)
 - [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20DataRecord)
 > These files were generated using [map2model](https://github.com/BioSchemas/map2model) Python Module.

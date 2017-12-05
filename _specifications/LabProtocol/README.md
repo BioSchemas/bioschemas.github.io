@@ -1,4 +1,4 @@
-## LabProtocol specification v. 0.1 
+## LabProtocol specification v. 0.2 
 
 **Profile** 
 
@@ -14,7 +14,7 @@ Experimental protocols are fundamental information structures that support the d
 # Links 
 - [Specification](http://bioschemas.org/bsc_specs/LabProtocol/specification/)
 - [Specification source](specification.html)
-- [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1julB0P6kjXK_mL2dU8EDU9zMxIMah0_dYYeGt2Spllo/edit?usp=drivesdk)
+- [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1XjDEohCvIAc_VGExctGchLy4TqTfN6LpfIw1BxvWj_o/edit?usp=drivesdk)
 - [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/LabProtocol/examples)
 - [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20LabProtocol)
 > These files were generated using [map2model](https://github.com/BioSchemas/map2model) Python Module.
