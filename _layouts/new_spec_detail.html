@@ -61,7 +61,7 @@
                         {%endif%}
                         {% for prop in  props_list %}
                             <tr>
-                                <th><a href="#">{{prop.name}}</a></th>
+                                <th><a href="http://schema.org/{{prop.name}}">{{prop.name}}</a></th>
                                 <td>
                                     {% for temp_exp_type in prop.expected_type %}
                                       {% if temp_exp_type == "PhysicalEntity" or temp_exp_type == "LabProtocol" or temp_exp_type == "DataRecord" or temp_exp_type == "BioChemEntity" %}
