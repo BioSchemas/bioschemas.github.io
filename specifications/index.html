@@ -31,7 +31,7 @@ title: BioSchemas Specifications
             {% assign type_specs = site.specifications | where: 'spec_type', 'Profile'%}
             {% for spec in type_specs %}
             <tr>
-                <th>{{ spec.name }} (v{{spec.version}})</th>
+                <th>{{ spec.name }}<br />(v{{spec.version}})</th>
                 <td>{{ spec.subtitle }}</td>
                 <td class="spec_links">
                   {% if spec.hierarchy %}
@@ -83,7 +83,7 @@ title: BioSchemas Specifications
             {% assign prof_specs = site.types | where: 'spec_type', 'Type'%}
             {% for spec in  prof_specs%}
             <tr>
-                <th>{{spec.name}} (v{{ spec.version }})</th>
+                <th>{{spec.name}}<br />(v{{ spec.version }})</th>
                 <td>{{ spec.subtitle }}</td>
                 <td class="spec_links" style="text-align: center;">
                     <a href="{{ spec.url}}">

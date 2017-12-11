@@ -34,7 +34,7 @@ title: Draft BioSchemas Specifications
             {% assign prof_specs = site.devSpecs | where: 'spec_type', 'Profile'%}
             {% for spec in prof_specs %}
             <tr>
-                <th>{{ spec.name }} (v{{spec.version}})</th>
+                <th>{{ spec.name }}<br />(v{{spec.version}})</th>
                 <td>{{ spec.subtitle }}</td>
                 <td class="spec_links">
                   {% if spec.url == "err_404" or spec.spec_doc == "err_404" %}
@@ -124,7 +124,7 @@ title: Draft BioSchemas Specifications
             {% assign type_specs = site.devTypes | where: 'spec_type', 'Type'%}
             {% for spec in  type_specs%}
             <tr>
-                <th>{{spec.name}} (v{{ spec.version }})</th>
+                <th>{{spec.name}}<br />(v{{ spec.version }})</th>
                 <td>{{ spec.subtitle }}</td>
                 <td class="spec_links">
                     <a href="{{ spec.url}}">
