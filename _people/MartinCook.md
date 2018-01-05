@@ -6,7 +6,7 @@ last-name: Cook
 collection: people
 affiliation:
 homepage:
-github_username: https://github.com/martin-nc
+github_username: martin-nc
 orcid:
 groups: [event, organisation, person, trainingmaterial, tool, community]
 ---
