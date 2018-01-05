@@ -1,14 +1,14 @@
-## Course specification v. 0.1 
+## Course specification v. 0.1-draft.1 
 
-**Profile** 
+**Profile**
 
 Thing > CreativeWork > Course
 
-**** 
+****
 
-# Description 
- 
-# Links 
+# Description
+
+# Links
 - [Specification](http://bioschemas.org/bsc_specs/Course/specification/)
 - [Specification source](specification.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1-nxYa8fEauokQYFWj6n9dkueL6HolXpqQpVQziARPfE/edit?usp=drivesdk)

@@ -1,14 +1,14 @@
-## ChemicalStructure specification v. 0.1 
+## ChemicalStructure specification v. 0.1-draft.1 
 
-**Profile** 
+**Profile**
 
 Thing
 
-**** 
+****
 
-# Description 
- 
-# Links 
+# Description
+
+# Links
 - [Specification](http://bioschemas.org/bsc_specs/ChemicalStructure/specification/)
 - [Specification source](specification.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1kgAbxi2iMUKs_tOtDfBt1CQcMYFfBVeuu56Az1ZkJmE/edit?usp=drivesdk)
