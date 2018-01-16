@@ -1,0 +1,180 @@
+---
+description: ''
+edit_url: https://github.com/BioSchemas/specifications/tree/master/Dataset/specification.html
+g_mapping_file: Dataset Mapping Simp
+gh_examples: https://github.com/BioSchemas/specifications/tree/master/Dataset/examples
+gh_folder: https://github.com/BioSchemas/specifications/tree/master/Dataset
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Dataset
+hierarchy:
+- Dataset
+- CreativeWork
+- Thing
+layout: new_spec_detail
+name: Dataset
+parent_type: Dataset
+properties:
+- bsc_dec: It is a descriptive name of the dataset
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Minimum
+  name: name
+  parent: Thing
+  sdo_desc: The name of the item.
+- bsc_dec: It is a short summary describing a dataset.
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Minimum
+  name: description
+  parent: Thing
+  sdo_desc: A description of the item.
+- bsc_dec: It is the location of a page describing the dataset.
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - URL
+  marginality: Minimum
+  name: url
+  parent: Thing
+  sdo_desc: URL of the item.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Minimum
+  name: identifier
+  parent: Thing
+  sdo_desc: The identifier property represents any kind of identifier for any kind
+    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
+    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
+    many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background
+    notes</a> for more details.
+- bsc_dec: These keywords provide a summary of the dataset.
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Minimum
+  name: keywords
+  parent: CreativeWork
+  sdo_desc: Keywords or tags used to describe this content. Multiple entries in a
+    keywords list are typically delimited by commas.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - DataCatalog
+  marginality: Recommended
+  name: includedInDataCatalog
+  parent: Dataset
+  sdo_desc: A data catalog which contains this dataset.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: creator
+  parent: CreativeWork
+  sdo_desc: The creator/author of this CreativeWork. This is the same as the Author
+    property for CreativeWork.
+- bsc_dec: The version number for this dataset
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  - Number
+  marginality: Recommended
+  name: version
+  parent: CreativeWork
+  sdo_desc: The version of the CreativeWork embodied by a specified resource.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  - PropertyValue
+  marginality: Recommended
+  name: variableMeasured
+  parent: Dataset
+  sdo_desc: What does the dataset measure? (e.g., temperature, pressure)
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: measurementTechnique
+  parent: Dataset
+  sdo_desc: A technique or technology used for measuring the corresponding variable(s)
+    (described using variablesMeasured)
+- bsc_dec: A citation for a publication that describes the dataset
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: citation
+  parent: CreativeWork
+  sdo_desc: A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
+- bsc_dec: A license under which the dataset is distributed
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - CreativeWork
+  - URL
+  marginality: Recommended
+  name: license
+  parent: CreativeWork
+  sdo_desc: A license document that applies to this content, typically indicated by
+    URL.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - DataDownload
+  marginality: Recommended
+  name: distribution
+  parent: Dataset
+  sdo_desc: A downloadable form of this dataset, at a specific location, in a specific
+    format.
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1adu5hWoTr1H-opMtgkFKcyjR4WjOFmvtDrU-u_v2Ygo/edit?usp=drivesdk
+spec_type: Profile
+status: revision
+subtitle: Bioschemas specification for describing Dataset in the life-science.
+use_cases_url: err_404
+version: '0.2'
+---

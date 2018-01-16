@@ -1,0 +1,1213 @@
+---
+description: 'An experimental protocol is a sequence of tasks and operations executed
+  to perform experimental research in biological and biomedical areas.
+
+  Experimental protocols are fundamental information structures that support the description
+  of the processes by means of which results are generated in experimental research
+  [1]. Experimental protocols describe how the data were produced, the steps undertaken
+  and conditions under which these steps were carried out.
+
+  [1]  Giraldo, O., Garcia, A., Corcho, O.: SMART Protocols: SeMAntic RepresenTation
+  for Experimental Protocols, Riva del Garda, Trentino, Italy (2014). 4th Workshop
+  on Linked Science 2014- Making Sense Out of Data (LISC2014)
+
+'
+edit_url: https://github.com/BioSchemas/specifications/tree/master/LabProtocol/specification.html
+g_mapping_file: LabProtocol Mapping
+gh_examples: https://github.com/BioSchemas/specifications/tree/master/LabProtocol/examples
+gh_folder: https://github.com/BioSchemas/specifications/tree/master/LabProtocol
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20LabProtocol
+hierarchy:
+- CreativeWork
+- Thing
+layout: new_type_detail
+name: LabProtocol
+parent_type: CreativeWork
+properties:
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies:
+    - name: SP
+      url: ExperimentalProtocol
+    terms: []
+  expected_type:
+  - URL
+  marginality: Optional
+  name: additionalType
+  parent: Thing
+  sdo_desc: An additional type for the item, typically used for adding more specific
+    types from external vocabularies in microdata syntax. This is a relationship between
+    something and a class that the thing is in. In RDFa syntax, it is better to use
+    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
+    tools may have only weaker understanding of extra types, in particular those defined
+    externally.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: description
+  parent: Thing
+  sdo_desc: A description of the item.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Recommended
+  name: identifier
+  parent: Thing
+  sdo_desc: The identifier property represents any kind of identifier for any kind
+    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
+    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
+    many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background
+    notes</a> for more details.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - CreativeWork
+  - URL
+  marginality: Recommended
+  name: citation
+  parent: CreativeWork
+  sdo_desc: A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - CreativeWork
+  - URL
+  marginality: Recommended
+  name: license
+  parent: CreativeWork
+  sdo_desc: A license document that applies to this content, typically indicated by
+    URL.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - CreativeWork
+  - ''
+  - URL
+  marginality: Optional
+  name: isBasedOn
+  parent: CreativeWork
+  sdo_desc: A resource that was used in the creation of this resource. This term can
+    be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - CreativeWork
+  marginality: Optional
+  name: isPartOf
+  parent: CreativeWork
+  sdo_desc: Indicates a CreativeWork that this CreativeWork is (in some sense) part
+    of.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - CreativeWork
+  marginality: Recommended
+  name: hasPart
+  parent: CreativeWork
+  sdo_desc: Indicates a CreativeWork that is (in some sense) a part of this CreativeWork.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Minimum
+  name: keywords
+  parent: CreativeWork
+  sdo_desc: Keywords or tags used to describe this content. Multiple entries in a
+    keywords list are typically delimited by commas.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - PhysicalEntity
+  - Text
+  - URL
+  marginality: Minimum
+  name: reagent
+  parent: LabProtocol
+  sdo_desc: Reagent used in the protocol. It can be a record in a Dataset describing
+    the reagent or a PhysicalEntity corresponding to the reagent or a URL pointing
+    to the type of reagent used. ChEBI and PubChem entities can be used whenever available.
+    Commercial names are also acceptable (URL if possible)
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Minimum
+  name: purpose
+  parent: LabProtocol
+  sdo_desc: A goal towards an action is taken. Can be concrete or abstract.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Thing
+  - Text
+  - URL
+  marginality: Minimum
+  name: instrument
+  parent: LabProtocol
+  sdo_desc: The object that helped the agent perform the action. e.g. John wrote a
+    book with a pen.  For LabProtocols it would be a laboratory equipment use by a
+    person to follow one or more steps described in this LabProtocol.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - PhysicalEntity
+  - Text
+  - URL
+  marginality: Minimum
+  name: sample
+  parent: LabProtocol
+  sdo_desc: Sample used in the protocol. It could be a record in a Dataset describing
+    the sample or a physical object corresponding to the sample or a URL pointing
+    to the type of sample used.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - SoftwareApplication
+  marginality: Recommended
+  name: software
+  parent: LabProtocol
+  sdo_desc: An application that can complete the request.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Duration
+  marginality: Recommended
+  name: duration
+  parent: LabProtocol
+  sdo_desc: The time it takes to actually carry on the protocol, in ISO 8601 duration
+    format.
+- description: The purpose of a work in the context of education; for example, 'assignment',
+    'group work'.
+  exp_type: &id001
+  - Text
+  expected_type: *id001
+  name: educationalUse
+  parent: CreativeWork
+  prop_name: educationalUse
+  property: http://schema.org/educationalUse
+  sdo_desc: The purpose of a work in the context of education; for example, 'assignment',
+    'group work'.
+- description: Indicates whether this content is family friendly.
+  exp_type: &id002
+  - Boolean
+  expected_type: *id002
+  name: isFamilyFriendly
+  parent: CreativeWork
+  prop_name: isFamilyFriendly
+  property: http://schema.org/isFamilyFriendly
+  sdo_desc: Indicates whether this content is family friendly.
+- description: The number of interactions for the CreativeWork using the WebSite or
+    SoftwareApplication. The most specific child type of InteractionCounter should
+    be used.
+  exp_type: &id003
+  - InteractionCounter
+  expected_type: *id003
+  name: interactionStatistic
+  parent: CreativeWork
+  prop_name: interactionStatistic
+  property: http://schema.org/interactionStatistic
+  sdo_desc: The number of interactions for the CreativeWork using the WebSite or SoftwareApplication.
+    The most specific child type of InteractionCounter should be used.
+- description: A flag to signal that the item, event, or place is accessible for free.
+  exp_type: &id004
+  - Boolean
+  expected_type: *id004
+  name: isAccessibleForFree
+  parent: CreativeWork
+  prop_name: isAccessibleForFree
+  property: http://schema.org/isAccessibleForFree
+  sdo_desc: A flag to signal that the item, event, or place is accessible for free.
+- description: The author of this content or rating. Please note that author is special
+    in that HTML 5 provides a special mechanism for indicating authorship via the
+    rel tag. That is equivalent to this and may be used interchangeably.
+  exp_type: &id005
+  - Organization
+  - Person
+  expected_type: *id005
+  name: author
+  parent: CreativeWork
+  prop_name: author
+  property: http://schema.org/author
+  sdo_desc: The author of this content or rating. Please note that author is special
+    in that HTML 5 provides a special mechanism for indicating authorship via the
+    rel tag. That is equivalent to this and may be used interchangeably.
+- description: The location depicted or described in the content. For example, the
+    location in a photograph or painting.
+  exp_type: &id006
+  - Place
+  expected_type: *id006
+  name: contentLocation
+  parent: CreativeWork
+  prop_name: contentLocation
+  property: http://schema.org/contentLocation
+  sdo_desc: The location depicted or described in the content. For example, the location
+    in a photograph or painting.
+- description: Indicates (by URL or string) a particular version of a schema used
+    in some CreativeWork. For example, a document could declare a schemaVersion using
+    an URL such as http://schema.org/version/2.0/ if precise indication of schema
+    version was required by some application.
+  exp_type: &id007
+  - Text
+  - URL
+  expected_type: *id007
+  name: schemaVersion
+  parent: CreativeWork
+  prop_name: schemaVersion
+  property: http://schema.org/schemaVersion
+  sdo_desc: Indicates (by URL or string) a particular version of a schema used in
+    some CreativeWork. For example, a document could declare a schemaVersion using
+    an URL such as http://schema.org/version/2.0/ if precise indication of schema
+    version was required by some application.
+- description: The version of the CreativeWork embodied by a specified resource.
+  exp_type: &id008
+  - Number
+  - Text
+  expected_type: *id008
+  name: version
+  parent: CreativeWork
+  prop_name: version
+  property: http://schema.org/version
+  sdo_desc: The version of the CreativeWork embodied by a specified resource.
+- description: A thumbnail image relevant to the Thing.
+  exp_type: &id009
+  - URL
+  expected_type: *id009
+  name: thumbnailUrl
+  parent: CreativeWork
+  prop_name: thumbnailUrl
+  property: http://schema.org/thumbnailUrl
+  sdo_desc: A thumbnail image relevant to the Thing.
+- description: The overall rating, based on a collection of reviews or ratings, of
+    the item.
+  exp_type: &id010
+  - AggregateRating
+  expected_type: *id010
+  name: aggregateRating
+  parent: CreativeWork
+  prop_name: aggregateRating
+  property: http://schema.org/aggregateRating
+  sdo_desc: The overall rating, based on a collection of reviews or ratings, of the
+    item.
+- description: A creative work that this work is an example/instance/realization/derivation
+    of.
+  exp_type: &id011
+  - CreativeWork
+  expected_type: *id011
+  name: exampleOfWork
+  parent: CreativeWork
+  prop_name: exampleOfWork
+  property: http://schema.org/exampleOfWork
+  sdo_desc: A creative work that this work is an example/instance/realization/derivation
+    of.
+- description: The year during which the claimed copyright for the CreativeWork was
+    first asserted.
+  exp_type: &id012
+  - Number
+  expected_type: *id012
+  name: copyrightYear
+  parent: CreativeWork
+  prop_name: copyrightYear
+  property: http://schema.org/copyrightYear
+  sdo_desc: The year during which the claimed copyright for the CreativeWork was first
+    asserted.
+- description: Indicates that the resource is compatible with the referenced accessibility
+    API (<a href="http://www.w3.org/wiki/WebSchemas/Accessibility">WebSchemas wiki
+    lists possible values</a>).
+  exp_type: &id013
+  - Text
+  expected_type: *id013
+  name: accessibilityAPI
+  parent: CreativeWork
+  prop_name: accessibilityAPI
+  property: http://schema.org/accessibilityAPI
+  sdo_desc: Indicates that the resource is compatible with the referenced accessibility
+    API (<a href="http://www.w3.org/wiki/WebSchemas/Accessibility">WebSchemas wiki
+    lists possible values</a>).
+- description: The language of the content or performance or used in an action. Please
+    use one of the language codes from the <a href="http://tools.ietf.org/html/bcp47">IETF
+    BCP 47 standard</a>. See also <a class="localLink" href="http://schema.org/availableLanguage">availableLanguage</a>.
+  exp_type: &id014
+  - Text
+  - Language
+  expected_type: *id014
+  name: inLanguage
+  parent: CreativeWork
+  prop_name: inLanguage
+  property: http://schema.org/inLanguage
+  sdo_desc: The language of the content or performance or used in an action. Please
+    use one of the language codes from the <a href="http://tools.ietf.org/html/bcp47">IETF
+    BCP 47 standard</a>. See also <a class="localLink" href="http://schema.org/availableLanguage">availableLanguage</a>.
+- description: An embedded audio object.
+  exp_type: &id015
+  - AudioObject
+  expected_type: *id015
+  name: audio
+  parent: CreativeWork
+  prop_name: audio
+  property: http://schema.org/audio
+  sdo_desc: An embedded audio object.
+- description: A secondary contributor to the CreativeWork or Event.
+  exp_type: &id016
+  - Person
+  - Organization
+  expected_type: *id016
+  name: contributor
+  parent: CreativeWork
+  prop_name: contributor
+  property: http://schema.org/contributor
+  sdo_desc: A secondary contributor to the CreativeWork or Event.
+- description: Date of first broadcast/publication.
+  exp_type: &id017
+  - Date
+  expected_type: *id017
+  name: datePublished
+  parent: CreativeWork
+  prop_name: datePublished
+  property: http://schema.org/datePublished
+  sdo_desc: Date of first broadcast/publication.
+- description: A link to the page containing the comments of the CreativeWork.
+  exp_type: &id018
+  - URL
+  expected_type: *id018
+  name: discussionUrl
+  parent: CreativeWork
+  prop_name: discussionUrl
+  property: http://schema.org/discussionUrl
+  sdo_desc: A link to the page containing the comments of the CreativeWork.
+- description: The place and time the release was issued, expressed as a PublicationEvent.
+  exp_type: &id019
+  - PublicationEvent
+  expected_type: *id019
+  name: releasedEvent
+  parent: CreativeWork
+  prop_name: releasedEvent
+  property: http://schema.org/releasedEvent
+  sdo_desc: The place and time the release was issued, expressed as a PublicationEvent.
+- description: Specifies the Person that is legally accountable for the CreativeWork.
+  exp_type: &id020
+  - Person
+  expected_type: *id020
+  name: accountablePerson
+  parent: CreativeWork
+  prop_name: accountablePerson
+  property: http://schema.org/accountablePerson
+  sdo_desc: Specifies the Person that is legally accountable for the CreativeWork.
+- description: Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.
+  exp_type: &id021
+  - Text
+  expected_type: *id021
+  name: contentRating
+  parent: CreativeWork
+  prop_name: contentRating
+  property: http://schema.org/contentRating
+  sdo_desc: Official rating of a piece of content&#x2014;for example,'MPAA PG-13'.
+- description: An alignment to an established educational framework.
+  exp_type: &id022
+  - AlignmentObject
+  expected_type: *id022
+  name: educationalAlignment
+  parent: CreativeWork
+  prop_name: educationalAlignment
+  property: http://schema.org/educationalAlignment
+  sdo_desc: An alignment to an established educational framework.
+- description: "The spatialCoverage of a CreativeWork indicates the place(s) which
+    are the focus of the content. It is a subproperty of\n      contentLocation intended
+    primarily for more technical and detailed materials. For example with a Dataset,
+    it indicates\n      areas that the dataset describes: a dataset of New York weather
+    would have spatialCoverage which was the place: the state of New York."
+  exp_type: &id023
+  - Place
+  expected_type: *id023
+  name: spatialCoverage
+  parent: CreativeWork
+  prop_name: spatialCoverage
+  property: http://schema.org/spatialCoverage
+  sdo_desc: "The spatialCoverage of a CreativeWork indicates the place(s) which are
+    the focus of the content. It is a subproperty of\n      contentLocation intended
+    primarily for more technical and detailed materials. For example with a Dataset,
+    it indicates\n      areas that the dataset describes: a dataset of New York weather
+    would have spatialCoverage which was the place: the state of New York."
+- description: A material that something is made from, e.g. leather, wool, cotton,
+    paper.
+  exp_type: &id024
+  - URL
+  - Product
+  - Text
+  expected_type: *id024
+  name: material
+  parent: CreativeWork
+  prop_name: material
+  property: http://schema.org/material
+  sdo_desc: A material that something is made from, e.g. leather, wool, cotton, paper.
+- description: The subject matter of the content.
+  exp_type: &id025
+  - Thing
+  expected_type: *id025
+  name: about
+  parent: CreativeWork
+  prop_name: about
+  property: http://schema.org/about
+  sdo_desc: The subject matter of the content.
+- description: A media object that encodes this CreativeWork. This property is a synonym
+    for encoding.
+  exp_type: &id026
+  - MediaObject
+  expected_type: *id026
+  name: associatedMedia
+  parent: CreativeWork
+  prop_name: associatedMedia
+  property: http://schema.org/associatedMedia
+  sdo_desc: A media object that encodes this CreativeWork. This property is a synonym
+    for encoding.
+- description: A person or organization that supports (sponsors) something through
+    some kind of financial contribution.
+  exp_type: &id027
+  - Organization
+  - Person
+  expected_type: *id027
+  name: funder
+  parent: CreativeWork
+  prop_name: funder
+  property: http://schema.org/funder
+  sdo_desc: A person or organization that supports (sponsors) something through some
+    kind of financial contribution.
+- description: Comments, typically from users.
+  exp_type: &id028
+  - Comment
+  expected_type: *id028
+  name: comment
+  parent: CreativeWork
+  prop_name: comment
+  property: http://schema.org/comment
+  sdo_desc: Comments, typically from users.
+- description: The creator/author of this CreativeWork. This is the same as the Author
+    property for CreativeWork.
+  exp_type: &id029
+  - Person
+  - Organization
+  expected_type: *id029
+  name: creator
+  parent: CreativeWork
+  prop_name: creator
+  property: http://schema.org/creator
+  sdo_desc: The creator/author of this CreativeWork. This is the same as the Author
+    property for CreativeWork.
+- description: Indicates the primary entity described in some page or other CreativeWork.
+  exp_type: &id030
+  - Thing
+  expected_type: *id030
+  name: mainEntity
+  parent: CreativeWork
+  prop_name: mainEntity
+  property: http://schema.org/mainEntity
+  sdo_desc: Indicates the primary entity described in some page or other CreativeWork.
+- description: An intended audience, i.e. a group for whom something was created.
+  exp_type: &id031
+  - Audience
+  expected_type: *id031
+  name: audience
+  parent: CreativeWork
+  prop_name: audience
+  property: http://schema.org/audience
+  sdo_desc: An intended audience, i.e. a group for whom something was created.
+- description: Date the content expires and is no longer useful or available. For
+    example a <a class="localLink" href="http://schema.org/VideoObject">VideoObject</a>
+    or <a class="localLink" href="http://schema.org/NewsArticle">NewsArticle</a> whose
+    availability or relevance is time-limited, or a <a class="localLink" href="http://schema.org/ClaimReview">ClaimReview</a>
+    fact check whose publisher wants to indicate that it may no longer be relevant
+    (or helpful to highlight) after some date.
+  exp_type: &id032
+  - Date
+  expected_type: *id032
+  name: expires
+  parent: CreativeWork
+  prop_name: expires
+  property: http://schema.org/expires
+  sdo_desc: Date the content expires and is no longer useful or available. For example
+    a <a class="localLink" href="http://schema.org/VideoObject">VideoObject</a> or
+    <a class="localLink" href="http://schema.org/NewsArticle">NewsArticle</a> whose
+    availability or relevance is time-limited, or a <a class="localLink" href="http://schema.org/ClaimReview">ClaimReview</a>
+    fact check whose publisher wants to indicate that it may no longer be relevant
+    (or helpful to highlight) after some date.
+- description: A secondary title of the CreativeWork.
+  exp_type: &id033
+  - Text
+  expected_type: *id033
+  name: alternativeHeadline
+  parent: CreativeWork
+  prop_name: alternativeHeadline
+  property: http://schema.org/alternativeHeadline
+  sdo_desc: A secondary title of the CreativeWork.
+- description: A publication event associated with the item.
+  exp_type: &id034
+  - PublicationEvent
+  expected_type: *id034
+  name: publication
+  parent: CreativeWork
+  prop_name: publication
+  property: http://schema.org/publication
+  sdo_desc: A publication event associated with the item.
+- description: Review of the item.
+  exp_type: &id035
+  - Review
+  expected_type: *id035
+  name: reviews
+  parent: CreativeWork
+  prop_name: reviews
+  property: http://schema.org/reviews
+  sdo_desc: Review of the item.
+- description: 'A list of single or combined accessModes that are sufficient to understand
+    all the intellectual content of a resource. Expected values include:  auditory,
+    tactile, textual, visual.'
+  exp_type: &id036
+  - Text
+  expected_type: *id036
+  name: accessModeSufficient
+  parent: CreativeWork
+  prop_name: accessModeSufficient
+  property: http://schema.org/accessModeSufficient
+  sdo_desc: 'A list of single or combined accessModes that are sufficient to understand
+    all the intellectual content of a resource. Expected values include:  auditory,
+    tactile, textual, visual.'
+- description: Approximate or typical time it takes to work with or through this learning
+    resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.
+  exp_type: &id037
+  - Duration
+  expected_type: *id037
+  name: timeRequired
+  parent: CreativeWork
+  prop_name: timeRequired
+  property: http://schema.org/timeRequired
+  sdo_desc: Approximate or typical time it takes to work with or through this learning
+    resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.
+- description: The number of comments this CreativeWork (e.g. Article, Question or
+    Answer) has received. This is most applicable to works published in Web sites
+    with commenting system; additional comments may exist elsewhere.
+  exp_type: &id038
+  - Integer
+  expected_type: *id038
+  name: commentCount
+  parent: CreativeWork
+  prop_name: commentCount
+  property: http://schema.org/commentCount
+  sdo_desc: The number of comments this CreativeWork (e.g. Article, Question or Answer)
+    has received. This is most applicable to works published in Web sites with commenting
+    system; additional comments may exist elsewhere.
+- description: The service provider, service operator, or service performer; the goods
+    producer. Another party (a seller) may offer those services or goods on behalf
+    of the provider. A provider may also serve as the seller.
+  exp_type: &id039
+  - Organization
+  - Person
+  expected_type: *id039
+  name: provider
+  parent: CreativeWork
+  prop_name: provider
+  property: http://schema.org/provider
+  sdo_desc: The service provider, service operator, or service performer; the goods
+    producer. Another party (a seller) may offer those services or goods on behalf
+    of the provider. A provider may also serve as the seller.
+- description: 'The human sensory perceptual system or cognitive faculty through which
+    a person may process or perceive information. Expected values include: auditory,
+    tactile, textual, visual, colorDependent, chartOnVisual, chemOnVisual, diagramOnVisual,
+    mathOnVisual, musicOnVisual, textOnVisual.'
+  exp_type: &id040
+  - Text
+  expected_type: *id040
+  name: accessMode
+  parent: CreativeWork
+  prop_name: accessMode
+  property: http://schema.org/accessMode
+  sdo_desc: 'The human sensory perceptual system or cognitive faculty through which
+    a person may process or perceive information. Expected values include: auditory,
+    tactile, textual, visual, colorDependent, chartOnVisual, chemOnVisual, diagramOnVisual,
+    mathOnVisual, musicOnVisual, textOnVisual.'
+- description: Example/instance/realization/derivation of the concept of this creative
+    work. eg. The paperback edition, first edition, or eBook.
+  exp_type: &id041
+  - CreativeWork
+  expected_type: *id041
+  name: workExample
+  parent: CreativeWork
+  prop_name: workExample
+  property: http://schema.org/workExample
+  sdo_desc: Example/instance/realization/derivation of the concept of this creative
+    work. eg. The paperback edition, first edition, or eBook.
+- description: The publisher of the creative work.
+  exp_type: &id042
+  - Person
+  - Organization
+  expected_type: *id042
+  name: publisher
+  parent: CreativeWork
+  prop_name: publisher
+  property: http://schema.org/publisher
+  sdo_desc: The publisher of the creative work.
+- description: A resource that was used in the creation of this resource. This term
+    can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+  exp_type: &id043
+  - Product
+  - URL
+  - CreativeWork
+  expected_type: *id043
+  name: isBasedOnUrl
+  parent: CreativeWork
+  prop_name: isBasedOnUrl
+  property: http://schema.org/isBasedOnUrl
+  sdo_desc: A resource that was used in the creation of this resource. This term can
+    be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+- description: A person or organization that supports a thing through a pledge, promise,
+    or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor
+    of an event.
+  exp_type: &id044
+  - Organization
+  - Person
+  expected_type: *id044
+  name: sponsor
+  parent: CreativeWork
+  prop_name: sponsor
+  property: http://schema.org/sponsor
+  sdo_desc: A person or organization that supports a thing through a pledge, promise,
+    or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor
+    of an event.
+- description: An embedded video object.
+  exp_type: &id045
+  - VideoObject
+  expected_type: *id045
+  name: video
+  parent: CreativeWork
+  prop_name: video
+  property: http://schema.org/video
+  sdo_desc: An embedded video object.
+- description: The Event where the CreativeWork was recorded. The CreativeWork may
+    capture all or part of the event.
+  exp_type: &id046
+  - Event
+  expected_type: *id046
+  name: recordedAt
+  parent: CreativeWork
+  prop_name: recordedAt
+  property: http://schema.org/recordedAt
+  sdo_desc: The Event where the CreativeWork was recorded. The CreativeWork may capture
+    all or part of the event.
+- description: The date on which the CreativeWork was created or the item was added
+    to a DataFeed.
+  exp_type: &id047
+  - Date
+  - DateTime
+  expected_type: *id047
+  name: dateCreated
+  parent: CreativeWork
+  prop_name: dateCreated
+  property: http://schema.org/dateCreated
+  sdo_desc: The date on which the CreativeWork was created or the item was added to
+    a DataFeed.
+- description: A review of the item.
+  exp_type: &id048
+  - Review
+  expected_type: *id048
+  name: review
+  parent: CreativeWork
+  prop_name: review
+  property: http://schema.org/review
+  sdo_desc: A review of the item.
+- description: A characteristic of the described resource that is physiologically
+    dangerous to some users. Related to WCAG 2.0 guideline 2.3 (<a href="http://www.w3.org/wiki/WebSchemas/Accessibility">WebSchemas
+    wiki lists possible values</a>).
+  exp_type: &id049
+  - Text
+  expected_type: *id049
+  name: accessibilityHazard
+  parent: CreativeWork
+  prop_name: accessibilityHazard
+  property: http://schema.org/accessibilityHazard
+  sdo_desc: A characteristic of the described resource that is physiologically dangerous
+    to some users. Related to WCAG 2.0 guideline 2.3 (<a href="http://www.w3.org/wiki/WebSchemas/Accessibility">WebSchemas
+    wiki lists possible values</a>).
+- description: The typical expected age range, e.g. '7-9', '11-'.
+  exp_type: &id050
+  - Text
+  expected_type: *id050
+  name: typicalAgeRange
+  parent: CreativeWork
+  prop_name: typicalAgeRange
+  property: http://schema.org/typicalAgeRange
+  sdo_desc: The typical expected age range, e.g. '7-9', '11-'.
+- description: Headline of the article.
+  exp_type: &id051
+  - Text
+  expected_type: *id051
+  name: headline
+  parent: CreativeWork
+  prop_name: headline
+  property: http://schema.org/headline
+  sdo_desc: Headline of the article.
+- description: The location where the CreativeWork was created, which may not be the
+    same as the location depicted in the CreativeWork.
+  exp_type: &id052
+  - Place
+  expected_type: *id052
+  name: locationCreated
+  parent: CreativeWork
+  prop_name: locationCreated
+  property: http://schema.org/locationCreated
+  sdo_desc: The location where the CreativeWork was created, which may not be the
+    same as the location depicted in the CreativeWork.
+- description: A human-readable summary of specific accessibility features or deficiencies,
+    consistent with the other accessibility metadata but expressing subtleties such
+    as "short descriptions are present but long descriptions will be needed for non-visual
+    users" or "short descriptions are present and no long descriptions are needed."
+  exp_type: &id053
+  - Text
+  expected_type: *id053
+  name: accessibilitySummary
+  parent: CreativeWork
+  prop_name: accessibilitySummary
+  property: http://schema.org/accessibilitySummary
+  sdo_desc: A human-readable summary of specific accessibility features or deficiencies,
+    consistent with the other accessibility metadata but expressing subtleties such
+    as "short descriptions are present but long descriptions will be needed for non-visual
+    users" or "short descriptions are present and no long descriptions are needed."
+- description: "The temporalCoverage of a CreativeWork indicates the period that the
+    content applies to, i.e. that it describes, either as a DateTime or as a textual
+    string indicating a time period in <a href=\"https://en.wikipedia.org/wiki/ISO_8601#Time_intervals\">ISO
+    8601 time interval format</a>. In\n      the case of a Dataset it will typically
+    indicate the relevant time period in a precise notation (e.g. for a 2011 census
+    dataset, the year 2011 would be written \"2011/2012\"). Other forms of content
+    e.g. ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their temporalCoverage
+    in broader terms - textually or via well-known URL.\n      Written works such
+    as books may sometimes have precise temporal coverage too, e.g. a work set in
+    1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939/1945\"."
+  exp_type: &id054
+  - Text
+  - DateTime
+  - URL
+  expected_type: *id054
+  name: temporalCoverage
+  parent: CreativeWork
+  prop_name: temporalCoverage
+  property: http://schema.org/temporalCoverage
+  sdo_desc: "The temporalCoverage of a CreativeWork indicates the period that the
+    content applies to, i.e. that it describes, either as a DateTime or as a textual
+    string indicating a time period in <a href=\"https://en.wikipedia.org/wiki/ISO_8601#Time_intervals\">ISO
+    8601 time interval format</a>. In\n      the case of a Dataset it will typically
+    indicate the relevant time period in a precise notation (e.g. for a 2011 census
+    dataset, the year 2011 would be written \"2011/2012\"). Other forms of content
+    e.g. ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their temporalCoverage
+    in broader terms - textually or via well-known URL.\n      Written works such
+    as books may sometimes have precise temporal coverage too, e.g. a work set in
+    1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939/1945\"."
+- description: 'The publishingPrinciples property indicates (typically via <a class="localLink"
+    href="http://schema.org/URL">URL</a>) a document describing the editorial principles
+    of an <a class="localLink" href="http://schema.org/Organization">Organization</a>
+    (or individual e.g. a <a class="localLink" href="http://schema.org/Person">Person</a>
+    writing a blog) that relate to their activities as a publisher, e.g. ethics or
+    diversity policies. When applied to a <a class="localLink" href="http://schema.org/CreativeWork">CreativeWork</a>
+    (e.g. <a class="localLink" href="http://schema.org/NewsArticle">NewsArticle</a>)
+    the principles are those of the party primarily responsible for the creation of
+    the <a class="localLink" href="http://schema.org/CreativeWork">CreativeWork</a>.</p>
+
+
+    <p>While such policies are most typically expressed in natural language, sometimes
+    related information (e.g. indicating a <a class="localLink" href="http://schema.org/funder">funder</a>)
+    can be expressed using schema.org terminology.'
+  exp_type: &id055
+  - CreativeWork
+  - URL
+  expected_type: *id055
+  name: publishingPrinciples
+  parent: CreativeWork
+  prop_name: publishingPrinciples
+  property: http://schema.org/publishingPrinciples
+  sdo_desc: 'The publishingPrinciples property indicates (typically via <a class="localLink"
+    href="http://schema.org/URL">URL</a>) a document describing the editorial principles
+    of an <a class="localLink" href="http://schema.org/Organization">Organization</a>
+    (or individual e.g. a <a class="localLink" href="http://schema.org/Person">Person</a>
+    writing a blog) that relate to their activities as a publisher, e.g. ethics or
+    diversity policies. When applied to a <a class="localLink" href="http://schema.org/CreativeWork">CreativeWork</a>
+    (e.g. <a class="localLink" href="http://schema.org/NewsArticle">NewsArticle</a>)
+    the principles are those of the party primarily responsible for the creation of
+    the <a class="localLink" href="http://schema.org/CreativeWork">CreativeWork</a>.</p>
+
+
+    <p>While such policies are most typically expressed in natural language, sometimes
+    related information (e.g. indicating a <a class="localLink" href="http://schema.org/funder">funder</a>)
+    can be expressed using schema.org terminology.'
+- description: The date on which the CreativeWork was most recently modified or when
+    the item's entry was modified within a DataFeed.
+  exp_type: &id056
+  - Date
+  - DateTime
+  expected_type: *id056
+  name: dateModified
+  parent: CreativeWork
+  prop_name: dateModified
+  property: http://schema.org/dateModified
+  sdo_desc: The date on which the CreativeWork was most recently modified or when
+    the item's entry was modified within a DataFeed.
+- description: The predominant type or kind characterizing the learning resource.
+    For example, 'presentation', 'handout'.
+  exp_type: &id057
+  - Text
+  expected_type: *id057
+  name: learningResourceType
+  parent: CreativeWork
+  prop_name: learningResourceType
+  property: http://schema.org/learningResourceType
+  sdo_desc: The predominant type or kind characterizing the learning resource. For
+    example, 'presentation', 'handout'.
+- description: An offer to provide this item&#x2014;for example, an offer to sell
+    a product, rent the DVD of a movie, perform a service, or give away tickets to
+    an event.
+  exp_type: &id058
+  - Offer
+  expected_type: *id058
+  name: offers
+  parent: CreativeWork
+  prop_name: offers
+  property: http://schema.org/offers
+  sdo_desc: An offer to provide this item&#x2014;for example, an offer to sell a product,
+    rent the DVD of a movie, perform a service, or give away tickets to an event.
+- description: Specifies the Person who edited the CreativeWork.
+  exp_type: &id059
+  - Person
+  expected_type: *id059
+  name: editor
+  parent: CreativeWork
+  prop_name: editor
+  property: http://schema.org/editor
+  sdo_desc: Specifies the Person who edited the CreativeWork.
+- description: Identifies input methods that are sufficient to fully control the described
+    resource (<a href="http://www.w3.org/wiki/WebSchemas/Accessibility">WebSchemas
+    wiki lists possible values</a>).
+  exp_type: &id060
+  - Text
+  expected_type: *id060
+  name: accessibilityControl
+  parent: CreativeWork
+  prop_name: accessibilityControl
+  property: http://schema.org/accessibilityControl
+  sdo_desc: Identifies input methods that are sufficient to fully control the described
+    resource (<a href="http://www.w3.org/wiki/WebSchemas/Accessibility">WebSchemas
+    wiki lists possible values</a>).
+- description: Awards won by or for this item.
+  exp_type: &id061
+  - Text
+  expected_type: *id061
+  name: awards
+  parent: CreativeWork
+  prop_name: awards
+  property: http://schema.org/awards
+  sdo_desc: Awards won by or for this item.
+- description: A media object that encodes this CreativeWork. This property is a synonym
+    for associatedMedia.
+  exp_type: &id062
+  - MediaObject
+  expected_type: *id062
+  name: encoding
+  parent: CreativeWork
+  prop_name: encoding
+  property: http://schema.org/encoding
+  sdo_desc: A media object that encodes this CreativeWork. This property is a synonym
+    for associatedMedia.
+- description: An award won by or for this item.
+  exp_type: &id063
+  - Text
+  expected_type: *id063
+  name: award
+  parent: CreativeWork
+  prop_name: award
+  property: http://schema.org/award
+  sdo_desc: An award won by or for this item.
+- description: Media type, typically MIME format (see <a href="http://www.iana.org/assignments/media-types/media-types.xhtml">IANA
+    site</a>) of the content e.g. application/zip of a SoftwareApplication binary.
+    In cases where a CreativeWork has several media type representations, 'encoding'
+    can be used to indicate each MediaObject alongside particular fileFormat information.
+    Unregistered or niche file formats can be indicated instead via the most appropriate
+    URL, e.g. defining Web page or a Wikipedia entry.
+  exp_type: &id064
+  - Text
+  - URL
+  expected_type: *id064
+  name: fileFormat
+  parent: CreativeWork
+  prop_name: fileFormat
+  property: http://schema.org/fileFormat
+  sdo_desc: Media type, typically MIME format (see <a href="http://www.iana.org/assignments/media-types/media-types.xhtml">IANA
+    site</a>) of the content e.g. application/zip of a SoftwareApplication binary.
+    In cases where a CreativeWork has several media type representations, 'encoding'
+    can be used to indicate each MediaObject alongside particular fileFormat information.
+    Unregistered or niche file formats can be indicated instead via the most appropriate
+    URL, e.g. defining Web page or a Wikipedia entry.
+- description: Genre of the creative work, broadcast channel or group.
+  exp_type: &id065
+  - Text
+  - URL
+  expected_type: *id065
+  name: genre
+  parent: CreativeWork
+  prop_name: genre
+  property: http://schema.org/genre
+  sdo_desc: Genre of the creative work, broadcast channel or group.
+- description: Fictional person connected with a creative work.
+  exp_type: &id066
+  - Person
+  expected_type: *id066
+  name: character
+  parent: CreativeWork
+  prop_name: character
+  property: http://schema.org/character
+  sdo_desc: Fictional person connected with a creative work.
+- description: The position of an item in a series or sequence of items.
+  exp_type: &id067
+  - Integer
+  - Text
+  expected_type: *id067
+  name: position
+  parent: CreativeWork
+  prop_name: position
+  property: http://schema.org/position
+  sdo_desc: The position of an item in a series or sequence of items.
+- description: The Organization on whose behalf the creator was working.
+  exp_type: &id068
+  - Organization
+  expected_type: *id068
+  name: sourceOrganization
+  parent: CreativeWork
+  prop_name: sourceOrganization
+  property: http://schema.org/sourceOrganization
+  sdo_desc: The Organization on whose behalf the creator was working.
+- description: The person or organization who produced the work (e.g. music album,
+    movie, tv/radio series etc.).
+  exp_type: &id069
+  - Organization
+  - Person
+  expected_type: *id069
+  name: producer
+  parent: CreativeWork
+  prop_name: producer
+  property: http://schema.org/producer
+  sdo_desc: The person or organization who produced the work (e.g. music album, movie,
+    tv/radio series etc.).
+- description: The party holding the legal copyright to the CreativeWork.
+  exp_type: &id070
+  - Organization
+  - Person
+  expected_type: *id070
+  name: copyrightHolder
+  parent: CreativeWork
+  prop_name: copyrightHolder
+  property: http://schema.org/copyrightHolder
+  sdo_desc: The party holding the legal copyright to the CreativeWork.
+- description: Content features of the resource, such as accessible media, alternatives
+    and supported enhancements for accessibility (<a href="http://www.w3.org/wiki/WebSchemas/Accessibility">WebSchemas
+    wiki lists possible values</a>).
+  exp_type: &id071
+  - Text
+  expected_type: *id071
+  name: accessibilityFeature
+  parent: CreativeWork
+  prop_name: accessibilityFeature
+  property: http://schema.org/accessibilityFeature
+  sdo_desc: Content features of the resource, such as accessible media, alternatives
+    and supported enhancements for accessibility (<a href="http://www.w3.org/wiki/WebSchemas/Accessibility">WebSchemas
+    wiki lists possible values</a>).
+- description: A media object that encodes this CreativeWork.
+  exp_type: &id072
+  - MediaObject
+  expected_type: *id072
+  name: encodings
+  parent: CreativeWork
+  prop_name: encodings
+  property: http://schema.org/encodings
+  sdo_desc: A media object that encodes this CreativeWork.
+- description: Indicates that the CreativeWork contains a reference to, but is not
+    necessarily about a concept.
+  exp_type: &id073
+  - Thing
+  expected_type: *id073
+  name: mentions
+  parent: CreativeWork
+  prop_name: mentions
+  property: http://schema.org/mentions
+  sdo_desc: Indicates that the CreativeWork contains a reference to, but is not necessarily
+    about a concept.
+- description: The textual content of this CreativeWork.
+  exp_type: &id074
+  - Text
+  expected_type: *id074
+  name: text
+  parent: CreativeWork
+  prop_name: text
+  property: http://schema.org/text
+  sdo_desc: The textual content of this CreativeWork.
+- description: Organization or person who adapts a creative work to different languages,
+    regional differences and technical requirements of a target market, or that translates
+    during some event.
+  exp_type: &id075
+  - Organization
+  - Person
+  expected_type: *id075
+  name: translator
+  parent: CreativeWork
+  prop_name: translator
+  property: http://schema.org/translator
+  sdo_desc: Organization or person who adapts a creative work to different languages,
+    regional differences and technical requirements of a target market, or that translates
+    during some event.
+- description: The predominant mode of learning supported by the learning resource.
+    Acceptable values are 'active', 'expositive', or 'mixed'.
+  exp_type: &id076
+  - Text
+  expected_type: *id076
+  name: interactivityType
+  parent: CreativeWork
+  prop_name: interactivityType
+  property: http://schema.org/interactivityType
+  sdo_desc: The predominant mode of learning supported by the learning resource. Acceptable
+    values are 'active', 'expositive', or 'mixed'.
+- description: Indicates a page (or other CreativeWork) for which this thing is the
+    main entity being described. See <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background
+    notes</a> for details.
+  exp_type: &id077
+  - URL
+  - CreativeWork
+  expected_type: *id077
+  name: mainEntityOfPage
+  parent: Thing
+  prop_name: mainEntityOfPage
+  property: http://schema.org/mainEntityOfPage
+  sdo_desc: Indicates a page (or other CreativeWork) for which this thing is the main
+    entity being described. See <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background
+    notes</a> for details.
+- description: An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a>
+    or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.
+  exp_type: &id078
+  - ImageObject
+  - URL
+  expected_type: *id078
+  name: image
+  parent: Thing
+  prop_name: image
+  property: http://schema.org/image
+  sdo_desc: An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a>
+    or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.
+- description: The name of the item.
+  exp_type: &id079
+  - Text
+  expected_type: *id079
+  name: name
+  parent: Thing
+  prop_name: name
+  property: http://schema.org/name
+  sdo_desc: The name of the item.
+- description: A sub property of description. A short description of the item used
+    to disambiguate from other, similar items. Information from other properties (in
+    particular, name) may be necessary for the description to be useful for disambiguation.
+  exp_type: &id080
+  - Text
+  expected_type: *id080
+  name: disambiguatingDescription
+  parent: Thing
+  prop_name: disambiguatingDescription
+  property: http://schema.org/disambiguatingDescription
+  sdo_desc: A sub property of description. A short description of the item used to
+    disambiguate from other, similar items. Information from other properties (in
+    particular, name) may be necessary for the description to be useful for disambiguation.
+- description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  exp_type: &id081
+  - URL
+  expected_type: *id081
+  name: sameAs
+  parent: Thing
+  prop_name: sameAs
+  property: http://schema.org/sameAs
+  sdo_desc: URL of a reference Web page that unambiguously indicates the item's identity.
+    E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+- description: URL of the item.
+  exp_type: &id082
+  - URL
+  expected_type: *id082
+  name: url
+  parent: Thing
+  prop_name: url
+  property: http://schema.org/url
+  sdo_desc: URL of the item.
+- description: Indicates a potential Action, which describes an idealized action in
+    which this thing would play an 'object' role.
+  exp_type: &id083
+  - Action
+  expected_type: *id083
+  name: potentialAction
+  parent: Thing
+  prop_name: potentialAction
+  property: http://schema.org/potentialAction
+  sdo_desc: Indicates a potential Action, which describes an idealized action in which
+    this thing would play an 'object' role.
+- description: An alias for the item.
+  exp_type: &id084
+  - Text
+  expected_type: *id084
+  name: alternateName
+  parent: Thing
+  prop_name: alternateName
+  property: http://schema.org/alternateName
+  sdo_desc: An alias for the item.
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1julB0P6kjXK_mL2dU8EDU9zMxIMah0_dYYeGt2Spllo/edit?usp=drivesdk
+spec_type: Type
+status: revision
+subtitle: Bioschemas specification describing LabProtocol in the life-science.
+use_cases_url: https://docs.google.com/a/ebi.ac.uk/document/d/1EZ_U2u2aJH_ERsoecaJRAJkWVHYGU2SK8HYSjvhEaMM/edit?usp=sharing
+version: '0.1'
+---

@@ -1,0 +1,245 @@
+---
+description: 'Provides a way to describe bioscience organizations on the World Wide
+  Web. It defines metadata terms that can be used in the code of web pages and applications,
+  and builds on top of existing technologies and standards. The goal of the specification
+  is to make it easier to discover, exchange and integrate life science organization
+  profiles across the Internet.
+
+'
+edit_url: https://github.com/BioSchemas/specifications/tree/master/Organization/specification.html
+g_mapping_file: Organization Mapping Simp
+gh_examples: https://github.com/BioSchemas/specifications/tree/master/Organization/examples
+gh_folder: https://github.com/BioSchemas/specifications/tree/master/Organization
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Organization
+hierarchy:
+- Organization
+- Thing
+layout: new_spec_detail
+name: Organization
+parent_type: Organization
+properties:
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - ContactPoint
+  marginality: Recommended
+  name: contactPoint
+  parent: Organization
+  sdo_desc: A contact point for a person or organization.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Organization
+  marginality: Optional
+  name: department
+  parent: Organization
+  sdo_desc: 'A relationship between an organization and a department of that organization,
+    also described as an organization (allowing different urls, logos, opening hours).
+    For example: a store with a pharmacy, or a bakery with a cafe.'
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Date
+  marginality: Optional
+  name: dissolutionDate
+  parent: Organization
+  sdo_desc: The date that this organization was dissolved.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Minimum
+  name: legalName
+  parent: Organization
+  sdo_desc: The official name of the organization, e.g. the registered company name.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Place
+  - PostalAddress
+  - Text
+  marginality: Recommended
+  name: location
+  parent: Organization
+  sdo_desc: The location of for example where the event is happening, an organization
+    is located, or where an action takes place.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - ImageObject
+  - URL
+  marginality: Recommended
+  name: logo
+  parent: Organization
+  sdo_desc: An associated logo.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Organization
+  - Person
+  marginality: Recommended
+  name: member
+  parent: Organization
+  sdo_desc: A member of an Organization or a ProgramMembership. Organizations can
+    be members of organizations; ProgramMembership is typically for individuals.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Organization
+  - ProgramMembership
+  marginality: Recommended
+  name: memberOf
+  parent: Organization
+  sdo_desc: An Organization (or ProgramMembership) to which this Person or Organization
+    belongs.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - OwnershipInfo
+  - Product
+  marginality: Optional
+  name: owns
+  parent: Organization
+  sdo_desc: Products owned by the organization or person.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Organization
+  marginality: Optional
+  name: parentOrganization
+  parent: Organization
+  sdo_desc: The larger organization that this organization is a <a class="localLink"
+    href="http://schema.org/subOrganization">subOrganization</a> of, if any.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Organization
+  marginality: Optional
+  name: subOrganization
+  parent: Organization
+  sdo_desc: 'A relationship between two organizations where the first includes the
+    second, e.g., as a subsidiary. See also: the more specific ''department'' property.'
+- bsc_dec: 'The type of the organization selected from a controlled vocabulary: single-company
+    corporation, multinational, not-for-profit, alliance, consortium, institute, department,
+    working party, project, etc.'
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - name: X
+  expected_type:
+  - CV
+  marginality: Minimum
+  name: type
+  parent: Organization
+  sdo_desc: ''
+- bsc_dec: To record if the organization is still active, and if it were a project
+    or alliance, what the outcome was, or if it has closed down or merged, why and
+    when.
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - name: active
+    - name: closed
+    - name: merged
+  expected_type:
+  - CV
+  - Text
+  marginality: Recommended
+  name: status
+  parent: Organization
+  sdo_desc: Cant do CV and/or Text
+- bsc_dec: A description of how the organization is funded.
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - name: X
+  expected_type:
+  - CV
+  - Text
+  marginality: Recommended
+  name: fundingModel
+  parent: Organization
+  sdo_desc: Cant do CV and/or Text
+- bsc_dec: Defines a membership category and associated fees (for projects and alliances
+    etc.)
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Offer
+  marginality: Recommended
+  name: membershipCateogry
+  parent: Organization
+  sdo_desc: ''
+- bsc_dec: Scientific topics that describe the organization and its activities, using
+    a scientific ontology term from EDAM topics.
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - name: X
+  expected_type:
+  - CV
+  - Text
+  marginality: Minimum
+  name: topic
+  parent: Organization
+  sdo_desc: Cant do CV and/or Text
+- bsc_dec: "Keywords to describe the organization. Use term which are not available
+    in EDAM \u201CScientific Topic\u201D. Use text keywords or ontology terms from
+    other ontologies which could complement EDAM topics."
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - CV
+  - Text
+  marginality: Recommended
+  name: keywords
+  parent: Organization
+  sdo_desc: Cant do CV and/or Text
+spec_mapping_url: https://docs.google.com/spreadsheets/d/14UoeVmh2eRRWlyQgOJWAuCIW7DMuwhLH6O3CBeXfoTI/edit?usp=drivesdk
+spec_type: Profile
+status: revision
+subtitle: ''
+use_cases_url: err_404
+version: '0.1'
+---

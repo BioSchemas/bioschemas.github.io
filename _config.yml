@@ -25,15 +25,18 @@ gems:
 
 # Collections
 collections:
-  bsc_specs:
-    output: true
-    permalink: /:collection/:path/
   specifications:
     output: true
     permalink: /:collection/:path/
-  groups:
+  devSpecs:
     output: true
-    permalink: /:collection/:path/ #Note, trailing / needed to avoid .html
+    permalink: /:collection/:path/
+  types:
+    output: true
+    permalink: /:collection/:path/    
+  devTypes:
+    output: true
+    permalink: /:collection/:path/
   meetings:
     output: true
     permalink: /:collection/:path/ #Note, trailing / needed to avoid .html

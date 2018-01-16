@@ -1,0 +1,267 @@
+---
+description: ''
+edit_url: https://github.com/BioSchemas/specifications/tree/master/ProteinAnnotation/specification.html
+g_mapping_file: ProteinAnnotation Mapping Simp
+gh_examples: https://github.com/BioSchemas/specifications/tree/master/ProteinAnnotation/examples
+gh_folder: https://github.com/BioSchemas/specifications/tree/master/ProteinAnnotation
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20ProteinAnnotation
+hierarchy:
+- Thing
+layout: new_spec_detail
+name: ProteinAnnotation
+parent_type: Thing
+properties:
+- bsc_dec: ProteinAnnotation profile usage.   Currently, a ProteinAnnotation additional
+    type should be set to any of the values defined in the controlled vocabulary.
+    If you want to add other terms, please contact Bioschemas.
+  cardinality: MANY
+  controlled_vocab:
+    ontologies:
+    - name: SIO
+      url: http://semanticscience.org/resource/SIO_001379.rdf
+    - name: SIO
+      url: http://semanticscience.org/resource/SIO_001380.rdf
+    - name: SIO
+      url: http://semanticscience.org/resource/SIO_010049.rdf
+    - name: SIO
+      url: http://semanticscience.org/resource/SIO_010040.rdf
+    - name: SIO
+      url: http://semanticscience.org/resource/SIO_010041.rdf
+    terms: []
+  expected_type:
+  - URL
+  marginality: Minimum
+  name: additionalType
+  parent: Thing
+  sdo_desc: An additional type for the item, typically used for adding more specific
+    types from external vocabularies in microdata syntax. This is a relationship between
+    something and a class that the thing is in. In RDFa syntax, it is better to use
+    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
+    tools may have only weaker understanding of extra types, in particular those defined
+    externally.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: alternateName
+  parent: Thing
+  sdo_desc: An alias for the item.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: description
+  parent: Thing
+  sdo_desc: A description of the item.
+- bsc_dec: 'Recommendation: identifiers.org whenever possible'
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - PropertyValue
+  - ''
+  - Text
+  - ''
+  - URL
+  marginality: Minimum
+  name: identifier
+  parent: Thing
+  sdo_desc: The identifier property represents any kind of identifier for any kind
+    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
+    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
+    many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background
+    notes</a> for more details.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - ImageObject
+  - ''
+  - URL
+  marginality: Optional
+  name: image
+  parent: Thing
+  sdo_desc: An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a>
+    or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.
+- bsc_dec: Bioschemas usage.   Link via Record or URL to the main Record representing
+    this entity in a dataset
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - CreativeWork
+  - ''
+  - URL
+  marginality: Optional
+  name: mainEntityOfPage
+  parent: Thing
+  sdo_desc: Indicates a page (or other CreativeWork) for which this thing is the main
+    entity being described. See <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background
+    notes</a> for details.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: name
+  parent: Thing
+  sdo_desc: The name of the item.
+- bsc_dec: URL of a reference Web page that unambiguously indicates the item's identity.
+    E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.  Bioschemas
+    usage.   Link to any resource other than the Record and the official Webpage,
+    for instance a Wikipedia page.
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - URL
+  marginality: Optional
+  name: sameAs
+  parent: Thing
+  sdo_desc: URL of a reference Web page that unambiguously indicates the item's identity.
+    E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+- bsc_dec: Bioschemas usage.   Link to the official webpage associated to this entity.
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - URL
+  marginality: Recommended
+  name: url
+  parent: Thing
+  sdo_desc: URL of the item.
+- bsc_dec: Bioschemas usage.  Additional to the use of name and description to describe
+    this property in a human-readable way, additionalType should be used to specify
+    the nature of the property/relation.  Controlled vocabularies should be used whenever
+    possible.
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - name: 'Yes'
+    - name: as better suits to describe this additional property
+  expected_type:
+  - PropertyValue
+  marginality: Optional
+  name: additionalProperty
+  parent: ProteinAnnotation
+  sdo_desc: 'A property-value pair representing an additional characteristics of the
+    entitity, e.g. a product feature or another characteristic for which there is
+    no matching property in schema.org.  Note: Publishers should be aware that applications
+    designed to use specific schema.org properties (e.g. http://schema.org/width,
+    http://schema.org/color, http://schema.org/gtin13, ...) will typically expect
+    such data to be provided using those properties, rather than using the generic
+    property/value mechanism.'
+- bsc_dec: Method used to create this annotation
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - PropertyValue
+  marginality: Recommended
+  name: additionalProperty.creation_method
+  parent: ProteinAnnotation
+  sdo_desc: Method used to create this annotation
+- bsc_dec: Indicates a BioChemEntity that this BioChemEntity is (in some sense) part
+    of.
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - BioChemEntity
+  - URL
+  marginality: Optional
+  name: isContainedIn
+  parent: ProteinAnnotation
+  sdo_desc: Indicates a BioChemEntity that this BioChemEntity is (in some sense) part
+    of.
+- bsc_dec: 'Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
+    Inverse property: isPartOf.'
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - BioChemEntity
+  - URL
+  marginality: Optional
+  name: contains
+  parent: ProteinAnnotation
+  sdo_desc: 'Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
+    Inverse property: isPartOf.'
+- bsc_dec: The location of for example where the event is happening, an organization
+    is located, or where an action takes place.  Bioschemas usage.  In Bioschemas
+    location can be refer to a position in a chromosome or sequence or to a physical
+    place where, for instance, a sample is stored. Using additionalType is advised
+    to make the distinction. For instance, FALDO can be used for sequence coordinates.
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - name: 'Yes'
+    - name: as it better suits to describe the location.
+  expected_type:
+  - Place
+  - PostalAddress
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Optional
+  name: location
+  parent: ProteinAnnotation
+  sdo_desc: The location of for example where the event is happening, an organization
+    is located, or where an action takes place.  Bioschemas usage.  In Bioschemas
+    location can be refer to a position in a chromosome or sequence or to a physical
+    place where, for instance, a sample is stored. Using additionalType is advised
+    to make the distinction. For instance, FALDO can be used for sequence coordinates.
+- bsc_dec: Representation of this entity. For instance, chemical structure or sequence
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  - URL
+  - PropertyValue
+  marginality: Optional
+  name: hasRepresentation
+  parent: ProteinAnnotation
+  sdo_desc: Representation of this entity. For instance, chemical structure or sequence
+- bsc_dec: Profile name. For the Protein profile it MUST be "ProteinAnnotation"
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms:
+    - name: Bioschemas profiles
+  expected_type:
+  - Text
+  marginality: Minimum
+  name: preferredLabel
+  parent: ProteinAnnotation
+  sdo_desc: Indicates the preferred label to refer to a specific (sub)type of BioChemEntity
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1I0_i-j3MHedhLD53RIugEOSJtfF9CIN4Nm1eqsaHmxg/edit?usp=drivesdk
+spec_type: Profile
+status: revision
+subtitle: ''
+use_cases_url: err_404
+version: '0.4'
+---

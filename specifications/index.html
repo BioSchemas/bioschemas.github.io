@@ -1,5 +1,5 @@
 ---
-layout: new_specs
+layout: default
 title: BioSchemas Specifications
 ---
 
@@ -9,10 +9,12 @@ title: BioSchemas Specifications
 
         <h1>Bioschemas Specifications</h1>
 
+        <p>This page contains release versions of the Bioschemas specifications. Ongoing changes are published via the <a href="/specifications/drafts">drafts</a> page.</p>
+        <p>Should you wish to contact the community to discuss our efforts please email <a href="mailto:public-bioschemas@w3.org" itemprop="email">public-bioschemas@w3.org</a>.</p>
 
         <h2>Profiles</h2>
 
-        <p>The Bioschemas' profiles define a community agreed layer over the Schema.org model providing additional constraints. These constraints capture (i) the minimal information properties agreed by the community which are mandatory (M), recommended (R), or optional (O), (ii) the cardinality of the property, i.e. whether it is expected to occur once or many times, and (iii) associated controlled vocabulary terms drawn from existing ontologies. </p>
+        <p>The Bioschemas' profiles define a community agreed layer over the Schema.org model providing additional constraints. These constraints capture (i) the information properties agreed by the community which are minimum (M), recommended (R), or optional (O), (ii) the cardinality of the property, i.e. whether it is expected to occur once or many times, and (iii) associated controlled vocabulary terms drawn from existing ontologies. </p>
 
         <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto;">
             <thead>
@@ -20,8 +22,6 @@ title: BioSchemas Specifications
                 <th>Name</th>
                 <th>Short description</th>
                 <th>Spec.</th>
-                <th>Folder</th>
-                <th>Mapping</th>
                 <th>Use Cases</th>
                 <th>Task &amp; Issues</th>
                 <th>Examples</th>
@@ -31,45 +31,35 @@ title: BioSchemas Specifications
             {% assign type_specs = site.specifications | where: 'spec_type', 'Profile'%}
             {% for spec in type_specs %}
             <tr>
-                <th>{{ spec.name }} (v{{spec.version}})</th>
+                <th>{{ spec.name }}<br />(v{{spec.version}})</th>
                 <td>{{ spec.subtitle }}</td>
                 <td class="spec_links">
                   {% if spec.hierarchy %}
-                    <a target="_blank" href="{{ spec.url}}">
+                    <a href="{{ spec.url}}">
                   {% else %}
-                    <a target="_blank" href="{{ spec.spec_doc }}">
+                    <a href="{{ spec.spec_doc }}">
                   {% endif %}
                         <img src="/images/bsc_spec.png" alt="BioSchemas {{ spec.name }} Specification">
                     </a>
                 </td>
                 <td class="spec_links">
-                    <a target="_blank" href="{{spec.gh_folder}}">
-                        <img src="/images/spec_gh_folder.png" alt="View BioSchemas {{ spec.name }} GitHub Folder">
-                    </a>
-                </td>
-                <td class="spec_links">
-                    <a target="_blank" href="{{ spec.spec_mapping_url}}">
-                        <img src="/images/gsheets_icon.png" alt="BioSchemas {{ spec.name }} Mapping">
-                    </a>
-                </td>
-                <td class="spec_links">
                     {% if spec.use_cases_url=='err_404'%}
-                    <a target="_blank">
+                    <a>
                         <img src="/images/use_case_spec.png" alt="View BioSchemas {{ spec.name }} Use Cases"  style="filter: grayscale(100%);">
                     </a>
                     {%else%}
-                    <a target="_blank" href="{{spec.use_cases_url}}">
+                    <a href="{{spec.use_cases_url}}">
                         <img src="/images/use_case_spec.png" alt="View BioSchemas {{ spec.name }} Use Cases">
                     </a>
                     {%endif%}
                 </td>
                 <td class="spec_links">
-                    <a target="_blank" href="{{spec.gh_tasks}}">
+                    <a href="{{spec.gh_tasks}}">
                         <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues">
                     </a>
                 </td>
                 <td class="spec_links">
-                    <a target="_blank" href="{{spec.gh_examples}}">
+                    <a href="{{spec.gh_examples}}">
                         <img src="/images/spec_examples.png" alt="View BioSchemas {{ spec.name }} Examples">
                     </a>
                 </td>
@@ -79,24 +69,24 @@ title: BioSchemas Specifications
         </table>
 
         <h2>Types</h2>
-        <p>We have found it necessary to propose some additional types to the Schema.org vocabulary. These are specified below and are expected to be pushed up to Schema.org once they have stabalised.</p>
+        <p>We have found it necessary to propose some additional types to the Schema.org vocabulary. These are specified below and are expected to be pushed up to Schema.org once they have stabalised. Again, working versions are published in the <a href="/specifications/drafts">drafts</a> page.</p>
 
         <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto;">
             <thead>
             <tr>
                 <th>Name</th>
-                <th>Short description</th>                            
-                <th>Type</th>
+                <th>Short description</th>
+                <th>Type spec.</th>
             </tr>
             </thead>
             <tbody>
-            {% assign prof_specs = site.specifications | where: 'spec_type', 'Type'%}
+            {% assign prof_specs = site.types | where: 'spec_type', 'Type'%}
             {% for spec in  prof_specs%}
             <tr>
-                <th>{{spec.name}} (v{{ spec.version }})</th>
-                <td>{{ spec.subtitle }}</td>                
-                <td class="spec_links">
-                    <a target="_blank" href="{{ spec.url}}">
+                <th>{{spec.name}}<br />(v{{ spec.version }})</th>
+                <td>{{ spec.subtitle }}</td>
+                <td class="spec_links" style="text-align: center;">
+                    <a href="{{ spec.url}}">
                         <img src="/images/bsc_spec.png" alt="BioSchemas {{ spec.name }} Specification">
                     </a>
                 </td>

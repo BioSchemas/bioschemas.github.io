@@ -1,0 +1,147 @@
+---
+description: This ProteinStructure profile specification presents the BioChemEntity
+  usage when describing a Protein.
+edit_url: https://github.com/BioSchemas/specifications/tree/master/ProteinStructure/specification.html
+g_mapping_file: Protein Structure Mapping Simp
+gh_examples: https://github.com/BioSchemas/specifications/tree/master/ProteinStructure/examples
+gh_folder: https://github.com/BioSchemas/specifications/tree/master/ProteinStructure
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20ProteinStructure
+hierarchy:
+- Thing
+layout: new_spec_detail
+name: ProteinStructure
+parent_type: Thing
+properties:
+- bsc_dec: Protein profile usage.   Currently, a Protein additional type should be
+    set to http://semanticscience.org/resource/SIO_011119. If you want to add other
+    terms, please contact Bioschemas.
+  cardinality: ONE
+  controlled_vocab:
+    ontologies:
+    - name: SIO
+      url: 011119
+    terms: []
+  expected_type:
+  - URL
+  marginality: Minimum
+  name: additionalType
+  parent: Thing
+  sdo_desc: An additional type for the item, typically used for adding more specific
+    types from external vocabularies in microdata syntax. This is a relationship between
+    something and a class that the thing is in. In RDFa syntax, it is better to use
+    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
+    tools may have only weaker understanding of extra types, in particular those defined
+    externally.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: alternateName
+  parent: Thing
+  sdo_desc: An alias for the item.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: description
+  parent: Thing
+  sdo_desc: A description of the item.
+- bsc_dec: 'Recommendation: identifiers.org whenever possible'
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - PropertyValue
+  - ''
+  - Text
+  - ''
+  - URL
+  marginality: Minimum
+  name: identifier
+  parent: Thing
+  sdo_desc: The identifier property represents any kind of identifier for any kind
+    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
+    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
+    many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background
+    notes</a> for more details.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - ImageObject
+  - ''
+  - URL
+  marginality: Optional
+  name: image
+  parent: Thing
+  sdo_desc: An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a>
+    or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.
+- bsc_dec: Bioschemas usage.   Link via Record or URL to the main Record representing
+    this entity in a dataset
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - CreativeWork
+  - ''
+  - URL
+  marginality: Optional
+  name: mainEntityOfPage
+  parent: Thing
+  sdo_desc: Indicates a page (or other CreativeWork) for which this thing is the main
+    entity being described. See <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background
+    notes</a> for details.
+- bsc_dec: ''
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - Text
+  marginality: Recommended
+  name: name
+  parent: Thing
+  sdo_desc: The name of the item.
+- bsc_dec: ''
+  cardinality: MANY
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - URL
+  marginality: Optional
+  name: sameAs
+  parent: Thing
+  sdo_desc: URL of a reference Web page that unambiguously indicates the item's identity.
+    E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+- bsc_dec: Bioschemas usage.   Link to the official webpage associated to this entity.
+  cardinality: ONE
+  controlled_vocab:
+    ontologies: []
+    terms: []
+  expected_type:
+  - URL
+  marginality: Recommended
+  name: url
+  parent: Thing
+  sdo_desc: URL of the item.
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1dkz4qW2Z950vMUWUIAbgeM3JBqrgVIEgWbGLayG58Mg/edit?usp=drivesdk
+spec_type: Profile
+status: revision
+subtitle: Bioschemas specification describing a ProteinStructure (BioChemEntity profile)
+  in Life Sciences
+use_cases_url: err_404
+version: '0.4'
+---
