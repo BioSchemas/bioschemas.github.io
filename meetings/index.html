@@ -17,9 +17,13 @@ title: Meetings
             {% assign meetingDate = meeting.start_date | date: '%F' %}
             {% assign endDate = meeting.end_date | date: '%F' %}
             {% if currentDate <= meetingDate %}
-              <li><strong><a href="{{ meeting.url }}">{{ meeting.name}}</a></strong> <br/> {{ meeting.dates }} <br/> {{ meeting.venue }}</li>
+              <li itemscope itemtype="http://schema.org/Event"><strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong> <br/> {{ meeting.dates }} <br/> <span itemprop="location">{{ meeting.venue }}</span> <meta itemprop="startDate" content="{{meeting.start_date}}"/><meta itemprop="endDate" content="{{ meeting.end_date }}"/></li>
+              <!-- using meta is bad -->
+              <!-- google test tool wants location not as text! -->
             {% elsif meetingDate <= currentDate and currentDate <= endDate %}
-              <li><strong><a href="{{ meeting.url }}">{{ meeting.name}}</a></strong> <br/> {{ meeting.dates }} <br/> {{ meeting.venue }}</li>
+              <li itemscope itemtype="http://schema.org/Event">><strong><a href="{{ meeting.url }}">{{ meeting.name}}</span></a></strong> <br/> {{ meeting.dates }} <br/> <span itemprop="location">{{ meeting.venue }}</span> <meta itemprop="startDate" content="{{meeting.start_date}}"/><meta itemprop="endDate" content="{{ meeting.end_date }}"/></li>
+              <!-- using meta is bad -->
+              <!-- google test tool wants location not as text! -->
             {% endif %}
           {% endfor %}
         </ul>
