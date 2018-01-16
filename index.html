@@ -16,7 +16,7 @@ layout: default
 
     <div id="main_content_wrap" class="outer">
         <section id="main_content" class="inner">
-        <!-- <div style="border: 1px solid #0B794B; margin-bottom:20px;">
+        <div style="border: 1px solid #0B794B; margin-bottom:20px;">
             <h3 style="padding-left: 10px;">Upcoming events</h3>
             <ul>
               {% assign sorted_meetings = (site.meetings | sort: 'start_date') %}
@@ -26,19 +26,19 @@ layout: default
                 {% assign meetingDate = meeting.start_date | date: '%F' %}
                 {% assign endDate = meeting.end_date | date: '%F' %}
                 {% if currentDate <= meetingDate %}
-                  <li><strong><a href="{{ meeting.url }}">{{ meeting.name}}</a></strong> <br/> {{ meeting.dates }} <br/> {{ meeting.venue }}</li>
+                  <li itemscope itemtype="http://schema.org/Event"><strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong> <br/> {{ meeting.dates }} <br/> <span itemprop="location">{{ meeting.venue }}</span> <meta itemprop="startDate" content="{{meeting.start_date}}"/><meta itemprop="endDate" content="{{ meeting.end_date }}"/></li>
                   {% assign count = count | plus: 1 %}
                 {% elsif meetingDate <= currentDate and currentDate <= endDate %}
-                  <li><strong><a href="{{ meeting.url }}">{{ meeting.name}}</a></strong> <br/> {{ meeting.dates }} <br/> {{ meeting.venue }}</li>
+                  <li itemscope itemtype="http://schema.org/Event"><strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong> <br/> {{ meeting.dates }} <br/> <span itemprop="location">{{ meeting.venue }}</span> <meta itemprop="startDate" content="{{meeting.start_date}}"/><meta itemprop="endDate" content="{{ meeting.end_date }}"/></li>
                   {% assign count = count | plus: 1 %}
-                {% endif %} -->
+                {% endif %}
                 <!-- Limit upcoming meetings to the next three meetings -->
-                <!-- {% if count == 3 %}
+                {% if count == 3 %}
                   {% break %}
                 {% endif %}
               {% endfor %}
             </ul>
-        </div> -->
+        </div>
 <p>
 Bioschemas aims to improve data interoperability in life sciences. It does this by encouraging people in life science to use schema.org markup, so that their websites and services contain consistently structured information. This structured information then makes it easier to discover, collate and analyse distributed data.
 </p>
