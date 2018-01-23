@@ -12,45 +12,56 @@ title: Google Summer of Code 2018
 
 <h1>Google Summer of Code 2018</h1>
 
-The Bioschemas community is happy to participate in Google Summer of Code (GSoC) for the first time. Our mentors are active Bioschemas contributors and many of them have successfully participated in the GSoC with other open source communities. We look forward to engaging student in practical projects and together contribute to build the Bioschemas open source community.
+<p>
+The Bioschemas community is happy to participate in Google Summer of Code (GSoC) for the first time. Our mentors are active Bioschemas contributors and many of them have successfully participated in the GSoC with other open source communities. We look forward to engaging students in practical projects and together contribute to build the Bioschemas open source community.
+</p>
 
-This web site gives an overview of project ideas we are offering to students who wish to spend their summer working with us. We are looking for enthusiastic young developers willing to engage and work together with our mentors on the projects listed below.
+<p>
+This web page gives an overview of project ideas we are offering to students who wish to spend their summer working with us. We are looking for enthusiastic developers willing to engage and work together with our mentors on the projects listed below.
+</p>
 
 <h2>About Bioschemas</h2>
-<p><u>Bioschemas</u> aims to improve data interoperability in life sciences. It does this by encouraging people in the life sciences to use <u>schema.org</u> markup, so that their websites and services contain consistently structured information. This structured information then makes it easier to discover, collate and analyse distributed data.</p>
-<p>Schema.org defines a range of properties and types, which describe a wide range of things that can be found on the Web - from concert tickets to automobile repair shops. The Bioschemas community is a global team that generates <u>best practise guidelines</u> for how to use the types and properties defined by schema.org to describe life sciences web pages and services. Where schema.org is unable to cover the more technical aspects of the life sciences, Bioschemas proposes widely deployed terms from the life sciences community that could be incorporated into schema.org.</p>
-<p>The projects proposed within this document are designed to help our community extend its infrastructure and tooling thereby enabling improved data discovery through wider adoption of the markup. The projects can be grouped into tools to support data creation and tools to support data utilization.</p>
+<p><a href="/">Bioschemas</a> aims to improve data discovery and interoperability in the life sciences. It does this by encouraging people in the life sciences to use <a href="https://schema.org/">schema.org</a> markup, so that their websites and services contain consistently structured, machine processable information. This structured information then makes it easier to discover, collate, and analyse distributed data.</p>
+            
+<p>Schema.org defines a range of properties and types, which describe a wide range of things that can be found on the Web - from concert tickets to automobile repair shops. The Bioschemas community is a global team that generates <a href="specifications">best practise guidelines</a> for how to use the types and properties defined by schema.org to describe life sciences web pages and services. Where schema.org is unable to cover the more technical aspects of the life sciences, Bioschemas proposes widely deployed terms from the life sciences community that could be incorporated into schema.org.</p>
+
+<p>The projects proposed on this page are designed to help our community extend its infrastructure and tooling, thereby enabling improved data discovery through wider adoption of the markup. The projects can be grouped into tools to support data creation and tools to support data utilization.</p>
+
 <h3>Organisation Administrators</h3>
-<ul><li>Alasdair Gray</li>
-<li>Rafael Jimenez</li></ul>
+<ul>
+    <li>Alasdair Gray</li>
+    <li>Rafael Jimenez</li>
+</ul>
+            
 <h3>Mentors</h3>
-<ul><li>Dominique Batista</li>
-<li>Niall Beard</li>
-<li>Manuel Bernal Llinares</li>
-<li>Justin Clark-Casey</li>
-<li>Alexander Garcia</li>
-<li>Leyla J Garcia</li>
-<li>Olga Giraldo</li>
-<li>Alasdair Gray</li>
-<li>Federico Lopez</li>
-<li>Kenneth McLeod</li>
-<li>Sarala Wimalaratne</li></ul>
+<ul>
+    <li>Dominique Batista</li>
+    <li>Niall Beard</li>
+    <li>Manuel Bernal Llinares</li>
+    <li>Justin Clark-Casey</li>
+    <li>Alexander Garcia</li>
+    <li>Leyla J Garcia</li>
+    <li>Olga Giraldo</li>
+    <li>Alasdair Gray</li>
+    <li>Federico Lopez</li>
+    <li>Kenneth McLeod</li>
+    <li>Sarala Wimalaratne</li>
+</ul>
 
 <h2>Project Ideas</h2>
 
 <h3>Bioschemas Common Crawl</h3>
 <p>Crawl websites to create a Bioschemas markup dataset that can be used by other projects.</p>
 <h4>Description</h4>
-<p>Various projects (such as Buzzbang and SPARQL over Bioschemas) want to make data across the whole of life sciences easier to find and use. To do this using Bioschemas, they will need a crawl of all the webpages that host Bioschemas markup. Rather than each project producing this crawl separately, it will be more efficient if they can share a common dataset, which may be supplemented with other datasets such as <u>Common Crawl</u>.</p>
+<p>Various projects (such as Buzzbang and SPARQL over Bioschemas) want to make data across the whole of life sciences easier to find and use. To do this using Bioschemas, they will need a crawl of all the webpages that host Bioschemas markup. Rather than each project producing this crawl separately, it will be more efficient if they can share a common dataset, which may be supplemented with other datasets such as <a href="http://commoncrawl.org">Common Crawl</a>.</p>
 <h4>Expected outcomes</h4>
-<ul><li>A crawler for Bioschemas data, likely based upon an existing web crawler such as <u>Apache Nutch</u>.</li>
+<ul><li>A crawler for Bioschemas data, likely based upon an existing web crawler such as <a href="http://nutch.apache.org/">Apache Nutch</a>.</li>
 <li>A downloadable RDF dataset containing the crawl.</li>
 <li>A periodically refreshed crawl.</li></ul>
 <h4>Skills</h4>
 <ul><li>Java</li>
-<li>Devops</li>
-<li>RDF</li>
-<li>Bonus: any experience with Triplestores</li></ul>
+<li>DevOps</li>
+<li>Bonus: RDF and any experience with Triplestores</li></ul>
 <h4>Difficulty</h4>
 <ul><li>Hard</li></ul></ul>
 <h4>Mentors</h4>
@@ -61,7 +72,7 @@ This web site gives an overview of project ideas we are offering to students who
 <p>Even though life sciences database projects have produced many sophisticated query interfaces, simple free text search, in the style of Google's search frontend, is still extremely  popular for finding scientific data. The Buzzbang project looks to leverage Bioschemas markup to provide this kind of simple search interface to return more relevant and interconnected results than is possible with just the analysis of free text. This project encompasses work to improve both the Buzzbang web frontend and the backend operations to create the search index.</p>
 <h4>Expected outcomes</h4>
 <ul><li>Improved backend indexing for Buzzbang, possibly replacing some existing custom crawl scripts with processing of a common crawl produced by the "Bioschemas Common Crawl" project.</li>
-<li>Improved frontend for the Buzzbang project, with display of <u>Google-style rich results</u> generated from Bioschemas markup.</li></ul>
+<li>Improved frontend for the Buzzbang project, with display of <a href="https://developers.google.com/search/docs/guides/mark-up-content">Google-style rich results</a> generated from Bioschemas markup.</li></ul>
 <h4>Skills</h4>
 <ul><li>Java</li>
 <li>Python</li>
@@ -73,13 +84,14 @@ This web site gives an overview of project ideas we are offering to students who
 <ul><li>Hard</li></ul></ul>
 
 <h4>References</h4>
-<ul><li><a href=3D"http://buzzbang.science/" rel=3D"nofollow">http://buzzbang.science/</a></li>
-<li>https://github.com/justinccdev/bsbang-crawler/tree/dev</li>
-<li>https://github.com/justinccdev/bsbang-frontend</li></ul>
+<ul><li><a href="http://buzzbang.science/">http://buzzbang.science/</a></li>
+<li><a href="https://github.com/justinccdev/bsbang-crawler/tree/dev">https://github.com/justinccdev/bsbang-crawler/tree/dev</a></li>
+<li><a href="https://github.com/justinccdev/bsbang-frontend">https://github.com/justinccdev/bsbang-frontend</a></li></ul>
+
 <h3>SPARQL over Bioschemas</h3>
 <p>Implement a SPARQL interface over crawled Bioschemas data</p>
 <h4>Description</h4>
-<p>The <u>Linked Open Data cloud</u> is a vast distributed graph of interconnected structured information, a large proportion of which comes from the life sciences. This information is expressed in a common data structure called the <u>Resource Description Framework</u> (RDF), which enables distributed querying using the <u>SPARQL</u> standard. Bioschemas markup itself can be expressed as RDF. This project would create a SPARQL endpoint that spans crawled Bioschemas data from the "Bioschemas Common Crawl" project, to join it to the Linked Open Data cloud and make this data easier to combine with other information.</p>
+<p>The <a href="http://lod-cloud.net/">Linked Open Data cloud</a> is a vast distributed graph of interconnected structured information, a large proportion of which comes from the life sciences. This information is expressed in a common data structure called the <a href="https://en.wikipedia.org/wiki/Resource_Description_Framework">Resource Description Framework</a> (RDF), which enables distributed querying using the <a href="https://en.wikipedia.org/wiki/SPARQL">SPARQL</a> standard. Bioschemas markup itself can be expressed as RDF. This project would create a SPARQL endpoint that spans crawled Bioschemas data from the "Bioschemas Common Crawl" project, to join it to the Linked Open Data cloud and make this data easier to combine with other information.</p>
 <h4>Skills</h4>
 <ul><li>RDF</li>
 <li>OWL</li>
@@ -92,7 +104,8 @@ This web site gives an overview of project ideas we are offering to students who
 <h4>Difficulty</h4>
 <ul><li>Hard</li></ul>
 <h4>References</h4>
-<ul><li>https://github.com/BioSchemas/bioschemas-nutch-indexer</li></ul></ul>
+<ul><li><a href="https://github.com/BioSchemas/bioschemas-nutch-indexer">https://github.com/BioSchemas/bioschemas-nutch-indexer</a></li></ul></ul>
+
 <h3>Map2Model</h3>
 <p>Automating the generation and publication of Bioschema's specifications from best practise guidelines.</p>
 <h4>Description</h4>
@@ -108,13 +121,13 @@ This web site gives an overview of project ideas we are offering to students who
 <li>Java or Python</li>
 <li>RDF (desirable but not essential)</li></ul>
 <h4>Mentors</h4>
-<ul><li>Alasdair Gray (http://www.macs.hw.ac.uk/~ajg33/)</li>
-<li>Kenneth McLeod (http://www.macs.hw.ac.uk/~kcm)</li></ul>
+<ul><li>Alasdair Gray</li>
+<li>Kenneth McLeod</li></ul>
 <h4>Rate difficulty</h4>
 <ul><li>Medium</li></ul></ul>
 <h4>References</h4>
-<ul><li><u>https://github.com/BioSchemas/map2model</u> </li>
-<li><a href=3D"http://bioschemas.org/specifications/" rel=3D"nofollow">http://bioschemas.org/specifications/</a></li></ul>
+<ul><li><a href="https://github.com/BioSchemas/map2model">https://github.com/BioSchemas/map2model</a> </li>
+<li><a href="http://bioschemas.org/specifications/">http://bioschemas.org/specifications/</a></li></ul>
 
 <h3>Markup Builder</h3>
 <p>A web application for prototyping markup against the Bioschemas profiles.</p>
@@ -155,13 +168,13 @@ Extend the existing system such that:
 <ul><li>Languages: JS/CSS/HTML</li>
 <li>Formats: JSON-LD</li></ul>
 <h4>Mentors</h4>
-<ul><li>Alasdair Gray (http://www.macs.hw.ac.uk/~ajg33/)</li>
+<ul><li>Alasdair Gray</li>
 <li>Leyla Garcia</li>
-<li>Kenneth McLeod (http://www.macs.hw.ac.uk/~kcm/)</li></ul>
+<li>Kenneth McLeod</li></ul>
 <h4>Rate difficulty</h4>
 <ul><li>Medium+</li></ul>
 <h4>References</h4>
-<ul><li><u>https://github.com/HW-SWeL/Validata</u> </li></ul>
+<ul><li><a href="https://github.com/HW-SWeL/Validata">https://github.com/HW-SWeL/Validata</a> </li></ul>
 
 <h3>Bioschemas4JATS</h3>
 <p>How could we have infoboxes describing the content of a scientific publication? </p>
@@ -178,13 +191,13 @@ Extend the existing system such that:
 <li>Basic to medium Python; how to write parsers, basic data wrangling. </li>
 <li>Familiar with github</li></ul>
 <h4>Mentors</h4>
-<ul><li>Alexander Garcia (<u>https://github.com/alexgarciac</u>, <u>https://www.researchgate.net/profile/Alexander_Garcia</u>) </li>
+<ul><li>Alexander Garcia</li>
 <li>Olga Giraldo</li>
 <li>Leyla Jael Garcia </li></ul>
 <h4>Rate difficulty</h4>
 <ul><li>Easy+ </li></ul>
 <h4>References</h4>
-<ul><li>https://jats.nlm.nih.gov/</li></ul>
+<ul><li><a href="https://jats.nlm.nih.gov/">https://jats.nlm.nih.gov/</a></li></ul>
 
 
 
