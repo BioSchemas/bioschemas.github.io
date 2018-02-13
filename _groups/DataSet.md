@@ -33,4 +33,9 @@ objectives:
     'Contribute to increase the number of indexed data repositories via Bioschemas.',
     'Make dataset registries compliant with Bioschemas.'
   ]
+
+specifications:
+  [
+    'Dataset'
+  ]  
 ---

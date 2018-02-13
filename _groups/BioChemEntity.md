@@ -27,4 +27,9 @@ objectives:
     'Describe biological entities using Bioschemas compliant markup so biological types can be more easily indexed by search engines and registries.',
     'Evaluating the issues and benefits about how to work with biological entities in schema.org and Bioschemas'
   ]
+
+types:
+    [
+      'BioChemEntity'
+    ]  
 ---

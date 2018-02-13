@@ -33,4 +33,9 @@ objectives:
     'Evaluate how registries should collect structured metadata exposed by data repositories to facilitate an automatic or semiautomatic update their records and present more consistent descriptions.',
     'Explore how to collect structured metadata for some of the metrics proposed by the ELIXIR data platform.'
   ]
+
+specifications:
+  [
+    'DataCatalog'
+  ]  
 ---

@@ -7,7 +7,7 @@ collection: groups
 active: true
 type: generic
 description: Specification for biological laboratory protocol Type
-lead: [OlgaXimenaGiraldo]
+lead: [Olga Ximena Giraldo]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20labprotocols
 folder: https://drive.google.com/drive/folders/0B0fE3oOZIq44TzFwejFEbE9WdXM
 
@@ -29,4 +29,9 @@ objectives:
     'Describe biological laboratory protocols using Bioschemas compliant markup so protocols can be more easily indexed by search engines and registries.',
     'Evaluating the issues and benefits about how to work with laboratory protocols in schema.org and Bioschemas'
   ]
+
+types:
+    [
+      'LabProtocol'
+    ]    
 ---

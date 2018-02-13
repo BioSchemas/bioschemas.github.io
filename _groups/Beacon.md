@@ -30,4 +30,8 @@ objectives:
     'Automate the ingestion of the beacon service metadata into the Beacon Network'
   ]
 
+specifications:
+  [
+    'Beacon'
+  ]
 ---

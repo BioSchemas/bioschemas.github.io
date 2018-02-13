@@ -33,5 +33,8 @@ objectives:
     'Test the adoption of schema.org around a protein use case involving protein resources.',
     'Evaluating the issues and benefits about how to work with schema.org and Bioschemas'
   ]
-
+specifications:
+  [
+    'Protein', 'ProteinAnnotation', 'ProteinStructure'
+  ]
 ---

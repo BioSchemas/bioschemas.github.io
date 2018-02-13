@@ -32,4 +32,8 @@ objectives:
     'Contribute to contextualise information from data sample registries (eg. Biosamples) and biobank sample repositories (eg. NL Biobank) and Biobank Registries (eg. BBMRI Biobank directory)',
     'Make registries like Biosamples compliant with Bioschemas.'
   ]
+specifications:
+  [  
+    'Sample'
+  ]
 ---
