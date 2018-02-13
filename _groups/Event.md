@@ -1,5 +1,5 @@
 ---
-layout: groups
+layout: group-details
 id: event
 name: Event
 url: /groups/event.html

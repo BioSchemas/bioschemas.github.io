@@ -1,5 +1,5 @@
 ---
-layout: groups_sibs
+layout: group-details
 id: organisation
 name: Organization
 url: /groups/organization.html
