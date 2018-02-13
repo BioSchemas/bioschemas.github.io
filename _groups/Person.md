@@ -1,5 +1,5 @@
 ---
-layout: groups_sibs
+layout: group-details
 id: person
 name: Person
 url: /groups/person.html
