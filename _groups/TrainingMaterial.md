@@ -1,5 +1,5 @@
 ---
-layout: groups_sibs
+layout: group-details
 id: trainingmaterial
 name: Training Material
 url: /groups/trainingmaterial.html
@@ -33,5 +33,5 @@ objectives:
 types:
     [
       'TrainingMaterial'
-    ] 
+    ]
 ---

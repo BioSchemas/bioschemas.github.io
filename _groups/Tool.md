@@ -1,5 +1,5 @@
 ---
-layout: groups_sibs
+layout: group-details
 id: tool
 name: Tool
 url: /groups/tool.html
