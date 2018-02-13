@@ -24,7 +24,7 @@ objectives:
     'This group investigates the required extensions to <a href="http://schema.org">schema.org</a> to support such use case.'
   ]
 
-types:
+specifications:
     [
       'Tool'
     ]

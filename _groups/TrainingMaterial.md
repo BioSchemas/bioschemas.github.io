@@ -30,7 +30,7 @@ objectives:
     'To make it easier to discover, exchange and integrate life science training material information across the internet.'
   ]
 
-types:
+specifications:
     [
       'TrainingMaterial'
     ]
