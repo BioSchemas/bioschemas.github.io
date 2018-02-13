@@ -43,3 +43,6 @@ collections:
   people:
     output: true
     permalink: /:collection/:path/
+  groups:
+    output: true
+    permalink: /:collection/:path/    
