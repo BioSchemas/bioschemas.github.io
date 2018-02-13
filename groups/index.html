@@ -8,44 +8,12 @@ title: BioSchemas Groups
         <div id="main_content_wrap" class="outer">
             <section id="main_content" class="inner">
               <h1>Bioschemas Groups</h1>
-              <p>A list of the teams responsible for creating specifications within the Bioschemas project.</p>
-
-
+              <p>The following groups, responsible for creating specifications within the project, are active within the Bioschemas community:</p>
+              <ul>
               {% for group in site.groups %}
-              <h3>{{group.name}}</h3>
-                <p>{{group.abstract}}</p>
-                <h5>Group Leaders</h5>
-                {% for leader in group.lead %}
-                  {% assign lead-id = "/people/" | append: leader %}
-                  {% assign author = site.people | where:"id", lead-id | first %}
-                  {% if author.homepage or author.github_username or author.orcid %}
-                    <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
-                  {% else %}
-                    <p>{{ author.first-name }} {{ author.last-name }}</p>
-                  {% endif %}
-                {% endfor %}
-                <h5>Objectives</h5>
-                     <ol>
-                     {% for obj in group.objectives %}
-                       <li>{{obj}}</li>
-                     {% endfor %}
-                     </ol>
-                   {% if group.specifications or group.types %}
-                   <h5>Specifications</h5>
-                     <ul>
-                     {% for spec in group.specifications%}
-                       <li><a href="/specifications/{{spec}}/specification/">{{spec}}</a></li>
-                     {% endfor %}
-                     {% for spec in group.types%}
-                       <li><a href="/types/{{spec}}/specification/">{{spec}}</a></li>
-                     {% endfor %}
-                     </ul>
-                   {% endif %}
-                 <br />
-                 <hr />
-                 <br />
+                <li><a href="{{group.url}}">{{group.name}}</a> - {{group.abstract}}</li>
               {% endfor %}
-
+              </ul>
             </section>
         </div>
     </div>
