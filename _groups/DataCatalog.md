@@ -24,7 +24,7 @@ applications: false
 
 # Page attributes
 abstract: 'Most Life sciences data repositories are missing a home page providing information about themselves with consistent structured data that would help search engines and registries to index them.
-Several registries (eg. biosharing, bio.tools, identifiers.org, ...) maintain overlapping efforts to collect certain metadata (eg. title, description, keywords, ...) about “data repositories” (eg. UniProt Knowledgebase, Human Protein Atlas, Protein Data Bank, ...)
+Several registries (eg. biosharing, bio.tools, identifiers.org, ...) maintain overlapping efforts to collect certain metadata (eg. title, description, keywords, ...) about “data repositories” (eg. UniProt Knowledgebase, Human Protein Atlas, Protein Data Bank, ...).
 Most of these registries have a manual curation process
 There is lack of consistency between the metadata collected by these registries'
 objectives:
