@@ -1,77 +1,90 @@
 <!DOCTYPE html>
 <html>
-
-    {% include head.html %}
-
-    <body>
-
-        {% include header.html %}
-        {% include navbar.html %}
-
-        <div class="page-content">
-            <div class="wrapper">
-              <div id="main_content_wrap" class="outer">
-                <section id="main_content" class="inner">
-                    <h1>{{page.name}}</h1>
-                      <p>{{page.abstract}}</p>
-                      <h5>Objectives</h5>
-                         <ol>
-                         {% for obj in page.objectives %}
-                           <li>{{obj}}</li>
-                         {% endfor %}
-                         </ol>
-
-                         <h5>Group Leaders</h5>
-                         {% for leader in page.lead %}
-                           {% assign lead-id = "/people/" | append: leader %}
-                           {% assign author = site.people | where:"id", lead-id | first %}
-                           {% if author.homepage or author.github_username or author.orcid %}
-                             <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
-                             {% else %}
-                               <p>{{ author.first-name }} {{ author.last-name }}</p>
-                             {% endif %}
-                         {% endfor %}
-
-                        <h5>Other group members</h5>
-                        {% assign group-ids = page.id | downcase | split: '/'%}
-                        {% assign authors = site.people | where:"groups", group-ids[2] %}
-                        {% for author in authors %}
-                        {% assign author-id = author.id | split: '/' %}
-                        {% if author.homepage or author.github_username or author.orcid %}
-                        {% unless page.lead contains author-id[2] %}
-                        <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
-                        {% endunless %}
-                        {% else %}
-                        {% unless page.lead contains author-id[2] %}
-                        <p>{{ author.first-name }} {{ author.last-name }}</p>
-                        {% endunless %}
-                        {% endif %}
-                        {% endfor %}
-
-                      {% if page.specifications or page.types %}
-                      <h5>Specifications</h5>
-                        <ul>
-                          {% for spec in page.specifications%}
-                            <li><a href="/specifications/{{spec}}/specification/">{{spec}}</a></li>
-                          {% endfor %}
-                          {% for spec in page.types%}
-                            <li><a href="/types/{{spec}}/specification/">{{spec}}</a></li>
-                          {% endfor %}
-                        </ul>
-                      {% endif %}
-                </section>
-              </div>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main_content_wrap" class="outer">
+               <section id="main_content" class="inner">
+                  <h1>{{page.name}}</h1>
+                  <p>{{page.abstract}}</p>
+                  <h5>Objectives</h5>
+                  <ol>
+                     {% for obj in page.objectives %}
+                     <li>{{obj}}</li>
+                     {% endfor %}
+                  </ol>
+                  <br />                  
+                  <h5>Group Leaders</h5>
+                  <div id="leadTable">
+                     {% for leader in page.lead %}
+                     {% assign lead-id = "/people/" | append: leader %}
+                     {% assign author = site.people | where:"id", lead-id | first %}
+                     {% if author.homepage or author.github_username or author.orcid %}
+                     <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
+                     {% else %}
+                     <p>{{ author.first-name }} {{ author.last-name }}</p>
+                     {% endif %}
+                     {% endfor %}
+                  </div>
+                  <br />                  
+                  <h5>Other group members</h5>
+                  <div id="peopleTable">
+                     {% assign group-ids = page.id | downcase | split: '/'%}
+                     {% assign authors = site.people | where:"groups", group-ids[2] %}
+                     {% for author in authors %}
+                     {% assign author-id = author.id | split: '/' %}
+                     {% if author.homepage or author.github_username or author.orcid %}
+                     {% unless page.lead contains author-id[2] %}
+                     <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
+                     {% endunless %}
+                     {% else %}
+                     {% unless page.lead contains author-id[2] %}
+                     <p>{{ author.first-name }} {{ author.last-name }}</p>
+                     {% endunless %}
+                     {% endif %}
+                     {% endfor %}
+                  </div>
+                  {% if page.specifications or page.types %}
+                  <br />
+                  <h5>Specifications</h5>
+                  <ul>
+                     {% for spec in page.specifications%}
+                     <li><a href="/specifications/{{spec}}/specification/">{{spec}}</a></li>
+                     {% endfor %}
+                     {% for spec in page.types%}
+                     <li><a href="/types/{{spec}}/specification/">{{spec}}</a></li>
+                     {% endfor %}
+                  </ul>
+                  {% endif %}
+               </section>
             </div>
-        </div>
-
-        {% include collections_footer.html %}
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-
-        <script src="/js/scripts.js"></script>
-
-
-    </body>
-
+         </div>
+      </div>
+      <!-- change number columns based on device -->
+      <script type="application/x-javascript">
+         if(navigator.userAgent.match(/android/i)) {
+             document.getElementById('peopleTable').style.columnCount = 1;
+             document.getElementById('leadTable').style.columnCount = 1;             
+         } else if(navigator.userAgent.match(/phone/i)) {
+             document.getElementById('peopleTable').style.columnCount = 1; 
+             document.getElementById('leadTable').style.columnCount = 1;                             
+         } else if(navigator.userAgent.match(/tablet/i)) {
+             document.getElementById('peopleTable').style.columnCount = 1;        
+             document.getElementById('leadTable').style.columnCount = 1;                          
+         } else if(navigator.userAgent.match(/ipad/i)) {
+             document.getElementById('peopleTable').style.columnCount = 1;           
+             document.getElementById('leadTable').style.columnCount = 1;                                     
+         } else {
+             document.getElementById('peopleTable').style.columnCount = 4;
+             document.getElementById('leadTable').style.columnCount = 4;                          
+         }
+      </script>      
+      {% include collections_footer.html %}
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+      <script src="/js/scripts.js"></script>
+   </body>
 </html>
