@@ -14,22 +14,40 @@
                 <section id="main_content" class="inner">
                     <h1>{{page.name}}</h1>
                       <p>{{page.abstract}}</p>
-                      <h5>Group Leaders</h5>
-                      {% for leader in page.lead %}
-                        {% assign lead-id = "/people/" | append: leader %}
-                        {% assign author = site.people | where:"id", lead-id | first %}
-                        {% if author.homepage or author.github_username or author.orcid %}
-                          <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
-                          {% else %}
-                            <p>{{ author.first-name }} {{ author.last-name }}</p>
-                          {% endif %}
-                      {% endfor %}
                       <h5>Objectives</h5>
                          <ol>
                          {% for obj in page.objectives %}
                            <li>{{obj}}</li>
                          {% endfor %}
                          </ol>
+
+                         <h5>Group Leaders</h5>
+                         {% for leader in page.lead %}
+                           {% assign lead-id = "/people/" | append: leader %}
+                           {% assign author = site.people | where:"id", lead-id | first %}
+                           {% if author.homepage or author.github_username or author.orcid %}
+                             <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
+                             {% else %}
+                               <p>{{ author.first-name }} {{ author.last-name }}</p>
+                             {% endif %}
+                         {% endfor %}
+
+                        <h5>Other group members</h5>
+                        {% assign group-ids = page.id | downcase | split: '/'%}
+                        {% assign authors = site.people | where:"groups", group-ids[2] %}
+                        {% for author in authors %}
+                        {% assign author-id = author.id | split: '/' %}
+                        {% if author.homepage or author.github_username or author.orcid %}
+                        {% unless page.lead contains author-id[2] %}
+                        <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
+                        {% endunless %}
+                        {% else %}
+                        {% unless page.lead contains author-id[2] %}
+                        <p>{{ author.first-name }} {{ author.last-name }}</p>
+                        {% endunless %}
+                        {% endif %}
+                        {% endfor %}
+
                       {% if page.specifications or page.types %}
                       <h5>Specifications</h5>
                         <ul>
