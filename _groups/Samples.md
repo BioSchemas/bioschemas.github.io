@@ -1,8 +1,8 @@
 ---
 layout: group-details
-id: sample
-name: Sample
-path: sample.html
+id: samples
+name: Samples
+path: samples.html
 collection: groups
 active: true
 type: biological

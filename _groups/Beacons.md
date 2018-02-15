@@ -1,8 +1,8 @@
 ---
 layout: group-details
-id: beacon
-name: Beacon
-path: beacon.html
+id: beacons
+name: Beacons
+path: beacons.html
 collection: groups
 active: true
 type: generic
