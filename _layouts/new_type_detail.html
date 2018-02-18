@@ -13,46 +13,50 @@
                   <h3>Contributors</h3>
                   <p>The following people have been involved in the creation of this specification document.</p>
                   <h6>Group Leader(s)</h6>
-                  {% assign group-id = "/groups/" | append: page.group %}
-                  {% assign group = site.groups | where:"id", group-id %}
-                  {% for g in group %}
-                  {{ g.lead | size }}
-                  {{ g.name | size }}
-                  {% assign size = g.lead | size %}
-                  {% if size == 0 %}
+                  <div id="leadTable">
+                    {% assign group-id = "/groups/" | append: page.group %}
+                    {% assign group = site.groups | where:"id", group-id %}
+                    {% for g in group %}
+                    {{ g.lead | size }}
+                    {{ g.name | size }}
+                    {% assign size = g.lead | size %}
+                    {% if size == 0 %}
                     <p>No team leaders currently specified.</p>
-                  {% endif %}
-                  {% for leader in g.lead %}
-                  {% assign lead-id = "/people/" | append: leader %}
-                  {% assign author = site.people | where:"id", lead-id | first %}
-                  {% if author.homepage or author.github_username or author.orcid %}
-                  <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
-                  {% else %}
-                  <p>{{ author.first-name }} {{ author.last-name }}</p>
-                  {% endif %}
-                  {% endfor %}
-                  {% endfor %}
+                    {% endif %}
+                    {% for leader in g.lead %}
+                    {% assign lead-id = "/people/" | append: leader %}
+                    {% assign author = site.people | where:"id", lead-id | first %}
+                    {% if author.homepage or author.github_username or author.orcid %}
+                    <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
+                    {% else %}
+                    <p>{{ author.first-name }} {{ author.last-name }}</p>
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+                  </div>
                   <h6>Other team members</h6>
-                  {% assign group-id = page.group | downcase %}
-                  {% assign authors = site.people | where:"groups", group-id %}
-                  {% assign size = authors | size %}
-                  {% if size == 0 %}
+                  <div id="peopleTable">
+                    {% assign group-id = page.group | downcase %}
+                    {% assign authors = site.people | where:"groups", group-id %}
+                    {% assign size = authors | size %}
+                    {% if size == 0 %}
                     <p>No team members currently specified.</p>
-                  {% endif %}
-                  {% for author in authors %}
-                  {% assign author-id = author.id | split: '/' %}
-                  {% for g in group %}
-                  {% if author.homepage or author.github_username or author.orcid %}
-                  {% unless g.lead contains author-id[2] %}
-                  <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
-                  {% endunless %}
-                  {% else %}
-                  {% unless g.lead contains author-id[2] %}
-                  <p>{{ author.first-name }} {{ author.last-name }}</p>
-                  {% endunless %}
-                  {% endif %}
-                  {% endfor %}
-                  {% endfor %}
+                    {% endif %}
+                    {% for author in authors %}
+                    {% assign author-id = author.id | split: '/' %}
+                    {% for g in group %}
+                    {% if author.homepage or author.github_username or author.orcid %}
+                    {% unless g.lead contains author-id[2] %}
+                    <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
+                    {% endunless %}
+                    {% else %}
+                    {% unless g.lead contains author-id[2] %}
+                    <p>{{ author.first-name }} {{ author.last-name }}</p>
+                    {% endunless %}
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+                  </div>
 
                   <h3>{{page.spec_type}}</h3>
                   {%for branch_name in page.hierarchy reversed%}
@@ -133,6 +137,25 @@
             </div>
          </div>
       </div>
+      <!-- change number columns based on device -->
+      <script type="application/x-javascript">
+         if(navigator.userAgent.match(/android/i)) {
+             document.getElementById('peopleTable').style.columnCount = 1;
+             document.getElementById('leadTable').style.columnCount = 1;
+         } else if(navigator.userAgent.match(/phone/i)) {
+             document.getElementById('peopleTable').style.columnCount = 1;
+             document.getElementById('leadTable').style.columnCount = 1;
+         } else if(navigator.userAgent.match(/tablet/i)) {
+             document.getElementById('peopleTable').style.columnCount = 1;
+             document.getElementById('leadTable').style.columnCount = 1;
+         } else if(navigator.userAgent.match(/ipad/i)) {
+             document.getElementById('peopleTable').style.columnCount = 1;
+             document.getElementById('leadTable').style.columnCount = 1;
+         } else {
+             document.getElementById('peopleTable').style.columnCount = 4;
+             document.getElementById('leadTable').style.columnCount = 4;
+         }
+      </script>
       {% include footer.html %}
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
