@@ -14,15 +14,8 @@
                   <p>The following people have been involved in the creation of this specification document.</p>
                   <h6>Group Leader(s)</h6>
                   <div id="leadTable">
-                    {% assign group-id = "/groups/" | append: page.group %}
-                    {% assign group = site.groups | where:"id", group-id %}
+                    {% assign group = site.groups | where:"identifier", page.group %}
                     {% for g in group %}
-                    {{ g.lead | size }}
-                    {{ g.name | size }}
-                    {% assign size = g.lead | size %}
-                    {% if size == 0 %}
-                    <p>No team leaders currently specified.</p>
-                    {% endif %}
                     {% for leader in g.lead %}
                     {% assign lead-id = "/people/" | append: leader %}
                     {% assign author = site.people | where:"id", lead-id | first %}
@@ -30,18 +23,15 @@
                     <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
                     {% else %}
                     <p>{{ author.first-name }} {{ author.last-name }}</p>
-                    {% endif %}
+                    {% endif
+                    {% else %}
+                    <p>No team leaders currently specified.</p>
                     {% endfor %}
                     {% endfor %}
                   </div>
                   <h6>Other team members</h6>
                   <div id="peopleTable">
-                    {% assign group-id = page.group | downcase %}
-                    {% assign authors = site.people | where:"groups", group-id %}
-                    {% assign size = authors | size %}
-                    {% if size == 0 %}
-                    <p>No team members currently specified.</p>
-                    {% endif %}
+                    {% assign authors = site.people | where:"groups", page.group %}
                     {% for author in authors %}
                     {% assign author-id = author.id | split: '/' %}
                     {% for g in group %}
@@ -54,6 +44,8 @@
                     <p>{{ author.first-name }} {{ author.last-name }}</p>
                     {% endunless %}
                     {% endif %}
+                    {% else %}
+                    <p>No team members currently specified.</p>
                     {% endfor %}
                     {% endfor %}
                   </div>
