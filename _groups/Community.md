@@ -1,6 +1,6 @@
 ---
 layout: group-details
-id: community
+identifier: community
 name: Community
 path: community.html
 collection: groups

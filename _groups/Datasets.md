@@ -1,8 +1,8 @@
 ---
 layout: group-details
-id: data
-name: Dataset
-path: dataset.html
+identifier: data
+name: Datasets
+path: datasets.html
 collection: groups
 active: true
 type: generic
@@ -36,6 +36,6 @@ objectives:
 
 specifications:
   [
-    'Dataset'
+    'Dataset', 'DataRecord'
   ]  
 ---

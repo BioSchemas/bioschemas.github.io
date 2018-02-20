@@ -1,8 +1,8 @@
 ---
 layout: group-details
-id: datarepository
-name: Data Catalog
-path: datarepository.html
+identifier: datarepositories
+name: Data Repositories
+path: datarepositories.html
 collection: groups
 active: true
 type: generic

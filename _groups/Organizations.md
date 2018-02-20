@@ -1,8 +1,8 @@
 ---
 layout: group-details
-id: organisation
-name: Organization
-url: /groups/organization.html
+identifier: organizations
+name: Organizations
+path: organizations.html
 collection: groups
 active: false
 type: generic
@@ -18,12 +18,15 @@ spec-versions: [
 ]
 
 # Page attributes
-abstract: 'The Bioschemas Organization Group develops and maintains a community specification for describing life science organizations.'
+abstract: 'The Bioschemas Organizations Group develops and maintains a community specification for describing life science organizations.'
 objectives:
   [
     'To develop a common schema to facilitate description and dissemination of life science organizations as an extension of <a href="http://schema.org/">schema.org</a>.',
     'To create a specification including a metadate schema, minimum information guidelines, recommended vocabularies as well as documentation and examples about how to use the schema.',
     'To engage the community interested to describe file science organizations to participate and shape the specification.'
   ]
-
+types:
+    [
+      'Organization'
+    ]
 ---

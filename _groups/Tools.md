@@ -1,8 +1,8 @@
 ---
 layout: group-details
-id: tool
-name: Tool
-url: /groups/tool.html
+identifier: tools
+name: Tools
+path: tools.html
 collection: groups
 active: false
 type: generic

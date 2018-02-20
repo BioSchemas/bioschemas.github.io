@@ -1,8 +1,8 @@
 ---
 layout: group-details
-id: phenotype
-name: Phenotype
-path: phenotype.html
+identifier: phenotypes
+name: Phenotypes
+path: phenotypes.html
 collection: groups
 active: true
 type: biological

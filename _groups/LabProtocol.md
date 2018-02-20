@@ -1,8 +1,8 @@
 ---
 layout: group-details
-id: labprotocol
-name: Laboratory Protocol
-path: labprotocol.html
+identifier: labprotocols
+name: Laboratory Protocols
+path: labprotocols.html
 collection: groups
 active: true
 type: generic

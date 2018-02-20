@@ -1,8 +1,8 @@
 ---
 layout: group-details
-id: trainingmaterial
-name: Training Material
-url: /groups/trainingmaterial.html
+identifier: trainingmaterials
+name: Training Materials
+path: trainingmaterials.html
 collection: groups
 active: true
 type: generic
@@ -22,7 +22,7 @@ adoption: true
 applications: true
 
 # Page attributes
-abstract: 'The Bioschemas Training Material Group develops and maintains a community specification for describing training materials in biosciences available on the internet.'
+abstract: 'The Bioschemas Training Materials Group develops and maintains a community specification for describing training materials in biosciences available on the internet.'
 objectives:
   [
     'To develop a common schema to facilitate the description and dissemination of life science training material, using <a href="http://schema.org/">schema.org</a>.',
@@ -32,6 +32,6 @@ objectives:
 
 specifications:
     [
-      'TrainingMaterial'
+      'Course', 'TrainingMaterial'
     ]
 ---

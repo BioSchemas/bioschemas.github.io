@@ -1,6 +1,6 @@
 ---
 layout: group-details
-id: samples
+identifier: samples
 name: Samples
 path: samples.html
 collection: groups

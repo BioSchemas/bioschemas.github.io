@@ -1,8 +1,8 @@
 ---
 layout: group-details
-id: protein
-name: Protein
-path: protein.html
+identifier: proteins
+name: Proteins
+path: proteins.html
 collection: groups
 active: true
 type: biological

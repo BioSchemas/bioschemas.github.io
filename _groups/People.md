@@ -1,8 +1,8 @@
 ---
 layout: group-details
-id: person
-name: Person
-url: /groups/person.html
+identifier: people
+name: People
+path: people.html
 collection: groups
 active: false
 type: generic
@@ -18,11 +18,15 @@ spec-versions: [
 ]
 
 # Page attributes
-abstract: 'The Bioschemas Person Group develops and maintains a community specification for describing life science people profiles.'
+abstract: 'Develops and maintains a community specification for describing life science people profiles.'
 objectives:
   [
     'To develop a common schema to facilitate description and dissemination of life science people profiles as an extension of <a href="http://schema.org/">schema.org</a>.',
     'To create a specification including a metadata schema, minimum information guidelines, recommended vocabularies as well as documentation and examples about how to use the schema.',
     'To engage the community interested to describe file science people profiles to participate and shape the specification.'
   ]
+types:
+    [
+      'Person'
+    ]   
 ---

@@ -1,6 +1,6 @@
 ---
 layout: group-details
-id: validation
+identifier: validation
 name: Validation
 path: validation.html
 collection: groups

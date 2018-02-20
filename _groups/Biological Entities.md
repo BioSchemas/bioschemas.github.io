@@ -1,7 +1,8 @@
 ---
 layout: group-details
-name: BioChem Entity
-path: biologicalentity.html
+identifier: bioentities
+name: Biological Entities
+path: biologicalentities.html
 collection: groups
 active: true
 type: generic

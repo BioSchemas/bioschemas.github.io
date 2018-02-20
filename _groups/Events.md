@@ -1,8 +1,8 @@
 ---
 layout: group-details
-id: event
-name: Event
-url: /groups/event.html
+identifier: events
+name: Events
+path: events.html
 collection: groups
 active: false
 type: generic
