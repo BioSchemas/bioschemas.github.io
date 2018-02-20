@@ -6,7 +6,7 @@ last-name: Taylor
 collection: people
 affiliation:
 homepage:
-github_username: 
+github_username:
 orcid:
-groups: [trainingmaterial, community]
+groups: [trainingmaterials, community]
 ---

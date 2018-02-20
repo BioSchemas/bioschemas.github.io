@@ -6,7 +6,7 @@ last-name: Velek
 collection: people
 affiliation:
 homepage:
-github_username: 
+github_username:
 orcid:
-groups: [event, community]
+groups: [events, community]
 ---

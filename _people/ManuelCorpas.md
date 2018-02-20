@@ -6,7 +6,7 @@ last-name: Corpas
 collection: people
 affiliation:
 homepage:
-github_username: 
+github_username:
 orcid:
-groups: [event]
+groups: [events]
 ---

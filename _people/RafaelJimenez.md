@@ -8,5 +8,5 @@ affiliation:
 homepage:
 github_username:
 orcid:
-groups: [event, organisation, person, trainingmaterial, standard, tool, community, data, datarepositories]
+groups: [events, organizations, people, trainingmaterials, standards, tools, community, data, datarepositories]
 ---

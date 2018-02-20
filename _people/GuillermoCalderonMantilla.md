@@ -8,5 +8,5 @@ affiliation:
 homepage:
 github_username: guicalman
 orcid:
-groups: [trainingmaterial, data, datarepositories, standard, tool, community, validation]
+groups: [trainingmaterials, data, datarepositories, standards, tools, community, validation]
 ---

@@ -6,7 +6,7 @@ last-name: Johnson
 collection: people
 affiliation:
 homepage:
-github_username: 
+github_username:
 orcid:
-groups: [event, trainingmaterial]
+groups: [events, trainingmaterials]
 ---

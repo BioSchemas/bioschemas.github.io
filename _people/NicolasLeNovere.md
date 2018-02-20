@@ -8,5 +8,5 @@ affiliation:
 homepage:
 github_username: lenov
 orcid:
-groups: [data, standard]
+groups: [data, standards]
 ---

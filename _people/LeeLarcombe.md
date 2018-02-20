@@ -6,7 +6,7 @@ last-name: Larcombe
 collection: people
 affiliation:
 homepage:
-github_username: 
+github_username:
 orcid:
-groups: [trainingmaterial]
+groups: [trainingmaterials]
 ---

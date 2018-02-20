@@ -6,7 +6,7 @@ last-name: Ison
 collection: people
 affiliation:
 homepage:
-github_username: 
+github_username:
 orcid:
-groups: [tool]
+groups: [tools]
 ---

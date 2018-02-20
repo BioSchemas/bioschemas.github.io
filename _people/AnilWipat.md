@@ -6,7 +6,7 @@ last-name: Wipat
 collection: people
 affiliation:
 homepage:
-github_username: 
+github_username:
 orcid:
-groups: [data, datarepositories, standard, tool, validation]
+groups: [data, datarepositories, standards, tools, validation]
 ---

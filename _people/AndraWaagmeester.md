@@ -8,5 +8,5 @@ affiliation:
 homepage:
 github_username:
 orcid:
-groups: [beacons, biologicalentity, community, data, datarepositories, event, labprotocols, organisation, person, phenotypes, proteinannotations, samples, standard, tool, trainingmaterial, validation]
+groups: [beacons, bioentities, community, data, datarepositories, events, labprotocols, organizations, people, phenotypes, proteins, samples, standards, tools, trainingmaterials, validation]
 ---

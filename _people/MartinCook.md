@@ -8,5 +8,5 @@ affiliation:
 homepage:
 github_username: martin-nc
 orcid:
-groups: [event, organisation, person, trainingmaterial, tool, community]
+groups: [events, organizations, people, trainingmaterials, tools, community]
 ---

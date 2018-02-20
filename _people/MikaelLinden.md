@@ -6,7 +6,7 @@ last-name: Linden
 collection: people
 affiliation:
 homepage:
-github_username: 
+github_username:
 orcid:
-groups: [person]
+groups: [people]
 ---

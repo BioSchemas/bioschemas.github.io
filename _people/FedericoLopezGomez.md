@@ -8,5 +8,5 @@ affiliation:
 homepage:
 github_username: ficolo
 orcid:
-groups: [event, tool, community, validation]
+groups: [events, tools, community, validation]
 ---

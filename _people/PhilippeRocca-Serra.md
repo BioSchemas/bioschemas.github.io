@@ -8,5 +8,5 @@ affiliation: University of Oxford
 homepage:
 github_username:
 orcid:
-groups: [event, organisation, person, trainingmaterial, data, datarepositories, standard, tool, community, biologicalentity, phenotypes, samples]
+groups: [events, organizations, people, trainingmaterials, data, datarepositories, standards, tools, community, bioentities, phenotypes, samples]
 ---

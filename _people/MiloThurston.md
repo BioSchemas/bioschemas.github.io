@@ -6,7 +6,7 @@ last-name: Thurston
 collection: people
 affiliation:
 homepage:
-github_username: 
+github_username:
 orcid:
-groups: [standard]
+groups: [standards]
 ---

@@ -8,5 +8,5 @@ affiliation: PDBe, EMBL-EBI
 homepage: http://www.ebi.ac.uk/about/people/sameer-velankar
 github_username:
 orcid: 0000-0002-8439-5964
-groups: [biologicalentity, datarepositories, proteinannotations]
+groups: [bioentities, datarepositories, proteins]
 ---

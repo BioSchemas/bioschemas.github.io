@@ -8,5 +8,5 @@ affiliation: Earlham Institute, UK
 homepage: http://www.earlham.ac.uk/carlos-horro
 github_username: CarlosHorro
 orcid: 0000-0002-0386-6390
-groups: [biologicalentity, phenotypes, samples]
+groups: [bioentities, phenotypes, samples]
 ---

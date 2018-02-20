@@ -8,5 +8,5 @@ affiliation:
 homepage:
 github_username:
 orcid:
-groups: [biologicalentity, protein,proteinannotations,proteinstructure]
+groups: [bioentities, proteins]
 ---

@@ -8,5 +8,5 @@ affiliation: University of Oxford, UK
 homepage: http://www.oerc.ox.ac.uk/people/susanna-assunta-sansone
 github_username:
 orcid:
-groups: [event, organisation, person, trainingmaterial, data, datarepositories, standard, tool, community]
+groups: [events, organizations, people, trainingmaterials, data, datarepositories, standards, tools, community]
 ---

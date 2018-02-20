@@ -8,5 +8,5 @@ affiliation:
 homepage:
 github_username: VickySBio
 orcid:
-groups: [event, trainingmaterial, data, datarepositories, standard, tool, community, validation]
+groups: [events, trainingmaterials, data, datarepositories, standards, tools, community, validation]
 ---

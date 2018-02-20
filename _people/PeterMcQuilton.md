@@ -8,5 +8,5 @@ affiliation: University of Oxford
 homepage:
 github_username: Drosophilic
 orcid:
-groups: [event, trainingmaterial, data, datarepositories, standard, tool, community, validation]
+groups: [events, trainingmaterials, data, datarepositories, standards, tools, community, validation]
 ---

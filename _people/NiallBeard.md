@@ -8,5 +8,5 @@ affiliation: University of Manchester
 homepage:
 github_username: njall
 orcid:
-groups: [data, event, person, standard, tool, trainingmaterial]
+groups: [data, events, people, standards, tools, trainingmaterials]
 ---
