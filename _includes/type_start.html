@@ -7,13 +7,11 @@
 <label for="tab1">Description</label>
 
 <input id="tab2" type="radio" name="tabs">
-<label for="tab2">Hierarchy</label>
+<label for="tab2">Contributors</label>
 
 <input id="tab3" type="radio" name="tabs">
-<label for="tab3">Contributors</label>
+<label for="tab3">Links</label>
 
-<input id="tab4" type="radio" name="tabs">
-<label for="tab4">Links</label>
 
 
 <section id="contributors" class="tabs">
@@ -58,7 +56,11 @@
 </div>
 </section>
 
-<section id="hierarchy" class="tabs">
+<section id="description" class="tabs">
+<!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
+<h3>Description</h3>
+<p>{{page.description}}</p>
+<br />
 <h3>Schema.org hierarchy</h3>
 This is a new {{page.spec_type}} that fits into the schema.org hierarchy as follows:
 <br />
@@ -73,12 +75,6 @@ This is a new {{page.spec_type}} that fits into the schema.org hierarchy as foll
 &gt;
 <a href="#">{{page.name}}</a>
 {%endif%}
-</section>
-
-<section id="description" class="tabs">
-<!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
-<h3>Description</h3>
-<p>{{page.description}}</p>
 </section>
 
 <section id="links" class="tabs">

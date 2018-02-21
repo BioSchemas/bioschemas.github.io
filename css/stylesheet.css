@@ -1358,8 +1358,7 @@ input:checked + label {
 }
 
 #tab1:checked ~ #description,
-#tab2:checked ~ #hierarchy,
-#tab3:checked ~ #contributors,
-#tab4:checked ~ #links {
+#tab2:checked ~ #contributors,
+#tab3:checked ~ #links {
   display: block;
 }
