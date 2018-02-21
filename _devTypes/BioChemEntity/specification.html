@@ -20,12 +20,17 @@ subtitle: Bioschemas specification describing a physical entity
 use_cases_url: err_404
 version: '0.1'
 
+bsc: #0B794B;
+pending: #0000CC;
+external: #454547;
+
 ---
 
 
 <!DOCTYPE HTML>
 <html>
    {% include head.html %}
+
    <body>
       {% include header.html %}
       {% include navbar.html %}
@@ -46,18 +51,18 @@ version: '0.1'
                    <tbody>
                      <tr class="new_props_sdo">
                         <td colspan="3">
-                           New properties for <a href="#">{{page.name}}</a> (pending schema.org integration).
+                           New properties for <a style="color: #0B794B;" href="#">{{page.name}}</a> (pending schema.org integration).
                         </td>
                      </tr>
-                     <tr id"conains">
-                       <th>contains</th>
+                     <tr id="contains">
+                       <th style="color: #0B794B;">contains</th>
                        <td>
-                         <a href="#">BioChemEntity</a><br><a href="http://schema.org/URL">URL</a>
+                         <a style="color: #0B794B;" href="#">BioChemEntity</a><br><a href="http://schema.org/URL">URL</a>
                        </td>
                        <td><strong>Bioschemas</strong>: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: isContainedIn.</em></td>
                      </tr>
-                     <tr>
-                       <th id="hasRepresentation">hasRepresentation</th>
+                     <tr id="hasRepresentation">
+                       <th style="color: #0B794B;">hasRepresentation</th>
                        <td>
                          <a href="http://schema.org/PropertyValue">PropertyValue</a><br><a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
                        </td>
@@ -66,14 +71,14 @@ version: '0.1'
                        </td>
                      </tr>
                      <tr id="isContainedIn">
-                       <th>isContainedIn</th>
+                       <th style="color: #0B794B;">isContainedIn</th>
                        <td>
-                         <a href="#">BioChemEntity</a><br><a href="http://schema.org/URL">URL</a>
+                         <a style="color: #0B794B;" href="#">BioChemEntity</a><br><a href="http://schema.org/URL">URL</a>
                        </td>
                        <td><strong>Bioschemas</strong>: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: containedIn.</em></td>
                      </tr>
                      <tr>
-                       <th><a href="http://schema.org/location">location</a></th>
+                       <th><a style="color: #0B794B;" href="http://schema.org/location">location</a></th>
                        <td>
                          <a href="http://schema.org/Place">Place</a><br /><a href="http://schema.org/PostalAddress">PostalAddress</a><br />
                          <a href="http://schema.org/PropertyValue">PropertyValue</a><br /><a href="http://schema.org/Text">Text</a><br />
@@ -86,8 +91,8 @@ version: '0.1'
                          <u>Note</u>: The list of Expected Types has been extended as schema.org/location only has Place, PostalAddress and Text.
                        </td>
                      </tr>
-                     <tr>
-                       <th>preferredLabel</th>
+                     <tr id="preferredLabel">
+                       <th style="color: #0B794B;">preferredLabel</th>
                        <td>
                          <a href="http://schema.org/Text">Text</a>
                        </td>
@@ -108,7 +113,7 @@ version: '0.1'
                          This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax -
                          the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those
                          defined externally. <br />
-                         <strong>Bioschemas</strong>:  As BioChemEntity is a generic wrapper for entitties in Life Sciences, customized types (a.k.a. profiles in Bioschemas)
+                         <strong>Bioschemas</strong>:  As BioChemEntity is a generic wrapper for entities in Life Sciences, customized types (a.k.a. profiles in Bioschemas)
                          should specify what ontologies and terms should be used.
                        </td>
                      </tr>
@@ -161,12 +166,12 @@ version: '0.1'
                        </td>
                      </tr>
                      <tr>
-                       <th><a href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
+                       <th><a style="color: #0B794B;" href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
                        <td>
                          {% if status == revision %}
-                         <a href="/devTypes/DataRecord/specification/">DataRecord</a>
+                         <a style="color: #0B794B;" href="/devTypes/DataRecord/specification/">DataRecord</a>
                          {% else %}
-                         <a href="/specifications/DataRecord/specification/">DataRecord</a>
+                         <a style="color: #0B794B;" href="/specifications/DataRecord/specification/">DataRecord</a>
                          {% endif %}<br /><a href="http://schema.org/URL">URL</a>
                        </td>
                        <td>
@@ -204,7 +209,7 @@ version: '0.1'
                        </td>
                      </tr>
                      <tr>
-                       <th><a class="pending" style="color: blue;" href="http://pending.schema.org/subjectOf">subjectOf</a></th>
+                       <th><a style="color: #0000CC;" href="http://pending.schema.org/subjectOf">subjectOf</a></th>
                        <td>
                          <a href="http://schema.org/CreativeWork">CreativeWork</a><br /><a href="http://schema.org/Event">Event</a>
                        </td>
