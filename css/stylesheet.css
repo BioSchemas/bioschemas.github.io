@@ -1307,3 +1307,59 @@ table.bioschemas_spec_list td a img{
     text-decoration: none;
     border-bottom: dotted 1px #990000;
 }
+
+
+/*******************************************************************************
+Tabs at top of profile
+*******************************************************************************/
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section.tabs {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+  min-height: 300px;
+}
+
+input {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+}
+
+label:before {
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+input:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid green;
+  border-bottom: 1px solid #fff;
+}
+
+#tab1:checked ~ #description,
+#tab2:checked ~ #hierarchy,
+#tab3:checked ~ #contributors,
+#tab4:checked ~ #links {
+  display: block;
+}

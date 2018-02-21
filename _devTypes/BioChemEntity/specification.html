@@ -1,297 +1,241 @@
 ---
-group: bioentities
-description: 'A BioChemEntity is any object that exists in the physical world and
-  cannot be better represented with any other existing type in schema.org. In order
-  to specify the nature of this physical entity, additionalProperty must be used to
-  specify the nature/type of this physical entity. For instance, http://semanticscience.org/resource/SIO_010043
-  can be used to refer to a protein.
-
-
-  Bioschemas usage
-
-
-  A BioChemEntity is a flexible and extensible wrapper for Life Sciences entities.
-  Representations of physical entities in Life Sciences are usually recorded in datasets;
+description: A BioChemEntity is any object that exists in the physical world and
+  cannot be better represented with any other existing type in schema.org.
+  <br />
+  BioChemEntity is a flexible and extensible wrapper for Life Sciences entities.
+  <strike>Representations of physical entities in Life Sciences are usually recorded in datasets;
   the link to a dataset should be done via properties. A particular Life Sciences
   entity, refer to as a profile in Bioschemas, will customize BioChemEntity by modifying
   the marginality, cardinality and ontologies used. For instance, a protein profile
   would recommend pointing to an organism a part of the minimum information, but not
-  necessarily to a sample or disease.'
-edit_url: https://github.com/BioSchemas/specifications/tree/master/BioChemEntity/specification.html
-g_mapping_file: BioChemEntity Mapping Simp
-gh_examples: https://github.com/BioSchemas/specifications/tree/master/BioChemEntity/examples
-gh_folder: https://github.com/BioSchemas/specifications/tree/master/BioChemEntity
-gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20BioChemEntity
+  necessarily to a sample or disease.</strike>
 hierarchy:
 - Thing
-layout: new_type_detail
+group: bioentities
 name: BioChemEntity
 parent_type: Thing
-properties:
-- bsc_dec: Bioschemas usage.   As BioChemEntity is a generic wrapper for entitties
-    in Life Sciences, customized types (a.k.a. profiles in Bioschemas) should specify
-    what ontologies and terms should be used. SIO (http://bioportal.bioontology.org/ontologies/SIO)
-    covers a wide range of concepts in Life Sciences and accept suggestions about
-    additions (see https://github.com/micheldumontier/semanticscience/issues), other
-    ontologies are possible as well. Customized types should be as specific as possible.
-    For instance, http://semanticscience.org/resource/SIO_010043 would work for a
-    protein while http://semanticscience.org/resource/SIO_000985 for a gene coding
-    a protein (which is more specific than gene as described by http://semanticscience.org/resource/SIO_010035).
-    If no better optoin, a generic term could be used as well (like http://semanticscience.org/resource/SIO_000004
-    or so).
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: 'Yes'
-    - name: as it better suits to the concept described by this entity
-  expected_type:
-  - URL
-  marginality: Minimum
-  name: additionalType
-  parent: Thing
-  sdo_desc: An additional type for the item, typically used for adding more specific
-    types from external vocabularies in microdata syntax. This is a relationship between
-    something and a class that the thing is in. In RDFa syntax, it is better to use
-    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
-    tools may have only weaker understanding of extra types, in particular those defined
-    externally.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Recommended
-  name: alternateName
-  parent: Thing
-  sdo_desc: An alias for the item.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Recommended
-  name: description
-  parent: Thing
-  sdo_desc: A description of the item.
-- bsc_dec: 'Recommendation: identifiers.org whenever possible'
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - PropertyValue
-  - ''
-  - Text
-  - ''
-  - URL
-  marginality: Minimum
-  name: identifier
-  parent: Thing
-  sdo_desc: The identifier property represents any kind of identifier for any kind
-    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
-    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
-    many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background
-    notes</a> for more details.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - ImageObject
-  - ''
-  - URL
-  marginality: Optional
-  name: image
-  parent: Thing
-  sdo_desc: An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a>
-    or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.
-- bsc_dec: Bioschemas usage.   Link via Record or URL to the main Record representing
-    this entity in a dataset
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - CreativeWork
-  - ''
-  - URL
-  marginality: Recommended
-  name: mainEntityOfPage
-  parent: Thing
-  sdo_desc: Indicates a page (or other CreativeWork) for which this thing is the main
-    entity being described. See <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background
-    notes</a> for details.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Recommended
-  name: name
-  parent: Thing
-  sdo_desc: The name of the item.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - URL
-  marginality: Optional
-  name: sameAs
-  parent: Thing
-  sdo_desc: URL of a reference Web page that unambiguously indicates the item's identity.
-    E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
-- bsc_dec: Bioschemas usage.   Link to any resource other than the Record and the
-    official Webpage, for instance a Wikipedia page.
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - URL
-  marginality: Recommended
-  name: url
-  parent: Thing
-  sdo_desc: URL of the item.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: 'Yes'
-    - name: as better suits to describe this additional property
-  expected_type:
-  - PropertyValue
-  marginality: Optional
-  name: additionalProperty
-  parent: BioChemEntity
-  sdo_desc: 'A property-value pair representing an additional characteristics of the
-    entitity, e.g. a product feature or another characteristic for which there is
-    no matching property in schema.org.  Note: Publishers should be aware that applications
-    designed to use specific schema.org properties (e.g. http://schema.org/width,
-    http://schema.org/color, http://schema.org/gtin13, ...) will typically expect
-    such data to be provided using those properties, rather than using the generic
-    property/value mechanism.'
-- bsc_dec: Bioschemas usage.  Additional to the use of name and description to describe
-    this property in a human-readable way, additionalType should be used to specify
-    the nature of the property/relation. For instance, if the property refers to a
-    gene/protein disease association, you could use http://semanticscience.org/resource/SIO_000983
-    as additionalType for the additionalProperty.
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - BioChemEntity
-  - URL
-  marginality: Optional
-  name: isContainedIn
-  parent: BioChemEntity
-  sdo_desc: Indicates a BioChemEntity that this BioChemEntity is (in some sense) part
-    of.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - BioChemEntity
-  - URL
-  marginality: Optional
-  name: contains
-  parent: BioChemEntity
-  sdo_desc: 'Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
-    Inverse property: isContainedIn.'
-- bsc_dec: Bioschemas usage.  In Bioschemas location can be refer to a position in
-    a chromosome or sequence or to a physical place where, for instance, a sample
-    is stored. Using additionalType is advised to make the distinction. For instance,
-    FALDO can be used for sequence coordinates.
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: 'Yes'
-    - name: as it better suits to describe the location.
-  expected_type:
-  - Place
-  - PostalAddress
-  - PropertyValue
-  - Text
-  - URL
-  marginality: Optional
-  name: location
-  parent: BioChemEntity
-  sdo_desc: The location of for example where the event is happening, an organization
-    is located, or where an action takes place.
-- bsc_dec: Bioschemas usage.  This property could be used, for instance, to register
-    a sequence protein as it is a representation of the protein. If you want to better
-    define the nature of the representation, use a PropertyValue as described in additionalProperty.
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: 'Yes'
-    - name: as it better suits to describe the nature of the representation
-  expected_type:
-  - PropertyValue
-  - Text
-  - URL
-  marginality: Optional
-  name: hasRepresentation
-  parent: BioChemEntity
-  sdo_desc: A representation for this entity other than, for instance, an image (used
-    image property for that) or the main web page/record (use mainEntityOfPage for
-    that, and see background notes, http://schema.org/docs/datamodel.html#mainEntityBackground,
-    for sameAs and url).
-- bsc_dec: Profile name
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: Bioschemas profiles
-  expected_type:
-  - Text
-  marginality: Minimum
-  name: preferredLabel
-  parent: BioChemEntity
-  sdo_desc: Indicates the preferred label to refer to a specific (sub)type of BioChemEntity
-- description: A sub property of description. A short description of the item used
-    to disambiguate from other, similar items. Information from other properties (in
-    particular, name) may be necessary for the description to be useful for disambiguation.
-  exp_type: &id001
-  - Text
-  expected_type: *id001
-  name: disambiguatingDescription
-  parent: Thing
-  prop_name: disambiguatingDescription
-  property: http://schema.org/disambiguatingDescription
-  sdo_desc: A sub property of description. A short description of the item used to
-    disambiguate from other, similar items. Information from other properties (in
-    particular, name) may be necessary for the description to be useful for disambiguation.
-- description: Indicates a potential Action, which describes an idealized action in
-    which this thing would play an 'object' role.
-  exp_type: &id002
-  - Action
-  expected_type: *id002
-  name: potentialAction
-  parent: Thing
-  prop_name: potentialAction
-  property: http://schema.org/potentialAction
-  sdo_desc: Indicates a potential Action, which describes an idealized action in which
-    this thing would play an 'object' role.
-spec_mapping_url: https://docs.google.com/spreadsheets/d/1JUIPcHl4nx3XmYTmgFs8QWVg2y0omR5baH7PzPISBx4/edit?usp=drivesdk
 spec_type: Type
 status: revision
-subtitle: Bioschemas specification describing a physical entity.
+subtitle: Bioschemas specification describing a physical entity
 use_cases_url: err_404
 version: '0.1'
+
 ---
+
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+        <div class="wrapper">
+           <div id="main_content_wrap" class="outer">
+              <section id="main_content" class="inner">
+                {% include type_start.html %}
+
+                <table class="bioschemas_properties bsc_type">
+                   <thead>
+                      <tr>
+                         <th>Property</th>
+                         <th>Expected Type</th>
+                         <th>Description</th>
+                      </tr>
+                   </thead>
+                   <tbody>
+                     <tr class="new_props_sdo">
+                        <td colspan="3">
+                           New properties for <a href="#">{{page.name}}</a> (pending schema.org integration).
+                        </td>
+                     </tr>
+                     <tr>
+                       <th>contains</th>
+                       <td>
+                         <a href="http://bioschemas.org/specifications/BioChemEntity/specification/">BioChemEntity</a><br><a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>Bioschemas: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: isContainedIn.</em></td>
+                     </tr>
+                     <tr>
+                       <th>hasRepresentation</th>
+                       <td>
+                         <a href="http://schema.org/PropertyValue">PropertyValue</a><br><a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>Bioschemas: A representation for this entity other than, for instance, an image (use image property for that) or the main web page/record
+                         (use mainEntityOfPage for that), and see <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a>, for sameAs and url).
+                       </td>
+                     </tr>
+                     <tr>
+                       <th>isContainedIn</th>
+                       <td>
+                         <a href="http://bioschemas.org/specifications/BioChemEntity/specification/">BioChemEntity</a><br><a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>Bioschemas: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: containedIn.</em></td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/location">location</a></th>
+                       <td>
+                         <a href="http://schema.org/Place">Place</a><br /><a href="http://schema.org/PostalAddress">PostalAddress</a><br />
+                         <a href="http://schema.org/PropertyValue">PropertyValue</a><br /><a href="http://schema.org/Text">Text</a><br />
+                         <a href="http://schema.org/URL">URL</a>
+                         <a href="#fn1" id="ref1"><sup>*1</sup></a>
+                       </td>
+                       <td>
+                         Schema: The location of for example where the event is happening, an organization is located, or where an action takes place.<br/>
+                         Bioschemas: The location can refer to a position in the chromosome or sequence or to a physical place where, for instance, a
+                         sample is stored. <br />
+                         <u>Note</u>: The list of Expected Types has been extended as schema.org/location only has Place, PostalAddress and Text.
+                       </td>
+                     </tr>
+                     <tr>
+                       <th>preferredLabel</th>
+                       <td>
+                         <a href="http://schema.org/Text">Text</a>
+                       </td>
+                       <td>
+                         Bioschemas:  Indicates the preferred label to refer to a specific (sub)type of BioChemEntity.
+                       </td>
+                     </tr>
+                     <tr class="reu_props_sdo">
+                        <td colspan="3">Properties from <a href="http://schema.org/Thing">Thing</a></td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/additionalType">additionalType</a></th>
+                       <td>
+                         <a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         Schema: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax.
+                         This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax -
+                         the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those
+                         defined externally. <br />
+                         Bioschemas:  As BioChemEntity is a generic wrapper for entitties in Life Sciences, customized types (a.k.a. profiles in Bioschemas)
+                         should specify what ontologies and terms should be used.
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/alternateName">alternateName</a></th>
+                       <td>
+                         <a href="http://schema.org/Text">Text</a>
+                       </td>
+                       <td>
+                         Schema: An alias for the item.
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/description">description</a></th>
+                       <td>
+                         <a href="http://schema.org/Text">Text</a>
+                       </td>
+                       <td>
+                         Schema: A descripton of the item.
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/disambiguatingDescription">disambiguatingDescription</a></th>
+                       <td>
+                         <a href="http://schema.org/Text">Text</a>
+                       </td>
+                       <td>
+                         Schema: A sub property of description. A short description of the item used to disambiguate from other, similar items.
+                         Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/identifier">identifier</a></th>
+                       <td>
+                         <a href="http://schema.org/PropertyValue">PropertyValue</a><br /><a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         Schema: The identifier property represents any kind of identifier for any kind of <a href="http://schema.org/Thing">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc.
+                         Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.
+                         See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/image">image</a></th>
+                       <td>
+                         <a href="http://schema.org/ImageObject">ImageObject</a><br /><a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         Schema: An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.<br />
+                         Bioschemas: Link via <sup><a href="#fn2" id="ref2">Record</a></sup> or <a href="http://schema.org/URL">URL</a> to the main Record representing this entity in a dataset.
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
+                       <td>
+                         <a href="http://schema.org/CreativeWork">CreativeWork</a><br /><a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         Schema: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See
+                         <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br />
+                         Bioschemas: Link via <sup><a href="#fn2" id="ref2">Record</a></sup> or <a href="http://schema.org/URL">URL</a> to the main Record representing this entity in a dataset.
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/name">name</a></th>
+                       <td>
+                         <a href="http://schema.org/Text">Text</a>
+                       </td>
+                       <td>
+                         Schema: The name of the item.
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/potentialAction">potentialAction</a></th>
+                       <td>
+                         <a href="http://schema.org/Action">Action</a>
+                       </td>
+                       <td>
+                         Schema: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/sameAs">sameAs</a></th>
+                       <td>
+                         <a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         Schema: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a class="pending" style="color: blue;" href="http://pending.schema.org/subjectOf">subjectOf</a></th>
+                       <td>
+                         <a href="http://schema.org/CreativeWork">CreativeWork</a><br /><a href="http://schema.org/Event">Event</a>
+                       </td>
+                       <td>
+                         Schema: A CreativeWork or Event about this Thing. <em>Inverse property: about.</em>
+                         <u>Note</u>: This is a pending property.
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/url">url</a></th>
+                       <td>
+                         <a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         Schema: URL of the item.<br />
+                         Bioschemas: Link to any resource other than the Record and the official Webpage, for instance a Wikipedia page.
+                       </td>
+                     </tr>
+                   </tbody>
+                 </table>
+
+                 <div id="notes">
+                   <hr />
+                   <h5>Footnotes</h5>
+                   <sup id="fn1">1. The Expected Types of location have been generalised as schema.org/location only has Place, PostalAddress and Text.<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup><br />
+                   <sup id="fn2">2. Record?! As in DataRecord? Looks weird!.<a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup><br />
+                 </div>
+               </section>
+             </div>
+           </div>
+      </div>
+      {% include footer.html %}
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+      <script src="/js/scripts.js"></script>
+   </body>
+</html>
