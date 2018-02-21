@@ -224,7 +224,6 @@ version: '0.4-draft.1'
                            <a href="http://schema.org/Place">Place</a><br /><a href="http://schema.org/PostalAddress">PostalAddress</a><br />
                            <a href="http://schema.org/PropertyValue">PropertyValue</a><br /><a href="http://schema.org/Text">Text</a><br />
                            <a href="http://schema.org/URL">URL</a>
-                           <a href="#fn1" id="ref1"><sup>*1</sup></a>
                          </td>
                          <td>
                            Schema: The location of for example where the event is happening, an organization is located, or where an action takes place.<br/>
@@ -238,12 +237,18 @@ version: '0.4-draft.1'
                        <tr>
                          <th><a href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
                          <td>
-                           <a href="http://schema.org/CreativeWork">CreativeWork</a><br /><a href="http://schema.org/URL">URL</a>
+                           {% if status == revision %}
+                           <a href="/devTypes/DataRecord/specification/">DataRecord</a>
+                           {% else %}
+                           <a href="/specifications/DataRecord/specification/">DataRecord</a>
+                           {% endif %}
+                           <br /><a href="http://schema.org/URL">URL</a>
                          </td>
                          <td>
                            Schema: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See
                            <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br />
-                           Bioschemas: Link via <sup><a href="#fn2" id="ref2">Record</a></sup> or <a href="http://schema.org/URL">URL</a> to the main Record representing this entity in a dataset.
+                           Bioschemas: Link via DataRecord or <a href="http://schema.org/URL">URL</a> to the main Record representing this entity in a dataset.<br />
+                           Note: Bioschemas has replaced CreativeWork with DataRecord in the Expected Types.
                          </td>
                          <td>ONE</td>
                          <td></td>
