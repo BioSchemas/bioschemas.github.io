@@ -48,7 +48,7 @@ version: '0.4-draft.1'
                             <a href="http://schema.org/PropertyValue">PropertyValue</a><br /><a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
                           </td>
                           <td>
-                            Schema: The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
+                            <strong>Schema</strong>: The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
                             dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.
                           <td>ONE</td>
                           <td></td>
@@ -59,7 +59,7 @@ version: '0.4-draft.1'
                             <a href="http://schema.org/Text">Text</a>
                           </td>
                           <td>
-                            Schema: The name of the item.
+                            <strong>Schema</strong>: The name of the item.
                           <td>ONE</td>
                           <td></td>
                        </tr>
@@ -77,7 +77,7 @@ version: '0.4-draft.1'
                             <a href="http://schema.org/URL">URL</a>
                           </td>
                           <td>
-                            Bioschemas: Disease associated to this protein, if any.
+                            <strong>Bioschemas</strong>: Disease associated to this protein, if any.
                           <td>ONE</td>
                           <td></td>
                        </tr>
@@ -87,8 +87,8 @@ version: '0.4-draft.1'
                             <a href="http://schema.org/Text">Text</a>
                           </td>
                           <td>
-                            Schema: A description of the item. <br />
-                            Bioschemas: Protein function. We recommend to start the description with "Function: [...]"
+                            <strong>Schema</strong>: A description of the item. <br />
+                            <strong>Bioschemas</strong>: Protein function. We recommend to start the description with "Function: [...]"
                           <td>ONE</td>
                           <td></td>
                        </tr>
@@ -98,7 +98,7 @@ version: '0.4-draft.1'
                             <a href="http://schema.org/ImageObject">ImageObject</a><br /><a href="http://schema.org/URL">URL</a>
                           </td>
                           <td>
-                            Schema: An image of the item. This can be a URL or a fully described ImageObject.
+                            <strong>Schema</strong>: An image of the item. This can be a URL or a fully described ImageObject.
                           <td>MANY</td>
                           <td></td>
                        </tr>
@@ -117,7 +117,7 @@ version: '0.4-draft.1'
                             <br /><a href="http://schema.org/URL">URL</a>
                           </td>
                           <td>
-                            Schema: An image of the item. This can be a URL or a fully described ImageObject.
+                            <strong>Schema</strong>: An image of the item. This can be a URL or a fully described ImageObject.
                           <td>MANY</td>
                           <td></td>
                        </tr>
@@ -129,11 +129,11 @@ version: '0.4-draft.1'
                             {% else %}
                             <a href="/specifications/BioChemEntity/specification/">BioChemEntity</a></th>
                             {% endif %}
-                            <br />                            
+                            <br />
                             <a href="http://schema.org/URL">URL</a>
                           </td>
                           <td>
-                            Bioschemas: Gene(s) from which this protein was transcribed from.
+                            <strong>Bioschemas</strong>: Gene(s) from which this protein was transcribed from.
                           <td>MANY</td>
                           <td></td>
                        </tr>
@@ -143,8 +143,8 @@ version: '0.4-draft.1'
                            <a href="http://schema.org/URL">URL</a>
                          </td>
                          <td>
-                           Schema: URL of the item.<br />
-                           Bioschemas: Link to the official webpage associated to this entity.
+                           <strong>Schema</strong>: URL of the item.<br />
+                           <strong>Bioschemas</strong>: Link to the official webpage associated to this entity.
                          </td>
                          <td>ONE</td>
                          <td></td>
@@ -162,11 +162,11 @@ version: '0.4-draft.1'
                            <a href="http://schema.org/URL">URL</a>
                          </td>
                          <td>
-                           Schema: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax.
+                           <strong>Schema</strong>: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax.
                            This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax -
                            the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those
                            defined externally. <br />
-                           Bioschemas:  Any ontology term describing the protein concept. This is in addition to the official type to describe a protein:
+                           <strong>Bioschemas</strong>:  Any ontology term describing the protein concept. This is in addition to the official type to describe a protein:
                            <a href="http://purl.obolibrary.org/obo/PR_000000001">PR:protein</a>.
                          </td>
                          <td>MANY</td>
@@ -178,7 +178,7 @@ version: '0.4-draft.1'
                            <a href="http://schema.org/Text">Text</a>
                          </td>
                          <td>
-                           Schema: An alias for the item.
+                           <strong>Schema</strong>: An alias for the item.
                          </td>
                          <td>MANY</td>
                          <td></td>
@@ -197,7 +197,7 @@ version: '0.4-draft.1'
                            {% endif %}
                            <br /><br><a href="http://schema.org/URL">URL</a>
                          </td>
-                         <td>Bioschemas: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: isContainedIn.</em></td>
+                         <td><strong>Bioschemas</strong>: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: isContainedIn.</em></td>
                          <td>MANY</td>
                          <td></td>
                        </tr>
@@ -210,7 +210,7 @@ version: '0.4-draft.1'
                          <td>
                            <a href="http://schema.org/PropertyValue">PropertyValue</a><br><a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
                          </td>
-                         <td>Bioschemas: A representation for this entity other than, for instance, an image (use image property for that) or the main web page/record
+                         <td><strong>Bioschemas</strong>: A representation for this entity other than, for instance, an image (use image property for that) or the main web page/record
                            (use mainEntityOfPage for that), and see <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a>, for sameAs and url).<br />
                            Bioschemas Protein: This property could be used, for instance, to register a sequence protein as it is a representation of the protein.
                          </td>
@@ -225,8 +225,8 @@ version: '0.4-draft.1'
                            <a href="http://schema.org/URL">URL</a>
                          </td>
                          <td>
-                           Schema: The location of for example where the event is happening, an organization is located, or where an action takes place.<br/>
-                           Bioschemas: The location can refer to a position in the chromosome or sequence or to a physical place where, for instance, a
+                           <strong>Schema</strong>: The location of for example where the event is happening, an organization is located, or where an action takes place.<br/>
+                           <strong>Bioschemas</strong>: The location can refer to a position in the chromosome or sequence or to a physical place where, for instance, a
                            sample is stored. <br />
                            <u>Note</u>: The list of Expected Types has been extended as schema.org/location only has Place, PostalAddress and Text.
                          </td>
@@ -244,9 +244,9 @@ version: '0.4-draft.1'
                            <br /><a href="http://schema.org/URL">URL</a>
                          </td>
                          <td>
-                           Schema: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See
+                           <strong>Schema</strong>: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See
                            <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br />
-                           Bioschemas: Link via DataRecord or <a href="http://schema.org/URL">URL</a> to the main Record representing this entity in a dataset.<br />
+                           <strong>Bioschemas</strong>: Link via DataRecord or <a href="http://schema.org/URL">URL</a> to the main Record representing this entity in a dataset.<br />
                            Note: Bioschemas has replaced CreativeWork with DataRecord in the Expected Types.
                          </td>
                          <td>ONE</td>
@@ -258,7 +258,7 @@ version: '0.4-draft.1'
                            <a href="http://schema.org/URL">URL</a>
                          </td>
                          <td>
-                           Schema: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+                           <strong>Schema</strong>: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
                          </td>
                          <td>MANY</td>
                          <td></td>
