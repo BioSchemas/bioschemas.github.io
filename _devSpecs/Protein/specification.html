@@ -66,7 +66,7 @@ external: #454547;
                             <strong>Schema</strong>: The name of the item.
                           <td>ONE</td>
                           <td></td>
-                       </tr>                       
+                       </tr>
                        <tr id="type">
                           <th><a style="color: #454547;" href="https://www.w3.org/1999/02/22-rdf-syntax-ns#type">RDF:type</a></th>
                           <td>
@@ -132,7 +132,10 @@ external: #454547;
                             <br /><a href="http://schema.org/URL">URL</a>
                           </td>
                           <td>
-                            <strong>Schema</strong>: An image of the item. This can be a URL or a fully described ImageObject.
+                            <strong>Bioschemas</strong>: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: containedIn.</em><br />
+                            <strong>Bioschemas Protein</strong>: For proteins, it is recommended to at least specify the taxon/organism associated to the described protein; in this case the expected 
+                            range would be a taxon id such as those in NCBI taxon or UniProt Taxonomy. Including as well the GO cellular locations is
+                            optional; in that case, the expected range would be a GO Cellular Location term.
                           <td>MANY</td>
                           <td></td>
                        </tr>
@@ -217,6 +220,16 @@ external: #454547;
                          <td></td>
                        </tr>
                        <tr>
+                         <th><a style="color: #454547;" href="http://purl.obolibrary.org/obo/RO_0002327">enables</a></th>
+                         <td>
+                           <a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
+                         </td>
+                         <td><strong>Bioschemas</strong>: GO molecular function enabled by the protein.
+                         </td>
+                         <td>MANY</td>
+                         <td></td>
+                       </tr>
+                       <tr>
                          {% if status == revision %}
                          <th><a style="color: #0B794B" href="/devTypes/BioChemEntity/specification/#hasRepresentation">hasRepresentation</a></th>
                          {% else %}
@@ -228,6 +241,16 @@ external: #454547;
                          <td><strong>Bioschemas</strong>: A representation for this entity other than, for instance, an image (use image property for that) or the main web page/record
                            (use mainEntityOfPage for that), and see <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a>, for sameAs and url).<br />
                            <strong>Bioschemas Protein</strong>: This property could be used, for instance, to register a sequence protein as it is a representation of the protein.
+                         </td>
+                         <td>MANY</td>
+                         <td></td>
+                       </tr>
+                       <tr>
+                         <th><a style="color: #454547;" href="http://purl.obolibrary.org/obo/RO_0002331">involed in</a></th>
+                         <td>
+                           <a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
+                         </td>
+                         <td><strong>Bioschemas</strong>: GO biological process this protein is involved in.
                          </td>
                          <td>MANY</td>
                          <td></td>
