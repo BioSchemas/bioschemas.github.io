@@ -74,7 +74,7 @@ external: #454547;
                           </td>
                           <td>
                             <strong>Schema</strong>: The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-                            dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.
+                            dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.
                           <td>ONE</td>
                           <td></td>
                        </tr>
@@ -244,13 +244,13 @@ external: #454547;
                            <strong>Schema</strong>: The location of for example where the event is happening, an organization is located, or where an action takes place.<br/>
                            <strong>Bioschemas</strong>: The location can refer to a position in the chromosome or sequence or to a physical place where, for instance, a
                            sample is stored. <br />
-                           <u>Note</u>: The list of Expected Types has been extended as schema.org/location only has Place, PostalAddress and Text.
+                           <u><strong>Note</strong></u>: The list of Expected Types has been extended as schema.org/location only has Place, PostalAddress and Text.
                          </td>
                          <td>MANY</td>
                          <td></td>
                        </tr>
                        <tr>
-                         <th><a href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
+                         <th><a style="color: #0B794B" href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
                          <td>
                            {% if status == revision %}
                            <a style="color: #0B794B" href="/devTypes/DataRecord/specification/">DataRecord</a>
@@ -263,7 +263,7 @@ external: #454547;
                            <strong>Schema</strong>: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See
                            <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br />
                            <strong>Bioschemas</strong>: Link via DataRecord or <a href="http://schema.org/URL">URL</a> to the main Record representing this entity in a dataset.<br />
-                           Note: Bioschemas has replaced CreativeWork with DataRecord in the Expected Types.
+                           <u><strong>Note</u></strong>: Bioschemas has replaced CreativeWork with DataRecord in the Expected Types.
                          </td>
                          <td>ONE</td>
                          <td></td>
