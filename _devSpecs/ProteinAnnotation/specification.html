@@ -57,7 +57,6 @@ external: #454547;
                            the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those
                            defined externally. <br />
                            <strong>Bioschemas</strong>:  Should be set to any of the values listed in the Controlled Vocabulary.<br />
-                           <strong>Should this really be rdf:type?</strong>
                          </td>
                          <td>MANY</td>
                          <td>
@@ -90,7 +89,11 @@ external: #454547;
                           <td></td>
                        </tr> -->
                        <tr>
-                          <th><a style="color: #0B794B;" href="http://schema.org/preferredLabel">preferredLabel</a></th>
+                         {% if status == revision %}
+                         <th><a style="color: #0B794B" href="/devTypes/BioChemEntity/specification/#preferredLabel">preferredLabel</a></th>
+                         {% else %}
+                         <th><a style="color: #0B794B" href="/specifications/BioChemEntity/specification/#preferredLabel">preferredLabel</a></th>
+                         {% endif %}
                           <td>
                             <a href="http://schema.org/Text">Text</a>
                           </td>
@@ -179,7 +182,7 @@ external: #454547;
                            {% else %}
                            <a style="color: #0B794B" href="/specifications/BioChemEntity/specification/#">BioChemEntity</a>
                            {% endif %}
-                           <br /><br><a href="http://schema.org/URL">URL</a>
+                           <br /><a href="http://schema.org/URL">URL</a>
                          </td>
                          <td><strong>Bioschemas</strong>: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: isContainedIn.</em></td>
                          <td>MANY</td>
@@ -226,7 +229,7 @@ external: #454547;
                             <br /><a href="http://schema.org/URL">URL</a>
                           </td>
                           <td>
-                            <strong>Schema</strong>: An image of the item. This can be a URL or a fully described ImageObject.
+                            <strong>Bioschemas</strong>: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: containedIn.</em>
                           <td>MANY</td>
                           <td></td>
                        </tr>
@@ -247,7 +250,7 @@ external: #454547;
                          <td></td>
                        </tr>
                        <tr>
-                         <th><a style="color: #0B794B" href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
+                         <th><a href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
                          <td>
                            {% if status == revision %}
                            <a style="color: #0B794B" href="/devTypes/DataRecord/specification/">DataRecord</a>
@@ -272,7 +275,7 @@ external: #454547;
                          </td>
                          <td>
                            <strong>Schema</strong>: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.<br />
-                           <strong>Bioschemas</strong>: Link to any resource other than the Record and the official webpage, for instane a Wikipedia page.
+                           <strong>Bioschemas</strong>: Link to any resource other than the Record and the official webpage, for instance a Wikipedia page.
                          </td>
                          <td>MANY</td>
                          <td></td>
