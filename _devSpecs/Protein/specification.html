@@ -57,6 +57,16 @@ external: #454547;
                           <td>ONE</td>
                           <td></td>
                        </tr>
+                       <tr>
+                          <th><a href="http://schema.org/name">name</a></th>
+                          <td>
+                            <a href="http://schema.org/Text">Text</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The name of the item.
+                          <td>ONE</td>
+                          <td></td>
+                       </tr>                       
                        <tr id="type">
                           <th><a style="color: #454547;" href="https://www.w3.org/1999/02/22-rdf-syntax-ns#type">RDF:type</a></th>
                           <td>
@@ -67,16 +77,7 @@ external: #454547;
                           <td>ONE</td>
                           <td></td>
                        </tr>
-                       <tr>
-                          <th><a href="http://schema.org/name">name</a></th>
-                          <td>
-                            <a href="http://schema.org/Text">Text</a>
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: The name of the item.
-                          <td>ONE</td>
-                          <td></td>
-                       </tr>
+
 
                        <tr class="cardinality">
                           <td colspan="5">
@@ -180,7 +181,7 @@ external: #454547;
                            This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax -
                            the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those
                            defined externally. <br />
-                           <strong>Bioschemas</strong>:  Any ontology term describing the protein concept. This is in addition to the official type to describe a protein:
+                           <strong>Bioschemas</strong>:  Any ontology term describing the protein concept. This is in addition to the official type to describe a protein; see
                            <a style="color: #454547;" href="#type">RDF:type</a>.
                          </td>
                          <td>MANY</td>
