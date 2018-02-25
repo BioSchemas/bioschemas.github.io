@@ -110,20 +110,26 @@ title: Draft BioSchemas Specifications
             <thead>
             <tr>
                 <th>Name</th>
-                <th>Short description</th>
-                <th>Type</th>
+                <th>Group</th>
+                <th>Task &amp; Issues</th>
             </tr>
             </thead>
             <tbody>
             {% assign type_specs = site.devTypes | where: 'spec_type', 'Type'%}
             {% for spec in  type_specs%}
             <tr>
-                <th>{{spec.name}}<br />(v{{ spec.version }})</th>
-                <td>{{ spec.subtitle }}</td>
+                <th><a href="/devTypes/{{spec.name}}/specification" title="{{spec.subtitle}}">{{ spec.name }}</a><br />(v{{spec.version}})<br />{{spec.dateModified}}</th>
+                <td><a href="/groups/{{spec.group}}">{{spec.group}}</a></td>
                 <td class="spec_links">
-                    <a href="{{ spec.url}}">
-                        <img src="/images/bsc_spec.png" alt="BioSchemas {{ spec.name }} Specification">
-                    </a>
+                    {% if spec.gh_tasks == '' %}
+                      <a>
+                        <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
+                      </a>
+                    {% else %}
+                      <a href="{{spec.gh_tasks}}">
+                        <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues">
+                      </a>
+                    {% endif %}
                 </td>
             </tr>
             {% endfor %}
