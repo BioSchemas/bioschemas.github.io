@@ -73,7 +73,7 @@ external: #454547;
                            </td>
                         </tr>
                         <tr>
-                           <th><a href="http://schema.org/mainEntity">mainEntity</a></th>
+                           <th><a style="color: #0B794B" href="http://schema.org/mainEntity">mainEntity</a></th>
                            <td>
                              {% if status == revision %}
                              <a style="color: #0B794B" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
@@ -83,7 +83,7 @@ external: #454547;
                            </td>
                            <td>
                              <strong>Schema</strong>: Indicates the primary entity described in some page or other CreativeWork. <em>Inverse-property: <a href="http:schema.org/mainEntityOfPage">mainEntityOfPage</a>.</em>
-                             <br><strong>Bioschemas</strong>: Bioschemas usage.  Link to the BioChemEntity represented by this record.<br />
+                             <br><strong>Bioschemas</strong>: Bioschemas usage.  Link to the BioChemEntity represented by this record.<em>Inverse property: mainEntityOfPage.</em><br />
                              <u><strong>Note</strong></u>: BioSchemas have changed the Expected Type from <a href="http://schema.org/Thing">Thing</a> to
                              {% if status == revision %}
                              <a style="color: #0B794B" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>.
@@ -257,8 +257,10 @@ external: #454547;
                               <a href="http://schema.org/Thing">Thing</a><br />
                               <a href="http://schema.org/URL">URL</a>
                            </td>
-                           <td><strong>Bioschemas</strong>: A pointer to any (somehow related) Thing. To be used whenever you are not so sure about the nature of the relation.
-                             Otherwise, use more precise terms from pre-existing Controlled Vocabularies.</td>
+                           <td>
+                             <strong>Bioschemas</strong>: A pointer to any (somehow related) Thing. To be used whenever you are not so sure about the nature of the relation.
+                             Otherwise, use more precise terms from pre-existing Controlled Vocabularies.
+                           </td>
                            <td>MANY</td>
                            <td>
                            </td>
