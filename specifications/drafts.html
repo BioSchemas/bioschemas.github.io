@@ -62,7 +62,7 @@ title: Draft BioSchemas Specifications
                 </td>
 
                 <td class="spec_links">
-                    {% if spec.gh_tasks == 'err_404' %}
+                    {% if spec.gh_tasks %}
                       <a>
                         <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
                       </a>
@@ -74,7 +74,7 @@ title: Draft BioSchemas Specifications
                 </td>
 
                 <td class="spec_links">
-                    {% if spec.gh_examples == 'err_404' %}
+                    {% if spec.gh_examples  %}
                       <a>
                         <img src="/images/spec_examples.png" alt="View BioSchemas {{ spec.name }} Examples" style="filter: grayscale(100%);">
                       </a>
@@ -86,12 +86,12 @@ title: Draft BioSchemas Specifications
                 </td>
 
                 <td class="spec_links">
-                    {% if spec.gh_examples == 'err_404' %}
+                    {% if spec.live_deploy %}
                       <a>
                         <img src="/images/live_deploy.png" alt="View BioSchemas {{ spec.name }} Examples" style="filter: grayscale(100%);">
                       </a>
                     {% else %}
-                      <a href="{{spec.gh_examples}}">
+                      <a href="{{spec.live_deploy}}">
                         <img src="/images/live_deploy.png" alt="View BioSchemas {{ spec.name }} Examples">
                       </a>
                     {% endif %}
