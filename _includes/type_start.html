@@ -80,8 +80,18 @@ This is a new {{page.spec_type}} that fits into the schema.org hierarchy as foll
 <section id="links" class="tabs">
 <!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
 <h3>Links</h3>
+{% if page.use_cases_url != '' %}
+<a href="{{page.use_cases_url}}">Use case documentation</a><br />
+{% else %}
 Use case documentation<br />
+{% endif %}
+
+{% if page.gh_tasks != '' %}
+<a href="{{page.gh_tasks}}">Issue Tracker</a><br />
+{% else %}
 Issue Tracker<br />
+{% endif %}
+
 </section>
 
 <br />

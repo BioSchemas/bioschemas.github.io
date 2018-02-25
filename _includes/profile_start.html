@@ -82,13 +82,36 @@ This is a new {{page.spec_type}} that fits into the schema.org hierarchy as foll
 </section>
 
 <section id="links" class="tabs">
-<!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
 <h3>Links</h3>
+{% if page.use_cases_url != '' %}
+<a href="{{page.use_cases_url}}">Use case documentation</a><br />
+{% else %}
 Use case documentation<br />
-Cross walk<br />
+{% endif %}
+<br />
+{% if page.cross_walk_url != '' %}
+<a href="{{page.cross_walk_url}}">Cross Walk</a><br />
+{% else %}
+Cross Walk<br />
+{% endif %}
+<br />
+{% if page.gh_tasks != '' %}
+<a href="{{page.gh_tasks}}">Issue Tracker</a><br />
+{% else %}
 Issue Tracker<br />
+{% endif %}
+<br />
+{% if page.gh_examples != '' %}
+<a href="{{page.gh_examples}}">Examples</a><br />
+{% else %}
 Examples<br />
+{% endif %}
+<br />
+{% if page.live_deploy != '' %}
+<a href="{{page.live_deploy}}">Live Deployments</a><br />
+{% else %}
 Live Deployments<br />
+{% endif %}
 </section>
 
 <br />
