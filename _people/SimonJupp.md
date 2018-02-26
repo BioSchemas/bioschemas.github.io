@@ -6,7 +6,7 @@ last-name: Jupp
 collection: people
 affiliation: European Bioinformatics Institute
 homepage:
-github_username: 
+github_username:
 orcid:
-groups: []
+groups: [samples]
 ---
