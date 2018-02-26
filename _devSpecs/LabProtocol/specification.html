@@ -111,15 +111,17 @@ external: #454547;
                         <tr>
                            <th><a style="color: #454547;" href="http://purl.obolibrary.org/obo/CHEBI_33893">ChEBI:reagent</a></th>
                            <td>
-                              <a href="http://bioschemas.org/specifications/PhysicalEntity/specification/">PhysicalEntity</a>
+                             {% if status == revision %}
+                             <a style="color: #0B794B" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
+                             {% else %}
+                             <a style="color: #0B794B" href="/types/BioChemEntity/specification/">BioChemEntity</a>
+                             {% endif %}
                               <br>
-                              <a href="http://schema.org/Text">Text</a>
-                              <br>
+                              <a href="http://schema.org/Text">Text</a><br />                              
                               <a href="http://schema.org/URL">URL</a>
-                              <br>
                            </td>
                            <td><strong>Schema</strong>:
-                              <br><strong>Bioschemas</strong>:Reagent used in the protocol. It can be a record in a Dataset describing the reagent or a PhysicalEntity corresponding to the reagent or a URL pointing to the type of reagent used. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable (URL if possible)
+                              <br><strong>Bioschemas</strong>:Reagent used in the protocol. It can be a record in a Dataset describing the reagent or a BioChemEntity corresponding to the reagent or a URL pointing to the type of reagent used. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable (URL if possible)
                            </td>
                            <td>MANY</td>
                            <td>
@@ -130,12 +132,14 @@ external: #454547;
                         <tr id="sample">
                            <th><a href="#">sample</a></th>
                            <td>
-                              <a href="http://bioschemas.org/specifications/PhysicalEntity/specification/">PhysicalEntity</a>
+                             {% if status == revision %}
+                             <a style="color: #0B794B" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
+                             {% else %}
+                             <a style="color: #0B794B" href="/types/BioChemEntity/specification/">BioChemEntity</a>
+                             {% endif %}
                               <br>
-                              <a href="http://schema.org/Text">Text</a>
-                              <br>
+                              <a href="http://schema.org/Text">Text</a><br />
                               <a href="http://schema.org/URL">URL</a>
-                              <br>
                            </td>
                            <td><strong>Schema</strong>:
                               <br><strong>Bioschemas</strong>:Sample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used.
