@@ -1,6 +1,6 @@
 ---
 layout: group-details
-identifier: bioentities
+identifier: biologicalentities
 name: Biological Entities
 path: biologicalentities.html
 collection: groups
