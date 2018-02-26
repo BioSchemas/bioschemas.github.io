@@ -61,7 +61,8 @@ external: #454547;
                           </td>
                           <td>
                             <strong>Schema</strong>: The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-                            dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.
+                            dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.<br />
+                            <strong>Bioschemas</strong>: Unique sample IDs. Where possible this should be an identifiers.org compliant prefixed id e.g. a BioSamples ID biosample:SAME12345.
                           <td>MANY</td>
                           <td></td>
                        </tr>
@@ -179,7 +180,7 @@ external: #454547;
                           </td>
                           <td>
                             <strong>Schema</strong>: A description of the item. <br />
-                            <strong>Bioschemas</strong>: A description of the sample in free text.
+                            <strong>Bioschemas</strong>: A description of the sample in free text. This should not contain information that could be better expressed as key/value pairs. These should be expressed using additionalProperty.
                           <td>ONE</td>
                           <td></td>
                        </tr>
@@ -190,7 +191,7 @@ external: #454547;
                           </td>
                           <td>
                             <strong>Schema</strong>: The name of the item.<br />
-                            <strong>Bioschemas</strong>:A human readable name for the sample. This should not be an additional identifier.
+                            <strong>Bioschemas</strong>: A human readable name for the sample. This should not be an additional identifier. Additional identifiers should be added to the identifier field.
                           <td>MANY</td>
                           <td></td>
                        </tr>
@@ -342,8 +343,7 @@ external: #454547;
                                <a href="http://schema.org/Text">Text</a>
                              </td>
                              <td>
-                               <strong>Schema</strong>: A short textual code that uniquely identifies the value.<br />
-                               <strong>Bioschemas</strong>: A human readable label.
+                               <strong>Schema</strong>: A short textual code that uniquely identifies the value.
                              <td>MANY</td>
                              <td></td>
                           </tr>
