@@ -33,7 +33,7 @@ collections:
     permalink: /:collection/:path/
   types:
     output: true
-    permalink: /:collection/:path/    
+    permalink: /:collection/:path/
   devTypes:
     output: true
     permalink: /:collection/:path/
@@ -45,4 +45,7 @@ collections:
     permalink: /:collection/:path/
   groups:
     output: true
-    permalink: /:collection/:path/    
+    permalink: /:collection/:path/
+  useCases:
+    output: true
+    permalink: /:collection/:path/     
