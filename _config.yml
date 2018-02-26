@@ -19,8 +19,8 @@ github_username:  BioSchemas
 # Build settings
 markdown: kramdown
 
-# Gems
-gems:
+# Plugins
+plugins:
  - jekyll-redirect-from
  - jekyll-scholar
 
