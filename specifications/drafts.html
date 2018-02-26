@@ -34,9 +34,12 @@ title: Draft BioSchemas Specifications
             {% for spec in prof_specs %}
             <tr>
                 <th><a href="/devSpecs/{{spec.name}}/specification" title="{{spec.subtitle}}">{{ spec.name }}</a><br />(v{{spec.version}})<br />{{spec.dateModified}}</th>
-
-                <td><a href="/groups/{{spec.group}}">{{spec.group}}</a></td>
-
+                <td>
+                {% assign group = site.groups | where:"identifier", spec.group %}
+                {% for g in group %}
+                <a href="/groups/{{spec.group}}">{{g.name}}</a>
+                {% endfor %}
+                </td>
                 <td class="spec_links">
                     {% if spec.use_cases_url == '' %}
                       <a>
@@ -119,7 +122,12 @@ title: Draft BioSchemas Specifications
             {% for spec in  type_specs%}
             <tr>
                 <th><a href="/devTypes/{{spec.name}}/specification" title="{{spec.subtitle}}">{{ spec.name }}</a><br />(v{{spec.version}})<br />{{spec.dateModified}}</th>
-                <td><a href="/groups/{{spec.group}}">{{spec.group}}</a></td>
+                <td>
+                {% assign group = site.groups | where:"identifier", spec.group %}
+                {% for g in group %}
+                <a href="/groups/{{spec.group}}">{{g.name}}</a>
+                {% endfor %}
+                </td>
                 <td class="spec_links">
                     {% if spec.gh_tasks == '' %}
                       <a>
