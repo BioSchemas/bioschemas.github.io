@@ -22,6 +22,7 @@ markdown: kramdown
 # Gems
 gems:
  - jekyll-redirect-from
+ - jekyll-scholar
 
 # Collections
 collections:
