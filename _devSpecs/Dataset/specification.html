@@ -18,9 +18,6 @@ subtitle: Bioschemas specification for describing a dataset in the life-science.
 use_cases_url: /useCases/Datasets
 version: 0.2
 
-bsc: #0B794B;
-pending: #0000CC;
-external: #454547;
 
 ---
 
@@ -143,30 +140,30 @@ external: #454547;
                            <th><a href="http://schema.org/creator">creator</a></th>
                            <td>
                              {% if status == revision %}
-                             <a style="color: #0B794B" href="/devSpecs/Organization/specification/">Organization</a>
+                             <a class="newBsc" href="/devSpecs/Organization/specification/">Organization</a>
                              {% else %}
-                             <a style="color: #0B794B" href="/specifications/Organization/specification/">Organization</a>
+                             <a class="newBsc" href="/specifications/Organization/specification/">Organization</a>
                              {% endif %}
                              <br />
                              {% if status == revision %}
-                             <a style="color: #0B794B" href="/devSpecs/Person/specification/">Person</a>
+                             <a class="newBsc" href="/devSpecs/Person/specification/">Person</a>
                              {% else %}
-                             <a style="color: #0B794B" href="/specifications/Person/specification/">Person</a>
+                             <a class="newBsc" href="/specifications/Person/specification/">Person</a>
                              {% endif %}
                            </td>
                            <td>
                              <strong>Schema</strong>: The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.
                              <b><strong>Note</b></strong>: BioSchemas have changed the Expected Types from <a href="http://schema.org/Organization">Organization</a> to
                              {% if status == revision %}
-                             <a style="color: #0B794B" href="/devSpecs/Organization/specification/">Organization</a>
+                             <a class="newBsc" href="/devSpecs/Organization/specification/">Organization</a>
                              {% else %}
-                             <a style="color: #0B794B" href="/specifications/Organization/specification/">Organization</a>
+                             <a class="newBsc" href="/specifications/Organization/specification/">Organization</a>
                              {% endif %}
                              and from from <a href="http://schema.org/Person">Person</a> to
                              {% if status == revision %}
-                             <a style="color: #0B794B" href="/devSpecs/Person/specification/">Person</a>.
+                             <a class="newBsc" href="/devSpecs/Person/specification/">Person</a>.
                              {% else %}
-                             <a style="color: #0B794B" href="/specifications/Person/specification/">Person</a>.
+                             <a class="newBsc" href="/specifications/Person/specification/">Person</a>.
                              {% endif %}
                            </td>
                            <td>MANY</td>
@@ -186,21 +183,21 @@ external: #454547;
                            </td>
                         </tr>
                         <tr>
-                           <th><a style="color: #0B794B" href="http://schema.org/includedInDataCatalog">includedInDataCatalog</a></th>
+                           <th><a class="newBsc" href="http://schema.org/includedInDataCatalog">includedInDataCatalog</a></th>
                            <td>
                              {% if status == revision %}
-                             <a style="color: #0B794B" href="/devSpecs/DataCatalog/specification/">Dataset</a>
+                             <a class="newBsc" href="/devSpecs/DataCatalog/specification/">DataCatalog</a>
                              {% else %}
-                             <a style="color: #0B794B" href="/specifications/DataCatalog/specification/">Dataset</a>
+                             <a class="newBsc" href="/specifications/DataCatalog/specification/">DataCatalog</a>
                              {% endif %}
                            </td>
                            <td>
                              <strong>Schema</strong>: A data catalog which contains this dataset.<br />
                              <b><strong>Note</strong></b>: Bioschemas have changed the Expected Type from <a href="http://schema.org/DataCatalog">DataCatalog</a> to
                              {% if status == revision %}
-                             <a style="color: #0B794B" href="/devSpecs/DataCatalog/specification/">Dataset</a>.
+                             <a class="newBsc" href="/devSpecs/DataCatalog/specification/">DataCatalog</a>.
                              {% else %}
-                             <a style="color: #0B794B" href="/specifications/DataCatalog/specification/">Dataset</a>.
+                             <a class="newBsc" href="/specifications/DataCatalog/specification/">DataCatalog</a>.
                              {% endif %}
                            </td>
                            <td>MANY</td>
@@ -222,14 +219,14 @@ external: #454547;
                            </td>
                         </tr>
                         <tr>
-                           <th><a style="color: #0000CC;" href="http://pending.schema.org/measurementTechnique">measurementTechnique</a></th>
+                           <th><a class="pending" href="http://pending.schema.org/measurementTechnique">measurementTechnique</a></th>
                            <td>
                               <a href="http://schema.org/Text">Text</a><br />
                               <a href="http://schema.org/URL">URL</a>
                            </td>
                            <td>
                              <strong>Schema</strong>: A technique or technology used in a Dataset (or DataDownload, DataCatalog), corresponding to the
-                             method used for measuring the corresponding variable(s) (described using <a style="color: #0000CC;" href="http://pending.schema.org/variableMeasured">variableMeasured</a>). This is oriented towards
+                             method used for measuring the corresponding variable(s) (described using <a class="pending" href="http://pending.schema.org/variableMeasured">variableMeasured</a>). This is oriented towards
                              scientific and scholarly dataset publication but may have broader applicability; it is not intended as a full representation
                              of measurement, but rather as a high level summary for dataset discovery.<br />
                              For example, if variableMeasured is: molecule concentration, measurementTechnique could be: "mass spectrometry" or "nmr spectroscopy" or "colorimetry" or "immunofluorescence".<br />
@@ -241,7 +238,7 @@ external: #454547;
                            </td>
                         </tr>
                         <tr>
-                           <th><a style="color: #0000CC;" href="http://pending.schema.org/variableMeasured">variableMeasured</a></th>
+                           <th><a class="pending" href="http://pending.schema.org/variableMeasured">variableMeasured</a></th>
                            <td>
                               <a href="http://schema.org/PropertyValue">PropertyValue</a><br />
                               <a href="http://schema.org/Text">Text</a>

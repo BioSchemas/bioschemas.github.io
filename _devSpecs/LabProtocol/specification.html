@@ -27,9 +27,6 @@ subtitle: Bioschemas specification describing LabProtocol in the life-science.
 use_cases_url: /useCases/LabProtocols/
 version: '0.2'
 
-bsc: #0B794B;
-pending: #0000CC;
-external: #454547;
 ---
 
 <!DOCTYPE HTML>
@@ -61,7 +58,7 @@ external: #454547;
                            </td>
                         </tr>
                         <tr>
-                           <th><a style="color: #0B794B" href="http://schema.org/instrument">instrument</a></th>
+                           <th><a class="newBsc" href="http://schema.org/instrument">instrument</a></th>
                            <td>
                               <a href="http://schema.org/Text">Text</a><br />
                               <a href="http://schema.org/Thing">Thing</a><br />
@@ -91,7 +88,7 @@ external: #454547;
                            </td>
                         </tr>
                         <tr id="purpose">
-                           <th><a style="color: #0B794B;" href="#">purpose</a></th>
+                           <th><a class="newBsc" href="#">purpose</a></th>
                            <td>
                               <a href="http://schema.org/Text">Text</a>
                               <br>
@@ -109,12 +106,12 @@ external: #454547;
                            </td>
                         </tr>
                         <tr>
-                           <th><a style="color: #454547;" href="http://purl.obolibrary.org/obo/CHEBI_33893">ChEBI:reagent</a></th>
+                           <th><a class="externalProp" href="http://purl.obolibrary.org/obo/CHEBI_33893">ChEBI:reagent</a></th>
                            <td>
                              {% if status == revision %}
-                             <a style="color: #0B794B" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
+                             <a class="newBsc" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
                              {% else %}
-                             <a style="color: #0B794B" href="/types/BioChemEntity/specification/">BioChemEntity</a>
+                             <a class="newBsc" href="/types/BioChemEntity/specification/">BioChemEntity</a>
                              {% endif %}
                               <br>
                               <a href="http://schema.org/Text">Text</a><br />
@@ -130,12 +127,12 @@ external: #454547;
                            </td>
                         </tr>
                         <tr id="sample">
-                           <th><a style="color: #0B794B;" href="#">sample</a></th>
+                           <th><a class="newBsc" href="#">sample</a></th>
                            <td>
                              {% if status == revision %}
-                             <a style="color: #0B794B" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
+                             <a class="newBsc" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
                              {% else %}
-                             <a style="color: #0B794B" href="/types/BioChemEntity/specification/">BioChemEntity</a>
+                             <a class="newBsc" href="/types/BioChemEntity/specification/">BioChemEntity</a>
                              {% endif %}
                               <br>
                               <a href="http://schema.org/Text">Text</a><br />
@@ -156,7 +153,7 @@ external: #454547;
                            </td>
                         </tr>
                         <tr>
-                           <th><a style="color: #454547;" href="http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol">SP:AdvantageOfTheProtocol</a></th>
+                           <th><a class="externalProp" href="http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol">SP:AdvantageOfTheProtocol</a></th>
                            <td>
                               <a href="http://schema.org/Text">Text</a>
                            </td>
@@ -169,7 +166,7 @@ external: #454547;
                            </td>
                         </tr>
                         <tr>
-                           <th><a style="color: #454547;" href="http://purl.org/net/SMARTprotocol#ApplicationOfTheProtocol">SP:ApplicationOfTheProtocol</a></th>
+                           <th><a class="externalProp" href="http://purl.org/net/SMARTprotocol#ApplicationOfTheProtocol">SP:ApplicationOfTheProtocol</a></th>
                            <td>
                               <a href="http://schema.org/Text">Text</a>
                            </td>
@@ -262,7 +259,7 @@ external: #454547;
                            </td>
                         </tr>
                         <tr>
-                           <th><a style="color: #454547;" href="http://purl.org/net/SMARTprotocol#LimitationOfTheProtocol">SP:LimitationOfTheProtocol</a></th>
+                           <th><a class="externalProp" href="http://purl.org/net/SMARTprotocol#LimitationOfTheProtocol">SP:LimitationOfTheProtocol</a></th>
                            <td>
                               <a href="http://schema.org/Text">Text</a>
                            </td>
@@ -277,7 +274,7 @@ external: #454547;
                            </td>
                         </tr>
                         <tr>
-                           <th><a style="color: #454547;" href="http://purl.org/net/SMARTprotocol#OutcomeOfTheProtocol">SP:OutcomeOfTheProtocol</a></th>
+                           <th><a class="externalProp" href="http://purl.org/net/SMARTprotocol#OutcomeOfTheProtocol">SP:OutcomeOfTheProtocol</a></th>
                            <td>
                               <a href="http://schema.org/Text">Text</a>
                            </td>
@@ -290,7 +287,7 @@ external: #454547;
                            </td>
                         </tr>
                         <tr id="software">
-                           <th><a style="color: #0B794B;" href="#">software</a></th>
+                           <th><a class="newBsc" href="#">software</a></th>
                            <td>
                               <a href="http://schema.org/SoftwareApplication">SoftwareApplication</a>
                               <br>
@@ -309,7 +306,7 @@ external: #454547;
                            </td>
                         </tr>
                         <tr>
-                           <th><a style="color: #454547;" href="https://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:Type</a></th>
+                           <th><a class="externalProp" href="https://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:Type</a></th>
                            <td>
                               <a href="http://schema.org/URL">URL</a>
                            </td>
@@ -322,7 +319,7 @@ external: #454547;
                            </td>
                         </tr>
                         <tr>
-                           <th><a style="color: #0B794B;" href="http://schema.org/isBasedOn">isBasedOn</a></th>
+                           <th><a class="newBsc" href="http://schema.org/isBasedOn">isBasedOn</a></th>
                            <td>
                               <a href="http://schema.org/CreativeWork">CreativeWork</a><br />
                               <a href="http://schema.org/URL">URL</a>

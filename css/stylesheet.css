@@ -1362,3 +1362,21 @@ input:checked + label {
 #tab3:checked ~ #links {
   display: block;
 }
+
+
+
+/*******************************************************************************
+Style experiment
+*******************************************************************************/
+
+table.bioschemas_properties a.externalProp {
+  color: #454547;
+}
+
+table.bioschemas_properties a.newBsc {
+  color: #0B794B;
+}
+
+table.bioschemas_properties a.pending {
+  color: #0000CC;
+}

@@ -20,9 +20,6 @@ subtitle: Bioschemas specification for describing Samples in the life-science
 use_cases_url: /useCases/Samples/
 version: 0.1
 
-bsc: #0B794B;
-pending: #0000CC;
-external: #454547;
 ---
 
 
@@ -68,9 +65,9 @@ external: #454547;
                        </tr>
                        <!-- <tr>
                             {% if status == revision %}
-                            <th><a style="color: #0B794B" href="/devTypes/BioChemEntity/specification/#preferredLabel">preferredLabel</a></th>
+                            <th><a class="newBsc" href="/devTypes/BioChemEntity/specification/#preferredLabel">preferredLabel</a></th>
                             {% else %}
-                            <th><a style="color: #0B794B" href="/specifications/BioChemEntity/specification/#preferredLabel">preferredLabel</a></th>
+                            <th><a class="newBsc" href="/specifications/BioChemEntity/specification/#preferredLabel">preferredLabel</a></th>
                             {% endif %}
                           <td>
                             <a href="http://schema.org/Text">Text</a>
@@ -120,7 +117,7 @@ external: #454547;
                        <tr id="additionalProperty">
                          <th><a href="http://schema.org/additionalProperty">additionalProperty</a></th>
                          <td>
-                           <a style="color: #0B794B;" href="#PropertyValueTable">PropertyValue</a>
+                           <a class="newBsc" href="#PropertyValueTable">PropertyValue</a>
                          </td>
                          <td>
                            <strong>Schema</strong>: A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another
@@ -162,7 +159,7 @@ external: #454547;
                          <td></td>
                        </tr> -->
                        <tr>
-                          <th><a style="color: #0B794B;" href="http://schema.org/dataset">dataset</a></th>
+                          <th><a class="newBsc" href="http://schema.org/dataset">dataset</a></th>
                           <td>
                             <a href="http://schema.org/URL">URL</a>
                           </td>
@@ -204,7 +201,7 @@ external: #454547;
 
                      <h4 id="PropertyValueTable">PropertyValue</h4>
 
-                     <table class="bioschemas_properties bsc_type">
+                     <table class="bioschemas_properties bsc_type bsc_type">
                         <thead>
                            <tr>
                               <th>Property</th>
@@ -257,9 +254,9 @@ external: #454547;
                           </tr>
 
                           <tr>
-                            <th><a style="color: #0B794B;" href="http://schema.org/valueReference">valueReference</a></th>
+                            <th><a class="newBsc" href="http://schema.org/valueReference">valueReference</a></th>
                             <td>
-                              <a style="color: #0B794B;" href="#CategoryCodeTable">CategoryCode</a>
+                              <a class="newBsc" href="#CategoryCodeTable">CategoryCode</a>
                             </td>
                             <td>
                               <strong>Schema</strong>: A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.<br />
@@ -338,7 +335,7 @@ external: #454547;
                              <td></td>
                           </tr>
                           <tr>
-                             <th><a style="color: #0000CC" href="http://pending.schema.org/codeValue">codeValue</a></th>
+                             <th><a class="pending" href="http://pending.schema.org/codeValue">codeValue</a></th>
                              <td>
                                <a href="http://schema.org/Text">Text</a>
                              </td>

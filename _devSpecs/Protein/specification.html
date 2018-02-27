@@ -16,10 +16,6 @@ status: revision
 subtitle: Bioschemas specification describing a Protein (BioChemEntity profile) in Life Sciences
 use_cases_url: /useCases/Proteins/
 version: '0.4-draft.1'
-
-bsc: #0B794B;
-pending: #0000CC;
-external: #454547;
 ---
 
 
@@ -58,7 +54,7 @@ external: #454547;
                           </td>
                           <td>
                             <strong>Schema</strong>: The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-                            dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href="http://pending.schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.
+                            dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.
                           <td>ONE</td>
                           <td></td>
                        </tr>
@@ -74,9 +70,9 @@ external: #454547;
                        </tr>
                        <tr>
                             {% if status == revision %}
-                            <th><a style="color: #0B794B" href="/devTypes/BioChemEntity/specification/#preferredLabel">preferredLabel</a></th>
+                            <th><a class="newBsc" href="/devTypes/BioChemEntity/specification/#preferredLabel">preferredLabel</a></th>
                             {% else %}
-                            <th><a style="color: #0B794B" href="/specifications/BioChemEntity/specification/#preferredLabel">preferredLabel</a></th>
+                            <th><a class="newBsc" href="/types/BioChemEntity/specification/#preferredLabel">preferredLabel</a></th>
                             {% endif %}
                           <td>
                             <a href="http://schema.org/Text">Text</a>
@@ -87,12 +83,12 @@ external: #454547;
                           <td></td>
                        </tr>
                        <tr id="type">
-                          <th><a style="color: #454547;" href="https://www.w3.org/1999/02/22-rdf-syntax-ns#type">RDF:type</a></th>
+                          <th><a class="externalProp" href="https://www.w3.org/1999/02/22-rdf-syntax-ns#type">RDF:type</a></th>
                           <td>
                             <a href="http://schema.org/URL">URL</a>
                           </td>
                           <td>
-                            <strong>Bioschemas</strong>: Should have value: <a style="color: #454547;" href="http://purl.obolibrary.org/obo/PR_000000001">PR:protein</a>. Other types can be added (see <a href="#additionalType">additionalType</a>).
+                            <strong>Bioschemas</strong>: Should have value: <a class="externalProp" href="http://purl.obolibrary.org/obo/PR_000000001">PR:protein</a>. Other types can be added (see <a href="#additionalType">additionalType</a>).
                           <td>ONE</td>
                           <td></td>
                        </tr>
@@ -105,7 +101,7 @@ external: #454547;
                        </tr>
 
                        <tr>
-                          <th><a style="color: #454547;" href="http://purl.obolibrary.org/obo/so#associated_with">SO:associated_with</a></th>
+                          <th><a class="externalProp" href="http://purl.obolibrary.org/obo/so#associated_with">SO:associated_with</a></th>
                           <td>
                             <a href="http://schema.org/MedicalCondition">MedicalCondition</a><br />
                             <a href="http://schema.org/URL">URL</a>
@@ -138,15 +134,15 @@ external: #454547;
                        </tr>
                        <tr>
                           {% if status == revision %}
-                          <th><a style="color: #0B794B" href="/devTypes/BioChemEntity/specification/#isContainedIn">isContainedIn</a></th>
+                          <th><a class="newBsc" href="/devTypes/BioChemEntity/specification/#isContainedIn">isContainedIn</a></th>
                           {% else %}
-                          <th><a style="color: #0B794B" href="/specifications/BioChemEntity/specification/#isContainedIn">isContainedIn</a></th>
+                          <th><a class="newBsc" href="/types/BioChemEntity/specification/#isContainedIn">isContainedIn</a></th>
                           {% endif %}
                           <td>
                             {% if status == revision %}
-                            <a style="color: #0B794B" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
+                            <a class="newBsc" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
                             {% else %}
-                            <a style="color: #0B794B" href="/specifications/BioChemEntity/specification/">BioChemEntity</a></th>
+                            <a class="newBsc" href="/types/BioChemEntity/specification/">BioChemEntity</a></th>
                             {% endif %}
                             <br /><a href="http://schema.org/URL">URL</a>
                           </td>
@@ -159,12 +155,12 @@ external: #454547;
                           <td></td>
                        </tr>
                        <tr>
-                          <th><a style="color: #454547;" href="http://semanticscience.org/resource/SIO_010081.rdf">SIO:is transcribed from</a></th>
+                          <th><a class="externalProp" href="http://semanticscience.org/resource/SIO_010081.rdf">SIO:is transcribed from</a></th>
                           <td>
                             {% if status == revision %}
-                            <a style="color: #0B794B" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
+                            <a class="newBsc" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
                             {% else %}
-                            <a style="color: #0B794B" href="/specifications/BioChemEntity/specification/">BioChemEntity</a></th>
+                            <a class="newBsc" href="/types/BioChemEntity/specification/">BioChemEntity</a></th>
                             {% endif %}
                             <br />
                             <a href="http://schema.org/URL">URL</a>
@@ -204,7 +200,7 @@ external: #454547;
                            the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those
                            defined externally. <br />
                            <strong>Bioschemas</strong>:  Any ontology term describing the protein concept. This is in addition to the official type to describe a protein; see
-                           <a style="color: #454547;" href="#type">RDF:type</a>.
+                           <a class="externalProp" href="#type">RDF:type</a>.
                          </td>
                          <td>MANY</td>
                          <td></td>
@@ -222,15 +218,15 @@ external: #454547;
                        </tr>
                        <tr>
                          {% if status == revision %}
-                         <th><a style="color: #0B794B" href="/devTypes/BioChemEntity/specification/#contains">contains</a></th>
+                         <th><a class="newBsc" href="/devTypes/BioChemEntity/specification/#contains">contains</a></th>
                          {% else %}
-                         <th><a style="color: #0B794B" href="/specifications/BioChemEntity/specification/#contains">contains</a></th>
+                         <th><a class="newBsc" href="/types/BioChemEntity/specification/#contains">contains</a></th>
                          {% endif %}
                          <td>
                            {% if status == revision %}
-                           <a style="color: #0B794B" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
+                           <a class="newBsc" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
                            {% else %}
-                           <a style="color: #0B794B" href="/specifications/BioChemEntity/specification/#">BioChemEntity</a>
+                           <a class="newBsc" href="/types/BioChemEntity/specification/#">BioChemEntity</a>
                            {% endif %}
                            <br /><a href="http://schema.org/URL">URL</a>
                          </td>
@@ -239,7 +235,7 @@ external: #454547;
                          <td></td>
                        </tr>
                        <tr>
-                         <th><a style="color: #454547;" href="http://purl.obolibrary.org/obo/RO_0002327">RO:enables</a></th>
+                         <th><a class="externalProp" href="http://purl.obolibrary.org/obo/RO_0002327">RO:enables</a></th>
                          <td>
                            <a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
                          </td>
@@ -250,9 +246,9 @@ external: #454547;
                        </tr>
                        <tr>
                          {% if status == revision %}
-                         <th><a style="color: #0B794B" href="/devTypes/BioChemEntity/specification/#hasRepresentation">hasRepresentation</a></th>
+                         <th><a class="newBsc" href="/devTypes/BioChemEntity/specification/#hasRepresentation">hasRepresentation</a></th>
                          {% else %}
-                         <th><a style="color: #0B794B"href="/specifications/BioChemEntity/specification/#hasRepresentation">hasRepresentation</a></th>
+                         <th><a class="newBsc"href="/types/BioChemEntity/specification/#hasRepresentation">hasRepresentation</a></th>
                          {% endif %}
                          <td>
                            <a href="http://schema.org/PropertyValue">PropertyValue</a><br><a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
@@ -265,7 +261,7 @@ external: #454547;
                          <td></td>
                        </tr>
                        <tr>
-                         <th><a style="color: #454547;" href="http://purl.obolibrary.org/obo/RO_0002331">RO:involved in</a></th>
+                         <th><a class="externalProp" href="http://purl.obolibrary.org/obo/RO_0002331">RO:involved in</a></th>
                          <td>
                            <a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
                          </td>
@@ -275,7 +271,7 @@ external: #454547;
                          <td></td>
                        </tr>
                        <tr>
-                         <th><a style="color: #0B794B" href="http://schema.org/location">location</a></th>
+                         <th><a class="newBsc" href="http://schema.org/location">location</a></th>
                          <td>
                            <a href="http://schema.org/Place">Place</a><br /><a href="http://schema.org/PostalAddress">PostalAddress</a><br />
                            <a href="http://schema.org/PropertyValue">PropertyValue</a><br /><a href="http://schema.org/Text">Text</a><br />
@@ -291,12 +287,12 @@ external: #454547;
                          <td></td>
                        </tr>
                        <tr>
-                         <th><a style="color: #0B794B" href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
+                         <th><a class="newBsc" href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
                          <td>
                            {% if status == revision %}
-                           <a style="color: #0B794B" href="/devTypes/DataRecord/specification/">DataRecord</a>
+                           <a class="newBsc" href="/devTypes/DataRecord/specification/">DataRecord</a>
                            {% else %}
-                           <a style="color: #0B794B" href="/specifications/DataRecord/specification/">DataRecord</a>
+                           <a class="newBsc" href="/types/DataRecord/specification/">DataRecord</a>
                            {% endif %}
                            <br /><a href="http://schema.org/URL">URL</a>
                          </td>

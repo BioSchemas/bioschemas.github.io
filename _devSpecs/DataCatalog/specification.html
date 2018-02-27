@@ -18,13 +18,6 @@ subtitle: Bioschemas specification for describing data repositories and data cat
 use_cases_url: /useCases/DataRepositories
 version: 0.1
 
-bsc: #0B794B;
-pending: #0000CC;
-external: #454547;
-
-
-
-
 ---
 
 
@@ -78,18 +71,18 @@ external: #454547;
                           <td></td>
                        </tr>
                        <tr>
-                          <th><a style="color: #0B794B" href="http://schema.org/name">provider</a></th>
+                          <th><a class="newBsc" href="http://schema.org/name">provider</a></th>
                           <td>
                             {% if status == revision %}
-                            <a style="color: #0B794B" href="/devSpecs/Organization/specification/">Organization</a>
+                            <a class="newBsc" href="/devSpecs/Organization/specification/">Organization</a>
                             {% else %}
-                            <a style="color: #0B794B" href="/specifications/Organization/specification/">Organization</a>
+                            <a class="newBsc" href="/specifications/Organization/specification/">Organization</a>
                             {% endif %}
                             <br />
                             {% if status == revision %}
-                            <a style="color: #0B794B" href="/devSpecs/Person/specification/">Person</a>
+                            <a class="newBsc" href="/devSpecs/Person/specification/">Person</a>
                             {% else %}
-                            <a style="color: #0B794B" href="/specifications/Person/specification/">Person</a>
+                            <a class="newBsc" href="/specifications/Person/specification/">Person</a>
                             {% endif %}
                           </td>
                           <td>
@@ -97,16 +90,16 @@ external: #454547;
                             may offer those services or goods on behalf of the provider. A provider may also serve as the seller.<br />
                             <strong>Bioschemas</strong>: Contact information for this data repository/catalog.<br />
                             <u><strong>Note</strong></u>: Bioschemas has changed the Expected Type from <a href="http://schema.org/Person">Person</a> to
-                            <a style="color: #0B794B" href="/devSpecs/Person/specification/">Person</a>
+                            <a class="newBsc" href="/devSpecs/Person/specification/">Person</a>
                             {% if status == revision %}
                             {% else %}
-                            <a style="color: #0B794B" href="/specifications/Person/specification/">Person</a>
+                            <a class="newBsc" href="/specifications/Person/specification/">Person</a>
                             {% endif %}
                             and from <a href="schema.org/Organization">Organization</a> to
                             {% if status == revision %}
-                            <a style="color: #0B794B" href="/devSpecs/Organization/specification/">Organization</a>.
+                            <a class="newBsc" href="/devSpecs/Organization/specification/">Organization</a>.
                             {% else %}
-                            <a style="color: #0B794B" href="/specifications/Organization/specification/">Organization</a>.
+                            <a class="newBsc" href="/specifications/Organization/specification/">Organization</a>.
                             {% endif %}
                           </td>
                           <td>MANY</td>
@@ -174,21 +167,21 @@ external: #454547;
                           <td></td>
                        </tr>
                        <tr>
-                          <th><a style="color: #0B794B" href="http://schema.org/dataset">dataset</a></th>
+                          <th><a class="newBsc" href="http://schema.org/dataset">dataset</a></th>
                           <td>
                             {% if status == revision %}
-                            <a style="color: #0B794B" href="/devSpecs/Dataset/specification/">Dataset</a>
+                            <a class="newBsc" href="/devSpecs/Dataset/specification/">Dataset</a>
                             {% else %}
-                            <a style="color: #0B794B" href="/specifications/Dataset/specification/">Dataset</a>
+                            <a class="newBsc" href="/specifications/Dataset/specification/">Dataset</a>
                             {% endif %}
                           </td>
                           <td>
                             <strong>Schema</strong>: A dataset contained in this catalog. <em>Inverse-property: <a href="includedInDataCatalog">includedInDataCatalog</a>.</em><br />
                             <u><strong>Note</strong></u>: Bioschemas has changed the Expected Type from <a href="http://schema.org/Dataset">Dataset</a> to
                             {% if status == revision %}
-                            <a style="color: #0B794B" href="/devSpecs/Dataset/specification/">Dataset</a>.
+                            <a class="newBsc" href="/devSpecs/Dataset/specification/">Dataset</a>.
                             {% else %}
-                            <a style="color: #0B794B" href="/specifications/Dataset/specification/">Dataset</a>.
+                            <a class="newBsc" href="/specifications/Dataset/specification/">Dataset</a>.
                             {% endif %}
                           <td>MANY</td>
                           <td></td>
@@ -225,21 +218,21 @@ external: #454547;
                           <td></td>
                        </tr>
                        <tr>
-                          <th><a style="color: #0B794B" href="http://schema.org/sourceOrganization">sourceOrganization</a></th>
+                          <th><a class="newBsc" href="http://schema.org/sourceOrganization">sourceOrganization</a></th>
                           <td>
                             {% if status == revision %}
-                            <a style="color: #0B794B" href="/devSpecs/Organization/specification/">Organization</a>
+                            <a class="newBsc" href="/devSpecs/Organization/specification/">Organization</a>
                             {% else %}
-                            <a style="color: #0B794B" href="/specifications/Organization/specification/">Organization</a>
+                            <a class="newBsc" href="/specifications/Organization/specification/">Organization</a>
                             {% endif %}
                           </td>
                           <td>
                             <strong>Schema</strong>: The Organization on whose behalf the creator was working.<br />
                             <u><strong>Note</strong></u>: Bioschemas has changed the Expected Type from <a href="http://schema.org/Organization">Organization</a> to
                             {% if status == revision %}
-                            <a style="color: #0B794B" href="/devSpecs/Organization/specification/">Organization</a>.
+                            <a class="newBsc" href="/devSpecs/Organization/specification/">Organization</a>.
                             {% else %}
-                            <a style="color: #0B794B" href="/specifications/Organization/specification/">Organization</a>.
+                            <a class="newBsc" href="/specifications/Organization/specification/">Organization</a>.
                             {% endif %}
                           <td>MANY</td>
                           <td></td>
