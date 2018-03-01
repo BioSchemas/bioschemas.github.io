@@ -58,30 +58,7 @@ version: '0.4-draft.1'
                           <td>ONE</td>
                           <td></td>
                        </tr>
-                       <tr>
-                          <th><a href="http://schema.org/name">name</a></th>
-                          <td>
-                            <a href="http://schema.org/Text">Text</a>
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: The name of the item.
-                          <td>ONE</td>
-                          <td></td>
-                       </tr>
-                       <tr>
-                            {% if status == revision %}
-                            <th><a class="newBsc" href="/devTypes/BioChemEntity/specification/#preferredLabel">preferredLabel</a></th>
-                            {% else %}
-                            <th><a class="newBsc" href="/types/BioChemEntity/specification/#preferredLabel">preferredLabel</a></th>
-                            {% endif %}
-                          <td>
-                            <a href="http://schema.org/Text">Text</a>
-                          </td>
-                          <td>
-                            <strong>Bioschemas</strong>: Indicates the preferred label to refer to a specific (sub) type of BioChemEntity. For a Protein Annotation, the value must be 'ProteinStructure'.<br />
-                          <td>ONE</td>
-                          <td></td>
-                       </tr>
+                       <!--
                        <tr id="type">
                           <th><a class="externalProp" href="https://www.w3.org/1999/02/22-rdf-syntax-ns#type">RDF:type</a></th>
                           <td>
@@ -91,23 +68,48 @@ version: '0.4-draft.1'
                             <strong>Bioschemas</strong>: Should have value: <a class="externalProp" href="http://purl.obolibrary.org/obo/PR_000000001">PR:protein</a>. Other types can be added (see <a href="#additionalType">additionalType</a>).
                           <td>ONE</td>
                           <td></td>
-                       </tr>
+                       </tr> -->
 
-
+<!-- RECOMMENDED -->
                        <tr class="cardinality">
                           <td colspan="5">
                              Marginality: <b>Recommended</b>
                           </td>
                        </tr>
-
                        <tr>
-                          <th><a class="externalProp" href="http://purl.obolibrary.org/obo/so#associated_with">SO:associated_with</a></th>
+                          <th><a href="http://schema.org/additionalType">additionalType</a></th>
                           <td>
-                            <a href="http://schema.org/MedicalCondition">MedicalCondition</a><br />
                             <a href="http://schema.org/URL">URL</a>
                           </td>
                           <td>
-                            <strong>Bioschemas</strong>: Disease associated to this protein, if any.
+                            <strong>Schema</strong>: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.<br />
+                            <strong>Bioschemas</strong>: Any ontology term desribing the protein concept; see Controlled Vocabulary column for examples.
+                          <td>MANY</td>
+                          <td>
+                            <a href="https://www.wikidata.org/wiki/Q8054">wikidata:protein</a><br />
+                            <a href="http://semanticscience.org/resource/SIO_010043.rdf">SIO:010043</a><br />
+                          </td>
+                       </tr>
+                       <tr>
+                         <th><a href="http://schema.org/alternateName">alternateName</a></th>
+                         <td>
+                           <a href="http://schema.org/Text">Text</a>
+                         </td>
+                         <td>
+                           <strong>Schema</strong>: An alias for the item.
+                         </td>
+                         <td>MANY</td>
+                         <td></td>
+                       </tr>
+                       <tr>
+                          <th><a class="externalProp" href="http://semanticscience.org/resource/SIO_000001">SIO:000001 (is related to)</a> or bioschemas:associatedTo?</th>
+                          <td>
+                            <a href="http://schema.org/MedicalCondition">MedicalCondition</a><br />
+                            <a href="http://schema.org/PropertyValue">PropertyValue</a><br />
+                            <a href="http://schema.org/URL">URL</a>
+                          </td>
+                          <td>
+                            <strong>Bioschemas</strong>: Used as short and direct alternative to <a href="#additionalProperty">additionalProperty</a>. It represents the association between a protein and a disease. The disease should be modeled as a <a href="http://schema.org/MedicalCondition">MedicalCondition</a>. Whenever possible, use the MedicalCode to refer to an ontology term such as those in OMIM. If PropertyValue is used as the object, use the property "value" for the medical condition and the propererty "hasEvidence" for any evidence related to the association.
                           <td>MANY</td>
                           <td></td>
                        </tr>
@@ -118,18 +120,8 @@ version: '0.4-draft.1'
                           </td>
                           <td>
                             <strong>Schema</strong>: A description of the item. <br />
-                            <strong>Bioschemas</strong>: Protein function. We recommend to start the description with "Function: [...]"
+                            <strong>Bioschemas</strong>: Protein function.
                           <td>ONE</td>
-                          <td></td>
-                       </tr>
-                       <tr>
-                          <th><a href="http://schema.org/image">image</a></th>
-                          <td>
-                            <a href="http://schema.org/ImageObject">ImageObject</a><br /><a href="http://schema.org/URL">URL</a>
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: An image of the item. This can be a URL or a fully described ImageObject.
-                          <td>MANY</td>
                           <td></td>
                        </tr>
                        <tr>
@@ -148,14 +140,15 @@ version: '0.4-draft.1'
                           </td>
                           <td>
                             <strong>Bioschemas</strong>: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: containedIn.</em><br />
-                            <strong>Bioschemas Protein</strong>: For proteins, it is recommended to at least specify the taxon/organism associated to the described protein; in this case the expected
+                            <strike><strong>Bioschemas Protein</strong>: For proteins, it is recommended to at least specify the taxon/organism associated to the described protein; in this case the expected
                             range would be a taxon id such as those in NCBI taxon or UniProt Taxonomy. Including as well the GO cellular locations is
-                            optional; in that case, the expected range would be a GO Cellular Location term.
+                            optional; in that case, the expected range would be a GO Cellular Location term.</strike><br/>
+                            <strong>Bioschemas Protein</strong>: Multiple options depending on the BioChemEntity. For instance, you can use NCBITaxon for organisms.
                           <td>MANY</td>
                           <td></td>
                        </tr>
                        <tr>
-                          <th><a class="externalProp" href="http://semanticscience.org/resource/SIO_010081.rdf">SIO:is transcribed from</a></th>
+                          <th><a class="externalProp" href="http://semanticscience.org/resource/SIO_010081.rdf">SIO:is transcribed from</a> OR bioschemas:transcribedFrom</th>
                           <td>
                             {% if status == revision %}
                             <a class="newBsc" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
@@ -166,8 +159,18 @@ version: '0.4-draft.1'
                             <a href="http://schema.org/URL">URL</a>
                           </td>
                           <td>
-                            <strong>Bioschemas</strong>: Gene(s) from which this protein was transcribed from.
+                            <strong>Bioschemas</strong>: Used as a short and direct alternative to additionalProperty. It represents the association between a protein and a gene, i.e., protein is transcribed (via the mRNA) from a gene. The gene shoul be modeled as a BioChemEntity under the profile Gene.
                           <td>MANY</td>
+                          <td></td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/name">name</a></th>
+                          <td>
+                            <a href="http://schema.org/Text">Text</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The name of the item.
+                          <td>ONE</td>
                           <td></td>
                        </tr>
                        <tr>
@@ -188,30 +191,16 @@ version: '0.4-draft.1'
                              Marginality: <b>Optional</b>
                           </td>
                        </tr>
-
-                       <tr id="additionalType">
-                         <th><a href="http://schema.org/additionalType">additionalType</a></th>
+                       <tr id="additionalProperty">
+                         <th><a href="http://schema.org/additionalProperty">additionalProperty</a></th>
                          <td>
-                           <a href="http://schema.org/URL">URL</a>
+                           <a href="http://schema.org/PropertyValue">PropertyValue</a>
                          </td>
                          <td>
-                           <strong>Schema</strong>: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax.
-                           This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax -
-                           the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those
-                           defined externally. <br />
-                           <strong>Bioschemas</strong>:  Any ontology term describing the protein concept. This is in addition to the official type to describe a protein; see
-                           <a class="externalProp" href="#type">RDF:type</a>.
-                         </td>
-                         <td>MANY</td>
-                         <td></td>
-                       </tr>
-                       <tr>
-                         <th><a href="http://schema.org/alternateName">alternateName</a></th>
-                         <td>
-                           <a href="http://schema.org/Text">Text</a>
-                         </td>
-                         <td>
-                           <strong>Schema</strong>: An alias for the item.
+                           <strong>Schema</strong>: A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.
+Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br />
+                           <strong>Bioschemas</strong>: As much a possible, do not use it! Alternatively, considered reusing properties/relations already coined in controlled vocabularies. We recommed to look at the <a href="http://obofoundry.org/ontology/ro.html">OBO Relations Ontology (RO)</a> or the <a href="http://sio.semanticscience.org/">Semanticscience Integrated Ontology (SIO)</a> as starting points.<br />
+                           <strong>Bioschemas protein profile</strong>: If no suitable property exists in this profile, use any ontology term coined as a property and suitable for your needs. For instance <a href="http://semanticscience.org/resource/SIO_000095">sio:SIO_000095</a> (is member of) could be used to model the relation between a protein and a protein clan.
                          </td>
                          <td>MANY</td>
                          <td></td>
@@ -237,12 +226,12 @@ version: '0.4-draft.1'
                        <tr>
                          <th><a class="externalProp" href="http://purl.obolibrary.org/obo/RO_0002327">RO:enables</a></th>
                          <td>
-                           <a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
+                           <a href="http://schema.org/CategoryCode">CategoryCode</a><br /><a href="http://schema.org/PropertyValue">PropertyValue</a>
                          </td>
-                         <td><strong>Bioschemas</strong>: GO molecular function enabled by the protein.
+                         <td><strong>Bioschemas</strong>: A protein enables GO molecular functions. If you want to add an evidence use PropertyValue with "value" pointing to the CategoryCode corresponding to the GO term and "hasEvidence" to the evidence. Otherwise just use the GO term as the CategoryCode.
                          </td>
                          <td>MANY</td>
-                         <td></td>
+                         <td><a href="http://www.geneontology.org/">Gene Ontology (GO)</a></td>
                        </tr>
                        <tr>
                          {% if status == revision %}
@@ -255,20 +244,30 @@ version: '0.4-draft.1'
                          </td>
                          <td><strong>Bioschemas</strong>: A representation for this entity other than, for instance, an image (use image property for that) or the main web page/record
                            (use mainEntityOfPage for that), and see <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a>, for sameAs and url).<br />
-                           <strong>Bioschemas Protein</strong>: This property could be used, for instance, to register a sequence protein as it is a representation of the protein.
+                           <strong>Bioschemas Protein</strong>: This property could be used, for instance, to register a sequence protein as it is a representation of the protein. If you want to better define the nature of the representation, use a PropertyValue as described in <a href="#additionalProperty">additionalProperty<a/>.
                          </td>
                          <td>MANY</td>
                          <td></td>
                        </tr>
                        <tr>
+                          <th><a href="http://schema.org/image">image</a></th>
+                          <td>
+                            <a href="http://schema.org/ImageObject">ImageObject</a><br /><a href="http://schema.org/URL">URL</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: An image of the item. This can be a URL or a fully described ImageObject.
+                          <td>MANY</td>
+                          <td></td>
+                       </tr>
+                       <tr>
                          <th><a class="externalProp" href="http://purl.obolibrary.org/obo/RO_0002331">RO:involved in</a></th>
                          <td>
-                           <a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
+                           <a href="http://schema.org/CategoryCode">CategoryCode</a><br /><a href="http://schema.org/PropertyValue">PropertyValue</a>
                          </td>
-                         <td><strong>Bioschemas</strong>: GO biological process this protein is involved in.
+                         <td><strong>Bioschemas</strong>: A protein is involved in GO biological processes. If you want to add an evidence use PropertyValue with "value" pointing to the CategoryCode corresponding to the GO term and "hasEvidence" to the evidence. Otherwise just use the GO term as the CategoryCode.
                          </td>
                          <td>MANY</td>
-                         <td></td>
+                         <td><a href="http://www.geneontology.org/">Gene Ontology (GO)</a></td>
                        </tr>
                        <tr>
                          <th><a class="newBsc" href="http://schema.org/location">location</a></th>
@@ -281,26 +280,23 @@ version: '0.4-draft.1'
                            <strong>Schema</strong>: The location of for example where the event is happening, an organization is located, or where an action takes place.<br/>
                            <strong>Bioschemas</strong>: The location can refer to a position in the chromosome or sequence or to a physical place where, for instance, a
                            sample is stored. <br />
+                           <strong>Bioschemas protein profile</strong>: Currently not in use.<br />
                            <u><strong>Note</strong></u>: The list of Expected Types has been extended as schema.org/location only has Place, PostalAddress and Text.
                          </td>
                          <td>MANY</td>
                          <td></td>
                        </tr>
                        <tr>
-                         <th><a class="newBsc" href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
+                         <th><a href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
                          <td>
-                           {% if status == revision %}
-                           <a class="newBsc" href="/devTypes/DataRecord/specification/">DataRecord</a>
-                           {% else %}
-                           <a class="newBsc" href="/types/DataRecord/specification/">DataRecord</a>
-                           {% endif %}
+                           <a href="http://schema.org/CreativeWork">CreativeWork</a>
                            <br /><a href="http://schema.org/URL">URL</a>
                          </td>
                          <td>
                            <strong>Schema</strong>: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See
                            <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br />
                            <strong>Bioschemas</strong>: Link via DataRecord or <a href="http://schema.org/URL">URL</a> to the main Record representing this entity in a dataset.<br />
-                           <u><strong>Note</strong></u>: Bioschemas has replaced CreativeWork with DataRecord in the Expected Types.
+                           <strong>Bioschemas protein profile</strong>: Currently not in use; use the mainEntity property from <a href="/types/DataRecord/specification/">DataRecord</a> instead.
                          </td>
                          <td>ONE</td>
                          <td></td>
