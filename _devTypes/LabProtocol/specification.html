@@ -94,7 +94,7 @@ external: #454547;
                              however, it is targetted at <a href="http://health-lifesci.schema.org/MedicalDevice">MedicalDevice</a>. It has the description, "A goal
                              towards an action is taken. Can be concrete or abstract." The Expected Types are <a href="http://health-lifesci.schema.org/MedicalDevicePurpose">
                                http://health-lifesci.schema.org/MedicalDevicePurpose</a> or <a href="http://schema.org/Thing">Thing</a>. <br />
-                            <strong>Bioschemas</strong>:A goal towards an action is taken. Can be concrete or abstract.<br />
+                            <strong>Bioschemas</strong>: A goal towards an action is taken. Can be concrete or abstract.<br />
                            </td>
                         </tr>
                         <tr>
@@ -501,7 +501,9 @@ external: #454547;
                               <a href="http://schema.org/CreativeWork">CreativeWork</a>
                            </td>
                            <td>
-                             <strong>Schema</strong>: Indicates a CreativeWork that is (in some sense) a part of this CreativeWork. <em>Inverse property: <a href="http://schema.org/isPartOf">isPartOf</a>.</em>
+                             <strong>Schema</strong>: Indicates a CreativeWork that is (in some sense) a part of this CreativeWork. <em>Inverse property: <a href="http://schema.org/isPartOf">isPartOf</a>.</em><br />
+                             <strong>Bioschemas</strong>: A particular case in Bioschemas is LabProtocol where structural elements are used to described advantages (situations the Protocol has been successfully employed), limitations (situations the Protocol would be unreliable or otherwise unsuccessful), applications (Applications of the protocol list the full diversity of the applications of the method and support if is possible to extend the range of applications of the protocol. e.g. northern blot assays, sequencing, etc.), and outcomes (outcome or expected result by a protocol execution).<br />
+                             For LabProtocol, in the applicationType, please use <a href="http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol">http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol</a> for advantages, <a href="http://purl.org/net/SMARTprotocol#LimitationOfTheProtocol">http://purl.org/net/SMARTprotocol#LimitationfTheProtocol</a> for limitations, <a href="http://purl.org/net/SMARTprotocol#ApplicationOfTheProtocol">http://purl.org/net/SMARTprotocol#ApplicationOfTheProtocol</a> for applicability, and <a href="http://purl.org/net/SMARTprotocol#OutcomeOfTheProtocol">http://purl.org/net/SMARTprotocol#OutcomeOfTheProtocol</a> for outcomes.
                            </td>
                         </tr>
                         <tr>
@@ -576,9 +578,7 @@ external: #454547;
                               <br>
                            </td>
                            <td>
-                             <strong>Schema</strong>: Indicates a CreativeWork that this CreativeWork is (in some sense) part of.<br />
-                             <strong>Bioschemas</strong>: A particular case in Bioschemas is LabProtocol where structural elements are used to described advantages (situations the Protocol has been successfully employed), limitations (situations the Protocol would be unreliable or otherwise unsuccessful), applications (Applications of the protocol list the full diversity of the applications of the method and support if is possible to extend the range of applications of the protocol. e.g. northern blot assays, sequencing, etc.), and outcomes (outcome or expected result by a protocol execution).<br />
-                             For LabProtocol, in the applicationType, please use <a href="http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol">http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol</a> for advantages, <a href="http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol">http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol</a> for limitations, <a href="http://purl.org/net/SMARTprotocol#ApplicationOfTheProtocol">http://purl.org/net/SMARTprotocol#ApplicationOfTheProtocol</a> for applicability, and <a href="http://purl.org/net/SMARTprotocol#OutcomeOfTheProtocol">http://purl.org/net/SMARTprotocol#OutcomeOfTheProtocol</a> for outcomes.
+                             <strong>Schema</strong>: Indicates a CreativeWork that this CreativeWork is (in some sense) part of.
                            </td>
                            <td>MANY</td>
                            <td>
@@ -914,7 +914,7 @@ external: #454547;
                              <strong>Schema</strong>: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between
                              something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker
                              understanding of extra types, in particular those defined externally.<br />
-                             <strong>Bioschemas</strong>: Optional for LabProtocol as it has its own type in schema.org. If used, the recommended URL is experimental protocol as defined by SMART Protocols (<a href="http://purl.org/net/SMARTprotocol#ExperimentalProtocol">SP:ExperimentalProtocol</a>).                             
+                             <strong>Bioschemas</strong>: Optional for LabProtocol as it has its own type in schema.org. If used, the recommended URL is experimental protocol as defined by SMART Protocols (<a href="http://purl.org/net/SMARTprotocol#ExperimentalProtocol">SP:ExperimentalProtocol</a>).
                            </td>
                         </tr>
                         <tr>
