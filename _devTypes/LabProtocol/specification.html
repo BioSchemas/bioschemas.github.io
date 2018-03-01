@@ -914,8 +914,7 @@ external: #454547;
                              <strong>Schema</strong>: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between
                              something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker
                              understanding of extra types, in particular those defined externally.<br />
-                             <strong>Bioschemas</strong>: Although not required, additionalType can be used to specify the nature of the record. For instance, a UniProt protein record would
-                             have <a style="color: #454547;" href="http://purl.uniprot.org/core/Protein">UP:Protein</a> as type.
+                             <strong>Bioschemas</strong>: Optional for LabProtocol as it has its own type in schema.org. If used, the recommended URL is experimental protocol as defined by SMART Protocols (<a href="http://purl.org/net/SMARTprotocol#ExperimentalProtocol">SP:ExperimentalProtocol</a>).                             
                            </td>
                         </tr>
                         <tr>
