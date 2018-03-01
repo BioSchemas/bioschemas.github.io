@@ -8,5 +8,5 @@ affiliation:
 homepage:
 github_username:
 orcid:
-groups: [biologicalentities, proteins]
+groups: [biologicalentities, proteins, labprotocols]
 ---
