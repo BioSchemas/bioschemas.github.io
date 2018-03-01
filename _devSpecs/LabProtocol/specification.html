@@ -149,33 +149,7 @@ version: '0.2'
 <!-- RECOMMENDED -->
                         <tr class="cardinality">
                            <td colspan="5">
-                              Marginality: <b class="Recommended">Recommended.</b>
-                           </td>
-                        </tr>
-                        <tr>
-                           <th><a class="externalProp" href="http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol">SP:AdvantageOfTheProtocol</a></th>
-                           <td>
-                              <a href="http://schema.org/Text">Text</a>
-                           </td>
-                           <td>
-                             <strong>SP</strong>: Advantage of the protocol is a subclass of textual entity. It should be made clear in which situations the Protocol has been successfully employed.
-                           </td>
-                           <td>MANY</td>
-                           <td>
-                             <a href="http://bioportal.bioontology.org/ontologies/SP">SMART Protocols</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <th><a class="externalProp" href="http://purl.org/net/SMARTprotocol#ApplicationOfTheProtocol">SP:ApplicationOfTheProtocol</a></th>
-                           <td>
-                              <a href="http://schema.org/Text">Text</a>
-                           </td>
-                           <td>
-                             <strong>SP</strong>: Application of the protocol is a subclass of textual entity. Applications of the protocol list the full diversity of the applications of the method and support if is possible to extend the range of applications of the protocol.
-                           </td>
-                           <td>MANY</td>
-                           <td>
-                             <a href="http://bioportal.bioontology.org/ontologies/SP">SMART Protocols</a>
+                              Marginality: <b>Recommended.</b>
                            </td>
                         </tr>
                         <tr>
@@ -258,34 +232,6 @@ version: '0.2'
                            <td>
                            </td>
                         </tr>
-                        <tr>
-                           <th><a class="externalProp" href="http://purl.org/net/SMARTprotocol#LimitationOfTheProtocol">SP:LimitationOfTheProtocol</a></th>
-                           <td>
-                              <a href="http://schema.org/Text">Text</a>
-                           </td>
-                           <td>
-                             <strong>SP</strong>: Limitation of the protocol is a subclass of textual entity where the possible limitations of the protocol should be discussed.
-                             It should be made clear in which situations the Protocol would be unreliable or otherwise unsuccessful. Definition source: <a href="http://www.nature.com/nprot/info/gta.html">
-                             http://www.nature.com/nprot/info/gta.html</a> Example of usage: A major problem faced both in this and other safflower transformation studies is the hyperhydration of transgenic shoots which result in the loss of a large proportion of transgenic shoots. Belide Srinivas., 2011
-                           </td>
-                           <td>MANY</td>
-                           <td>
-                             <a href="http://bioportal.bioontology.org/ontologies/SP">SMART Protocols</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <th><a class="externalProp" href="http://purl.org/net/SMARTprotocol#OutcomeOfTheProtocol">SP:OutcomeOfTheProtocol</a></th>
-                           <td>
-                              <a href="http://schema.org/Text">Text</a>
-                           </td>
-                           <td>
-                             <strong>SP</strong>: Protocol outcome is a textual entity that is an outcome or expected result by a protocol execution.
-                           </td>
-                           <td>MANY</td>
-                           <td>
-                             <a href="http://bioportal.bioontology.org/ontologies/SP">SMART Protocols</a>
-                           </td>
-                        </tr>
                         <tr id="software">
                            <th><a class="newBsc" href="#">software</a></th>
                            <td>
@@ -302,7 +248,7 @@ version: '0.2'
 <!-- OPTIONAL -->
                         <tr class="cardinality">
                            <td colspan="5">
-                              Marginality: <b class="Optional">Optional</b>
+                              Marginality: <b>Optional</b>
                            </td>
                         </tr>
                         <tr>
@@ -339,7 +285,9 @@ version: '0.2'
                               <br>
                            </td>
                            <td>
-                             <strong>Schema</strong>: Indicates a CreativeWork that this CreativeWork is (in some sense) part of.
+                             <strong>Schema</strong>: Indicates a CreativeWork that this CreativeWork is (in some sense) part of.<br />
+                             <strong>Bioschemas</strong>: A particular case in Bioschemas is LabProtocol where structural elements are used to described advantages (situations the Protocol has been successfully employed), limitations (situations the Protocol would be unreliable or otherwise unsuccessful), applications (Applications of the protocol list the full diversity of the applications of the method and support if is possible to extend the range of applications of the protocol. e.g. northern blot assays, sequencing, etc.), and outcomes (outcome or expected result by a protocol execution).<br />
+                             For LabProtocol, in the applicationType, please use <a href="http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol">http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol</a> for advantages, <a href="http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol">http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol</a> for limitations, <a href="http://purl.org/net/SMARTprotocol#ApplicationOfTheProtocol">http://purl.org/net/SMARTprotocol#ApplicationOfTheProtocol</a> for applicability, and <a href="http://purl.org/net/SMARTprotocol#OutcomeOfTheProtocol">http://purl.org/net/SMARTprotocol#OutcomeOfTheProtocol</a> for outcomes.
                            </td>
                            <td>MANY</td>
                            <td>
