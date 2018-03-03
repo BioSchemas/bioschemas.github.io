@@ -50,6 +50,25 @@ external: #454547;
                            New properties for <a style="color: #0B794B;" href="#">{{page.name}}</a> (pending schema.org integration).
                         </td>
                      </tr>
+                     <tr>
+                       <th><a href="http://schema.org/additionalProperty">additionalProperty</th>
+                       <td>
+                         <a href="http://schema.org/PropertyValue">PropertyValue</a>
+                       </td>
+                       <td><strong>Schema</strong>: A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.
+Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
+                     </tr>
+                     <tr id="hasRepresentation">
+                       <th style="color: #0B794B;">hasRepresentation</th>
+                       <td>
+                         <a href="http://schema.org/PropertyValue">PropertyValue</a><br><a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         <strong>Bioschemas</strong>: A representation for this entity other than, for instance, an image (use image property for that) or the main web page/record
+                         (use mainEntityOfPage for that), and see <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a>, for sameAs and url).<br />
+                         <strong>Bioschemas usage</strong>: This property could be used, for instance, to register a sequence protein as it is a representation of the protein. If you want to better define the nature of the representation, use a PropertyValue as described in additionalProperty.
+                       </td>
+                     </tr>
                      <tr id="contains">
                        <th style="color: #0B794B;">contains</th>
                        <td>
@@ -71,7 +90,11 @@ external: #454547;
                        <td>
                          <a style="color: #0B794B;" href="#">BioChemEntity</a><br><a href="http://schema.org/URL">URL</a>
                        </td>
-                       <td><strong>Bioschemas</strong>: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: containedIn.</em></td>
+                       <td>
+                         <strong>Bioschemas</strong>: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: containedIn.</em><br />
+                         <strong>Bioschemas usage</strong>:
+Additional to the use of name and description to describe this property in a human-readable way, additionalType should be used to specify the nature of the property/relation. For instance, if the property refers to a gene/protein disease association, you could use <a href="http://semanticscience.org/resource/SIO_000983">http://semanticscience.org/resource/SIO_000983</a> as additionalType for the additionalProperty.
+                       </td>
                      </tr>
                      <tr>
                        <th><a style="color: #0B794B;" href="http://schema.org/location">location</a></th>
@@ -83,8 +106,8 @@ external: #454547;
                        <td>
                          <strong>Schema</strong>: The location of for example where the event is happening, an organization is located, or where an action takes place.<br/>
                          <strong>Bioschemas</strong>: The location can refer to a position in the chromosome or sequence or to a physical place where, for instance, a
-                         sample is stored. <br />
-                         <u>Note</u>: The list of Expected Types has been extended as schema.org/location only has Place, PostalAddress and Text.
+                         sample is stored. Using additionalType is advised to make the distinction. For instance, <a href="https://github.com/OBF/FALDO">FALDO</a> can be used for sequence coordinates.<br />
+                         <u><strong>Note</strong></u>: The list of Expected Types has been extended as <a href="http://schema.org/location">schema.org/location</a> only has Place, PostalAddress and Text.
                        </td>
                      </tr>
                      <!-- <tr id="preferredLabel">
@@ -109,8 +132,12 @@ external: #454547;
                          This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax -
                          the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those
                          defined externally. <br />
-                         <strong>Bioschemas</strong>:  As BioChemEntity is a generic wrapper for entities in Life Sciences, customized types (a.k.a. profiles in Bioschemas)
-                         should specify what ontologies and terms should be used.
+                         <strong>Bioschemas</strong>:  As BioChemEntity is a generic wrapper for entitties in Life Sciences, customized types (a.k.a. profiles in Bioschemas) should specify what
+                         ontologies and terms should be used. SIO (<a href="http://bioportal.bioontology.org/ontologies/SIO">http://bioportal.bioontology.org/ontologies/SIO</a>) covers a wide
+                         range of concepts in Life Sciences and accept suggestions about additions (see <a href="https://github.com/micheldumontier/semanticscience/issues">https://github.com/micheldumontier/semanticscience/issues</a>),
+                         other ontologies are possible as well. Customized types should be as specific as possible. For instance, <a href="http://semanticscience.org/resource/SIO_010043">http://semanticscience.org/resource/SIO_010043</a>
+                         would work for a protein while <a href="http://semanticscience.org/resource/SIO_000985">http://semanticscience.org/resource/SIO_000985</a> for a gene coding a protein (which is more specific than gene as described by <a href="http://semanticscience.org/resource/SIO_010035">http://semanticscience.org/resource/SIO_010035</a>). If no better optoin, a generic term could be used as well
+                         (like <a href="http://semanticscience.org/resource/SIO_000004">http://semanticscience.org/resource/SIO_000004</a> or so).
                        </td>
                      </tr>
                      <tr>
