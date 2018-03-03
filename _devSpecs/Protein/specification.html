@@ -58,17 +58,6 @@ version: '0.4-draft.1'
                           <td>ONE</td>
                           <td></td>
                        </tr>
-                       <!--
-                       <tr id="type">
-                          <th><a class="externalProp" href="https://www.w3.org/1999/02/22-rdf-syntax-ns#type">RDF:type</a></th>
-                          <td>
-                            <a href="http://schema.org/URL">URL</a>
-                          </td>
-                          <td>
-                            <strong>Bioschemas</strong>: Should have value: <a class="externalProp" href="http://purl.obolibrary.org/obo/PR_000000001">PR:protein</a>. Other types can be added (see <a href="#additionalType">additionalType</a>).
-                          <td>ONE</td>
-                          <td></td>
-                       </tr> -->
 
 <!-- RECOMMENDED -->
                        <tr class="cardinality">
@@ -102,7 +91,7 @@ version: '0.4-draft.1'
                          <td></td>
                        </tr>
                        <tr>
-                          <th><a class="externalProp" href="http://semanticscience.org/resource/SIO_000001">SIO:000001 (is related to)</a> or bioschemas:associatedTo?</th>
+                          <th><a class="externalProp" href="http://semanticscience.org/resource/SIO_000001">SIO:000001 (is related to)</a></th>
                           <td>
                             <a href="http://schema.org/MedicalCondition">MedicalCondition</a><br />
                             <a href="http://schema.org/PropertyValue">PropertyValue</a><br />
@@ -148,7 +137,7 @@ version: '0.4-draft.1'
                           <td></td>
                        </tr>
                        <tr>
-                          <th><a class="externalProp" href="http://semanticscience.org/resource/SIO_010081.rdf">SIO:is transcribed from</a> OR bioschemas:transcribedFrom</th>
+                          <th><a class="externalProp" href="http://semanticscience.org/resource/SIO_010081.rdf">SIO:010081 (is transcribed from)</a>/th>
                           <td>
                             {% if status == revision %}
                             <a class="newBsc" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
