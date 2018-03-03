@@ -18,7 +18,7 @@ active: true
                  <h1>Use Cases for {{page.name}}</h1>
                  {% assign group = site.groups | where:"identifier", page.group %}
                  {% for g in group %}
-                 <p>The following use cases were developed by the <a href="/groups/{{page.group}}">{{ g.name }}</a> group.
+                 <p>The following use cases were developed by the <a href="/groups/{{g.name}}/">{{ g.name }}</a> group.
                  {% endfor %}
 
                  <h3>Findability</h3>
