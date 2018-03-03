@@ -15,7 +15,7 @@ adoption: false
 applications: false
 
 # Page attributes
-abstract: ''
+abstract: 'Develop a Bioschemas profile around a chemical use case involving resources such as ChEMBL'
 objectives:
   [
     'Test the adoption of schema.org around a chemical use case involving chemical resources such as ChEMBL.',
