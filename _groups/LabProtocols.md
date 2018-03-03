@@ -2,7 +2,7 @@
 layout: group-details
 identifier: labprotocols
 name: Laboratory Protocols
-path: labprotocols.html
+url: LabProtocols
 collection: groups
 active: true
 type: generic

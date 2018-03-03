@@ -2,6 +2,7 @@
 layout: group-details
 identifier: data
 name: Datasets
+url: Datasets
 path: datasets.html
 collection: groups
 active: true

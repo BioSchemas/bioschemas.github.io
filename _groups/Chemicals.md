@@ -2,6 +2,7 @@
 layout: group-details
 identifier: chemicals
 name: Chemicals
+url: Chemicals
 collection: groups
 active: true
 type: biological
