@@ -31,7 +31,7 @@
                   </div>
                   <br />
                   <h5>Other group members</h5>
-                  <div id="peopleTable">                     
+                  <div id="peopleTable">
                      {% assign authors = site.people | where:"groups", page.identifier %}
                      {% for author in authors %}
                      {% assign author-id = author.id | split: '/' %}
@@ -50,12 +50,23 @@
                   <br />
                   <h5>Specifications</h5>
                   <ul>
-
                      {% for spec in page.specifications%}
                      <li><a href="/specifications/{{spec}}/specification/">{{spec}}</a></li>
                      {% endfor %}
                      {% for spec in page.types%}
                      <li><a href="/types/{{spec}}/specification/">{{spec}}</a></li>
+                     {% endfor %}
+                  </ul>
+                  {% endif %}
+                  {% if page.draft_specifications or page.types %}
+                  <br />
+                  <h5>Draft specifications</h5>
+                  <ul>
+                     {% for spec in page.draft_specifications%}
+                     <li><a href="/devSpecs/{{spec}}/specification/">{{spec}}</a></li>
+                     {% endfor %}
+                     {% for spec in page.draft_types%}
+                     <li><a href="/devTypes/{{spec}}/specification/">{{spec}}</a></li>
                      {% endfor %}
                   </ul>
                   {% endif %}

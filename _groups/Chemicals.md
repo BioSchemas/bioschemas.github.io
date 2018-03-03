@@ -21,7 +21,7 @@ objectives:
     'Test the adoption of schema.org around a chemical use case involving chemical resources such as ChEMBL.',
     'Evaluating the issues and benefits about how to work with schema.org and Bioschemas.'
   ]
-specifications:
+draft_specifications:
   [
     'Chemical', 'ChemicalStructure'
   ]
