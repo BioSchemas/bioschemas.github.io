@@ -2,7 +2,6 @@
 layout: group-details
 identifier: organizations
 name: Organizations
-url: Organizations
 collection: groups
 active: false
 type: generic

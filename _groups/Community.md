@@ -2,7 +2,6 @@
 layout: group-details
 identifier: community
 name: Community
-url: Community
 collection: groups
 active: true
 type: other

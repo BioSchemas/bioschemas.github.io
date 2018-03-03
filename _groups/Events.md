@@ -2,7 +2,6 @@
 layout: group-details
 identifier: events
 name: Events
-url: Events
 collection: groups
 active: false
 type: generic

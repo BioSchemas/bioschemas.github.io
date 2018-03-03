@@ -2,7 +2,6 @@
 layout: group-details
 identifier: tools
 name: Tools
-url: Tools
 collection: groups
 active: false
 type: generic

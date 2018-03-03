@@ -2,7 +2,6 @@
 layout: group-details
 identifier: beacons
 name: Beacons
-url: Beacons
 path: beacons.html
 collection: groups
 active: true

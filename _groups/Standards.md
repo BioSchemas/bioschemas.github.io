@@ -2,7 +2,6 @@
 layout: group-details
 identifier: standards
 name: Standards
-url: Standards
 collection: groups
 active: false
 type: generic

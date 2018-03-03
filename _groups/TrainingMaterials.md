@@ -2,7 +2,6 @@
 layout: group-details
 identifier: trainingmaterials
 name: Training Materials
-url: TrainingMaterials
 collection: groups
 active: true
 type: generic

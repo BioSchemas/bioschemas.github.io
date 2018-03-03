@@ -2,7 +2,6 @@
 layout: group-details
 identifier: biologicalentities
 name: Biological Entities
-url: BiologicalEntities
 path: biologicalentities.html
 collection: groups
 active: true

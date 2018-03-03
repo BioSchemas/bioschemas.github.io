@@ -2,7 +2,6 @@
 layout: group-details
 identifier: validation
 name: Validation
-url: Validation
 collection: groups
 active: true
 type: other
