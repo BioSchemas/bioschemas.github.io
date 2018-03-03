@@ -52,6 +52,10 @@
   <p>No team members currently specified.</p>
   {% endfor %}
   {% endfor %}
+  {% assign group = site.groups | where:"identifier", spec.group %}
+  {% for g in group %}
+    <p>They are all members of the <a href="{{g.url}}">{{g.name}}</a> group.</p>
+  {% endfor %}
 </div>
 </section>
 
