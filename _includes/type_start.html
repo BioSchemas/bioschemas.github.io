@@ -16,10 +16,13 @@
 
 <section id="contributors" class="tabs">
 <h3>Contributors</h3>
-<p>The following people have been involved in the creation of this specification document:</p>
+{% assign group = site.groups | where:"identifier", page.group %}
+{% for g in group %}
+<p>The following people have been involved in the creation of this specification document. They are all members of the <a href="{{g.url}}">{{g.name}}</a> group.</p>
+{% endfor %}
+
 <h6>Group Leader(s)</h6>
 <div id="leadTable">
-  {% assign group = site.groups | where:"identifier", page.group %}
   {% for g in group %}
   {% for leader in g.lead %}
   {% assign lead-id = "/people/" | append: leader %}
@@ -78,15 +81,34 @@ This is a new {{page.spec_type}} that fits into the schema.org hierarchy as foll
 </section>
 
 <section id="links" class="tabs">
-<!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
-<h3>Links</h3>
-
-{% if page.gh_tasks != '' %}
-<a href="{{page.gh_tasks}}">Issue Tracker</a><br />
-{% else %}
-Issue Tracker<br />
-{% endif %}
-
+<table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto;">
+    <thead>
+    <tr>
+        <th>Group</th>
+        <th>Task &amp; Issues</th>
+    </tr>
+    </thead>
+    <tbody>
+<tr>
+    <td>
+    {% for g in group %}
+    <a href="/groups/{{spec.group}}">{{g.name}}</a>
+    {% endfor %}
+    </td>
+    <td class="spec_links">
+        {% if spec.gh_tasks == '' %}
+          <a>
+            <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
+          </a>
+        {% else %}
+          <a href="{{spec.gh_tasks}}">
+            <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues">
+          </a>
+        {% endif %}
+    </td>
+</tr>
+</tbody>
+</table>
 </section>
 
 <br />

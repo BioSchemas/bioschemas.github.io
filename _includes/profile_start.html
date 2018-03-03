@@ -15,10 +15,13 @@
 
 <section id="contributors" class="tabs">
 <h3>Contributors</h3>
-<p>The following people have been involved in the creation of this specification document:</p>
+{% assign group = site.groups | where:"identifier", page.group %}
+{% for g in group %}
+<p>The following people have been involved in the creation of this specification document. They are all members of the <a href="{{g.url}}">{{g.name}}</a> group.</p>
+{% endfor %}
+
 <h6>Group Leader(s)</h6>
 <div id="leadTable">
-  {% assign group = site.groups | where:"identifier", page.group %}
   {% for g in group %}
   {% for leader in g.lead %}
   {% assign lead-id = "/people/" | append: leader %}
@@ -52,10 +55,6 @@
   <p>No team members currently specified.</p>
   {% endfor %}
   {% endfor %}
-  {% assign group = site.groups | where:"identifier", spec.group %}
-  {% for g in group %}
-    <p>They are all members of the <a href="{{g.url}}">{{g.name}}</a> group.</p>
-  {% endfor %}
 </div>
 </section>
 
@@ -86,36 +85,89 @@ This is a new {{page.spec_type}} that fits into the schema.org hierarchy as foll
 </section>
 
 <section id="links" class="tabs">
-<h3>Links</h3>
-{% if page.use_cases_url != '' %}
-<a href="{{page.use_cases_url}}">Use case documentation</a><br />
-{% else %}
-Use case documentation<br />
-{% endif %}
-<br />
-{% if page.cross_walk_url != '' %}
-<a href="{{page.cross_walk_url}}">Cross Walk</a><br />
-{% else %}
-Cross Walk<br />
-{% endif %}
-<br />
-{% if page.gh_tasks != '' %}
-<a href="{{page.gh_tasks}}">Issue Tracker</a><br />
-{% else %}
-Issue Tracker<br />
-{% endif %}
-<br />
-{% if page.gh_examples != '' %}
-<a href="{{page.gh_examples}}">Examples</a><br />
-{% else %}
-Examples<br />
-{% endif %}
-<br />
-{% if page.live_deploy != '' %}
-<a href="{{page.live_deploy}}">Live Deployments</a><br />
-{% else %}
-Live Deployments<br />
-{% endif %}
+<table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto;">
+    <thead>
+    <tr>
+        <th>Group</th>
+        <th>Use Cases</th>
+        <th>Cross Walk</th>
+        <th>Task &amp; Issues</th>
+        <th>Examples</th>
+        <th>Live Deploys</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <td>
+        {% for g in group %}
+        <a href="{{g.url}}">{{g.name}}</a>
+        {% endfor %}
+        </td>
+        <td class="spec_links">
+            {% if page.use_cases_url == '' %}
+              <a>
+                <img src="/images/use_case_spec.png" alt="View BioSchemas {{ page.name }} Use Cases"  style="filter: grayscale(100%);">
+              </a>
+            {%else%}
+              <a href="{{page.use_cases_url}}">
+                <img src="/images/use_case_spec.png" alt="View BioSchemas {{ page.name }} Use Cases">
+              </a>
+            {%endif%}
+        </td>
+
+        <td class="spec_links">
+            {% if page.cross_walk_url == '' %}
+              <a>
+                <img src="/images/cross_walk.png" alt="View BioSchemas {{ page.name }} Cross Walk"  style="filter: grayscale(100%);">
+              </a>
+            {%else%}
+              <a href="{{page.cross_walk_url}}">
+                <img src="/images/cross_walk.png" alt="View BioSchemas {{ page.name }} Cross Walk">
+              </a>
+            {%endif%}
+        </td>
+
+        <td class="spec_links">
+            {% if page.gh_tasks == '' %}
+              <a>
+                <img src="/images/specs_tasks.png" alt="BioSchemas {{ page.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
+              </a>
+            {% else %}
+              <a href="{{page.gh_tasks}}">
+                <img src="/images/specs_tasks.png" alt="BioSchemas {{ page.name }} Github Tasks or Issues">
+              </a>
+            {% endif %}
+        </td>
+
+        <td class="spec_links">
+            {% if page.gh_examples == '' %}
+              <a>
+                <img src="/images/spec_examples.png" alt="View BioSchemas {{ page.name }} Examples" style="filter: grayscale(100%);">
+              </a>
+            {% else %}
+              <a href="{{page.gh_examples}}">
+                <img src="/images/spec_examples.png" alt="View BioSchemas {{ page.name }} Examples">
+              </a>
+            {% endif %}
+        </td>
+
+        <td class="spec_links">
+            {% if page.live_deploy == '' %}
+              <a>
+                <img src="/images/live_deploy.png" alt="View BioSchemas {{ page.name }} Examples" style="filter: grayscale(100%);">
+              </a>
+            {% else %}
+              <a href="{{page.live_deploy}}">
+                <img src="/images/live_deploy.png" alt="View BioSchemas {{ page.name }} Examples">
+              </a>
+            {% endif %}
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
 </section>
 
 <br />
