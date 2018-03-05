@@ -67,7 +67,7 @@ external: #454547;
                         </td>
                         <td>
                           <strong>Bioschemas</strong>: A resource for which this resource is basis for. Inverse property: <a href="http://schema.org/isBasedOn">isBasedOn</a>.<br />
-                          Bioschemas usage: whenever possible use Evidence Codes (ECO).
+                          <strong>Bioschemas DataRecord</strong>: Whenever possible use Evidence Codes (<a href="http://www.ebi.ac.uk/ols/ontologies/eco">ECO</a>).
                         </td>
                      </tr>
                      <tr id="seeAlso">
@@ -547,7 +547,7 @@ external: #454547;
                            <a href="http://schema.org/CreativeWork">CreativeWork</a><br /><a href="http://schema.org/Product">Product</a><br /><a href="http://schema.org/URL">URL</a>
                         </td>
                         <td>
-                          <strong>Schema</strong>: A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. <em>Supersedes isBasedOnUrl</em>.
+                          <strong>Schema</strong>: A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. <em>Supersedes isBasedOnUrl</em>.<br />
                         </td>
                      </tr>
                      <tr>
@@ -613,15 +613,8 @@ external: #454547;
                            {% endif %} -->
                          </td>
                          <td>
-                           <strong>Schema</strong>: Indicates the primary entity described in some page or other CreativeWork. <em>Inverse-property: <a href="http:schema.org/mainEntityOfPage">mainEntityOfPage</a>.</em>
-                           <br><strong>Bioschemas</strong>: Bioschemas usage.  Link to the BioChemEntity represented by this record.<br />
-                           <!-- <u><strong>Note</strong></u>: BioSchemas have changed the Expected Type from <a href="http://schema.org/Thing">Thing</a> to
-                           {% if status == revision %}
-                           <a style="color: #0B794B" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>.
-                           {% else %}
-                           <a style="color: #0B794B" href="/types/BioChemEntity/specification/">BioChemEntity</a>.
-                           {% endif %}
-                           <em>Inverse property: <a href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a>.</em> -->
+                           <strong>Schema</strong>: Indicates the primary entity described in some page or other CreativeWork. <em>Inverse-property: <a href="http:schema.org/mainEntityOfPage">mainEntityOfPage</a>.</em><br />
+                           <strong>Bioschemas</strong>: Bioschemas usage.  Link to the BioChemEntity represented by this record.
                          </td>
                        </tr>
                        <tr>
