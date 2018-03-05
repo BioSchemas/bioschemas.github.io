@@ -98,7 +98,7 @@ version: '0.4-draft.1'
                             <a href="http://schema.org/URL">URL</a>
                           </td>
                           <td>
-                            <strong>Bioschemas</strong>: Used as short and direct alternative to <a href="#additionalProperty">additionalProperty</a>. It represents the association between a protein and a disease. The disease should be modeled as a <a href="http://schema.org/MedicalCondition">MedicalCondition</a>. Whenever possible, use the MedicalCode to refer to an ontology term such as those in OMIM. If PropertyValue is used as the object, use the property "value" for the medical condition and the propererty "hasEvidence" for any evidence related to the association.
+                            <strong>Bioschemas</strong>: Used as short and direct alternative to <a href="#additionalProperty">additionalProperty</a>. It represents the association between a protein and a disease. The disease should be modeled as a <a href="http://schema.org/MedicalCondition">MedicalCondition</a>. Whenever possible, use the <a href="http://schema.org/MedicalCode">MedicalCode</a> to refer to an ontology term such as those in OMIM. If PropertyValue is used as the object, use the property "value" for the medical condition and the propererty "hasEvidence" for any evidence related to the association.
                           <td>MANY</td>
                           <td></td>
                        </tr>
@@ -129,15 +129,15 @@ version: '0.4-draft.1'
                           </td>
                           <td>
                             <strong>Bioschemas</strong>: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: containedIn.</em><br />
-                            <strike><strong>Bioschemas Protein</strong>: For proteins, it is recommended to at least specify the taxon/organism associated to the described protein; in this case the expected
+                            <!--<strike><strong>Bioschemas Protein</strong>: For proteins, it is recommended to at least specify the taxon/organism associated to the described protein; in this case the expected
                             range would be a taxon id such as those in NCBI taxon or UniProt Taxonomy. Including as well the GO cellular locations is
-                            optional; in that case, the expected range would be a GO Cellular Location term.</strike><br/>
+                            optional; in that case, the expected range would be a GO Cellular Location term.</strike><br/>-->
                             <strong>Bioschemas Protein</strong>: Multiple options depending on the BioChemEntity. For instance, you can use NCBITaxon for organisms.
                           <td>MANY</td>
                           <td></td>
                        </tr>
                        <tr>
-                          <th><a class="externalProp" href="http://semanticscience.org/resource/SIO_010081.rdf">SIO:010081 (is transcribed from)</a>/th>
+                          <th><a class="externalProp" href="http://semanticscience.org/resource/SIO_010081.rdf">SIO:010081 (is transcribed from)</a></th>
                           <td>
                             {% if status == revision %}
                             <a class="newBsc" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
@@ -148,7 +148,7 @@ version: '0.4-draft.1'
                             <a href="http://schema.org/URL">URL</a>
                           </td>
                           <td>
-                            <strong>Bioschemas</strong>: Used as a short and direct alternative to additionalProperty. It represents the association between a protein and a gene, i.e., protein is transcribed (via the mRNA) from a gene. The gene shoul be modeled as a BioChemEntity under the profile Gene.
+                            <strong>Bioschemas</strong>: Used as a short and direct alternative to <a href="http://schemea.org/additionalProperty">additionalProperty</a>. It represents the association between a protein and a gene, i.e., protein is transcribed (via the mRNA) from a gene. The gene should be modeled as a BioChemEntity under the profile Gene.
                           <td>MANY</td>
                           <td></td>
                        </tr>
@@ -188,8 +188,8 @@ version: '0.4-draft.1'
                          <td>
                            <strong>Schema</strong>: A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.
 Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br />
-                           <strong>Bioschemas</strong>: As much a possible, do not use it! Alternatively, considered reusing properties/relations already coined in controlled vocabularies. We recommed to look at the <a href="http://obofoundry.org/ontology/ro.html">OBO Relations Ontology (RO)</a> or the <a href="http://sio.semanticscience.org/">Semanticscience Integrated Ontology (SIO)</a> as starting points.<br />
-                           <strong>Bioschemas protein profile</strong>: If no suitable property exists in this profile, use any ontology term coined as a property and suitable for your needs. For instance <a href="http://semanticscience.org/resource/SIO_000095">sio:SIO_000095</a> (is member of) could be used to model the relation between a protein and a protein clan.
+                           <strong>Bioschemas</strong>: As much a possible, do not use it! Alternatively, consider reusing properties/relations already coined in controlled vocabularies. We recommed to look at the <a href="http://obofoundry.org/ontology/ro.html">OBO Relations Ontology (RO)</a> or the <a href="http://sio.semanticscience.org/">Semanticscience Integrated Ontology (SIO)</a> as starting points.<br />
+                           <strong>Bioschemas Protein</strong>: If no suitable property exists in this profile, use any ontology term coined as a property and suitable for your needs. For instance <a href="http://semanticscience.org/resource/SIO_000095">sio:SIO_000095</a> (is member of) could be used to model the relation between a protein and a protein clan.
                          </td>
                          <td>MANY</td>
                          <td></td>
@@ -269,8 +269,8 @@ Note: Publishers should be aware that applications designed to use specific sche
                            <strong>Schema</strong>: The location of for example where the event is happening, an organization is located, or where an action takes place.<br/>
                            <strong>Bioschemas</strong>: The location can refer to a position in the chromosome or sequence or to a physical place where, for instance, a
                            sample is stored. <br />
-                           <strong>Bioschemas protein profile</strong>: Currently not in use.<br />
-                           <u><strong>Note</strong></u>: The list of Expected Types has been extended as schema.org/location only has Place, PostalAddress and Text.
+                           <strong>Bioschemas Protein</strong>: Currently not in use.<br />
+                           <u><strong>Note</strong></u>: The list of Expected Types has been extended as <a href="http://schema.org/location">schema.org/location</a> only has Place, PostalAddress and Text.
                          </td>
                          <td>MANY</td>
                          <td></td>
@@ -285,7 +285,7 @@ Note: Publishers should be aware that applications designed to use specific sche
                            <strong>Schema</strong>: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See
                            <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br />
                            <strong>Bioschemas</strong>: Link via DataRecord or <a href="http://schema.org/URL">URL</a> to the main Record representing this entity in a dataset.<br />
-                           <strong>Bioschemas protein profile</strong>: Currently not in use; use the mainEntity property from <a href="/types/DataRecord/specification/">DataRecord</a> instead.
+                           <strong>Bioschemas Protein</strong>: Currently not in use; use the mainEntity property from <a href="/types/DataRecord/specification/">DataRecord</a> instead.
                          </td>
                          <td>ONE</td>
                          <td></td>
