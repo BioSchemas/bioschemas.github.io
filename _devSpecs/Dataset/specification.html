@@ -46,7 +46,7 @@ version: 0.2
 <!--- MINIMUM --->
                         <tr class="cardinality">
                            <td colspan="5">
-                              Marginality: <b class="Minimum">Minimum.</b>
+                              Marginality: <b>Minimum.</b>
                            </td>
                         </tr>
                         <tr>
@@ -119,7 +119,7 @@ version: 0.2
 <!--- RECOMMENDED --->
                         <tr class="cardinality">
                            <td colspan="5">
-                              Marginality: <b class="Recommended">Recommended.</b>
+                              Marginality: <b>Recommended.</b>
                            </td>
                         </tr>
                         <tr>
@@ -152,19 +152,8 @@ version: 0.2
                              {% endif %}
                            </td>
                            <td>
-                             <strong>Schema</strong>: The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.
-                             <b><strong>Note</b></strong>: BioSchemas have changed the Expected Types from <a href="http://schema.org/Organization">Organization</a> to
-                             {% if status == revision %}
-                             <a class="newBsc" href="/devSpecs/Organization/specification/">Organization</a>
-                             {% else %}
-                             <a class="newBsc" href="/specifications/Organization/specification/">Organization</a>
-                             {% endif %}
-                             and from from <a href="http://schema.org/Person">Person</a> to
-                             {% if status == revision %}
-                             <a class="newBsc" href="/devSpecs/Person/specification/">Person</a>.
-                             {% else %}
-                             <a class="newBsc" href="/specifications/Person/specification/">Person</a>.
-                             {% endif %}
+                             <strong>Schema</strong>: The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.<br />
+                             <strong>Bioschemas</strong>: The name of the dataset creator (person or organization).
                            </td>
                            <td>MANY</td>
                            <td>
@@ -183,7 +172,7 @@ version: 0.2
                            </td>
                         </tr>
                         <tr>
-                           <th><a class="newBsc" href="http://schema.org/includedInDataCatalog">includedInDataCatalog</a></th>
+                           <th><a href="http://schema.org/includedInDataCatalog">includedInDataCatalog</a></th>
                            <td>
                              {% if status == revision %}
                              <a class="newBsc" href="/devSpecs/DataCatalog/specification/">DataCatalog</a>
@@ -192,13 +181,7 @@ version: 0.2
                              {% endif %}
                            </td>
                            <td>
-                             <strong>Schema</strong>: A data catalog which contains this dataset.<br />
-                             <b><strong>Note</strong></b>: Bioschemas have changed the Expected Type from <a href="http://schema.org/DataCatalog">DataCatalog</a> to
-                             {% if status == revision %}
-                             <a class="newBsc" href="/devSpecs/DataCatalog/specification/">DataCatalog</a>.
-                             {% else %}
-                             <a class="newBsc" href="/specifications/DataCatalog/specification/">DataCatalog</a>.
-                             {% endif %}
+                             <strong>Schema</strong>: A data catalog which contains this dataset.
                            </td>
                            <td>MANY</td>
                            <td>
