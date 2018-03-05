@@ -57,9 +57,9 @@ version: '0.4-draft.1'
                            This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax -
                            the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those
                            defined externally. <br />
-                           <strong>Bioschemas</strong>: Should have value: <a class="externalProp" href="http://semanticscience.org/resource/SIO_011119.rdf">SIO:biomolecular structure descriptor</a>.
+                           <strong>Bioschemas</strong>: Should have value: <a class="externalProp" href="http://semanticscience.org/resource/SIO_011119">SIO:011119 (biomolecular structure descriptor)</a>.
                          </td>
-                         <td>MANY</td>
+                         <td>ONE</td>
                          <td>
                          </td>
                        </tr>
@@ -95,7 +95,9 @@ version: '0.4-draft.1'
                             {% endif %}
                           </td>
                           <td>
-                            <strong>Bioschemas</strong>: Indicates which organism this protein structure is in some sense part of.
+                            <strong>Bioschemas</strong>: Indicates which organism this protein structure is in some sense part of.<br />
+                            <strong>Bioschemas ProteinStructure</strong>: <a href="#additionalType">additionalType</a>
+                            for this BioChemEntity container should be set to <a class="externalProp" href="http://semanticscience.org/resource/SIO_010000">SIO:010000 (organism)</a>.
                           <td>ONE</td>
                           <td></td>
                        </tr>
@@ -125,7 +127,9 @@ version: '0.4-draft.1'
                             <a href="http://schema.org/URL">URL</a>
                           </td>
                           <td>
-                            <strong>Bioschemas</strong>: Gene(s) from which this protein was transcribed from.
+                            <strong>Bioschemas</strong>: Used as a short and direct alternative to <a href="#additionalProperty">additionalProperty</a>. Gene(s) from which this protein was transcribed from.<br />
+                            <strong>Bioschemas ProteinStructure</strong>: <a href="#additionalType">additionalType</a>
+                            for this BioChemEntity container should be set to <a class="externalProp" href="http://semanticscience.org/resource/SIO_010035">SIO:010035 (gene)</a>.
                           <td>MANY</td>
                           <td></td>
                        </tr>
@@ -158,13 +162,15 @@ version: '0.4-draft.1'
                           <td></td>
                        </tr>
                        <tr>
-                          <th><a class="externalProp" href="http://semanticscience.org/resource/SIO_000983.rdf">SIO:gene-disease association</a></th>
+                          <th><a class="externalProp" href="http://semanticscience.org/resource/SIO_000983">SIO:gene-disease association</a></th>
                           <td>
                             <a href="http://schema.org/PropertyValue">MedicalCondition</a><br />
                             <a href="http://schema.org/URL">URL</a>
                           </td>
                           <td>
-                            <strong>Bioschemas</strong>: Disease associated with this protein, if any.
+                            <strong>Bioschemas</strong>: Used as a short and direct alternative to <a href="#additionalProperty">additionalProperty</a>. Disease associated with this protein, if any.<br />
+                            <strong>Bioschemas ProteinStructure</strong>: <a href="#additionalType">additionalType</a>
+                            for this BioChemEntity container should be set to <a href="http://schema.org/MedicalCode">MedicalCode</a> and <a class="externalProp" href="http://semanticscience.org/resource/SIO_010299">SIO:010299 (disease)</a>.
                           <td>MANY</td>
                           <td></td>
                        </tr>
@@ -197,7 +203,19 @@ version: '0.4-draft.1'
                              Marginality: <b>Optional</b>
                           </td>
                        </tr>
-
+                       <tr id="additionalProperty">
+                         <th><a href="http://schema.org/additionalProperty">additionalProperty</a></th>
+                         <td>
+                           <a href="http://schema.org/PropertyValue">PropertyValue</a>
+                         </td>
+                         <td>
+                           <strong>Schema</strong>: A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.
+Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br />
+                           <strong>Bioschemas</strong>: As much a possible, do not use it! Alternatively, consider reusing properties/relations already coined in controlled vocabularies. We recommed to look at the <a href="http://obofoundry.org/ontology/ro.html">OBO Relations Ontology (RO)</a> or the <a href="http://sio.semanticscience.org/">Semanticscience Integrated Ontology (SIO)</a> as starting points.<br />
+                         </td>
+                         <td>MANY</td>
+                         <td></td>
+                       </tr>
                        <tr>
                          {% if status == revision %}
                          <th><a class="newBsc" href="/devTypes/BioChemEntity/specification/#contains">contains</a></th>
@@ -227,6 +245,7 @@ version: '0.4-draft.1'
                          </td>
                          <td><strong>Bioschemas</strong>: A representation for this entity other than, for instance, an image (use image property for that) or the main web page/record
                            (use mainEntityOfPage for that), and see <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a>, for sameAs and url).<br />
+                           <strong>Bioschemas ProteinStructure</strong>: This property could be used, for instance, to register a sequence protein as it is a representation of the protein. If you want to better define the nature of the representation, use a PropertyValue as described in <a href="#additionalProperty">additionalProperty<a/>.
                          </td>
                          <td>MANY</td>
                          <td></td>
@@ -256,11 +275,10 @@ version: '0.4-draft.1'
                             <br /><a href="http://schema.org/URL">URL</a>
                           </td>
                           <td>
-                            <strong>Bioschemas</strong>: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: containedIn.</em>
+                            <strong>Bioschemas</strong>: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: containedIn.</em><br />
                           <td>MANY</td>
                           <td></td>
-                       </tr>
-                       <tr>
+                       </tr>                       <tr>
                          <th><a class="newBsc" href="http://schema.org/location">location</a></th>
                          <td>
                            <a href="http://schema.org/Place">Place</a><br /><a href="http://schema.org/PostalAddress">PostalAddress</a><br />
@@ -279,18 +297,12 @@ version: '0.4-draft.1'
                        <tr>
                          <th><a href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
                          <td>
-                           {% if status == revision %}
-                           <a class="newBsc" href="/devTypes/DataRecord/specification/">DataRecord</a>
-                           {% else %}
-                           <a class="newBsc" href="/types/DataRecord/specification/">DataRecord</a>
-                           {% endif %}
-                           <br /><a href="http://schema.org/URL">URL</a>
+                           <a href="http://schema.org/CreativeWork">CreativeWork</a><br /><a href="http://schema.org/URL">URL</a>
                          </td>
                          <td>
                            <strong>Schema</strong>: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See
                            <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br />
-                           <strong>Bioschemas</strong>: Link via DataRecord or <a href="http://schema.org/URL">URL</a> to the main Record representing this entity in a dataset.<br />
-                           Note: Bioschemas has replaced CreativeWork with DataRecord in the Expected Types.
+                           <strong>Bioschemas</strong>: Link via DataRecord or <a href="http://schema.org/URL">URL</a> to the main Record representing this entity in a dataset.
                          </td>
                          <td>ONE</td>
                          <td></td>
