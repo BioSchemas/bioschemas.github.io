@@ -54,8 +54,7 @@ version: 0.1
                             <a href="http://schema.org/Text">Text</a>
                           </td>
                           <td>
-                            <strong>Schema</strong>: A description of the item. <br />
-                            <strong>Bioschemas</strong>: A description of the sample in free text.
+                            <strong>Schema</strong>: A description of the item.
                           <td>ONE</td>
                           <td></td>
                        </tr>
@@ -71,7 +70,7 @@ version: 0.1
                           <td></td>
                        </tr>
                        <tr>
-                          <th><a class="newBsc" href="http://schema.org/name">provider</a></th>
+                          <th><a href="http://schema.org/provider">provider</a></th>
                           <td>
                             {% if status == revision %}
                             <a class="newBsc" href="/devSpecs/Organization/specification/">Organization</a>
@@ -88,19 +87,7 @@ version: 0.1
                           <td>
                             <strong>Schema</strong>: The service provider, service operator, or service performer; the goods producer. Another party (a seller)
                             may offer those services or goods on behalf of the provider. A provider may also serve as the seller.<br />
-                            <strong>Bioschemas</strong>: Contact information for this data repository/catalog.<br />
-                            <u><strong>Note</strong></u>: Bioschemas has changed the Expected Type from <a href="http://schema.org/Person">Person</a> to
-                            <a class="newBsc" href="/devSpecs/Person/specification/">Person</a>
-                            {% if status == revision %}
-                            {% else %}
-                            <a class="newBsc" href="/specifications/Person/specification/">Person</a>
-                            {% endif %}
-                            and from <a href="schema.org/Organization">Organization</a> to
-                            {% if status == revision %}
-                            <a class="newBsc" href="/devSpecs/Organization/specification/">Organization</a>.
-                            {% else %}
-                            <a class="newBsc" href="/specifications/Organization/specification/">Organization</a>.
-                            {% endif %}
+                            <strong>Bioschemas</strong>: Contact information for this data repository/catalog.
                           </td>
                           <td>MANY</td>
                           <td></td>
@@ -167,7 +154,7 @@ version: 0.1
                           <td></td>
                        </tr>
                        <tr>
-                          <th><a class="newBsc" href="http://schema.org/dataset">dataset</a></th>
+                          <th><a href="http://schema.org/dataset">dataset</a></th>
                           <td>
                             {% if status == revision %}
                             <a class="newBsc" href="/devSpecs/Dataset/specification/">Dataset</a>
@@ -176,13 +163,7 @@ version: 0.1
                             {% endif %}
                           </td>
                           <td>
-                            <strong>Schema</strong>: A dataset contained in this catalog. <em>Inverse-property: <a href="includedInDataCatalog">includedInDataCatalog</a>.</em><br />
-                            <u><strong>Note</strong></u>: Bioschemas has changed the Expected Type from <a href="http://schema.org/Dataset">Dataset</a> to
-                            {% if status == revision %}
-                            <a class="newBsc" href="/devSpecs/Dataset/specification/">Dataset</a>.
-                            {% else %}
-                            <a class="newBsc" href="/specifications/Dataset/specification/">Dataset</a>.
-                            {% endif %}
+                            <strong>Schema</strong>: A dataset contained in this catalog. <em>Inverse-property: <a href="includedInDataCatalog">includedInDataCatalog</a>.</em>
                           <td>MANY</td>
                           <td></td>
                        </tr>
@@ -193,7 +174,8 @@ version: 0.1
                           </td>
                           <td>
                             <strong>Schema</strong>: The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-                            dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.
+                            dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.<br />
+                            <strong>Bioschema</strong>: Unique identifier for the data catalog.
                           <td>ONE</td>
                           <td></td>
                        </tr>
@@ -218,7 +200,7 @@ version: 0.1
                           <td></td>
                        </tr>
                        <tr>
-                          <th><a class="newBsc" href="http://schema.org/sourceOrganization">sourceOrganization</a></th>
+                          <th><a href="http://schema.org/sourceOrganization">sourceOrganization</a></th>
                           <td>
                             {% if status == revision %}
                             <a class="newBsc" href="/devSpecs/Organization/specification/">Organization</a>
@@ -227,13 +209,7 @@ version: 0.1
                             {% endif %}
                           </td>
                           <td>
-                            <strong>Schema</strong>: The Organization on whose behalf the creator was working.<br />
-                            <u><strong>Note</strong></u>: Bioschemas has changed the Expected Type from <a href="http://schema.org/Organization">Organization</a> to
-                            {% if status == revision %}
-                            <a class="newBsc" href="/devSpecs/Organization/specification/">Organization</a>.
-                            {% else %}
-                            <a class="newBsc" href="/specifications/Organization/specification/">Organization</a>.
-                            {% endif %}
+                            <strong>Schema</strong>: The Organization on whose behalf the creator was working.
                           <td>MANY</td>
                           <td></td>
                        </tr>
