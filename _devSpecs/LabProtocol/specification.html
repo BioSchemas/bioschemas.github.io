@@ -88,17 +88,14 @@ version: '0.2'
                            </td>
                         </tr>
                         <tr id="purpose">
-                           <th><a class="newBsc" href="#">purpose</a></th>
+                           <th><a class="newBsc" href="http://health-lifesci.schema.org/purpose">purpose</a></th>
                            <td>
                               <a href="http://schema.org/Text">Text</a>
-                              <br>
                            </td>
                            <td>
-                             <strong>Schema</strong></u>: There is <a href="http://health-lifesci.schema.org/purpose">http://health-lifesci.schema.org/purpose</a>;
-                             however, it is targetted at <a href="http://health-lifesci.schema.org/MedicalDevice">MedicalDevice</a>. It has the description, "A goal
-                             towards an action is taken. Can be concrete or abstract." The Expected Types are <a href="http://health-lifesci.schema.org/MedicalDevicePurpose">
-                               http://health-lifesci.schema.org/MedicalDevicePurpose</a> or <a href="http://schema.org/Thing">Thing</a>. <br />
-                            <strong>Bioschemas</strong>: A goal towards an action is taken. Can be concrete or abstract.<br />
+                             <strong>Schema</strong>: A goal towards an action is taken. Can be concrete or abstract. <br />
+                             <u><strong>Note</strong></u>: Bioschemas have changed the Expected Types by removing <a href="http://health-lifesci.schema.org/MedicalDevicePurpose">
+                              MedicalDevicePurpose</a> and <a href="http://schema.org/Thing">Thing</a>, and adding <a href="http://schema.org/Text">Text</a>.
                            </td>
                            <td>ONE</td>
                            <td>
@@ -118,7 +115,8 @@ version: '0.2'
                               <a href="http://schema.org/URL">URL</a>
                            </td>
                            <td>
-                             <strong>Bioschemas</strong>: Reagent used in the protocol. It can be a record in a Dataset describing the reagent or a BioChemEntity corresponding to the reagent or a URL pointing to the type of reagent used. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable (URL if possible)
+                             <strong>Bioschemas</strong>: Reagent used in the protocol. It can be a record in a Dataset describing the reagent or a BioChemEntity
+                             corresponding to the reagent or a URL pointing to the type of reagent used. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable (URL if possible).
                            </td>
                            <td>MANY</td>
                            <td>
@@ -173,7 +171,7 @@ version: '0.2'
                            </td>
                            <td>
                              <strong>Schema</strong>: A description of the item.<br />
-                             <strong>Bioschemas</strong>: Bioschemas usage. Use in LabProtocol to include the step by step process followed in this protocol.
+                             <strong>Bioschemas</strong>: Use in LabProtocol to include the step by step process followed in this protocol.
                            </td>
                            <td>ONE</td>
                            <td>
