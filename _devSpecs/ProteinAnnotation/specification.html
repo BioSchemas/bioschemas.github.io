@@ -230,7 +230,7 @@ version: '0.4-draft.1'
                             <br /><a href="http://schema.org/URL">URL</a>
                           </td>
                           <td>
-                            <strong>Bioschemas</strong>: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: containedIn.</em>
+                            <strong>Bioschemas</strong>: Indicates a BioChemEntity that this BioChemEntity is (in some sense) a part of. <em>Inverse property: contains.</em>
                           <td>MANY</td>
                           <td></td>
                        </tr>
@@ -244,7 +244,7 @@ version: '0.4-draft.1'
                          <td>
                            <strong>Schema</strong>: The location of for example where the event is happening, an organization is located, or where an action takes place.<br/>
                            <strong>Bioschemas</strong>: The location can refer to a position in the chromosome or sequence or to a physical place where, for instance, a
-                           sample is stored. <br />
+                           sample is stored. Using <a href="#additionalType">additionalType</a> is advised to make this distinction. For instance, <a href="https://github.com/OBF/FALDO">FALDO</a> can be used for sequence co-ordinates.<br />
                            <u><strong>Note</strong></u>: The list of Expected Types has been extended as schema.org/location only has Place, PostalAddress and Text.
                          </td>
                          <td>MANY</td>
