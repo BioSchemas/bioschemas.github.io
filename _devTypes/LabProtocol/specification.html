@@ -66,7 +66,7 @@ external: #454547;
                           </td>
                           <td>
                             <strong>Schema</strong>: The duration of the item (movie, audio recording, event, etc.) in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>.<br />
-                            <strong>Bioschemas</strong>: The time it takes to actually carry on the protocol, in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>.
+                            <strong>Bioschemas</strong>: The time it takes to actually carry out the protocol, in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>.
                           </td>
                        </tr>
                        <tr>
@@ -273,11 +273,19 @@ external: #454547;
                            <th><a href="http://schema.org/author">author</a></th>
                            <td>
                               <a href="http://schema.org/Organization">Organization</a><br />
-                              <a href="http://schema.org/Person">Person</a><
+                              <a href="http://schema.org/Person">Person</a>
                            </td>
                            <td>
                              <strong>Schema</strong>: The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.
-                             award	Text 	An award won by or for this item. Supersedes awards.
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/award">award</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: An award won by or for this item. Supersedes awards.
                            </td>
                         </tr>
                         <tr>
@@ -578,9 +586,6 @@ external: #454547;
                            <td>
                              <strong>Schema</strong>: Indicates a CreativeWork that this CreativeWork is (in some sense) part of.
                            </td>
-                           <td>MANY</td>
-                           <td>
-                           </td>
                         </tr>
                         <tr>
                            <th><a href="http://schema.org/keywords">keywords</a></th>
@@ -617,24 +622,12 @@ external: #454547;
                             </td>
                          </tr>
                          <tr>
-                            <th><a style="color: #0B794B" href="http://schema.org/mainEntity">mainEntity</a></th>
+                            <th><a href="http://schema.org/mainEntity">mainEntity</a></th>
                             <td>
-                              {% if status == revision %}
-                              <a style="color: #0B794B" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
-                              {% else %}
-                              <a style="color: #0B794B" href="/types/BioChemEntity/specification/">BioChemEntity</a>
-                              {% endif %}
+                              <a href="http://schema.org/Thing">Thing</a>
                             </td>
                             <td>
                               <strong>Schema</strong>: Indicates the primary entity described in some page or other CreativeWork. <em>Inverse-property: <a href="http:schema.org/mainEntityOfPage">mainEntityOfPage</a>.</em>
-                              <br><strong>Bioschemas</strong>: Bioschemas usage.  Link to the BioChemEntity represented by this record.<br />
-                              <u><strong>Note</strong></u>: BioSchemas have changed the Expected Type from <a href="http://schema.org/Thing">Thing</a> to
-                              {% if status == revision %}
-                              <a style="color: #0B794B" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>.
-                              {% else %}
-                              <a style="color: #0B794B" href="/types/BioChemEntity/specification/">BioChemEntity</a>.
-                              {% endif %}
-                              <em>Inverse property: <a href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a>.</em>
                             </td>
                           </tr>
                           <tr>
@@ -710,7 +703,7 @@ external: #454547;
                              </td>
                           </tr>
                           <tr>
-                             <th><a href="http://schema.org/publisherImprint">publisherImprint</a></th>
+                             <th><a class="pending" href="http://schema.org/publisherImprint">publisherImprint</a></th>
                              <td>
                                 <a href="http://schema.org/Organization">Organization</a>
                              </td>
@@ -793,7 +786,7 @@ external: #454547;
                           <tr>
                              <th><a href="http://schema.org/temporalCoverage">temporalCoverage</a></th>
                              <td>
-                                <a href="http://schema.org/DateTime">DateTime</a><br /><a href="http://schema.org/Text">Text</a>br /><a href="http://schema.org/URL">URL</a>
+                                <a href="http://schema.org/DateTime">DateTime</a><br /><a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
                              </td>
                              <td>
                                <strong>Schema</strong>: The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in <a href="https://en.wikipedia.org/wiki/ISO_8601#Time_intervals">ISO 8601 time interval format</a>. In the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written "2011/2012"). Other forms of content e.g. ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their temporalCoverage in broader terms - textually or via well-known URL. Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via "1939/1945". Supersedes datasetTimeInterval, temporal.
@@ -815,15 +808,6 @@ external: #454547;
                              </td>
                              <td>
                                <strong>Schema</strong>: A thumbnail image relevant to the Thing.
-                             </td>
-                          </tr>
-                          <tr>
-                             <th><a href="http://schema.org/timeRequired">timeRequired</a></th>
-                             <td>
-                                <a href="http://schema.org/Duration">Duration</a>
-                             </td>
-                             <td>
-                               <strong>Schema</strong>: Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.
                              </td>
                           </tr>
                           <tr>
