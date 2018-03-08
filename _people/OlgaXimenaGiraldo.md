@@ -8,5 +8,5 @@ affiliation: Ontology Engineering Group, Universidad Politécnica de Madrid, Spa
 homepage: http://mayor2.dia.fi.upm.es/oeg-upm/index.php/en/phdstudents/302-ogiraldo/index.html
 github_username:
 orcid:
-groups: [labprotocols]
+groups: [labprotocols, biologicalentities]
 ---
