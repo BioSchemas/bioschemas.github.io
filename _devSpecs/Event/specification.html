@@ -1,6 +1,6 @@
 ---
 cross_walk_url: https://docs.google.com/spreadsheets/d/1Hu1dmrS7jPgHWp8hUQWve9BzaYZi_EzTj9-gDuI9sBM/
-dateModified: 2018-03-09
+dateModified: 2018-03-10
 description: 'Specification for describing a Life Science event. This includes conferences,
   workshops, meetings, courses, receptions, networking and prizegivings.        '
 group: events
@@ -103,7 +103,7 @@ version: '0.1'
                               <a href="http://schema.org/Organization">Organization</a>
                            </td>
                            <td>
-                             <strong>Schema</strong>: The organization or institution responsible for hosting the event (not necessarily responsible for organizing).
+                             <strong>Bioschemas</strong>: The organization or institution responsible for hosting the event (not necessarily responsible for organizing).
                            </td>
                            <td>MANY</td>
                            <td>
@@ -179,13 +179,14 @@ version: '0.1'
                            </td>
                         </tr>
                         <tr>
-                           <th><a href="http://schema.org/audience">audience</a></th>
+                           <th><a class="newBsc" href="http://schema.org/audience">audience</a></th>
                            <td>
-                              <a href="http://schema.org/Audience">Audience</a>
+                              <a href="http://schema.org/URL">URL</a>
                            </td>
                            <td>
                              <strong>Schema</strong>: An intended audience, i.e. a group for whom something was created.<br />
-                             <strong>Bioschemas</strong>: The scientific background the participants should be from. Please use a term from <a href="http://edamontology.org/topic_0003">EDAM:Topic</a>.
+                             <strong>Bioschemas</strong>: The scientific background the participants should be from. Please use a term from <a href="http://edamontology.org/topic_0003">EDAM:Topic</a>.<br />
+                             <u><strong>Note</strong></u>: Bioschemas have changed the Expected Types from <a href="http://schema.org/Audience">Audience</a> to <a href="http://schema.org/URL">URL</a>.
                            </td>
                            <td>MANY</td>
                            <td>
@@ -199,7 +200,7 @@ version: '0.1'
                               <a href="http://schema.org/Text">Text</a>
                            </td>
                            <td>
-                             <strong>Schema</strong>: Deadline dates for this event e.g. application deadline, poster submission, paper submission, early registration.
+                             <strong>Bioschemas</strong>: Deadline dates for this event e.g. application deadline, poster submission, paper submission, early registration.
                            </td>
                            <td>MANY</td>
                            <td>
@@ -383,7 +384,7 @@ version: '0.1'
                            <td>
                              <strong>Bioschemas</strong>: The status of registration for an event; choose a value from the Controlled Vocabulary column.
                            </td>
-                           <td>MANY</td>
+                           <td>ONE</td>
                            <td>
                              proposed,<br />pre-open,<br />open,<br />cancelled,<br />full
                            </td>
@@ -420,7 +421,7 @@ version: '0.1'
                            </td>
                            <td>
                              <strong>Schema</strong>: A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.<br />
-                             <strong>Bioschemas</strong>: The organizations or institutions proiding sponsorship for the event.
+                             <strong>Bioschemas</strong>: The organizations or institutions providing sponsorship for the event.
                            </td>
                            <td>MANY</td>
                            <td>
