@@ -50,22 +50,22 @@
                   <br />
                   <h5>Specifications</h5>
                   <ul>
-                     {% for spec in page.specifications%}
+                     {% for spec in page.specifications %}
                      <li><a href="/specifications/{{spec}}/specification/">{{spec}}</a></li>
                      {% endfor %}
-                     {% for spec in page.types%}
+                     {% for spec in page.types %}
                      <li><a href="/types/{{spec}}/specification/">{{spec}}</a></li>
                      {% endfor %}
                   </ul>
                   {% endif %}
-                  {% if page.draft_specifications or page.types %}
+                  {% if page.draft_specifications or page.draft_types %}
                   <br />
                   <h5>Draft specifications</h5>
                   <ul>
-                     {% for spec in page.draft_specifications%}
+                     {% for spec in page.draft_specifications %}
                      <li><a href="/devSpecs/{{spec}}/specification/">{{spec}}</a></li>
                      {% endfor %}
-                     {% for spec in page.draft_types%}
+                     {% for spec in page.draft_types %}
                      <li><a href="/devTypes/{{spec}}/specification/">{{spec}}</a></li>
                      {% endfor %}
                   </ul>
