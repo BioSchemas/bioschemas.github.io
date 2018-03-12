@@ -88,7 +88,7 @@ version: '0.4'
                        <tr id="organism">
                           <th><a class="newBsc" href="#">organism</a></th>
                           <td>
-                            {% if status == revision %}
+                            {% if status == 'revision' %}
                             <a class="newBsc" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
                             {% else %}
                             <a class="newBsc" href="/types/BioChemEntity/specification/">BioChemEntity</a></th>
@@ -118,7 +118,7 @@ version: '0.4'
                        <tr>
                           <th><a class="externalProp" href="http://semanticscience.org/resource/SIO_010081.rdf">SIO:is transcribed from</a></th>
                           <td>
-                            {% if status == revision %}
+                            {% if status == 'revision' %}
                             <a class="newBsc" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
                             {% else %}
                             <a class="newBsc" href="/types/BioChemEntity/specification/">BioChemEntity</a></th>
@@ -217,13 +217,13 @@ Note: Publishers should be aware that applications designed to use specific sche
                          <td></td>
                        </tr>
                        <tr>
-                         {% if status == revision %}
+                         {% if status == 'revision' %}
                          <th><a class="newBsc" href="/devTypes/BioChemEntity/specification/#contains">contains</a></th>
                          {% else %}
                          <th><a class="newBsc" href="/types/BioChemEntity/specification/#contains">contains</a></th>
                          {% endif %}
                          <td>
-                           {% if status == revision %}
+                           {% if status == 'revision' %}
                            <a class="newBsc" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
                            {% else %}
                            <a class="newBsc" href="/types/BioChemEntity/specification/#">BioChemEntity</a>
@@ -235,7 +235,7 @@ Note: Publishers should be aware that applications designed to use specific sche
                          <td></td>
                        </tr>
                        <tr>
-                         {% if status == revision %}
+                         {% if status == 'revision' %}
                          <th><a class="newBsc" href="/devTypes/BioChemEntity/specification/#hasRepresentation">hasRepresentation</a></th>
                          {% else %}
                          <th><a class="newBsc"href="/types/BioChemEntity/specification/#hasRepresentation">hasRepresentation</a></th>
@@ -261,13 +261,13 @@ Note: Publishers should be aware that applications designed to use specific sche
                           <td></td>
                        </tr>
                        <tr>
-                          {% if status == revision %}
+                          {% if status == 'revision' %}
                           <th><a class="newBsc" href="/devTypes/BioChemEntity/specification/#isContainedIn">isContainedIn</a></th>
                           {% else %}
                           <th><a class="newBsc" href="/types/BioChemEntity/specification/#isContainedIn">isContainedIn</a></th>
                           {% endif %}
                           <td>
-                            {% if status == revision %}
+                            {% if status == 'revision' %}
                             <a class="newBsc" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
                             {% else %}
                             <a class="newBsc" href="/types/BioChemEntity/specification/">BioChemEntity</a></th>
