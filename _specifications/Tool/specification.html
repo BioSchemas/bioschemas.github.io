@@ -137,8 +137,13 @@ version: '0.1'
                        <tr>
                          <th><a href="http://schema.org/publisher">publisher</a></th>
                          <td>
-                           <a href="http://schema.org/Organization">Organization</a><br />
-                           <a href="http://schema.org/Person">Person</a>
+                           {% if status == revision %}
+                           <a class="newBsc" href="/devSpecs/Organization/specification/">Organization</a><br />
+                           <a class="newBsc" href="/devSpecs/Person/specification/">Person</a>
+                           {% else %}
+                           <a class="newBsc" href="/specifications/Organization/specification/">Organization</a><br />
+                           <a class="newBsc" href="/specifications/Person/specification/">Person</a>
+                           {% endif %}
                          </td>
                          <td>
                            <strong>Schema</strong>: The publisher of the creative work.<br />
