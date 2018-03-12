@@ -55,9 +55,9 @@ version: '0.2'
                            </td>
                         </tr>
                           <tr>
-                             <th><a style="color: #0B794B" href="http://schema.org/dataset">dataset</a></th>
+                             <th><a href="http://schema.org/dataset">dataset</a></th>
                              <td>
-                               {% if status == revision %}
+                               {% if status == 'revision' %}
                                <a style="color: #0B794B" href="/devTypes/Dataset/specification/">Dataset</a>
                                {% else %}
                                <a style="color: #0B794B" href="/types/Dataset/specification/">Dataset</a>
@@ -66,12 +66,6 @@ version: '0.2'
                              <td>
                                <strong>Schema</strong>: A dataset contained in this catalog.<br />
                                <strong>Bioschemas</strong>: Datasets served by this Beacon.<br />
-                               <u><strong>Note</strong></u>: Bioschemas have changed the Expected Type from <a href="http://schema.org/Dataset">Dataset</a> to
-                               {% if status == revision %}
-                               <a style="color: #0B794B" href="/devTypes/Dataset/specification/">Dataset</a>.
-                               {% else %}
-                               <a style="color: #0B794B" href="/types/Dataset/specification/">Dataset</a>.
-                               {% endif %}
                              </td>
                              <td>MANY</td>
                              <td>
