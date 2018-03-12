@@ -111,16 +111,20 @@ external: #454547;
                               Marginality: <b>Optional</b>
                            </td>
                         </tr>
-                        <!-- <tr>
+                        <tr>
                            <th><a href="http://schema.org/additionalProperty">additionalProperty</a></th>
                            <td>
                               <a href="http://schema.org/PropertyValue">PropertyValue</a><br>
                            </td>
-                           <td><strong>Schema</strong>:A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.  Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br><strong>Bioschemas</strong>:Bioschemas usage.  Additional to the use of name and description to describe this property in a human-readable way, additionalType should be used to specify the nature of the property/relation. For instance, if the property refers to a gene/protein disease association, you could use http://semanticscience.org/resource/SIO_000983 as additionalType for the additionalProperty.</td>
+                           <td>
+                             <strong>Schema</strong>: A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.  Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br/ >
+                             <strong>Bioschemas</strong>: Additional to the use of <a href="http://schema.org/name">name</a> and <a href="http://schema.org/description">description</a> to describe this property in a human-readable way,
+                             <a href="http://schema.org/additionalType">additionalType</a> should be used to specify the nature of the property/relation. For instance, if the property refers to a gene/protein disease association,
+                             you could use <a class="externalProp" href="http://semanticscience.org/resource/SIO_000983">SIO:000983 (gene-disease association)</a> as the <a href="http://schema.org/additionalType">additionalType</a> for the additionalProperty.
                            <td>MANY</td>
                            <td>
                            </td>
-                        </tr> -->
+                        </tr>
                         <tr>
                            <th><a href="http://schema.org/citation">citation</a></th>
                            <td>
