@@ -102,7 +102,7 @@ version: '0.2'
                         <tr>
                            <th><a class="externalProp" href="http://purl.obolibrary.org/obo/CHEBI_33893">ChEBI:reagent</a></th>
                            <td>
-                             {% if status == revision %}
+                             {% if status == 'revision' %}
                              <a class="newBsc" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
                              {% else %}
                              <a class="newBsc" href="/types/BioChemEntity/specification/">BioChemEntity</a>
@@ -124,7 +124,7 @@ version: '0.2'
                         <tr id="sample">
                            <th><a class="newBsc" href="#">sample</a></th>
                            <td>
-                             {% if status == revision %}
+                             {% if status == 'revision' %}
                              <a class="newBsc" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
                              {% else %}
                              <a class="newBsc" href="/types/BioChemEntity/specification/">BioChemEntity</a>
