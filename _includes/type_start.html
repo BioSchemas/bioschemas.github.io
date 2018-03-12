@@ -109,6 +109,13 @@ This is a new {{page.spec_type}} that fits into the schema.org hierarchy as foll
 </tr>
 </tbody>
 </table>
+<br />
+{% if page.status == 'release' %}
+<p>You can read the <a href="/devTypes/{{page.name}}/specification/">draft version of this specification here</a>.</p>
+{% elsif page.status == 'revision' %}
+<p>You can read the <a href="/types/{{page.name}}/specification/">release version of this specification here</a>.</p>
+{% endif %}
+
 </section>
 
 <br />
