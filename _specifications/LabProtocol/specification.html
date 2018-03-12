@@ -1,247 +1,307 @@
 ---
-group: labprotocols
-description: 'An experimental protocol is a sequence of tasks and operations executed
-  to perform experimental research in biological and biomedical areas.
-
-  Experimental protocols are fundamental information structures that support the description
-  of the processes by means of which results are generated in experimental research
-  [1]. Experimental protocols describe how the data were produced, the steps undertaken
-  and conditions under which these steps were carried out.
-
-  [1]  Giraldo, O., Garcia, A., Corcho, O.: SMART Protocols: SeMAntic RepresenTation
-  for Experimental Protocols, Riva del Garda, Trentino, Italy (2014). 4th Workshop
-  on Linked Science 2014- Making Sense Out of Data (LISC2014)
-
-'
-edit_url: https://github.com/BioSchemas/specifications/tree/master/LabProtocol/specification.html
-g_mapping_file: LabProtocol Mapping Simp
-gh_examples: https://github.com/BioSchemas/specifications/tree/master/LabProtocol/examples
-gh_folder: https://github.com/BioSchemas/specifications/tree/master/LabProtocol
+cross_walk_url: https://docs.google.com/spreadsheets/d/1RWYIphvcBMHl8SLJl5-xRMZI0YaYrtJtClBSoOPL4xQ
+dateModified: 2018-03-09
+description: 'An experimental protocol is a sequence of tasks and operations executed to perform experimental research in biological and biomedical areas.
+Experimental protocols are fundamental information structures that support the description of the processes by means of which results are generated in experimental research [1]. Experimental protocols describe how the data were produced, the steps undertaken and conditions under which these steps were carried out.
+<br />
+[1]  Giraldo, O., García, A., López, F., & Corcho, O. (2017). Using semantics for representing experimental protocols. Journal of Biomedical Semantics, 8, 52. <a href="http://doi.org/10.1186/s13326-017-0160-y">http://doi.org/10.1186/s13326-017-0160-y</a>'
+gh_examples: https://docs.google.com/document/d/16KlB9fE2s-USAf0Vo9cTbh_wKEc0BmSxCgQmKQXKLQ8/
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20LabProtocol
+group: labprotocols
 hierarchy:
-- CreativeWork
 - Thing
-layout: new_spec_detail
+- CreativeWork
+live_deploy: ''
 name: LabProtocol
 parent_type: CreativeWork
-properties:
-- bsc_dec: Bioschemas usage.  Optional for LabProtocol as it has its own type in schema.org.
-    If used, the recommended URL is SmartProtocols (http://purl.org/net/SMARTprotocol#ExperimentalProtocol)
-  cardinality: ONE
-  controlled_vocab:
-    ontologies:
-    - name: SP
-      url: ExperimentalProtocol
-    terms: []
-  expected_type:
-  - URL
-  marginality: Optional
-  name: additionalType
-  parent: Thing
-  sdo_desc: An additional type for the item, typically used for adding more specific
-    types from external vocabularies in microdata syntax. This is a relationship between
-    something and a class that the thing is in. In RDFa syntax, it is better to use
-    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
-    tools may have only weaker understanding of extra types, in particular those defined
-    externally.
-- bsc_dec: Bioschemas usage. Use in LabProtocol to include the step by step process
-    followed in this protocol.
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Recommended
-  name: description
-  parent: Thing
-  sdo_desc: A description of the item.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - PropertyValue
-  - Text
-  - URL
-  marginality: Recommended
-  name: identifier
-  parent: Thing
-  sdo_desc: The identifier property represents any kind of identifier for any kind
-    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
-    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
-    many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background
-    notes</a> for more details.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - CreativeWork
-  - URL
-  marginality: Recommended
-  name: citation
-  parent: CreativeWork
-  sdo_desc: A citation or reference to another creative work, such as another publication,
-    web page, scholarly article, etc.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - CreativeWork
-  - URL
-  marginality: Recommended
-  name: license
-  parent: CreativeWork
-  sdo_desc: A license document that applies to this content, typically indicated by
-    URL.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - CreativeWork
-  - ''
-  - URL
-  marginality: Optional
-  name: isBasedOn
-  parent: CreativeWork
-  sdo_desc: A resource that was used in the creation of this resource. This term can
-    be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - CreativeWork
-  marginality: Optional
-  name: isPartOf
-  parent: CreativeWork
-  sdo_desc: Indicates a CreativeWork that this CreativeWork is (in some sense) part
-    of.
-- bsc_dec: Bioschemas usage. A particular case in Bioschemas is LabProtocol where
-    structural elements are used to described advantages (situations the Protocol
-    has been successfully employed), limitations (situations the Protocol would be
-    unreliable or otherwise unsuccessful), applications (Applications of the protocol
-    list the full diversity of the applications of the method and support if is possible
-    to extend the range of applications of the protocol. e.g. northern blot assays,
-    sequencing, etc.), and outcomes (outcome or expected result by a protocol execution).
-    For LabProtocol, in the applicationType, please use http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol
-    for advantages, http://purl.org/net/SMARTprotocol#LimitationOfTheProtocol for
-    limitations, http://purl.org/net/SMARTprotocol#ApplicationOfTheProtocol for applicability,
-    and http://purl.org/net/SMARTprotocol#OutcomeOfTheProtocol for outcomes.
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - CreativeWork
-  marginality: Recommended
-  name: hasPart
-  parent: CreativeWork
-  sdo_desc: Indicates a CreativeWork that is (in some sense) a part of this CreativeWork.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Minimum
-  name: keywords
-  parent: CreativeWork
-  sdo_desc: Keywords or tags used to describe this content. Multiple entries in a
-    keywords list are typically delimited by commas.
-- bsc_dec: Reagent used in the protocol. It can be a record in a Dataset describing
-    the reagent or a PhysicalEntity corresponding to the reagent or a URL pointing
-    to the type of reagent used. ChEBI and PubChem entities can be used whenever available.
-    Commercial names are also acceptable (URL if possible)
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - PhysicalEntity
-  - Text
-  - URL
-  marginality: Minimum
-  name: reagent
-  parent: LabProtocol
-  sdo_desc: ''
-- bsc_dec: A goal towards an action is taken. Can be concrete or abstract.
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Minimum
-  name: purpose
-  parent: LabProtocol
-  sdo_desc: ''
-- bsc_dec: The object that helped the agent perform the action. e.g. John wrote a
-    book with a pen. For LabProtocols it would be a laboratory equipment use by a
-    person to follow one or more steps described in this LabProtocol.
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Thing
-  - Text
-  - URL
-  marginality: Minimum
-  name: instrument
-  parent: LabProtocol
-  sdo_desc: ''
-- bsc_dec: Sample used in the protocol. It could be a record in a Dataset describing
-    the sample or a physical object corresponding to the sample or a URL pointing
-    to the type of sample used.
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - PhysicalEntity
-  - Text
-  - URL
-  marginality: Minimum
-  name: sample
-  parent: LabProtocol
-  sdo_desc: ''
-- bsc_dec: An application that can complete the request.
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - SoftwareApplication
-  marginality: Recommended
-  name: software
-  parent: LabProtocol
-  sdo_desc: ''
-- bsc_dec: The time it takes to actually carry on the protocol, in ISO 8601 duration
-    format.
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Duration
-  marginality: Recommended
-  name: duration
-  parent: LabProtocol
-  sdo_desc: ''
-spec_mapping_url: https://docs.google.com/spreadsheets/d/1XjDEohCvIAc_VGExctGchLy4TqTfN6LpfIw1BxvWj_o/edit?usp=drivesdk
 spec_type: Profile
-status: revision
+status: release
 subtitle: Bioschemas specification describing LabProtocol in the life-science.
-use_cases_url: err_404
+use_cases_url: /useCases/LabProtocols/
 version: '0.2'
+
 ---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main_content_wrap" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  <table class="bioschemas_properties bsc_type">
+                     <thead>
+                        <tr>
+                           <th>Property</th>
+                           <th>Expected Type</th>
+                           <th>Description</th>
+                           <th>CD</th>
+                           <th>Controlled Vocabulary</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <!-- MINIMUM -->
+                        <tr class="cardinality">
+                           <td colspan="5">
+                              Marginality: <b>Minimum</b>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a class="newBsc" href="http://schema.org/instrument">instrument</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a><br />
+                              <a href="http://schema.org/Thing">Thing</a><br />
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: The object that helped the agent perform the action. e.g. John wrote a book with a pen.<br />
+                             <strong>Bioschemas</strong>: For LabProtocols it would be a laboratory equipment use by a person to follow one or more steps described in this LabProtocol.<br />
+                             <u><strong>Note</strong></u>: Bioschemas have added the following to the list of Expected Types: <a href="http://schema.org/Text">Text</a>
+                             and <a href="http://schema.org/URL">URL</a>.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                             <a href="http://bioassayontology.org/">BAO</a><br />
+                             <a href="https://www.ebi.ac.uk/efo/">EFO</a><br />
+                             <a href="https://www.ebi.ac.uk/ols/ontologies/ero">ERO</a><br />
+                             <a href="http://obi-ontology.org/">OBI</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/keywords">keywords</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a>
+                              <br>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr id="purpose">
+                           <th><a class="newBsc" href="http://health-lifesci.schema.org/purpose">purpose</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A goal towards an action is taken. Can be concrete or abstract. <br />
+                             <u><strong>Note</strong></u>: Bioschemas have changed the Expected Types by removing <a href="http://health-lifesci.schema.org/MedicalDevicePurpose">
+                              MedicalDevicePurpose</a> and <a href="http://schema.org/Thing">Thing</a>, and adding <a href="http://schema.org/Text">Text</a>.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                             <a href="http://purl.bioontology.org/ontology/SP">SMART Protocols</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a class="externalProp" href="http://purl.obolibrary.org/obo/CHEBI_33893">ChEBI:reagent</a></th>
+                           <td>
+                             {% if status == revision %}
+                             <a class="newBsc" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
+                             {% else %}
+                             <a class="newBsc" href="/types/BioChemEntity/specification/">BioChemEntity</a>
+                             {% endif %}
+                              <br>
+                              <a href="http://schema.org/Text">Text</a><br />
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: Reagent used in the protocol. It can be a record in a Dataset describing the reagent or a BioChemEntity
+                             corresponding to the reagent or a URL pointing to the type of reagent used. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable (URL if possible).
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                             <a href="http://purl.bioontology.org/ontology/CHEBI">ChEBI</a><br />
+                             <a href="https://pubchem.ncbi.nlm.nih.gov/">PubChem</a>
+                           </td>
+                        </tr>
+                        <tr id="sample">
+                           <th><a class="newBsc" href="#">sample</a></th>
+                           <td>
+                             {% if status == revision %}
+                             <a class="newBsc" href="/devTypes/BioChemEntity/specification/">BioChemEntity</a>
+                             {% else %}
+                             <a class="newBsc" href="/types/BioChemEntity/specification/">BioChemEntity</a>
+                             {% endif %}
+                              <br>
+                              <a href="http://schema.org/Text">Text</a><br />
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: Sample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                             <a href="https://www.ncbi.nlm.nih.gov/taxonomy">NCBI Taxonomy</a><br />
+                             <a href="http://uberon.github.io/">Uberon</a>
+                           </td>
+                        </tr>
+<!-- RECOMMENDED -->
+                        <tr class="cardinality">
+                           <td colspan="5">
+                              Marginality: <b>Recommended.</b>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/citation">citation</a></th>
+                           <td>
+                              <a href="http://schema.org/CreativeWork">CreativeWork</a><br />
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/duration">duration</a></th>
+                           <td>
+                              <a href="http://schema.org/Duration">Duration</a>
+                              <br>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: The duration of the item (movie, audio recording, event, etc.) in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>.<br />
+                             <strong>Bioschemas</strong>: The time it takes to actually carry out the protocol, in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/hasPart">hasPart</a></th>
+                           <td>
+                              <a href="http://schema.org/CreativeWork">CreativeWork</a>
+                              <br>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: Indicates a CreativeWork that is (in some sense) a part of this CreativeWork. <em>Inverse property <a href="http://schema.org/isPartOf">isPartOf</a></em>.<br />
+                             <strong>Bioschemas</strong>: A particular case in Bioschemas is LabProtocol where structural elements are used to described advantages (situations the Protocol has been successfully employed), limitations (situations the Protocol would be unreliable or otherwise unsuccessful), applications (Applications of the protocol list the full diversity of the applications of the method and support if is possible to extend the range of applications of the protocol. e.g. northern blot assays, sequencing, etc.), and outcomes (outcome or expected result by a protocol execution).<br />
+                             For LabProtocol, in the applicationType, please use <a href="http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol">http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol</a> for advantages, <a href="http://purl.org/net/SMARTprotocol#LimitationOfTheProtocol">http://purl.org/net/SMARTprotocol#LimitationOfTheProtocol</a> for limitations, <a href="http://purl.org/net/SMARTprotocol#ApplicationOfTheProtocol">http://purl.org/net/SMARTprotocol#ApplicationOfTheProtocol</a> for applicability, and <a href="http://purl.org/net/SMARTprotocol#OutcomeOfTheProtocol">http://purl.org/net/SMARTprotocol#OutcomeOfTheProtocol</a> for outcomes.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                             <a href="https://smartprotocols.github.io/">SMART Protocols</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/identifier">identifier</a></th>
+                           <td>
+                              <a href="http://schema.org/PropertyValue">PropertyValue</a><br />
+                              <a href="http://schema.org/Text">Text</a><br />
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td><strong>Schema</strong>: The identifier property represents any kind of identifier for any kind of <a href="http://schema.org/Thing">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/isPartOf">isPartOf</a></th>
+                           <td>
+                              <a href="http://schema.org/CreativeWork">CreativeWork</a>
+                              <br>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: Indicates a CreativeWork that this CreativeWork is (in some sense) part of.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/license">license</a></th>
+                           <td>
+                              <a href="http://schema.org/CreativeWork">CreativeWork</a><br />
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A license document that applies to this content, typically indicated by URL.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr id="software">
+                           <th><a class="newBsc" href="#">software</a></th>
+                           <td>
+                              <a href="http://schema.org/SoftwareApplication">SoftwareApplication</a>
+                              <br>
+                           </td>
+                           <td>
+                              <strong>Bioschemas</strong>: An application that can complete the request.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/step">step</a></th>
+                           <td>
+                              <a href="http://schema.org/CreativeWork">CreativeWork</a><br />
+                              <a href="http://schema.org/HowToSection">HowToSection</a><br />
+                              <a href="http://schema.org/HowToStep">HowToStep</a><br />
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A single step item (as HowToStep, text, document, video, etc.) or a HowToSection.<br />
+                             <strong>Bioschemas</strong>: Use in LabProtocol to include the step by step process followed in this protocol.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+<!-- OPTIONAL -->
+                        <tr class="cardinality">
+                           <td colspan="5">
+                              Marginality: <b>Optional</b>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a  href="http://schema.org/additionalTypee">additionalType</a></th>
+                           <td>
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                              <strong>Schema</strong>: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.<br />
+                              <strong>Bioschemas</strong>: Optional for LabProtocol as it has its own type in schema.org. If used, the recommended URL is experimental protocol as defined by SMART Protocols (see Controlled Vocabulary).
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                              <a href="http://purl.org/net/SMARTprotocol#ExperimentalProtocol">SP:ExperimentalProtocol</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a class="newBsc" href="http://schema.org/isBasedOn">isBasedOn</a></th>
+                           <td>
+                              <a href="http://schema.org/CreativeWork">CreativeWork</a><br />
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.<br />
+                             <u><strong>Note</strong></u>: Bioschemas have removed <a href="http://schema.org/Product">Product</a> from the Expected Types.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+      <script src="/js/scripts.js"></script>
+   </body>
+</html>

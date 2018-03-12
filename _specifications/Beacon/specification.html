@@ -1,126 +1,259 @@
 ---
+cross_walk_url: https://docs.google.com/spreadsheets/d/1wLJa4LkCM8oIvBPTFS1IBcygRGBpSrAgNfRSEadVICo/edit#gid=1261485211
+dateModified: 2018-02-27
 group: beacons
 description: In this document we propose a simple way for a beacons to self-describe
   their genetic variant cardinality service for better integration with other beacons
   within the beacon-network. It builds upon the Beacon service API and uses existing
   schema.org entities and properties.
-edit_url: https://github.com/BioSchemas/specifications/tree/master/Beacon/specification.html
 g_mapping_file: Beacon Mapping Simp
-gh_examples: https://github.com/BioSchemas/specifications/tree/master/Beacon/examples
-gh_folder: https://github.com/BioSchemas/specifications/tree/master/Beacon
-gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Beacon
+gh_examples: https://gist.github.com/kcmcleod/811d78d2c7a250c5a15e6110c7c26f11
+gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Beacon
 hierarchy:
-- DataCatalog
-- CreativeWork
 - Thing
-layout: new_spec_detail
+- CreativeWork
+- DataCatalog
+live_deploy: ''
 name: Beacon
 parent_type: DataCatalog
-properties:
-- bsc_dec: dataset
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Dataset
-  marginality: Minimum
-  name: dataset
-  parent: DataCatalog
-  sdo_desc: A dataset contained in this catalog.
-- bsc_dec: provider
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Organization
-  - Person
-  marginality: Minimum
-  name: provider
-  parent: CreativeWork
-  sdo_desc: The service provider, service operator, or service performer; the goods
-    producer. Another party (a seller) may offer those services or goods on behalf
-    of the provider. A provider may also serve as the seller.
-- bsc_dec: version
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Number
-  - Text
-  marginality: Minimum
-  name: version
-  parent: CreativeWork
-  sdo_desc: The version of the CreativeWork embodied by a specified resource.
-- bsc_dec: identifier
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - PropertyValue
-  - Text
-  - URL
-  marginality: Recommended
-  name: identifier
-  parent: Thing
-  sdo_desc: The identifier property represents any kind of identifier for any kind
-    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
-    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
-    many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background
-    notes</a> for more details.
-- bsc_dec: name
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Recommended
-  name: name
-  parent: Thing
-  sdo_desc: The name of the item.
-- bsc_dec: sameAs
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - URL
-  marginality: Optional
-  name: sameAs
-  parent: Thing
-  sdo_desc: URL of a reference Web page that unambiguously indicates the item's identity.
-    E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
-- bsc_dec: url
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - URL
-  marginality: Minimum
-  name: url
-  parent: Thing
-  sdo_desc: URL of the item.
-- bsc_dec: supportedRefs
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - citation
-  marginality: Recommended
-  name: supportedReference
-  parent: Beacon
-  sdo_desc: A citation or reference to another creative work, such as another publication,
-    web page, scholarly article, etc.
-spec_mapping_url: https://docs.google.com/spreadsheets/d/1TI4R343UXBjDDv1tXJzcfQDSlGwCF3lUCjztbpfwoyU/edit?usp=drivesdk
 spec_type: Profile
-status: revision
+status: release
 subtitle: 'A convention for beacon to self-describe. '
-use_cases_url: err_404
+url: Beacons
+use_cases_url: /useCases/Beacons/
 version: '0.2'
+
 ---
+
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main_content_wrap" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  <table class="bioschemas_properties bsc_type">
+                     <thead>
+                        <tr>
+                           <th>Property</th>
+                           <th>Expected Type</th>
+                           <th>Description</th>
+                           <th>CD</th>
+                           <th>Controlled Vocabulary</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+<!-- MINIMUM -->
+                        <tr class="cardinality">
+                           <td colspan="5">
+                              Marginality: <b>Minimum</b>
+                           </td>
+                        </tr>
+                          <tr>
+                             <th><a style="color: #0B794B" href="http://schema.org/dataset">dataset</a></th>
+                             <td>
+                               {% if status == revision %}
+                               <a style="color: #0B794B" href="/devTypes/Dataset/specification/">Dataset</a>
+                               {% else %}
+                               <a style="color: #0B794B" href="/types/Dataset/specification/">Dataset</a>
+                               {% endif %}
+                             </td>
+                             <td>
+                               <strong>Schema</strong>: A dataset contained in this catalog.<br />
+                               <strong>Bioschemas</strong>: Datasets served by this Beacon.<br />
+                               <u><strong>Note</strong></u>: Bioschemas have changed the Expected Type from <a href="http://schema.org/Dataset">Dataset</a> to
+                               {% if status == revision %}
+                               <a style="color: #0B794B" href="/devTypes/Dataset/specification/">Dataset</a>.
+                               {% else %}
+                               <a style="color: #0B794B" href="/types/Dataset/specification/">Dataset</a>.
+                               {% endif %}
+                             </td>
+                             <td>MANY</td>
+                             <td>
+                             </td>
+                          </tr>
+                          <tr>
+                             <th><a href="http://schema.org/name">name</a></th>
+                             <td>
+                                <a href="http://schema.org/Text">Text</a>
+                             </td>
+                             <td>
+                               <strong>Schema</strong>: The name of the item.<br />
+                               <strong>Bioschemas</strong>: Name of the Beacon.
+                             </td>
+                             <td>ONE</td>
+                             <td>
+                             </td>
+                          </tr>
+                          <tr>
+                             <th><a href="http://schema.org/provider">provider</a></th>
+                             <td>
+                               {% if status == revision %}
+                               <a style="color: #0B794B" href="/devTypes/Organization/specification/">Organization</a>
+                               {% else %}
+                               <a style="color: #0B794B" href="/types/Organization/specification/">Organization</a>
+                               {% endif %}
+                               <br />
+                               {% if status == revision %}
+                               <a style="color: #0B794B" href="/devTypes/Person/specification/">Person</a>
+                               {% else %}
+                               <a style="color: #0B794B" href="/types/Person/specification/">Person</a>
+                               {% endif %}
+                             </td>
+                             <td>
+                               <strong>Schema</strong>: The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.<br />
+                               <strong>Bioschemas</strong>: Contact information for this beacon.<br />
+                               <u><strong>Note</strong></u>: Bioschemas have changed the Expected Types from <a href="http://schema.org/Organization">Organization</a> to
+                               {% if status == revision %}
+                               <a style="color: #0B794B" href="/devTypes/Organization/specification/">Organization</a>
+                               {% else %}
+                               <a style="color: #0B794B" href="/types/Organization/specification/">Organization</a>
+                               {% endif %}
+                               and from <a href="http://schema.org/Person">Person</a> to
+                               {% if status == revision %}
+                               <a style="color: #0B794B" href="/devTypes/Person/specification/">Person</a>.
+                               {% else %}
+                               <a style="color: #0B794B" href="/types/Person/specification/">Person</a>.
+                               {% endif %}
+                             </td>
+                             <td>MANY</td>
+                             <td>
+                             </td>
+                          </tr>
+                          <tr>
+                             <th><a href="http://schema.org/potentialAction">potentialAction</a></th>
+                             <td>
+                               <a href="http://schema.org/Action">Action</a>
+                             </td>
+                             <td>
+                               <strong>Schema</strong>: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.<br />
+                               <strong>Bioschemas</strong>: List of Actions that can be performed on a Beacon.
+                             </td>
+                             <td>MANY</td>
+                             <td>
+                             </td>
+                          </tr>
+                          <tr id="supportedRefs">
+                             <th><a style="color: #0B794B" href="#">supportedRefs</a></th>
+                             <td>
+                               <a href="http://schema.org/Text">Text</a>
+                             </td>
+                             <td>
+                               <strong>Bioschemas</strong>: Supported Genome ID references.
+                             </td>
+                             <td>MANY</td>
+                             <td>
+                             </td>
+                          </tr>
+                          <tr>
+                             <th><a href="http://schema.org/url">url</a></th>
+                             <td>
+                               <a href="http://schema.org/URL">URL</a>
+                             </td>
+                             <td>
+                               <strong>Schema</strong>: URL of the item.<br />
+                               <strong>Bioschemas</strong>: Welcome page for this beacon.
+                             </td>
+                             <td>ONE</td>
+                             <td>
+                             </td>
+                          </tr>
+
+<!-- RECOMMENDED -->
+                        <tr class="cardinality">
+                          <td colspan="5">Marginality: <b>Recommended</b></td>
+                        </tr>
+                        <tr id="aggregator">
+                           <th><a style="color: #0B794B" href="#">aggregator</a></th>
+                           <td>
+                              <a href="http://schema.org/Boolean">Boolean</a><br />
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: True if the Beacon is an aggregator of other Beacons.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                          <tr>
+                             <th><a href="http://schema.org/description">description</a></th>
+                             <td>
+                                <a href="http://schema.org/Text">Text</a><br />
+                             </td>
+                             <td>
+                               <strong>Schema</strong>: A description of the item.<br />
+                               <strong>Bioschemas</strong>: Description of the Beacon.
+                             </td>
+                             <td>ONE</td>
+                             <td>
+                             </td>
+                          </tr>
+                        </tr>
+                          <tr>
+                             <th><a href="http://schema.org/identifier">identifier</a></th>
+                             <td>
+                                <a href="http://schema.org/PropertyValue">PropertyValue</a><br />
+                                <a href="http://schema.org/Text">Text</a><br />
+                                <a href="http://schema.org/URL">URL</a>
+                             </td>
+                             <td>
+                               <strong>Schema</strong>: The identifier property represents any kind of identifier for any kind of <a href="http://schema.org/Thing">Thing</a>,
+                               such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.
+                               See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.<br />
+                               <strong>Bioschemas</strong>: Unique identifier of the Beacon.
+                             </td>
+                             <td>ONE</td>
+                             <td>
+                             </td>
+                          </tr>
+                          <tr>
+                             <th><a href="http://schema.org/version">version</a></th>
+                             <td>
+                                <a href="http://schema.org/Number">Number</a><br />
+                                <a href="http://schema.org/Text">Text</a>
+                             </td>
+                             <td>
+                               <strong>Schema</strong>: The version of the CreativeWork embodied by a specified resource.<br />
+                               <strong>Bioschemas</strong>: Beacon API version.
+                             </td>
+                             <td>ONE</td>
+                             <td>
+                             </td>
+                          </tr>
+
+<!-- OPTIONAL -->
+                      <tr class="cardinality">
+                      <td colspan="5">Marginality: <b>Optional</b></td>
+                      </tr>
+                      <tr>
+                         <th><a href="http://schema.org/version">sameAs</a></th>
+                         <td>
+                            <a href="http://schema.org/URL">URL</a>
+                         </td>
+                         <td>
+                           <strong>Schema</strong>: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.<br />
+                           <strong>Bioschemas</strong>: Alternative URL for this Beacon.
+                         </td>
+                         <td>MANY</td>
+                         <td>
+                         </td>
+                      </tr>
+
+
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+      <script src="/js/scripts.js"></script>
+   </body>
+</html>
