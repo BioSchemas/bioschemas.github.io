@@ -1,4 +1,8 @@
+{% if page.status == 'release' %}
 <h1>{{page.name}} Specification v. {{page.version}}</h1>
+{% else %}
+<h1>{{page.name}} <u>DRAFT</u> Specification v. {{page.version}}</h1>
+{% endif %}
 <h2>{{page.subtitle}}</h2>
 
 <br />
