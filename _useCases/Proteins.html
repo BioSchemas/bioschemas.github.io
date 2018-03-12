@@ -18,7 +18,7 @@ active: true
                  <h1>Use Cases for {{page.name}}</h1>
                  {% assign group = site.groups | where:"identifier", page.group %}
                  {% for g in group %}
-                 <p>The following use cases were developed by the <a href="/groups/{{g.name}}/">{{ g.name }}</a> group.
+                 <p>The following use cases were developed by the <a href="{{g.url}}">{{ g.name }}</a> group.
                  {% endfor %}
 
                  <p>This use cases apply to the following biological types: “protein”, “protein annotation” and “protein structure”.</p>
