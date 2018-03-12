@@ -1,191 +1,20 @@
 ---
 cross_walk_url: https://docs.google.com/spreadsheets/d/1cQ6mDbsG_cMX2EDAN8xH6-9yMRba8-rErlPeP8HTs8A
+dateModified: 2018-03-11
 description: ''
-group: trainingmaterials
 edit_url: https://github.com/BioSchemas/specifications/tree/master/Course/specification.html
-g_mapping_file: Course Mapping Simp
 gh_examples: ''
 gh_folder: https://github.com/BioSchemas/specifications/tree/master/Course
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Course
+group: trainingmaterials
 hierarchy:
-- Course
-- CreativeWork
 - Thing
-layout: new_spec_detail
+- CreativeWork
+- Course
 live_deploy: ''
 name: Course
 parent_type: Course
 properties:
-- bsc_dec: Pre-requisite requirements before you can take this course
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: N/A; text describing prerequisite; other coursecode
-  expected_type:
-  - AlignmentObject
-  - Course
-  - Text
-  marginality: Minimum
-  name: coursePrerequisites
-  parent: Course
-  sdo_desc: Requirements for taking the Course. May be completion of another <a class="localLink"
-    href="http://schema.org/Course">Course</a> or a textual description like "permission
-    of instructor". Requirements may be a pre-requisite competency, referenced using
-    <a class="localLink" href="http://schema.org/AlignmentObject">AlignmentObject</a>.
-- bsc_dec: Intended audience of course
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: text description
-  expected_type:
-  - Audience
-  marginality: Minimum
-  name: audience
-  parent: CreativeWork
-  sdo_desc: An intended audience, i.e. a group for whom something was created.
-- bsc_dec: Keywords describing course
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: Free text; EDAM
-  expected_type:
-  - Text
-  marginality: Minimum
-  name: keywords
-  parent: CreativeWork
-  sdo_desc: Keywords or tags used to describe this content. Multiple entries in a
-    keywords list are typically delimited by commas.
-- bsc_dec: Same as about??
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: Free text
-  expected_type:
-  - Text
-  marginality: Minimum
-  name: description
-  parent: Thing
-  sdo_desc: A description of the item.
-- bsc_dec: Title of the course
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Minimum
-  name: name
-  parent: Thing
-  sdo_desc: The name of the item.
-- bsc_dec: URL of the course page
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - URL
-  marginality: Minimum
-  name: url
-  parent: Thing
-  sdo_desc: URL of the item.
-- bsc_dec: About this course
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Optional
-  name: courseCode
-  parent: Course
-  sdo_desc: The identifier for the <a class="localLink" href="http://schema.org/Course">Course</a>
-    used by the course <a class="localLink" href="http://schema.org/provider">provider</a>
-    (e.g. CS101 or 6.001).
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - CourseInstance
-  marginality: Optional
-  name: hasCourseInstance
-  parent: Course
-  sdo_desc: An offering of the course at a specific time and place or through specific
-    media or mode of study or to a specific section of students.
-- bsc_dec: Course contact?
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: Facilitator or contact
-  expected_type:
-  - Organization
-  - Person
-  marginality: Optional
-  name: author
-  parent: CreativeWork
-  sdo_desc: The author of this content or rating. Please note that author is special
-    in that HTML 5 provides a special mechanism for indicating authorship via the
-    rel tag. That is equivalent to this and may be used interchangeably.
-- bsc_dec: Host organization
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: Organization(s) providing course?
-  expected_type:
-  - Organization
-  - Person
-  marginality: Optional
-  name: provider
-  parent: CreativeWork
-  sdo_desc: The service provider, service operator, or service performer; the goods
-    producer. Another party (a seller) may offer those services or goods on behalf
-    of the provider. A provider may also serve as the seller.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: Funding bodies of course
-  expected_type:
-  - Organization
-  - Person
-  marginality: Optional
-  name: sponsor
-  parent: CreativeWork
-  sdo_desc: A person or organization that supports a thing through a pledge, promise,
-    or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor
-    of an event.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - URL
-  marginality: Optional
-  name: thumbnailUrl
-  parent: CreativeWork
-  sdo_desc: A thumbnail image relevant to the Thing.
-- bsc_dec: same as thumbnailURL
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - ImageObject
-  - URL
-  marginality: Optional
-  name: image
-  parent: Thing
-  sdo_desc: An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a>
-    or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.
 spec_mapping_url: https://docs.google.com/spreadsheets/d/1-nxYa8fEauokQYFWj6n9dkueL6HolXpqQpVQziARPfE/edit?usp=drivesdk
 spec_type: Profile
 status: revision
@@ -193,3 +22,225 @@ subtitle: ''
 use_cases_url: ''
 version: '0.1-draft.1'
 ---
+
+
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main_content_wrap" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  <table class="bioschemas_properties bsc_type">
+                     <thead>
+                        <tr>
+                           <th>Property</th>
+                           <th>Expected Type</th>
+                           <th>Description</th>
+                           <th>CD</th>
+                           <th>Controlled Vocabulary</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+<!-- MINIMUM -->    <tr class="cardinality"><td colspan="5">Marginality: <b>Minimum</b></td></tr>
+                    <tr>
+                       <th><a href="http://schema.org/audience">audience</a></th>
+                       <td>
+                          <a href="http://schema.org/Audience">Audience</a>
+                       </td>
+                       <td>
+                         <strong>Schema</strong>: An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience.<br />
+                         <strong>Bioschemas</strong>: Intended audience of course.
+                       </td>
+                       <td>ONE</td>
+                       <td></td>
+                    </tr>
+                    <tr>
+                       <th><a href="http://schema.org/coursePrerequisites">coursePrerequisites</a></th>
+                       <td>
+                         <a href="http://schema.org/AlignmentObject">AlignmentObject</a><br />
+                         <a href="http://schema.org/Course">Course</a><br />
+                         <a href="http://schema.org/Text">Text</a>
+                       </td>
+                       <td>
+                         <strong>Schema</strong>: Requirements for taking the <a href="http://schema.org/Course">Course</a>. May be completion of another Course or a textual description like "permission of instructor". Requirements may be a pre-requisite competency, referenced using <a href="http://schema.org/AlignmentObject">AlignmentObject</a>.<br />
+                         <strong>Bioschemas</strong>: Pre-requisite requirments before you can take this course.
+                       <td>MANY</td>
+                       <td></td>
+                    </tr>
+                       <tr>
+                          <th><a href="http://schema.org/description">description</a></th>
+                          <td>
+                            <a href="http://schema.org/Text">Text</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: A description of the item.
+                          <td>ONE</td>
+                          <td></td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/keywords">keywords</a></th>
+                          <td>
+                            <a href="http://schema.org/Text">Text</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.<br />
+                            <strong>Bioschemas</strong>: Keywords describing course. Use terms from Controlled Vocabularies where possible, e.g., <a class="externalProp" href="http://edamontology.org/">EDAM</a>.
+                          <td>ONE</td>
+                          <td><a class="externalProp" href="http://edamontology.org/">EDAM</a></td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/name">name</a></th>
+                          <td>
+                            <a href="http://schema.org/Text">Text</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The name of the item.<br />
+                            <strong>Bioschemas</strong>: Title of the course.
+                          <td>ONE</td>
+                          <td></td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/url">url</a></th>
+                          <td>
+                            <a href="http://schema.org/URL">URL</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: URL of the item.<br />
+                            <strong>Bioschemas</strong>: URL of the course page.
+                          <td>ONE</td>
+                          <td></td>
+                       </tr>
+
+
+                       <tr class="cardinality">
+                          <td colspan="5">
+                             Marginality: <b>Recommended</b>
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/producer">producer</a></th>
+                          <td>
+                            <a href="http://schema.org/Organization">Organization</a><br />
+                            <a href="http://schema.org/Person">Person</a><br />
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.).<br />
+                            <strong>Bioschemas</strong>: Faciliator/contact person.
+                          <td>MANY</td>
+                          <td></td>
+                       </tr>
+
+<!-- OPTIONAL -->
+                       <tr class="cardinality"><td colspan="5">Marginality: <b>Optional</b></td></tr>
+                       <tr>
+                          <th><a href="http://schema.org/author">author</a></th>
+                          <td>
+                            <a href="http://schema.org/Organization">Organization</a><br />
+                            <a href="http://schema.org/Person">Person</a><br />
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.<br />
+                            <strong>Bioschemas</strong>: Course contact?
+                          </td>
+                          <td>MANY</td>
+                          <td></td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/courseCode">courseCode</a></th>
+                          <td>
+                            <a href="http://schema.org/Text">Text</a><br />
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The identifier for the <a href="http://schema.org/Course">Course</a> used by the course <a href="http://schema.org/provider">provider</a> (e.g. CS101 or 6.001).<br />
+                            <strong>Bioschemas</strong>: About this course.
+                          </td>
+                          <td>ONE</td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/hasCourseInstance">hasCourseInstance</a></th>
+                          <td>
+                            <a href="http://schema.org/CourseInstance">CourseInstance</a><br />
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: An offering of the course at a specific time and place or through specific media or mode of study or to a specific section of students.
+                          </td>
+                          <td>MANY</td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/image">image</a></th>
+                          <td>
+                            <a href="http://schema.org/ImageObject">ImageObject</a><br />
+                            <a href="http://schema.org/URL">URL</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: An image of the item. This can be a <a href="http://schema.or/URL">URL</a> or a fully described <a href="http://schema.or/ImageObject">ImageObject</a>.<br />
+                            <strong>Bioschemas</strong>: Same as thumbnailURL.
+                          </td>
+                          <td>ONE</td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/inLanguage">inLanguage</a></th>
+                          <td>
+                            <a href="http://schema.org/Language">Language</a><br />
+                            <a href="http://schema.org/Text">Text</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The language of the content or performance or used in an action. Please use one of the language codes from the <a href="http://tools.ietf.org/html/bcp47">IETF BCP 47 standard</a>. See also <a href="http://schema.org/availableLanguage">availableLanguage</a>.
+                          </td>
+                          <td>ONE</td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/provider">provider</a></th>
+                          <td>
+                            <a href="http://schema.org/Organization">Organization</a><br />
+                            <a href="http://schema.org/Person">Person</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The service provider, service operator, or service performer; the goods producer. Another party (a seller)
+                            may offer those services or goods on behalf of the provider. A provider may also serve as the seller.<br />
+                            <strong>Bioschemas</strong>: Host organization.
+                          </td>
+                          <td>MANY</td>
+                          <td></td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/sponsor">sponsor</a></th>
+                          <td>
+                            <a href="http://schema.org/Organization">Organization</a><br />
+                            <a href="http://schema.org/Person">Person</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.
+                          </td>
+                          <td>MANY</td>
+                          <td></td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/thumbnailUrl">thumbnailUrl</a></th>
+                          <td>
+                            <a href="http://schema.org/URL">URL</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: A thumbnail image relevant to the Thing.
+                          </td>
+                          <td>ONE</td>
+                          <td></td>
+                       </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+      <script src="/js/scripts.js"></script>
+   </body>
+</html>
