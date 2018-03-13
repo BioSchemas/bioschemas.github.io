@@ -101,20 +101,19 @@ version: '0.4'
                           <td>ONE</td>
                           <td></td>
                        </tr>
-                       <!-- <tr>
-                         {% if status == revision %}
-                         <th><a class="newBsc" href="/devTypes/BioChemEntity/specification/#preferredLabel">preferredLabel</a></th>
-                         {% else %}
-                         <th><a class="newBsc" href="/types/BioChemEntity/specification/#preferredLabel">preferredLabel</a></th>
-                         {% endif %}
+                       <tr>
+                          <th><a class="externalProp" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></th>
                           <td>
-                            <a href="http://schema.org/Text">Text</a>
+                            <a href="http://schema.org/URL">URL</a>
                           </td>
                           <td>
-                            <strong>Bioschemas</strong>: Indicates the preferred label to refer to a specific (sub) type of BioChemEntity. For a Protein Structure, the value must be 'ProteinStructure'.<br />
+                            <strong>Bioschemas</strong>: This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.
+                          </td>
                           <td>ONE</td>
-                          <td></td>
-                       </tr> -->
+                          <td>
+                             <strong>Missing!</strong>
+                          </td>
+                       </tr>
                        <tr>
                           <th><a class="externalProp" href="http://semanticscience.org/resource/SIO_010081.rdf">SIO:is transcribed from</a></th>
                           <td>
