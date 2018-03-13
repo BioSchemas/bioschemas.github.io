@@ -171,10 +171,13 @@ This is a new {{page.spec_type}} that fits into the schema.org hierarchy as foll
     </tbody>
 </table>
 <br />
+
+{% if page.name != 'Organization' and page.name != 'Person' and page.name != 'Chemical' and page.name != 'ChemicalStructure' and page.name != 'Course' and page.name != 'Standard' %}
 {% if page.status == 'release' %}
 <p>You can read the <a href="/devSpecs/{{page.name}}/specification/">draft version of this specification here</a>.</p>
 {% elsif page.status == 'revision' %}
 <p>You can read the <a href="/specifications/{{page.name}}/specification/">release version of this specification here</a>.</p>
+{% endif %}
 {% endif %}
 </section>
 
