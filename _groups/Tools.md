@@ -6,7 +6,7 @@ collection: groups
 active: false
 type: generic
 description: Specification for tools
-lead: []
+lead: [GiuseppeProfiti]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20tool
 folder: https://drive.google.com/drive/u/1/folders/0ByZjzHhAz30Ta0ZhWV8wb1p4TTA
 usecase: true
