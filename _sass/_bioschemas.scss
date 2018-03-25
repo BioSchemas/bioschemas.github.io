@@ -1,0 +1,89 @@
+$bioschema-property-color: #0B794B;
+$schemaorg-property-color: #660000;
+$pending-property-color: #0000CC;
+$external-property-color: #454547;
+.spec-prof-table {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    margin: 1em 0 0 0;
+    border: 1px solid #98A0A6;
+    border-spacing: 3px;
+    display: table;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Tahoma, Arial, sans-serif;
+    line-height: 160%;
+    font-size: 100%;
+    tbody th {
+        text-align: left;
+        vertical-align: top;        
+    }
+    tr {
+        display: table-row;
+        vertical-align: inherit;
+        border-color: inherit;
+        font-size: 100%;
+    }
+    th {
+        padding-left: 5px;
+        background: #C7CBCE;
+        color: #3A4956;
+        font-weight: bold;
+        display: table-cell;
+        text-align: center;
+        border: none;
+        vertical-align: middle;
+        font-size: 100%;
+    }
+    td {
+        border: 0;
+        padding: 0.625em;
+        min-height: 1.25em;
+        max-height: 2.5em;
+        vertical-align: top;
+        font-size: 100%;
+        display: table-cell;
+        max-width: 20em;
+        &.property {
+            background: #C7CBCE;
+            font-weight: bold;
+        }
+    }
+    a {
+        color: $schemaorg-property-color;
+        text-decoration: none;
+        border-bottom: dotted 1px $schemaorg-property-color;
+        &.bioschema {
+            color: $bioschema-property-color;
+            text-decoration: none;
+            border-bottom: dotted 1px $bioschema-property-color;
+        }
+        &.pending {
+            color: $pending-property-color;
+            text-decoration: none;
+            border-bottom: dotted 1px $pending-property-color;
+        }
+        &.external {
+            color: $external-property-color;
+            text-decoration: none;
+            border-bottom: dotted 1px $external-property-color;
+        }
+    }
+    .example-code {
+        background-color: #EEEEEE;
+        font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+        padding:0px;
+        margin:0px;
+        pre {
+            word-break: keep-all;
+            white-space: pre-line;       /* Since CSS 2.1 */
+            white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            max-height: 600px;
+            overflow: auto;
+            width: auto;                
+        }
+    }
+
+}
