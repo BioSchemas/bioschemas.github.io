@@ -42,7 +42,7 @@ mapping:
   type_url: ""
   bsc_description: 'Any ontology term describing the gene concept. This is in addition
     to the official type to describe a gene.Official proposed term for the profile
-    describing a gene: http://purl.obolibrary.org/obo/SO_0000704'
+    describing a gene: http://purl.obolibrary.org/obo/SO_0000704.'
   marginality: Optional
   cardinality: MANY
   controlled_vocab: Any suitable ontology
@@ -97,9 +97,23 @@ mapping:
   cardinality: ONE
   controlled_vocab: ""
   example: |-
+    Using a text
     {
         "@type": ["BioChemEntity", "Gene"],
         "identifier": "ENSG00000142192"
+    }
+    Using a URL directly (looks like a text)
+    {
+        "@type": ["BioChemEntity", "Gene"],
+        "identifier": "http://identifiers.org/ensembl:ENSG00000142192"
+    }
+    Using a URL modeled as schema:URL (equivalent to the previous one but more verbose)
+    {
+        "@type": ["BioChemEntity", "Gene"],
+        "identifier": {
+          "@type": "URL",
+          "url": "http://identifiers.org/ensembl:ENSG00000142192"
+        }
     }
 - property: image
   expected_types:
@@ -112,7 +126,8 @@ mapping:
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: |-
+  example: |
+    Using a URL directly (looks like a text)
     {
       "@type": ["BioChemEntity", "Gene"],
       "image": "https://en.wikipedia.org/wiki/Amyloid_precursor_protein#/media/File:Ideogram_human_chromosome_21.svg"
@@ -291,7 +306,7 @@ mapping:
   bsc_description: For genes, this property could be used, for instance, to register
     a gene sequence as a representation of the protein. If you want to better define
     the nature of the representation, use a PropertyValue as described in additionalProperty
-    or a third-party ontology predicate
+    or a third-party ontology predicate.
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
@@ -322,7 +337,7 @@ mapping:
   type_url: http://semanticscience.org/resource/SIO_010078
   bsc_description: For genes, this property is used to express in a generic way gene
     products encoded by this gene. Two more specific properties SIO:010082 and SIO:010080
-    should be used for translation and transcription respectevely
+    should be used for translation and transcription respectevely.
   marginality: Optional
   cardinality: MANY
   controlled_vocab: SIO
@@ -334,7 +349,7 @@ mapping:
   type: external
   type_url: http://semanticscience.org/resource/SIO_010082
   bsc_description: For genes, this property is used to link to gene products translated
-    from this gene such as RNA
+    from this gene such as RNA.
   marginality: Optional
   cardinality: MANY
   controlled_vocab: SIO
@@ -347,7 +362,7 @@ mapping:
   type: external
   type_url: http://semanticscience.org/resource/SIO_010080
   bsc_description: For genes, this property is used to link to gene products transcribed
-    from this gene such as proteins
+    from this gene such as proteins.
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: SIO
@@ -362,11 +377,12 @@ mapping:
   type: external
   type_url: http://semanticscience.org/resource/SIO_000272
   bsc_description: Use this property to express when a gene is a variant of any other
-    gene
+    gene.
   marginality: Optional
   cardinality: MANY
   controlled_vocab: SIO
   example: ""
+
 ---
 <!DOCTYPE HTML>
 <html>
