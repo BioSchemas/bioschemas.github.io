@@ -383,14 +383,6 @@ th {
     vertical-align: middle;
 }
 
-/* th:first-child {
-    border-top-left-radius: 0.625em;
-} 
-
-th:last-child {
-    border-top-right-radius: 0.625em;
-}
-*/
 
 td {
     border: 1px solid #666;
@@ -430,7 +422,7 @@ Full-Width Styles
     text-decoration: none;
 }
 
-#main_content_wrap {
+#main-content-wrapper {
     background: #fefefe;
 }
 
@@ -439,11 +431,12 @@ Full-Width Styles
 }
 
 #header_wrap {
-    background-image: url("/images/subtle_white_feathers.png");
+    /* background-image: url("/images/subtle_white_feathers.png"); */
+    background-color: #FCFAF9;
 }
 
 #header_wrap .inner {
-    padding: 2.5em 0.625em 1.875em 0.625em;
+    padding: 1.5em 0.625em 1.875em 0.625em;
 }
 
 .mobile_list {
@@ -529,63 +522,13 @@ Twitter Button
 }
 
 /*******************************************************************************
-Rotating Logo
-*******************************************************************************/
-
-.rotation {
-    -webkit-transition: -webkit-transform 1s ease-in-out;
-    -o-transition: -o-transform 1s ease-in-out;
-    -moz-transition: -moz-transform 1s ease-in-out;
-    transition: transform 1s ease-in-out;
-}
-
-.rotation:hover {
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-}
-
-/*******************************************************************************
 Navigation Bar
 *******************************************************************************/
 
-.trigger {
-    /*border-bottom-left-radius: 0.625em;
-    border-bottom-right-radius: 0.625em;*/
-    background-color: #0B794B;
-    width: auto;
-    height: 2.5em;
-    padding-top: 0.625em;
-    position: relative;
-}
-
-.trigger_links {
-    max-width: 62.5em;
-    height: auto;
-    position: relative;
-    margin: 0 auto;
-}
-
-.trigger a {
-    color: #fff;
-    font-size: 1.2em;
-}
-
-.stuck {
-    position: fixed;
-    z-index: 100;
-    top: -0.3125em;
-    background-color: rgb(11, 121, 75);
-    background-color: rgba(11, 121, 75, .9);
-    width: 100%;
-    height: 2.5em;
-}
 
 /* Strange things happen when you set font-size to 1.2em, which equals 19.2px */
 
-.nav_buttons {
+.navbar_button {
     display: inline-block;
     height: 2.0833333333333335em;
     margin-top: -0.5208333333333334em;
@@ -594,7 +537,7 @@ Navigation Bar
     padding-right: 0.5208333333333334em;
 }
 
-.nav_buttons:hover {
+.navbar_button:hover {
     color: #333333;
     background-color: #2bb673;
     height: 2.03125em;
@@ -616,18 +559,6 @@ Navigation Bar
     border-bottom-left-radius: 0.5208333333333334em;
     border-bottom-right-radius: 0.5208333333333334em;
     border: 1px solid #2bb673;
-}
-
-.mobile_nav {
-    display: none;
-}
-
-#mobile_links {
-    display: none;
-}
-
-#mobile_list {
-    display: none;
 }
 
 /*******************************************************************************
@@ -931,74 +862,12 @@ Others (Not Used)
     background: url(../images/sprite_download.png) no-repeat top right;
 }
 
-/***
-.icon {
-
-svg {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    vertical-align: middle;
-
-path {
-    fill: grey-color;
-}
-
-}
-}
-**/
-
-/**
-
-.ui-tooltip {
-    border: 2px solid #0B794B;
-    border-top-left-radius: 0.625em;
-    border-top-right-radius: 0.625em;
-    width: 40%;
-    position: relative;
-    background-color: rgba(144, 238, 144, .5);
-    text-align: center;
-}
-
-.ui-helper-hidden-accessible{
-    display: none;
-}
-
-*/
-
 /*******************************************************************************
 Small Device Styles
 *******************************************************************************/
 
 @media screen and (max-width: 700px) {
-    .trigger {
-        z-index: 500;
-        top: 0;
-        right: 0;
-        position: fixed;
-        display: flex;
-        align-items: center;
-        background-color: rgb(11, 121, 75);
-        background-color: rgba(11, 121, 75, .9);
-    }
-    .trigger_mobile {
-        height: auto;
-    }
-    .trigger_links {
-        display: none;
-    }
-    .mobile_nav {
-        display: inline;
-    }
-    #hamb_menu {
-        cursor: pointer;
-    }
-    .mobile_nav img {
-        height: 1.725em;
-        width: 1.725em;
-        float: right;
-    }
-    #mobile_links {
+     #mobile_links {
         display: none;
         margin-left: 1em;
         margin-bottom: 0.625em;
@@ -1009,7 +878,7 @@ Small Device Styles
         padding-right: 0.625em;
         padding-left: 0.625em;
     }
-    .page-link {
+    .link-navbar {
         padding-bottom: 1em;
     }
     .mobile_buttons:last-of-type {
@@ -1145,25 +1014,12 @@ Small Device Styles
         position: fixed;
         display: flex;
         align-items: center;
-        background-color: rgb(11, 121, 75);
-        background-color: rgba(11, 121, 75, .9);
     }
-    .trigger_mobile {
+    .trigger-mobile {
         height: auto;
     }
     .trigger_links {
         display: none;
-    }
-    .mobile_nav {
-        display: inline;
-    }
-    #hamb_menu {
-        cursor: pointer;
-    }
-    .mobile_nav img {
-        height: 1.725em;
-        width: 1.725em;
-        float: right;
     }
     #mobile_links {
         display: none;
@@ -1177,7 +1033,7 @@ Small Device Styles
         padding-right: 0.625em;
         padding-left: 0.625em;
     }
-    .page-link {
+    .link-navbar {
         padding-bottom: 1em;
     }
     .mobile_buttons:last-of-type {

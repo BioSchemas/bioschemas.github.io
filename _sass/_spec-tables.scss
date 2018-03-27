@@ -2,6 +2,7 @@ $bioschema-property-color: #0B794B;
 $schemaorg-property-color: #660000;
 $pending-property-color: #0000CC;
 $external-property-color: #454547;
+
 .spec-prof-table {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -13,6 +14,7 @@ $external-property-color: #454547;
     font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Tahoma, Arial, sans-serif;
     line-height: 160%;
     font-size: 100%;
+
     tbody th {
         text-align: left;
         vertical-align: top;        
@@ -86,4 +88,8 @@ $external-property-color: #454547;
         }
     }
 
+}
+
+.spec-table-wrapper {
+    overflow-x: scroll;
 }
