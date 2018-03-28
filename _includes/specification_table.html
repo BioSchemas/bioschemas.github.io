@@ -64,11 +64,13 @@
                 {%endfor%}
             </td>
             <td>
-                <div class="example-code">
-                    <pre>
-                        <code>{{prop.example}}</code>
-                    </pre>
-                </div>
+                {% unless prop.example == "" %}
+                    <div class="example-code">
+                        <pre>
+                            <code>{{prop.example}}</code>
+                        </pre>
+                    </div>
+                {% endunless %}
             </td>
         </tr>
         {% endfor %}
