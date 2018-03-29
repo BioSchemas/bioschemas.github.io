@@ -6,7 +6,7 @@ last-name: Jenkinson
 collection: people
 affiliation:
 homepage:
-github_username:
+github_username: andyjenkinson
 orcid:
-groups: [events, organizations, people]
+groups: [events, organizations, people, genes]
 ---

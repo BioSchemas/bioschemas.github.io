@@ -6,7 +6,7 @@ last-name: Jimenez
 collection: people
 affiliation:
 homepage:
-github_username:
+github_username: rajido
 orcid:
 groups: [events, organizations, people, trainingmaterials, standards, tools, community, data, datarepositories]
 ---
