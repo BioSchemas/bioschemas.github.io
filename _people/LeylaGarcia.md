@@ -6,7 +6,7 @@ last-name: Garcia
 collection: people
 affiliation:
 homepage:
-github_username:
+github_username: ljgarcia
 orcid:
-groups: [biologicalentities, proteins, labprotocols]
+groups: [biologicalentities, proteins, labprotocols, genes]
 ---
