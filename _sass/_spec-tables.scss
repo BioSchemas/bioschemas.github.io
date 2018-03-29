@@ -2,7 +2,6 @@ $bioschema-property-color: #0B794B;
 $schemaorg-property-color: #660000;
 $pending-property-color: #0000CC;
 $external-property-color: #454547;
-
 .spec-prof-table {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -14,10 +13,9 @@ $external-property-color: #454547;
     font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Tahoma, Arial, sans-serif;
     line-height: 160%;
     font-size: 100%;
-
     tbody th {
         text-align: left;
-        vertical-align: top;        
+        vertical-align: top;
     }
     tr {
         display: table-row;
@@ -71,23 +69,35 @@ $external-property-color: #454547;
         }
     }
     .example-code {
-        background-color: #EEEEEE;
-        font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
-        padding:0px;
-        margin:0px;
+        font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+        padding: 0px;
+        margin: 0px;
         pre {
-            word-break: keep-all;
-            white-space: pre-line;       /* Since CSS 2.1 */
-            white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-            white-space: -pre-wrap;      /* Opera 4-6 */
-            white-space: -o-pre-wrap;    /* Opera 7 */
-            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            border-radius: initial;
+            box-shadow: none;
+            background-color: #eff0f1;
+            color: #242729;
+            font-size: 13px;
             max-height: 600px;
-            overflow: auto;
-            width: auto;                
+            overflow: scroll;
+            width: auto;
+            word-break: keep-all;
+            white-space: pre;
+            /* Since CSS 2.1 */
+            white-space: -moz-pre-wrap;
+            /* Mozilla, since 1999 */
+            white-space: -pre-wrap;
+            /* Opera 4-6 */
+            white-space: -o-pre-wrap;
+            /* Opera 7 */
+            word-wrap: break-word;
+            /* Internet Explorer 5.5+ */
+            code {
+                background-color: initial;
+                border-radius: initial;
+            }
         }
     }
-
 }
 
 .spec-table-wrapper {
