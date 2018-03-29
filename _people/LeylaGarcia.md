@@ -8,5 +8,5 @@ affiliation:
 homepage:
 github_username: ljgarcia
 orcid:
-groups: [biologicalentities, proteins, labprotocols]
+groups: [biologicalentities, proteins, labprotocols, genes]
 ---
