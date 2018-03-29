@@ -22,10 +22,12 @@ adoption: false
 applications: false
 
 # Page attributes
-abstract: 'Bioschemas specification describing a Gene (BioChemEntity profile) in Life Sciences.'
+abstract: 'In schema.org we cannot find life science types (eg. protein, gene, biological pathway) except those types that overlap with healthcare and medicine domains defined by the health schema.org extension (eg. drug, artery).
+In previous meetings we discussed the benefits of of Schema.org with several data providers but we also came with a list of concerns that need to be evaluated to be able to encourage data providers to adopt Bioschemas.'
 objectives:
   [
-    'This Gene profile specification presents the BioChemEntity usage when describing a Gene.'
+    'Test the adoption of schema.org around a gene use case involving gene resources.',
+    'Evaluating the issues and benefits about how to work with schema.org and Bioschemas'
   ]
 
 specifications:
