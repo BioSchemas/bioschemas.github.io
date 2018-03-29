@@ -70,17 +70,18 @@ $external-property-color: #454547;
     }
     .example-code {
         font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-        padding: 0px;
-        margin: 0px;
+        width:100%;
         pre {
+            width:auto;
+            padding:5px;
             border-radius: initial;
             box-shadow: none;
             background-color: #eff0f1;
             color: #242729;
             font-size: 13px;
+            font-family: inherit;
             max-height: 600px;
-            overflow: scroll;
-            width: auto;
+            overflow: auto;
             word-break: keep-all;
             white-space: pre;
             /* Since CSS 2.1 */
@@ -93,6 +94,7 @@ $external-property-color: #454547;
             word-wrap: break-word;
             /* Internet Explorer 5.5+ */
             code {
+                font-family: inherit;
                 background-color: initial;
                 border-radius: initial;
             }
@@ -101,5 +103,5 @@ $external-property-color: #454547;
 }
 
 .spec-table-wrapper {
-    overflow-x: scroll;
+    overflow-x: auto;
 }
