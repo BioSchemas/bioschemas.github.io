@@ -38,8 +38,8 @@
              {% endif %}
              <td class="expected-type-column">
                 {% for temp_exp_type in prop.expected_types %}
-                {% if temp_exp_type == "PhysicalEntity" or temp_exp_type == "LabProtocol" or temp_exp_type == "DataRecord" or temp_exp_type == "BioChemEntity" %}
-                <a href="http://bioschemas.org/specifications/{{temp_exp_type}}/specification/" target="_blank">{{temp_exp_type}}</a><br>
+                {% if temp_exp_type == "LabProtocol" or temp_exp_type == "DataRecord" or temp_exp_type == "BioChemEntity" %}
+                <a href="http://bioschemas.org/types/{{temp_exp_type}}/specification/" target="_blank">{{temp_exp_type}}</a><br>
                 {% else %}
                 <a href="http://schema.org/{{temp_exp_type}}" target="_blank">{{temp_exp_type}}</a><br>
                 {% endif %}
@@ -58,7 +58,7 @@
              <td class="example-column">
                 <div class="example-code">
                 {% unless prop.example == "" %}
-                {% highlight json %}{{prop.example}}{% endhighlight %}
+                {% highlight javascript %}{{prop.example}}{% endhighlight %}
                 {% endunless %}
                 </div>
              </td>

@@ -43,9 +43,9 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: "Short direct alternative to express relation between protein and protein
+  example: "//Short direct alternative to express relation between protein and protein
     clan.\n{\n  \"@type\": [\"BioChemEntity\", \"Protein\"],\n  \"http://semanticscience.org/resource/SIO_000095\":\"http://pfam.xfam.org/clan/CL0001\"\n}\n
-    \               \nIf no ontology term expressing the desired relation exists,
+    \               \n//If no ontology term expressing the desired relation exists,
     then\n{\n  \"@type\": [\"BioChemEntity\", \"Protein\"],\n  \"additionalProperty\":
     {\n    \"name\": \"my new property\",\n    \"value\": {\n      \"@type\": \"PropertyValue\",\n
     \     \"value\": \"the object in this relation, more properties can be used as
@@ -118,13 +118,13 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: Any suitable ontology
-  example: "A protein can contain a variant:\n{\n  \"@type\": [\"BioChemEntity\",
+  example: "//A protein can contain a variant:\n{\n  \"@type\": [\"BioChemEntity\",
     \"Protein\"],\n  \"contains\": {\"@id\": \"http://purl.uniprot.org/annotation/VAR_022315\"}\n}\n
-    \               \nMore information about the variant can also be included\n{\n
+    \               \n//More information about the variant can also be included\n{\n
     \ \"@type\": [\"BioChemEntity\", \"Protein\"],\n  \"contains\": {\n      \"@type\":
     \"BioChemEntity\",\n      \"aditionalType\": \"http://semanticscience.org/resource/SIO_010471\",\n
     \     \"identifier\": \"VAR_022315\",\n      \"location\": [\n        {\n          \"@type\":
-    \"PropertyValue\",\n          \"value\": 355\n        }\n    }\n}\n\nA variant
+    \"PropertyValue\",\n          \"value\": 355\n        }\n    }\n}\n\n//A variant
     can include an evidence; in this case we model the variant as a ProteinAnnotation\n{\n
     \ \"@type\": [\"BioChemEntity\", \"Protein\"],\n  \"@id\": \"http://purl.uniprot.org/uniprot/P05519\"\n
     \ \"contains\": {\n    \"@type\": [\"BioChemEntity\", \"ProteinAnnotation\"],\n
@@ -169,7 +169,7 @@ mapping:
   cardinality: MANY
   controlled_vocab: ""
   example: |-
-    A protein can be represented in different ways, for intance using its primary, secondary or tertiaty representations. It can also be graphically and interactevely (so image is not appropriate) represented as shown here:
+    //A protein can be represented in different ways, for intance using its primary, secondary or tertiaty representations. It can also be graphically and interactevely (so image is not appropriate) represented as shown here:
     {
       "@type": ["BioChemEntity", "Protein"],
       "hasRepresentation": "http://www.uniprot.org/uniprot/P05067#showFeaturesViewer"
@@ -260,10 +260,10 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: "Preferred way from DataRecord\n{\n\n  \"@type\": \"DataRecord\",\n  \"@id\":
+  example: "//Preferred way from DataRecord\n{\n\n  \"@type\": \"DataRecord\",\n  \"@id\":
     \"http://purl.uniprot.org/uniprot/P05519\"\n  \"mainEntity\": {\n    \"@type\":
     [\"BioChemEntity\", \"Protein\"]\n    #Any other property for this Gene entity
-    \   \n  }\n}\n\nAlso possible from Protein\n{\n  \"@type\": [\"BioChemEntity\",
+    \   \n  }\n}\n\n//Also possible from Protein\n{\n  \"@type\": [\"BioChemEntity\",
     \"Protein\"],\n  \"mainEntityOfPage\": { \"@id\": \"http://purl.uniprot.org/uniprot/P05519\"
     }\n}"
 - property: name
@@ -295,7 +295,7 @@ mapping:
   cardinality: MANY
   controlled_vocab: '[Gene Ontology (GO)](http://www.geneontology.org)'
   example: |-
-    Protein enabling a GO molecular function
+    //Protein enabling a GO molecular function
     {
       "@type": ["BioChemEntity", "Protein"],
       "enables": {
@@ -305,7 +305,7 @@ mapping:
         "name": "nucleotide binding"
         }
     }
-    With evidence
+    //With evidence
     {
       "@type": ["BioChemEntity", "Protein"],
       "enables": {
@@ -345,7 +345,7 @@ mapping:
   cardinality: MANY
   controlled_vocab: '[Gene Ontology (GO)](http://www.geneontology.org)'
   example: |-
-    Protein involved in a GO biological process
+    //Protein involved in a GO biological process
     {
       "@type": ["BioChemEntity", "Protein"],
       "involvedIn": {
@@ -355,7 +355,7 @@ mapping:
         "name": "mitotic cell cycle"
         }
     }
-    With evidence
+    //With evidence
     {
       "@type": ["BioChemEntity", "Protein"],
       "involvedIn": {
