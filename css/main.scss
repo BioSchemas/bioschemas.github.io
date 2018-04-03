@@ -3,9 +3,15 @@
 ---
 @charset "utf-8";
 
+// Bioschemas base colors
+$bioschemas-base-color: #0B794B;
+$bioschemas-medium-sea-color: #2BB673;
+$bioschemas-steel-teal-color: #55828B;
+$bioschemas-dark-sea-green-color: #87BBA2;
+$bioschemas-tea-green-color: #C9E4CA;
 /*
 
-// Our variables
+
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
@@ -43,14 +49,10 @@ $on-laptop:        800px;
     }
 }
 
-
-
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
 */
-@import 
-    "bioschemas";
+@import
+    "mixins",
+    "header",
+    "spec-tables",
+    "responsive"
+;

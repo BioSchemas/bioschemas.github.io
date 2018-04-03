@@ -45,8 +45,8 @@ function removeName(el, name) {
     el.className = newList.join(" ");
 }
 
-$('.mobile_nav').on('click', function () {
-    $('.trigger').toggleClass('trigger_mobile');
+$('.navbar-toggle').on('click', function () {
+    $('.trigger').toggleClass('trigger-mobile');
     $('#mobile_links').fadeToggle(200);
     $('#mobile_links').css("display", "inline");
 });
