@@ -6,7 +6,7 @@
              <th>Expected Type</th>
              <th>Description</th>
              <th>CD</th>
-             <th>Controlled Vocabulary</th>
+             <th class="control-vocabulary-column">Controlled Vocabulary</th>
              <th>Examples</th>
           </tr>
        </thead>
@@ -36,7 +36,7 @@
              {% else %}
              <td class="property"><a href="{{prop.type_url}}" target="_blank" class="external">{{prop.property}}</a></td>
              {% endif %}
-             <td>
+             <td class="expected-type-column">
                 {% for temp_exp_type in prop.expected_types %}
                 {% if temp_exp_type == "PhysicalEntity" or temp_exp_type == "LabProtocol" or temp_exp_type == "DataRecord" or temp_exp_type == "BioChemEntity" %}
                 <a href="http://bioschemas.org/specifications/{{temp_exp_type}}/specification/" target="_blank">{{temp_exp_type}}</a><br>
@@ -45,7 +45,7 @@
                 {% endif %}
                 {% endfor %}
              </td>
-             <td>
+             <td class="description-column">
                 {% unless prop.description == "" %}
                 <strong>Schema: </strong>{{prop.description | markdownify }}<br />
                 {% endunless %}  
@@ -54,13 +54,13 @@
                 {% endunless %}
              </td>
              <td>{{prop.cardinality}}</td>
-             <td>{{prop.controlled_vocab | markdownify }}</td>
-             <td>
-                {% unless prop.example == "" %}
+             <td class="control-vocabulary-column">{{prop.controlled_vocab | markdownify }}</td>
+             <td class="example-column">
                 <div class="example-code">
-                   <pre><code>{{prop.example}}</code></pre>
-                </div>
+                {% unless prop.example == "" %}
+                {% highlight json %}{{prop.example}}{% endhighlight %}
                 {% endunless %}
+                </div>
              </td>
           </tr>
           {% endfor %}

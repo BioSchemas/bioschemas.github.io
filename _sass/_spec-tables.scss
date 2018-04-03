@@ -12,7 +12,7 @@ $external-property-color: #454547;
     display: table;
     font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Tahoma, Arial, sans-serif;
     line-height: 160%;
-    font-size: 100%;
+    font-size: 85%;
     tbody th {
         text-align: left;
         vertical-align: top;
@@ -33,6 +33,7 @@ $external-property-color: #454547;
         border: none;
         vertical-align: middle;
         font-size: 100%;
+        word-break: break-word;
     }
     td {
         border: 0;
@@ -42,10 +43,13 @@ $external-property-color: #454547;
         vertical-align: top;
         font-size: 100%;
         display: table-cell;
-        max-width: 20em;
+        max-width: 13em;
+        word-break: keep-all;
         &.property {
             background: #C7CBCE;
             font-weight: bold;
+            max-width: 10em;
+            word-break: break-word;
         }
     }
     a {
@@ -67,6 +71,21 @@ $external-property-color: #454547;
             text-decoration: none;
             border-bottom: dotted 1px $external-property-color;
         }
+    }
+    .expected-type-column {
+        max-width: 15em;
+        word-break: break-word;
+    }    
+    .description-column {
+        max-width: 28em;
+        word-break: break-word;
+    }
+    .control-vocabulary-column {
+        max-width: 13em;
+        word-break: break-word;
+    }
+    .example-column {
+        max-width: 25em;
     }
     .example-code {
         font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;

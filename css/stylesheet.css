@@ -247,40 +247,6 @@ p img {
     border: none;
 }
 
-pre,
-code {
-    width: 100%;
-    color: #555;
-    background-color: #f2f2f2;
-    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-    font-size: 0.875em;
-    -moz-border-radius: 0.625em;
-    -webkit-border-radius: 0.625em;
-    border-radius: 0.625em;
-}
-
-pre {
-    width: 100%;
-    padding: 0.625em;
-    -webkit-box-shadow: 0 0 1.25em rgba(217, 217, 217, .7);
-    -moz-box-shadow: 0 0 1.25em rgba(217, 217, 217, .7);
-    box-shadow: 0 0 1.25em rgba(217, 217, 217, .7);
-    overflow: auto;
-}
-
-code {
-    padding: 3px;
-    margin: 0 3px;
-    -webkit-box-shadow: 0 0 20px rgba(217, 217, 217, .7);
-    -moz-box-shadow: 0 0 20px rgba(217, 217, 217, .7);
-    box-shadow: 0 0 20px rgba(217, 217, 217, .7);
-}
-
-pre code {
-    display: block;
-    box-shadow: none;
-}
-
 blockquote {
     color: #666;
     margin-bottom: 1.25em;
@@ -968,12 +934,6 @@ Small Device Styles
     }
     h6 {
         font-size: 12px;
-    }
-    code,
-    pre {
-        min-width: 320px;
-        max-width: 480px;
-        font-size: 11px;
     }
     p {
         width: 95%;
