@@ -47,10 +47,10 @@
              </td>
              <td>
                 {% unless prop.description == "" %}
-                <strong>Schema: </strong>{{prop.description}}<br />
+                <strong>Schema: </strong>{{prop.description | markdownify }}<br />
                 {% endunless %}  
                 {% unless prop.bsc_description == "" %}
-                <strong>Bioschemas: </strong>{{prop.bsc_description}}
+                <strong>Bioschemas: </strong>{{prop.bsc_description | markdownify }}
                 {% endunless %}
              </td>
              <td>{{prop.cardinality}}</td>
