@@ -593,8 +593,7 @@ Footer
 .img_bottom {
     float: right;
     clear: both;
-    width: 4%;
-    height: 4%;
+    width: 45px;
     margin-left: 0.625em;
     margin-top: -0.6em;
     background-color: #fff;
