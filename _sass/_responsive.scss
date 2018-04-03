@@ -137,5 +137,8 @@
         .property-column {
             word-break: initial;
         }
+        .description-column {
+            min-width: 28em;
+        }
     }
 }
