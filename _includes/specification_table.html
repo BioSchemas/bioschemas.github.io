@@ -54,16 +54,7 @@
                 {% endunless %}
              </td>
              <td>{{prop.cardinality}}</td>
-             <td>
-                {% for cv in prop.controlled_vocab%}
-                {% for ontology in cv[1]%}
-                <a href="http://{{ontology.url}}">{{ontology.name}}</a>
-                {%endfor%}
-                {% for term in cv[2]%}
-                {{term.name}}
-                {%endfor%}
-                {%endfor%}
-             </td>
+             <td>{{prop.controlled_vocab | markdownify }}</td>
              <td>
                 {% unless prop.example == "" %}
                 <div class="example-code">
