@@ -28,13 +28,13 @@
           {% for prop in props_list %}
           <tr>
              {% if prop.type == "bioschemas" %}
-             <td class="property"><a href="{{prop.type_url}}" target="_blank" class="bioschema">{{prop.property}}</a></td>
+             <td class="property-column"><a href="{{prop.type_url}}" target="_blank" class="bioschema">{{prop.property}}</a></td>
              {% elsif prop.type == "schemas.org" or prop.type == "" %}
-             <td class="property"><a href="http://schema.org/{{prop.property}}" target="_blank" class="schemaorg">{{prop.property}}</a></td>
+             <td class="property-column"><a href="http://schema.org/{{prop.property}}" target="_blank" class="schemaorg">{{prop.property}}</a></td>
              {% elsif prop.type == "pending" %}
-             <td class="property"><a href="http://schema.org/{{prop.property}}" target="_blank" class="pending">{{prop.property}}</a></td>
+             <td class="property-column"><a href="http://schema.org/{{prop.property}}" target="_blank" class="pending">{{prop.property}}</a></td>
              {% else %}
-             <td class="property"><a href="{{prop.type_url}}" target="_blank" class="external">{{prop.property}}</a></td>
+             <td class="property-column"><a href="{{prop.type_url}}" target="_blank" class="external">{{prop.property}}</a></td>
              {% endif %}
              <td class="expected-type-column">
                 {% for temp_exp_type in prop.expected_types %}
