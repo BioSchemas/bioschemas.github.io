@@ -5,15 +5,12 @@
     .mobile_nav {
         display: none;
     }
-    
     #mobile_links {
         display: none;
     }
-    
     #mobile_list {
         display: none;
     }
-
     .trigger {
         background-color: #0B794B;
         width: auto;
@@ -23,16 +20,14 @@
         a {
             color: #fff;
             font-size: 1.2em;
-        }        
+        }
     }
-    
     .trigger_links {
         max-width: 62.5em;
         height: auto;
         position: relative;
         margin: 0 auto;
     }
-    
     .stuck {
         position: fixed;
         z-index: 100;
@@ -41,10 +36,8 @@
         background-color: rgba(11, 121, 75, .9);
         width: 100%;
         height: 2.5em;
-    }    
+    }
 }
-
-
 
 @media screen and (max-width: 700px) {
     .biohex-logo {
@@ -67,7 +60,6 @@
         z-index: 90;
         background-color: $bioschemas-dark-sea-green-color !important;
     }
-
     #main-content-wrapper {
         padding-top: 50px;
         padding-left: 1.25em;
@@ -81,7 +73,6 @@
             width: 1.725em;
             float: right;
         }
-
         .navbar-toggle {
             position: relative;
             float: right;
@@ -91,9 +82,7 @@
             margin-right: 9px;
             width: 40px;
             height: 40px;
-
             border-radius: 4px;
-
             .icon-bar {
                 display: block;
                 position: relative;
@@ -103,7 +92,6 @@
                 border-radius: 1px;
                 margin-bottom: 4px;
             }
-
             .icon-bar:nth-child(2),
             .icon-bar:nth-child(3),
             .icon-bar:nth-child(4) {
@@ -117,10 +105,9 @@
             }
             .icon-bar:nth-child(4) {
                 bottom: 0px;
-            }                   
-        }        
+            }
+        }
     }
-
     .trigger {
         z-index: 500;
         top: 0;
@@ -132,15 +119,26 @@
         background-color: $bioschemas-dark-sea-green-color;
         a {
             color: #fff;
-            font-size: 1.2em; 
+            font-size: 1.2em;
         }
     }
-
     .trigger-mobile {
         height: auto;
     }
     .trigger_links {
         display: none;
-    }    
-    
+    }
+    .spec-prof-table {
+        th,
+        td,
+        .expected-type-column,
+        .description-column,
+        .control-vocabulary-column,
+        .property-column {
+            word-break: initial;
+        }
+        .description-column {
+            min-width: 28em;
+        }
+    }
 }

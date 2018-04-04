@@ -6,7 +6,7 @@
              <th>Expected Type</th>
              <th>Description</th>
              <th>CD</th>
-             <th>Controlled Vocabulary</th>
+             <th class="control-vocabulary-column">Controlled Vocabulary</th>
              <th>Examples</th>
           </tr>
        </thead>
@@ -21,31 +21,31 @@
           {%if props_list.size > 0%}
           <tr class="cardinality">
              <td colspan="6">
-                Marginality: <b class="{{current_mg}}">{{current_mg}}.</b>
+                Marginality: <b>{{current_mg}}.</b>
              </td>
           </tr>
           {%endif%}
           {% for prop in props_list %}
           <tr>
              {% if prop.type == "bioschemas" %}
-             <td class="property"><a href="#" class="bioschema">{{prop.property}}</a></td>
+             <td class="property-column"><a href="{{prop.type_url}}" target="_blank" class="bioschema">{{prop.property}}</a></td>
              {% elsif prop.type == "schemas.org" or prop.type == "" %}
-             <td class="property"><a href="http://schema.org/{{prop.property}}" class="schemaorg">{{prop.property}}</a></td>
+             <td class="property-column"><a href="http://schema.org/{{prop.property}}" target="_blank" class="schemaorg">{{prop.property}}</a></td>
              {% elsif prop.type == "pending" %}
-             <td class="property"><a href="http://schema.org/{{prop.property}}" class="pending">{{prop.property}}</a></td>
+             <td class="property-column"><a href="http://schema.org/{{prop.property}}" target="_blank" class="pending">{{prop.property}}</a></td>
              {% else %}
-             <td class="property"><a href="{{prop.type_url}}" class="external">{{prop.property}}</a></td>
+             <td class="property-column"><a href="{{prop.type_url}}" target="_blank" class="external">{{prop.property}}</a></td>
              {% endif %}
-             <td>
+             <td class="expected-type-column">
                 {% for temp_exp_type in prop.expected_types %}
-                {% if temp_exp_type == "PhysicalEntity" or temp_exp_type == "LabProtocol" or temp_exp_type == "DataRecord" or temp_exp_type == "BioChemEntity" %}
-                <a href="http://bioschemas.org/specifications/{{temp_exp_type}}/specification/">{{temp_exp_type}}</a><br>
+                {% if temp_exp_type == "LabProtocol" or temp_exp_type == "DataRecord" or temp_exp_type == "BioChemEntity" %}
+                <a href="http://bioschemas.org/types/{{temp_exp_type}}/specification/" target="_blank">{{temp_exp_type}}</a><br>
                 {% else %}
-                <a href="http://schema.org/{{temp_exp_type}}">{{temp_exp_type}}</a><br>
+                <a href="http://schema.org/{{temp_exp_type}}" target="_blank">{{temp_exp_type}}</a><br>
                 {% endif %}
                 {% endfor %}
              </td>
-             <td>
+             <td class="description-column">
                 {% unless prop.description == "" %}
                 <strong>Schema: </strong>{{prop.description | markdownify }}<br />
                 {% endunless %}  
@@ -54,13 +54,13 @@
                 {% endunless %}
              </td>
              <td>{{prop.cardinality}}</td>
-             <td>{{prop.controlled_vocab | markdownify }}</td>
-             <td>
-                {% unless prop.example == "" %}
+             <td class="control-vocabulary-column">{{prop.controlled_vocab | markdownify }}</td>
+             <td class="example-column">
                 <div class="example-code">
-                   <pre><code>{{prop.example}}</code></pre>
-                </div>
+                {% unless prop.example == "" %}
+                {% highlight javascript %}{{prop.example}}{% endhighlight %}
                 {% endunless %}
+                </div>
              </td>
           </tr>
           {% endfor %}

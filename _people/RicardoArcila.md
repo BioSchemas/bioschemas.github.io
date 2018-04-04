@@ -8,5 +8,5 @@ affiliation: Elixir
 homepage:
 github_username: ricardoaat
 orcid:
-groups: [genes]
+groups: [genes, proteins]
 ---
