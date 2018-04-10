@@ -1,0 +1,102 @@
+---
+layout: default
+title: Live Deploys
+description: |-
+    Below we list the services/sites that use [Bioschema's](http://bioschemas.org) markup to describe what they are offering. We provide a direct link to the site and also a link to Google's [Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool) visualisation of the site's markup.
+
+    Please remember that Google sets minimum requirements for [schema.org](http://schema.org) markup, which may conflict with those of [Bioschema's](http://bioschemas.org). As such, Google's [Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool) may provide warnings or errors when the markup is perfectly compliant with both [schema.org](http://schema.org) and [Bioschema's](http://bioschemas.org).
+
+    To read the [Bioschema's](http://bioschemas.org) profiles please visit [http://bioschemas.org/specifications/](http://bioschemas.org/specifications/)
+
+---
+<div class="page-content">
+   <div class="wrapper">
+      <div id="main-content-wrapper" class="outer">
+         <section id="main_content" class="inner">
+            <div class="live-deploys">
+                <h1>Live deploys</h1>
+                <p>{{page.description | markdownify}}</p><br>
+                {% assign liveDeploys = site.liveDeploys | where:"name", 'Live Deploys' | first %}
+                {% assign candidates = site.liveDeploys | where:"name", 'Candidates' | first %}
+
+                <input id="tab1" type="radio" name="tabs" checked>
+                <label for="tab1">Live Deploys</label>
+                <input id="tab2" type="radio" name="tabs">
+                <label for="tab2">Candidates</label>
+                <section id="live-deploy-tab" class="tabs">
+                    <h3>{{liveDeploys.description}}</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>BSc Profile</th>                                
+                                <th>Profile Version</th>
+                                <th>Comments</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% assign live_sorted_list = liveDeploys.list | sort: 'bsc_profile' %}
+                            {% for live in live_sorted_list %}
+                            <tr>
+                                <td class="deploy-name-column">
+                                    <a href="{{live.URL}}" target="_blank">{{live.name}}</a>
+                                    <div class="google-sdtt-badge">
+                                        <span class="tooltiptext">Visualise on GTest tool</span>
+                                        <a href="https://search.google.com/structured-data/testing-tool#url={{live.URL}}" target="_blank"><i class="fas fa-bookmark fa-lg"></i></a>
+                                    </div>
+                                </td>
+                                <td>
+                                    {% if live.bsc_profile == "LabProtocol" or live.bsc_profile == "DataRecord" or live.bsc_profile == "BioChemEntity" %}
+                                    <a href="http://bioschemas.org/types/{{live.bsc_profile}}/specification/" target="_blank">{{live.bsc_profile}}</a><br>
+                                    {% else %}
+                                    <a href="http://bioschemas.org/specifications/{{live.bsc_profile}}/specification/" target="_blank">{{live.bsc_profile}}</a><br>
+                                    {% endif %}
+                                </td>                                
+                                <td class="profile-version">
+                                    {{live.bsc_ver}}
+                                </td>
+                                <td>
+                                    {{live.comments}}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </section>
+                <section id="candidate-tab" class="tabs">
+                    <h3>{{candidates.description}}</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Schema.org</th>
+                                <th>Comments</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% assign candidates_sorted_list = candidates.list | sort: 'schema_org' %}
+                            {% for candidate in candidates_sorted_list %}
+                            <tr>
+                                <td class="deploy-name-column">
+                                    <a href="{{live.URL}}" target="_blank">{{candidate.name}}</a>
+                                    <div class="google-sdtt-badge">
+                                        <span class="tooltiptext">Visualise on GTest tool</span>
+                                        <a href="https://search.google.com/structured-data/testing-tool#url={{live.URL}}" target="_blank"><i class="fas fa-bookmark fa-lg"></i></a>
+                                    </div>
+                                </td>
+                                <td>
+                                    {{candidate.schema_org}}
+                                </td>
+                                <td>
+                                    {{candidate.comments}}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+         </section>
+      </div>
+   </div>
+</div>
