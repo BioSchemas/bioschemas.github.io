@@ -55,12 +55,38 @@
              </td>
              <td>{{prop.cardinality}}</td>
              <td class="control-vocabulary-column">{{prop.controlled_vocab | markdownify }}</td>
-             <td class="example-column">
+             <!-- <td class="example-column">
                 <div class="example-code">
                 {% unless prop.example == "" %}
                 {% highlight javascript %}{{prop.example}}{% endhighlight %}
                 {% endunless %}
                 </div>
+             </td> -->
+             <td>
+                {% unless prop.example == "" %}
+                <button type="button" class="example-badge" data-toggle="modal" data-target="#myModal{{prop.property}}"><i class="fas fa-code"></i></button>
+                <!-- Modal -->
+                <div id="myModal{{prop.property}}" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="modal-title">Property {{prop.property}} example</span>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="example-code">
+                            {% highlight javascript %}{{prop.example}}{% endhighlight %}
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                {% endunless %}              
              </td>
           </tr>
           {% endfor %}

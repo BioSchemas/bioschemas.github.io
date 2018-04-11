@@ -114,6 +114,17 @@ $external-property-color: #454547;
             }
         }
     }
+
+    .example-badge {
+        height: 25px;
+        width: 25px;
+        text-align: center;
+        text-decoration: none;
+        background-color: #fff;
+        border-radius: 50%;
+        display: inline-block;
+
+    }
 }
 
 .spec-table-wrapper {
