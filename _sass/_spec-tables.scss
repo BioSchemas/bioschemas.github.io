@@ -35,6 +35,7 @@ $external-property-color: #454547;
         font-size: 100%;
     }
     td {
+        position: relative;
         border: 0;
         padding: 0.625em;
         min-height: 1.25em;
@@ -42,7 +43,7 @@ $external-property-color: #454547;
         vertical-align: top;
         font-size: 100%;
         display: table-cell;
-        max-width: 15em;
+        max-width: 40em;
         word-break: keep-all;
     }
     a {
@@ -74,13 +75,13 @@ $external-property-color: #454547;
         word-break: break-all;
     }    
     .description-column {
-        min-width:40em;
+        word-wrap: break-word;
     }
     .control-vocabulary-column {
         max-width: 13em;
     }
     .example-column {
-        min-width: 45em;
+        position: relative;
     }
     .example-code {
         font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
@@ -94,8 +95,6 @@ $external-property-color: #454547;
             color: #242729;
             font-size: 13px;
             font-family: inherit;
-            max-height: 600px;
-            overflow: auto;
             word-break: keep-all;
             white-space: pre;
             /* Since CSS 2.1 */
@@ -116,17 +115,71 @@ $external-property-color: #454547;
     }
 
     .example-badge {
-        height: 25px;
-        width: 25px;
-        text-align: center;
-        text-decoration: none;
-        background-color: #fff;
+        position: absolute;
+        top: 0;
+        right: 15px;
         border-radius: 50%;
-        display: inline-block;
+        box-shadow: 2px 2px 7px 0px;
 
-    }
+        a {
+            color: $bioschemas-steel-teal-color;
+            border-bottom: initial;
+            color: #fff;
+        }
+        .tooltiptext {
+            visibility: hidden;
+            background-color: black;
+            color: #fff;
+            opacity: 0.8;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            width: 140px;
+            bottom: 115%;
+            left: 50%;
+            margin-left: -70px;
+
+            position: absolute;
+            z-index: 1;
+        }
+        &:hover .tooltiptext {
+            visibility: visible;
+        }
+        .tooltiptext::after {
+            content: " ";
+            position: absolute;
+            top: 100%;
+            /* At the bottom of the tooltip */
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+
+        button {
+            height: 25px;
+            width: 25px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50%;
+            border-style: none;
+            cursor: pointer;
+            padding-left: 1px;
+
+            color: #ffffff;
+            background-color: #0B794B;
+            
+            &:hover,
+            &:focus,
+            &:active {
+                color: $bioschemas-base-color;
+                background-color: $bioschemas-tea-green-color;     
+            }
+        }
+    } 
 }
 
 .spec-table-wrapper {
-    overflow-x: auto;
+    overflow-x: none;
 }

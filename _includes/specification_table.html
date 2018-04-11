@@ -7,7 +7,6 @@
              <th>Description</th>
              <th>CD</th>
              <th class="control-vocabulary-column">Controlled Vocabulary</th>
-             <th>Examples</th>
           </tr>
        </thead>
        <tbody>
@@ -36,7 +35,7 @@
              {% else %}
              <td class="property-column"><a href="{{prop.type_url}}" target="_blank" class="external">{{prop.property}}</a></td>
              {% endif %}
-             <td class="expected-type-column">
+             <td>
                 {% for temp_exp_type in prop.expected_types %}
                 {% if temp_exp_type == "LabProtocol" or temp_exp_type == "DataRecord" or temp_exp_type == "BioChemEntity" %}
                 <a href="http://bioschemas.org/types/{{temp_exp_type}}/specification/" target="_blank">{{temp_exp_type}}</a><br>
@@ -52,19 +51,12 @@
                 {% unless prop.bsc_description == "" %}
                 <strong>Bioschemas: </strong>{{prop.bsc_description | markdownify }}
                 {% endunless %}
-             </td>
-             <td>{{prop.cardinality}}</td>
-             <td class="control-vocabulary-column">{{prop.controlled_vocab | markdownify }}</td>
-             <!-- <td class="example-column">
-                <div class="example-code">
+                <!-- Example modal starts here -->
                 {% unless prop.example == "" %}
-                {% highlight javascript %}{{prop.example}}{% endhighlight %}
-                {% endunless %}
+                <div class="example-badge">
+                    <span class="tooltiptext">View <strong>&#8810{{prop.property}}&#8811</strong> example</span>
+                    <button type="button" data-toggle="modal" data-target="#myModal{{prop.property}}">{ }</button>
                 </div>
-             </td> -->
-             <td>
-                {% unless prop.example == "" %}
-                <button type="button" class="example-badge" data-toggle="modal" data-target="#myModal{{prop.property}}"><i class="fas fa-code"></i></button>
                 <!-- Modal -->
                 <div id="myModal{{prop.property}}" class="modal fade" role="dialog">
                     <div class="modal-dialog">
@@ -72,7 +64,7 @@
                         <!-- Modal content-->
                         <div class="modal-content">
                         <div class="modal-header">
-                            <span class="modal-title">Property {{prop.property}} example</span>
+                            <span class="modal-title">Property <strong>&#8810{{prop.property}}&#8811</strong> example</span>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body">
@@ -86,8 +78,10 @@
                         </div>
                     </div>
                 </div>
-                {% endunless %}              
+                {% endunless %}                     
              </td>
+             <td>{{prop.cardinality}}</td>
+             <td class="control-vocabulary-column">{{prop.controlled_vocab | markdownify }}</td>
           </tr>
           {% endfor %}
           {% endfor %}
