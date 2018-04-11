@@ -4,7 +4,7 @@ id: candidates
 active: true
 name: Candidates
 type: generic
-description: Life science site that could include bioschemas
+description: Services/sites in the process of implementing Bioschemas's markup
 list:
 -
     name: Pscan
@@ -47,7 +47,7 @@ list:
     schema_org:
     bsc_profile:
     bsc_ver: 
-    comments: The Home page could implement DataCatalog
+    comments: Home page could implement DataCatalog
 -
     name: EBISC
     URL: https://cells.ebisc.org

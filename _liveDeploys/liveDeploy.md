@@ -4,7 +4,7 @@ id: deploys
 active: true
 name: Live Deploys
 type: liveDeploy
-description: Life science websites implementing bioschemas.
+description: Services/sites implementing Bioschemas's markup
 list:
 -
     name: Identifiers
@@ -78,7 +78,7 @@ list:
     comments: Can implement DataRecord type.
 -
     name: Biosamples
-    URL: https://www.ebi.ac.uk/biosamples/samples
+    URL: https://www.ebi.ac.uk/biosamples/samples/SAMEA491372
     schema_org:
     bsc_profile: Sample
     bsc_ver: 0.1
