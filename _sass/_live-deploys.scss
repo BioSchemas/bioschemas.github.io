@@ -1,10 +1,14 @@
 .live-deploys {
+
     #tab1:checked~#live-deploy-tab,
     #tab2:checked~#candidate-tab {
         display: block;
     }
     td>a {
         margin-right: 3px;
+    }
+    #live-deploy-tab, #candidate-tab {
+        text-align: center;
     }
     .google-sdtt-badge {
         position: relative;
@@ -53,10 +57,11 @@
         margin: 1em 0 2em 0;
         border: 1px solid #98A0A6;
         border-spacing: 3px;
-        display: table;
+        display: inline-block;
         font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Tahoma, Arial, sans-serif;
         line-height: 160%;
-        font-size: 85%;
+        font-size: 100%;
+
         tbody th {
             text-align: left;
             vertical-align: top;
