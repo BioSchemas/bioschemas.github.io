@@ -1,0 +1,161 @@
+.live-deploys {
+
+    #tab1:checked~#live-deploy-tab,
+    #tab2:checked~#candidate-tab {
+        display: block;
+    }
+    td>a {
+        margin-right: 3px;
+    }
+    #live-deploy-tab, #candidate-tab {
+        text-align: center;
+    }
+    .google-sdtt-badge {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        a {
+            color: $bioschemas-steel-teal-color;
+            border-bottom: initial;
+            color: #fff;
+        }
+        .tooltiptext {
+            visibility: hidden;
+            background-color: black;
+            color: #fff;
+            opacity: 0.8;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            width: 120px;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            /* Use half of the width (120/2 = 60), to center the tooltip */
+            position: absolute;
+            z-index: 1;
+        }
+        &:hover .tooltiptext {
+            visibility: visible;
+        }
+        .tooltiptext::after {
+            content: " ";
+            position: absolute;
+            top: 100%;
+            /* At the bottom of the tooltip */
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+    }
+    table {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        margin: 1em 0 2em 0;
+        border: 1px solid #98A0A6;
+        border-spacing: 3px;
+        display: inline-block;
+        font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Tahoma, Arial, sans-serif;
+        line-height: 160%;
+        font-size: 100%;
+
+        tbody th {
+            text-align: left;
+            vertical-align: top;
+        }
+        tr {
+            display: table-row;
+            vertical-align: inherit;
+            border-color: inherit;
+            font-size: 100%;
+        }
+        th {
+            padding-left: 5px;
+            background: #C7CBCE;
+            color: #3A4956;
+            font-weight: bold;
+            display: table-cell;
+            text-align: center;
+            border: none;
+            vertical-align: middle;
+            font-size: 100%;
+        }
+        td {
+            border: 0;
+            padding: 0.625em;
+            min-height: 1.25em;
+            max-height: 2.5em;
+            vertical-align: top;
+            font-size: 100%;
+            display: table-cell;
+            word-break: keep-all;
+            position: relative;
+        }
+        a {
+            color: $bioschemas-base-color;
+            text-decoration: none;
+            border-bottom: dotted 1px $bioschemas-base-color;
+        }
+        .profile-version {
+            text-align: center;
+            font-weight: bold;
+        }
+        .deploy-name-column {
+            padding-right: 0.9em;
+            padding-top: 0.625em;
+            padding-left: 0.625em;
+            padding-bottom: 0.625em;
+        }
+        .structured-data-column {
+            word-break: break-word;
+            max-width: 10em;
+        }
+    }
+    blockquote {
+        font-size: 14px;
+    }
+    .btn-bioschema {
+        color: #ffffff;
+        background-color: #0B794B;
+        border-color: #55828B;
+    }
+    .btn-bioschema:hover,
+    .btn-bioschema:focus,
+    .btn-bioschema:active,
+    .btn-bioschema.active,
+    .open .dropdown-toggle.btn-bioschema {
+        color: #ffffff;
+        background-color: #2BB673;
+        border-color: #55828B;
+    }
+    .btn-bioschema:active,
+    .btn-bioschema.active,
+    .open .dropdown-toggle.btn-bioschema {
+        background-image: none;
+    }
+    .btn-bioschema.disabled,
+    .btn-bioschema[disabled],
+    fieldset[disabled] .btn-bioschema,
+    .btn-bioschema.disabled:hover,
+    .btn-bioschema[disabled]:hover,
+    fieldset[disabled] .btn-bioschema:hover,
+    .btn-bioschema.disabled:focus,
+    .btn-bioschema[disabled]:focus,
+    fieldset[disabled] .btn-bioschema:focus,
+    .btn-bioschema.disabled:active,
+    .btn-bioschema[disabled]:active,
+    fieldset[disabled] .btn-bioschema:active,
+    .btn-bioschema.disabled.active,
+    .btn-bioschema[disabled].active,
+    fieldset[disabled] .btn-bioschema.active {
+        background-color: #0B794B;
+        border-color: #55828B;
+    }
+    .btn-bioschema .badge {
+        color: #0B794B;
+        background-color: #ffffff;
+    }
+}

@@ -20,7 +20,7 @@ github_username:  BioSchemas
 markdown: kramdown
 
 # Gems
-gems:
+plugins:
  - jekyll-redirect-from
 
 # Collections
@@ -49,3 +49,6 @@ collections:
   useCases:
     output: true
     permalink: /:collection/:path/     
+  liveDeploys:
+    output: true
+    permalink: /:collection/:path/
