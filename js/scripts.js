@@ -1,5 +1,7 @@
 
 
+new ClipboardJS('.btn-copy');
+
 $(window).scroll(function() {
     var topOfDiv = $('#header_wrap').offset().top;
     var height = $('#header_wrap').outerHeight();

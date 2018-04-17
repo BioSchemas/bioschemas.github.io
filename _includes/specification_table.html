@@ -1,90 +1,123 @@
 <div class="spec-table-wrapper">
-    <table class="spec-prof-table">
-       <thead>
-          <tr>
-             <th>Property</th>
-             <th>Expected Type</th>
-             <th>Description</th>
-             <th>CD</th>
-             <th class="control-vocabulary-column">Controlled Vocabulary</th>
-          </tr>
-       </thead>
-       <tbody>
-          {% assign  marginality_list = "Minimum,Recommended,Optional" | split: ',' %}
-          {% for current_mg in marginality_list %}
-          {% if page.mapping != null %}
-          {% assign props_list = page.mapping | where: 'marginality', current_mg | sort: 'name' %}
-          {% else %}
-          {% assign props_list = page.mapping | where: 'marginality', current_mg  %}
-          {% endif %}
-          {%if props_list.size > 0%}
-          <tr class="cardinality">
-             <td colspan="6">
-                Marginality: <b>{{current_mg}}.</b>
-             </td>
-          </tr>
-          {%endif%}
-          {% for prop in props_list %}
-          <tr>
-             {% if prop.type == "bioschemas" %}
-             <td class="property-column"><a href="{{prop.type_url}}" target="_blank" class="bioschema">{{prop.property}}</a></td>
-             {% elsif prop.type == "schemas.org" or prop.type == "" %}
-             <td class="property-column"><a href="http://schema.org/{{prop.property}}" target="_blank" class="schemaorg">{{prop.property}}</a></td>
-             {% elsif prop.type == "pending" %}
-             <td class="property-column"><a href="http://schema.org/{{prop.property}}" target="_blank" class="pending">{{prop.property}}</a></td>
-             {% else %}
-             <td class="property-column"><a href="{{prop.type_url}}" target="_blank" class="external">{{prop.property}}</a></td>
-             {% endif %}
-             <td>
-                {% for temp_exp_type in prop.expected_types %}
-                {% if temp_exp_type == "LabProtocol" or temp_exp_type == "DataRecord" or temp_exp_type == "BioChemEntity" %}
-                <a href="http://bioschemas.org/types/{{temp_exp_type}}/specification/" target="_blank">{{temp_exp_type}}</a><br>
-                {% else %}
-                <a href="http://schema.org/{{temp_exp_type}}" target="_blank">{{temp_exp_type}}</a><br>
-                {% endif %}
-                {% endfor %}
-             </td>
-             <td class="description-column">
-                {% unless prop.description == "" %}
-                <strong>Schema: </strong>{{prop.description | markdownify }}<br />
-                {% endunless %}  
-                {% unless prop.bsc_description == "" %}
-                <strong>Bioschemas: </strong>{{prop.bsc_description | markdownify }}
-                {% endunless %}
-                <!-- Example modal starts here -->
-                {% unless prop.example == "" %}
-                <div class="example-badge">
-                    <span class="tooltiptext">View <strong>&#8810{{prop.property}}&#8811</strong> example</span>
-                    <button type="button" data-toggle="modal" data-target="#myModal{{prop.property}}">{ }</button>
+    <div class="example-button">
+        <span class="tooltiptext">View all examples</span>
+        <button type="button" class="btn btn-bioschema" data-toggle="modal" data-target="#all-examples-modal">Examples  <i class="fas fa-file-code"></i></button>
+    </div>
+    <div id="all-examples-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-large">
+            <!-- Modal content-->
+            <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">Examples for all properties</span>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="bundle-property-examples" class="example-code">
+{% highlight javascript %}{% for prop in page.mapping %}
+{% unless prop.example == "" %}
+//Property: {{prop.property}}
+{{prop.example}}
+{% endunless %}
+{% endfor %}{% endhighlight %}
+                <button type="button" class="btn btn-primary btn-copy" data-clipboard-target="#bundle-property-examples"><i class="fas fa-copy"></i></button>
                 </div>
-                <!-- Modal -->
-                <div id="myModal{{prop.property}}" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+    </div>            
+    <table class="spec-prof-table">
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Expected Type</th>
+                <th>Description</th>
+                <th>CD</th>
+                <th class="control-vocabulary-column">Controlled Vocabulary</th>
+                <th class="example-column">Example</th>
+            </tr>
+        </thead>
+        <tbody>    
+            {% assign  marginality_list = "Minimum,Recommended,Optional" | split: ',' %}
+            {% for current_mg in marginality_list %}
+            {% if page.mapping != null %}
+            {% assign props_list = page.mapping | where: 'marginality', current_mg | sort: 'name' %}
+            {% else %}
+            {% assign props_list = page.mapping | where: 'marginality', current_mg  %}
+            {% endif %}
+            {%if props_list.size > 0%}
+            <tr class="cardinality">
+                <td colspan="6">
+                    Marginality: <b>{{current_mg}}.</b>
+                </td>
+            </tr>
+            {%endif%}
+            {% for prop in props_list %}
+            <tr>
+                {% if prop.type == "bioschemas" %}
+                <td class="property-column"><a href="{{prop.type_url}}" target="_blank" class="bioschema">{{prop.property}}</a></td>
+                {% elsif prop.type == "schemas.org" or prop.type == "" %}
+                <td class="property-column"><a href="http://schema.org/{{prop.property}}" target="_blank" class="schemaorg">{{prop.property}}</a></td>
+                {% elsif prop.type == "pending" %}
+                <td class="property-column"><a href="http://schema.org/{{prop.property}}" target="_blank" class="pending">{{prop.property}}</a></td>
+                {% else %}
+                <td class="property-column"><a href="{{prop.type_url}}" target="_blank" class="external">{{prop.property}}</a></td>
+                {% endif %}
+                <td>
+                    {% for temp_exp_type in prop.expected_types %}
+                    {% if temp_exp_type == "LabProtocol" or temp_exp_type == "DataRecord" or temp_exp_type == "BioChemEntity" %}
+                    <a href="http://bioschemas.org/types/{{temp_exp_type}}/specification/" target="_blank">{{temp_exp_type}}</a><br>
+                    {% else %}
+                    <a href="http://schema.org/{{temp_exp_type}}" target="_blank">{{temp_exp_type}}</a><br>
+                    {% endif %}
+                    {% endfor %}
+                </td>
+                <td class="description-column">
+                    {% unless prop.description == "" %}
+                    <strong>Schema: </strong>{{prop.description | markdownify }}<br />
+                    {% endunless %}  
+                    {% unless prop.bsc_description == "" %}
+                    <strong>Bioschemas: </strong>{{prop.bsc_description | markdownify }}
+                    {% endunless %}         
+                </td>
+                <td>{{prop.cardinality}}</td>
+                <td class="control-vocabulary-column">{{prop.controlled_vocab | markdownify }}</td>
+                <td class="example-column">
+                    <!-- Example modal starts here -->
+                    {% unless prop.example == "" %}
+                    <div class="example-button">
+                        <span class="tooltiptext">View <strong>&#8810{{prop.property}}&#8811</strong> example</span>
+                        <button type="button" class="btn btn-bioschema" data-toggle="modal" data-target="#myModal{{prop.property}}"><i class="fas fa-file-code"></i></button>
+                    </div>
+                    <!-- Modal -->
+                    <div id="myModal{{prop.property}}" class="modal fade" role="dialog">
+                        <div class="modal-dialog modal-large">
 
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                        <div class="modal-header">
-                            <span class="modal-title">Property <strong>&#8810{{prop.property}}&#8811</strong> example</span>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="example-code">
-                            {% highlight javascript %}{{prop.example}}{% endhighlight %}
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="modal-title">Property <strong>&#8810{{prop.property}}&#8811</strong> example</span>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="{{current_mg}}-example-num-{{forloop.index}}" class="example-code">
+                                {% highlight javascript %}{{prop.example}}{% endhighlight %}
+                                <button type="button" class="btn btn-primary btn-copy" data-clipboard-target="#{{current_mg}}-example-num-{{forloop.index}}"><i class="fas fa-copy"></i></button>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                        </div>
                     </div>
-                </div>
-                {% endunless %}                     
-             </td>
-             <td>{{prop.cardinality}}</td>
-             <td class="control-vocabulary-column">{{prop.controlled_vocab | markdownify }}</td>
-          </tr>
-          {% endfor %}
-          {% endfor %}
-       </tbody>
+                    {% endunless %}                 
+                </td>
+            </tr>
+            {% endfor %}
+            {% endfor %}
+        </tbody>
     </table>
  </div>

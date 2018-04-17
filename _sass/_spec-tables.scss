@@ -43,7 +43,7 @@ $external-property-color: #454547;
         vertical-align: top;
         font-size: 100%;
         display: table-cell;
-        max-width: 40em;
+        max-width: 30em;
         word-break: keep-all;
     }
     a {
@@ -78,12 +78,20 @@ $external-property-color: #454547;
         word-wrap: break-word;
     }
     .control-vocabulary-column {
-        max-width: 13em;
+        max-width: 10em;
     }
     .example-column {
         position: relative;
+        min-width: 4em;
+        text-align: center;
     }
+}
+
+.spec-table-wrapper {
+    overflow-x: none;
+
     .example-code {
+        text-align: initial;
         font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
         width:100%;
         pre {
@@ -114,13 +122,23 @@ $external-property-color: #454547;
         }
     }
 
-    .example-badge {
-        position: absolute;
-        top: 0;
-        right: 15px;
-        border-radius: 50%;
-        box-shadow: 2px 2px 7px 0px;
+    .modal-large {
+        margin: 2.5rem;
+        max-width: initial;        
+    }
 
+    .btn-copy {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .example-button {
+        position: relative;
+        display: inline-block;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+        border-radius: 6px;
+        border: none;        
         a {
             color: $bioschemas-steel-teal-color;
             border-bottom: initial;
@@ -157,29 +175,25 @@ $external-property-color: #454547;
             border-color: black transparent transparent transparent;
         }
 
-        button {
-            height: 25px;
-            width: 25px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 50%;
-            border-style: none;
-            cursor: pointer;
-            padding-left: 1px;
+        // button {
+        //     height: 25px;
+        //     width: 25px;
+        //     text-align: center;
+        //     text-decoration: none;
+        //     border-radius: 50%;
+        //     border-style: none;
+        //     cursor: pointer;
+        //     padding-left: 1px;
 
-            color: #ffffff;
-            background-color: #0B794B;
+        //     color: #ffffff;
+        //     background-color: #0B794B;
             
-            &:hover,
-            &:focus,
-            &:active {
-                color: $bioschemas-base-color;
-                background-color: $bioschemas-tea-green-color;     
-            }
-        }
-    } 
-}
-
-.spec-table-wrapper {
-    overflow-x: none;
+        //     &:hover,
+        //     &:focus,
+        //     &:active {
+        //         color: $bioschemas-base-color;
+        //         background-color: $bioschemas-tea-green-color;     
+        //     }
+        // }
+    }    
 }
