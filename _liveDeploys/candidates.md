@@ -5,35 +5,7 @@ active: true
 name: Candidates
 type: generic
 description: Services/sites in the process of implementing Bioschemas's markup
-list:
--
-    name: Pscan
-    URL: http://www.beaconlab.it/pscan
-    schema_org: SoftwareApplication
-    bsc_profile:
-    bsc_ver: 
-    comments: Missing subjectOf parameter
--
-    name: PscanChIP
-    URL: http://www.beaconlab.it/pscan_chip_dev
-    schema_org: SoftwareApplication
-    bsc_profile:
-    bsc_ver: 
-    comments: Missing subjectOf parameter
--
-    name: Cscan
-    URL: http://www.beaconlab.it/cscan
-    schema_org: SoftwareApplication
-    bsc_profile:
-    bsc_ver: 
-    comments: Missing subjectOf parameter
--
-    name: BAR 3.0
-    URL: https://bar.biocomp.unibo.it/bar3/
-    schema_org: SoftwareApplication
-    bsc_profile:
-    bsc_ver: 
-    comments: Missing subjectOf parameter        
+list:  
 -
     name: ITSoneDB
     URL: http://itsonedb.cloud.ba.infn.it/

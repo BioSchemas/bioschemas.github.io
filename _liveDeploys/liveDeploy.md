@@ -83,4 +83,39 @@ list:
     bsc_profile: Sample
     bsc_ver: 0.1
     comments:
+-
+    name: DataMed
+    URL: https://datamed.org/display-item.php?repository=0006&id=59139ef65152c62a9fc18ff7
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:
+-
+    name: Pscan
+    URL: http://159.149.160.88/pscan/
+    schema_org: SoftwareApplication
+    bsc_profile: Tool
+    bsc_ver: 0.1
+    comments:
+-
+    name: PscanChIP
+    URL: http://159.149.160.88/pscan_chip_dev/
+    schema_org: SoftwareApplication
+    bsc_profile: Tool
+    bsc_ver: 0.1
+    comments:
+-
+    name: Cscan
+    URL: http://159.149.160.88/cscan/
+    schema_org: SoftwareApplication
+    bsc_profile: Tool
+    bsc_ver: 0.1
+    comments:
+-
+    name: BAR 3.0
+    URL: https://bar.biocomp.unibo.it/bar3/
+    schema_org: SoftwareApplication
+    bsc_profile: Tool
+    bsc_ver: 0.1
+    comments:
 ---
