@@ -2,7 +2,7 @@
 .btn-bioschema {
     color: #ffffff;
     background-color: #0B794B;
-    border-color: #55828B;
+    border: none;
 }
 .btn-bioschema:hover,
 .btn-bioschema:focus,
@@ -11,7 +11,6 @@
 .open .dropdown-toggle.btn-bioschema {
     color: #ffffff;
     background-color: #2BB673;
-    border-color: #55828B;
 }
 .btn-bioschema:active,
 .btn-bioschema.active,
@@ -34,7 +33,6 @@ fieldset[disabled] .btn-bioschema:active,
 .btn-bioschema[disabled].active,
 fieldset[disabled] .btn-bioschema.active {
     background-color: #0B794B;
-    border-color: #55828B;
 }
 .btn-bioschema .badge {
     color: #0B794B;
