@@ -22,7 +22,6 @@ markdown: kramdown
 # Plugins
 plugins:
  - jekyll-redirect-from
- - jekyll-scholar
 
 # Collections
 collections:
