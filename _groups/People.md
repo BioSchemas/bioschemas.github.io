@@ -2,7 +2,6 @@
 layout: group-details
 identifier: people
 name: People
-path: people.html
 collection: groups
 active: false
 type: generic

@@ -8,5 +8,5 @@ affiliation: PDBe, EMBL-EBI
 homepage: http://www.ebi.ac.uk/about/people/saqib-mir
 github_username:
 orcid: 0000-0002-3778-916X
-groups: [bioentities, data, datarepositories, proteins]
+groups: [biologicalentities, data, datarepositories, proteins]
 ---

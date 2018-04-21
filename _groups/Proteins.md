@@ -2,7 +2,6 @@
 layout: group-details
 identifier: proteins
 name: Proteins
-path: proteins.html
 collection: groups
 active: true
 type: biological

@@ -1,169 +1,263 @@
 ---
-group: data
-description: ''
-edit_url: https://github.com/BioSchemas/specifications/tree/master/Dataset/specification.html
-g_mapping_file: Dataset Mapping Simp
-gh_examples: https://github.com/BioSchemas/specifications/tree/master/Dataset/examples
-gh_folder: https://github.com/BioSchemas/specifications/tree/master/Dataset
+cross_walk_url: https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAvaADLmI_FrIk7O3BEkxY/
+dateModified: 2018-02-25
+description: 'A guide for how to describe datasets in the life-sciences using Schema.org-like annotation.'
+gh_examples: https://github.com/BioSchemas/specifications/blob/master/Dataset/examples/
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Dataset
+group: data
 hierarchy:
-- Dataset
-- CreativeWork
 - Thing
-layout: new_spec_detail
+- CreativeWork
+- Dataset
+live_deploy: https://gist.github.com/kcmcleod/92902dc2847591a0f98641b0dc8bb6fc
 name: Dataset
 parent_type: Dataset
-properties:
-- bsc_dec: It is a descriptive name of the dataset
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Minimum
-  name: name
-  parent: Thing
-  sdo_desc: The name of the item.
-- bsc_dec: It is a short summary describing a dataset.
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Minimum
-  name: description
-  parent: Thing
-  sdo_desc: A description of the item.
-- bsc_dec: It is the location of a page describing the dataset.
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - URL
-  marginality: Minimum
-  name: url
-  parent: Thing
-  sdo_desc: URL of the item.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - PropertyValue
-  - Text
-  - URL
-  marginality: Minimum
-  name: identifier
-  parent: Thing
-  sdo_desc: The identifier property represents any kind of identifier for any kind
-    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
-    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
-    many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background
-    notes</a> for more details.
-- bsc_dec: These keywords provide a summary of the dataset.
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Minimum
-  name: keywords
-  parent: CreativeWork
-  sdo_desc: Keywords or tags used to describe this content. Multiple entries in a
-    keywords list are typically delimited by commas.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - DataCatalog
-  marginality: Recommended
-  name: includedInDataCatalog
-  parent: Dataset
-  sdo_desc: A data catalog which contains this dataset.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Recommended
-  name: creator
-  parent: CreativeWork
-  sdo_desc: The creator/author of this CreativeWork. This is the same as the Author
-    property for CreativeWork.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  - PropertyValue
-  marginality: Recommended
-  name: variableMeasured
-  parent: Dataset
-  sdo_desc: What does the dataset measure? (e.g., temperature, pressure)
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Recommended
-  name: measurementTechnique
-  parent: Dataset
-  sdo_desc: A technique or technology used for measuring the corresponding variable(s)
-    (described using variablesMeasured)
-- bsc_dec: A citation for a publication that describes the dataset
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Recommended
-  name: citation
-  parent: CreativeWork
-  sdo_desc: A citation or reference to another creative work, such as another publication,
-    web page, scholarly article, etc.
-- bsc_dec: A license under which the dataset is distributed
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - CreativeWork
-  - URL
-  marginality: Recommended
-  name: license
-  parent: CreativeWork
-  sdo_desc: A license document that applies to this content, typically indicated by
-    URL.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - DataDownload
-  marginality: Recommended
-  name: distribution
-  parent: Dataset
-  sdo_desc: A downloadable form of this dataset, at a specific location, in a specific
-    format.
-spec_mapping_url: https://docs.google.com/spreadsheets/d/1adu5hWoTr1H-opMtgkFKcyjR4WjOFmvtDrU-u_v2Ygo/edit?usp=drivesdk
 spec_type: Profile
-status: revision
-subtitle: Bioschemas specification for describing Dataset in the life-science.
-use_cases_url: err_404
-version: '0.2'
+status: release
+subtitle: Bioschemas specification for describing a dataset in the life-science.
+use_cases_url: /useCases/Datasets
+version: 0.2
+
+
 ---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  <table class="bioschemas_properties bsc_type">
+                     <thead>
+                        <tr>
+                           <th>Property</th>
+                           <th>Expected Type</th>
+                           <th>Description</th>
+                           <th>CD</th>
+                           <th>Controlled Vocabulary</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+<!--- MINIMUM --->
+                        <tr class="cardinality">
+                           <td colspan="5">
+                              Marginality: <b>Minimum.</b>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/description">description</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a><br>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A description of the item.<br />
+                             <strong>Bioschemas</strong>: A short summary describing a dataset.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/identifier">identifier</a></th>
+                           <td>
+                              <a href="http://schema.org/PropertyValue">PropertyValue</a><br />
+                              <a href="http://schema.org/Text">Text</a><br />
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td><strong>Schema</strong>: The identifier property represents any kind of identifier for any kind of <a href="http://schema.org/Thing">Thing</a>,
+                             such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.
+                             See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/keywords">keywords</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a><br>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.<br />
+                             <strong>Bioschemas</strong>: These keywords provide a summary of the dataset.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/name">name</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a><br>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: The name of the item.<br />
+                             <strong>Bioschemas</strong>: It is a descriptive name of the dataset.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a class="externalProp" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></th>
+                           <td>
+                             <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                              <strong>Missing!</strong>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/url">url</a></th>
+                           <td>
+                              <a href="http://schema.org/URL">URL</a><br>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: URL of the item.<br />
+                             <strong>Bioschemas</strong>: It is the location of a page describing the dataset.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+<!--- RECOMMENDED --->
+                        <tr class="cardinality">
+                           <td colspan="5">
+                              Marginality: <b>Recommended.</b>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/citation">citation</a></th>
+                           <td>
+                              <a href="http://schema.org/CreativeWork">CreativeWork</a><br />
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.<br />
+                             <strong>Bioschemas</strong>: A citation for a publication that describes the dataset.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/creator">creator</a></th>
+                           <td>
+                             <a href="http://schema.org/Organization">Organization</a><br />
+                             <a href="http://schema.org/Person">Person</a><br />
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.<br />
+                             <strong>Bioschemas</strong>: The name of the dataset creator (person or organization).
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/distribution">distribution</a></th>
+                           <td>
+                              <a href="http://schema.org/DataDownload">DataDownload</a><br>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A downloadable form of this dataset, at a specific location, in a specific format.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/includedInDataCatalog">includedInDataCatalog</a></th>
+                           <td>
+                              <a href="http://schema.org/DataCatalog">DataCatalog</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A data catalog which contains this dataset.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/license">license</a></th>
+                           <td>
+                              <a href="http://schema.org/CreativeWork">CreativeWork</a><br>
+                              <a href="http://schema.org/URL">URL</a><br>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A license document that applies to this content, typically indicated by URL.<br />
+                             <strong>Bioschemas</strong>: A license under which the dataset is distributed.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a class="pending" href="http://pending.schema.org/measurementTechnique">measurementTechnique</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a><br />
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A technique or technology used in a Dataset (or DataDownload, DataCatalog), corresponding to the
+                             method used for measuring the corresponding variable(s) (described using <a class="pending" href="http://pending.schema.org/variableMeasured">variableMeasured</a>). This is oriented towards
+                             scientific and scholarly dataset publication but may have broader applicability; it is not intended as a full representation
+                             of measurement, but rather as a high level summary for dataset discovery.<br />
+                             For example, if variableMeasured is: molecule concentration, measurementTechnique could be: "mass spectrometry" or "nmr spectroscopy" or "colorimetry" or "immunofluorescence".<br />
+                             If the variableMeasured is "depression rating", the measurementTechnique could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory".<br />
+                             If there are several variableMeasured properties recorded for some given data object, use a PropertyValue for each variableMeasured and attach the corresponding measurementTechnique.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a class="pending" href="http://pending.schema.org/variableMeasured">variableMeasured</a></th>
+                           <td>
+                              <a href="http://schema.org/PropertyValue">PropertyValue</a><br />
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: The variableMeasured property can indicate (repeated as necessary) the variables that are measured in some dataset,
+                             either described as text or as pairs of identifier and description using PropertyValue.<br />
+                             <strong>BioSchemas</strong>: What does the dataset measure? (e.g., temperature, pressure).
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/version">version</a></th>
+                           <td>
+                              <a href="http://schema.org/Number">Number</a><br />
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: The version of the CreativeWork embodied by a specified resource.<br />
+                             <strong>Bioschemas</strong>: The version number for this dataset.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+      
+      
+      
+   </body>
+</html>

@@ -1,0 +1,38 @@
+---
+name: Organizations
+group: organizations
+collection: useCases
+active: true
+---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                 <h1>Use Cases for {{page.name}}</h1>
+                 {% assign group = site.groups | where:"identifier", page.group %}
+                 {% for g in group %}
+                 <p>The following use cases were developed by the <a href="{{g.url}}">{{ g.name }}</a> group.
+                 {% endfor %}
+
+                 <p>Corporations, small businesses, individual consultants, academic institutes, multinationals, alliances, consortia, and informal working groups all have a part to play in the life sciences world. Each organization usually publishes information about itself on the web, and in the case of alliances and consortia that will include information about which other organizations comprise their membership, but none of this is carried out in an easily discoverable or integrated manner. This makes it hard to identify who is doing what and working with whom. Though there are technological solutions for sharing organization profiles in the life sciences at the moment there is not a consistent manner to discover, exchange or compare this information.</p>
+
+               </section>
+            </div>
+        </div>
+    </div>
+    {% include footer.html %}
+
+    
+    
+    
+
+    </body>
+
+    </html>

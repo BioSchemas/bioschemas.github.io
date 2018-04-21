@@ -5,8 +5,8 @@ first-name: Olga
 last-name: Ximena Giraldo
 collection: people
 affiliation: Ontology Engineering Group, Universidad Politécnica de Madrid, Spain
-homepage: http://mayor2.dia.fi.upm.es/oeg-upm/index.php/en/phdstudents/302-ogiraldo/index.html
+homepage: http://oxgiraldo.wordpress.com/
 github_username:
-orcid:
-groups: [labprotocols]
+orcid: 0000-0003-2978-8922
+groups: [labprotocols, biologicalentities, genes]
 ---

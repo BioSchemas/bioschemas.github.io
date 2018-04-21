@@ -1,126 +1,201 @@
 ---
+cross_walk_url: https://docs.google.com/spreadsheets/d/1wLJa4LkCM8oIvBPTFS1IBcygRGBpSrAgNfRSEadVICo/edit#gid=1261485211
+dateModified: 2018-02-27
 group: beacons
 description: In this document we propose a simple way for a beacons to self-describe
   their genetic variant cardinality service for better integration with other beacons
   within the beacon-network. It builds upon the Beacon service API and uses existing
   schema.org entities and properties.
-edit_url: https://github.com/BioSchemas/specifications/tree/master/Beacon/specification.html
 g_mapping_file: Beacon Mapping Simp
-gh_examples: https://github.com/BioSchemas/specifications/tree/master/Beacon/examples
-gh_folder: https://github.com/BioSchemas/specifications/tree/master/Beacon
-gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Beacon
+gh_examples: https://github.com/BioSchemas/specifications/tree/master/Beacon/examples/
+gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Beacon
 hierarchy:
-- DataCatalog
-- CreativeWork
 - Thing
-layout: new_spec_detail
+- CreativeWork
+- DataCatalog
+live_deploy: ''
 name: Beacon
 parent_type: DataCatalog
-properties:
-- bsc_dec: dataset
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Dataset
-  marginality: Minimum
-  name: dataset
-  parent: DataCatalog
-  sdo_desc: A dataset contained in this catalog.
-- bsc_dec: provider
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Organization
-  - Person
-  marginality: Minimum
-  name: provider
-  parent: CreativeWork
-  sdo_desc: The service provider, service operator, or service performer; the goods
-    producer. Another party (a seller) may offer those services or goods on behalf
-    of the provider. A provider may also serve as the seller.
-- bsc_dec: version
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Number
-  - Text
-  marginality: Minimum
-  name: version
-  parent: CreativeWork
-  sdo_desc: The version of the CreativeWork embodied by a specified resource.
-- bsc_dec: identifier
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - PropertyValue
-  - Text
-  - URL
-  marginality: Recommended
-  name: identifier
-  parent: Thing
-  sdo_desc: The identifier property represents any kind of identifier for any kind
-    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
-    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
-    many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background
-    notes</a> for more details.
-- bsc_dec: name
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Recommended
-  name: name
-  parent: Thing
-  sdo_desc: The name of the item.
-- bsc_dec: sameAs
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - URL
-  marginality: Optional
-  name: sameAs
-  parent: Thing
-  sdo_desc: URL of a reference Web page that unambiguously indicates the item's identity.
-    E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
-- bsc_dec: url
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - URL
-  marginality: Minimum
-  name: url
-  parent: Thing
-  sdo_desc: URL of the item.
-- bsc_dec: supportedRefs
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - citation
-  marginality: Recommended
-  name: supportedReference
-  parent: Beacon
-  sdo_desc: A citation or reference to another creative work, such as another publication,
-    web page, scholarly article, etc.
-spec_mapping_url: https://docs.google.com/spreadsheets/d/1TI4R343UXBjDDv1tXJzcfQDSlGwCF3lUCjztbpfwoyU/edit?usp=drivesdk
 spec_type: Profile
 status: revision
 subtitle: 'A convention for beacon to self-describe. '
-use_cases_url: err_404
+url: Beacons
+use_cases_url: /useCases/Beacons/
 version: '0.2'
+spec_info:
+  title: Beacon
+  subtitle: 'A convention for beacon to self-describe. '
+  description: 'In this document we propose a simple way for a beacons to self-describe
+    their genetic variant cardinality service for better integration with other beacons
+    within the beacon-network. It builds upon the Beacon service API and uses existing
+    schema.org entities and properties. '
+  version: "0.2"
+  official_type: ""
+  full_example: ""
+mapping:
+- property: aggregator
+  expected_types:
+  - Boolean
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: True if Beacon is an agregator of other Beacon Datasets.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: dataset
+  expected_types:
+  - Dataset
+  description: 'A dataset contained in this catalog.Inverse property: includedInDataCatalog.'
+  type: ""
+  type_url: ""
+  bsc_description: Datasets served by this Beacon.
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: Description of this Beacon.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See background notes for more details.
+  type: ""
+  type_url: ""
+  bsc_description: Unique identifier of the Beacon.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: Name of this Beacon.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: potentialAction
+  expected_types:
+  - Action
+  description: Indicates a potential Action, which describes an idealized action in
+    which this thing would play an 'object' role.
+  type: ""
+  type_url: ""
+  bsc_description: List of Actions that can be performed on this Beacon.
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: provider
+  expected_types:
+  - Organization
+  - Person
+  description: The service provider, service operator, or service performer; the goods
+    producer. Another party (a seller) may offer those services or goods on behalf
+    of the provider. A provider may also serve as the seller. Supersedes carrier.
+  type: ""
+  type_url: ""
+  bsc_description: Contact information for this Beacon.
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: rdf:type
+  expected_types:
+  - URL
+  description: ""
+  type: external
+  type_url: https://www.w3.org/1999/02/22-rdf-syntax-ns#type
+  bsc_description: This is used by validation tools to indentify the profile used.
+    You must use the value specified in the Controlled Vocabulary column.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: sameAs
+  expected_types:
+  - URL
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  type: ""
+  type_url: ""
+  bsc_description: Alternative URL for this Beacon.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: supportedRefs
+  expected_types:
+  - Text
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: Supported Genome ID references.
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: Welcome Page of this Beacon.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: version
+  expected_types:
+  - Number
+  - Text
+  description: The version of the CreativeWork embodied by a specified resource.
+  type: ""
+  type_url: ""
+  bsc_description: Beacon API version number.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+
 ---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

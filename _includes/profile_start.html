@@ -1,103 +1,175 @@
+{% if page.status == 'release' %}
 <h1>{{page.name}} Specification v. {{page.version}}</h1>
+{% else %}
+<h1>{{page.name}} <u>DRAFT</u> Specification v. {{page.version}}</h1>
+{% endif %}
 <h2>{{page.subtitle}}</h2>
-
 <br />
-
 <input id="tab1" type="radio" name="tabs" checked>
 <label for="tab1">Description</label>
-
 <input id="tab2" type="radio" name="tabs">
 <label for="tab2">Contributors</label>
-
 <input id="tab3" type="radio" name="tabs">
 <label for="tab3">Links</label>
-
-
 <section id="contributors" class="tabs">
-<h3>Contributors</h3>
-<p>The following <span title="Test of mouseover" style="border-bottom: 2px dotted #000;">people</span> have been involved in the creation of this specification document:</p>
-<h6>Group Leader(s)</h6>
-<div id="leadTable">
-  {% assign group = site.groups | where:"identifier", page.group %}
-  {% for g in group %}
-  {% for leader in g.lead %}
-  {% assign lead-id = "/people/" | append: leader %}
-  {% assign author = site.people | where:"id", lead-id | first %}
-  {% if author.homepage or author.github_username or author.orcid %}
-  <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
-  {% else %}
-  <p>{{ author.first-name }} {{ author.last-name }}</p>
-  {% endif %}
-  {% else %}
-  <p>No team leaders currently specified.</p>
-  {% endfor %}
-  {% endfor %}
-</div>
-<h6>Other team members</h6>
-<div id="peopleTable">
-  {% assign authors = site.people | where:"groups", page.group %}
-  {% for author in authors %}
-  {% assign author-id = author.id | split: '/' %}
-  {% for g in group %}
-  {% if author.homepage or author.github_username or author.orcid %}
-  {% unless g.lead contains author-id[2] %}
-  <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
-  {% endunless %}
-  {% else %}
-  {% unless g.lead contains author-id[2] %}
-  <p>{{ author.first-name }} {{ author.last-name }}</p>
-  {% endunless %}
-  {% endif %}
-  {% else %}
-  <p>No team members currently specified.</p>
-  {% endfor %}
-  {% endfor %}
-</div>
+   <h3>Contributors</h3>
+   {% assign group = site.groups | where:"identifier", page.group %}
+   {% for g in group %}
+   <p>The following people have been involved in the creation of this specification document. They are all members of the <a href="{{g.url}}">{{g.name}}</a> group.</p>
+   {% endfor %}
+   <h6>Group Leader(s)</h6>
+   <div id="leadTable">
+      {% for g in group %}
+      {% for leader in g.lead %}
+      {% assign lead-id = "/people/" | append: leader %}
+      {% assign author = site.people | where:"id", lead-id | first %}
+      {% if author.homepage or author.github_username or author.orcid %}
+      <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
+      {% else %}
+      <p>{{ author.first-name }} {{ author.last-name }}</p>
+      {% endif %}
+      {% else %}
+      <p>No team leaders currently specified.</p>
+      {% endfor %}
+      {% endfor %}
+   </div>
+   <h6>Other team members</h6>
+   <div id="peopleTable">
+      {% assign authors = site.people | where:"groups", page.group %}
+      {% for author in authors %}
+      {% assign author-id = author.id | split: '/' %}
+      {% for g in group %}
+      {% if author.homepage or author.github_username or author.orcid %}
+      {% unless g.lead contains author-id[2] %}
+      <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
+      {% endunless %}
+      {% else %}
+      {% unless g.lead contains author-id[2] %}
+      <p>{{ author.first-name }} {{ author.last-name }}</p>
+      {% endunless %}
+      {% endif %}
+      {% else %}
+      <p>No team members currently specified.</p>
+      {% endfor %}
+      {% endfor %}
+   </div>
 </section>
-
-
 <section id="description" class="tabs">
-<!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
-<h3>Description</h3>
-<p>{{page.description}}</p>
-<br />
-<h3>Schema.org hierarchy</h3>
-This is a new {{page.spec_type}} that fits into the schema.org hierarchy as follows:
-<br />
-<br />
-{%for branch_name in page.hierarchy %}
-{% if branch_name == "BioChemEntity" or branch_name == "DataRecord" or branch_name == "LabProtocol"  %}
-<a href="/devTypes/{{branch_name}}/specification/">{{branch_name}}</a>
-{% else %}
-<a href="http://schema.org/{{branch_name}}">{{branch_name}}</a>
-{% endif %}
-{%if forloop.index < page.hierarchy.size%}
-&gt;
-{%endif%}
-{%endfor%}
-{%if page.spec_type == 'Type'%}
-&gt;
-<a href="#">{{page.name}}</a>
-{%endif%}
+   <!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
+   <h3>Description</h3>
+   <p>{{page.description}}</p>
+   <br />
+   <h3>Schema.org hierarchy</h3>
+   This is a new {{page.spec_type}} that fits into the schema.org hierarchy as follows:
+   <br />
+   <br />
+   {%for branch_name in page.hierarchy %}
+   {% if branch_name == "BioChemEntity" or branch_name == "DataRecord" or branch_name == "LabProtocol"  %}
+   <a href="/devTypes/{{branch_name}}/specification/">{{branch_name}}</a>
+   {% else %}
+   <a href="http://schema.org/{{branch_name}}">{{branch_name}}</a>
+   {% endif %}
+   {%if forloop.index < page.hierarchy.size%}
+   &gt;
+   {%endif%}
+   {%endfor%}
+   {%if page.spec_type == 'Type'%}
+   &gt;
+   <a href="#">{{page.name}}</a>
+   {%endif%}
 </section>
-
 <section id="links" class="tabs">
-<!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
-<h3>Links</h3>
-Use case documentation<br />
-Cross walk<br />
-Issue Tracker<br />
-Examples<br />
-Live Deployments<br />
+   <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto;">
+      <thead>
+         <tr>
+            <th>Group</th>
+            <th>Use Cases</th>
+            <th>Cross Walk</th>
+            <th>Task &amp; Issues</th>
+            <th>Examples</th>
+            <th>Live Deploys</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               {% for g in group %}
+               <a href="{{g.url}}">{{g.name}}</a>
+               {% endfor %}
+            </td>
+            <td class="spec_links">
+               {% if page.use_cases_url == '' %}
+               <a>
+               <img src="/images/use_case_spec.png" alt="View BioSchemas {{ page.name }} Use Cases"  style="filter: grayscale(100%);">
+               </a>
+               {%else%}
+               <a href="{{page.use_cases_url}}">
+               <img src="/images/use_case_spec.png" alt="View BioSchemas {{ page.name }} Use Cases">
+               </a>
+               {%endif%}
+            </td>
+            <td class="spec_links">
+               {% if page.cross_walk_url == '' %}
+               <a>
+               <img src="/images/cross_walk.png" alt="View BioSchemas {{ page.name }} Cross Walk"  style="filter: grayscale(100%);">
+               </a>
+               {%else%}
+               <a href="{{page.cross_walk_url}}">
+               <img src="/images/cross_walk.png" alt="View BioSchemas {{ page.name }} Cross Walk">
+               </a>
+               {%endif%}
+            </td>
+            <td class="spec_links">
+               {% if page.gh_tasks == '' %}
+               <a>
+               <img src="/images/specs_tasks.png" alt="BioSchemas {{ page.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
+               </a>
+               {% else %}
+               <a href="{{page.gh_tasks}}">
+               <img src="/images/specs_tasks.png" alt="BioSchemas {{ page.name }} Github Tasks or Issues">
+               </a>
+               {% endif %}
+            </td>
+            <td class="spec_links">
+               {% if page.gh_examples == '' %}
+               <a>
+               <img src="/images/spec_examples.png" alt="View BioSchemas {{ page.name }} Examples" style="filter: grayscale(100%);">
+               </a>
+               {% else %}
+               <a href="{{page.gh_examples}}">
+               <img src="/images/spec_examples.png" alt="View BioSchemas {{ page.name }} Examples">
+               </a>
+               {% endif %}
+            </td>
+            <td class="spec_links">
+               {% if page.live_deploy == '' %}
+               <a>
+               <img src="/images/live_deploy.png" alt="View BioSchemas {{ page.name }} Examples" style="filter: grayscale(100%);">
+               </a>
+               {% else %}
+               <a href="{{page.live_deploy}}">
+               <img src="/images/live_deploy.png" alt="View BioSchemas {{ page.name }} Examples">
+               </a>
+               {% endif %}
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <br />
+   {% if page.name != 'Organization' and page.name != 'Person' and page.name != 'Chemical' and page.name != 'ChemicalStructure' and page.name != 'Course' and page.name != 'Standard' %}
+   {% if page.status == 'release' %}
+   <p>You can read the <a href="/devSpecs/{{page.name}}/specification/">draft version of this specification here</a>.</p>
+   {% elsif page.status == 'revision' %}
+   <p>You can read the <a href="/specifications/{{page.name}}/specification/">release version of this specification here</a>.</p>
+   {% endif %}
+   {% endif %}
 </section>
-
 <br />
 <hr />
 <br />
-
 <h5>Key to specification table</h5>
 <br />
-<p>New (i.e., Bioschemas created) properties/types are <em style="color: #0B794B;"><strong>green</strong></em>.</p>
+<p>Schema.org properties where the Expected Types have been changed, or new (i.e., Bioschemas created) properties/types are <em style="color: #0B794B;"><strong>green</strong></em>.</p>
 <p>Schema.org properties/types are <em style="color: #990000;"><strong>red</strong></em>.</p>
 <p>Pending Schema.org properties/types are <em style="color: #0000CC;"><strong>blue</strong></em>.</p>
 <p>External (i.e., from 3rd party ontology) properties/types are <em style="color: #454547;"><strong>black</strong></em>.</p>

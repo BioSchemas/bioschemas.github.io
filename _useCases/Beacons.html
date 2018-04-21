@@ -1,0 +1,40 @@
+---
+name: Beacons
+group: beacons
+collection: useCases
+active: true
+---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                 <h1>Use Cases for {{page.name}}</h1>
+                 {% assign group = site.groups | where:"identifier", page.group %}
+                 {% for g in group %}
+                 <p>The following use cases were developed by the <a href="{{g.url}}">{{ g.name }}</a> group.
+                 {% endfor %}
+
+                 <p>We need a simple way for a beacon to self-describe each of their datasets that will contribute towards
+                   genetic variant cardinality service for better integration with other beacons within the beacon-network.
+                   It should build upon the Beacon service API and uses existing schema.org entities and properties.</p>
+
+               </section>
+            </div>
+        </div>
+    </div>
+    {% include footer.html %}
+
+    
+    
+    
+
+    </body>
+
+    </html>

@@ -1,0 +1,54 @@
+---
+name: Laboratory Protocols
+group: labprotocols
+collection: useCases
+active: true
+---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                 <h1>Use Cases for {{page.name}}</h1>
+                 {% assign group = site.groups | where:"identifier", page.group %}
+                 {% for g in group %}
+                 <p>The following use cases were developed by the <a href="{{g.url}}">{{ g.name }}</a> group.
+                 {% endfor %}
+
+                 <h3>Findability</h3>
+                 <p>As an user, I will like to search for protocols according to:</p>
+                 <ul>
+                 <li>availability of reagents and/or equipment in my lab, also</li>
+                 <li>the sample to be tested, and/or</li>
+                 <li>the overall objective of the protocol. </li>
+                 </ul>
+                 <p>Searching for protocols using these four elements helps me (as an user) to decide
+                 on the suitability of the protocol(s) that should be executed during an experiment or assay.</p>
+
+                 <h3>Summarization</h3>
+                 <p>As an user, whenever I look for a lab protocol (A.K.A experimental protocol), I would like to see a quick summary with information related to: the sample to be tested (e.g. whole organisms, anatomical parts, biomolecules, body fluids), the list of equipment (including standard and high-throughput equipment, consumables), the software used, the list of reagents (e.g. bought ready-to-use, solutions or mixtures prepared in the lab, media, buffers, kits), the overall objective of the protocol (to know about the suitability), the protocol identifier (that helps me to find a protocol) and the license.</p>
+
+                 <h3>Link to external resources</h3>
+                 <p>As a user of a protocol I would  like to know where could I buy equipment and/or reagents used in a particular protocol.
+                 Rationale: For this reason, it is important to include information about the manufacturers, catalog number and homepage of equipments and reagents.</p>
+                 <p>As a user,  I would like to know previous uses/applications of a protocol; who has used it, who has built derivations of it, are those derivations related to the sample, instrument, reagent or objective?</p>
+                 <p>Finally. As a user of the protocol I would like to know where is the data derived from the application of the protocol - if publicly available then where?'</p>
+               </section>
+            </div>
+        </div>
+    </div>
+    {% include footer.html %}
+
+    
+    
+    
+
+    </body>
+
+    </html>

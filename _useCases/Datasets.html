@@ -1,0 +1,47 @@
+---
+name: Datasets
+group: data
+collection: useCases
+active: true
+---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                 <h1>Use Cases for {{page.name}}</h1>
+                 {% assign group = site.groups | where:"identifier", page.group %}
+                 {% for g in group %}
+                 <p>The following use cases were developed by the <a href="{{g.url}}">{{ g.name }}</a> group.
+                 {% endfor %}
+
+                 <p>The overall aim is findability and not structured queries. Based on this, the key use cases that have driven the selection of the fields are the following:</p>
+                 <ol>
+                   <li>Search on a title of dataset</li>
+                   <li>Enable discovery by indexing on free text description</li>
+                   <li>Enable direct access, resolution of dataset</li>
+                   <li>Allow restriction to specific dimensions and variables specifically recorded in a dataset (e.g. get all climate datasets which have monitors CO2 concentration or datasets where metabolite concentration was recorded)</li>
+                   <li>Search according to the repository of the datasets</li>
+                   <li>Search according to creator, author</li>
+                   <li>Allow restriction to how a dataset has been generated (e.g. get all climate datasets if metabolite concentration was recorded if acquired using mass spectrometry)</li>
+                 </ol>
+
+               </section>
+            </div>
+        </div>
+    </div>
+    {% include footer.html %}
+
+    
+    
+    
+
+    </body>
+
+    </html>

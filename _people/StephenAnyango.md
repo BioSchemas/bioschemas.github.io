@@ -8,5 +8,5 @@ affiliation: PDBe, EMBL-EBI
 homepage: https://www.ebi.ac.uk/about/people/stephen-anyango
 github_username: otienoanyango
 orcid:
-groups: [bioentities, community, data, datarepositories,  proteins]
+groups: [biologicalentities, community, data, datarepositories,  proteins]
 ---

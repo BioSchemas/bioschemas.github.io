@@ -2,7 +2,6 @@
 layout: group-details
 identifier: samples
 name: Samples
-path: samples.html
 collection: groups
 active: true
 type: biological

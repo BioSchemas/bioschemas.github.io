@@ -2,7 +2,6 @@
 layout: group-details
 identifier: datarepositories
 name: Data Repositories
-path: datarepositories.html
 collection: groups
 active: true
 type: generic

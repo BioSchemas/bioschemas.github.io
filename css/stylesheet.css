@@ -2,25 +2,94 @@
 Slate Theme for GitHub Pages
 by Jason Costello, @jsncostello
 *******************************************************************************/
+
 /*@import url(github-light.css);*/
 
 /*******************************************************************************
 MeyerWeb Reset
 *******************************************************************************/
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -29,12 +98,23 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
 
-ol, ul {
+ol,
+ul {
     list-style: none;
 }
 
@@ -57,7 +137,12 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
     color: #0B794B;
     letter-spacing: -1px;
@@ -128,7 +213,8 @@ a {
     -ms-transition: text-shadow 0.5s ease;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
     text-decoration: underline;
 }
 
@@ -159,39 +245,6 @@ p img {
     vertical-align: middle;
     text-align: center;
     border: none;
-}
-
-pre, code {
-    width: 100%;
-    color: #555;
-    background-color: #f2f2f2;
-    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-    font-size: 0.875em;
-    -moz-border-radius: 0.625em;
-    -webkit-border-radius: 0.625em;
-    border-radius: 0.625em;
-}
-
-pre {
-    width: 100%;
-    padding: 0.625em;
-    -webkit-box-shadow: 0 0 1.25em rgba(217, 217, 217, .7);
-    -moz-box-shadow: 0 0 1.25em rgba(217, 217, 217, .7);
-    box-shadow: 0 0 1.25em rgba(217, 217, 217, .7);
-    overflow: auto;
-}
-
-code {
-    padding: 3px;
-    margin: 0 3px;
-    -webkit-box-shadow: 0 0 20px rgba(217, 217, 217, .7);
-    -moz-box-shadow: 0 0 20px rgba(217, 217, 217, .7);
-    box-shadow: 0 0 20px rgba(217, 217, 217, .7);
-}
-
-pre code {
-    display: block;
-    box-shadow: none;
 }
 
 blockquote {
@@ -281,7 +334,7 @@ table {
     box-shadow: 0.625em 0.625em 1.25em rgba(217, 217, 217, .7);
 }
 
-table + h2 {
+table+h2 {
     margin-top: 1.25em;
 }
 
@@ -296,13 +349,6 @@ th {
     vertical-align: middle;
 }
 
-th:first-child {
-    border-top-left-radius: 0.625em;
-}
-
-th:last-child {
-    border-top-right-radius: 0.625em;
-}
 
 td {
     border: 1px solid #666;
@@ -327,7 +373,7 @@ Full-Width Styles
 
 .inner {
     position: relative;
-    max-width: 62.5em;
+    /*max-width: 62.5em;*/
     padding: 1.25em 0.625em;
     margin: 0 auto;
 }
@@ -342,7 +388,7 @@ Full-Width Styles
     text-decoration: none;
 }
 
-#main_content_wrap {
+#main-content-wrapper {
     background: #fefefe;
 }
 
@@ -351,11 +397,12 @@ Full-Width Styles
 }
 
 #header_wrap {
-    background-image: url("/images/subtle_white_feathers.png");
+    /* background-image: url("/images/subtle_white_feathers.png"); */
+    background-color: #FCFAF9;
 }
 
 #header_wrap .inner {
-    padding: 2.5em 0.625em 1.875em 0.625em;
+    padding: 1.5em 0.625em 1.875em 0.625em;
 }
 
 .mobile_list {
@@ -441,65 +488,13 @@ Twitter Button
 }
 
 /*******************************************************************************
-Rotating Logo
-*******************************************************************************/
-
-.rotation {
-    -webkit-transition: -webkit-transform 1s ease-in-out;
-    -o-transition: -o-transform 1s ease-in-out;
-    -moz-transition: -moz-transform 1s ease-in-out;
-    transition: transform 1s ease-in-out;
-}
-
-.rotation:hover {
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-}
-
-
-
-/*******************************************************************************
 Navigation Bar
 *******************************************************************************/
 
-.trigger {
-    /*border-bottom-left-radius: 0.625em;
-    border-bottom-right-radius: 0.625em;*/
-    background-color: #0B794B;
-    width: auto;
-    height: 2.5em;
-    padding-top: 0.625em;
-    position: relative;
-}
-
-.trigger_links {
-    max-width: 62.5em;
-    height: auto;
-    position: relative;
-    margin: 0 auto;
-}
-
-.trigger a {
-    color: #fff;
-    font-size: 1.2em;
-}
-
-.stuck {
-    position: fixed;
-    z-index: 100;
-    top: -0.3125em;
-    background-color: rgb(11, 121, 75);
-    background-color: rgba(11, 121, 75, .9);
-    width: 100%;
-    height: 2.5em;
-}
 
 /* Strange things happen when you set font-size to 1.2em, which equals 19.2px */
 
-.nav_buttons {
+.navbar_button {
     display: inline-block;
     height: 2.0833333333333335em;
     margin-top: -0.5208333333333334em;
@@ -508,7 +503,7 @@ Navigation Bar
     padding-right: 0.5208333333333334em;
 }
 
-.nav_buttons:hover {
+.navbar_button:hover {
     color: #333333;
     background-color: #2bb673;
     height: 2.03125em;
@@ -530,18 +525,6 @@ Navigation Bar
     border-bottom-left-radius: 0.5208333333333334em;
     border-bottom-right-radius: 0.5208333333333334em;
     border: 1px solid #2bb673;
-}
-
-.mobile_nav {
-    display: none;
-}
-
-#mobile_links {
-    display: none;
-}
-
-#mobile_list {
-    display: none;
 }
 
 /*******************************************************************************
@@ -576,11 +559,10 @@ Footer
 .img_bottom {
     float: right;
     clear: both;
-    width: 4%;
-    height: 4%;
+    width: 45px;
     margin-left: 0.625em;
-    margin-top: -1em;
-    background-color: #ddd;
+    margin-top: -0.6em;
+    background-color: #fff;
     border-radius: 1.875em;
 }
 
@@ -664,7 +646,6 @@ Specifications
 .groups_h {
     margin-top: 1.625em;
 }
-
 
 /*******************************************************************************
 Examples
@@ -845,100 +826,29 @@ Others (Not Used)
 .tar_download_link:hover {
     background: url(../images/sprite_download.png) no-repeat top right;
 }
-/***
-.icon {
-
-svg {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    vertical-align: middle;
-
-path {
-    fill: grey-color;
-}
-
-}
-}
-**/
-
-/**
-
-.ui-tooltip {
-    border: 2px solid #0B794B;
-    border-top-left-radius: 0.625em;
-    border-top-right-radius: 0.625em;
-    width: 40%;
-    position: relative;
-    background-color: rgba(144, 238, 144, .5);
-    text-align: center;
-}
-
-.ui-helper-hidden-accessible{
-    display: none;
-}
-
-*/
 
 /*******************************************************************************
 Small Device Styles
 *******************************************************************************/
 
 @media screen and (max-width: 700px) {
-    .trigger {
-        z-index: 500;
-        top: 0;
-        right: 0;
-        position: fixed;
-        display: flex;
-        align-items: center;
-        background-color: rgb(11, 121, 75);
-        background-color: rgba(11, 121, 75, .9);
-    }
-
-    .trigger_mobile {
-        height: auto;
-    }
-
-    .trigger_links {
-        display: none;
-    }
-
-    .mobile_nav {
-        display: inline;
-    }
-
-    #hamb_menu {
-        cursor: pointer;
-    }
-
-    .mobile_nav img {
-        height: 1.725em;
-        width: 1.725em;
-        float: right;
-    }
-
-    #mobile_links {
+     #mobile_links {
         display: none;
         margin-left: 1em;
         margin-bottom: 0.625em;
         text-align: center;
     }
-
     .mobile_buttons {
         display: inline;
         padding-right: 0.625em;
         padding-left: 0.625em;
     }
-
-    .page-link {
+    .link-navbar {
         padding-bottom: 1em;
     }
-
     .mobile_buttons:last-of-type {
         margin-right: 0;
     }
-
     #forkme_banner {
         display: block;
         position: absolute;
@@ -955,12 +865,10 @@ Small Device Styles
         -moz-box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
         box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
     }
-
     #forkme_banner:hover {
         background-color: rgb(29, 95, 226);
         text-decoration: none;
     }
-
     #twitter_banner {
         display: block;
         position: absolute;
@@ -978,17 +886,14 @@ Small Device Styles
         border-bottom-left-radius: 0.625em;
         border-bottom-right-radius: 0.625em;
     }
-
     #twitter_banner:hover {
         background-color: rgb(28, 150, 202);
         background-size: 35% 65%;
         text-decoration: none;
     }
-
     #twit_git_p {
         display: none;
     }
-
     .img_bottom {
         display: none;
     }
@@ -998,11 +903,9 @@ Small Device Styles
     body {
         font-size: 14px;
     }
-
     #downloads {
         display: none;
     }
-
     .inner {
         min-width: 320px;
         max-width: 480px;
@@ -1011,81 +914,58 @@ Small Device Styles
         margin-left: 0;
         padding-left: 0.3125em;
     }
-
     #project_title {
         font-size: 32px;
     }
-
     h1 {
         font-size: 28px;
     }
-
     h2 {
         font-size: 24px;
     }
-
     h3 {
         font-size: 21px;
     }
-
     h4 {
         font-size: 18px;
     }
-
     h5 {
         font-size: 14px;
     }
-
     h6 {
         font-size: 12px;
     }
-
-    code, pre {
-        min-width: 320px;
-        max-width: 480px;
-        font-size: 11px;
-    }
-
     p {
         width: 95%;
         text-align: justify;
     }
-
     ul li {
         margin-bottom: 0.625em;
     }
-
     ul li ul li::before {
         content: '';
     }
-
     ol {
         padding-left: 1em;
     }
-
     ol li {
         padding-left: 0;
         text-align: justify;
     }
-
     table {
         padding-left: 0;
         margin-left: 0;
         box-shadow: none;
     }
-
     #twit_git_p {
         display: block;
     }
-
     #twitter_banner {
         display: none;
     }
-
     #forkme_banner {
         display: none;
     }
-
     .trigger {
         z-index: 500;
         top: 0;
@@ -1093,32 +973,13 @@ Small Device Styles
         position: fixed;
         display: flex;
         align-items: center;
-        background-color: rgb(11, 121, 75);
-        background-color: rgba(11, 121, 75, .9);
     }
-
-    .trigger_mobile {
+    .trigger-mobile {
         height: auto;
     }
-
     .trigger_links {
         display: none;
     }
-
-    .mobile_nav {
-        display: inline;
-    }
-
-    #hamb_menu {
-        cursor: pointer;
-    }
-
-    .mobile_nav img {
-        height: 1.725em;
-        width: 1.725em;
-        float: right;
-    }
-
     #mobile_links {
         display: none;
         margin-left: 1em;
@@ -1126,83 +987,67 @@ Small Device Styles
         text-align: center;
         font-size: 0.9em;
     }
-
     .mobile_buttons {
         display: inline;
         padding-right: 0.625em;
         padding-left: 0.625em;
     }
-
-    .page-link {
+    .link-navbar {
         padding-bottom: 1em;
     }
-
     .mobile_buttons:last-of-type {
         margin-right: 0;
     }
-
     #groups_table {
         display: none;
     }
-
     #mobile_list {
         display: block;
     }
-
     #meetings_table {
         display: none;
     }
-
     .mobile_list {
         display: block;
         margin-top: 1.625em;
     }
-
     .organs_inv {
         display: inline-block;
     }
-
     .organs_inv img {
         display: inline-block;
         margin: 1em auto;
     }
-
     .organs_inv img:hover {
         border: none;
     }
-
     .organs_inv p {
         display: inline-block;
         margin-left: auto;
         margin-right: auto;
     }
-
     #back_groups {
         float: left;
         width: 25%;
         margin: 0;
     }
-
     #top_link {
         display: none;
     }
-
     #footer_wrap p {
         text-align: center;
     }
-
     .img_bottom {
         display: none;
     }
 }
 
-
-
-
 /*******************************************************************************
 Specification Properties
 *******************************************************************************/
-table.bioschemas_properties, table.bioschemas_spec_list{
+
+table.bioschemas_properties,
+table.bioschemas_spec_list {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -1210,22 +1055,25 @@ table.bioschemas_properties, table.bioschemas_spec_list{
     border: 1px solid #98A0A6;
     border-spacing: 3px;
     display: table;
-    font-family: "Lucida Grande" , "Lucida Sans Unicode" , Verdana, Tahoma, Arial, sans-serif;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Tahoma, Arial, sans-serif;
     line-height: 160%;
     font-size: 100%;
 }
-table.bioschemas_spec_list{
+
+table.bioschemas_spec_list {
     margin-left: -2em;
 }
 
-.bioschemas_properties tr, table.bioschemas_spec_list tr{
+.bioschemas_properties tr,
+table.bioschemas_spec_list tr {
     display: table-row;
     vertical-align: inherit;
     border-color: inherit;
     font-size: 100%;
 }
 
-.bioschemas_properties th, table.bioschemas_spec_list th {
+.bioschemas_properties th,
+table.bioschemas_spec_list th {
     padding-left: 5px;
     background: #C7CBCE;
     color: #3A4956;
@@ -1237,19 +1085,24 @@ table.bioschemas_spec_list{
     font-size: 100%;
 }
 
-.bioschemas_properties tbody th, table.bioschemas_spec_list th{
+.bioschemas_properties tbody th,
+table.bioschemas_spec_list th {
     text-align: left;
     vertical-align: top;
 }
-.bioschemas_properties th:first-child, table.bioschemas_spec_list th:first-child{
+
+.bioschemas_properties th:first-child,
+table.bioschemas_spec_list th:first-child {
     border-top-left-radius: 0;
 }
 
-.bioschemas_properties th:last-child, table.bioschemas_spec_list th:last-child {
+.bioschemas_properties th:last-child,
+table.bioschemas_spec_list th:last-child {
     border-top-right-radius: 0;
 }
 
-.bioschemas_properties td, table.bioschemas_spec_list td{
+.bioschemas_properties td,
+table.bioschemas_spec_list td {
     border: 0;
     padding: 0.625em;
     min-height: 1.25em;
@@ -1259,106 +1112,127 @@ table.bioschemas_spec_list{
     display: table-cell;
     max-width: 20em;
 }
-.bioschemas_properties.bsc_type td{
+
+.bioschemas_properties.bsc_type td {
     max-width: none;
 }
 
-
-.reu_props_sdo td, .new_props_sdo td, .cardinality td{
+.reu_props_sdo td,
+.new_props_sdo td,
+.cardinality td {
     font-weight: bold;
     background: #C7CBCE;
     font-size: 100%;
 }
 
-.bioschemas_properties .new_props_sdo td a, .bioschemas_properties .new_props_sdo td a:link{
+.bioschemas_properties .new_props_sdo td a,
+.bioschemas_properties .new_props_sdo td a:link {
     color: #0B794B;
 }
 
-.cardinality td b.Minimum{
+.cardinality td b.Minimum {
     color: #0B794B;
 }
 
-.cardinality td b.Recommended{
+.cardinality td b.Recommended {
     color: #98771a;
 }
 
-.cardinality td b.Optional{
+.cardinality td b.Optional {
     color: #555daf;
 }
 
-
-.bioschemas_properties a, table.bioschemas_spec_list a{
+.bioschemas_properties a,
+table.bioschemas_spec_list a {
     color: #660000;
     text-decoration: none;
     border-bottom: dotted 1px #660000;
 }
 
-table.bioschemas_spec_list .spec_links a:link, table.bioschemas_spec_list .spec_links a{
+table.bioschemas_spec_list .spec_links a:link,
+table.bioschemas_spec_list .spec_links a {
     display: inline-block;
     border-bottom: none;
 }
 
-table.bioschemas_spec_list td a img{
+table.bioschemas_spec_list td a img {
     width: 3.7em;
 }
 
-.bioschemas_properties a:link{
+.bioschemas_properties a:link {
     color: #990000;
     text-decoration: none;
     border-bottom: dotted 1px #990000;
 }
 
-
 /*******************************************************************************
 Tabs at top of profile
 *******************************************************************************/
 
-*, *:before, *:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 section.tabs {
-  display: none;
-  padding: 20px 0 0;
-  border-top: 1px solid #ddd;
-  min-height: 300px;
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #ddd;
+    min-height: 300px;
 }
 
 input {
-  display: none;
+    display: none;
 }
 
 label {
-  display: inline-block;
-  margin: 0 0 -1px;
-  padding: 15px 25px;
-  font-weight: 600;
-  text-align: center;
-  color: #bbb;
-  border: 1px solid transparent;
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #bbb;
+    border: 1px solid transparent;
 }
 
 label:before {
-  font-weight: normal;
-  margin-right: 10px;
+    font-weight: normal;
+    margin-right: 10px;
 }
 
 label:hover {
-  color: #888;
-  cursor: pointer;
+    color: #888;
+    cursor: pointer;
 }
 
-input:checked + label {
-  color: #555;
-  border: 1px solid #ddd;
-  border-top: 2px solid green;
-  border-bottom: 1px solid #fff;
+input:checked+label {
+    color: #555;
+    border: 1px solid #ddd;
+    border-top: 2px solid green;
+    border-bottom: 1px solid #fff;
 }
 
-#tab1:checked ~ #description,
-#tab2:checked ~ #contributors,
-#tab3:checked ~ #links {
-  display: block;
+#tab1:checked~#description,
+#tab2:checked~#contributors,
+#tab3:checked~#links {
+    display: block;
+}
+
+/*******************************************************************************
+Style experiment
+*******************************************************************************/
+
+table.bioschemas_properties a.externalProp {
+    color: #454547;
+}
+
+table.bioschemas_properties a.newBsc {
+    color: #0B794B;
+}
+
+table.bioschemas_properties a.pending {
+    color: #0000CC;
 }

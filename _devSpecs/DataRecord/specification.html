@@ -1,261 +1,293 @@
 ---
-group: data
+cross_walk_url: https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAvaADLmI_FrIk7O3BEkxY/
+dateModified: 2018-02-25
 description: "A Record acts itself as a dataset although it refers to what could be
   seen as the minimum compact, complete and auto-descriptive unit in a dataset, i.e.,
-  a record.\n\nBioschemas usage\n\nIn Life Sciences, records will represent a BioChemEntity.
-  A link to the represented physical entity should be done via \u201Crepresents\u201D
-  property. "
-edit_url: https://github.com/BioSchemas/specifications/tree/master/DataRecord/specification.html
-g_mapping_file: Record Mapping Simp
-gh_examples: https://github.com/BioSchemas/specifications/tree/master/DataRecord/examples
-gh_folder: https://github.com/BioSchemas/specifications/tree/master/DataRecord
+  a record.\n\nBioschemas usage\n\nIn Life Sciences, records will represent a BioChemEntity."
+gh_examples: https://github.com/BioSchemas/specifications/tree/master/DataRecord/examples/
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20DataRecord
+group: data
 hierarchy:
-- Dataset
-- CreativeWork
 - Thing
-layout: new_spec_detail
+- CreativeWork
+- Dataset
+live_deploy: ''
 name: DataRecord
 parent_type: Dataset
-properties:
-- bsc_dec: Bioschemas usage.   Although not required for Records, additionalType can
-    be used to specify the nature of the record. For instance, a UniProt protein record
-    would have http://purl.uniprot.org/core/Protein as type.
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: 'Yes'
-    - name: as it better suits to the concept described by this entity
-  expected_type:
-  - URL
-  marginality: Recommended
-  name: additionalType
-  parent: Thing
-  sdo_desc: An additional type for the item, typically used for adding more specific
-    types from external vocabularies in microdata syntax. This is a relationship between
-    something and a class that the thing is in. In RDFa syntax, it is better to use
-    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
-    tools may have only weaker understanding of extra types, in particular those defined
-    externally.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - PropertyValue
-  - ''
-  - Text
-  - ''
-  - URL
-  marginality: Minimum
-  name: identifier
-  parent: Thing
-  sdo_desc: The identifier property represents any kind of identifier for any kind
-    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
-    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
-    many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background
-    notes</a> for more details.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - ImageObject
-  - ''
-  - URL
-  marginality: Optional
-  name: image
-  parent: Thing
-  sdo_desc: An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a>
-    or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - URL
-  marginality: Optional
-  name: sameAs
-  parent: Thing
-  sdo_desc: URL of a reference Web page that unambiguously indicates the item's identity.
-    E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - URL
-  marginality: Optional
-  name: url
-  parent: Thing
-  sdo_desc: URL of the item.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - CreativeWork
-  - Text
-  marginality: Optional
-  name: citation
-  parent: CreativeWork
-  sdo_desc: A citation or reference to another creative work, such as another publication,
-    web page, scholarly article, etc.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Date
-  - DateTime
-  marginality: Optional
-  name: dateCreated
-  parent: CreativeWork
-  sdo_desc: The date on which the CreativeWork was created or the item was added to
-    a DataFeed.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Date
-  - DateTime
-  marginality: Optional
-  name: dateModified
-  parent: CreativeWork
-  sdo_desc: The date on which the CreativeWork was most recently modified or when
-    the item's entry was modified within a DataFeed.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Date
-  - DateTime
-  marginality: Optional
-  name: datePublished
-  parent: CreativeWork
-  sdo_desc: Date of first broadcast/publication.
-- bsc_dec: Bioschemas usage.  Whenever possible use Evidence Codes (ECO, http://www.ebi.ac.uk/ols/ontologies/eco)
-  cardinality: MANY
-  controlled_vocab:
-    ontologies:
-    - name: ECO
-      url: www.ebi.ac.uk/ols/ontologies/eco
-    terms: []
-  expected_type:
-  - Thing
-  - CreativeWork
-  - Product
-  - URL
-  marginality: Optional
-  name: isBasedOn
-  parent: DataRecord
-  sdo_desc: 'A resource that was used in the creation of this resource. This term
-    can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
-    Supersedes isBasedOnUrl.  Inverse property: isBasisFor.'
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Optional
-  name: keywords
-  parent: CreativeWork
-  sdo_desc: Keywords or tags used to describe this content. Multiple entries in a
-    keywords list are typically delimited by commas.
-- bsc_dec: Bioschemas usage.  Link to the BioChemEntity represented by this record.
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Thing
-  marginality: Minimum
-  name: mainEntity
-  parent: CreativeWork
-  sdo_desc: Indicates the primary entity described in some page or other CreativeWork.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - DataDownload
-  marginality: Optional
-  name: distribution
-  parent: Dataset
-  sdo_desc: A downloadable form of this dataset, at a specific location, in a specific
-    format.
-- bsc_dec: Bioschemas usage.  Additional to the use of name and description to describe
-    this property in a human-readable way, additionalType should be used to specify
-    the nature of the property/relation. For instance, if the property refers to a
-    gene/protein disease association, you could use http://semanticscience.org/resource/SIO_000983
-    as additionalType for the additionalProperty.
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: 'Yes'
-    - name: as better suits to describe this additional property
-  expected_type:
-  - PropertyValue
-  marginality: Optional
-  name: additionalProperty
-  parent: DataRecord
-  sdo_desc: 'A property-value pair representing an additional characteristics of the
-    entitity, e.g. a product feature or another characteristic for which there is
-    no matching property in schema.org.  Note: Publishers should be aware that applications
-    designed to use specific schema.org properties (e.g. http://schema.org/width,
-    http://schema.org/color, http://schema.org/gtin13, ...) will typically expect
-    such data to be provided using those properties, rather than using the generic
-    property/value mechanism.'
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Thing
-  - URL
-  marginality: Optional
-  name: seeAlso
-  parent: DataRecord
-  sdo_desc: A pointer to any somehow related Thing. To be used whenever you are not
-    so sure about the nature of the relation. Otherwise, use additionalProperty that
-    will allow you to specify that nature.
-- bsc_dec: Bioschemas usage.  Whenever possible use Evidence Codes (ECO, http://www.ebi.ac.uk/ols/ontologies/eco)
-  cardinality: MANY
-  controlled_vocab:
-    ontologies:
-    - name: ECO
-      url: www.ebi.ac.uk/ols/ontologies/eco
-    terms: []
-  expected_type:
-  - Thing
-  - CreativeWork
-  - Product
-  - URL
-  marginality: Optional
-  name: isBasisFor
-  parent: DataRecord
-  sdo_desc: 'Proposal: Add this property to CreativeWork.  A resource for which this
-    resource is basis for. Inverse property: isBasedOn.'
-spec_mapping_url: https://docs.google.com/spreadsheets/d/1RVMRrhdkNKVSKEubMuvX3xxZ3_ohpHggJpINAVLsMuI/edit?usp=drivesdk
 spec_type: Profile
 status: revision
 subtitle: Bioschemas specification describing a record in a dataset.
-use_cases_url: err_404
+use_cases_url: /useCases/Datasets
 version: '0.1'
+
+bsc: #0B794B;
+pending: #0000CC;
+external: #454547;
+
 ---
+
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  <table class="bioschemas_properties bsc_type">
+                     <thead>
+                        <tr>
+                           <th>Property</th>
+                           <th>Expected Type</th>
+                           <th>Description</th>
+                           <th>CD</th>
+                           <th>Controlled Vocabulary</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+<!-- MINIMUM -->
+                        <tr class="cardinality">
+                           <td colspan="5">
+                              Marginality: <b>Minimum</b>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/identifier">identifier</a></th>
+                           <td>
+                              <a href="http://schema.org/PropertyValue">PropertyValue</a><br />
+                              <a href="http://schema.org/Text">Text</a><br />
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: The identifier property represents any kind of identifier for any kind of <a href="http://schema.org/Thing">Thing</a>,
+                             such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.
+                             See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/mainEntity">mainEntity</a></th>
+                           <td>
+                             <a href="http://schema.org/Thing">Thing</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: Indicates the primary entity described in some page or other CreativeWork. <em>Inverse-property: <a href="http:schema.org/mainEntityOfPage">mainEntityOfPage</a>.</em><br />
+                             <strong>Bioschemas</strong>: Bioschemas usage.  Link to the BioChemEntity represented by this record.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a class="externalProp" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></th>
+                           <td>
+                             <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                              <strong>Missing!</strong>
+                           </td>
+                        </tr>
+<!-- RECOMMENDED -->
+                        <tr class="cardinality">
+                           <td colspan="5">
+                              Marginality: <b>Recommended</b>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/additionalType">additionalType</a></th>
+                           <td>
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between
+                             something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker
+                             understanding of extra types, in particular those defined externally.<br />
+                             <strong>Bioschemas</strong>: Although not required, additionalType can be used to specify the nature of the record. For instance, a UniProt protein record would
+                             have <a style="color: #454547;" href="http://purl.uniprot.org/core/Protein">UP:Protein</a> as type.</td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+<!-- OPTIONAL -->
+                        <tr class="cardinality">
+                           <td colspan="5">
+                              Marginality: <b>Optional</b>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/additionalProperty">additionalProperty</a></th>
+                           <td>
+                              <a href="http://schema.org/PropertyValue">PropertyValue</a><br>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.  Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br/ >
+                             <strong>Bioschemas</strong>: Additional to the use of <a href="http://schema.org/name">name</a> and <a href="http://schema.org/description">description</a> to describe this property in a human-readable way,
+                             <a href="http://schema.org/additionalType">additionalType</a> should be used to specify the nature of the property/relation. For instance, if the property refers to a gene/protein disease association,
+                             you could use <a class="externalProp" href="http://semanticscience.org/resource/SIO_000983">SIO:000983 (gene-disease association)</a> as the <a href="http://schema.org/additionalType">additionalType</a> for the additionalProperty.
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/citation">citation</a></th>
+                           <td>
+                              <a href="http://schema.org/CreativeWork">CreativeWork</a><br />
+                              <a href="http://schema.org/Text">Text</a><br>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/dateCreated">dateCreated</a></th>
+                           <td>
+                              <a href="http://schema.org/Date">Date</a><br />
+                              <a href="http://schema.org/DateTime">DateTime</a>
+                           </td>
+                           <td><strong>Schema</strong>: The date on which the CreativeWork was created or the item was added to a DataFeed.</td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/dateModified">dateModified</a></th>
+                           <td>
+                              <a href="http://schema.org/Date">Date</a><br />
+                              <a href="http://schema.org/DateTime">DateTime</a>
+                           </td>
+                           <td><strong>Schema</strong>: The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.</td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/datePublished">datePublished</a></th>
+                           <td>
+                              <a href="http://schema.org/Date">Date</a>
+                           </td>
+                           <td><strong>Schema</strong>: Date of first broadcast/publication.</td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/distribution">distribution</a></th>
+                           <td>
+                              <a href="http://schema.org/DataDownload">DataDownload</a>
+                           </td>
+                           <td><strong>Schema</strong>: A downloadable form of this dataset, at a specific location, in a specific format.</td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/image">image</a></th>
+                           <td>
+                              <a href="http://schema.org/ImageObject">ImageObject</a><br />
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td><strong>Schema</strong>: An image of the item. This can be an <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.</td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/isBasedOn">isBasedOn</a></th>
+                           <td>
+                              <a href="http://schema.org/CreativeWork">CreativeWork</a><br />
+                              <a href="http://schema.org/Product">Product</a><br />
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td><strong>Schema</strong>: A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example,
+                             <a href="http://example.com/great-multiplication-intro.html">http://example.com/great-multiplication-intro.html</a>.<br />
+                             <strong>Bioschemas</strong>: Whenever possible use Evidence Codes (ECO).</td>
+                           <td>MANY</td>
+                           <td>
+                              <a href="http://www.ebi.ac.uk/ols/ontologies/eco">ECO</a>
+                           </td>
+                        </tr>
+                        <tr id="isBasisFor">
+                           <th><a class="newBsc" href="#">isBasisFor</a></th>
+                           <td>
+                              <a href="http://schema.org/CreativeWork">CreativeWork</a><br>
+                              <a href="http://schema.org/Product">Product</a><br>
+                              <a href="http://schema.org/URL">URL</a><br>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: A resource for which this resource is basis for. Inverse property: <a href="http://schema.org/isBasedOn">isBasedOn</a>.<br />
+                             <strong>Bioschemas DataRecord</strong>: Whenever possible use Evidence Codes (ECO).
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                              <a href="http://www.ebi.ac.uk/ols/ontologies/eco">ECO</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/keywords">keywords</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td><strong>Schema</strong>: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.</td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/sameAs">sameAs</a></th>
+                           <td>
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td><strong>Schema</strong>: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.</td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr id="seeAlso">
+                           <th><a class="newBsc"  href="#">seeAlso</a></th>
+                           <td>
+                              <a href="http://schema.org/Thing">Thing</a><br />
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: A pointer to any (somehow related) Thing. To be used whenever you are not so sure about the nature of the relation.
+                             Otherwise, use more precise terms from pre-existing Controlled Vocabularies.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/url">url</a></th>
+                           <td>
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td><strong>Schema</strong>: URL of the item.</td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+      
+      
+      
+   </body>
+</html>

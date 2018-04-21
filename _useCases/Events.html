@@ -1,0 +1,43 @@
+---
+name: Events
+group: events
+collection: useCases
+active: true
+---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                 <h1>Use Cases for {{page.name}}</h1>
+                 {% assign group = site.groups | where:"identifier", page.group %}
+                 {% for g in group %}
+                 <p>The following use cases were developed by the <a href="{{g.url}}">{{ g.name }}</a> group.
+                 {% endfor %}
+
+                 <p>Conferences, workshops, meetings and events in general play a very important role in knowledge sharing
+                   and acquisition of new skills. Though there are several technological solutions for event sharing, events
+                   in life sciences are still not described in a consistent manner that would make them easy to discover, exchange or compare.</p>
+                <p>Because there is no single standard to follow, the dissemination, discovery and aggregation of events is not effective. As a result,
+                  the advertisement of an event in third party websites normally requires manual curation to shape the content to each provider’s requirements.</p>
+
+
+               </section>
+            </div>
+        </div>
+    </div>
+    {% include footer.html %}
+
+    
+    
+    
+
+    </body>
+
+    </html>

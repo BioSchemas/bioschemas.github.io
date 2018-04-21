@@ -2,7 +2,6 @@
 layout: group-details
 identifier: standards
 name: Standards
-path: standards.html
 collection: groups
 active: false
 type: generic

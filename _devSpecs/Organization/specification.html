@@ -1,246 +1,438 @@
 ---
-group: organizations
+cross_walk_url: ''
+dateModified: 2018-03-13
 description: 'Provides a way to describe bioscience organizations on the World Wide
   Web. It defines metadata terms that can be used in the code of web pages and applications,
   and builds on top of existing technologies and standards. The goal of the specification
   is to make it easier to discover, exchange and integrate life science organization
-  profiles across the Internet.
-
-'
+  profiles across the Internet.'
 edit_url: https://github.com/BioSchemas/specifications/tree/master/Organization/specification.html
-g_mapping_file: Organization Mapping Simp
-gh_examples: https://github.com/BioSchemas/specifications/tree/master/Organization/examples
+gh_examples: https://gist.github.com/kcmcleod/1d09603a6dd2c409678a4376dbc4da3c
 gh_folder: https://github.com/BioSchemas/specifications/tree/master/Organization
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Organization
+group: organizations
 hierarchy:
-- Organization
 - Thing
-layout: new_spec_detail
+- Organization
+live_deploy: ''
 name: Organization
 parent_type: Organization
-properties:
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - ContactPoint
-  marginality: Recommended
-  name: contactPoint
-  parent: Organization
-  sdo_desc: A contact point for a person or organization.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Organization
-  marginality: Optional
-  name: department
-  parent: Organization
-  sdo_desc: 'A relationship between an organization and a department of that organization,
-    also described as an organization (allowing different urls, logos, opening hours).
-    For example: a store with a pharmacy, or a bakery with a cafe.'
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Date
-  marginality: Optional
-  name: dissolutionDate
-  parent: Organization
-  sdo_desc: The date that this organization was dissolved.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Minimum
-  name: legalName
-  parent: Organization
-  sdo_desc: The official name of the organization, e.g. the registered company name.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Place
-  - PostalAddress
-  - Text
-  marginality: Recommended
-  name: location
-  parent: Organization
-  sdo_desc: The location of for example where the event is happening, an organization
-    is located, or where an action takes place.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - ImageObject
-  - URL
-  marginality: Recommended
-  name: logo
-  parent: Organization
-  sdo_desc: An associated logo.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Organization
-  - Person
-  marginality: Recommended
-  name: member
-  parent: Organization
-  sdo_desc: A member of an Organization or a ProgramMembership. Organizations can
-    be members of organizations; ProgramMembership is typically for individuals.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Organization
-  - ProgramMembership
-  marginality: Recommended
-  name: memberOf
-  parent: Organization
-  sdo_desc: An Organization (or ProgramMembership) to which this Person or Organization
-    belongs.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - OwnershipInfo
-  - Product
-  marginality: Optional
-  name: owns
-  parent: Organization
-  sdo_desc: Products owned by the organization or person.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Organization
-  marginality: Optional
-  name: parentOrganization
-  parent: Organization
-  sdo_desc: The larger organization that this organization is a <a class="localLink"
-    href="http://schema.org/subOrganization">subOrganization</a> of, if any.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Organization
-  marginality: Optional
-  name: subOrganization
-  parent: Organization
-  sdo_desc: 'A relationship between two organizations where the first includes the
-    second, e.g., as a subsidiary. See also: the more specific ''department'' property.'
-- bsc_dec: 'The type of the organization selected from a controlled vocabulary: single-company
-    corporation, multinational, not-for-profit, alliance, consortium, institute, department,
-    working party, project, etc.'
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: X
-  expected_type:
-  - CV
-  marginality: Minimum
-  name: type
-  parent: Organization
-  sdo_desc: ''
-- bsc_dec: To record if the organization is still active, and if it were a project
-    or alliance, what the outcome was, or if it has closed down or merged, why and
-    when.
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: active
-    - name: closed
-    - name: merged
-  expected_type:
-  - CV
-  - Text
-  marginality: Recommended
-  name: status
-  parent: Organization
-  sdo_desc: Cant do CV and/or Text
-- bsc_dec: A description of how the organization is funded.
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: X
-  expected_type:
-  - CV
-  - Text
-  marginality: Recommended
-  name: fundingModel
-  parent: Organization
-  sdo_desc: Cant do CV and/or Text
-- bsc_dec: Defines a membership category and associated fees (for projects and alliances
-    etc.)
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Offer
-  marginality: Recommended
-  name: membershipCateogry
-  parent: Organization
-  sdo_desc: ''
-- bsc_dec: Scientific topics that describe the organization and its activities, using
-    a scientific ontology term from EDAM topics.
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: X
-  expected_type:
-  - CV
-  - Text
-  marginality: Minimum
-  name: topic
-  parent: Organization
-  sdo_desc: Cant do CV and/or Text
-- bsc_dec: "Keywords to describe the organization. Use term which are not available
-    in EDAM \u201CScientific Topic\u201D. Use text keywords or ontology terms from
-    other ontologies which could complement EDAM topics."
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - CV
-  - Text
-  marginality: Recommended
-  name: keywords
-  parent: Organization
-  sdo_desc: Cant do CV and/or Text
 spec_mapping_url: https://docs.google.com/spreadsheets/d/14UoeVmh2eRRWlyQgOJWAuCIW7DMuwhLH6O3CBeXfoTI/edit?usp=drivesdk
 spec_type: Profile
 status: revision
 subtitle: ''
-use_cases_url: err_404
+use_cases_url: /useCases/Organizations/
 version: '0.1'
 ---
+
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  <table class="bioschemas_properties bsc_type">
+                     <thead>
+                        <tr>
+                           <th>Property</th>
+                           <th>Expected Type</th>
+                           <th>Description</th>
+                           <th>CD</th>
+                           <th>Controlled Vocabulary</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <!-- MINIMUM -->
+                        <tr class="cardinality"><td colspan="5">Marginality: <b>Minimum</b></td></tr>
+                        <tr>
+                           <th><a href="http://schema.org/description">description</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A description of the item.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/legalName">legalName</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: The official name of the organization, e.g. the registered company name.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/name">name</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: The name of the item.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                        </tr>
+                        <tr>
+                           <th><a class="externalProp" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></th>
+                           <td>
+                             <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                              <strong>Missing!</strong>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/sameAs">sameAs</a></th>
+                           <td>
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                        </tr>
+                        <tr id="topic">
+                           <th><a class="newBsc" href="#">topic</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a><br />
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: Scientific topics that describe the organization and its activities, ideally using an ontology term from <a class="externalProp" href="http://edamontology.org/topic_0003">EDAM:Topic</a>.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                             <a class="externalProp" href="http://edamontology.org/topic_0003">EDAM:Topic</a>
+                           </td>
+                        </tr>
+                        <tr id="type">
+                           <th><a class="newBsc" href="#">type</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: The type of the organization should be selected from the Controlled Vocabulary column.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                             single-company corporation,<br />multinational,<br />not-for-profit,<br />alliance,<br />consortium,<br />institute,<br />department,<br />working party,<br />project.
+                           </td>
+                        </tr>
+
+
+                        <!-- RECOMMENDED -->
+                        <tr class="cardinality"><td colspan="5">Marginality: <b>Recommended</b></td></tr>
+                        <tr>
+                           <th><a href="http://schema.org/alternateName">alternateName</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: An alias for the item.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/contactPoint">contactPoint</a></th>
+                           <td>
+                              <a href="http://schema.org/ContactPoint">ContactPoint</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A contact point for a person or organization.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr id="fundingModel">
+                           <th><a class="newBsc" href="#">fundingModel</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: A description of how the organization is funded.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/keywords">keywords</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a><br />
+                              <a href="http://schema.org/URL">URL</a><br />
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.<br />
+                             <strong>Bioschemas</strong>: Keywords to describe the organization. Use complementaty ontology terms which are not available in EDAM. This should not duplicate the information in <a class="newBsc" href="#topic">topic</a>.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/location">location</a></th>
+                           <td>
+                              <a href="http://schema.org/Place">Place</a><br />
+                              <a href="http://schema.org/PostalAddress">PostalAddress</a><br />
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: The location of for example where the event is happening, an organization is located, or where an action takes place.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/logo">logo</a></th>
+                           <td>
+                              <a href="http://schema.org/ImageObject">ImageObject</a><br />
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: An associated logo.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/member">member</a></th>
+                           <td>
+                              <a href="http://schema.org/Organization">Organization</a><br />
+                              <a href="http://schema.org/Person">Person</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals. <em>Inverse property <a href="http://schema.org/memberOf">memberOf</a></em>.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/memberOf">memberOf</a></th>
+                           <td>
+                              <a href="http://schema.org/Organization">Organization</a><br />
+                              <a href="http://schema.org/ProgramMembership">ProgramMembership</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: An Organization (or ProgramMembership) to which this Person or Organization belongs. <em>Inverse property <a href="http://schema.org/member">member</a></em>.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr id="membershipCategory">
+                           <th><a class="newBsc" href="#">membershipCategory</a></th>
+                           <td>
+                              <a href="http://schema.org/Offer">Offer</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: Defines a membership category and associated fees (for projects and alliances etc.).
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr id="status">
+                           <th><a class="newBsc" href="#">status</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: To record if the organization is still alive, and if it were are project or alliance, what the outcome was, or if it has closed down or merged, why and when.<br />
+                             <u><strong>Note</strong></u>: There is a <a href="http://health-lifesci.schema.org/status">health-lifesci.status</a>, but this is not related to the current status property.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                             active,<br />dormant,<br />merged,<br />closed
+                           </td>
+                        </tr>
+                        <tr>
+                          <th><a href="http://schema.org/url">url</a></th>
+                          <td>
+                             <a href="http://schema.org/URL">URL</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: URL of the item.
+                          </td>
+                          <td>MANY</td>
+                          <td>
+                       </tr>
+
+
+
+                        <!-- OPTIONAL -->
+                        <tr class="cardinality"><td colspan="5">Marginality: <b>Optional</b></td></tr>
+                        <tr id="attachment">
+                           <th><a class="newBsc" href="#">attachment</a></th>
+                           <td>
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: Any files or related websites which give more information about this organization, e.g., flyers, third party sites, ...
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr id="budget">
+                           <th><a class="newBsc" href="#">budget</a></th>
+                           <td>
+                              <a href="http://schema.org/PriceSpecification">PriceSpecification</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: The annual (or total - for a project) budget for the organization.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr id="dateFounded">
+                           <th><a class="newBsc" href="#">dateFounded</a></th>
+                           <td>
+                              <a href="http://schema.org/Date">Date</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: The date the organization was originally founded. If created through a merger, this should be the foundation date of the purchasing organization.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/dateModified">dateModified</a></th>
+                           <td>
+                              <a href="http://schema.org/Date">Date</a><br />
+                              <a href="http://schema.org/DateTime">DateTime</a>
+                           </td>
+                           <td>
+                             <strong>Schemas</strong>: The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.<br />
+                             <strong>Bioschemas</strong>: The date when the organization information was last modified.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/department">department</a></th>
+                           <td>
+                              <a href="http://schema.org/Organization">Organization</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/dissolutionDate">dissolutionDate</a></th>
+                           <td>
+                              <a href="http://schema.org/Date">Date</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: The date that this organization was dissolved.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr id="founderMember">
+                           <th><a class="newBsc" href="#">founderMember</a></th>
+                           <td>
+                              <a href="http://schema.org/Organization">Organization</a><br />
+                              <a href="http://schema.org/Person">Person</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: For an alliance or collaboration or project, the founding members.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/owns">owns</a></th>
+                           <td>
+                              <a href="http://schema.org/Date">OwnershipInfo</a><br />
+                              <a href="http://schema.org/Product">Product</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: Products owned by the organization or person.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/parentOrganization">parentOrganization</a></th>
+                           <td>
+                              <a href="http://schema.org/Organization">Organization</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: The larger organization that this organization is a <a href="http://schema.org/subOrganization">subOrganization</a> of, if any.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr id="socialMedia">
+                           <th><a class="newBsc" href="#">socialMedia</a></th>
+                           <td>
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: Link to social media websites like twitter or facebook.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/subOrganization">subOrganization</a></th>
+                           <td>
+                              <a href="http://schema.org/Organization">Organization</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+
+
+
+
+
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+      
+      
+      
+   </body>
+</html>

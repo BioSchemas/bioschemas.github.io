@@ -2,7 +2,6 @@
 layout: group-details
 identifier: phenotypes
 name: Phenotypes
-path: phenotypes.html
 collection: groups
 active: true
 type: biological

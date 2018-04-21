@@ -1,23 +1,19 @@
 ---
+dateModified: 2018-03-01
 description: A BioChemEntity is any object that exists in the physical world and
-  cannot be better represented with any other existing type in schema.org.
+  cannot be better represented with any other existing type in schema.org. This includes
+  theoretical objects that may potentially be invented/created, but do not currently exist. For example, synthetic possible chemicals.
   <br />
   BioChemEntity is a flexible and extensible wrapper for Life Sciences entities.
-  <strike>Representations of physical entities in Life Sciences are usually recorded in datasets;
-  the link to a dataset should be done via properties. A particular Life Sciences
-  entity, refer to as a profile in Bioschemas, will customize BioChemEntity by modifying
-  the marginality, cardinality and ontologies used. For instance, a protein profile
-  would recommend pointing to an organism a part of the minimum information, but not
-  necessarily to a sample or disease.</strike>
 hierarchy:
 - Thing
-group: bioentities
+gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20BioChemEntity
+group: biologicalentities
 name: BioChemEntity
 parent_type: Thing
 spec_type: Type
 status: revision
 subtitle: Bioschemas specification describing a physical entity
-use_cases_url: err_404
 version: '0.1'
 
 bsc: #0B794B;
@@ -36,7 +32,7 @@ external: #454547;
       {% include navbar.html %}
       <div class="page-content">
         <div class="wrapper">
-           <div id="main_content_wrap" class="outer">
+           <div id="main-content-wrapper" class="outer">
               <section id="main_content" class="inner">
                 {% include type_start.html %}
 
@@ -53,6 +49,14 @@ external: #454547;
                         <td colspan="3">
                            New properties for <a style="color: #0B794B;" href="#">{{page.name}}</a> (pending schema.org integration).
                         </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/additionalProperty">additionalProperty</th>
+                       <td>
+                         <a href="http://schema.org/PropertyValue">PropertyValue</a>
+                       </td>
+                       <td><strong>Schema</strong>: A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.
+Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
                      </tr>
                      <tr id="contains">
                        <th style="color: #0B794B;">contains</th>
@@ -75,7 +79,8 @@ external: #454547;
                        <td>
                          <a style="color: #0B794B;" href="#">BioChemEntity</a><br><a href="http://schema.org/URL">URL</a>
                        </td>
-                       <td><strong>Bioschemas</strong>: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: containedIn.</em></td>
+                       <td>
+                         <strong>Bioschemas</strong>: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: containedIn.</em>                       </td>
                      </tr>
                      <tr>
                        <th><a style="color: #0B794B;" href="http://schema.org/location">location</a></th>
@@ -87,11 +92,11 @@ external: #454547;
                        <td>
                          <strong>Schema</strong>: The location of for example where the event is happening, an organization is located, or where an action takes place.<br/>
                          <strong>Bioschemas</strong>: The location can refer to a position in the chromosome or sequence or to a physical place where, for instance, a
-                         sample is stored. <br />
-                         <u>Note</u>: The list of Expected Types has been extended as schema.org/location only has Place, PostalAddress and Text.
+                         sample is stored. Using additionalType is advised to make the distinction. For instance, <a href="https://github.com/OBF/FALDO">FALDO</a> can be used for sequence coordinates.<br />
+                         <u><strong>Note</strong></u>: The list of Expected Types has been extended as <a href="http://schema.org/location">schema.org/location</a> only has Place, PostalAddress and Text.
                        </td>
                      </tr>
-                     <tr id="preferredLabel">
+                     <!-- <tr id="preferredLabel">
                        <th style="color: #0B794B;">preferredLabel</th>
                        <td>
                          <a href="http://schema.org/Text">Text</a>
@@ -99,7 +104,7 @@ external: #454547;
                        <td>
                          <strong>Bioschemas</strong>:  Indicates the preferred label to refer to a specific (sub)type of BioChemEntity.
                        </td>
-                     </tr>
+                     </tr> -->
                      <tr class="reu_props_sdo">
                         <td colspan="3">Properties from <a href="http://schema.org/Thing">Thing</a></td>
                      </tr>
@@ -113,8 +118,12 @@ external: #454547;
                          This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax -
                          the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those
                          defined externally. <br />
-                         <strong>Bioschemas</strong>:  As BioChemEntity is a generic wrapper for entities in Life Sciences, customized types (a.k.a. profiles in Bioschemas)
-                         should specify what ontologies and terms should be used.
+                         <strong>Bioschemas</strong>:  As BioChemEntity is a generic wrapper for entitties in Life Sciences, customized types (a.k.a. profiles in Bioschemas) should specify what
+                         ontologies and terms should be used. SIO (<a href="http://bioportal.bioontology.org/ontologies/SIO">http://bioportal.bioontology.org/ontologies/SIO</a>) covers a wide
+                         range of concepts in Life Sciences and accept suggestions about additions (see <a href="https://github.com/micheldumontier/semanticscience/issues">https://github.com/micheldumontier/semanticscience/issues</a>),
+                         other ontologies are possible as well. Customized types should be as specific as possible. For instance, <a href="http://semanticscience.org/resource/SIO_010043">http://semanticscience.org/resource/SIO_010043</a>
+                         would work for a protein while <a href="http://semanticscience.org/resource/SIO_000985">http://semanticscience.org/resource/SIO_000985</a> for a gene coding a protein (which is more specific than gene as described by <a href="http://semanticscience.org/resource/SIO_010035">http://semanticscience.org/resource/SIO_010035</a>). If no better optoin, a generic term could be used as well
+                         (like <a href="http://semanticscience.org/resource/SIO_000004">http://semanticscience.org/resource/SIO_000004</a>).
                        </td>
                      </tr>
                      <tr>
@@ -166,19 +175,15 @@ external: #454547;
                        </td>
                      </tr>
                      <tr>
-                       <th><a style="color: #0B794B;" href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
+                       <th><a href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
                        <td>
-                         {% if status == revision %}
-                         <a style="color: #0B794B;" href="/devTypes/DataRecord/specification/">DataRecord</a>
-                         {% else %}
-                         <a style="color: #0B794B;" href="/specifications/DataRecord/specification/">DataRecord</a>
-                         {% endif %}<br /><a href="http://schema.org/URL">URL</a>
+                         <a href="http://schema.org/CreativeWork">CreativeWork</a><br /><a href="http://schema.org/URL">URL</a>
                        </td>
                        <td>
                          <strong>Schema</strong>: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See
                          <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br />
                          <strong>Bioschemas</strong>: Link via Record or <a href="http://schema.org/URL">URL</a> to the main Record representing this entity in a dataset.<br />
-                         Note: Bioschemas has replaced CreativeWork with DataRecord in the Expected Types.
+                         Note: Please use a <a class="newBsc" href="/types/DataRecord/specification">DataRecord</a> where possible.
                        </td>
                      </tr>
                      <tr>
@@ -215,7 +220,6 @@ external: #454547;
                        </td>
                        <td>
                          <strong>Schema</strong>: A CreativeWork or Event about this Thing. <em>Inverse property: about.</em>
-                         <u>Note</u>: This is a pending property.
                        </td>
                      </tr>
                      <tr>
@@ -235,8 +239,8 @@ external: #454547;
            </div>
       </div>
       {% include footer.html %}
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-      <script src="/js/scripts.js"></script>
+      
+      
+      
    </body>
 </html>

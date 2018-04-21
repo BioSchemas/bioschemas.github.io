@@ -8,5 +8,5 @@ affiliation: University of Bologna / Elixir Italy
 homepage: https://www.unibo.it/sitoweb/giuseppe.profiti2/en
 github_username: profgiuseppe
 orcid: 0000-0001-6067-6174
-groups: [bioentities, tools, validation]
+groups: [biologicalentities, proteins, tools, validation]
 ---

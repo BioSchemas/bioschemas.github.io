@@ -1,422 +1,493 @@
 ---
-group: events
+cross_walk_url: https://docs.google.com/spreadsheets/d/1Hu1dmrS7jPgHWp8hUQWve9BzaYZi_EzTj9-gDuI9sBM/
+dateModified: 2018-03-10
 description: 'Specification for describing a Life Science event. This includes conferences,
   workshops, meetings, courses, receptions, networking and prizegivings.        '
-edit_url: https://github.com/BioSchemas/specifications/tree/master/Event/specification.html
-g_mapping_file: Event Mapping Simp
-gh_examples: https://github.com/BioSchemas/specifications/tree/master/Event/examples
-gh_folder: https://github.com/BioSchemas/specifications/tree/master/Event
+group: events
+gh_examples: https://github.com/BioSchemas/specifications/tree/master/Event/examples/
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Event
 hierarchy:
-- Event
 - Thing
-layout: new_spec_detail
+- Event
+live_deploy: ''
 name: Event
 parent_type: Event
-properties:
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Audience
-  marginality: Recommended
-  name: audience
-  parent: Event
-  sdo_desc: An intended audience, i.e. a group for whom something was created.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Date
-  - DateTime
-  marginality: Minimum
-  name: endDate
-  parent: Event
-  sdo_desc: The end date and time of the item (in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO
-    8601 date format</a>).
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Place
-  - PostalAddress
-  - Text
-  marginality: Minimum
-  name: location
-  parent: Event
-  sdo_desc: The location of for example where the event is happening, an organization
-    is located, or where an action takes place.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Integer
-  marginality: Recommended
-  name: maximumAttendeeCapacity
-  parent: Event
-  sdo_desc: The total number of individuals that may attend an event or venue.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Offer
-  marginality: Optional
-  name: offers
-  parent: Event
-  sdo_desc: An offer to provide this item&#x2014;for example, an offer to sell a product,
-    rent the DVD of a movie, perform a service, or give away tickets to an event.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Organization
-  - Person
-  marginality: Minimum
-  name: organizer
-  parent: Event
-  sdo_desc: An organizer of an Event.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Organization
-  - Person
-  marginality: Optional
-  name: performer
-  parent: Event
-  sdo_desc: A performer at the event&#x2014;for example, a presenter, musician, musical
-    group or actor.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Review
-  marginality: Optional
-  name: review
-  parent: Event
-  sdo_desc: A review of the item.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Organization
-  - Person
-  marginality: Optional
-  name: sponsor
-  parent: Event
-  sdo_desc: A person or organization that supports a thing through a pledge, promise,
-    or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor
-    of an event.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Date
-  - DateTime
-  marginality: Minimum
-  name: startDate
-  parent: Event
-  sdo_desc: The start date and time of the item (in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO
-    8601 date format</a>).
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Event
-  marginality: Optional
-  name: subEvent
-  parent: Event
-  sdo_desc: An Event that is part of this event. For example, a conference event includes
-    many presentations, each of which is a subEvent of the conference.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Event
-  marginality: Optional
-  name: superEvent
-  parent: Event
-  sdo_desc: An event that this event is a part of. For example, a collection of individual
-    music performances might each have a music festival as their superEvent.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Recommended
-  name: alternateName
-  parent: Thing
-  sdo_desc: An alias for the item.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Minimum
-  name: description
-  parent: Thing
-  sdo_desc: A description of the item.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - PropertyValue
-  - Text
-  - URL
-  marginality: Optional
-  name: identifier
-  parent: Thing
-  sdo_desc: The identifier property represents any kind of identifier for any kind
-    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
-    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
-    many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background
-    notes</a> for more details.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Minimum
-  name: name
-  parent: Thing
-  sdo_desc: The name of the item.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - URL
-  marginality: Recommended
-  name: url
-  parent: Thing
-  sdo_desc: URL of the item.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Recommended
-  name: keywords
-  parent: Event
-  sdo_desc: Free text keywords to describe the event
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Date
-  marginality: Optional
-  name: dateModified
-  parent: Event
-  sdo_desc: Date when the event was last modified
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Organization
-  marginality: Minimum
-  name: hostInstitution
-  parent: Event
-  sdo_desc: The organization or institution responsible for hosting the event (not
-    necessarily responsible for organizing).
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: Workshops and courses
-    - name: Meetings and conferences
-    - name: Receptions and networking
-    - name: Awards and prizegivings
-  expected_type:
-  - EventType
-  marginality: Minimum
-  name: eventType
-  parent: Event
-  sdo_desc: This can be one of 4 options. Please see controlled vocabulary
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies:
-    - name: ONTOLOGY - EDAM
-      url: http://bioportal.bioontology.org/ontologies/EDAM?p=classes&conceptid=topic_0003
-    terms: []
-  expected_type:
-  - Topic
-  marginality: Recommended
-  name: topic
-  parent: Event
-  sdo_desc: The scientific topic the event is about. This should be links to ontology
-    terms.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  - URL
-  marginality: Recommended
-  name: programme
-  parent: Event
-  sdo_desc: A plan or schedule of activities or procedures to be followed.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  - URL
-  marginality: Recommended
-  name: deadline
-  parent: Event
-  sdo_desc: Deadlines dates for this event e.g. application deadline, poster submission,
-    paper submission, early registration
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Text
-  marginality: Recommended
-  name: prerequisite
-  parent: Event
-  sdo_desc: A list of prerequisites to be able to attend the event
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: First come first served
-    - name: Registration of interest
-    - name: By invitation
-  expected_type:
-  - Text
-  - Eligibility
-  marginality: Recommended
-  name: eligibility
-  parent: Event
-  sdo_desc: Defines the type of eligibility to attend this event e.g. first come first
-    served.
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Organization
-  - Text
-  marginality: Recommended
-  name: accreditation
-  parent: Event
-  sdo_desc: Type if accrediation or organisation that accredits the event
-- bsc_dec: ''
-  cardinality: ONE
-  controlled_vocab:
-    ontologies: []
-    terms:
-    - name: Proposed
-    - name: Pre-open
-    - name: Open
-    - name: Cancelled
-    - name: Full
-  expected_type:
-  - RegistrationStatus
-  marginality: Optional
-  name: registrationStatus
-  parent: Event
-  sdo_desc: Enumerative type displaying the status of registration for an event.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - URL
-  marginality: Optional
-  name: socialMedia
-  parent: Event
-  sdo_desc: Link to social media websites like twitter or facebook
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - URL
-  marginality: Optional
-  name: attachement
-  parent: Event
-  sdo_desc: Any files or related websites which give more information about this event.
-    e.g. flyers, third party sites handling tickets.
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Organization
-  - Person
-  marginality: Optional
-  name: submitter
-  parent: Event
-  sdo_desc: The person or organization who submits an event to a repository or registry
-    of events (such as iAnn, ISCB).
-- bsc_dec: ''
-  cardinality: MANY
-  controlled_vocab:
-    ontologies: []
-    terms: []
-  expected_type:
-  - Date
-  marginality: Optional
-  name: acceptanceNotificationDate
-  parent: Event
-  sdo_desc: Date for the host to confirm acceptance to applicants.
-spec_mapping_url: https://docs.google.com/spreadsheets/d/1cTMY96E5azi346CA4lRHWh7ZMMcJBeK41nVBRLKhEm0/edit?usp=drivesdk
 spec_type: Profile
 status: revision
 subtitle: Specification for describing an event in the Life Sciences
-use_cases_url: err_404
+use_cases_url: /useCases/Events/
 version: '0.1'
 ---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  <table class="bioschemas_properties bsc_type">
+                     <thead>
+                        <tr>
+                           <th>Property</th>
+                           <th>Expected Type</th>
+                           <th>Description</th>
+                           <th>CD</th>
+                           <th>Controlled Vocabulary</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <!-- MINIMUM -->
+                        <tr class="cardinality"><td colspan="5">Marginality: <b>Minimum</b></td></tr>
+                        <tr id="contact">
+                           <th><a class="newBsc" href="#">contact</a></th>
+                           <td>
+                              <a href="http://schema.org/Organization">Organization</a><br />
+                              <a href="http://schema.org/Person">Person</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: Main point of contact that can be contacted for general queries. This would be an event organizer or an administrator.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/description">description</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A description of the item.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/endDate">endDate</a></th>
+                           <td>
+                              <a href="http://schema.org/Date">Date</a><br />
+                              <a href="http://schema.org/DateTime">DateTime</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: The end date and time of the item (in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>).
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr id="eventType">
+                           <th><a class="newBsc" href="#">eventType</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: This can be one of 4 options; see the Controlled Vocabulary column.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                             workshops and courses,<br />
+                             meetings and conferences,<br />
+                             receptions and networking,<br />
+                             awards and prizegivings
+                           </td>
+                        </tr>
+                        <tr id="hostInstitution">
+                           <th><a class="newBsc" href="#">hostInstitution</a></th>
+                           <td>
+                              <a href="http://schema.org/Organization">Organization</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: The organization or institution responsible for hosting the event (not necessarily responsible for organizing).
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/location">location</a></th>
+                           <td>
+                              <a href="http://schema.org/PostalAddress">PostalAddress</a><br />
+                              <a href="http://schema.org/Place">Place</a><br />
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: The location of for example where the event is happening, an organization is located, or where an action takes place.<br />
+                             <strong>Bioschemas</strong>: The location of the event. It is recommended to use <a href="http://schema.org/Place">Place</a>, and within Place use the <a href="http://schema.org/PostalAddress">PostalAddress</a>
+                             and <a href="http://schema.org/GeoCoordinates">GeoCoordinates</a>.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/name">name</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: The name of the item.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a class="externalProp" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></th>
+                           <td>
+                             <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                              <strong>Missing!</strong>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/startDate">startDate</a></th>
+                           <td>
+                              <a href="http://schema.org/Date">Date</a><br />
+                              <a href="http://schema.org/DateTime">DateTime</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: The start date and time of the item (in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>).
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+
+
+<!-- RECOMMENDED -->
+                        <tr class="cardinality"><td colspan="5">Marginality: <b>Recommended</b></td></tr>
+                        <tr id="accreditation">
+                           <th><a class="newBsc" href="#">accrediation</a></th>
+                           <td>
+                              <a href="http://schema.org/Organization">Organization</a><br />
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: Type of accrediation or organization that accredits the event.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/alternateName">alternateName</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: An alias for the item.<br />
+                             <strong>Bioschemas</strong>: Can be used for the subtitle of the event.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a class="newBsc" href="http://schema.org/audience">audience</a></th>
+                           <td>
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: An intended audience, i.e. a group for whom something was created.<br />
+                             <strong>Bioschemas</strong>: The scientific background the participants should be from. Please use a term from <a href="http://edamontology.org/topic_0003">EDAM:Topic</a>.<br />
+                             <u><strong>Note</strong></u>: Bioschemas have changed the Expected Types from <a href="http://schema.org/Audience">Audience</a> to <a href="http://schema.org/URL">URL</a>.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                             <a href="http://edamontology.org/topic_0003">EDAM:Topic</a>
+                           </td>
+                        </tr>
+
+                        <tr id="deadline">
+                           <th><a class="newBsc" href="#">deadline</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: Deadline dates for this event e.g. application deadline, poster submission, paper submission, early registration.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr id="eligibility">
+                           <th><a class="newBsc" href="#">eligibility</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: Defines the type of eligibility to attend this event, e.g., first come first served. Please use one of the values from the Controlled Vocabulary column.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                             first come first served,<br />registration of interest,<br />by invitation
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/keywords">keywords</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/maximumAttendeeCapacity">maximumAttendeeCapacity</a></th>
+                           <td>
+                              <a href="http://schema.org/Integer">Integer</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: The total number of individuals that may attend an event or venue.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr id="prerequisite">
+                           <th><a class="newBsc" href="#">prerequisite</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A list of prerequisites to be able to attend the event.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr id="programme">
+                           <th><a class="newBsc" href="#">programme</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a><br />
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: A plan or schedule of activities or procedures to be followed.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr id="topic">
+                           <th><a class="newBsc" href="#">topic</a></th>
+                           <td>
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: The scientific topic the event is about. Please use a term from <a href="http://edamontology.org/topic_0003">EDAM:Topic</a>.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                             <a href="http://edamontology.org/topic_0003">EDAM:Topic</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/url">url</a></th>
+                           <td>
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: URL of the item.<br />
+                             <strong>Bioschemas</strong>: It is recommended you specify the URL even if it is the same as the current page.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <!-- OPTIONAL -->
+                        <tr class="cardinality"><td colspan="5">Marginality: <b>Optional</b></td></tr>
+                        <tr id="acceptanceNotification">
+                           <th><a class="newBsc" href="#">acceptanceNotification</a></th>
+                           <td>
+                             <a href="http://schema.org/Date">Date</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: Date for the organizer to confirm acceptance to applicants.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr id="attachment">
+                           <th><a class="newBsc" href="#">attachment</a></th>
+                           <td>
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: Any files or related websites which give more information about this event. For example, flyers, third party sites handling tickets.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/dateModified">dateModified</a></th>
+                           <td>
+                              <a href="http://schema.org/Date">Date</a><br />
+                              <a href="http://schema.org/DateTime">DateTime</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.<br />
+                             <strong>Bioschemas</strong>: Date when the event was last modified.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/identifer">identifier</a></th>
+                           <td>
+                              <a href="http://schema.org/PropertyValue">PropertyValue</a><br />
+                              <a href="http://schema.org/Text">Text</a><br />
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs,
+                             GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.
+                             See <a hr="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.<br />
+                             <strong>Bioschemas</strong>: Unique id for the event.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                          <tr>
+                             <th><a href="http://schema.org/offers">offers</a></th>
+                             <td>
+                                <a href="http://schema.org/Organization">Offer</a>
+                             </td>
+                             <td>
+                               <strong>Schema</strong>: An offer to provide this item—for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.
+                             </td>
+                             <td>ONE</td>
+                             <td>
+                             </td>
+                          </tr>
+                          <tr>
+                             <th><a href="http://schema.org/performer">performer</a></th>
+                             <td>
+                                <a href="http://schema.org/Organization">Organization</a><br />
+                                <a href="http://schema.org/Person">Person</a>
+                             </td>
+                             <td>
+                               <strong>Schema</strong>: A performer at the event—for example, a presenter, musician, musical group or actor.
+                             </td>
+                             <td>MANY</td>
+                             <td>
+                             </td>
+                          </tr>
+                          <tr id="registrationStatus">
+                           <th><a class="newBsc" href="#">registrationStatus</a></th>
+                           <td>
+                              <a href="http://schema.org/Text">Text</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: The status of registration for an event; choose a value from the Controlled Vocabulary column.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                             proposed,<br />pre-open,<br />open,<br />cancelled,<br />full
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/review">review</a></th>
+                           <td>
+                              <a href="http://schema.org/Review">Review</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A review of the item.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr id="socialMedia">
+                           <th><a class="newBsc" href="#">socialMedia</a></th>
+                           <td>
+                              <a href="http://schema.org/URL">URL</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: Link to a social media website like Twitter or Facebook.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/sponsor">sponsor</a></th>
+                           <td>
+                              <a href="http://schema.org/Organization">Organization</a><br />
+                              <a href="http://schema.org/Person">Person</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.<br />
+                             <strong>Bioschemas</strong>: The organizations or institutions providing sponsorship for the event.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr id="submitter">
+                           <th><a class="newBsc" href="#">submitter</a></th>
+                           <td>
+                             <a href="http://schema.org/Organization">Organization</a><br />
+                             <a href="http://schema.org/Person">Person</a>
+                           </td>
+                           <td>
+                             <strong>Bioschemas</strong>: The person or organization who submits an event to a respository or registry of events (such as iAnn or ISCB).
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/subEvent">subEvent</a></th>
+                           <td>
+                              <a href="http://schema.org/Event">Event</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference.
+                           </td>
+                           <td>MANY</td>
+                           <td>
+                           </td>
+                        </tr>
+                        <tr>
+                           <th><a href="http://schema.org/superEvent">superEvent</a></th>
+                           <td>
+                              <a href="http://schema.org/Event">Event</a>
+                           </td>
+                           <td>
+                             <strong>Schema</strong>: An Event that this event is part of. For example, a collection of individual music performances might each have a music festival as their superEvent.
+                           </td>
+                           <td>ONE</td>
+                           <td>
+                           </td>
+                        </tr>
+                      </tbody>
+                   </table>
+                </section>
+             </div>
+          </div>
+       </div>
+       {% include footer.html %}
+       
+       
+       
+    </body>
+ </html>
