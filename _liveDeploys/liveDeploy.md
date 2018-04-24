@@ -18,7 +18,7 @@ list:
     name: Fairsharing
     description:
     URL: https://fairsharing.org/
-    schema_org: DataCatalog"
+    schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments:
