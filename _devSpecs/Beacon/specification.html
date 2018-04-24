@@ -29,9 +29,10 @@ spec_info:
     their genetic variant cardinality service for better integration with other beacons
     within the beacon-network. It builds upon the Beacon service API and uses existing
     schema.org entities and properties. '
-  version: "0.2"
+  version: 0.2-draft
+  version_date: 20180423T140938
   official_type: ""
-  full_example: ""
+  full_example: https://github.com/BioSchemas/specifications/tree/master/Beacon/examples
 mapping:
 - property: aggregator
   expected_types:
@@ -46,8 +47,8 @@ mapping:
   example: ""
 - property: dataset
   expected_types:
-  - Dataset
-  description: 'A dataset contained in this catalog.Inverse property: includedInDataCatalog.'
+  - DataCatalog
+  description: "A dataset contained in this catalog. \ninverse property: [includedInDataCatalog.](http://schema.org/includedInDataCatalog)"
   type: ""
   type_url: ""
   bsc_description: Datasets served by this Beacon.
@@ -74,7 +75,8 @@ mapping:
   description: The identifier property represents any kind of identifier for any kind
     of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
     properties for representing many of these, either as textual strings or as URL
-    (URI) links. See background notes for more details.
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
   type: ""
   type_url: ""
   bsc_description: Unique identifier of the Beacon.
@@ -111,7 +113,7 @@ mapping:
   - Person
   description: The service provider, service operator, or service performer; the goods
     producer. Another party (a seller) may offer those services or goods on behalf
-    of the provider. A provider may also serve as the seller. Supersedes carrier.
+    of the provider. A provider may also serve as the seller. Supersedes [carrier](http://schema.org/carrier).
   type: ""
   type_url: ""
   bsc_description: Contact information for this Beacon.

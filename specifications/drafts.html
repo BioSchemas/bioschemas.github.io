@@ -25,7 +25,8 @@ title: Draft BioSchemas Specifications
             {% assign prof_specs = site.devSpecs | where: 'spec_type', 'Profile'%}
             {% for spec in prof_specs %}
             <tr>
-               <th><a href="/devSpecs/{{spec.name}}/specification" title="{{spec.subtitle}}">{{ spec.name }}</a><br />(v{{spec.version}})<br />{{spec.dateModified}}</th>
+                {% assign date_time = spec.spec_info.version_date %}
+               <th><a href="/devSpecs/{{spec.name}}/specification" title="{{spec.subtitle}}">{{ spec.name }}</a><br />(v{{spec.spec_info.version}})<br />{{date_time | date_to_long_string }}</th>
                <td>
                   {% assign group = site.groups | where:"identifier", spec.group %}
                   {% for g in group %}
@@ -66,12 +67,12 @@ title: Draft BioSchemas Specifications
                   {% endif %}
                </td>
                <td class="spec_links">
-                  {% if spec.gh_examples == '' %}
+                  {% if spec.spec_info.full_example == '' %}
                   <a>
                   <img src="/images/spec_examples.png" alt="View BioSchemas {{ spec.name }} Examples" style="filter: grayscale(100%);">
                   </a>
                   {% else %}
-                  <a href="{{spec.gh_examples}}">
+                  <a href="{{spec.spec_info.full_example}}">
                   <img src="/images/spec_examples.png" alt="View BioSchemas {{ spec.name }} Examples">
                   </a>
                   {% endif %}
