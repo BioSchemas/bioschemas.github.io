@@ -103,6 +103,14 @@ list:
     bsc_ver: 0.1
     comments:
 -
+    name: Fairsharing
+    description:
+    URL: https://fairsharing.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:
+-
     name: Pscan
     description:
     URL: http://159.149.160.88/pscan/
