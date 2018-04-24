@@ -4,9 +4,9 @@ id: RafaelJimenez
 first-name: Rafael C
 last-name: Jimenez
 collection: people
-affiliation:
-homepage:
+affiliation: ELIXIR Hub
+homepage: https://www.linkedin.com/in/rafaelcjimenez/
 github_username: rajido
-orcid:
-groups: [events, organizations, people, trainingmaterials, standards, tools, community, data, datarepositories]
+orcid: 0000-0001-5404-7670
+groups: [events, organizations, people, trainingmaterials, tools, community, datarepositories, beacons, community, samples]
 ---
