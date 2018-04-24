@@ -8,6 +8,7 @@ description: Services/sites implementing Bioschemas's markup
 list:
 -
     name: Identifiers
+    description:
     URL: http://identifiers.org/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
@@ -15,13 +16,15 @@ list:
     comments: Could implement Dataset and DataRecord as well.
 -
     name: Fairsharing
+    description:
     URL: https://fairsharing.org/
-    schema_org: DataCatalog"
+    schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments:
 -
     name: Gigadb
+    description:
     URL: http://gigadb.org/site/index
     schema_org: DataCatalog
     bsc_profile: DataCatalog
@@ -29,6 +32,7 @@ list:
     comments: 
 -
     name: Human Protein Atlas
+    description:
     URL: https://www.proteinatlas.org/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
@@ -36,6 +40,7 @@ list:
     comments: Could implement Dataset and DataRecord as well.
 -
     name: EGA
+    description:
     URL: https://ega-archive.org/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
@@ -43,6 +48,7 @@ list:
     comments:
 -
     name: Isaexplorer
+    description:
     URL: http://scientificdata.isa-explorer.org/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
@@ -50,6 +56,7 @@ list:
     comments:
 -
     name: IUPHAR/BPS
+    description:
     URL: http://www.guidetopharmacology.org/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
@@ -57,6 +64,7 @@ list:
     comments:
 -
     name: EGA Dataset
+    description:
     URL: https://ega-archive.org/datasets/EGAD00000000001
     schema_org: Dataset
     bsc_profile: Dataset
@@ -64,6 +72,7 @@ list:
     comments:
 -
     name: MobiDB
+    description:
     URL: http://mobidb.bio.unipd.it/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
@@ -71,6 +80,7 @@ list:
     comments: 
 -
     name: MobiDB
+    description:
     URL: http://mobidb.bio.unipd.it/
     schema_org: Dataset
     bsc_profile: Dataset
@@ -78,6 +88,7 @@ list:
     comments: Can implement DataRecord type.
 -
     name: Biosamples
+    description: 5 million+ pages
     URL: https://www.ebi.ac.uk/biosamples/samples/SAMEA491372
     schema_org:
     bsc_profile: Sample
@@ -85,13 +96,23 @@ list:
     comments:
 -
     name: DataMed
+    description:
     URL: https://datamed.org/display-item.php?repository=0006&id=59139ef65152c62a9fc18ff7
     schema_org: Dataset
     bsc_profile: Dataset
     bsc_ver: 0.1
     comments:
 -
+    name: Fairsharing
+    description:
+    URL: https://fairsharing.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:
+-
     name: Pscan
+    description:
     URL: http://159.149.160.88/pscan/
     schema_org: SoftwareApplication
     bsc_profile: Tool
@@ -99,6 +120,7 @@ list:
     comments:
 -
     name: PscanChIP
+    description:
     URL: http://159.149.160.88/pscan_chip_dev/
     schema_org: SoftwareApplication
     bsc_profile: Tool
@@ -106,6 +128,7 @@ list:
     comments:
 -
     name: Cscan
+    description:
     URL: http://159.149.160.88/cscan/
     schema_org: SoftwareApplication
     bsc_profile: Tool
@@ -113,6 +136,7 @@ list:
     comments:
 -
     name: BAR 3.0
+    description:
     URL: https://bar.biocomp.unibo.it/bar3/
     schema_org: SoftwareApplication
     bsc_profile: Tool
