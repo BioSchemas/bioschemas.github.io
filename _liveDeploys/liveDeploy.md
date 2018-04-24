@@ -18,7 +18,7 @@ list:
     name: Fairsharing
     description:
     URL: https://fairsharing.org/
-    schema_org: DataCatalog"
+    schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments:
@@ -98,6 +98,14 @@ list:
     name: DataMed
     description:
     URL: https://datamed.org/display-item.php?repository=0006&id=59139ef65152c62a9fc18ff7
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:
+-
+    name: Fairsharing
+    description:
+    URL: https://fairsharing.org/
     schema_org: Dataset
     bsc_profile: Dataset
     bsc_ver: 0.1
