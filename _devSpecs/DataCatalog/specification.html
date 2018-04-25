@@ -1,26 +1,235 @@
 ---
-cross_walk_url: https://docs.google.com/spreadsheets/d/1H12h5VpVNJFzNs2RQJWjXkauCEn3qEsVFzKRoiHHffY
-dateModified: 2018-02-25
-description: "A guide for how to describe data catalogs/repositories in the life-sciences using Schema.org-like annotation."
+name: DataCatalog
+
+status: revision
+spec_type: Profile
 group: datarepositories
-gh_examples: https://github.com/BioSchemas/specifications/tree/master/DataCatalog/examples/
+use_cases_url: /useCases/DataRepositories/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1H12h5VpVNJFzNs2RQJWjXkauCEn3qEsVFzKRoiHHffY
 gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20DataCatalogue
+live_deploy: /liveDeploys/
+
+parent_type: DataCatalog
 hierarchy:
 - Thing
 - CreativeWork
 - DataCatalog
-live_deploy: /liveDeploys/
-name: DataCatalog
-parent_type: DataCatalog
-spec_type: Profile
-status: revision
-subtitle: Bioschemas specification for describing data repositories and data catalogs in the life-sciences.
-use_cases_url: /useCases/DataRepositories
-version: 0.1
 
+spec_info:
+  title: DataCatalog
+  subtitle: Bioschemas specification for describing data repositories and data catalogues
+    in the life-sciences
+  description: A guide for how to describe data catalogs/repositories in the life-sciences using Schema.org-like annotation.
+  version: 0.1-draft
+  version_date: 20180425T160608
+  official_type: ""
+  full_example: https://github.com/BioSchemas/specifications/tree/master/DataCatalog/examples/
+mapping:
+- property: alternateName
+  expected_types:
+  - Text
+  description: An alias for the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: citation
+  expected_types:
+  - CreativeWork
+  - Text
+  description: A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
+  type: ""
+  type_url: ""
+  bsc_description: CreativeWork:Name,URL
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: dataset
+  expected_types:
+  - Dataset
+  description: |-
+    A dataset contained in this catalog.
+    Inverse property: [includedInDataCatalog](http://schema.org/includedDataCatalog).
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: dateCreated
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was created or the item was added
+    to a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: dateModified
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was most recently modified or when
+    the item's entry was modified within a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: The date on which the data catalog/repository was most recently
+    modified.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: fileFormat
+  expected_types:
+  - Text
+  - URL
+  description: Media type, typically MIME format (see IANA site) of the content e.g.
+    application/zip of a SoftwareApplication binary. In cases where a CreativeWork
+    has several media type representations, 'encoding' can be used to indicate each
+    MediaObject alongside particular fileFormat information. Unregistered or niche
+    file formats can be indicated instead via the most appropriate URL, e.g. defining
+    Web page or a Wikipedia entry.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: Unique identifier for the data catalog.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: keywords
+  expected_types:
+  - Text
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  type: ""
+  type_url: ""
+  bsc_description: Use terms from Controlled Vocabularies where possible.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: license
+  expected_types:
+  - CreativeWork
+  - URL
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  type: ""
+  type_url: ""
+  bsc_description: CreativeWork:Name,URL
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: provider
+  expected_types:
+  - Organization
+  - Person
+  description: The service provider, service operator, or service performer; the goods
+    producer. Another party (a seller) may offer those services or goods on behalf
+    of the provider. A provider may also serve as the seller. Supersedes carrier.
+  type: ""
+  type_url: ""
+  bsc_description: Contact information for this data repository/catalog.
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: publication
+  expected_types:
+  - PublicationEvent
+  description: A publication event associated with the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: rdf:type
+  expected_types:
+  - URL
+  description: ""
+  type: external
+  type_url: https://www.w3.org/1999/02/22-rdf-syntax-ns#type
+  bsc_description: This is used by validation tools to indentify the profile used.
+    You must use the value specified in the Controlled Vocabulary column.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: sourceOrganization
+  expected_types:
+  - Organization
+  description: The Organization on whose behalf the creator was working.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
 ---
-
-
 <!DOCTYPE HTML>
 <html>
    {% include head.html %}
@@ -32,221 +241,11 @@ version: 0.1
             <div id="main-content-wrapper" class="outer">
                <section id="main_content" class="inner">
                   {% include profile_start.html %}
-                  <table class="bioschemas_properties bsc_type">
-                     <thead>
-                        <tr>
-                           <th>Property</th>
-                           <th>Expected Type</th>
-                           <th>Description</th>
-                           <th>CD</th>
-                           <th>Controlled Vocabulary</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                       <tr class="cardinality">
-                          <td colspan="5">
-                             Marginality: <b>Minimum</b>
-                          </td>
-                       </tr>
-                       <tr>
-                          <th><a href="http://schema.org/description">description</a></th>
-                          <td>
-                            <a href="http://schema.org/Text">Text</a>
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: A description of the item.
-                          <td>ONE</td>
-                          <td></td>
-                       </tr>
-                       <tr>
-                          <th><a href="http://schema.org/keywords">keywords</a></th>
-                          <td>
-                            <a href="http://schema.org/Text">Text</a>
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.<br />
-                            <strong>Bioschemas</strong>: Use terms from Controlled Vocabularies where possible.
-                          <td>ONE</td>
-                          <td></td>
-                       </tr>
-                       <tr>
-                          <th><a href="http://schema.org/provider">provider</a></th>
-                          <td>
-                            <a href="http://schema.org/Organization">Organization</a><br />
-                            <a href="http://schema.org/Person">Person</a><br />
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: The service provider, service operator, or service performer; the goods producer. Another party (a seller)
-                            may offer those services or goods on behalf of the provider. A provider may also serve as the seller.<br />
-                            <strong>Bioschemas</strong>: Contact information for this data repository/catalog.
-                          </td>
-                          <td>MANY</td>
-                          <td></td>
-                       </tr>
-                       <tr>
-                          <th><a href="http://schema.org/name">name</a></th>
-                          <td>
-                            <a href="http://schema.org/Text">Text</a>
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: The name of the item.
-                          <td>ONE</td>
-                          <td></td>
-                       </tr>
-                       <tr>
-                          <th><a class="externalProp" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></th>
-                          <td>
-                            <a href="http://schema.org/URL">URL</a>
-                          </td>
-                          <td>
-                            <strong>Bioschemas</strong>: This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.
-                          </td>
-                          <td>ONE</td>
-                          <td>
-                             <strong>Missing!</strong>
-                          </td>
-                       </tr>
-                       <tr>
-                          <th><a href="http://schema.org/url">url</a></th>
-                          <td>
-                            <a href="http://schema.org/URL">URL</a>
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: URL of the item.
-                          <td>ONE</td>
-                          <td></td>
-                       </tr>
-
-
-                       <tr class="cardinality">
-                          <td colspan="5">
-                             Marginality: <b>Recommended</b>
-                          </td>
-                       </tr>
-                       <tr>
-                          <th><a href="http://schema.org/alternateName">alternateName</a></th>
-                          <td>
-                            <a href="http://schema.org/Text">Text</a>
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: An alias for the item.
-                          <td>MANY</td>
-                          <td></td>
-                       </tr>
-                       <tr>
-                       <tr>
-                          <th><a href="http://schema.org/citation">citation</a></th>
-                          <td>
-                            <a href="http://schema.org/CreativeWork">CreativeWork</a><br />
-                            <a href="http://schema.org/Text">Text</a>
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.<br />
-                          <td>MANY</td>
-                          <td></td>
-                       </tr>
-                       <tr>
-                          <th><a href="http://schema.org/dateModified">dateModified</a></th>
-                          <td>
-                            <a href="http://schema.org/Date">Date</a><br />
-                            <a href="http://schema.org/DateTime">DateTime</a>
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.<br />
-                            <strong>BioSchemas</strong>: The date on which the data catalog/repository was most recently modified.
-                          <td>ONE</td>
-                          <td></td>
-                       </tr>
-                       <tr>
-                          <th><a href="http://schema.org/dataset">dataset</a></th>
-                          <td>
-                            <a href="http://schema.org/Dataset">Dataset</a>
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: A dataset contained in this catalog. <em>Inverse-property: <a href="includedInDataCatalog">includedInDataCatalog</a>.</em>
-                          <td>MANY</td>
-                          <td></td>
-                       </tr>
-                       <tr>
-                          <th><a href="http://schema.org/identifier">identifier</a></th>
-                          <td>
-                            <a href="http://schema.org/PropertyValue">PropertyValue</a><br /><a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
-                            dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.<br />
-                            <strong>Bioschema</strong>: Unique identifier for the data catalog.
-                          <td>ONE</td>
-                          <td></td>
-                       </tr>
-                       <tr>
-                          <th><a href="http://schema.org/license">license</a></th>
-                          <td>
-                            <a href="http://schema.org/CreativeWork">CreativeWork</a><br /><a href="http://schema.org/URL">URL</a>
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: A license document that applies to this content, typically indicated by URL.
-                          <td>ONE</td>
-                          <td></td>
-                       </tr>
-                       <tr>
-                          <th><a href="http://schema.org/publication">publication</a></th>
-                          <td>
-                            <a href="http://schema.org/PublicationEvent">PublicationEvent</a>
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: A publication event associated with the item.
-                          <td>MANY</td>
-                          <td></td>
-                       </tr>
-                       <tr>
-                          <th><a href="http://schema.org/sourceOrganization">sourceOrganization</a></th>
-                          <td>
-                            <a href="http://schema.org/Organization">Organization</a>
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: The Organization on whose behalf the creator was working.
-                          <td>MANY</td>
-                          <td></td>
-                       </tr>
-
-
-                       <tr class="cardinality">
-                          <td colspan="5">
-                             Marginality: <b>Optional</b>
-                          </td>
-                       </tr>
-                       <tr>
-                          <th><a href="http://schema.org/datePublished">datePublished</a></th>
-                          <td>
-                            <a href="http://schema.org/Date">Date</a><br />
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: Date of first broadcast/publication.
-                          <td>ONE</td>
-                          <td></td>
-                       </tr>
-                       <tr>
-                          <th><a href="http://schema.org/fileFormat">fileFormat</a></th>
-                          <td>
-                            <a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: Media type, typically MIME format (see IANA site) of the content e.g. application/zip of a SoftwareApplication binary.
-                            In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular
-                            fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.
-                          <td>MANY</td>
-                          <td></td>
-                       </tr>
-                     </tbody>
-                  </table>
+                  {% include specification_table.html %}
                </section>
             </div>
          </div>
       </div>
       {% include footer.html %}
-      
-      
-      
    </body>
 </html>

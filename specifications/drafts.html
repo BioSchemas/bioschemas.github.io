@@ -26,7 +26,7 @@ title: Draft BioSchemas Specifications
             {% for spec in prof_specs %}
             <tr>
                 {% assign date_time = spec.spec_info.version_date %}
-               <th><a href="/devSpecs/{{spec.name}}/specification" title="{{spec.subtitle}}">{{ spec.name }}</a><br />(v{{spec.spec_info.version}})<br />{{date_time | date_to_long_string }}</th>
+               <th><a href="/devSpecs/{{spec.name}}/specification" title="{{ spec.spec_info.subtitle }}">{{ spec.spec_info.title }}</a><br />(v{{spec.spec_info.version}})<br />{{ date_time | date_to_long_string }}</th>
                <td>
                   {% assign group = site.groups | where:"identifier", spec.group %}
                   {% for g in group %}
@@ -36,55 +36,55 @@ title: Draft BioSchemas Specifications
                <td class="spec_links">
                   {% if spec.use_cases_url == '' %}
                   <a>
-                  <img src="/images/use_case_spec.png" alt="View BioSchemas {{ spec.name }} Use Cases"  style="filter: grayscale(100%);">
+                  <img src="/images/use_case_spec.png" alt="View BioSchemas {{ spec.spec_info.title }} Use Cases"  style="filter: grayscale(100%);">
                   </a>
                   {%else%}
                   <a href="{{spec.use_cases_url}}">
-                  <img src="/images/use_case_spec.png" alt="View BioSchemas {{ spec.name }} Use Cases">
+                  <img src="/images/use_case_spec.png" alt="View BioSchemas {{ spec.spec_info.title }} Use Cases">
                   </a>
                   {%endif%}
                </td>
                <td class="spec_links">
                   {% if spec.cross_walk_url == '' %}
                   <a>
-                  <img src="/images/cross_walk.png" alt="View BioSchemas {{ spec.name }} Cross Walk"  style="filter: grayscale(100%);">
+                  <img src="/images/cross_walk.png" alt="View BioSchemas {{ spec.spec_info.title }} Cross Walk"  style="filter: grayscale(100%);">
                   </a>
                   {%else%}
                   <a href="{{spec.cross_walk_url}}">
-                  <img src="/images/cross_walk.png" alt="View BioSchemas {{ spec.name }} Cross Walk">
+                  <img src="/images/cross_walk.png" alt="View BioSchemas {{ spec.spec_info.title }} Cross Walk">
                   </a>
                   {%endif%}
                </td>
                <td class="spec_links">
                   {% if spec.gh_tasks == '' %}
                   <a>
-                  <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
+                  <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.spec_info.title }} Github Tasks or Issues" style="filter: grayscale(100%);">
                   </a>
                   {% else %}
                   <a href="{{spec.gh_tasks}}">
-                  <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues">
+                  <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.spec_info.title }} Github Tasks or Issues">
                   </a>
                   {% endif %}
                </td>
                <td class="spec_links">
                   {% if spec.spec_info.full_example == '' %}
                   <a>
-                  <img src="/images/spec_examples.png" alt="View BioSchemas {{ spec.name }} Examples" style="filter: grayscale(100%);">
+                  <img src="/images/spec_examples.png" alt="View BioSchemas {{ spec.spec_info.title }} Examples" style="filter: grayscale(100%);">
                   </a>
                   {% else %}
                   <a href="{{spec.spec_info.full_example}}">
-                  <img src="/images/spec_examples.png" alt="View BioSchemas {{ spec.name }} Examples">
+                  <img src="/images/spec_examples.png" alt="View BioSchemas {{ spec.spec_info.title }} Examples">
                   </a>
                   {% endif %}
                </td>
                <td class="spec_links">
                   {% if spec.live_deploy == '' %}
                   <a>
-                  <img src="/images/live_deploy.png" alt="View BioSchemas {{ spec.name }} Examples" style="filter: grayscale(100%);">
+                  <img src="/images/live_deploy.png" alt="View BioSchemas {{ spec.spec_info.title }} Examples" style="filter: grayscale(100%);">
                   </a>
                   {% else %}
                   <a href="{{spec.live_deploy}}">
-                  <img src="/images/live_deploy.png" alt="View BioSchemas {{ spec.name }} Examples">
+                  <img src="/images/live_deploy.png" alt="View BioSchemas {{ spec.spec_info.title }} Examples">
                   </a>
                   {% endif %}
                </td>
