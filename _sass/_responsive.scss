@@ -40,17 +40,6 @@
 }
 
 @media screen and (max-width: 700px) {
-    .biohex-logo {
-        .hexagon {
-            width: 40px;
-            min-width: initial;
-        }
-        .bio-title {
-            margin-bottom: 5px;
-            width: 115px;
-            min-width: initial;
-        }
-    }
     .inner {
         padding: 0.25em 0.26em !important;
     }
@@ -59,6 +48,24 @@
         position: fixed;
         z-index: 90;
         background-color: $bioschemas-dark-sea-green-color !important;
+        .biohex-logo {
+            .hexagon {
+                width: 40px;
+                min-width: initial;
+            }
+            .bio-title {
+                margin-bottom: 5px;
+                width: 115px;
+                min-width: initial;
+            }
+        }
+        .git-edit {
+            right: 7.5em;
+            bottom: 1em;
+            b {
+                display: none;
+            }
+        }
     }
     #main-content-wrapper {
         padding-top: 50px;

@@ -1,28 +1,28 @@
-.biohex-logo {
-    .hexagon {
-        width: 8%;
-        margin: 1px;
-        min-width: 79px;
-        @include transition(2s, cubic-bezier(0.34, 1.61, 0.7, 1))
+#header_wrap {
+    .biohex-logo {
+        .hexagon {
+            width: 8%;
+            margin: 1px;
+            min-width: 79px;
+            @include transition(2s, cubic-bezier(0.34, 1.61, 0.7, 1))
+        }
+        .hexagon:hover {
+            -webkit-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+        .bio-title {
+            padding: 0px;
+            width: 30%;
+            min-width: 325px;
+        }
     }
-    .hexagon:hover {
-        -webkit-transform: rotate(180deg);
-        -o-transform: rotate(180deg);
-        -moz-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-        transform: rotate(180deg);
-    }
-    .bio-title {
-        padding: 0px;
-        width: 30%;
-        min-width: 325px;
+    .git-edit {
+        position: absolute;
+        right: 0.5em;
+        bottom: 0.5em; 
     }
 }
 
-#main-content-wrapper {
-    background: #fefefe;
-    padding-left: 4.6em;
-    padding-right: 1.25em;
-    padding-top: 1.25em;
-    padding-bottom: 1.25em;
-}

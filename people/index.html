@@ -1,25 +1,20 @@
 ---
-layout: meetings
+layout: default
 title: People
 ---
 
-<div id="main-content-wrapper" class="outer">
-    <section id="main_content" class="inner">
-
-        <h1>People</h1>
-        <div id="peopleTable">
-        <ul>
-          {% assign sorted_people = site.people | sort: 'last-name' %}
-          {% for person in sorted_people %}
-            {% if person.homepage or person.github_username or person.orcid %}
-            <li><a href="{{ person.url }}">{{ person.first-name }} {{ person.last-name }}</a></li>
-            {% else %}
-            <li>{{ person.first-name }} {{ person.last-name }}</li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-        </div>
-    </section>
+<h1>People</h1>
+<div id="peopleTable">
+<ul>
+    {% assign sorted_people = site.people | sort: 'last-name' %}
+    {% for person in sorted_people %}
+    {% if person.homepage or person.github_username or person.orcid %}
+    <li><a href="{{ person.url }}">{{ person.first-name }} {{ person.last-name }}</a></li>
+    {% else %}
+    <li>{{ person.first-name }} {{ person.last-name }}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
 </div>
 
 <!-- change number columns based on device -->
