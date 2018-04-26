@@ -14,41 +14,32 @@
     .trigger {
         background-color: #0B794B;
         width: auto;
-        height: 2.5em;
-        padding-top: 0.625em;
         position: relative;
-        a {
-            color: #fff;
-            font-size: 1.2em;
-        }
+        .trigger_links {
+            text-align: center;
+        }            
     }
-    .trigger_links {
-        max-width: 62.5em;
-        height: auto;
-        position: relative;
-        margin: 0 auto;
-    }
-    .stuck {
+    .trigger.stuck {
         position: fixed;
         z-index: 100;
-        top: -0.3125em;
+        top: 0;
         background-color: rgb(11, 121, 75);
-        background-color: rgba(11, 121, 75, .9);
         width: 100%;
-        height: 2.5em;
-    }
+    }      
 }
 
 @media screen and (max-width: 700px) {
-    .biohex-logo {
-        .hexagon {
-            width: 40px;
-            min-width: initial;
-        }
-        .bio-title {
-            margin-bottom: 5px;
-            width: 115px;
-            min-width: initial;
+    #header_wrap {
+        .biohex-logo {
+            .hexagon {
+                width: 40px;
+                min-width: initial;
+            }
+            .bio-title {
+                margin-bottom: 5px;
+                width: 115px;
+                min-width: initial;
+            }
         }
     }
     .inner {
