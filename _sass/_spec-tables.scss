@@ -43,7 +43,7 @@ $external-property-color: #454547;
         vertical-align: top;
         font-size: 100%;
         display: table-cell;
-        max-width: 30em;
+        // max-width: 30em;
         word-break: keep-all;
     }
     a {
@@ -76,6 +76,7 @@ $external-property-color: #454547;
     }    
     .description-column {
         word-wrap: break-word;
+        max-width: 50em;
     }
     .control-vocabulary-column {
         max-width: 10em;
@@ -88,7 +89,7 @@ $external-property-color: #454547;
 }
 
 .spec-table-wrapper {
-    overflow-x: none;
+    overflow-x: auto;
 
     .example-code {
         text-align: initial;
