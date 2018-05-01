@@ -43,7 +43,7 @@ $external-property-color: #454547;
         vertical-align: top;
         font-size: 100%;
         display: table-cell;
-        max-width: 30em;
+        // max-width: 30em;
         word-break: keep-all;
     }
     a {
@@ -76,6 +76,7 @@ $external-property-color: #454547;
     }    
     .description-column {
         word-wrap: break-word;
+        max-width: 35em;
     }
     .control-vocabulary-column {
         max-width: 10em;
@@ -88,7 +89,7 @@ $external-property-color: #454547;
 }
 
 .spec-table-wrapper {
-    overflow-x: none;
+    overflow-x: auto;
 
     .example-code {
         text-align: initial;
@@ -175,25 +176,5 @@ $external-property-color: #454547;
             border-color: black transparent transparent transparent;
         }
 
-        // button {
-        //     height: 25px;
-        //     width: 25px;
-        //     text-align: center;
-        //     text-decoration: none;
-        //     border-radius: 50%;
-        //     border-style: none;
-        //     cursor: pointer;
-        //     padding-left: 1px;
-
-        //     color: #ffffff;
-        //     background-color: #0B794B;
-            
-        //     &:hover,
-        //     &:focus,
-        //     &:active {
-        //         color: $bioschemas-base-color;
-        //         background-color: $bioschemas-tea-green-color;     
-        //     }
-        // }
     }    
 }

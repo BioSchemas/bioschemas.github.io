@@ -1,4 +1,5 @@
 <div class="spec-table-wrapper">
+    {% if page.mapping != null %}  
     <div class="example-button">
         <span class="tooltiptext">View all examples</span>
         <button type="button" class="btn btn-bioschema" data-toggle="modal" data-target="#all-examples-modal">Examples  <i class="fas fa-file-code"></i></button>
@@ -27,7 +28,7 @@
             </div>
             </div>
         </div>
-    </div>            
+    </div>         
     <table class="spec-prof-table">
         <thead>
             <tr>
@@ -39,14 +40,11 @@
                 <th class="example-column">Example</th>
             </tr>
         </thead>
-        <tbody>    
+        <tbody>
             {% assign  marginality_list = "Minimum,Recommended,Optional" | split: ',' %}
             {% for current_mg in marginality_list %}
-            {% if page.mapping != null %}
-            {% assign props_list = page.mapping | where: 'marginality', current_mg | sort: 'name' %}
-            {% else %}
-            {% assign props_list = page.mapping | where: 'marginality', current_mg  %}
-            {% endif %}
+            {% assign props_list = page.mapping | where: 'marginality', current_mg | sort: 'property' %}
+
             {%if props_list.size > 0%}
             <tr class="cardinality">
                 <td colspan="6">
@@ -54,6 +52,7 @@
                 </td>
             </tr>
             {%endif%}
+
             {% for prop in props_list %}
             <tr>
                 {% if prop.type == "bioschemas" %}
@@ -67,8 +66,11 @@
                 {% endif %}
                 <td>
                     {% for temp_exp_type in prop.expected_types %}
+                    {% assign expected_type_type = temp_exp_type | split: ':' %}
                     {% if temp_exp_type == "LabProtocol" or temp_exp_type == "DataRecord" or temp_exp_type == "BioChemEntity" %}
-                    <a href="http://bioschemas.org/types/{{temp_exp_type}}/specification/" target="_blank">{{temp_exp_type}}</a><br>
+                    <a href="http://bioschemas.org/types/{{temp_exp_type}}/specification/" class="bioschema" target="_blank">{{temp_exp_type}}</a><br>
+                    {% elsif expected_type_type[0] == "bioschemas" %}
+                    <a href="http://bioschemas.org/specifications/{{expected_type_type[1]}}/specification/" class="bioschema" target="_blank">{{expected_type_type[1]}}</a><br>
                     {% else %}
                     <a href="http://schema.org/{{temp_exp_type}}" target="_blank">{{temp_exp_type}}</a><br>
                     {% endif %}
@@ -116,8 +118,11 @@
                     {% endunless %}                 
                 </td>
             </tr>
-            {% endfor %}
-            {% endfor %}
+            {% endfor %}        
+            {% endfor %}          
         </tbody>
     </table>
+    {% else %}
+    <span class="alert alert-warning" role="alert">Mapping in progress.</span>
+    {% endif %}      
  </div>

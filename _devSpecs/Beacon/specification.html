@@ -1,27 +1,22 @@
 ---
-cross_walk_url: https://docs.google.com/spreadsheets/d/1wLJa4LkCM8oIvBPTFS1IBcygRGBpSrAgNfRSEadVICo/edit#gid=1261485211
-dateModified: 2018-02-27
+name: Beacon
+url: Beacons
+
+status: revision
+spec_type: Profile
 group: beacons
-description: In this document we propose a simple way for a beacons to self-describe
-  their genetic variant cardinality service for better integration with other beacons
-  within the beacon-network. It builds upon the Beacon service API and uses existing
-  schema.org entities and properties.
-g_mapping_file: Beacon Mapping Simp
-gh_examples: https://github.com/BioSchemas/specifications/tree/master/Beacon/examples/
+use_cases_url: /useCases/Beacons/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1wLJa4LkCM8oIvBPTFS1IBcygRGBpSrAgNfRSEadVICo/edit#gid=1261485211
 gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Beacon
+live_deploy: ''
+
+parent_type: DataCatalog
 hierarchy:
 - Thing
 - CreativeWork
 - DataCatalog
-live_deploy: ''
-name: Beacon
-parent_type: DataCatalog
-spec_type: Profile
-status: revision
-subtitle: 'A convention for beacon to self-describe. '
-url: Beacons
-use_cases_url: /useCases/Beacons/
-version: '0.2'
+
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1Hl-K9wBtp8Ys0OJxzj8SC72xDKX_OeKDSs5ioZpPfTw/edit#gid=1483018794
 spec_info:
   title: Beacon
   subtitle: 'A convention for beacon to self-describe. '
@@ -29,9 +24,10 @@ spec_info:
     their genetic variant cardinality service for better integration with other beacons
     within the beacon-network. It builds upon the Beacon service API and uses existing
     schema.org entities and properties. '
-  version: "0.2"
+  version: 0.2-draft
+  version_date: 20180423T140938
   official_type: ""
-  full_example: ""
+  full_example: https://github.com/BioSchemas/specifications/tree/master/Beacon/examples
 mapping:
 - property: aggregator
   expected_types:
@@ -46,8 +42,8 @@ mapping:
   example: ""
 - property: dataset
   expected_types:
-  - Dataset
-  description: 'A dataset contained in this catalog.Inverse property: includedInDataCatalog.'
+  - DataCatalog
+  description: "A dataset contained in this catalog. \ninverse property: [includedInDataCatalog.](http://schema.org/includedInDataCatalog)"
   type: ""
   type_url: ""
   bsc_description: Datasets served by this Beacon.
@@ -74,7 +70,8 @@ mapping:
   description: The identifier property represents any kind of identifier for any kind
     of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
     properties for representing many of these, either as textual strings or as URL
-    (URI) links. See background notes for more details.
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
   type: ""
   type_url: ""
   bsc_description: Unique identifier of the Beacon.
@@ -111,7 +108,7 @@ mapping:
   - Person
   description: The service provider, service operator, or service performer; the goods
     producer. Another party (a seller) may offer those services or goods on behalf
-    of the provider. A provider may also serve as the seller. Supersedes carrier.
+    of the provider. A provider may also serve as the seller. Supersedes [carrier](http://schema.org/carrier).
   type: ""
   type_url: ""
   bsc_description: Contact information for this Beacon.
