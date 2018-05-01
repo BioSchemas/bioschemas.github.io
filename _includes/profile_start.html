@@ -1,9 +1,9 @@
 {% if page.status == 'release' %}
-<h1>{{page.name}} Specification v. {{page.version}}</h1>
+<h1>{{page.spec_info.title}} Specification v. {{page.spec_info.version}}</h1>
 {% else %}
-<h1>{{page.name}} <u>DRAFT</u> Specification v. {{page.version}}</h1>
+<h1>{{page.spec_info.title}} <u>DRAFT</u> Specification v. {{page.spec_info.version}}</h1>
 {% endif %}
-<h2>{{page.subtitle}}</h2>
+<h2>{{page.spec_info.subtitle}}</h2>
 <br />
 <input id="tab1" type="radio" name="tabs" checked>
 <label for="tab1">Description</label>
@@ -57,7 +57,16 @@
 <section id="description" class="tabs">
    <!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
    <h3>Description</h3>
+   <!-- 
+       ToDo: Remove this validation after all the specs
+            are updated to the new specification_table template.
+    -->
+   {% assign description_prev = page.description %}
+   {% if description_prev != null%}
    <p>{{page.description}}</p>
+   {% else %}
+   <p>{{page.spec_info.description}}</p>
+   {% endif %}
    <br />
    <h3>Schema.org hierarchy</h3>
    This is a new {{page.spec_type}} that fits into the schema.org hierarchy as follows:
@@ -114,7 +123,7 @@
                <img src="/images/cross_walk.png" alt="View BioSchemas {{ page.name }} Cross Walk"  style="filter: grayscale(100%);">
                </a>
                {%else%}
-               <a href="{{page.cross_walk_url}}">
+               <a href="{{page.cross_walk_url}}" target="_blank">
                <img src="/images/cross_walk.png" alt="View BioSchemas {{ page.name }} Cross Walk">
                </a>
                {%endif%}
@@ -125,18 +134,18 @@
                <img src="/images/specs_tasks.png" alt="BioSchemas {{ page.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
                </a>
                {% else %}
-               <a href="{{page.gh_tasks}}">
+               <a href="{{page.gh_tasks}}" target="_blank">
                <img src="/images/specs_tasks.png" alt="BioSchemas {{ page.name }} Github Tasks or Issues">
                </a>
                {% endif %}
             </td>
-            <td class="spec_links">
-               {% if page.gh_examples == '' %}
+            <td class="spec_links" target="_blank">
+               {% if page.spec_info.full_example == '' %}
                <a>
                <img src="/images/spec_examples.png" alt="View BioSchemas {{ page.name }} Examples" style="filter: grayscale(100%);">
                </a>
                {% else %}
-               <a href="{{page.gh_examples}}">
+               <a href="{{page.spec_info.full_example}}" target="_blank">
                <img src="/images/spec_examples.png" alt="View BioSchemas {{ page.name }} Examples">
                </a>
                {% endif %}
