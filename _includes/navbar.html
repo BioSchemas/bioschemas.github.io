@@ -1,14 +1,31 @@
 <!-- If you edit this file, remember to edit the mobile_navbar.html file as well -->
 <div class="trigger">
+
     <div class="trigger_links">
-        <a href="/" class="link-navbar"><div class="navbar_button">Home</div></a>
-        <a href="/howtojoin/" class="link-navbar"><div class="navbar_button">Join</div></a>
-        <a href="/meetings/" class="link-navbar"><div class="navbar_button">Meetings</div></a>
-        <a href="/groups/" class="link-navbar"><div class="navbar_button">Groups</div></a>
-        <a href="/specifications/" class="link-navbar"><div class="navbar_button">Specifications</div></a>
-        <a href="/people/" class="link-navbar"><div class="navbar_button">People</div></a>
-        <a href="/publications/" class="link-navbar"><div class="navbar_button">Presentations</div></a>
-        <a href="/community/" class="link-navbar"><div class="navbar_button">Community</div></a>
+        <a href="/" role="button" class="btn btn-bioschema btn-lg"><i class="fas fa-home"></i> Home</a>
+        <a href="/howtojoin/" role="button" class="btn btn-bioschema btn-lg">Join</a>
+        <a href="/meetings/" role="button" class="btn btn-bioschema btn-lg">Meetings</a>
+        <div class="btn-group" role="group">
+                <button class="btn btn-bioschema dropdown-toggle btn-lg" type="button" id="btnCommunity" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Specifications
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnCommunity">
+                    <a class="dropdown-item" href="/Specifications/">Current</a>
+                    <a class="dropdown-item" href="/Specifications/drafts">Drafts</a>
+                    <a class="dropdown-item" href="/liveDeploys/">Live deploys</a>                    
+                </div>
+            </div>        
+        <div class="btn-group" role="group">
+            <button class="btn btn-bioschema dropdown-toggle btn-lg" type="button" id="btnCommunity" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            About
+            </button>
+            <div class="dropdown-menu" aria-labelledby="btnCommunity">
+                <a class="dropdown-item" href="/community/">Community</a>
+                <a class="dropdown-item" href="/people/">People</a>
+                <a class="dropdown-item" href="/groups/">Groups</a>                
+                <a class="dropdown-item" href="/publications/">Presentations</a>
+            </div>
+        </div>
     </div>
 
     {% include mobile_navbar.html %}
