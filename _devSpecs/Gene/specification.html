@@ -23,7 +23,7 @@ spec_info:
   description: This Gene profile specification presents the BioChemEntity usage when
     describing a Gene.
   version: 0.2-draft
-  version_date: 20180323T100649
+  version_date: 20180501T153449
   official_type: http://purl.obolibrary.org/obo/SO_0000704
   full_example: https://github.com/BioSchemas/bioschemas.github.io/tree/master/_devSpecs/Gene/examples
 mapping:
@@ -45,7 +45,7 @@ mapping:
     of this property.
   marginality: Optional
   cardinality: MANY
-  controlled_vocab: Any suitable ontology
+  controlled_vocab:
   example: ""
 - property: additionalType
   expected_types:
@@ -64,7 +64,7 @@ mapping:
     **Bioschemas Gene**: Official proposed term for the profile describing a gene: [SO:gene](http://purl.obolibrary.org/obo/SO_0000704).
   marginality: Optional
   cardinality: MANY
-  controlled_vocab: Any suitable ontology
+  controlled_vocab:
   example: |-
     {
         "@type": ["BioChemEntity", "Gene"],
@@ -214,14 +214,14 @@ mapping:
 - property: isContainedIn
   expected_types:
   - BioChemEntity
-  description: Indicates a BioChemEntity that this BioChemEntity is (in some sense)
-    part of.
-  type: ""
-  type_url: ""
-  bsc_description: For genes, it is recommended to at least specify the DNA/chromosome
-    containing this gene and the taxon/organism associated to it. For taxon/organism,
-    it is a good practice to use categoryCode to point to a controlled vocabulary
-    such as NCBI taxon or UniProt Taxonomy.
+  description:
+  type: "bioschemas"
+  type_url: "http://bioschemas.org/types/BioChemEntity/specification/"
+  bsc_description: |-
+    Indicates a BioChemEntity that this BioChemEntity is (in some sense) part of.
+
+    **Bioschemas Gene**:
+    For genes, it is recommended to at least specify the DNA/chromosome containing this gene and the taxon/organism associated to it. For taxon/organism, it is a good practice to use categoryCode to point to a controlled vocabulary such as NCBI taxon or UniProt Taxonomy.
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
