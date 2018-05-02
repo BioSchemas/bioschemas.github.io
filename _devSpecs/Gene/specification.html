@@ -1,32 +1,29 @@
 ---
-cross_walk_url: 
-dateModified: 2018-03-23
-description: This Gene profile specification presents the BioChemEntity usage when
-  describing a Gene.
-g_mapping_file: Genes Mapping Simp
-gh_examples: https://github.com/BioSchemas/bioschemas.github.io/tree/master/_devSpecs/Gene/examples
-gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Gene
+name: Gene
+url: Gene
+
+status: revision
+spec_type: Profile
 group: genes
+use_cases_url: /useCases/Genes/
+cross_walk_url: 
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Gene
+live_deploy: ''
+
+parent_type: Thing
 hierarchy:
 - Thing
 - BioChemEntity
-live_deploy: ''
-name: Gene
-parent_type: Thing
-spec_type: Profile
-status: revision
-subtitle: Bioschemas specification describing a Gene (BioChemEntity profile) in
-  Life Sciences
-url: Beacons
-use_cases_url: /useCases/Genes/
-version: '0.1'
+
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1WGP1VPElboWsKnASQwbp19wcvTg-_piOCoIJ6Xe7rB8/edit#gid=1483018794
 spec_info:
   title: Gene
   subtitle: Bioschemas specification describing a Gene (BioChemEntity profile) in
     Life Sciences
   description: This Gene profile specification presents the BioChemEntity usage when
     describing a Gene.
-  version: "0.1"
+  version: 0.2-draft
+  version_date: 20180501T153449
   official_type: http://purl.obolibrary.org/obo/SO_0000704
   full_example: https://github.com/BioSchemas/bioschemas.github.io/tree/master/_devSpecs/Gene/examples
 mapping:
@@ -48,7 +45,7 @@ mapping:
     of this property.
   marginality: Optional
   cardinality: MANY
-  controlled_vocab: Any suitable ontology
+  controlled_vocab:
   example: ""
 - property: additionalType
   expected_types:
@@ -67,7 +64,7 @@ mapping:
     **Bioschemas Gene**: Official proposed term for the profile describing a gene: [SO:gene](http://purl.obolibrary.org/obo/SO_0000704).
   marginality: Optional
   cardinality: MANY
-  controlled_vocab: Any suitable ontology
+  controlled_vocab:
   example: |-
     {
         "@type": ["BioChemEntity", "Gene"],
@@ -217,14 +214,14 @@ mapping:
 - property: isContainedIn
   expected_types:
   - BioChemEntity
-  description: Indicates a BioChemEntity that this BioChemEntity is (in some sense)
-    part of.
-  type: ""
-  type_url: ""
-  bsc_description: For genes, it is recommended to at least specify the DNA/chromosome
-    containing this gene and the taxon/organism associated to it. For taxon/organism,
-    it is a good practice to use categoryCode to point to a controlled vocabulary
-    such as NCBI taxon or UniProt Taxonomy.
+  description:
+  type: "bioschemas"
+  type_url: "http://bioschemas.org/types/BioChemEntity/specification/"
+  bsc_description: |-
+    Indicates a BioChemEntity that this BioChemEntity is (in some sense) part of.
+
+    **Bioschemas Gene**:
+    For genes, it is recommended to at least specify the DNA/chromosome containing this gene and the taxon/organism associated to it. For taxon/organism, it is a good practice to use categoryCode to point to a controlled vocabulary such as NCBI taxon or UniProt Taxonomy.
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
@@ -397,8 +394,5 @@ mapping:
          </div>
       </div>
       {% include footer.html %}
-      
-      
-      
    </body>
 </html>
