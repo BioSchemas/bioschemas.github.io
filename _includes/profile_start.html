@@ -1,9 +1,24 @@
-{% if page.status == 'release' %}
-<h1>{{page.spec_info.title}} Specification v. {{page.spec_info.version}}</h1>
+<!-- 
+    ToDo: Remove this validation after all the specs
+        are updated to the new specification_table template.
+-->
+{% assign name_prev = page.name %}
+{% if name_prev != null%}
+{% assign current_name = name_prev %}
+{% assign current_version = page.version %}
+{% assign current_subtitle = page.subtitle %}
 {% else %}
-<h1>{{page.spec_info.title}} <u>DRAFT</u> Specification v. {{page.spec_info.version}}</h1>
+{% assign current_name = page.spec_info.title %}
+{% assign current_version = page.spec_info.version %}
+{% assign current_subtitle = page.spec_info.subtitle %}
 {% endif %}
-<h2>{{page.spec_info.subtitle}}</h2>
+
+{% if page.status == 'release' %}
+<h1>{{current_name}} Specification v. {{current_version}}</h1>
+{% else %}
+<h1>{{current_name}} <u>DRAFT</u> Specification v. {{current_version}}</h1>
+{% endif %}
+<h2>{{current_subtitle}}</h2>
 <br />
 <input id="tab1" type="radio" name="tabs" checked>
 <label for="tab1">Description</label>
