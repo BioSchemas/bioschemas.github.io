@@ -10,61 +10,53 @@ description: |-
     If your Bioschemas compliant site is not listed below, please email us at [community@bioschemas.org](mailto:community@bioschemas.org).
 
 ---
-<div class="page-content">
-   <div class="wrapper">
-      <div id="main-content-wrapper" class="outer">
-         <section id="main_content" class="inner">
-            <div class="live-deploys">
-                <h1>Live deploys</h1>
-                <p>{{page.description | markdownify}}</p><br>
-                {% assign liveDeploys = site.liveDeploys | where:"name", 'Live Deploys' | first %}
-                {% assign candidates = site.liveDeploys | where:"name", 'Candidates' | first %}
-                <section class="live-deploy-table">
-                    <h5>{{liveDeploys.description}}</h5>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Bioschema Profile</th>                                
-                                <th>Profile Version</th>
-                                <th class="structured-data-column">Structured Data Testing Tool</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% assign live_sorted_list = liveDeploys.list | sort: 'bsc_profile' %}
-                            {% for live in live_sorted_list %}
-                            <tr>
-                                <td class="deploy-name-column">
-                                    <a href="{{live.URL}}" target="_blank">{{live.name}}</a>
-                                    <p>{{live.description}}</p>
-                                </td>
-                                <td>
-                                    {% if live.bsc_profile == "LabProtocol" or live.bsc_profile == "DataRecord" or live.bsc_profile == "BioChemEntity" %}
-                                    <a href="http://bioschemas.org/types/{{live.bsc_profile}}/specification/" target="_blank">{{live.bsc_profile}}</a><br>
-                                    {% else %}
-                                    <a href="http://bioschemas.org/specifications/{{live.bsc_profile}}/specification/" target="_blank">{{live.bsc_profile}}</a><br>
-                                    {% endif %}
-                                </td>                                
-                                <td class="profile-version">
-                                    {{live.bsc_ver}}
-                                </td>
-                                <td class="structured-data-column">
-                                    <div class="google-sdtt-button">
-                                        <span class="tooltiptext">Visualise on GTest tool</span>
-                                        <a href="https://search.google.com/structured-data/testing-tool#url={{live.URL}}" class="btn btn-bioschema btn-block" target="_blank">visualise</a>
-                                    </div>
-                                </td>                                
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </section>
-                <blockquote>
-                    <h6>Note:</h6> As we do not maintain the websites listed above we can not guarantee the list is up to date, the sites are live and feature appropriate content or the links work.
-                    <p>Help us keep it updated: <a href="/howtojoin/">Join</a> the community and/or create a pull request on the <a href="https://github.com/BioSchemas/bioschemas.github.io">bioschemas github</a> community project.</p>
-                </blockquote>
-            </div>
-         </section>
-      </div>
-   </div>
+<div class="live-deploys">
+    <h1>Live deploys</h1>
+    <p>{{page.description | markdownify}}</p><br>
+    {% assign liveDeploys = site.liveDeploys | where:"name", 'Live Deploys' | first %}
+    {% assign candidates = site.liveDeploys | where:"name", 'Candidates' | first %}
+    <section class="live-deploy-table">
+        <h5>{{liveDeploys.description}}</h5>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Bioschema Profile</th>                                
+                    <th>Profile Version</th>
+                    <th class="structured-data-column">Structured Data Testing Tool</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% assign live_sorted_list = liveDeploys.list | sort: 'bsc_profile' %}
+                {% for live in live_sorted_list %}
+                <tr>
+                    <td class="deploy-name-column">
+                        <a href="{{live.URL}}" target="_blank">{{live.name}}</a>
+                        <p>{{live.description}}</p>
+                    </td>
+                    <td>
+                        {% if live.bsc_profile == "LabProtocol" or live.bsc_profile == "DataRecord" or live.bsc_profile == "BioChemEntity" %}
+                        <a href="http://bioschemas.org/types/{{live.bsc_profile}}/specification/" target="_blank">{{live.bsc_profile}}</a><br>
+                        {% else %}
+                        <a href="http://bioschemas.org/specifications/{{live.bsc_profile}}/specification/" target="_blank">{{live.bsc_profile}}</a><br>
+                        {% endif %}
+                    </td>                                
+                    <td class="profile-version">
+                        {{live.bsc_ver}}
+                    </td>
+                    <td class="structured-data-column">
+                        <div class="google-sdtt-button">
+                            <span class="tooltiptext">Visualise on GTest tool</span>
+                            <a href="https://search.google.com/structured-data/testing-tool#url={{live.URL}}" class="btn btn-bioschema btn-block" target="_blank">visualise</a>
+                        </div>
+                    </td>                                
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+    <blockquote>
+        <h6>Note:</h6> As we do not maintain the websites listed above we can not guarantee the list is up to date, the sites are live and feature appropriate content or the links work.
+        <p>Help us keep it updated: <a href="/howtojoin/">Join</a> the community and/or create a pull request on the <a href="https://github.com/BioSchemas/bioschemas.github.io">bioschemas github</a> community project.</p>
+    </blockquote>
 </div>
