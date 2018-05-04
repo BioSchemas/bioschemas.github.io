@@ -1,0 +1,71 @@
+---
+layout: default
+title: Technical
+description: |-
+  This page is about the technical aspects of publishing [Bioschemas](http://bioschemas.org) markup. Please see the
+  [Specifications](http://bioschemas.org/specifications/) page for the schemas themselves. Please see the
+  [Tools](http://bioschemas.org/tools/) page for tools that can help in publishing or consuming markup.
+---
+<div class="page-content">
+    <div class="wrapper">
+        <div class="outer" id="main-content-wrapper">
+            <section class="inner" id="main_content">
+                <div class="technical">
+                    <h1>Technical</h1>
+                    <p style="color:red">THIS IS A DRAFT PAGE - please ignore</p>
+                    <p>{{page.description | markdownify}}</p><br>
+                    <div id="group-leaders">
+                        <h2>Group Leaders</h2>
+                        <!-- And whoever else wants to feel responsible for fielding tech questinons and writing doc -->
+                        <ul>
+                            <li>
+                                <a href="/people/JustinClark-Casey/">Justin Clark-Casey</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="other-group-members">
+                        <h2>Other group members</h2>
+                        <!-- and whoever else wants to consider themselves a member of this group.  Should really hook
+                        into actual groups -->
+                        <ul>
+                            <li>
+                                <a href="/people/RicardoArcila/">Ricardo Arcila</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="links">
+                        <h2>Links</h2>
+                        <!-- Ideally this might simply point to a wiki master page that will link to an evolving set of
+                        technical information.  But for now, some example topics -->
+                        <ul>
+                            <li>
+                                <a href="/link1">How to make markup findable by consuming applications</a> - would contain
+                                information on linking it to the sitemap.xml, the option of aggregating markup on a few pages,
+                                not adding markup dynamically in such a way that the consumer would need to expensively
+                                render the page in a headless browser, etc.
+                            </li>
+                            <li>
+                                <a href="https://github.com/BioSchemas/specifications/wiki/Adding-profile-specific-relations-to-BioChemEntity-and-DataRecord">
+                                    How to add terms from arbitrary ontologies to bioschemas markup</a> - this is to describe
+                                    the general technical mechanism which cuts across both BioChemEntity and DataRecord, and
+                                    possibly more entities in the future.
+                            </li>
+                            <li>
+                                <a href="/link3">The Bioschemas common crawl</a> - how to access a common crawl for applications
+                                    that need a large amount of collected Bioschemas markup but don't want to operate their
+                                    own crawling facilities.  Either this is collected by commoncrawl.org or published
+                                    by a search engine gathering this information anyway, such as Buzzbang.</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="help">
+                        <h2>More help</h2>
+                        <p>
+                            If you need more technical help, please don't hesitate to ask on the Bioschemas mailing list.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
