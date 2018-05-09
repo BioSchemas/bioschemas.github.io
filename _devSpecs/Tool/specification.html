@@ -26,8 +26,247 @@ spec_info:
   version_date: 20180307T144349
   official_type: ""
   full_example: "https://github.com/BioSchemas/specifications/tree/master/Tool/examples/"
+mapping:
+- property: applicationCategory
+  expected_types:
+  - Text
+  description: Type of software application, e.g. 'Game, Multimedia'.
+  type: ""
+  type_url: ""
+  bsc_description: |-
+    Type of software e.g. database, tool, service.
+    **Note:** Bioschemas have removed [URL](http://schema.org/URL) from the Expected Types.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Please choose terms from the 'tool type' table in the [biotools
+    documentation](https://biotools.readthedocs.io/en/latest/curators_guide.html#tool-type)
+  example: ""
+- property: citation
+  expected_types:
+  - CreativeWork
+  - Text
+  description: A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
+  type: ""
+  type_url: ""
+  bsc_description: Publication about this software.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: dateCreated
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was created or the item was added
+    to a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: dateModified
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was most recently modified or when
+    the item's entry was modified within a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: A short description of the item.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: featureList
+  expected_types:
+  - Text
+  - URL
+  description: Features or modules provided by this application (and possibly required
+    by other applications).
+  type: ""
+  type_url: ""
+  bsc_description: Please choose values from [EDAM:Operation](http://edamontology.org/operation_0004).
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: '[EDAM:Operation](http://edamontology.org/operation_0004)'
+  example: ""
+- property: hasPart
+  expected_types:
+  - CreativeWork
+  description: |-
+    Indicates a CreativeWork that is (in some sense) a part of this CreativeWork.
+    Inverse property: isPartOf.
+  type: ""
+  type_url: ""
+  bsc_description: |-
+    Used to describe tools included into suites/bundles/workflows.
+    **Note:** Bioschemas have changed the Expected Type from [CreativeWork](http://schema.org/CreativeWork) to [SoftwareApplication](http://schema.org/SoftwareApplication).
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: keywords
+  expected_types:
+  - Text
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: '[EDAM:Topic](http://edamontology.org/topic_0003)'
+  example: ""
+- property: license
+  expected_types:
+  - Text
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  type: ""
+  type_url: ""
+  bsc_description: |-
+    The applicable software license.
+    **Note:** Bioschemas have changed the Expected Types from [CreativeWork](http://schema.org/CreativeWork) and [URL](http://schema.org/URL) to [Text](http://schema.org/Text).
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: offers
+  expected_types:
+  - Offer
+  description: An offer to provide this item—for example, an offer to sell a product,
+    rent the DVD of a movie, perform a service, or give away tickets to an event.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: operatingSystem
+  expected_types:
+  - Text
+  description: Operating systems supported (Windows 7, OSX 10.6, Android 1.6).
+  type: ""
+  type_url: ""
+  bsc_description: Operating systems on which the app runs.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: potentialAction
+  expected_types:
+  - URL
+  description: Indicates a potential Action, which describes an idealized action in
+    which this thing would play an 'object' role.
+  type: ""
+  type_url: ""
+  bsc_description: |-
+    The input format of the data. Must be one of the [EDAM:Data](http://edamontology.org/data_0006) concept labels or one of its synonyms.
+    **Note:** Bioschemas have changed the Expected Type from [Action](http://schema.org/Action) to [URL](http://schema.org/URL).
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: '[EDAM:Data](http://edamontology.org/data_0006)'
+  example: ""
+- property: publisher
+  expected_types:
+  - Organization
+  - Person
+  description: The publisher of the creative work.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: rdf:type
+  expected_types:
+  - URL
+  description: ""
+  type: external
+  type_url: https://www.w3.org/1999/02/22-rdf-syntax-ns#type
+  bsc_description: This is used by validation tools to indentify the profile used.
+    You must use the value specified in the Controlled Vocabulary column.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: '[SIO:000097 (software entity)](http://semanticscience.org/resource/SIO_000097)'
+  example: ""
+- property: softwareHelp
+  expected_types:
+  - CreativeWork
+  description: Software application help.
+  type: ""
+  type_url: ""
+  bsc_description: A documentation for the tool.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: softwareRequirements
+  expected_types:
+  - Text
+  - URL
+  description: 'Component dependency requirements for application. This includes runtime
+    environments and shared libraries that are not included in the application distribution
+    package, but required to run the application (Examples: DirectX, Java or .NET
+    runtime). Supersedes requirements.'
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: softwareVersion
+  expected_types:
+  - Text
+  description: Version of the software instance.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: URL of the item. This property can be used on a page listing many
+    software tools, to indicate each individual tool's page.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
 ---
-
 
 <!DOCTYPE HTML>
 <html>
@@ -40,283 +279,13 @@ spec_info:
             <div id="main-content-wrapper" class="outer">
                <section id="main_content" class="inner">
                   {% include profile_start.html %}
-                  <table class="bioschemas_properties bsc_type">
-                     <thead>
-                        <tr>
-                           <th>Property</th>
-                           <th>Expected Type</th>
-                           <th>Description</th>
-                           <th>CD</th>
-                           <th>Controlled Vocabulary</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                       <tr class="cardinality">
-                          <td colspan="5">
-                             Marginality: <b>Minimum</b>
-                          </td>
-                       </tr>
-
-                       <tr>
-                          <th><a href="http://schema.org/description">description</a></th>
-                          <td>
-                            <a href="http://schema.org/Text">Text</a>
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: A description of the item.<br />
-                            <strong>Bioschemas</strong>: A short description of the item.
-                          <td>ONE</td>
-                          <td></td>
-                       </tr>
-                       <tr>
-                          <th><a href="http://schema.org/featureList">featureList</a></th>
-                          <td>
-                            <a href="http://schema.org/Text">Text</a><br />
-                            <a href="http://schema.org/URL">URL</a><br />
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: Features or modules provided by this application (and possibly required by other applications).<br />
-                            <strong>Bioschemas</strong>: Please choose values from <a class="externalProp" href="http://edamontology.org/operation_0004">EDAM:Operation</a>.
-                          <td>MANY</td>
-                          <td><a class="externalProp" href="http://edamontology.org/operation_0004">EDAM:Operation</a></td>
-                       </tr>
-                       <tr>
-                          <th><a href="http://schema.org/name">name</a></th>
-                          <td>
-                            <a href="http://schema.org/Text">Text</a>
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: The name of the item.
-                          <td>ONE</td>
-                          <td></td>
-                       </tr>
-                       <tr>
-                          <th><a class="externalProp" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></th>
-                          <td>
-                            <a href="http://schema.org/URL">URL</a>
-                          </td>
-                          <td>
-                            <strong>Bioschemas</strong>: This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.
-                          </td>
-                          <td>ONE</td>
-                          <td>
-                             <a href="http://semanticscience.org/resource/SIO_000097">SIO:000097 (sofware entity)</a>
-                          </td>
-                       </tr>
-                       <tr>
-                          <th><a href="http://schema.org/softwareVersion">softwareVersion</a></th>
-                          <td>
-                            <a href="http://schema.org/Text">Text</a>
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: Version of the software instance.
-                          <td>ONE</td>
-                          <td></td>
-                       </tr>
-                       <tr>
-                          <th><a href="http://schema.org/url">url</a></th>
-                          <td>
-                            <a href="http://schema.org/URL">URL</a>
-                          </td>
-                          <td>
-                            <strong>Schema</strong>: URL of the item.<br />
-                            <strong>Bioschemas</strong>: URL of the item. This property can be used on a page listing many software tools, to indicate each individual tool's page.
-                          <td>ONE</td>
-                          <td></td>
-                       </tr>
-<!-- RECOMMENDED -->
-                       <tr class="cardinality">
-                          <td colspan="5">
-                             Marginality: <b>Recommended</b>
-                          </td>
-                       </tr>
-                       <tr>
-                         <th><a href="http://schema.org/citation">citation</a></th>
-                         <td>
-                           <a href="http://schema.org/CreativeWork">CreativeWork</a><br />
-                           <a href="http://schema.org/Text">Text</a>
-                         </td>
-                         <td>
-                           <strong>Schema</strong>: A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.<br />
-                           <strong>Bioschemas</strong>: Publication about this software.
-                         </td>
-                         <td>MANY</td>
-                         <td></td>
-                       </tr>
-                       <tr>
-                         <th><a class="newBsc" href="http://schema.org/license">license</a></th>
-                         <td>
-                           <a href="http://schema.org/Text">Text</a>
-                         </td>
-                         <td>
-                           <strong>Schema</strong>: A license document that applies to this content, typically indicated by URL.<br />
-                           <strong>Bioschemas</strong>: The applicable software license.<br />
-                           <u><strong>Note</strong></u>: Bioschemas have changed the Expected Types from <a href="http://schema.org/CreativeWork">CreativeWork</a> and <a href="http://schema.org/URL">URL</a> to <a href="http://schema.org/Text">Text</a>.
-                         </td>
-                         <td>MANY</td>
-                         <td></td>
-                       </tr>
-                       <tr>
-                         <th><a href="http://schema.org/publisher">publisher</a></th>
-                         <td>
-                           <a href="http://schema.org/Organization">Organization</a><br />
-                           <a href="http://schema.org/Person">Person</a><br />
-                         </td>
-                         <td>
-                           <strong>Schema</strong>: The publisher of the creative work.<br />
-                           <strong>Bioschemas</strong>: Use for contacts or 'credit'.
-                         </td>
-                         <td>MANY</td>
-                         <td></td>
-                       </tr>
-<!-- OPTIONAL -->
-                       <tr class="cardinality">
-                          <td colspan="5">
-                             Marginality: <b>Optional</b>
-                          </td>
-                       </tr>
-                       <tr>
-                         <th><a class="newBsc" href="http://schema.org/applicationCategory">applicationCategory</a></th>
-                         <td>
-                           <a href="http://schema.org/Text">Text</a>
-                         </td>
-                         <td>
-                           <strong>Schema</strong>: Type of software application, e.g. 'Game, Multimedia'. <br />
-                           <strong>Bioschemas</strong>: Type of software e.g. database, tool, service.<br />
-                           <u><strong>Note</strong></u>: Bioschemas have removed <a href="http://schema.org/URL">URL</a> from the Expected Types.
-                         </td>
-                         <td>MANY</td>
-                         <td>Please choose terms from the 'tool type' table in the <a href="https://biotools.readthedocs.io/en/latest/curators_guide.html#tool-type">biotools documentation</a></td>
-                       </tr>
-                       <tr>
-                         <th><a href="http://schema.org/dateCreated">dateCreated</a></th>
-                         <td>
-                           <a href="http://schema.org/Date">Date</a><br />
-                           <a href="http://schema.org/DateTime">DateTime</a>
-                         </td>
-                         <td>
-                           <strong>Schema</strong>: The date on which the CreativeWork was created or the item was added to a DataFeed.
-                         </td>
-                         <td>ONE</td>
-                         <td></td>
-                       </tr>
-                       <tr>
-                         <th><a href="http://schema.org/dateModified">dateModified</a></th>
-                         <td>
-                           <a href="http://schema.org/Date">Date</a><br />
-                           <a href="http://schema.org/DateTime">DateTime</a>
-                         </td>
-                         <td>
-                           <strong>Schema</strong>: The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.
-                         </td>
-                         <td>ONE</td>
-                         <td></td>
-                       </tr>
-                       <tr>
-                         <th><a class="newBsc" href="http://schema.org/hasPart">hasPart</a></th>
-                         <td>
-                           <a href="http://schema.org/SoftwareApplication">SoftwareApplication</a>
-                         </td>
-                         <td>
-                           <strong>Schema</strong>: Indicates a CreativeWork that is (in some sense) a part of this CreativeWork. <em>Inverse property: <a href="http://schema.org/isPartOf">isPartOf</a></em>.<br />
-                           <strong>Bioschemas</strong>: Used to describe tools included into suites/bundles/workflows.<br />
-                           <u><strong>Note</strong></u>: Bioschemas have changed the Expected Type from <a href="http://schema.org/CreativeWork">CreativeWork</a> to <a href="http://schema.org/SoftwareApplication">SoftwareApplication</a>.
-                         </td>
-                         <td>MANY</td>
-                         <td></td>
-                       </tr>
-                       <tr>
-                         <th><a href="http://schema.org/keywords">keywords</a></th>
-                         <td>
-                           <a href="http://schema.org/Text">Text</a>
-                         </td>
-                         <td>
-                           <strong>Schema</strong>: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.
-                         </td>
-                         <td>ONE</td>
-                         <td><a href="http://edamontology.org/topic_0003">EDAM:Topic</a></td>
-                       </tr>
-                       <tr>
-                         <th><a href="http://schema.org/offers">offers</a></th>
-                         <td>
-                           <a href="http://schema.org/Offer">Offer</a>
-                         </td>
-                         <td>
-                           <strong>Schema</strong>: An offer to provide this item—for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.
-                         </td>
-                         <td>MANY</td>
-                         <td></td>
-                       </tr>
-                       <tr>
-                         <th><a href="http://schema.org/operatingSystem">operatingSystem</a></th>
-                         <td>
-                           <a href="http://schema.org/Text">Text</a>
-                         </td>
-                         <td>
-                           <strong>Schema</strong>: Operating systems supported (Windows 7, OSX 10.6, Android 1.6).<br />
-                           <strong>Bioschemas</strong>: Operating systems on which the app runs.
-                         </td>
-                         <td>MANY</td>
-                         <td></td>
-                       </tr>
-                       <tr>
-                         <th><a class="newBsc" href="http://schema.org/potentialAction">potentialAction</a></th>
-                         <td>
-                           <a href="http://schema.org/URL">URL</a>
-                         </td>
-                         <td>
-                           <strong>Schema</strong>: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.<br />
-                           <strong>Bioschemas</strong>: The input format of the data. Must be one of the <a class="externalProp" href="http://edamontology.org/data_0006">EDAM:Data</a> concept labels or one of its synonyms.<br />
-                           <u><strong>Note</strong></u>: Bioschemas have changed the Expected Type from <a href="http://schema.org/Action">Action</a> to <a href="http://schema.org/URL">URL</a>.
-                         </td>
-                         <td>MANY</td>
-                         <td><a href="http://edamontology.org/data_0006">EDAM:Data</a></td>
-                       </tr>
-                       <tr>
-                         <th><a class="newBsc" href="http://schema.org/potentialAction">potentialAction</a></th>
-                         <td>
-                           <a href="http://schema.org/URL">URL</a>
-                         </td>
-                         <td>
-                           <strong>Schema</strong>: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.<br />
-                           <strong>Bioschemas</strong>: The output format of the data. Must be one of the <a class="externalProp" href="http://edamontology.org/data_0006">EDAM:Data</a> concept labels or one of its synonyms.<br />
-                           <u><strong>Note</strong></u>: Bioschemas have changed the Expected Type from <a href="http://schema.org/Action">Action</a> to <a href="http://schema.org/URL">URL</a>.
-                         </td>
-                         <td>MANY</td>
-                         <td><a href="http://edamontology.org/data_0006">EDAM:Data</a></td>
-                       </tr>
-                       <tr>
-                         <th><a href="http://schema.org/softwareHelp">softwareHelp</a></th>
-                         <td>
-                           <a href="http://schema.org/CreativeWork">CreativeWork</a>
-                         </td>
-                         <td>
-                           <strong>Schema</strong>: Software application help.<br />
-                           <strong>Bioschemas</strong>: A documentation for the tool.
-                         </td>
-                         <td>MANY</td>
-                         <td></td>
-                       </tr>
-                       <tr>
-                         <th><a href="http://schema.org/softwareRequirements">softwareRequirements</a></th>
-                         <td>
-                           <a href="http://schema.org/Text">Text</a><br />
-                           <a href="http://schema.org/URL">URL</a>
-                         </td>
-                         <td>
-                           <strong>Schema</strong>: Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime).<br />
-                         </td>
-                         <td>MANY</td>
-                         <td></td>
-                       </tr>
-                  </table>
+                  <div class="spec-table-wrapper">
+                    {% include specification_table.html %}
+                  </div>
                </section>
             </div>
          </div>
       </div>
       {% include footer.html %}
-      
-      
-      
    </body>
 </html>
