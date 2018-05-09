@@ -1,5 +1,15 @@
 <div class="spec-table-wrapper">
-    {% if page.mapping != null %}  
+    {% if page.mapping != null %}
+
+    {% assign mapping_examples = "" | split: "" %}
+
+    {% for prop in page.mapping %}
+    {% if prop.example != '' %}
+    {% assign mapping_examples = mapping_examples | push: prop %}
+    {% endif %}
+    {% endfor %}
+    
+    {% unless mapping_examples.size < 1 %}
     <div class="example-button">
         <span class="tooltiptext">View all examples</span>
         <button type="button" class="btn btn-bioschema" data-toggle="modal" data-target="#all-examples-modal">Examples  <i class="fas fa-file-code"></i></button>
@@ -14,11 +24,10 @@
             </div>
             <div class="modal-body">
                 <div id="bundle-property-examples" class="example-code">
-{% highlight javascript %}{% for prop in page.mapping %}
-{% unless prop.example == "" %}
+{% highlight javascript %}{% for prop in mapping_examples %}
+
 //Property: {{prop.property}}
 {{prop.example}}
-{% endunless %}
 {% endfor %}{% endhighlight %}
                 <button type="button" class="btn btn-primary btn-copy" data-clipboard-target="#bundle-property-examples"><i class="fas fa-copy"></i></button>
                 </div>
@@ -28,7 +37,8 @@
             </div>
             </div>
         </div>
-    </div>         
+    </div>
+    {% endunless %}
     <table class="spec-prof-table">
         <thead>
             <tr>
