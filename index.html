@@ -22,14 +22,14 @@ layout: default
         {% assign endDate = meeting.end_date | date: '%F' %}
         {% if currentDate <= meetingDate %}
         <li itemscope itemtype="http://schema.org/Event">
-            <strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong> <br/> {{ meeting.dates }} <br/> <span itemprop="location">{{ meeting.venue | markdownify }}</span> 
+            <strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong> <br/> {{ meeting.dates }} <br/> <span itemprop="location">{{ meeting.venue }}</span> 
             <meta itemprop="startDate" content="{{meeting.start_date}}"/>
             <meta itemprop="endDate" content="{{ meeting.end_date }}"/>
         </li>
         {% assign count = count | plus: 1 %}
         {% elsif meetingDate <= currentDate and currentDate <= endDate %}
         <li itemscope itemtype="http://schema.org/Event">
-            <strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong> <br/> {{ meeting.dates }} <br/> <span itemprop="location">{{ meeting.venue | markdownify }}</span> 
+            <strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong> <br/> {{ meeting.dates }} <br/> <span itemprop="location">{{ meeting.venue }}</span> 
             <meta itemprop="startDate" content="{{meeting.start_date}}"/>
             <meta itemprop="endDate" content="{{ meeting.end_date }}"/>
         </li>
