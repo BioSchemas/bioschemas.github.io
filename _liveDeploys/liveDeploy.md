@@ -142,4 +142,12 @@ list:
     bsc_profile: Tool
     bsc_ver: 0.1
     comments:
+-
+    name: Elixir TeSS Events
+    description:
+    URL: https://tess.elixir-europe.org/events
+    schema_org: Event
+    bsc_profile: Event
+    bsc_ver: 0.1
+    comments:    
 ---
