@@ -22,7 +22,8 @@ layout: default
         {% assign endDate = meeting.end_date | date: '%F' %}
         {% if currentDate <= meetingDate %}
         <li itemscope itemtype="http://schema.org/Event">
-            <strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong> <br/> {{ meeting.dates }} <br/> <span itemprop="location">{{ meeting.venue }}</span> 
+            <strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong>{% if meeting.tbc %} <span class="badge badge-warning">TBC</span>{% endif %}
+            <br/> {{ meeting.dates }} <br/> <span itemprop="location">{{ meeting.venue }}</span>
             <meta itemprop="startDate" content="{{meeting.start_date}}"/>
             <meta itemprop="endDate" content="{{ meeting.end_date }}"/>
         </li>
