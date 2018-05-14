@@ -260,12 +260,6 @@ ul {
     padding-left: 1em;
 }
 
-ul li {
-    padding-left: 1em;
-    margin-bottom: 0.3125em;
-    text-indent: -1.1em;
-}
-
 ul li::before {
     content: "•";
     padding-right: 0.4em;

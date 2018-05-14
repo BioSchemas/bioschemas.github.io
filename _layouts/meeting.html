@@ -2,7 +2,7 @@
 layout: default
 ---
 <h1>{{ page.name }}</h1>
-<p><strong>Dates:</strong> {{page.dates}}</p>
+<p><strong>Dates:</strong> {{page.start_date | date_to_long_string}} To {{page.end_date | date_to_long_string}}</p>
 <p><strong>Venue:</strong> {{page.venue}}</p>
 {% if page.meeting-url %}
   <p><strong>Meeting page:</strong> <a href="{{page.meeting-url}}">{{page.meeting-url}}</a></p>
