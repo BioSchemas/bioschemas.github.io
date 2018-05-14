@@ -29,7 +29,7 @@ list:
     schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.1
-    comments: 
+    comments:
 -
     name: Human Protein Atlas
     description:
@@ -77,7 +77,7 @@ list:
     schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.1
-    comments: 
+    comments:
 -
     name: MobiDB
     description:
@@ -148,6 +148,22 @@ list:
     URL: https://tess.elixir-europe.org/events
     schema_org: Event
     bsc_profile: Event
+    bsc_ver: 0.1
+    comments:    
+-
+    name: PDBe
+    description: 140,000+ pages
+    URL: http://www.ebi.ac.uk/pdbe/entry/pdb/4a7l
+    schema_org:
+    bsc_profile: ProteinStructure
+    bsc_ver: 0.1
+    comments:
+-
+    name: PDBe
+    description: 214,000+ pages
+    URL: https://www.ebi.ac.uk/pdbe/entry/pdb/5hbi/protein/1
+    schema_org:
+    bsc_profile: Protein
     bsc_ver: 0.1
     comments:    
 ---
