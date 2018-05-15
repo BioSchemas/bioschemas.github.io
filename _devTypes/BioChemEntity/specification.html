@@ -1,10 +1,11 @@
 ---
 dateModified: 2018-03-01
-description: A BioChemEntity is any object that exists in the physical world and
-  cannot be better represented with any other existing type in schema.org. This includes
-  theoretical objects that may potentially be invented/created, but do not currently exist. For example, synthetic possible chemicals.
+description: A BioChemEntity is any object that exists in the physical world representing biological, chemical and biochemical entities, and cannot be better represented with any other existing type in schema.org (for instance there is a full extension for the Medical field).
   <br />
-  BioChemEntity is a flexible and extensible wrapper for Life Sciences entities.
+  <br />
+  <em>Bioschemas usage</em>
+  <br />
+  As BioChemEntity is a generic, flexible and extensible wrapper for entitties in Life Sciences. Specialized types (a.k.a. profiles in Bioschemas) should customize BioChemEntity by modifying the marginality, cardinality and specify what ontologies and terms should be used per property (if applicable). Profiles should be as specific as possible. For instance, a protein profile would recommend pointing to an organism as part of the minimum information, but not necessarily to a sample or disease. Representations of physical entities in Life Sciences are usually recorded in datasets; the link to a dataset should be done via properties, i.e., mainEntityOfPage. Whenever a suitable profile exists, the profile type should be used in addition to the BioChemEntity type. For instance, both BioChemEntity and Protein would be the types assigned to a protein. Other additional types are always possible via the additionalType property. For instance, <a href="http://purl.obolibrary.org/obo/PR_000000001">http://purl.obolibrary.org/obo/PR_000000001</a> is the official type used for the Protein profile but <a href="http://semanticscience.org/resource/SIO_010043">http://semanticscience.org/resource/SIO_010043</a> or <a href="https://www.wikidata.org/wiki/Q8054">https://www.wikidata.org/wiki/Q8054</a> can be used as an additionaType if that results useful somehow to the data providers.
 hierarchy:
 - Thing
 gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20BioChemEntity
@@ -13,7 +14,7 @@ name: BioChemEntity
 parent_type: Thing
 spec_type: Type
 status: revision
-subtitle: Bioschemas specification describing a physical entity
+subtitle: Bioschemas specification describing a biological, chemical or biochemical entity that exists in the physical world
 version: '0.5'
 
 bsc: #0B794B;
@@ -56,14 +57,28 @@ external: #454547;
                          <a href="http://schema.org/PropertyValue">PropertyValue</a>
                        </td>
                        <td><strong>Schema</strong>: A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.
-Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
+Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br />
+                        Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br/>
+                        <strong>Bioschemas</strong>: Whenever possible, please use a property coined in a third-party well-known vocabulary. For instance, you can directly use http://purl.obolibrary.org/obo/RO_0002327 as a property to express how a protein or gene enables some GO molecular function.
+                        If you still want or need to use additionalProperty, please use (i) property name to specify the name of the property, (ii) additionalType (if possible) to better specify the nature of the property, and (iii) value to link to the object/range of this property.
+                      </td>
+                     </tr>
+                     <tr id="categoryCode">
+                       <th style="color: #0B794B;">categoryCode</th>
+                       <td>
+                         <a style="color: #0000CC;" href="http://pending.schema.org/CategoryCode">CategoryCode</a>
+                       </td>
+                       <td><strong>Bioschemas</strong>: A controlled vocabulary term equivalent to this entity. For instance, an organism coined in NCBI taxonomy can be represented as a BioChemEntity. As it also exists as a term in an ontology, it would be nice to capture that information via categoryCode.
+                       </td>
                      </tr>
                      <tr id="contains">
                        <th style="color: #0B794B;">contains</th>
                        <td>
                          <a style="color: #0B794B;" href="#">BioChemEntity</a><br><a href="http://schema.org/URL">URL</a>
                        </td>
-                       <td><strong>Bioschemas</strong>: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: isContainedIn.</em></td>
+                       <td><strong>Bioschemas</strong>: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: isContainedIn.</em>
+                          <a style="color: #0B794B;" href="#">contains</a> is equivalent to <a href="http://schema.org/isPartOf">isPartOf</a> but with BioChemEntuty as both the domain and range.
+                       </td>
                      </tr>
                      <tr id="hasRepresentation">
                        <th style="color: #0B794B;">hasRepresentation</th>
@@ -72,6 +87,7 @@ Note: Publishers should be aware that applications designed to use specific sche
                        </td>
                        <td><strong>Bioschemas</strong>: A representation for this entity other than, for instance, an image (use image property for that) or the main web page/record
                          (use mainEntityOfPage for that), and see <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a>, for sameAs and url).
+                         <strong>Bioschemas usage</strong>: This property could be used, for instance, to register a sequence protein as it is a representation of the protein. If you want to better define the nature of the representation, use a PropertyValue as described in additionalProperty.
                        </td>
                      </tr>
                      <tr id="isContainedIn">
@@ -80,7 +96,8 @@ Note: Publishers should be aware that applications designed to use specific sche
                          <a style="color: #0B794B;" href="#">BioChemEntity</a><br><a href="http://schema.org/URL">URL</a>
                        </td>
                        <td>
-                         <strong>Bioschemas</strong>: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: containedIn.</em>                       </td>
+                         <strong>Bioschemas</strong>: Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <em>Inverse property: containedIn.</em> <a style="color: #0B794B;" href="#">isContainedIn<a/> is equivalent to <a href="http://schemma.org/isPartOf">isPartOf</a> but with BioChemEntity as domain and range.
+                       </td>
                      </tr>
                      <tr>
                        <th><a style="color: #0B794B;" href="http://schema.org/location">location</a></th>
@@ -92,7 +109,7 @@ Note: Publishers should be aware that applications designed to use specific sche
                        <td>
                          <strong>Schema</strong>: The location of for example where the event is happening, an organization is located, or where an action takes place.<br/>
                          <strong>Bioschemas</strong>: The location can refer to a position in the chromosome or sequence or to a physical place where, for instance, a
-                         sample is stored. Using additionalType is advised to make the distinction. For instance, <a href="https://github.com/OBF/FALDO">FALDO</a> can be used for sequence coordinates.<br />
+                         sample is stored. Using additionalType is advised to make the distinction. For instance, <a href="https://github.com/OBF/FALDO">FALDO</a> or <a href="http://schema.org/PropertyValue">PropertyValue</a> (with properties value, minValue and maxValue) can be used for sequence coordinates.<br />
                          <u><strong>Note</strong></u>: The list of Expected Types has been extended as <a href="http://schema.org/location">schema.org/location</a> only has Place, PostalAddress and Text.
                        </td>
                      </tr>
@@ -118,12 +135,7 @@ Note: Publishers should be aware that applications designed to use specific sche
                          This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax -
                          the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those
                          defined externally. <br />
-                         <strong>Bioschemas</strong>:  As BioChemEntity is a generic wrapper for entitties in Life Sciences, customized types (a.k.a. profiles in Bioschemas) should specify what
-                         ontologies and terms should be used. SIO (<a href="http://bioportal.bioontology.org/ontologies/SIO">http://bioportal.bioontology.org/ontologies/SIO</a>) covers a wide
-                         range of concepts in Life Sciences and accept suggestions about additions (see <a href="https://github.com/micheldumontier/semanticscience/issues">https://github.com/micheldumontier/semanticscience/issues</a>),
-                         other ontologies are possible as well. Customized types should be as specific as possible. For instance, <a href="http://semanticscience.org/resource/SIO_010043">http://semanticscience.org/resource/SIO_010043</a>
-                         would work for a protein while <a href="http://semanticscience.org/resource/SIO_000985">http://semanticscience.org/resource/SIO_000985</a> for a gene coding a protein (which is more specific than gene as described by <a href="http://semanticscience.org/resource/SIO_010035">http://semanticscience.org/resource/SIO_010035</a>). If no better optoin, a generic term could be used as well
-                         (like <a href="http://semanticscience.org/resource/SIO_000004">http://semanticscience.org/resource/SIO_000004</a>).
+                         <strong>Bioschemas</strong>:  Whenever a suitable profile exists, the profile type should be used in addition to the BioChemEntity type. Other additional types are always possible via the additionalType property. For instance, http://purl.obolibrary.org/obo/PR_000000001 is the type used for the Protein profile but http://semanticscience.org/resource/SIO_010043 or https://www.wikidata.org/wiki/Q8054 can be used as an additionalType if that is useful to the data providers.
                        </td>
                      </tr>
                      <tr>
@@ -162,7 +174,8 @@ Note: Publishers should be aware that applications designed to use specific sche
                        <td>
                          <strong>Schema</strong>: The identifier property represents any kind of identifier for any kind of <a href="http://schema.org/Thing">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc.
                          Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.
-                         See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.
+                         See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details. <br/>
+                         <strong>Bioschemas</strong>: We recommend you use either an authoritative source or identifiers.org whenever possible.
                        </td>
                      </tr>
                      <tr>
@@ -182,8 +195,7 @@ Note: Publishers should be aware that applications designed to use specific sche
                        <td>
                          <strong>Schema</strong>: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See
                          <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br />
-                         <strong>Bioschemas</strong>: Link via Record or <a href="http://schema.org/URL">URL</a> to the main Record representing this entity in a dataset.<br />
-                         Note: Please use a <a class="newBsc" href="/types/DataRecord/specification">DataRecord</a> where possible.
+                         <strong>Bioschemas</strong>: Link via DataRecord or <a href="http://schema.org/URL">URL</a> to the main DataRecord representing this entity in a dataset.<br />
                        </td>
                      </tr>
                      <tr>
@@ -229,7 +241,7 @@ Note: Publishers should be aware that applications designed to use specific sche
                        </td>
                        <td>
                          <strong>Schema</strong>: URL of the item.<br />
-                         <strong>Bioschemas</strong>: Link to any resource other than the Record and the official Webpage, for instance a Wikipedia page.
+                         <strong>Bioschemas</strong>: Link to the official webpage associated to this entity.
                        </td>
                      </tr>
                    </tbody>
@@ -239,8 +251,8 @@ Note: Publishers should be aware that applications designed to use specific sche
            </div>
       </div>
       {% include footer.html %}
-      
-      
-      
+
+
+
    </body>
 </html>
