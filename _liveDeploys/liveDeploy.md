@@ -166,4 +166,36 @@ list:
     bsc_profile: Protein
     bsc_ver: 0.1
     comments:    
+-
+    name: French Institute of Bioinformatics (IFB) Events
+    description:
+    URL: https://www.france-bioinformatique.fr/en/evenements_upcoming
+    schema_org: Event
+    bsc_profile: Event
+    bsc_ver: 0.1
+    comments:     
+-
+    name: ELIXIR Portugal Events
+    description:
+    URL: http://elixir-portugal.org/event/embo-practical-course-tree-building-advanced-concepts-and-practice-phylogenetic-analysis
+    schema_org: Event
+    bsc_profile: Event
+    bsc_ver: 0.1
+    comments:     
+-
+    name: SIB Events
+    description:
+    URL: https://www.sib.swiss/training/upcoming-training-events
+    schema_org: Event
+    bsc_profile: Event
+    bsc_ver: 0.1
+    comments:   
+-
+    name: ELIXIR Events
+    description:
+    URL: https://www.elixir-europe.org/events/biohackathon-2018-paris
+    schema_org: Event
+    bsc_profile: Event
+    bsc_ver: 0.1
+    comments:   
 ---
