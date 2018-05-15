@@ -166,4 +166,12 @@ list:
     bsc_profile: Protein
     bsc_ver: 0.1
     comments:    
+-
+    name: HmmerWeb
+    description: Result of searches are annotated (results last 1 week)
+    URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+    schema_org:
+    bsc_profile: Protein, ProteinStructure, ProteinAnnotation
+    bsc_ver: 0.1
+    comments:
 ---
