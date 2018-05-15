@@ -144,7 +144,7 @@ list:
     comments:
 -
     name: Elixir TeSS Events
-    description:
+    description: 8500+ pages
     URL: https://tess.elixir-europe.org/events
     schema_org: Event
     bsc_profile: Event
@@ -197,5 +197,13 @@ list:
     schema_org: Event
     bsc_profile: Event
     bsc_ver: 0.1
-    comments:   
+    comments:
+-
+    name: Birmingham Metabolomics Training Centre
+    description:
+    URL: https://www.birmingham.ac.uk/facilities/metabolomics-training-centre/courses/q-exactive.aspx
+    schema_org: Event
+    bsc_profile: Event
+    bsc_ver: 0.1
+    comments:         
 ---
