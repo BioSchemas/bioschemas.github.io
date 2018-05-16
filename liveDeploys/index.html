@@ -21,26 +21,30 @@ description: |-
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Bioschema Profile</th>                                
                     <th>Profile Version</th>
                     <th class="structured-data-column">Structured Data Testing Tool</th>
                 </tr>
             </thead>
             <tbody>
-                {% assign live_sorted_list = liveDeploys.list | sort: 'bsc_profile' %}
+
+                {% assign profiles = liveDeploys.list | group_by: 'bsc_profile' | sort: 'name' %}
+                {% for profile in profiles %}
+                <tr class="profile-row">
+                    <td colspan="3">
+                        {% if profile.name == "LabProtocol" or profile.name == "DataRecord" or profile.name == "BioChemEntity" %}
+                        <a href="http://bioschemas.org/types/{{profile.name}}/specification/" target="_blank">{{profile.name}}</a><br>
+                        {% else %}
+                        <a href="http://bioschemas.org/specifications/{{profile.name}}/specification/" target="_blank">{{profile.name}}</a><br>
+                        {% endif %}
+                    </td>                    
+                </tr>
+                {% assign live_sorted_list = profile.items | sort: 'name' %}
                 {% for live in live_sorted_list %}
                 <tr>
                     <td class="deploy-name-column">
                         <a href="{{live.URL}}" target="_blank">{{live.name}}</a>
                         <p>{{live.description}}</p>
                     </td>
-                    <td>
-                        {% if live.bsc_profile == "LabProtocol" or live.bsc_profile == "DataRecord" or live.bsc_profile == "BioChemEntity" %}
-                        <a href="http://bioschemas.org/types/{{live.bsc_profile}}/specification/" target="_blank">{{live.bsc_profile}}</a><br>
-                        {% else %}
-                        <a href="http://bioschemas.org/specifications/{{live.bsc_profile}}/specification/" target="_blank">{{live.bsc_profile}}</a><br>
-                        {% endif %}
-                    </td>                                
                     <td class="profile-version">
                         {{live.bsc_ver}}
                     </td>
@@ -51,6 +55,8 @@ description: |-
                         </div>
                     </td>                                
                 </tr>
+                {% endfor %}
+
                 {% endfor %}
             </tbody>
         </table>
