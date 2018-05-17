@@ -54,3 +54,9 @@ $('.navbar-toggle').on('click', function () {
     $('#mobile_links').fadeToggle(200);
     $('#mobile_links').css("display", "inline");
 });
+
+$('.live-deploy-table').on('show.bs.collapse', function () {
+    $(".collapse.show")
+        .not(this)
+        .collapse('toggle');
+});
