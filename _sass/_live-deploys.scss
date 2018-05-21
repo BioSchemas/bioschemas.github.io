@@ -5,6 +5,7 @@
     }
     .live-deploy-table {
         text-align: center;
+        margin: 0 10% 0 10%;
     }
     .google-sdtt-button {
         position: relative;
@@ -86,10 +87,10 @@
             font-size: 100%;
         }
         td {
+            width: 100%;            
             border: 0;
             padding: 0.625em;
             min-height: 1.25em;
-            max-height: 2.5em;
             vertical-align: center;
             font-size: 100%;
             display: table-cell;
@@ -113,7 +114,7 @@
         }
         .structured-data-column {
             word-break: break-word;
-            max-width: 10em;
+            width:10em;        
         }
         .profile-row {
             text-align: center;

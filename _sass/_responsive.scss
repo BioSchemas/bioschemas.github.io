@@ -17,7 +17,7 @@
         position: relative;
         .trigger_links {
             text-align: center;
-        }            
+        }
     }
     .trigger.stuck {
         position: fixed;
@@ -25,7 +25,7 @@
         top: 0;
         background-color: rgb(11, 121, 75);
         width: 100%;
-    }      
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -139,5 +139,8 @@
     }
     .spec-table-wrapper {
         overflow-x: scroll;
+    }
+    .live-deploys .live-deploy-table {
+        margin: 0 0 0 0 !important;
     }
 }
