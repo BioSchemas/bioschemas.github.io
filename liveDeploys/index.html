@@ -26,7 +26,20 @@ description: |-
             <tbody>
             {% assign profiles = liveDeploys.list | group_by: 'bsc_profile' | sort: 'name' %}
             {% for profile in profiles %}
-            <tr class="profile-row" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{profile.name}}" aria-expanded="false" aria-controls="collapse{{profile.name}}">
+            {% assign profile_index = forloop.index %}
+            {% if profile_index == 1%}
+            <tr class="profile-row" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{profile.name}}" aria-expanded="true" aria-controls="collapse{{profile.name}}">
+                <td colspan="3">
+                    {% if profile.name == "LabProtocol" or profile.name == "DataRecord" or profile.name == "BioChemEntity" %}
+                    <a href="http://bioschemas.org/types/{{profile.name}}/specification/" target="_blank">{{profile.name}}</a><br>
+                    {% else %}
+                    <a href="http://bioschemas.org/specifications/{{profile.name}}/specification/" target="_blank">{{profile.name}}</a><br>
+                    {% endif %}
+                    <div class="plus-icon"><i class="fas fa-minus fa-lg"></i></div>
+                </td>
+            </tr>                
+            {% else %}
+            <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{profile.name}}" aria-expanded="false" aria-controls="collapse{{profile.name}}">
                 <td colspan="3">
                     {% if profile.name == "LabProtocol" or profile.name == "DataRecord" or profile.name == "BioChemEntity" %}
                     <a href="http://bioschemas.org/types/{{profile.name}}/specification/" target="_blank">{{profile.name}}</a><br>
@@ -36,7 +49,7 @@ description: |-
                     <div class="plus-icon"><i class="fas fa-plus fa-lg"></i></div>
                 </td>
             </tr>
-            {% assign profile_index = forloop.index %}
+            {% endif %}
             {% assign live_sorted_list = profile.items | sort: 'name' %}
             {% for live in live_sorted_list %}
             <tr>

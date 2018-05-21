@@ -1,8 +1,6 @@
-
-
 new ClipboardJS('.btn-copy');
 
-$(window).scroll(function() {
+$(window).scroll(function () {
     var topOfDiv = $('#header_wrap').offset().top;
     var height = $('#header_wrap').outerHeight();
     if ($(window).width() > 700) {
@@ -59,4 +57,14 @@ $('.live-deploy-table').on('show.bs.collapse', function () {
     $(".collapse.show")
         .not(this)
         .collapse('toggle');
+});
+
+$(document).ready(function () {
+    $('.live-deploy-table tr').on('shown.bs.collapse', function () {
+        $(this).prev().find(".plus-icon").html('<i class="fas fa-minus fa-lg"></i>');
+    });
+    
+    $('.live-deploy-table tr').on('hidden.bs.collapse', function () {
+        $(this).prev().find(".plus-icon").html('<i class="fas fa-plus fa-lg"></i>');
+    });
 });
