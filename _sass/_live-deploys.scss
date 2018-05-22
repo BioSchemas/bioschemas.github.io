@@ -5,11 +5,16 @@
     }
     .live-deploy-table {
         text-align: center;
+        margin: 0 10% 0 10%;
     }
     .google-sdtt-button {
         position: relative;
         display: inline-block;
         width: 100%;
+        height: 3em;
+        padding: 0.4em 0 0 0;
+        margin: 0.2em;
+
         a {
             color: $bioschemas-steel-teal-color;
             border-bottom: initial;
@@ -52,7 +57,6 @@
         box-shadow: none;
         margin: 1em 0 2em 0;
         border: 1px solid #98A0A6;
-        border-spacing: 3px;
         display: inline-block;
         font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Tahoma, Arial, sans-serif;
         line-height: 160%;
@@ -67,23 +71,26 @@
             vertical-align: inherit;
             border-color: inherit;
             font-size: 100%;
+            border-color: #fff;
+            border-width: 1em;            
         }
         th {
+            border-color: #fff;
+            border-width: 0.2em;
             padding-left: 5px;
             background: #C7CBCE;
             color: #3A4956;
             font-weight: bold;
             display: table-cell;
             text-align: center;
-            border: none;
             vertical-align: middle;
             font-size: 100%;
         }
         td {
+            width: 100%;            
             border: 0;
             padding: 0.625em;
             min-height: 1.25em;
-            max-height: 2.5em;
             vertical-align: center;
             font-size: 100%;
             display: table-cell;
@@ -107,15 +114,37 @@
         }
         .structured-data-column {
             word-break: break-word;
-            max-width: 10em;
+            width:10em;
+            min-width: 10em;
+        }
+        .profile-row {
+            text-align: center;
+            font-weight: bold;
+            background: #C7CBCE;
+            font-size: 100%;
+
+            >td {
+                border: 0.2em solid #fff;
+            }
+        }
+        .plus-icon {
+            @include transition(0.2s, ease-in-out);
+            color: $bioschemas-base-color;
+            position: absolute;
+            top: 0.6em;
+            right: 1em;
         }
         p {
             color: #666;
             font-size: 85%;
             font-weight: bold;
         }
+        .hidden-row {
+            padding: 0 1em 0 1em;
+        }
     }
     blockquote {
         font-size: 14px;
     }
+
 }
