@@ -8,7 +8,7 @@ description: Services/sites implementing Bioschemas's markup
 list:
 -
     name: Identifiers
-    description:
+    highlight:
     example_URL: http://identifiers.org/
     resource_URL: http://identifiers.org/
     schema_org: DataCatalog
@@ -17,7 +17,7 @@ list:
     comments: Could implement Dataset and DataRecord as well.
 -
     name: Fairsharing
-    description:
+    highlight:
     example_URL: https://fairsharing.org/
     resource_URL: https://fairsharing.org/
     schema_org: DataCatalog
@@ -26,7 +26,7 @@ list:
     comments:
 -
     name: Gigadb
-    description:
+    highlight:
     example_URL: http://gigadb.org/site/index
     resource_URL: http://gigadb.org/
     schema_org: DataCatalog
@@ -35,7 +35,7 @@ list:
     comments:
 -
     name: Human Protein Atlas
-    description:
+    highlight:
     example_URL: https://www.proteinatlas.org/
     resource_URL: https://www.proteinatlas.org/
     schema_org: DataCatalog
@@ -44,7 +44,7 @@ list:
     comments: Could implement Dataset and DataRecord as well.
 -
     name: EGA
-    description:
+    highlight:
     example_URL: https://ega-archive.org/
     resource_URL: https://ega-archive.org/
     schema_org: DataCatalog
@@ -53,7 +53,7 @@ list:
     comments:
 -
     name: Isaexplorer
-    description:
+    highlight:
     example_URL: http://scientificdata.isa-explorer.org/
     resource_URL: http://scientificdata.isa-explorer.org/
     schema_org: DataCatalog
@@ -62,7 +62,7 @@ list:
     comments:
 -
     name: IUPHAR/BPS
-    description:
+    highlight:
     example_URL: http://www.guidetopharmacology.org/
     resource_URL: http://www.guidetopharmacology.org/
     schema_org: DataCatalog
@@ -71,7 +71,7 @@ list:
     comments:
 -
     name: EGA Dataset
-    description:
+    highlight:
     example_URL: https://ega-archive.org/datasets/EGAD00000000001
     resource_URL: https://ega-archive.org/
     schema_org: Dataset
@@ -80,7 +80,7 @@ list:
     comments:
 -
     name: MobiDB
-    description:
+    highlight:
     example_URL: http://mobidb.bio.unipd.it/
     resource_URL: http://mobidb.bio.unipd.it/
     schema_org: DataCatalog
@@ -89,7 +89,7 @@ list:
     comments:
 -
     name: MobiDB
-    description:
+    highlight:
     example_URL: http://mobidb.bio.unipd.it/
     resource_URL: http://mobidb.bio.unipd.it/
     schema_org: Dataset
@@ -98,7 +98,7 @@ list:
     comments: Can implement DataRecord type.
 -
     name: Biosamples
-    description: 
+    highlight: 
     example_URL: https://www.ebi.ac.uk/biosamples/
     resource_URL: https://www.ebi.ac.uk/biosamples/
     schema_org:
@@ -107,7 +107,7 @@ list:
     comments:
 -
     name: Biosamples
-    description: 5 million+ pages
+    highlight: 5 million+ pages
     example_URL: https://www.ebi.ac.uk/biosamples/samples/SAMEA491372
     resource_URL: https://www.ebi.ac.uk/biosamples/
     schema_org:
@@ -116,7 +116,7 @@ list:
     comments:
 -
     name: DataMed
-    description:
+    highlight:
     example_URL: https://datamed.org/display-item.php?repository=0006&id=59139ef65152c62a9fc18ff7
     resource_URL: https://datamed.org/
     schema_org: Dataset
@@ -125,7 +125,7 @@ list:
     comments:
 -
     name: Fairsharing
-    description:
+    highlight:
     example_URL: https://fairsharing.org/
     resource_URL: https://fairsharing.org/
     schema_org: Dataset
@@ -134,7 +134,7 @@ list:
     comments:
 -
     name: Pscan
-    description:
+    highlight:
     example_URL: http://159.149.160.88/pscan/
     resource_URL: http://159.149.160.88/pscan/
     schema_org: SoftwareApplication
@@ -143,7 +143,7 @@ list:
     comments:
 -
     name: PscanChIP
-    description:
+    highlight:
     example_URL: http://159.149.160.88/pscan_chip_dev/
     resource_URL: http://159.149.160.88/pscan_chip_dev/
     schema_org: SoftwareApplication
@@ -152,7 +152,7 @@ list:
     comments:
 -
     name: Cscan
-    description:
+    highlight:
     example_URL: http://159.149.160.88/cscan/
     resource_URL: http://159.149.160.88/cscan/
     schema_org: SoftwareApplication
@@ -161,7 +161,7 @@ list:
     comments:
 -
     name: BAR 3.0
-    description:
+    highlight:
     example_URL: https://bar.biocomp.unibo.it/bar3/
     resource_URL: https://bar.biocomp.unibo.it/bar3/
     schema_org: SoftwareApplication
@@ -170,7 +170,7 @@ list:
     comments:
 -
     name: Elixir TeSS Events
-    description: 8500+ pages
+    highlight: 8500+ pages
     example_URL: https://tess.elixir-europe.org/events
     resource_URL: https://tess.elixir-europe.org/events
     schema_org: Event
@@ -179,7 +179,7 @@ list:
     comments:    
 -
     name: PDBe
-    description: 140,000+ pages
+    highlight: 140,000+ pages
     example_URL: http://www.ebi.ac.uk/pdbe/entry/pdb/4a7l
     resource_URL: http://www.ebi.ac.uk/pdbe/
     schema_org:
@@ -188,7 +188,7 @@ list:
     comments:
 -
     name: PDBe
-    description: 214,000+ pages
+    highlight: 214,000+ pages
     example_URL: https://www.ebi.ac.uk/pdbe/entry/pdb/5hbi/protein/1
     resource_URL: https://www.ebi.ac.uk/pdbe/
     schema_org:
@@ -197,7 +197,7 @@ list:
     comments:    
 -
     name: French Institute of Bioinformatics (IFB) Events
-    description:
+    highlight:
     example_URL: https://www.france-bioinformatique.fr/en/evenements_upcoming
     resource_URL: https://www.france-bioinformatique.fr/en/evenements_upcoming
     schema_org: Event
@@ -206,7 +206,7 @@ list:
     comments:     
 -
     name: ELIXIR Portugal Events
-    description:
+    highlight:
     example_URL: http://elixir-portugal.org/event/embo-practical-course-tree-building-advanced-concepts-and-practice-phylogenetic-analysis
     resource_URL: http://elixir-portugal.org/
     schema_org: Event
@@ -215,7 +215,7 @@ list:
     comments:     
 -
     name: SIB Events
-    description:
+    highlight:
     example_URL: https://www.sib.swiss/training/upcoming-training-events
     resource_URL: https://www.sib.swiss/training/upcoming-training-events
     schema_org: Event
@@ -224,7 +224,7 @@ list:
     comments:   
 -
     name: ELIXIR Events
-    description:
+    highlight:
     example_URL: https://www.elixir-europe.org/events/biohackathon-2018-paris
     resource_URL: https://www.elixir-europe.org/events/
     schema_org: Event
@@ -233,7 +233,7 @@ list:
     comments:
 -
     name: Birmingham Metabolomics Training Centre
-    description:
+    highlight:
     example_URL: https://www.birmingham.ac.uk/facilities/metabolomics-training-centre/courses/q-exactive.aspx
     resource_URL: https://www.birmingham.ac.uk/
     schema_org: Event
@@ -242,7 +242,7 @@ list:
     comments:
 -
     name: HmmerWeb
-    description: Result of searches are annotated (results last 1 week)
+    highlight: Result of searches are annotated (results last 1 week)
     example_URL: 
     resource_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
     schema_org:
@@ -251,7 +251,7 @@ list:
     comments:
 -
     name: HmmerWeb
-    description: Result of searches are annotated (results last 1 week)
+    highlight: Result of searches are annotated (results last 1 week)
     example_URL: 
     resource_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
     schema_org:
@@ -260,7 +260,7 @@ list:
     comments:
 -
     name: HmmerWeb
-    description: Result of searches are annotated (results last 1 week)
+    highlight: Result of searches are annotated (results last 1 week)
     example_URL: 
     resource_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
     schema_org:
