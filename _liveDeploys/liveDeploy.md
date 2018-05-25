@@ -206,4 +206,12 @@ list:
     bsc_profile: Event
     bsc_ver: 0.1
     comments:         
+-
+    name: Galaxy Project 
+    description:
+    URL: https://galaxyproject.org/events/
+    schema_org: Event
+    bsc_profile: Event
+    bsc_ver: 0.1
+    comments:             
 ---
