@@ -98,7 +98,7 @@ list:
     comments: Can implement DataRecord type.
 -
     name: Biosamples
-    description: 5 million+ pages
+    description: 
     example_URL: https://www.ebi.ac.uk/biosamples/
     resource_URL: https://www.ebi.ac.uk/biosamples/
     schema_org:
@@ -107,7 +107,7 @@ list:
     comments:
 -
     name: Biosamples
-    description: 
+    description: 5 million+ pages
     example_URL: https://www.ebi.ac.uk/biosamples/samples/SAMEA491372
     resource_URL: https://www.ebi.ac.uk/
     schema_org:
