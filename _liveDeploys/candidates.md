@@ -10,7 +10,7 @@ list:
     name: ITSoneDB
     description:
     example_URL: http://itsonedb.cloud.ba.infn.it/
-    URL: http://itsonedb.cloud.ba.infn.it/
+    resource_URL: http://itsonedb.cloud.ba.infn.it/
     schema_org:
     bsc_profile:
     bsc_ver:
@@ -19,7 +19,7 @@ list:
     name: Biosamples DataCatalog
     description:
     example_URL: https://www.ebi.ac.uk/biosamples/
-    URL: https://www.ebi.ac.uk/
+    resource_URL: https://www.ebi.ac.uk/
     schema_org:
     bsc_profile:
     bsc_ver:
@@ -35,8 +35,8 @@ list:
 -
     name: FAANG
     description:
-    URL: http://data.faang.org/home
-    URL: https://cells.ebisc.org
+    resource_URL: http://data.faang.org/home
+    resource_URL: https://cells.ebisc.org
     schema_org:
     bsc_profile:
     bsc_ver:
@@ -44,7 +44,7 @@ list:
 -
     name: FAANG
     description:
-    URL: http:/
+    resource_URL: http:/
     schema_org:
     bsc_profile:
     bsc_ver:
@@ -53,7 +53,7 @@ list:
     name: HipSci
     description:
     example_URL: http://www.hipsci.org/
-    URL: http://www.hipsci.org/
+    resource_URL: http://www.hipsci.org/
     schema_org:
     bsc_profile:
     bsc_ver:
@@ -62,7 +62,7 @@ list:
     name: PharmGKB
     description:
     example_URL: https://www.pharmgkb.org/
-    URL: https://www.pharmgkb.org/
+    resource_URL: https://www.pharmgkb.org/
     schema_org:
     bsc_profile:
     bsc_ver:
@@ -71,7 +71,7 @@ list:
     name: CDT
     description:
     example_URL: http://ctdbase.org/
-    URL: http://ctdbase.org/
+    resource_URL: http://ctdbase.org/
     schema_org:
     bsc_profile:
     bsc_ver:
@@ -80,7 +80,7 @@ list:
     name: EnsemblGenomes
     description:
     example_URL: http://ensemblgenomes.org/
-    URL: http://ensemblgenomes.org/
+    resource_URL: http://ensemblgenomes.org/
     schema_org:
     bsc_profile:
     bsc_ver:
@@ -89,7 +89,7 @@ list:
     name: EnsemblProtists
     description:
     example_URL: http://protists.ensembl.org/
-    URL: http://protists.ensembl.org/
+    resource_URL: http://protists.ensembl.org/
     schema_org:
     bsc_profile:
     bsc_ver:
@@ -98,7 +98,7 @@ list:
     name: Edinburgh Genomics
     description:
     example_URL: https://genomics.ed.ac.uk/services/training
-    URL: https://genomics.ed.ac.uk/
+    resource_URL: https://genomics.ed.ac.uk/
     schema_org:
     bsc_profile:
     bsc_ver:
@@ -107,7 +107,7 @@ list:
     name: Birmingham Metabolomics Centre
     description:
     example_URL: https://www.birmingham.ac.uk/facilities/metabolomics-training-centre/course-list.aspx
-    URL: https://www.birmingham.ac.uk/
+    resource_URL: https://www.birmingham.ac.uk/
     schema_org:
     bsc_profile:
     bsc_ver:
@@ -116,7 +116,7 @@ list:
     name: BioComp
     description:
     example_URL: http://biocomp.vbcf.ac.at/training/index.html
-    URL: http://biocomp.vbcf.ac.at/
+    resource_URL: http://biocomp.vbcf.ac.at/
     schema_org:
     bsc_profile:
     bsc_ver:
@@ -125,7 +125,7 @@ list:
     name: BITSVIB
     description:
     example_URL: http://dev.bits.vib.be/eulife/all_events.json
-    URL: http://dev.bits.vib.be/
+    resource_URL: http://dev.bits.vib.be/
     schema_org:
     bsc_profile:
     bsc_ver:
@@ -134,7 +134,7 @@ list:
     name: EBI
     description:
     example_URL: https://www.ebi.ac.uk/sites/ebi.ac.uk/files/data/ebi-events-tess-all.json
-    URL: https://www.ebi.ac.uk/
+    resource_URL: https://www.ebi.ac.uk/
     schema_org:
     bsc_profile:
     bsc_ver:
@@ -143,7 +143,7 @@ list:
     name: Flemish Super Computing Centre
     description:
     example_URL: http://dev.bits.vib.be/eulife/all_events-vrc.json
-    URL: http://dev.bits.vib.be/
+    resource_URL: http://dev.bits.vib.be/
     schema_org:
     bsc_profile:
     bsc_ver:
@@ -152,7 +152,7 @@ list:
     name: FutureLearn
     description:
     example_URL: https://www.futurelearn.com/search?utf8=%E2%9C%93&q=bioinformatics
-    URL: https://www.futurelearn.com/
+    resource_URL: https://www.futurelearn.com/
     schema_org:
     bsc_profile:
     bsc_ver:
