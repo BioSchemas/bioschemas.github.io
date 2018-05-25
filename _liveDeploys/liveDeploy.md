@@ -99,6 +99,15 @@ list:
 -
     name: Biosamples
     description: 5 million+ pages
+    example_URL: https://www.ebi.ac.uk/biosamples/
+    URL: https://www.ebi.ac.uk/biosamples/
+    schema_org:
+    bsc_profile: DataCatalog
+    bsc_ver: 0.1
+    comments:
+-
+    name: Biosamples
+    description: 
     example_URL: https://www.ebi.ac.uk/biosamples/samples/SAMEA491372
     URL: https://www.ebi.ac.uk/
     schema_org:
@@ -127,7 +136,7 @@ list:
     name: Pscan
     description:
     example_URL: http://159.149.160.88/pscan/
-    URL: http://159.149.160.88/
+    URL: http://159.149.160.88/pscan/
     schema_org: SoftwareApplication
     bsc_profile: Tool
     bsc_ver: 0.1
@@ -136,7 +145,7 @@ list:
     name: PscanChIP
     description:
     example_URL: http://159.149.160.88/pscan_chip_dev/
-    URL: http://159.149.160.88/
+    URL: http://159.149.160.88/pscan_chip_dev/
     schema_org: SoftwareApplication
     bsc_profile: Tool
     bsc_ver: 0.1
@@ -145,7 +154,7 @@ list:
     name: Cscan
     description:
     example_URL: http://159.149.160.88/cscan/
-    URL: http://159.149.160.88/
+    URL: http://159.149.160.88/cscan/
     schema_org: SoftwareApplication
     bsc_profile: Tool
     bsc_ver: 0.1
@@ -154,7 +163,7 @@ list:
     name: BAR 3.0
     description:
     example_URL: https://bar.biocomp.unibo.it/bar3/
-    URL: https://bar.biocomp.unibo.it/
+    URL: https://bar.biocomp.unibo.it/bar3/
     schema_org: SoftwareApplication
     bsc_profile: Tool
     bsc_ver: 0.1
@@ -163,7 +172,7 @@ list:
     name: Elixir TeSS Events
     description: 8500+ pages
     example_URL: https://tess.elixir-europe.org/events
-    URL: https://tess.elixir-europe.org/
+    URL: https://tess.elixir-europe.org/events
     schema_org: Event
     bsc_profile: Event
     bsc_ver: 0.1
@@ -172,7 +181,7 @@ list:
     name: PDBe
     description: 140,000+ pages
     example_URL: http://www.ebi.ac.uk/pdbe/entry/pdb/4a7l
-    URL: http://www.ebi.ac.uk/
+    URL: http://www.ebi.ac.uk/pdbe/
     schema_org:
     bsc_profile: ProteinStructure
     bsc_ver: 0.1
@@ -181,7 +190,7 @@ list:
     name: PDBe
     description: 214,000+ pages
     example_URL: https://www.ebi.ac.uk/pdbe/entry/pdb/5hbi/protein/1
-    URL: https://www.ebi.ac.uk/
+    URL: https://www.ebi.ac.uk/pdbe/
     schema_org:
     bsc_profile: Protein
     bsc_ver: 0.1
@@ -190,7 +199,7 @@ list:
     name: French Institute of Bioinformatics (IFB) Events
     description:
     example_URL: https://www.france-bioinformatique.fr/en/evenements_upcoming
-    URL: https://www.france-bioinformatique.fr/
+    URL: https://www.france-bioinformatique.fr/en/evenements_upcoming
     schema_org: Event
     bsc_profile: Event
     bsc_ver: 0.1
@@ -208,7 +217,7 @@ list:
     name: SIB Events
     description:
     example_URL: https://www.sib.swiss/training/upcoming-training-events
-    URL: https://www.sib.swiss/
+    URL: https://www.sib.swiss/training/upcoming-training-events
     schema_org: Event
     bsc_profile: Event
     bsc_ver: 0.1
@@ -217,7 +226,7 @@ list:
     name: ELIXIR Events
     description:
     example_URL: https://www.elixir-europe.org/events/biohackathon-2018-paris
-    URL: https://www.elixir-europe.org/
+    URL: https://www.elixir-europe.org/events/
     schema_org: Event
     bsc_profile: Event
     bsc_ver: 0.1
