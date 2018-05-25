@@ -16,18 +16,10 @@ list:
     bsc_ver:
     comments:
 -
-    name: Biosamples DataCatalog
-    description:
-    example_URL: https://www.ebi.ac.uk/biosamples/
-    resource_URL: https://www.ebi.ac.uk/
-    schema_org:
-    bsc_profile:
-    bsc_ver:
-    comments: Home page could implement DataCatalog
--
     name: EBISC
     description:
     example_URL: https://cells.ebisc.org
+    resource_URL:
     schema_org:
     bsc_profile:
     bsc_ver:
@@ -35,7 +27,7 @@ list:
 -
     name: FAANG
     description:
-    resource_URL: http://data.faang.org/home
+    example_URL: http://data.faang.org/home
     resource_URL: https://cells.ebisc.org
     schema_org:
     bsc_profile:
@@ -44,6 +36,7 @@ list:
 -
     name: FAANG
     description:
+    example_URL:
     resource_URL: http:/
     schema_org:
     bsc_profile:

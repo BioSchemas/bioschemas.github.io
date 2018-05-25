@@ -109,7 +109,7 @@ list:
     name: Biosamples
     description: 5 million+ pages
     example_URL: https://www.ebi.ac.uk/biosamples/samples/SAMEA491372
-    resource_URL: https://www.ebi.ac.uk/
+    resource_URL: https://www.ebi.ac.uk/biosamples/
     schema_org:
     bsc_profile: Sample
     bsc_ver: 0.1
