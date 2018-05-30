@@ -8,202 +8,263 @@ description: Services/sites implementing Bioschemas's markup
 list:
 -
     name: Identifiers
-    description:
-    URL: http://identifiers.org/
+    highlight:
+    example_URL: http://identifiers.org/
+    resource_URL: http://identifiers.org/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments: Could implement Dataset and DataRecord as well.
 -
     name: Fairsharing
-    description:
-    URL: https://fairsharing.org/
+    highlight:
+    example_URL: https://fairsharing.org/
+    resource_URL: https://fairsharing.org/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments:
 -
     name: Gigadb
-    description:
-    URL: http://gigadb.org/site/index
+    highlight:
+    example_URL: http://gigadb.org/site/index
+    resource_URL: http://gigadb.org/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments:
 -
     name: Human Protein Atlas
-    description:
-    URL: https://www.proteinatlas.org/
+    highlight:
+    example_URL: https://www.proteinatlas.org/
+    resource_URL: https://www.proteinatlas.org/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments: Could implement Dataset and DataRecord as well.
 -
     name: EGA
-    description:
-    URL: https://ega-archive.org/
+    highlight:
+    example_URL: https://ega-archive.org/
+    resource_URL: https://ega-archive.org/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments:
 -
     name: Isaexplorer
-    description:
-    URL: http://scientificdata.isa-explorer.org/
+    highlight:
+    example_URL: http://scientificdata.isa-explorer.org/
+    resource_URL: http://scientificdata.isa-explorer.org/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments:
 -
     name: IUPHAR/BPS
-    description:
-    URL: http://www.guidetopharmacology.org/
+    highlight:
+    example_URL: http://www.guidetopharmacology.org/
+    resource_URL: http://www.guidetopharmacology.org/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments:
 -
     name: EGA Dataset
-    description:
-    URL: https://ega-archive.org/datasets/EGAD00000000001
+    highlight:
+    example_URL: https://ega-archive.org/datasets/EGAD00000000001
+    resource_URL: https://ega-archive.org/
     schema_org: Dataset
     bsc_profile: Dataset
     bsc_ver: 0.1
     comments:
 -
     name: MobiDB
-    description:
-    URL: http://mobidb.bio.unipd.it/
+    highlight:
+    example_URL: http://mobidb.bio.unipd.it/
+    resource_URL: http://mobidb.bio.unipd.it/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments:
 -
     name: MobiDB
-    description:
-    URL: http://mobidb.bio.unipd.it/
+    highlight:
+    example_URL: http://mobidb.bio.unipd.it/
+    resource_URL: http://mobidb.bio.unipd.it/
     schema_org: Dataset
     bsc_profile: Dataset
     bsc_ver: 0.2
     comments: Can implement DataRecord type.
 -
     name: Biosamples
-    description: 5 million+ pages
-    URL: https://www.ebi.ac.uk/biosamples/samples/SAMEA491372
+    highlight: 
+    example_URL: https://www.ebi.ac.uk/biosamples/
+    resource_URL: https://www.ebi.ac.uk/biosamples/
+    schema_org:
+    bsc_profile: DataCatalog
+    bsc_ver: 0.1
+    comments:
+-
+    name: Biosamples
+    highlight: 5 million+ pages
+    example_URL: https://www.ebi.ac.uk/biosamples/samples/SAMEA491372
+    resource_URL: https://www.ebi.ac.uk/biosamples/
     schema_org:
     bsc_profile: Sample
     bsc_ver: 0.1
     comments:
 -
     name: DataMed
-    description:
-    URL: https://datamed.org/display-item.php?repository=0006&id=59139ef65152c62a9fc18ff7
+    highlight:
+    example_URL: https://datamed.org/display-item.php?repository=0006&id=59139ef65152c62a9fc18ff7
+    resource_URL: https://datamed.org/
     schema_org: Dataset
     bsc_profile: Dataset
     bsc_ver: 0.1
     comments:
 -
     name: Fairsharing
-    description:
-    URL: https://fairsharing.org/
+    highlight:
+    example_URL: https://fairsharing.org/
+    resource_URL: https://fairsharing.org/
     schema_org: Dataset
     bsc_profile: Dataset
     bsc_ver: 0.1
     comments:
 -
     name: Pscan
-    description:
-    URL: http://159.149.160.88/pscan/
+    highlight:
+    example_URL: http://159.149.160.88/pscan/
+    resource_URL: http://159.149.160.88/pscan/
     schema_org: SoftwareApplication
     bsc_profile: Tool
     bsc_ver: 0.1
     comments:
 -
     name: PscanChIP
-    description:
-    URL: http://159.149.160.88/pscan_chip_dev/
+    highlight:
+    example_URL: http://159.149.160.88/pscan_chip_dev/
+    resource_URL: http://159.149.160.88/pscan_chip_dev/
     schema_org: SoftwareApplication
     bsc_profile: Tool
     bsc_ver: 0.1
     comments:
 -
     name: Cscan
-    description:
-    URL: http://159.149.160.88/cscan/
+    highlight:
+    example_URL: http://159.149.160.88/cscan/
+    resource_URL: http://159.149.160.88/cscan/
     schema_org: SoftwareApplication
     bsc_profile: Tool
     bsc_ver: 0.1
     comments:
 -
     name: BAR 3.0
-    description:
-    URL: https://bar.biocomp.unibo.it/bar3/
+    highlight:
+    example_URL: https://bar.biocomp.unibo.it/bar3/
+    resource_URL: https://bar.biocomp.unibo.it/bar3/
     schema_org: SoftwareApplication
     bsc_profile: Tool
     bsc_ver: 0.1
     comments:
 -
     name: Elixir TeSS Events
-    description: 8500+ pages
-    URL: https://tess.elixir-europe.org/events
+    highlight: 8500+ pages
+    example_URL: https://tess.elixir-europe.org/events
+    resource_URL: https://tess.elixir-europe.org/events
     schema_org: Event
     bsc_profile: Event
     bsc_ver: 0.1
     comments:    
 -
     name: PDBe
-    description: 140,000+ pages
-    URL: http://www.ebi.ac.uk/pdbe/entry/pdb/4a7l
+    highlight: 140,000+ pages
+    example_URL: http://www.ebi.ac.uk/pdbe/entry/pdb/4a7l
+    resource_URL: http://www.ebi.ac.uk/pdbe/
     schema_org:
     bsc_profile: ProteinStructure
     bsc_ver: 0.1
     comments:
 -
     name: PDBe
-    description: 214,000+ pages
-    URL: https://www.ebi.ac.uk/pdbe/entry/pdb/5hbi/protein/1
+    highlight: 214,000+ pages
+    example_URL: https://www.ebi.ac.uk/pdbe/entry/pdb/5hbi/protein/1
+    resource_URL: https://www.ebi.ac.uk/pdbe/
     schema_org:
     bsc_profile: Protein
     bsc_ver: 0.1
     comments:    
 -
     name: French Institute of Bioinformatics (IFB) Events
-    description:
-    URL: https://www.france-bioinformatique.fr/en/evenements_upcoming
+    highlight:
+    example_URL: https://www.france-bioinformatique.fr/en/evenements_upcoming
+    resource_URL: https://www.france-bioinformatique.fr/en/evenements_upcoming
     schema_org: Event
     bsc_profile: Event
     bsc_ver: 0.1
     comments:     
 -
     name: ELIXIR Portugal Events
-    description:
-    URL: http://elixir-portugal.org/event/embo-practical-course-tree-building-advanced-concepts-and-practice-phylogenetic-analysis
+    highlight:
+    example_URL: http://elixir-portugal.org/event/embo-practical-course-tree-building-advanced-concepts-and-practice-phylogenetic-analysis
+    resource_URL: http://elixir-portugal.org/
     schema_org: Event
     bsc_profile: Event
     bsc_ver: 0.1
     comments:     
 -
     name: SIB Events
-    description:
-    URL: https://www.sib.swiss/training/upcoming-training-events
+    highlight:
+    example_URL: https://www.sib.swiss/training/upcoming-training-events
+    resource_URL: https://www.sib.swiss/training/upcoming-training-events
     schema_org: Event
     bsc_profile: Event
     bsc_ver: 0.1
     comments:   
 -
     name: ELIXIR Events
-    description:
-    URL: https://www.elixir-europe.org/events/biohackathon-2018-paris
+    highlight:
+    example_URL: https://www.elixir-europe.org/events/biohackathon-2018-paris
+    resource_URL: https://www.elixir-europe.org/events/
     schema_org: Event
     bsc_profile: Event
     bsc_ver: 0.1
     comments:
 -
     name: Birmingham Metabolomics Training Centre
-    description:
-    URL: https://www.birmingham.ac.uk/facilities/metabolomics-training-centre/courses/q-exactive.aspx
+    highlight:
+    example_URL: https://www.birmingham.ac.uk/facilities/metabolomics-training-centre/courses/q-exactive.aspx
+    resource_URL: https://www.birmingham.ac.uk/
     schema_org: Event
     bsc_profile: Event
+    bsc_ver: 0.1
+    comments:
+-
+    name: HmmerWeb
+    highlight: Result of searches are annotated (results last 1 week)
+    example_URL: 
+    resource_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+    schema_org:
+    bsc_profile: Protein
+    bsc_ver: 0.1
+    comments:
+-
+    name: HmmerWeb
+    highlight: Result of searches are annotated (results last 1 week)
+    example_URL: 
+    resource_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+    schema_org:
+    bsc_profile: ProteinStructure
+    bsc_ver: 0.1
+    comments:
+-
+    name: HmmerWeb
+    highlight: Result of searches are annotated (results last 1 week)
+    example_URL: 
+    resource_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+    schema_org:
+    bsc_profile: ProteinAnnotation
     bsc_ver: 0.1
     comments:         
 -

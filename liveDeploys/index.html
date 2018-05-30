@@ -59,8 +59,8 @@ description: |-
                     {% else %}
                     <div class="collapse collapse{{profile.name}}">
                     {% endif %}
-                        <a href="{{live.URL}}" target="_blank">{{live.name}}</a>
-                        <p>{{live.description}}</p>
+                        <a href="{{live.resource_URL}}" target="_blank">{{live.name}}</a>
+                        <p>{{live.highlight}}</p>
                     </div>
                 </td>
                 <td class="profile-version hidden-row">
@@ -73,6 +73,7 @@ description: |-
                     </div>
                 </td>
                 <td class="structured-data-column hidden-row">
+                    {% if !live.example_URL %}
                     {% if profile_index == 1%}
                     <div class="collapse show collapse{{profile.name}}">
                     {% else %}
@@ -80,9 +81,10 @@ description: |-
                     {% endif %}                    
                     <div class="google-sdtt-button">
                         <span class="tooltiptext">Visualise on GTest tool</span>
-                        <a href="https://search.google.com/structured-data/testing-tool#url={{live.URL}}" class="btn btn-bioschema btn-block" target="_blank">visualise</a>
+                        <a href="https://search.google.com/structured-data/testing-tool#url={{live.example_URL}}" class="btn btn-bioschema btn-block" target="_blank">visualise</a>
                     </div>
                     </div>
+                    {% endif %}
                 </td>
             </tr>
             {% endfor %}
