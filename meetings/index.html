@@ -18,7 +18,7 @@ title: Meetings
       <!-- using meta is bad -->
       <!-- google test tool wants location not as text! -->
     {% elsif meetingDate <= currentDate and currentDate <= endDate %}
-      <li itemscope itemtype="http://schema.org/Event">><strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong> <br/> {{ meeting.dates }} <br/> <span itemprop="location">{{ meeting.venue }}</span> <meta itemprop="startDate" content="{{meeting.start_date}}"/><meta itemprop="endDate" content="{{ meeting.end_date }}"/></li>
+      <li itemscope itemtype="http://schema.org/Event"><strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong> <br/> {{ meeting.dates }} <br/> <span itemprop="location">{{ meeting.venue }}</span> <meta itemprop="startDate" content="{{meeting.start_date}}"/><meta itemprop="endDate" content="{{ meeting.end_date }}"/></li>
       <!-- using meta is bad -->
       <!-- google test tool wants location not as text! -->
     {% endif %}
