@@ -17,3 +17,12 @@ layout: default
     <li>GitHub: <a href="{{ "http://github.com/" | append: page.github_username }}">{{ page.github_username }}</a></li>
   {% endif %}
 </ul>
+
+<h2>Events</h2>
+<ul>
+  {% assign meetings = page.meetings %}
+  {% for meeting_name in meetings %}
+    {% assign meeting_detail = site.meetings | where:"name", meeting_name | first %}
+    <li><a href="{{meeting_detail.url}}">{{ meeting_name }}</a> - {{meeting_detail.title}}</li>
+  {% endfor %}
+</ul>
