@@ -277,7 +277,7 @@ list:
     comments:  
 -
     name: OmicsDI
-    highlight:
+    highlight: 150,000+ pages
     example_URL: https://www.omicsdi.org/#/dataset/arrayexpress-repository/E-MTAB-6848
     resource_URL: https://www.omicsdi.org/
     schema_org: Dataset
