@@ -284,4 +284,13 @@ list:
     bsc_profile: Dataset
     bsc_ver: 0.1
     comments:
+-
+    name: CATH-Gene3D
+    highlight: 500,000+ pages
+    example_URL: http://www.cathdb.info/version/latest/domain/1cukA01
+    resource_URL: http://www.cathdb.info
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:
 ---
