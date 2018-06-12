@@ -24,4 +24,13 @@ layout: default
 {% endif %}
 {{ content }}
 
-
+{% if page.attendees %}
+<strong>Attendees:</strong>
+<ul>
+  {% for attendee-name in page.attendees %}
+  {% assign attendee-id = "/people/" | append: attendee-name %}
+  {% assign attendee = site.people | where:"id", attendee-id | first %}
+  <li><a href="{{ attendee.url }}">{{attendee.first-name}} {{attendee.last-name}}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}

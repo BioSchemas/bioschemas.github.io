@@ -20,9 +20,10 @@ layout: default
 
 <h2>Events</h2>
 <ul>
-  {% assign meetings = page.meetings %}
-  {% for meeting_name in meetings %}
-    {% assign meeting_detail = site.meetings | where:"name", meeting_name | first %}
-    <li><a href="{{meeting_detail.url}}">{{ meeting_name }}</a> - {{meeting_detail.title}}</li>
+  {% assign attendee-id = page.id | remove: "/people/" %}
+  {% for meeting in site.meetings %}
+    {% if meeting.attendees contains attendee-id %}
+    <a href="{{meeting.url}}">{{meeting.name}}</p>
+    {% endif %}
   {% endfor %}
 </ul>
