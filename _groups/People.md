@@ -27,5 +27,23 @@ objectives:
 types:
     [
       'Person'
-    ]   
+    ]
+
+members:
+    - NiallBeard
+    - PhilippeRocca-Serra
+    - SusannaSansone
+    - DominiqueBatista
+    - AndraWaagmeester
+    - VictoriaDominguez
+    - JustinClark-Casey
+    - AlejandraGonzalez-Beltran
+    - AlasdairGray
+    - MartinCook
+    - GosMicklem
+    - MikaelLinden
+    - MichelDumontier
+    - MichaelCrusoe
+    - AndyJenkinson
+    - RafaelJimenez
 ---

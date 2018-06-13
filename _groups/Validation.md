@@ -28,4 +28,19 @@ objectives:
     'Provide a GUI to validate Bioschemas compliant websites and Bioschemas compliant sites',
     'Validate data repositories adopting Bioschemas'
   ]
+
+members:
+    - FedericoLópezGómez
+    - AnilWipat
+    - PeterMcQuilton
+    - VickySchneider
+    - AndraWaagmeester
+    - JustinClark-Casey
+    - GuillermoCalderonMantilla
+    - AlasdairGray
+    - RobertDFinn
+    - GiuseppeProfiti
+    - AurelienLuciani
+    - MichaelCrusoe
+    - RobertoPreste
 ---

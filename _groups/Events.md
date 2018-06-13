@@ -36,4 +36,29 @@ specifications:
     'Event'
   ]
 
+members:
+    - NiallBeard
+    - PhilippeRocca-Serra
+    - FedericoLópezGómez
+    - SusannaSansone
+    - DominiqueBatista
+    - PeterMcQuilton
+    - GianluigiZanetti
+    - ChristaJanko
+    - VickySchneider
+    - AndraWaagmeester
+    - HeimoMüller
+    - MorrisSwertz
+    - DanTimmons
+    - AlejandraGonzalez-Beltran
+    - MartinCook
+    - KaisaSilander
+    - PetrHolub
+    - ClaireJohnson
+    - ManuelCorpas
+    - AleksandraNenadic
+    - PremyslVelek
+    - DavidvanEnckevort
+    - AndyJenkinson
+    - RafaelJimenez
 ---

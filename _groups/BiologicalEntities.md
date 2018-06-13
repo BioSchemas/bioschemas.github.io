@@ -32,5 +32,24 @@ objectives:
 types:
     [
       'BioChemEntity'
-    ]  
+    ]
+
+members:
+  - PhilippeRocca-Serra
+  - CarlosHorro
+  - AndraWaagmeester
+  - JustinClark-Casey
+  - SameerVelankar
+  - saqibmir
+  - AlasdairGray
+  - RobertDFinn
+  - GiuseppeProfiti
+  - AurelienLuciani
+  - CaroleGoble
+  - OlgaXimenaGiraldo
+  - GosMicklem
+  - MichelDumontier
+  - anyango
+  - AlexanderGarcia
+  - LeylaGarcia
 ---

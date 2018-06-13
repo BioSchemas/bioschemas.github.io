@@ -36,4 +36,16 @@ specifications:
   [
     'Protein', 'ProteinAnnotation', 'ProteinStructure'
   ]
+proteins:
+    - AndraWaagmeester
+    - SameerVelankar
+    - saqibmir
+    - RobertDFinn
+    - GiuseppeProfiti
+    - MariaMartin
+    - AurelienLuciani
+    - RicardoArcila
+    - anyango
+    - GustavoSalazar-Orejuela
+    - LeylaGarcia
 ---

@@ -35,4 +35,22 @@ specifications:
   [  
     'Sample'
   ]
+
+members:
+    - HelenParkinson
+    - PhilippeRocca-Serra
+    - CarlosHorro
+    - SimonJupp
+    - GianluigiZanetti
+    - AndraWaagmeester
+    - HeimoMüller
+    - MorrisSwertz
+    - TonyBurdett
+    - KaisaSilander
+    - CaroleGoble
+    - PetrHolub
+    - MattGreen
+    - LucaCherubin
+    - DavidvanEnckevort
+    - RafaelJimenez
 ---

@@ -28,4 +28,20 @@ types:
     [
       'Organization'
     ]
+
+members:
+    - PhilippeRocca-Serra
+    - SusheelVarma
+    - SusannaSansone
+    - DominiqueBatista
+    - AndraWaagmeester
+    - DanTimmons
+    - AlejandraGonzalez-Beltran
+    - MartinCook
+    - RichardHolland
+    - AleksandraNenadic
+    - MichaelCrusoe
+    - AndyJenkinson
+    - RafaelJimenez
+    - GabriellaRustici
 ---

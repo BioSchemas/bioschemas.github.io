@@ -32,5 +32,18 @@ objectives:
 types:
     [
       'LabProtocol'
-    ]    
+    ]
+
+members:
+    - FedericoLópezGómez
+    - GianluigiZanetti
+    - AndraWaagmeester
+    - HeimoMüller
+    - MorrisSwertz
+    - KaisaSilander
+    - PetrHolub
+    - OlgaXimenaGiraldo
+    - AlexanderGarcia
+    - DavidvanEnckevort
+    - LeylaGarcia
 ---

@@ -25,4 +25,7 @@ draft_specifications:
   [
     'Chemical', 'ChemicalStructure'
   ]
+
+members:
+  - MichałNowotka
 ---

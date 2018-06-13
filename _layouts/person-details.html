@@ -18,12 +18,28 @@ layout: default
   {% endif %}
 </ul>
 
-<h2>Events</h2>
+{% assign person-id = page.id | remove: "/people/" %}
+
+<h3>Groups</h3>
+
 <ul>
-  {% assign attendee-id = page.id | remove: "/people/" %}
+  {% for group in site.groups %}
+    {% if group.members contains person-id %}
+    <li>
+      <a href="{{group.url}}">{{group.name}}</p>
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+
+<h3>Events</h3>
+<ul>
   {% for meeting in site.meetings %}
-    {% if meeting.attendees contains attendee-id %}
-    <a href="{{meeting.url}}">{{meeting.name}}</p>
+    {% if meeting.attendees contains person-id %}
+    <li>
+      <a href="{{meeting.url}}">{{meeting.name}}</p>
+    </li>
     {% endif %}
   {% endfor %}
 </ul>

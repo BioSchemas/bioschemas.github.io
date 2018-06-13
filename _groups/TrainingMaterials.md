@@ -33,4 +33,31 @@ specifications:
     [
       'Course', 'TrainingMaterial'
     ]
+
+members:
+    - PhilBarker
+    - NiallBeard
+    - ChrisTaylor
+    - PhilippeRocca-Serra
+    - SusannaSansone
+    - DominiqueBatista
+    - JohnVanHorn
+    - PeterMcQuilton
+    - CathBrooksbank
+    - ChristaJanko
+    - VickySchneider
+    - AndraWaagmeester
+    - SarahMorgan
+    - VictoriaDominguez
+    - DanTimmons
+    - AlejandraGonzalez-Beltran
+    - GuillermoCalderonMantilla
+    - MartinCook
+    - ClaireJohnson
+    - LeeLarcombe
+    - AleksandraNenadic
+    - TerriAtwood
+    - MichaelCrusoe
+    - RafaelJimenez
+    - GabriellaRustici    
 ---
