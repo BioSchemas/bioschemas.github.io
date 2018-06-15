@@ -34,4 +34,11 @@ specifications:
   [
     'Gene'
   ]
+
+members:
+    - RicardoArcila
+    - OlgaXimenaGiraldo
+    - MichelDumontier
+    - LeylaGarcia
+    - AndyJenkinson
 ---

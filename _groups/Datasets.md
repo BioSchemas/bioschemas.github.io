@@ -37,5 +37,39 @@ objectives:
 specifications:
   [
     'Dataset', 'DataRecord'
-  ]  
+  ]
+
+members:
+  - NiallBeard
+  - PhilippeRocca-Serra
+  - SusheelVarma
+  - LizWilliams
+  - SusannaSansone
+  - AnilWipat
+  - PeterMcQuilton
+  - GianluigiZanetti
+  - EthyCannon
+  - VickySchneider
+  - AndraWaagmeester
+  - HeimoMüller
+  - JustinClark-Casey
+  - MorrisSwertz
+  - saqibmir
+  - AnkitKumarLohani
+  - DanTimmons
+  - AlejandraGonzalez-Beltran
+  - GuillermoCalderonMantilla
+  - AlasdairGray
+  - JeffreyGrethe
+  - KaisaSilander
+  - CaroleGoble
+  - PetrHolub
+  - GosMicklem
+  - MichelDumontier
+  - NicolasLeNovère
+  - anyango
+  - HaydeeArtaza
+  - DavidvanEnckevort
+
+
 ---

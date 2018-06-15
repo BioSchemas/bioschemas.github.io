@@ -23,4 +23,22 @@ objectives:
 specifications:
   [  
   ]
+
+members:
+    - NiallBeard
+    - PhilippeRocca-Serra
+    - SusheelVarma
+    - SusannaSansone
+    - AnilWipat
+    - DominiqueBatista
+    - PeterMcQuilton
+    - EthyCannon
+    - VickySchneider
+    - AndraWaagmeester
+    - DanTimmons
+    - AlejandraGonzalez-Beltran
+    - GuillermoCalderonMantilla
+    - NicolasLeNovère
+    - MiloThurston
+    - MichaelCrusoe
 ---

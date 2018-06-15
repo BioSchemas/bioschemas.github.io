@@ -17,6 +17,10 @@ spec-versions:
 abstract: 'The technical group focus on aspects of implementing <a href="http://bioschemas.org">Bioschemas</a> markup. Please see the <a href="http://bioschemas.org/specifications/">Specifications</a> page for the schemas themselves. Please see the <a href="http://bioschemas.org/tools/">tools</a> page for tools that can help in publishing or consuming markup.'
 objectives:
 specifications:
+
+members:
+    - AlasdairGray
+    - RicardoArcila
 ---
 
 <div id="links">
