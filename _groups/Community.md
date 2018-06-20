@@ -20,4 +20,28 @@ objectives:
     'Coordinate with the ELIXIR interoperability platform and external partners'
 
   ]
+
+members:
+    - ChrisTaylor
+    - KennethMcLeod
+    - PhilippeRocca-Serra
+    - FedericoLópezGómez
+    - SusannaSansone
+    - PeterMcQuilton
+    - EthyCannon
+    - VickySchneider
+    - AndraWaagmeester
+    - VictoriaDominguez
+    - JustinClark-Casey
+    - DanTimmons
+    - AlejandraGonzalez-Beltran
+    - GuillermoCalderonMantilla
+    - AlasdairGray
+    - MartinCook
+    - CaroleGoble
+    - anyango
+    - PremyslVelek
+    - MichaelCrusoe
+    - RobertoPreste
+    - RafaelJimenez
 ---

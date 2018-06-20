@@ -17,3 +17,29 @@ layout: default
     <li>GitHub: <a href="{{ "http://github.com/" | append: page.github_username }}">{{ page.github_username }}</a></li>
   {% endif %}
 </ul>
+
+{% assign person-id = page.id | remove: "/people/" %}
+
+<h3>Groups</h3>
+
+<ul>
+  {% for group in site.groups %}
+    {% if group.members contains person-id %}
+    <li>
+      <a href="{{group.url}}">{{group.name}}</p>
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+
+<h3>Events</h3>
+<ul>
+  {% for meeting in site.meetings %}
+    {% if meeting.attendees contains person-id %}
+    <li>
+      <a href="{{meeting.url}}">{{meeting.name}}</p>
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>

@@ -32,19 +32,11 @@
                   <br />
                   <h5>Other group members</h5>
                   <div id="peopleTable">
-                     {% assign authors = site.people | where:"groups", page.identifier %}
-                     {% for author in authors %}
-                     {% assign author-id = author.id | split: '/' %}
-                     {% if author.homepage or author.github_username or author.orcid %}
-                     {% unless page.lead contains author-id[2] %}
-                     <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
-                     {% endunless %}
-                     {% else %}
-                     {% unless page.lead contains author-id[2] %}
-                     <p>{{ author.first-name }} {{ author.last-name }}</p>
-                     {% endunless %}
-                     {% endif %}
-                     {% endfor %}
+                    {% for member-name in page.members %}
+                    {% assign member-id = "/people/" | append: member-name %}
+                    {% assign member = site.people | where:"id", member-id | first %}
+                    <p><a href="{{ member.url }}">{{ member.first-name }} {{ member.last-name }}</a></p>
+                    {% endfor %}
                   </div>
                   {% if page.specifications or page.types %}
                   <br />
@@ -70,6 +62,7 @@
                      {% endfor %}
                   </ul>
                   {% endif %}
+                  {{ content }}
                </section>
             </div>
          </div>
@@ -94,6 +87,6 @@
          }
       </script>
       {% include collections_footer.html %}
-   
+
    </body>
 </html>

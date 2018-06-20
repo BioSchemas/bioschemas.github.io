@@ -73,7 +73,7 @@ description: |-
                     </div>
                 </td>
                 <td class="structured-data-column hidden-row">
-                    {% if !live.example_URL %}
+                    {% if live.example_URL != nil %}
                     {% if profile_index == 1%}
                     <div class="collapse show collapse{{profile.name}}">
                     {% else %}

@@ -36,5 +36,38 @@ objectives:
 specifications:
   [
     'DataCatalog'
-  ]  
+  ]
+
+members:
+  - PhilippeRocca-Serra
+  - SusheelVarma
+  - SusannaSansone
+  - AnilWipat
+  - PeterMcQuilton
+  - GianluigiZanetti
+  - VickySchneider
+  - AndraWaagmeester
+  - HenningHermjakob
+  - HeimoMüller
+  - JustinClark-Casey
+  - MorrisSwertz
+  - SameerVelankar
+  - saqibmir
+  - AnkitKumarLohani
+  - DanTimmons
+  - AlejandraGonzalez-Beltran
+  - GuillermoCalderonMantilla
+  - AlasdairGray
+  - KaisaSilander
+  - CaroleGoble
+  - PetrHolub
+  - GosMicklem
+  - SaralaWimalaratne
+  - StephenFicklin
+  - anyango
+  - NickJuty
+  - HaydeeArtaza
+  - MichaelCrusoe
+  - DavidvanEnckevort
+  - RafaelJimenez
 ---

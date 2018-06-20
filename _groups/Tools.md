@@ -27,4 +27,28 @@ specifications:
     [
       'Tool'
     ]
+    
+members:
+    - NiallBeard
+    - PhilippeRocca-Serra
+    - SusheelVarma
+    - FedericoLópezGómez
+    - SusannaSansone
+    - AnilWipat
+    - DominiqueBatista
+    - PeterMcQuilton
+    - VickySchneider
+    - AndraWaagmeester
+    - DanTimmons
+    - AlejandraGonzalez-Beltran
+    - GuillermoCalderonMantilla
+    - RobertDFinn
+    - GiuseppeProfiti
+    - JonIson
+    - MartinCook
+    - AurelienLuciani
+    - MichelDumontier
+    - MichaelCrusoe
+    - RobertoPreste
+    - RafaelJimenez
 ---

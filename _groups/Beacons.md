@@ -34,4 +34,12 @@ specifications:
   [
     'Beacon'
   ]
+
+members:
+  - AudaldLloret
+  - SusheelVarma
+  - SerenaScollen
+  - AndraWaagmeester
+  - MichaelBaudis
+  - RafaelJimenez
 ---

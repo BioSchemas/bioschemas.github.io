@@ -269,10 +269,37 @@ list:
     comments:         
 -
     name: Galaxy Project 
-    description:
+    highlight:
     URL: https://galaxyproject.org/events/
     schema_org: Event
     bsc_profile: Event
     bsc_ver: 0.1
-    comments:             
+    comments:  
+-
+    name: OmicsDI
+    highlight: 150,000+ pages
+    example_URL: https://www.omicsdi.org/#/dataset/arrayexpress-repository/E-MTAB-6848
+    resource_URL: https://www.omicsdi.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:
+-
+    name: CATH-Gene3D
+    highlight:
+    example_URL: http://www.cathdb.info
+    resource_URL: http://www.cathdb.info
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:
+-
+    name: CATH-Gene3D
+    highlight:
+    example_URL: http://www.cathdb.info
+    resource_URL: http://www.cathdb.info
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.1
+    comments:    
 ---

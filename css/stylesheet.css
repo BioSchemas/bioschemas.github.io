@@ -521,44 +521,6 @@ Navigation Bar
     border: 1px solid #2bb673;
 }
 
-/*******************************************************************************
-Footer
-*******************************************************************************/
-
-#footer_wrap {
-    /*border-top-left-radius: 0.625em;
-    border-top-right-radius: 0.625em;*/
-    background-color: #0B794B;
-    text-align: right;
-    margin-top: 1em;
-}
-
-.p_bottom a:hover {
-    color: #F2F2F2;
-    text-decoration: underline;
-}
-
-.footer_buttons {
-    width: auto;
-    height: auto;
-    position: relative;
-    margin-bottom: -15px;
-}
-
-.footer_links {
-    position: relative;
-    display: inline;
-}
-
-.img_bottom {
-    float: right;
-    clear: both;
-    width: 45px;
-    margin-left: 0.625em;
-    margin-top: -0.6em;
-    background-color: #fff;
-    border-radius: 1.875em;
-}
 
 /*******************************************************************************
 Back to Top Button
