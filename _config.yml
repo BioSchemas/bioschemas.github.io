@@ -19,7 +19,6 @@ github_username:  BioSchemas
 # Build settings
 markdown: kramdown
 
-# Gems
 plugins:
  - jekyll-redirect-from
  - jekyll-sitemap
