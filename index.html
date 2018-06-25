@@ -11,6 +11,9 @@ layout: default
    <meta itemprop="url" content="http://bioschemas.org"/>
    <meta itemprop="email" content="community@bioschemas.org"/>
    <meta itemprop="name" content="Bioschemas Community"/>
+    <div style="float: right;border: 1px solid #0B794B; margin-bottom:20px;">
+      <iframe src="//www.slideshare.net/slideshow/embed_code/key/gfC1I7bJbAo4ZS" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/bioschemas/bioschemas-findability-and-interoperability" title="Bioschemas findability and interoperability" target="_blank">Bioschemas findability and interoperability</a> </strong> from <strong><a href="//www.slideshare.net/bioschemas" target="_blank">Bioschemas</a></strong> </div>
+    </div>
     <div style="border: 1px solid #0B794B; margin-bottom:20px;">
     <h3 style="padding-left: 10px;">Upcoming events</h3>
     <ul>
@@ -30,7 +33,7 @@ layout: default
         {% assign count = count | plus: 1 %}
         {% elsif meetingDate <= currentDate and currentDate <= endDate %}
         <li itemscope itemtype="http://schema.org/Event">
-            <strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong> <br/> {{ meeting.dates }} <br/> <span itemprop="location">{{ meeting.venue }}</span> 
+            <strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong> <br/> {{ meeting.dates }} <br/> <span itemprop="location">{{ meeting.venue }}</span>
             <meta itemprop="startDate" content="{{meeting.start_date}}"/>
             <meta itemprop="endDate" content="{{ meeting.end_date }}"/>
         </li>
@@ -53,7 +56,7 @@ layout: default
     adoption of schema.org markup within the life sciences.
     </p>
     <p>
-    Bioschemas started as a community effort in November 2015. It operates as an open community initiative with more than 
+    Bioschemas started as a community effort in November 2015. It operates as an open community initiative with more than
     <a href="/people/">200 people</a> from a wide variety of institutions. You are welcome to
     <a href="/howtojoin/">join the community</a>.
     </p>
