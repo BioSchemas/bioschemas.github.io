@@ -11,41 +11,62 @@ layout: default
    <meta itemprop="url" content="http://bioschemas.org"/>
    <meta itemprop="email" content="community@bioschemas.org"/>
    <meta itemprop="name" content="Bioschemas Community"/>
-    <div style="float: right;border: 1px solid #0B794B; margin-bottom:20px;">
-      <iframe src="//www.slideshare.net/slideshow/embed_code/key/gfC1I7bJbAo4ZS" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/bioschemas/bioschemas-findability-and-interoperability" title="Bioschemas findability and interoperability" target="_blank">Bioschemas findability and interoperability</a> </strong> from <strong><a href="//www.slideshare.net/bioschemas" target="_blank">Bioschemas</a></strong> </div>
+    
+
+    <div class="container-flow">
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3 style="padding-left: 10px;">Upcoming events</h3>
+                <ul>
+                    {% assign sorted_meetings = (site.meetings | sort: 'start_date') %}
+                    {% assign count = 0 %}
+                    {% for meeting in sorted_meetings %}
+                    {% assign currentDate = site.time | date: '%F' %}
+                    {% assign meetingDate = meeting.start_date | date: '%F' %}
+                    {% assign endDate = meeting.end_date | date: '%F' %}
+                    {% if currentDate <= meetingDate %}
+                    <li itemscope itemtype="http://schema.org/Event">
+                        <strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong>{% if meeting.tbc %} <span class="badge badge-warning">TBC</span>{% endif %}
+                        <br/> {{ meeting.dates }} <br/> <span itemprop="location">{{ meeting.venue }}</span>
+                        <meta itemprop="startDate" content="{{meeting.start_date}}"/>
+                        <meta itemprop="endDate" content="{{ meeting.end_date }}"/>
+                    </li>
+                    {% assign count = count | plus: 1 %}
+                    {% elsif meetingDate <= currentDate and currentDate <= endDate %}
+                    <li itemscope itemtype="http://schema.org/Event">
+                        <strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong> <br/> {{ meeting.dates }} <br/> <span itemprop="location">{{ meeting.venue }}</span>
+                        <meta itemprop="startDate" content="{{meeting.start_date}}"/>
+                        <meta itemprop="endDate" content="{{ meeting.end_date }}"/>
+                    </li>
+                    {% assign count = count | plus: 1 %}
+                    {% endif %}
+                    <!-- Limit upcoming meetings to the next three meetings -->
+                    {% if count == 3 %}
+                    {% break %}
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>        
+            <div class="col-md-6">
+                <iframe src="//www.slideshare.net/slideshow/embed_code/key/gfC1I7bJbAo4ZS" width="425" height="355" frameborder="0" marginwidth="0"
+                    marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen>
+                </iframe>
+                <div style="margin-bottom:5px">
+                    <strong>
+                        <a href="//www.slideshare.net/bioschemas/bioschemas-findability-and-interoperability" title="Bioschemas findability and interoperability"
+                            target="_blank">Bioschemas findability and interoperability</a>
+                    </strong> from
+                    <strong>
+                        <a href="//www.slideshare.net/bioschemas" target="_blank">Bioschemas</a>
+                    </strong>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <div style="border: 1px solid #0B794B; margin-bottom:20px;">
-    <h3 style="padding-left: 10px;">Upcoming events</h3>
-    <ul>
-        {% assign sorted_meetings = (site.meetings | sort: 'start_date') %}
-        {% assign count = 0 %}
-        {% for meeting in sorted_meetings %}
-        {% assign currentDate = site.time | date: '%F' %}
-        {% assign meetingDate = meeting.start_date | date: '%F' %}
-        {% assign endDate = meeting.end_date | date: '%F' %}
-        {% if currentDate <= meetingDate %}
-        <li itemscope itemtype="http://schema.org/Event">
-            <strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong>{% if meeting.tbc %} <span class="badge badge-warning">TBC</span>{% endif %}
-            <br/> {{ meeting.dates }} <br/> <span itemprop="location">{{ meeting.venue }}</span>
-            <meta itemprop="startDate" content="{{meeting.start_date}}"/>
-            <meta itemprop="endDate" content="{{ meeting.end_date }}"/>
-        </li>
-        {% assign count = count | plus: 1 %}
-        {% elsif meetingDate <= currentDate and currentDate <= endDate %}
-        <li itemscope itemtype="http://schema.org/Event">
-            <strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong> <br/> {{ meeting.dates }} <br/> <span itemprop="location">{{ meeting.venue }}</span>
-            <meta itemprop="startDate" content="{{meeting.start_date}}"/>
-            <meta itemprop="endDate" content="{{ meeting.end_date }}"/>
-        </li>
-        {% assign count = count | plus: 1 %}
-        {% endif %}
-        <!-- Limit upcoming meetings to the next three meetings -->
-        {% if count == 3 %}
-        {% break %}
-        {% endif %}
-        {% endfor %}
-    </ul>
-    </div>
+
+
     <p>
     Bioschemas aims to improve data interoperability in life sciences. It does this by encouraging people in life science to
     use schema.org markup, so that their websites and services contain consistently structured information. This structured
