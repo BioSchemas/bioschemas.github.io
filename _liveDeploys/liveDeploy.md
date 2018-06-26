@@ -98,7 +98,7 @@ list:
     comments: Can implement DataRecord type.
 -
     name: Biosamples
-    highlight: 
+    highlight:
     example_URL: https://www.ebi.ac.uk/biosamples/
     resource_URL: https://www.ebi.ac.uk/biosamples/
     schema_org:
@@ -243,7 +243,7 @@ list:
 -
     name: HmmerWeb
     highlight: Result of searches are annotated (results last 1 week)
-    example_URL: 
+    example_URL:
     resource_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
     schema_org:
     bsc_profile: Protein
@@ -252,7 +252,7 @@ list:
 -
     name: HmmerWeb
     highlight: Result of searches are annotated (results last 1 week)
-    example_URL: 
+    example_URL:
     resource_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
     schema_org:
     bsc_profile: ProteinStructure
@@ -261,14 +261,14 @@ list:
 -
     name: HmmerWeb
     highlight: Result of searches are annotated (results last 1 week)
-    example_URL: 
+    example_URL:
     resource_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
     schema_org:
     bsc_profile: ProteinAnnotation
     bsc_ver: 0.1
     comments:         
 -
-    name: Galaxy Project 
+    name: Galaxy Project
     highlight:
     URL: https://galaxyproject.org/events/
     schema_org: Event
@@ -301,5 +301,23 @@ list:
     schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.1
+    comments:  
+-
+    name: The Molecular INTeraction Database (MINT)
+    highlight:
+    example_URL: https://mint.bio.uniroma2.it/
+    resource_URL: https://mint.bio.uniroma2.it/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.1
     comments:    
+-
+    name: The Molecular INTeraction Database (MINT)
+    highlight:
+    example_URL: https://mint.bio.uniroma2.it/
+    resource_URL: https://mint.bio.uniroma2.it/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:          
 ---
