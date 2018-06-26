@@ -1,7 +1,7 @@
 ---
 layout: group-details
-identifier: taxon
-name: Taxons
+identifier: biodiversity
+name: Biodiversity
 collection: groups
 active: true
 type: biological
