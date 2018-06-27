@@ -29,9 +29,9 @@ objectives:
     'Facilitate the linking to major web portals and data registries such as GBIF, Enciclopedia of Life, Catalogue of Life',
     'Engage and help the biodiversity community to test and adopt the exposure of biodiversity markkup'
   ]
-specifications:
+draft_specifications:
   [
-    'taxon'
+    'Taxon',
   ]
 members:
     - FranckMichel
