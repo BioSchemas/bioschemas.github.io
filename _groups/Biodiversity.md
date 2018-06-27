@@ -5,8 +5,8 @@ name: Biodiversity
 collection: groups
 active: true
 type: biological
-description: Specification for taxon profile
-lead: [FranckMichel]
+description: Specification for biodiversity-related profiles and/or types
+lead: [FranckMichel, LeylaGarcia]
 issues: https://github.com/BioSchemas/specifications/labels/type%3A%20Taxon
 folder: https://drive.google.com/drive/folders/1Fp2AKbb07So7rVvUhnQIjpl8HLPSwpbP
 
@@ -21,11 +21,13 @@ adoption: false
 applications: false
 
 # Page attributes
-abstract: 'Taxon names is a hard topic by itself: names history record, names status (accepted, synonyms…), nomenclatural codes, etc. The point of Bioschemas.org is not to get into too much detail, but to set up a simply ways of identifying taxa through webpages.'
+abstract: 'This group aims at specifying profiles and/or types related to the biodiversity domain, starting with the Taxon profile.'
 objectives:
   [
-    'Objective 1.',
-    'Objective 2'
+    'Define the main characteristics of a Taxon as a Bioschemas profile',
+    'Make biodiversity-related web portals and data registries more findable using search engines',
+    'Facilitate the linking to major web portals and data registries such as GBIF, Enciclopedia of Life, Catalogue of Life',
+    'Engage and help the biodiversity community to test and adopt the exposure of biodiversity markkup'
   ]
 specifications:
   [
@@ -34,4 +36,5 @@ specifications:
 members:
     - FranckMichel
     - RicardoArcila
+    - LeylaGarcia
 ---
