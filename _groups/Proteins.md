@@ -36,7 +36,7 @@ specifications:
   [
     'Protein', 'ProteinAnnotation', 'ProteinStructure'
   ]
-proteins:
+members:
     - AndraWaagmeester
     - SameerVelankar
     - saqibmir
