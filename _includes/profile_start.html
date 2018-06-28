@@ -34,39 +34,35 @@
    {% endfor %}
    <h6>Group Leader(s)</h6>
    <div id="leadTable">
-      {% for g in group %}
-      {% for leader in g.lead %}
-      {% assign lead-id = "/people/" | append: leader %}
-      {% assign author = site.people | where:"id", lead-id | first %}
-      {% if author.homepage or author.github_username or author.orcid %}
-      <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
-      {% else %}
-      <p>{{ author.first-name }} {{ author.last-name }}</p>
-      {% endif %}
-      {% else %}
-      <p>No team leaders currently specified.</p>
-      {% endfor %}
-      {% endfor %}
+        {% for g in group %}
+        {% for leader in g.lead %}
+        {% assign lead-id = "/people/" | append: leader %}
+        {% assign author = site.people | where:"id", lead-id | first %}
+        {% if author.homepage or author.github_username or author.orcid %}
+        <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
+        {% else %}
+        <p>{{ author.first-name }} {{ author.last-name }}</p>
+        {% endif %}
+        {% else %}
+        <p>No team leaders currently specified.</p>
+        {% endfor %}
+        {% endfor %}
    </div>
    <h6>Other team members</h6>
    <div id="peopleTable">
-      {% assign authors = site.people | where:"groups", page.group %}
-      {% for author in authors %}
-      {% assign author-id = author.id | split: '/' %}
-      {% for g in group %}
-      {% if author.homepage or author.github_username or author.orcid %}
-      {% unless g.lead contains author-id[2] %}
-      <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
-      {% endunless %}
-      {% else %}
-      {% unless g.lead contains author-id[2] %}
-      <p>{{ author.first-name }} {{ author.last-name }}</p>
-      {% endunless %}
-      {% endif %}
-      {% else %}
-      <p>No team members currently specified.</p>
-      {% endfor %}
-      {% endfor %}
+        {% for g in group %}
+        {% for member-name in g.members %}
+
+        {% unless g.lead contains member-name %}
+
+        {% assign member-id = "/people/" | append: member-name %}
+        {% assign member = site.people | where:"id", member-id | first %}
+        <p><a href="{{ member.url }}">{{ member.first-name }} {{ member.last-name }}</a></p>
+        
+        {% endunless %}
+
+        {% endfor %}
+        {% endfor %}
    </div>
 </section>
 <section id="description" class="tabs">

@@ -35,7 +35,8 @@ layout: default
 
 <h3>Events</h3>
 <ul>
-  {% for meeting in site.meetings %}
+  {% assign meetings = site.meetings | sort: 'end_date' | reverse %}
+  {% for meeting in meetings %}
     {% if meeting.attendees contains person-id %}
     <li>
       <a href="{{meeting.url}}">{{meeting.name}}</p>
