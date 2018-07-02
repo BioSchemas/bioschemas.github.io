@@ -382,10 +382,6 @@ Full-Width Styles
     text-decoration: none;
 }
 
-#main-content-wrapper {
-    background: #fefefe;
-}
-
 #main_content {
     padding-top: 1.875em;
 }
@@ -1001,6 +997,10 @@ Small Device Styles
 /*******************************************************************************
 Specification Properties
 *******************************************************************************/
+
+.bioschemas-spec-list-wrapper {
+    overflow-x: auto;
+}
 
 table.bioschemas_properties,
 table.bioschemas_spec_list {
