@@ -17,13 +17,13 @@ hierarchy:
 spec_mapping_url: https://docs.google.com/spreadsheets/d/1QIGPv1ULH9Swvyq7BhopNVkbq7zWW5SUkekFXHDHOj4/edit#gid=1261485211
 spec_info:
   title: Event
-  subtitle: 'Specification for describing an event in the Life Sciences.'
+  subtitle: Specification for describing an event in the Life Sciences
   description: 'Specification for describing a Life Science event. This includes conferences,
-    workshops, meetings, courses, receptions, networking and prizegivings.'
-  version: 0.1
-  version_date: 20180310T144349
+    workshops, meetings, courses, receptions, networking and prizegivings.        '
+  version: "0.1"
+  version_date: 20180705T104843
   official_type: ""
-  full_example: "https://github.com/BioSchemas/specifications/tree/master/Event/examples/"
+  full_example: https://github.com/BioSchemas/specifications/tree/master/Event/examples/
 mapping:
 - property: acceptanceNotificationDate
   expected_types:
@@ -35,7 +35,7 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: "\"acceptanceNotificationDate\": [ \n   \"2018-07-04T14:16:43Z\"\n]\n"
 - property: accreditation
   expected_types:
   - Organization
@@ -58,7 +58,7 @@ mapping:
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"name": "Introduction to RNA-seq analysis in R"'
 - property: attachment
   expected_types:
   - URL
@@ -70,7 +70,8 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: "\"attachment\": [\n    \"https://example.com/PrecourseQuestionnaire\",\n
+    \   \"https://example.com/Brochure\" \n]\n"
 - property: audience
   expected_types:
   - URL
@@ -85,7 +86,11 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: '[EDAM: Topic](http://edamontology.org/topic_0003)'
-  example: ""
+  example: |-
+    "audience": [
+      "http://edamontology.org/topic_0091",
+      "http://edamontology.org/topic_3070"
+    ]
 - property: contact
   expected_types:
   - Organization
@@ -98,7 +103,11 @@ mapping:
   marginality: Minimum
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: "\"contact\": [{ \n       \"@type\": \"Person\",\n       \"name\": \"Fred
+    Smith\",\n       \"email\": \"Fred.Smith@example.com\"\n    },\n    {\n       \"@type\":
+    \"Organization\",\n       \"name\": \"Bioinformatics Training Division, University
+    of Manchester\",\n       \"url\": \"http://manchester.ac.uk/bioinformatics/training/contact\"\n
+    \   }\n]"
 - property: dateModified
   expected_types:
   - Date
@@ -111,7 +120,7 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"dateModified": "2018-07-04T14:16:43Z" '
 - property: deadline
   expected_types:
   - Text
@@ -124,7 +133,8 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: "\"deadline\": \"Registration finishes 4 weeks prior to the course beginning.
+    Please complete the pre-workshop questionnaire before the workshop\" \n"
 - property: description
   expected_types:
   - Text
@@ -135,7 +145,15 @@ mapping:
   marginality: Minimum
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: '"description": "In this workshop, you will be learning how to analyse
+    RNA-seq count data, using R. This will include reading the data into R, quality
+    control and performing differential expression analysis and gene set testing,
+    with a focus on the edgeR analysis workflow. You will learn how to generate common
+    plots for analysis and visualisation of gene expression data, such as boxplots
+    and heatmaps. You will also be learning how alignment and counting of raw RNA-seq
+    data can be performed in R. This workshop is aimed at biologists interested in
+    learning how to perform differential expression analysis of RNA-seq data when
+    reference genomes are available." '
 - property: eligibility
   expected_types:
   - Text
@@ -143,14 +161,15 @@ mapping:
   type: bioschemas
   type_url: ""
   bsc_description: Defines the type of eligibility to attend this event e.g. first
-    come first served. Please use one of the values from the Controlled Vocabulary column.
+    come first served. Please use one of the values from the Controlled Vocabulary
+    column.
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: |-
     - first come first served
     - registration of interest
     - by invitation
-  example: ""
+  example: '"eligibility": "First come first served" '
 - property: endDate
   expected_types:
   - Date
@@ -163,7 +182,7 @@ mapping:
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"endDate": "2018-07-04T18:00:1Z" '
 - property: eventType
   expected_types:
   - EventType
@@ -178,7 +197,7 @@ mapping:
     - meetings and conferences
     - receptions and networking
     - awards and prizegivings
-  example: ""
+  example: "\"eventType\": \"workshops and courses\" \n"
 - property: hostInstitution
   expected_types:
   - Organization
@@ -190,7 +209,9 @@ mapping:
   marginality: Minimum
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: "\"hostInstitution\":     {\n       \"@type\": \"Organization\",\n       \"name\":
+    \"Bioinformatics Training Division, University of Manchester\",\n       \"url\":
+    \"http://manchester.ac.uk/bioinformatics/training/contact\"\n} "
 - property: identifier
   expected_types:
   - PropertyValue
@@ -219,7 +240,7 @@ mapping:
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"keywords": ["RNA-Seq", "R language", "Programming", "R Life science"] '
 - property: location
   expected_types:
   - Place
@@ -235,7 +256,19 @@ mapping:
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: |2-
+
+    "location": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1.17, Kilburn Building, University of Manchester",
+          "addressLocality": "Manchester",
+          "addressRegion": "Greater Manchester",
+          "addressCountry": "United Kingdom",
+          "postalCode": "M13 9PL"
+        }
+    }
 - property: maximumAttendeeCapacity
   expected_types:
   - Integer
@@ -246,7 +279,7 @@ mapping:
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: ' "maximumAttendeeCapacity": 35'
 - property: name
   expected_types:
   - Text
@@ -257,7 +290,7 @@ mapping:
   marginality: Minimum
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: '"name": ["RNA-seq in R"]'
 - property: offers
   expected_types:
   - Offer
@@ -269,7 +302,13 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: |
+    "offers":     {
+          "@type": "Offer",
+          "price": "100.00",
+          "priceCurrency": "GBP",
+          "url": "http://www.eventbrite.com/my-workshop"
+    }
 - property: performer
   expected_types:
   - Organization
@@ -282,7 +321,9 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: "\"performer\": [\n       {\n          \"@type\": \"Person\",\n          \"name\":
+    \"John Smith\",\n          \"sameAs\": \"https://manchester.ac.uk/staff/profiles/john-smith\"\n
+    \       }\n] "
 - property: prerequisite
   expected_types:
   - Text
@@ -293,7 +334,8 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: '"prerequisite": "Attendees must have attended the linux basics course
+    first." '
 - property: programme
   expected_types:
   - Text
@@ -305,7 +347,7 @@ mapping:
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: "\"programme\": \"http://example.com/programme\" \n"
 - property: rdf:type
   expected_types:
   - URL
@@ -334,7 +376,7 @@ mapping:
     - open
     - cancelled
     - full
-  example: ""
+  example: "\"registrationStatus\": \"open\" \n"
 - property: review
   expected_types:
   - Review
@@ -345,7 +387,14 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "review": [{
+            "@type": "Review",
+            "author": "Boris",
+            "datePublished": "2018-08-01",
+            "description": "I thought the exercises were really useful and the presentations were clear. Would have preferred more diagrams",
+            "name": "RN-Ace"
+    }]
 - property: socialMedia
   expected_types:
   - URL
@@ -356,7 +405,8 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: "\"socialMedia\": [\n       \"http://twitter.com/TrainingGuy\",\n       \"http://linked.in/TrainingInR\"\n]
+    \n"
 - property: sponsor
   expected_types:
   - Organization
@@ -371,7 +421,7 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: '"sponsor": ["ELIXIR", "University of Manchester"] '
 - property: startDate
   expected_types:
   - Date
@@ -384,7 +434,7 @@ mapping:
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: "\"startDate\": \"2018-07-04T18:00:1Z\" \n"
 - property: subEvent
   expected_types:
   - Event
@@ -397,7 +447,13 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "subEvent": [{
+          "@type": "Event",
+          "name": "Lunch time Lecture",
+          "url": "https://lectureatlunch.com",
+          "description": "This special lecture hosted during lunchtime as part of the RNA-SEQ in R workshop demonstrates some of the latest technologies available."
+      }]
 - property: submitter
   expected_types:
   - Organization
@@ -410,7 +466,8 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: "\"submitter\": [{ \n      \"@type\": \"Organization\",\n      \"name\"
+    \"iAnn\",\n      \"url\": \"http://https://www.ncbi.nlm.nih.gov/pubmed/23742982\"\n}]"
 - property: superEvent
   expected_types:
   - Event
@@ -423,7 +480,13 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "superEvent": {
+          "@type": "Event",
+          "name": "Summer of Science",
+          "url": "https://sos.com",
+          "description": " This is a series of lectures for bioinformaticians around Europe"
+    }
 - property: topic
   expected_types:
   - URL
@@ -435,7 +498,11 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: '[EDAM: Topic](http://edamontology.org/topic_0003)'
-  example: ""
+  example: |-
+    "topic":  [
+       "http://edamontology.org/topic_3372",
+       "http://edamontology.org/topic_3071"
+    ]
 - property: url
   expected_types:
   - URL
@@ -447,7 +514,7 @@ mapping:
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""  
+  example: '"url": "http://courses.manchester.ac.uk/rna-seq_in_r"'
 ---
 <!DOCTYPE HTML>
 <html>
@@ -468,3 +535,5 @@ mapping:
       {% include footer.html %}
    </body>
 </html>
+
+
