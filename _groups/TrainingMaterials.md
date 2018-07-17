@@ -6,7 +6,7 @@ collection: groups
 active: true
 type: generic
 description: Specification for describing training materials
-lead: [VickySchneider, GabriellaRustici]
+lead: [NiallBeard, GabriellaRustici]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20training%20material
 folder: https://drive.google.com/drive/u/1/folders/0B6crv12s8piRT0w5VXRUc09VTFU
 # Progress status
