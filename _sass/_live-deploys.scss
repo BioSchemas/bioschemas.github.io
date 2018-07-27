@@ -134,6 +134,12 @@
             top: 0.6em;
             right: 1em;
         }
+        .repo-count {
+            position: absolute;
+            float: left;
+            font-size: 85%;
+            color: $bioschemas-base-color;
+        }
         p {
             color: #666;
             font-size: 85%;

@@ -15,6 +15,7 @@ description: |-
     {% assign candidates = site.liveDeploys | where:"name", 'Candidates' | first %}
     <section class="live-deploy-table">
         <h5>{{liveDeploys.description}}</h5>
+        <p><strong>{{liveDeploys.list | size}}</strong> resources using Bioschemas.</p>
         <table>
             <thead>
                 <tr>
@@ -30,6 +31,7 @@ description: |-
             {% if profile_index == 1%}
             <tr class="profile-row" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{profile.name}}" aria-expanded="true" aria-controls="collapse{{profile.name}}">
                 <td colspan="3">
+                    <div class="repo-count"><strong>{{profile.items | size}}</strong></div>
                     {% if profile.name == "LabProtocol" or profile.name == "DataRecord" or profile.name == "BioChemEntity" %}
                     <a href="http://bioschemas.org/types/{{profile.name}}/specification/" target="_blank">{{profile.name}}</a><br>
                     {% else %}
@@ -41,6 +43,7 @@ description: |-
             {% else %}
             <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{profile.name}}" aria-expanded="false" aria-controls="collapse{{profile.name}}">
                 <td colspan="3">
+                    <div class="repo-count"><strong>{{profile.items | size}}</strong></div>
                     {% if profile.name == "LabProtocol" or profile.name == "DataRecord" or profile.name == "BioChemEntity" %}
                     <a href="http://bioschemas.org/types/{{profile.name}}/specification/" target="_blank">{{profile.name}}</a><br>
                     {% else %}
