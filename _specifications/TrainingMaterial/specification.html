@@ -17,17 +17,17 @@ hierarchy:
 spec_mapping_url: https://docs.google.com/spreadsheets/d/17scwe6fx9-WHBDqxTdD20F0Ji8kX9S7TMN6tNuw-0jY/edit#gid=1261485211
 spec_info:
   title: TrainingMaterial
-  subtitle: 'A specification for describing training materials in life sciences.'
-  description: 'The Life Science Training Materials specification provides a way to describe
-    bioscience training material on the World Wide Web. It defines a set of metadata
-    and vocabularies, built on top of existing technologies and standards, that can
-    be used to represent events in Web pages and applications. The goal of the specification
-    is to make it easier to discover, exchange and integrate life science training material
-    information across the Internet.'
-  version: 0.2
-  version_date: 20180307T144349
+  subtitle: A specification for describing training materials in life sciences.
+  description: The Life Science Training Materials specification provides a way to
+    describe bioscience training material on the World Wide Web. It defines a set
+    of metadata and vocabularies, built on top of existing technologies and standards,
+    that can be used to represent events in Web pages and applications. The goal of
+    the specification is to make it easier to discover, exchange and integrate life
+    science training material information across the Internet.
+  version: "0.2"
+  version_date: 20180705T105109
   official_type: ""
-  full_example: "https://github.com/BioSchemas/specifications/tree/master/TrainingMaterial/examples/"
+  full_example: https://github.com/BioSchemas/specifications/tree/master/TrainingMaterial/examples/
 mapping:
 - property: about
   expected_types:
@@ -39,7 +39,7 @@ mapping:
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"about": "The basic commands of unix for bioinformaticians"'
 - property: audience
   expected_types:
   - Audience
@@ -51,7 +51,7 @@ mapping:
   marginality: Minimum
   cardinality: MANY
   controlled_vocab: '[EDAM:Topic](http://edamontology.org/topic_0003)'
-  example: ""
+  example: '"audience": ["http://edamontology.org/topic_3372"]'
 - property: author
   expected_types:
   - Organization
@@ -65,7 +65,7 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: '"author": ["Niall Beard"]'
 - property: contributor
   expected_types:
   - Organization
@@ -77,7 +77,7 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: '"contributor": ["Frank Sidebottom"]'
 - property: dateCreated
   expected_types:
   - Date
@@ -90,7 +90,7 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"dateCreated": "2018-07-04T11:24:13+00:00"'
 - property: dateModified
   expected_types:
   - Date
@@ -103,7 +103,7 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"dateModified": "2018-08-04T19:34:12+00:00"'
 - property: description
   expected_types:
   - Text
@@ -114,7 +114,8 @@ mapping:
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: |
+    "description": "This tutorial will take you through the basic usage of the command line shell. In it, you will discover what a shell is, skills for directory navigation, file manipulation, and how to run tools"
 - property: difficultyLevel
   expected_types:
   - Text
@@ -129,7 +130,7 @@ mapping:
     - beginner
     - intermediate
     - advanced
-  example: ""
+  example: '"difficultyLevel": "beginner"'
 - property: genre
   expected_types:
   - Text
@@ -141,7 +142,11 @@ mapping:
   marginality: Minimum
   cardinality: MANY
   controlled_vocab: '[EDAM:Topic](http://edamontology.org/topic_0003)'
-  example: ""
+  example: |-
+    "genre": [
+       "http://edamontology.org/topic_3372",
+       "http://edamontology.org/topic_3071"
+    ]
 - property: hasPart
   expected_types:
   - CreativeWork
@@ -154,7 +159,9 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: "\"hasPart\": [\n{\n    \"@type\": \"CreativeWork\",\n    \"url\": \"http://directoryVisuals.io\",\n
+    \   \"name\": \"Shell Directory Visualizer\"\n }, \n {\n    \"@type\": \"CreativeWork\",\n
+    \   \"url\": \"http://shell.io\",\n    \"name\": \"Interactive Shell tutorial\"\n}]"
 - property: inLanguage
   expected_types:
   - Language
@@ -169,7 +176,7 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: '[IETF BCP 47 standard](http://tools.ietf.org/html/bcp47)'
-  example: ""
+  example: '"inLanguage": " en-US"'
 - property: isPartOf
   expected_types:
   - CreativeWork
@@ -182,7 +189,12 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "isPartOf": [{
+          "@type": "CreativeWork",
+          "url": "http://computerScience4LS.org",
+          "name": "The complete Computer Science for Life Scientists Coursebook"
+    }]
 - property: keywords
   expected_types:
   - Text
@@ -194,7 +206,7 @@ mapping:
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"keywords": "Unix, Shell, Command Line Tools, Terminal, Bash"'
 - property: learningResourceType
   expected_types:
   - Text
@@ -208,7 +220,7 @@ mapping:
   cardinality: MANY
   controlled_vocab: "- exercise files \n- handout \n- presentation \n- scripts \n-
     video"
-  example: ""
+  example: '"learningResourceType": "handout"'
 - property: license
   expected_types:
   - CreativeWork
@@ -221,7 +233,7 @@ mapping:
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"license": "https://creativecommons.org/licenses/by/4.0/"'
 - property: mentions
   expected_types:
   - Thing
@@ -234,7 +246,17 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "mentions": [{
+          "@type": "Thing",
+          "url": "https://wikipedia.org/wiki/Shell_script",
+          "name": "Shell Scripting"
+       },
+       {
+         "@type": "Thing",
+          "url": "https://en.wikipedia.org/wiki/GNU_General_Public_License",
+          "name": "GNU Licenses"
+    }]
 - property: name
   expected_types:
   - Text
@@ -245,7 +267,7 @@ mapping:
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"name": "The Unix Command Line tutorial for Bioinformaticians"'
 - property: pid
   expected_types:
   - Text
@@ -256,7 +278,7 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"pid": "https://dx.doi.org/1202.2021"'
 - property: rdf:type
   expected_types:
   - URL
@@ -279,7 +301,14 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "review": [{
+          "@type": "Review",
+          "author": "Boris",
+          "datePublished": "2018-08-01",
+          "description": "I thought the exercises were really useful and the writing style was clear. Would have preferred more diagrams",
+          "name": "Ex-shell-ent"
+    }]
 - property: sameAs
   expected_types:
   - URL
@@ -292,7 +321,7 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"sameAs": "http://coursera.org/CLT"'
 - property: timeRequired
   expected_types:
   - Duration
@@ -304,7 +333,7 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"timeRequired": "P1W2DT5H"'
 - property: url
   expected_types:
   - URL
@@ -315,7 +344,7 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: '"url": ["http://teach-me-ctl.com/tutorial"]'
 - property: version
   expected_types:
   - Number
@@ -327,7 +356,7 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""  
+  example: '"version": "0.2.0"'
 ---
 <!DOCTYPE HTML>
 <html>
