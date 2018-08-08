@@ -41,13 +41,24 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: "//Short direct alternative to express relation between protein and protein
-    clan.\n{\n  \"@type\": [\"BioChemEntity\", \"Protein\"],\n  \"http://semanticscience.org/resource/SIO_000095\":\"http://pfam.xfam.org/clan/CL0001\"\n}\n
-    \               \n//If no ontology term expressing the desired relation exists,
-    then and only then use additionaProperty\n{\n  \"@type\": [\"BioChemEntity\", \"Protein\"],\n  \"additionalProperty\":
-    {\n    \"name\": \"my new property\",\n    \"value\": {\n      \"@type\": \"PropertyValue\",\n
-    \     \"value\": \"the object in this relation, more properties can be used as
-    needed\"\n    }\n  }\n}"
+  example: |-
+    //Short direct alternative to express relation between protein and protein clan.
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "http://semanticscience.org/resource/SIO_000095": "http://pfam.xfam.org/clan/CL0001\"
+    }
+
+    //If no ontology term expressing the desired relation exists, then and only then use additionaProperty
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "additionalProperty": {
+        "name": "my new property",
+        "value": {
+          "@type": "PropertyValue",
+          "value": "the object in this relation, more properties can be used as needed"
+        }
+      }
+    }
 - property: additionalType
   expected_types:
   - URL
@@ -88,7 +99,7 @@ mapping:
       "@type": ["BioChemEntity", "Protein"],
       "alternateName": ["ABL", "JTK7"]
     }
-- property: categoryCode
+- property: hasCategoryCode
   expected_types:
   - CategoryCode
   description: "A controlled vocabulary term equivalent to this entity. For instance,
@@ -116,7 +127,7 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: Any suitable ontology
-  example:  |-
+  example: |-
     //A protein can contain a variant:
     {
     "@type": ["BioChemEntity", "Protein"],
@@ -250,7 +261,20 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: Any suitable ontology
-  example: ""
+  example: |-
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "isContainedIn": {
+        "@type": "BioChemEntity",
+        "identifier": "9606",
+        "name": "Homo sapiens",
+        "hasCategoryCode": {
+          "@type": "CategoryCode",
+          "codeValue": "9606",
+          "url": "http://purl.uniprot.org/taxonomy/9606"
+        }
+      }
+    }
 - property: location
   expected_types:
   - Place
@@ -286,12 +310,24 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: "//Preferred way from DataRecord\n{\n\n  \"@type\": \"DataRecord\",\n  \"@id\":
-    \"http://purl.uniprot.org/uniprot/P05519\"\n  \"mainEntity\": {\n    \"@type\":
-    [\"BioChemEntity\", \"Protein\"]\n    #Any other property for this Protein entity
-    \   \n  }\n}\n\n//Also possible from Protein\n{\n  \"@type\": [\"BioChemEntity\",
-    \"Protein\"],\n  \"mainEntityOfPage\": { \"@id\": \"http://purl.uniprot.org/uniprot/P05519\"
-    }\n}"
+  example: |-
+    //Preferred way from DataRecord
+    {
+      "@type": "DataRecord",
+      "@id": "http://purl.uniprot.org/uniprot/P05519",
+      "mainEntity": {
+        "@type": ["BioChemEntity", "Protein"],
+        "name": "Name and any other property for this Protein entity following the specification on this page"
+      }
+    }
+
+    //Also possible from Protein
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "mainEntityOfPage": {
+        "@id": "http://purl.uniprot.org/uniprot/P05519"
+      }
+    }
 - property: name
   expected_types:
   - Text
@@ -331,6 +367,7 @@ mapping:
         "name": "nucleotide binding"
         }
     }
+
     //With evidence
     {
       "@type": ["BioChemEntity", "Protein"],
@@ -381,6 +418,7 @@ mapping:
         "name": "mitotic cell cycle"
         }
     }
+
     //With evidence
     {
       "@type": ["BioChemEntity", "Protein"],
