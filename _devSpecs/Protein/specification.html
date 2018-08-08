@@ -44,7 +44,7 @@ mapping:
   example: "//Short direct alternative to express relation between protein and protein
     clan.\n{\n  \"@type\": [\"BioChemEntity\", \"Protein\"],\n  \"http://semanticscience.org/resource/SIO_000095\":\"http://pfam.xfam.org/clan/CL0001\"\n}\n
     \               \n//If no ontology term expressing the desired relation exists,
-    then\n{\n  \"@type\": [\"BioChemEntity\", \"Protein\"],\n  \"additionalProperty\":
+    then and only then use additionaProperty\n{\n  \"@type\": [\"BioChemEntity\", \"Protein\"],\n  \"additionalProperty\":
     {\n    \"name\": \"my new property\",\n    \"value\": {\n      \"@type\": \"PropertyValue\",\n
     \     \"value\": \"the object in this relation, more properties can be used as
     needed\"\n    }\n  }\n}"
@@ -116,22 +116,50 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: Any suitable ontology
-  example: "//A protein can contain a variant:\n{\n  \"@type\": [\"BioChemEntity\",
-    \"Protein\"],\n  \"contains\": {\"@id\": \"http://purl.uniprot.org/annotation/VAR_022315\"}\n}\n
-    \               \n//More information about the variant can also be included\n{\n
-    \ \"@type\": [\"BioChemEntity\", \"Protein\"],\n  \"contains\": {\n      \"@type\":
-    \"BioChemEntity\",\n      \"aditionalType\": \"http://semanticscience.org/resource/SIO_010471\",\n
-    \     \"identifier\": \"VAR_022315\",\n      \"location\": [\n        {\n          \"@type\":
-    \"PropertyValue\",\n          \"value\": 355\n        }\n    }\n}\n\n//A variant
-    can include an evidence; in this case we model the variant as a ProteinAnnotation\n{\n
-    \ \"@type\": [\"BioChemEntity\", \"Protein\"],\n  \"@id\": \"http://purl.uniprot.org/uniprot/P05519\"\n
-    \ \"contains\": {\n    \"@type\": [\"BioChemEntity\", \"ProteinAnnotation\"],\n
-    \   \"@id\": \"http://purl.uniprot.org/annotation/VAR_022315\",\n    \"identifier\":
-    \"VAR_022315\",\n    \"creationMethod\": {\n      \"@type\": \"PropertyValue\",\n
-    \     \"value\": \"imported manually asserted information used in automatic assertion\",\n
-    \     \"valueReference\": {\n        \"@type\": \"CategoryCode\",\n        \"codeValue\":
-    \"ECO:0000322\",\n        \"inCategorySet\": {\n          \"@type\": \"CategoryCodeSet\",\n
-    \         \"name\": \"ECO Evidence Code Ontology\"\n        }\n      }\n    }\n}"
+  example:  |-
+    //A protein can contain a variant:
+    {
+    "@type": ["BioChemEntity", "Protein"],
+    "contains": {"@id": "http://purl.uniprot.org/annotation/VAR_022315"}
+    }
+    
+    //More information about the variant can also be included via ProteinAnnotation
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "contains": {
+        "@type": ["BioChemEntity", "ProteinAnnotation]"
+        "@id": "http://purl.uniprot.org/annotation/VAR_022315",
+        "aditionalType": "http://semanticscience.org/resource/SIO_010471",
+        "identifier": "VAR_022315",
+        "location": {
+          "@type": "PropertyValue",
+          "value": 355
+        }
+      }
+    }
+
+    //A variant can include an evidence; in this case we also model the variant as a ProteinAnnotation and use creationMethod
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "@id": "http://purl.uniprot.org/uniprot/P05519"
+      "contains": {
+        "@type": ["BioChemEntity", "ProteinAnnotation"],
+        "@id": "http://purl.uniprot.org/annotation/VAR_022315",
+        "identifier": "VAR_022315",
+        "creationMethod": {
+          "@type": "PropertyValue",
+          "value": "imported manually asserted information used in automatic assertion",
+          "valueReference": {
+            "@type": "CategoryCode",
+            "codeValue": "ECO:0000322",
+            "inCategorySet": {
+              "@type": "CategoryCodeSet",
+              "name": "ECO Evidence Code Ontology"
+            }
+          }
+        }
+      }
+    }
 - property: description
   expected_types:
   - Text
@@ -222,7 +250,21 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: Any suitable ontology
-  example: ""
+  example: |-
+{
+  "@type": ["BioChemEntity", "Protein"],
+  "isContainedIn": {
+    "@type": "BioChemEntity",
+    "identifier": "9606",
+    "name": "Homo sapiens",
+    "hasCategoryCode": {
+      "@type": "CategoryCode",
+      "codeValue": "9606",
+      "url": "http://purl.uniprot.org/taxonomy/9606"
+    },
+    "url": "http://www.uniprot.org/taxonomy/9606"
+  }
+}
 - property: location
   expected_types:
   - Place
@@ -260,7 +302,7 @@ mapping:
   controlled_vocab: ""
   example: "//Preferred way from DataRecord\n{\n\n  \"@type\": \"DataRecord\",\n  \"@id\":
     \"http://purl.uniprot.org/uniprot/P05519\"\n  \"mainEntity\": {\n    \"@type\":
-    [\"BioChemEntity\", \"Protein\"]\n    #Any other property for this Gene entity
+    [\"BioChemEntity\", \"Protein\"]\n    #Any other property for this Protein entity
     \   \n  }\n}\n\n//Also possible from Protein\n{\n  \"@type\": [\"BioChemEntity\",
     \"Protein\"],\n  \"mainEntityOfPage\": { \"@id\": \"http://purl.uniprot.org/uniprot/P05519\"
     }\n}"
@@ -279,7 +321,7 @@ mapping:
       "@type": ["BioChemEntity", "Protein"],
       "name": "ABL1"
     }
-- property: RO:enables
+- property: enablesMF
   expected_types:
   - CategoryCode
   - PropertyValue
@@ -296,7 +338,7 @@ mapping:
     //Protein enabling a GO molecular function
     {
       "@type": ["BioChemEntity", "Protein"],
-      "enables": {
+      "enablesMF": {
         "@type": "CategoryCode",
         "url": "http://purl.obolibrary.org/obo/GO_0000166",
         "codeValue": "GO:0000166",
@@ -306,7 +348,7 @@ mapping:
     //With evidence
     {
       "@type": ["BioChemEntity", "Protein"],
-      "enables": {
+      "enablesMF": {
         "@type": "ProteinAnnotation",
         "identifier": "GO:0000166",
         "categoryCode": {
@@ -329,7 +371,7 @@ mapping:
         }
       }
     }
-- property: RO:involved in
+- property: involvedInBP
   expected_types:
   - CategoryCode
   - PropertyValue
@@ -346,7 +388,7 @@ mapping:
     //Protein involved in a GO biological process
     {
       "@type": ["BioChemEntity", "Protein"],
-      "involvedIn": {
+      "involvedInBP": {
         "@type": "CategoryCode",
         "url": "http://purl.obolibrary.org/obo/GO_0000278",
         "codeValue": "GO:0000278",
@@ -356,7 +398,7 @@ mapping:
     //With evidence
     {
       "@type": ["BioChemEntity", "Protein"],
-      "involvedIn": {
+      "involvedInBP": {
         "@type": "ProteinAnnotation",
         "identifier": "GO:0000278",
         "categoryCode": {
@@ -397,7 +439,7 @@ mapping:
       "@type": ["BioChemEntity", "Protein"],
       "sameAs": ["https://www.wikidata.org/wiki/Q587961", "https//:identifiers.org/uniprot:P05519"]
     }
-- property: SIO:010083 (is translated from)
+- property: isTranslatedFrom
   expected_types:
   - BioChemEntity
   - bioschemas:Gene
@@ -410,8 +452,16 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: Any suitable ontology
-  example: ""
-- property: SO:associated_with
+  example:  |-
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "isTranslatedFrom": {
+        "@type": ["BioChemEntity", "Gene"],
+        "identifier": "ABL1",
+        "name": "ABL1"
+      }
+    }
+- property: associatedWith
   expected_types:
   - MedicalCondition
   - URL
@@ -422,7 +472,21 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "associatedWith": {
+        "@type": "MedicalCondition",
+        "name": "Leukemia, chronic myeloid (CML)",
+        "code": {
+          "@type": "MedicalCode",
+          "codeValue": "608232",
+          "codingSystem": "OMIM"
+        },
+        "sameAs": "http://purl.uniprot.org/mim/608232",
+        "url": "http://www.uniprot.org/diseases/DI-03735"
+      }
+    }
 - property: url
   expected_types:
   - URL
