@@ -251,20 +251,20 @@ mapping:
   cardinality: MANY
   controlled_vocab: Any suitable ontology
   example: |-
-{
-  "@type": ["BioChemEntity", "Protein"],
-  "isContainedIn": {
-    "@type": "BioChemEntity",
-    "identifier": "9606",
-    "name": "Homo sapiens",
-    "hasCategoryCode": {
-      "@type": "CategoryCode",
-      "codeValue": "9606",
-      "url": "http://purl.uniprot.org/taxonomy/9606"
-    },
-    "url": "http://www.uniprot.org/taxonomy/9606"
-  }
-}
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "isContainedIn": {
+        "@type": "BioChemEntity",
+        "identifier": "9606",
+        "name": "Homo sapiens",
+        "hasCategoryCode": {
+          "@type": "CategoryCode",
+          "codeValue": "9606",
+          "url": "http://purl.uniprot.org/taxonomy/9606"
+        },
+        "url": "http://www.uniprot.org/taxonomy/9606"
+      }
+    }
 - property: location
   expected_types:
   - Place
@@ -452,7 +452,7 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: Any suitable ontology
-  example:  |-
+  example: |-
     {
       "@type": ["BioChemEntity", "Protein"],
       "isTranslatedFrom": {
