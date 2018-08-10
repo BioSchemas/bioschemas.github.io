@@ -67,7 +67,7 @@ layout: default
                     {% if currentDate <= meetingDate %}
                     <div class="event" itemscope itemtype="http://schema.org/Event">
                         <strong><a href="{{ meeting.url }}"><span class="title" itemprop="name">{{ meeting.name}}</span></a></strong>{% if meeting.tbc %} <span class="badge badge-warning">TBC</span>{% endif %}
-                        <p> <strong>{{ meeting.dates }}</strong> <p/>
+                        <p> <strong>{{ meeting.dates }}</strong> </p>
                         <p>
                             <span itemprop="location">{{ meeting.venue }}</span>
                         </p>
@@ -78,7 +78,7 @@ layout: default
                     {% elsif meetingDate <= currentDate and currentDate <= endDate %}
                     <div class="event" itemscope itemtype="http://schema.org/Event">
                         <strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong>{% if meeting.tbc %} <span class="badge badge-warning">TBC</span>{% endif %}
-                        <p> <strong>{{ meeting.dates }}</strong> <p/>
+                        <p> <strong>{{ meeting.dates }}</strong> </p>
                         <p>
                             <span itemprop="location">{{ meeting.venue }}</span>
                         </p>
