@@ -105,14 +105,22 @@ description: |-
   <div class="col-md-4 right-column">
 
       <section class="upcoming-events">
-          <h3>Deployment Stories</h3>
+        <h3>Deployment Stories</h3>
+          {% assign sorted_stories = (site.stories | sort: 'date-added') %}
+          {% for story in sorted_stories %}
           <div class="event">
-              <strong><a href="https://www.dtls.nl/2018/07/19/toxicology-data-management-tutorials-automatically-collected-by-european-training-portal-tess/">Toxicology data management tutorials automatically collected by European training portal TeSS</a></strong>
-              <p> <strong>19/7/2018</strong> <p/>
+              <strong><a href="{{ story.external-url }}">{{ story.name }}</a></strong>
+              <p> <strong>{{ story.date-added }}</strong> </p>
+              <ul>
+                {% for spec in story.specs %}
+                  <li>{{ spec }}</li>
+                {% endfor %}
+              </ul>
               <p>
-                BioSchemas used to create a system that automatically pulls toxicology-related training materials from the eNanoMapper project into the European training portal TeSS.
+                {{ story.description }}
               </p>
           </div class="event">
+          {% endfor %}
         </section>
     </div>
   </div>
