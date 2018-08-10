@@ -104,11 +104,11 @@ description: |-
 
   <div class="col-md-4 right-column">
 
-      <section class="upcoming-events">
+      <section>
         <h3>Deployment Stories</h3>
           {% assign sorted_stories = (site.stories | sort: 'date-added' | reverse ) %}
           {% for story in sorted_stories %}
-          <div class="event">
+          <div>
               <strong><a href="{{ story.external-url }}">{{ story.name }}</a></strong>
               <p> <strong>{{ story.date-added }}</strong> </p>
               <ul>
@@ -119,7 +119,7 @@ description: |-
               <p>
                 {{ story.description }}
               </p>
-          </div class="event">
+          </div>
           {% endfor %}
         </section>
     </div>
