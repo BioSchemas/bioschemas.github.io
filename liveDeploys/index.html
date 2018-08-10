@@ -113,7 +113,7 @@ description: |-
               <p> <strong>{{ story.date-added }}</strong> </p>
               <ul>
                 {% for spec in story.specs %}
-                  <li>{{ spec }}</li>
+                  <li><a href="/specifications/{{ spec }}/specification/">{{ spec }}</a></li>
                 {% endfor %}
               </ul>
               <p>
