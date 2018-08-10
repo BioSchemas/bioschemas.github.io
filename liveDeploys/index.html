@@ -2,17 +2,22 @@
 layout: default
 title: Live Deploys
 description: |-
-    Below we list the services/sites that use [Bioschemas](http://bioschemas.org) markup to describe what they are offering. We provide a direct link to the site and also a link to Google's [Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool) visualisation of the site's markup. 
+    Below we list the services/sites that use [Bioschemas](http://bioschemas.org) markup to describe what they are offering. We provide a direct link to the site and also a link to Google's [Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool) visualisation of the site's markup.
     The link to Google’s SDTT shows one example from the site; however, many more may exist. For example, Biosamples have marked up all of their content (currently over 5 million samples).
     Please remember that Google sets minimum requirements for [schema.org](http://schema.org) markup, which may conflict with those of [Bioschemas](http://bioschemas.org). As such, Google's [Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool) may provide warnings or errors when the markup is perfectly compliant with both [schema.org](http://schema.org) and [Bioschemas](http://bioschemas.org).
     If your Bioschemas compliant site is not listed below, please email us at [community@bioschemas.org](mailto:community@bioschemas.org).
 ---
 <div class="live-deploys">
+
     <h1>Live deploys</h1>
     <p>{{page.description | markdownify}}</p>
     <br>
     {% assign liveDeploys = site.liveDeploys | where:"name", 'Live Deploys' | first %}
     {% assign candidates = site.liveDeploys | where:"name", 'Candidates' | first %}
+    <div class="container-flow">
+        <div class="row">
+
+            <div class="col-md-8">
     <section class="live-deploy-table">
         <h5>{{liveDeploys.description}}</h5>
         <p><strong>{{liveDeploys.list | size}}</strong> resources using Bioschemas.</p>
@@ -39,7 +44,7 @@ description: |-
                     {% endif %}
                     <div class="plus-icon"><i class="fas fa-minus fa-lg"></i></div>
                 </td>
-            </tr>                
+            </tr>
             {% else %}
             <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{profile.name}}" aria-expanded="false" aria-controls="collapse{{profile.name}}">
                 <td colspan="3">
@@ -71,7 +76,7 @@ description: |-
                     <div class="collapse show collapse{{profile.name}}">
                     {% else %}
                     <div class="collapse collapse{{profile.name}}">
-                    {% endif %}                    
+                    {% endif %}
                     {{live.bsc_ver}}
                     </div>
                 </td>
@@ -81,7 +86,7 @@ description: |-
                     <div class="collapse show collapse{{profile.name}}">
                     {% else %}
                     <div class="collapse collapse{{profile.name}}">
-                    {% endif %}                    
+                    {% endif %}
                     <div class="google-sdtt-button">
                         <span class="tooltiptext">Visualise on GTest tool</span>
                         <a href="https://search.google.com/structured-data/testing-tool#url={{live.example_URL}}" class="btn btn-bioschema btn-block" target="_blank">visualise</a>
@@ -92,9 +97,25 @@ description: |-
             </tr>
             {% endfor %}
             {% endfor %}
-            </tbody>            
+            </tbody>
         </table>
     </section>
+  </div>
+
+  <div class="col-md-4 right-column">
+
+      <section class="upcoming-events">
+          <h3>Deployment Stories</h3>
+          <div class="event">
+              <strong><a href="https://www.dtls.nl/2018/07/19/toxicology-data-management-tutorials-automatically-collected-by-european-training-portal-tess/">Toxicology data management tutorials automatically collected by European training portal TeSS</a></strong>
+              <p> <strong>19/7/2018</strong> <p/>
+              <p>
+                BioSchemas used to create a system that automatically pulls toxicology-related training materials from the eNanoMapper project into the European training portal TeSS.
+              </p>
+          </div class="event">
+        </section>
+    </div>
+  </div>
     <blockquote>
         <h6>Note:</h6>
         As we do not maintain the websites listed above we can not guarantee the list is up to date, the sites are live and feature appropriate content or the links work.
