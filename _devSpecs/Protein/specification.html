@@ -102,17 +102,41 @@ mapping:
 - property: hasCategoryCode
   expected_types:
   - CategoryCode
-  description: "A controlled vocabulary term equivalent to this entity. For instance,
+  description: "A Category code contained in this code set."
+  type: pending
+  type_url: ""
+  bsc_description: "A controlled vocabulary term equivalent to this entity. For instance,
     an organism coined in NCBI taxonomy can be represented as a\n BioChemEntity. As
     it also exists as a term in an ontology, it would be \nnice to capture that information
     via categoryCode."
-  type: pending
-  type_url: ""
-  bsc_description: ""
   marginality: Optional
   cardinality: MANY
-  controlled_vocab: Any suitable ontology
-  example: ""
+  controlled_vocab: Any suitable controlled vocabulary describing proteins
+  example: |-
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "hasCategoryCode": [
+        {
+          "@type": "CategoryCode",
+          "codeValue": "P05067",
+          "url": "http://purl.uniprot.org/uniprot/P05067",
+          "inCodeSet": {
+            "@type": "CategoryCodeSet",
+            "name": "UniProt",
+            "url": "http://purl.uniprot.org/uniprot/"
+          }
+        },
+        {
+          "@type": "CategoryCode",
+          "codeValue": "Q423510",
+          "url": "https://www.wikidata.org/wiki/Q423510",
+          "inCodeSet": {
+            "@type": "CategoryCodeSet",
+            "name": "Wikidata",
+            "url": "https://www.wikidata.org"        
+        }
+      ]
+    }
 - property: contains
   expected_types:
   - BioChemEntity
