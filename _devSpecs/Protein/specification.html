@@ -25,14 +25,24 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: "//Short direct alternative to express, for instance, a relation between
-    a protein and a protein clan.\n{\n  \"@type\": [\"BioChemEntity\", \"ProteinAnnotation\"],\n
-    \ \"http://semanticscience.org/resource/SIO_000095\":\"http://pfam.xfam.org/clan/CL0001\"\n}\n
-    \               \n//If no ontology term expressing the desired relation exists,
-    then and only then use additionaProperty\n{\n  \"@type\": [\"BioChemEntity\",
-    \"Protein\"],\n  \"additionalProperty\": {\n    \"name\": \"my new property\",\n
-    \   \"value\": {\n      \"@type\": \"PropertyValue\",\n      \"value\": \"the
-    object in this relation, more properties can be used as needed\"\n    }\n  }\n}"
+  example:  |-
+    //Short direct alternative to express, for instance, a relation between a protein and a protein clan.
+    {
+      "@type": ["BioChemEntity", "ProteinAnnotation"],
+      "http://semanticscience.org/resource/SIO_000095": "http://pfam.xfam.org/clan/CL0001"
+    }
+    
+    //If no ontology term expressing the desired relation exists, then and only then use additionaProperty
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "additionalProperty": {
+        "name": "my new property",
+        "value": {
+          "@type": "PropertyValue",
+          "value": "the object in this relation, more properties can be used as needed"
+        }
+      }
+    }
 - property: additionalType
   expected_types:
   - URL
@@ -51,6 +61,7 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: |-
+    For instance 
     [wikidata:protein](https://www.wikidata.org/wiki/Q8054)
     [SIO:010043](http://semanticscience.org/resource/SIO_010043.rdf)
   example: |-
@@ -113,24 +124,50 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: Any suitable ontology
-  example: "//A protein can contain a variant:\n{\n  \"@type\": [\"BioChemEntity\",
-    \"Protein\"],\n  \"contains\": {\"@id\": \"http://purl.uniprot.org/annotation/VAR_022315\"}\n}\n
-    \               \n//More information about the variant can also be included via
-    ProteinAnnotation\n{\n  \"@type\": [\"BioChemEntity\", \"Protein\"],\n  \"contains\":
-    {\n      \"@type\": [\"BioChemEntity\", \"ProteinAnnotation\"],\n      \"@id\":
-    \"http://purl.uniprot.org/annotation/VAR_022315\",\n      \"aditionalType\": \"http://semanticscience.org/resource/SIO_010471\",\n
-    \     \"identifier\": \"VAR_022315\",\n      \"location\": [\n        {\n          \"@type\":
-    \"PropertyValue\",\n          \"value\": 355\n        }\n    }\n}\n\n//A variant
-    can include an evidence; in this case we model the variant as a ProteinAnnotation
-    \ and use creationMethod\n{\n  \"@type\": [\"BioChemEntity\", \"Protein\"],\n
-    \ \"@id\": \"http://purl.uniprot.org/uniprot/P05519\"\n  \"contains\": {\n    \"@type\":
-    [\"BioChemEntity\", \"ProteinAnnotation\"],\n    \"@id\": \"http://purl.uniprot.org/annotation/VAR_022315\",\n
-    \   \"identifier\": \"VAR_022315\",\n    \"creationMethod\": {\n      \"@type\":
-    \"PropertyValue\",\n      \"value\": \"imported manually asserted information
-    used in automatic assertion\",\n      \"valueReference\": {\n        \"@type\":
-    \"CategoryCode\",\n        \"codeValue\": \"ECO:0000322\",\n        \"inCategorySet\":
-    {\n          \"@type\": \"CategoryCodeSet\",\n          \"name\": \"ECO Evidence
-    Code Ontology\"\n        }\n      }\n    }\n  }\n}"
+  example:  |-
+    //A protein can contain a variant
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "contains": {"@id": "http://purl.uniprot.org/annotation/VAR_022315"}
+    }
+                    
+    //More information about the variant can also be included via ProteinAnnotation
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "contains": {
+        "@type": ["BioChemEntity", "ProteinAnnotation"],
+        "@id": "http://purl.uniprot.org/annotation/VAR_022315",
+        "aditionalType": "http://semanticscience.org/resource/SIO_010471",
+        "identifier": "VAR_022315",
+        "location": {
+          "@type": "PropertyValue",
+          "value": 355
+        }
+      }
+    }
+
+    //A variant can include an evidence; in this case we model the variant as a ProteinAnnotation  and use creationMethod
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "@id": "http://purl.uniprot.org/uniprot/P05519",
+      "contains": {
+        "@type": ["BioChemEntity", "ProteinAnnotation"],
+        "@id": "http://purl.uniprot.org/annotation/VAR_022315",
+        "identifier": "VAR_022315",
+        "creationMethod": {
+          "@type": "PropertyValue",
+          "value": "imported manually asserted information used in automatic assertion",
+          "valueReference": {
+            "@type": "CategoryCode",
+            "codeValue": "ECO:0000322",
+            "inCategorySet": {
+              "@type": "CategoryCodeSet",
+              "name": "ECO Evidence Code Ontology"
+            }
+          }
+        }
+      }
+    }
 - property: description
   expected_types:
   - Text
@@ -171,6 +208,7 @@ mapping:
         "name": "nucleotide binding"
         }
     }
+    
     //With evidence
     {
       "@type": ["BioChemEntity", "Protein"],
@@ -210,16 +248,32 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: Any suitable controlled vocabulary
-  example: "    {\n      \"@type\": [\"BioChemEntity\", \"Protein\"],\n      \"hasCategoryCode\":
-    [\n        {\n          \"@type\": \"CategoryCode\",\n          \"codeValue\":
-    \"P05067\",\n          \"url\": \"http://purl.uniprot.org/uniprot/P05067\",\n
-    \         \"inCodeSet\": {\n            \"@type\": \"CategoryCodeSet\",\n            \"name\":
-    \"UniProt\",\n            \"url\": \"http://purl.uniprot.org/uniprot/\"\n          }\n
-    \       },\n        {\n          \"@type\": \"CategoryCode\",\n          \"codeValue\":
-    \"Q423510\",\n          \"url\": \"https://www.wikidata.org/wiki/Q423510\",\n
-    \         \"inCodeSet\": {\n            \"@type\": \"CategoryCodeSet\",\n            \"name\":
-    \"Wikidata\",\n            \"url\": \"https://www.wikidata.org\"        \n        }\n
-    \     ]\n    }"
+  example: |-
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "hasCategoryCode": [
+        {
+          "@type": "CategoryCode",
+          "codeValue": "P05067",
+          "url": "http://purl.uniprot.org/uniprot/P05067",
+          "inCodeSet": {
+            "@type": "CategoryCodeSet",
+            "name": "UniProt",
+            "url": "http://purl.uniprot.org/uniprot/"
+          }
+        },
+        {
+          "@type": "CategoryCode",
+          "codeValue": "Q423510",
+          "url": "https://www.wikidata.org/wiki/Q423510",
+          "inCodeSet": {
+            "@type": "CategoryCodeSet",
+            "name": "Wikidata",
+            "url": "https://www.wikidata.org"        
+          }
+        }
+      ]
+    }
 - property: hasRepresentation
   expected_types:
   - PropertyValue
@@ -301,6 +355,7 @@ mapping:
         "name": "mitotic cell cycle"
         }
     }
+    
     //With evidence
     {
       "@type": ["BioChemEntity", "Protein"],
@@ -415,12 +470,22 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: "//Preferred way from DataRecord\n{\n\n  \"@type\": \"DataRecord\",\n  \"@id\":
-    \"http://purl.uniprot.org/uniprot/P05519\",\n  \"mainEntity\": {\n    \"@type\":
-    [\"BioChemEntity\", \"Protein\"]\n    #Any other property for this Protein entity
-    \   \n  }\n}\n\n//Also possible from Protein\n{\n  \"@type\": [\"BioChemEntity\",
-    \"Protein\"],\n  \"mainEntityOfPage\": { \"@id\": \"http://purl.uniprot.org/uniprot/P05519\"
-    }\n}"
+  example: |-
+    //Preferred way from DataRecord
+    {
+      "@type": "DataRecord",
+      "@id": "http://purl.uniprot.org/uniprot/P05519",
+      "mainEntity": {
+        "@type": ["BioChemEntity", "Protein"],
+        "name": "Name and any other property for this Protein entity"
+      }
+    }
+
+    //Also possible from Protein
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "mainEntityOfPage": { "@id": "http://purl.uniprot.org/uniprot/P05519" }
+    }
 - property: name
   expected_types:
   - Text
