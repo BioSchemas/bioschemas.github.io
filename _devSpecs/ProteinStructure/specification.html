@@ -1,3 +1,18 @@
+---
+name: ProteinStructure
+status: revision
+spec_type: Profile
+group: proteins
+use_cases_url: /useCases/Proteins/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1QQH4AkzdwPT1Qt5OLmH5HosLpkFU7khwE4Ql9_Cb9ZQ
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Protein
+live_deploy: /liveDeploys/
+parent_type: BioChemEntity
+hierarchy:
+- Thing
+- BioChemEntity
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1_DP1w1kbgoFUzShVI3_v9USC96EVw5u_bk5lXLYj64U/edit#gid=1261485211
+
 spec_info:
   title: ProteinStructure
   subtitle: Bioschemas specification describing a ProteinStructure (BioChemEntity
@@ -317,3 +332,26 @@ mapping:
       "@type": ["BioChemEntity", "ProteinStructure"],
       "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/3pxa"
     }
+
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  <div class="spec-table-wrapper">
+                    {% include specification_table.html %}
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>
