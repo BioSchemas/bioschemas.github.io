@@ -39,13 +39,13 @@ specifications:
 members:
     - AndraWaagmeester
     - SameerVelankar
-    - saqibmir
+    - SaqibMir
     - RobertDFinn
     - GiuseppeProfiti
     - MariaMartin
     - AurelienLuciani
     - RicardoArcila
-    - anyango
+    - StephenAnyango
     - GustavoSalazar-Orejuela
     - LeylaGarcia
 ---
