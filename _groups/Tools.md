@@ -6,7 +6,10 @@ collection: groups
 active: false
 type: generic
 description: Specification for tools
-lead: [GiuseppeProfiti]
+lead:
+    - RicardoArcila
+    - JustinClark-Casey
+    - LeylaGarcia
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20tool
 folder: https://drive.google.com/drive/u/1/folders/0ByZjzHhAz30Ta0ZhWV8wb1p4TTA
 usecase: true
@@ -29,6 +32,10 @@ specifications:
     ]
     
 members:
+    - GiuseppeProfiti
+    - RicardoArcila
+    - JustinClark-Casey
+    - LeylaGarcia
     - NiallBeard
     - PhilippeRocca-Serra
     - SusheelVarma
@@ -43,7 +50,6 @@ members:
     - AlejandraGonzalez-Beltran
     - GuillermoCalderonMantilla
     - RobertDFinn
-    - GiuseppeProfiti
     - JonIson
     - MartinCook
     - AurelienLuciani

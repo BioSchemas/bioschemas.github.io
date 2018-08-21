@@ -22,8 +22,8 @@ spec_info:
     Life Sciences
   description: This Gene profile specification presents the BioChemEntity usage when
     describing a Gene.
-  version: 0.2-draft
-  version_date: 20180501T153449
+  version: 0.3-draft
+  version_date: 20180821T113200
   official_type: http://purl.obolibrary.org/obo/SO_0000704
   full_example: https://github.com/BioSchemas/bioschemas.github.io/tree/master/_devSpecs/Gene/examples
 mapping:
@@ -45,7 +45,7 @@ mapping:
     of this property.
   marginality: Optional
   cardinality: MANY
-  controlled_vocab:
+  controlled_vocab: ""
   example: ""
 - property: additionalType
   expected_types:
@@ -64,7 +64,7 @@ mapping:
     **Bioschemas Gene**: Official proposed term for the profile describing a gene: [SO:gene](http://purl.obolibrary.org/obo/SO_0000704).
   marginality: Optional
   cardinality: MANY
-  controlled_vocab:
+  controlled_vocab: ""
   example: |-
     {
         "@type": ["BioChemEntity", "Gene"],
@@ -112,15 +112,30 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: "//Contains a variant\n{\n  \"@type\": [\"BioChemEntity\", \"Gene\"],\n
-    \ \"contains\": { \n    \"@type\": \"BioChemEntity\",\n    \"additionalType\":
-    \"http://semanticscience.org/resource/SIO_001381\",\n    \"identifier\": \"rs577882423\",\n
-    \   \"location\": {\n      \"@type\": \"PropertyValue\",\n      \"minValue\":
-    \"21:25875563\",\n      \"maxValue\": \"21:25875563\",\n      \"value\": \"C\",\n
-    \     \"description\": \"mutation\",\n      \"valueReference\": {\n        \"@type\":
-    \"PropertyValue\",\n        \"description\": \"wild\",\n        \"value\": \"T\"\n
-    \     }\n    },\n    \"url\": \"https://www.ensembl.org/Homo_sapiens/Variation/Summary?db=core;g=ENSG00000142192;r=21:25880550-26171128;vf=110312838\"\n
-    \ }\n}\n"
+  example: |-
+    //Contains a variant
+    {
+        "@type": ["BioChemEntity", "Gene"],
+        "contains": { 
+            "@type": "BioChemEntity",
+            "additionalType": "http://semanticscience.org/resource/SIO_001381",
+            "identifier": "rs577882423",
+            "location": {
+              "@type": "PropertyValue",
+              "minValue": "21:25875563",
+              "maxValue": "21:25875563",
+              "value": "C",
+              "description": "mutation",
+              "valueReference": {
+                "@type": "PropertyValue",
+                "description": "wild",
+                "value": "T"
+              }
+            },
+            "url": "https://www.ensembl.org/Homo_sapiens/Variation/Summary?db=core;g=ENSG00000142192;r=21:25880550-26171128;vf=110312838"
+        }
+    }
+
 - property: description
   expected_types:
   - Text
@@ -136,6 +151,44 @@ mapping:
         "@type": ["BioChemEntity", "Gene"],
         "description": "amyloid beta precursor protein"
     }
+- property: enablesMF
+  expected_types:
+  - CategoryCode
+  - PropertyValue
+  description: ""
+  type: external
+  type_url: ' http://purl.obolibrary.org/obo/RO_0002327'
+  bsc_description: "RO:0002327 (enables). GO molecular function enabled by the protein.
+    \nRecommended range: BioChemEntity or CategoryCode, ProteinAnnotation if evidence
+    should be included."
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: 'Only the molecular function branch of [Gene Ontology (GO)](http://www.geneontology.org) '
+  example: |-
+    //Protein enabling a GO molecular function
+    {
+      "@type": ["BioChemEntity", "Gene"],
+      "enablesMF": {
+        "@type": "CategoryCode",
+        "url": "http://purl.obolibrary.org/obo/GO_0000166",
+        "codeValue": "GO:0000166",
+        "name": "nucleotide binding"
+        }
+    }
+- property: encodes
+  expected_types:
+  - BioChemEntity
+  description: ""
+  type: external
+  type_url: http://semanticscience.org/resource/SIO_010078
+  bsc_description: SIO:010078 (encodes). For genes, this property is used to express
+    in a generic way gene products encoded by this gene. Two more specific properties
+    SIO:010082 (is translated into) and SIO:010080 (is transcribed into) should be
+    used for (protein) translation and (RNA) transcription respectevely.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: SIO
+  example: ""
 - property: hasRepresentation
   expected_types:
   - PropertyValue
@@ -211,12 +264,36 @@ mapping:
       "@type": ["BioChemEntity", "Gene"],
       "image": "https://en.wikipedia.org/wiki/Amyloid_precursor_protein#/media/File:Ideogram_human_chromosome_21.svg"
     }
+- property: involvedInBP
+  expected_types:
+  - CategoryCode
+  - PropertyValue
+  description: ""
+  type: external
+  type_url: ' http://purl.obolibrary.org/obo/RO_0002331'
+  bsc_description: |-
+    RO:0002331 (is involved in). GO biological process this protein is involved in.
+    Recommended range: BioChemEntity or CategoryCode, ProteinAnnotation if evidence should be included.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: 'Only the biological process branch of [Gene Ontology (GO)](http://www.geneontology.org)'
+  example: |
+    //Protein involved in a GO biological process
+    {
+      "@type": ["BioChemEntity", "Gene"],
+      "involvedInBP": {
+        "@type": "CategoryCode",
+        "url": "http://purl.obolibrary.org/obo/GO_0000278",
+        "codeValue": "GO:0000278",
+        "name": "mitotic cell cycle"
+        }
+    }
 - property: isContainedIn
   expected_types:
   - BioChemEntity
-  description:
-  type: "bioschemas"
-  type_url: "http://bioschemas.org/types/BioChemEntity/specification/"
+  description: ""
+  type: bioschemas
+  type_url: http://bioschemas.org/types/BioChemEntity/specification/
   bsc_description: |-
     Indicates a BioChemEntity that this BioChemEntity is (in some sense) part of.
 
@@ -224,18 +301,88 @@ mapping:
     For genes, it is recommended to at least specify the DNA/chromosome containing this gene and the taxon/organism associated to it. For taxon/organism, it is a good practice to use categoryCode to point to a controlled vocabulary such as NCBI taxon or UniProt Taxonomy.
   marginality: Recommended
   cardinality: MANY
-  controlled_vocab: ""
-  example: "//Is contained in a chromosome in positions X to Y\n{\n  \"@type\": [\"BioChemEntity\",
-    \"Gene\"],\n  \"isContainedIn\": {\n    \"@type\": \"BioChemEntity\",\n    \"name\":
-    \"Chromosome 21\",\n    \"location\": {\n      \"@type\": \"PropertyValue\",\n
-    \     \"minValue\": \"25880550\",\n      \"maxValue\": \"26171128\",\n      \"description\":
-    \"reverse strand\"\n    }\n  }\n}\n//Is contained in an organism\n{\n  \"@type\":
-    [\"BioChemEntity\", \"Gene\"],\n  \"isContainedIn\": {\n    \"@type\": \"BioChemEntity\",\n
-    \   \"name\": \"Homo sapiens\",\n    \"alternateName\": \"Human\",\n    \"codeCategory\":
-    {\n      \"@type\": \"CategoryCode\",\n      \"codeValue\": \"9606\",\n      \"url\":
-    \"http://purl.bioontology.org/ontology/NCBITAXON/9606\",\n      \"sameAs\": \"http://purl.uniprot.org/taxonomy/9606\"\n
-    \     \"inCodeSet\": {\n        \"@type\": \"CategoryCodeSet\",\n        \"name\":
-    \"NCBI taxon\"\n      } \n    }\n  }\n}"
+  controlled_vocab: For subcellular locations branch from GO, please use [Gene Ontology
+    (GO)](http://www.geneontology.org)
+  example: |-
+    //Is contained in a chromosome in positions X to Y
+    {
+      "@type": ["BioChemEntity", "Gene"],
+      "isContainedIn": {
+        "@type": "BioChemEntity",
+        "name": "Chromosome 21",
+        "location": {
+          "@type": "PropertyValue",
+          "minValue": "25880550",
+          "maxValue": "26171128",
+          "description": "reverse strand"
+        }
+      }
+    }
+    //Is contained in an organism
+    {
+      "@type": ["BioChemEntity", "Gene"],
+      "isContainedIn": {
+        "@type": "BioChemEntity",
+        "name": "Homo sapiens",
+        "alternateName": "Human",
+        "codeCategory": {
+          "@type": "CategoryCode",
+          "codeValue": "9606",
+          "url": "http://purl.bioontology.org/ontology/NCBITAXON/9606",
+          "sameAs": "http://purl.uniprot.org/taxonomy/9606",
+          "inCodeSet": {
+            "@type": "CategoryCodeSet",
+            "name": "NCBI taxon"
+          } 
+        }
+      }
+    }
+- property: isTranscribedInto
+  expected_types:
+  - BioChemEntity
+  description: ""
+  type: external
+  type_url: http://semanticscience.org/resource/SIO_010080
+  bsc_description: SIO:010080 (is transcribed into). For genes, this property is used
+    to link to gene products transcribed from this gene such as RNA.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: SIO
+  example: ""
+- property: isTranslatedInto
+  expected_types:
+  - BioChemEntity
+  - bioschemas:Protein
+  description: ""
+  type: external
+  type_url: http://semanticscience.org/resource/SIO_010082
+  bsc_description: SIO:010082 (is translated into). For genes, this property is used
+    to link to gene products translated (even indirectly) from this gene such as proteins.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: SIO
+  example: |-
+    {
+      "@type": ["BioChemEntity", "Gene"],
+      "isTranslatedInto": { 
+        "@type": ["BioChemEntity", "Protein"],
+        "identifier": "uniprotkb:P05067",
+        "url": "https://www.uniprot.org/uniprot/P05067"
+      }
+    }  
+- property: isVariantOf
+  expected_types:
+  - BioChemEntity
+  - bioschemas:Gene
+  description: ""
+  type: external
+  type_url: http://semanticscience.org/resource/SIO_000272
+  bsc_description: 'SIO: 000272 (is variant of). Use this property to express when
+    a gene is a variant of any other gene.'
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: SIO
+  example: ""
 - property: location
   expected_types:
   - Place
@@ -269,12 +416,22 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: "//Preferred way from DataRecord\n{\n\n  \"@type\": \"DataRecord\",\n  \"@id\":
-    \"http://rdf.ebi.ac.uk/resource/ensembl/ENSG00000142192\"\n  \"mainEntity\": {\n
-    \   \"@type\": [\"BioChemEntity\", \"Gene\"]\n    #Any other property for this
-    Gene entity    \n  }\n}\n\n//Also possible from Gene\n{\n  \"@type\": [\"BioChemEntity\",
-    \"Gene\"],\n  \"mainEntityOfPage\": { \"@id\": \"http://rdf.ebi.ac.uk/resource/ensembl/ENSG00000142192\"
-    }\n}"
+  example: |-
+    //Preferred way from DataRecord
+    {
+      "@type": "DataRecord",
+      "@id": "http://rdf.ebi.ac.uk/resource/ensembl/ENSG00000142192"
+      "mainEntity": {
+        "@type": ["BioChemEntity", "Gene"],
+        "name": "Name and any other property for this Gene Entity"    
+      }
+    }
+
+    //Also possible from Gene
+    {
+      "@type": ["BioChemEntity", "Gene"],
+      "mainEntityOfPage": { "@id": "http://rdf.ebi.ac.uk/resource/ensembl/ENSG00000142192" }
+    }  
 - property: name
   expected_types:
   - Text
@@ -307,59 +464,6 @@ mapping:
       "@type": ["BioChemEntity", "Gene"],
       "sameAs": "https://www.wikidata.org/wiki/Q14865870"
     }
-- property: SIO:encodes
-  expected_types:
-  - BioChemEntity
-  description: ""
-  type: external
-  type_url: http://semanticscience.org/resource/SIO_010078
-  bsc_description: SIO:010078 (encodes). For genes, this property is used to express
-    in a generic way gene products encoded by this gene. Two more specific properties
-    SIO:010082 and SIO:010080 should be used for translation and transcription respectevely.
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: SIO
-  example: ""
-- property: SIO:is transcribed into
-  expected_types:
-  - BioChemEntity
-  description: ""
-  type: external
-  type_url: http://semanticscience.org/resource/SIO_010080
-  bsc_description: SIO:010080 (is transcribed into). For genes, this property is used
-    to link to gene products transcribed from this gene such as RNA.
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: SIO
-  example: ""
-- property: SIO:is translated into
-  expected_types:
-  - BioChemEntity
-  - bioschemas:Protein
-  description: ""
-  type: external
-  type_url: http://semanticscience.org/resource/SIO_010082
-  bsc_description: SIO:010082 (is translated into). For genes, this property is used
-    to link to gene products translated (even indirectly) from this gene such as proteins.
-  marginality: Recommended
-  cardinality: MANY
-  controlled_vocab: SIO
-  example: "{\n  \"@type\": [\"BioChemEntity\", \"Gene\"],\n  \"SIO:010082\": { \n
-    \   \"@type\": [\"BioChemEntity\", \"Protein\"],\n    \"identifier\": \"uniprotkb:P05067\",\n
-    \   \"url\": \"https://www.uniprot.org/uniprot/P05067\"\n  }\n}"
-- property: SIO:is variant of
-  expected_types:
-  - BioChemEntity
-  - bioschemas:Gene
-  description: ""
-  type: external
-  type_url: http://semanticscience.org/resource/SIO_000272
-  bsc_description: 'SIO: 000272 (is variant of). Use this property to express when
-    a gene is a variant of any other gene.'
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: SIO
-  example: ""
 - property: url
   expected_types:
   - URL
