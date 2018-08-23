@@ -1,4 +1,5 @@
 ---
+redirect_from: "/technical/"
 layout: group-details
 identifier: technical
 name: Technical
