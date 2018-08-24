@@ -108,7 +108,7 @@ description: |-
         <h3>Deployment Stories</h3>
           {% assign sorted_stories = (site.stories | sort: 'date-added' | reverse ) %}
           {% for story in sorted_stories %}
-          <div>
+          <div class="deployment-story">
               <strong><a href="{{ story.external-url }}">{{ story.name }}</a></strong>
               <p> <strong>{{ story.date-added }}</strong> </p>
               <ul>
