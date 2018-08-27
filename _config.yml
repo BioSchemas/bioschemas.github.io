@@ -48,7 +48,9 @@ collections:
     permalink: /:collection/:path/
   useCases:
     output: true
-    permalink: /:collection/:path/     
+    permalink: /:collection/:path/
   liveDeploys:
     output: true
     permalink: /:collection/:path/
+  stories:
+    output: true
