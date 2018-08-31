@@ -1,33 +1,18 @@
 {
   "@context": [
+    { "bs": "http://bioschemas.org/specifications/" },
     "http://schema.org",
     {
       "@base": "http://schema.org"
-    },
-    {
-      "Gene": {
-        "@id": "http://purl.obolibrary.org/obo/SO_0000704"
-      },
-      "Protein": {
-        "@id": "http://purl.obolibrary.org/obo/PR_000000001"
-      },
-      "transcribedFrom": {
-        "@id": "http://semanticscience.org/resource/SIO_010081",
-        "@type": "@id"
-      },
-      "associatedWith": {
-        "@id": "http://purl.obolibrary.org/obo/so#associated_with",
-        "@type": "@id"
-      }
     }
   ],
 
   "@type": "DataRecord",
   "@id": "http://www.identifiers.org/ensembl/ENSG00000142192",
 
-  "identifier": "P00519",
+  "identifier": "ENSG00000142192",
   "mainEntity": {
-    "@type": ["BioChemEntity", "Gene"],
+    "@type": ["BioChemEntity", "bs:Gene"],
     "identifier": "ENSG00000142192",
     "name": "APP"
   },

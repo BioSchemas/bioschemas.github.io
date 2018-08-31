@@ -1,6 +1,5 @@
 ---
 name: Protein
-
 status: revision
 spec_type: Profile
 group: proteins
@@ -8,7 +7,6 @@ use_cases_url: /useCases/Proteins/
 cross_walk_url: https://docs.google.com/spreadsheets/d/1QQH4AkzdwPT1Qt5OLmH5HosLpkFU7khwE4Ql9_Cb9ZQ
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Protein
 live_deploy: /liveDeploys/
-
 parent_type: BioChemEntity
 hierarchy:
 - Thing
@@ -20,10 +18,10 @@ spec_info:
     in Life Sciences.
   description: This Protein profile specification presents the BioChemEntity usage
     when describing a Protein.
-  version_date: 20180405T144349
-  version: "0.5"
+  version: "0.5-draft"
+  version_date: 20180815T152236
   official_type: http://purl.obolibrary.org/obo/PR_000000001
-  full_example: https://github.com/BioSchemas/specifications/tree/master/Protein/examples/
+  full_example: https://github.com/BioSchemas/bioschemas.github.io/tree/master/_devSpecs/Protein/examples
 mapping:
 - property: additionalProperty
   expected_types:
@@ -35,19 +33,19 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: |-
-    Whenever possible, please use a property coined in a third-party well-know vocabulary. For instance, you can directly use [RO ObjectProperty: enables](http://purl.obolibrary.org/obo/RO_0002327) as a property to express how a protein or gene enables some GO molecular function. If you still want or need to use additionalProperty, please use (i) property name to specify the name of the property, (ii) additionalType (if possible) to better specify the nature of the property, and (iii) value to link to the object/range of this property. We recommed to look at the [OBO Relations Ontology (RO)](http://obofoundry.org/ontology/ro.html) or the [Semanticscience Integrated Ontology (SIO)](http://sio.semanticscience.org/) as starting points.
+    Whenever possible, please use a property coined in a third-party well-known vocabulary. For instance, you can directly use [RO ObjectProperty: enables](http://purl.obolibrary.org/obo/RO_0002327) as a property to express how a protein or gene enables some GO molecular function. If you still want or need to use additionalProperty, please use (i) property name to specify the name of the property, (ii) additionalType (if possible) to better specify the nature of the property, and (iii) value to link to the object/range of this property. We recommed to look at the [OBO Relations Ontology (RO)](http://obofoundry.org/ontology/ro.html) or the [Semanticscience Integrated Ontology (SIO)](http://sio.semanticscience.org/) as starting points.
 
     **Bioschemas Protein**: If no suitable property exists in this profile, use any ontology term coined as a property and suitable for your needs. For instance [sio:SIO_000095](http://semanticscience.org/resource/SIO_000095) (is member of) could be used to model the relation between a protein and a protein clan.
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: |-
-    //Short direct alternative to express relation between protein and protein clan.
+  example:  |-
+    //Short direct alternative to express, for instance, a relation between a protein and a protein clan.
     {
-      "@type": ["BioChemEntity", "Protein"],
+      "@type": ["BioChemEntity", "ProteinAnnotation"],
       "http://semanticscience.org/resource/SIO_000095": "http://pfam.xfam.org/clan/CL0001"
     }
-
+    
     //If no ontology term expressing the desired relation exists, then and only then use additionaProperty
     {
       "@type": ["BioChemEntity", "Protein"],
@@ -77,6 +75,7 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: |-
+    For instance 
     [wikidata:protein](https://www.wikidata.org/wiki/Q8054)
     [SIO:010043](http://semanticscience.org/resource/SIO_010043.rdf)
   example: |-
@@ -99,43 +98,31 @@ mapping:
       "@type": ["BioChemEntity", "Protein"],
       "alternateName": ["ABL", "JTK7"]
     }
-- property: hasCategoryCode
+- property: associatedWith
   expected_types:
-  - CategoryCode
-  description: "A Category code contained in this code set."
-  type: pending
-  type_url: ""
-  bsc_description: "A controlled vocabulary term equivalent to this entity. For instance,
-    an organism coined in NCBI taxonomy can be represented as a\n BioChemEntity. As
-    it also exists as a term in an ontology, it would be \nnice to capture that information
-    via categoryCode."
-  marginality: Optional
+  - MedicalCondition
+  - URL
+  description: ""
+  type: external
+  type_url: http://purl.obolibrary.org/obo/so#associated_with
+  bsc_description: Disease associated to this protein, if any.
+  marginality: Recommended
   cardinality: MANY
-  controlled_vocab: Any suitable controlled vocabulary describing proteins
+  controlled_vocab: ""
   example: |-
     {
       "@type": ["BioChemEntity", "Protein"],
-      "hasCategoryCode": [
-        {
-          "@type": "CategoryCode",
-          "codeValue": "P05067",
-          "url": "http://purl.uniprot.org/uniprot/P05067",
-          "inCodeSet": {
-            "@type": "CategoryCodeSet",
-            "name": "UniProt",
-            "url": "http://purl.uniprot.org/uniprot/"
-          }
+      "associatedWith": {
+        "@type": "MedicalCondition",
+        "name": "Leukemia, chronic myeloid (CML)",
+        "code": {
+          "@type": "MedicalCode",
+          "codeValue": "608232",
+          "codingSystem": "OMIM"
         },
-        {
-          "@type": "CategoryCode",
-          "codeValue": "Q423510",
-          "url": "https://www.wikidata.org/wiki/Q423510",
-          "inCodeSet": {
-            "@type": "CategoryCodeSet",
-            "name": "Wikidata",
-            "url": "https://www.wikidata.org"        
-        }
-      ]
+        "sameAs": "http://purl.uniprot.org/mim/608232",
+        "url": "http://www.uniprot.org/diseases/DI-03735"
+      }
     }
 - property: contains
   expected_types:
@@ -151,18 +138,18 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: Any suitable ontology
-  example: |-
-    //A protein can contain a variant:
+  example:  |-
+    //A protein can contain a variant
     {
-    "@type": ["BioChemEntity", "Protein"],
-    "contains": {"@id": "http://purl.uniprot.org/annotation/VAR_022315"}
+      "@type": ["BioChemEntity", "Protein"],
+      "contains": {"@id": "http://purl.uniprot.org/annotation/VAR_022315"}
     }
-    
+                    
     //More information about the variant can also be included via ProteinAnnotation
     {
       "@type": ["BioChemEntity", "Protein"],
       "contains": {
-        "@type": ["BioChemEntity", "ProteinAnnotation]"
+        "@type": ["BioChemEntity", "ProteinAnnotation"],
         "@id": "http://purl.uniprot.org/annotation/VAR_022315",
         "aditionalType": "http://semanticscience.org/resource/SIO_010471",
         "identifier": "VAR_022315",
@@ -173,10 +160,10 @@ mapping:
       }
     }
 
-    //A variant can include an evidence; in this case we also model the variant as a ProteinAnnotation and use creationMethod
+    //A variant can include an evidence; in this case we model the variant as a ProteinAnnotation  and use creationMethod
     {
       "@type": ["BioChemEntity", "Protein"],
-      "@id": "http://purl.uniprot.org/uniprot/P05519"
+      "@id": "http://purl.uniprot.org/uniprot/P05519",
       "contains": {
         "@type": ["BioChemEntity", "ProteinAnnotation"],
         "@id": "http://purl.uniprot.org/annotation/VAR_022315",
@@ -210,6 +197,96 @@ mapping:
     {
       "@type": ["BioChemEntity", "Protein"],
       "description": "Function: Non-receptor tyrosine-protein kinase that plays a role..."
+    }
+- property: enablesMF
+  expected_types:
+  - CategoryCode
+  - PropertyValue
+  description: ""
+  type: external
+  type_url: ' http://purl.obolibrary.org/obo/RO_0002327'
+  bsc_description: "RO:0002327 (enables). GO molecular function enabled by the gene/protein.
+    \nRecommended range: BioChemEntity or CategoryCode, ProteinAnnotation if evidence
+    should be included."
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: '[Gene Ontology (GO)](http://www.geneontology.org)'
+  example: |-
+    //Protein enabling a GO molecular function
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "enablesMF": {
+        "@type": "CategoryCode",
+        "url": "http://purl.obolibrary.org/obo/GO_0000166",
+        "codeValue": "GO:0000166",
+        "name": "nucleotide binding"
+        }
+    }
+    
+    //With evidence
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "enablesMF": {
+        "@type": "ProteinAnnotation",
+        "identifier": "GO:0000166",
+        "categoryCode": {
+          "@type": "CategoryCode",
+          "url": "http://purl.obolibrary.org/obo/GO_0000166",
+          "codeValue": "GO:0000166",
+          "name": "nucleotide binding"
+        },
+        "creationMethod": {
+          "@type": "PropertyValue",
+          "value": "imported manually asserted information used in automatic assertion",
+          "valueReference": {
+            "@type": "CategoryCode",
+            "codeValue": "ECO:0000322",
+            "inCategorySet": {
+              "@type": "CategoryCodeSet",
+              "name": "ECO Evidence Code Ontology"
+            }
+          }
+        }
+      }
+    }
+- property: hasCategoryCode
+  expected_types:
+  - CategoryCode
+  description: A Category code contained in this code set.
+  type: ""
+  type_url: ""
+  bsc_description: A controlled vocabulary term equivalent to this entity. For instance,
+    an organism coined in NCBI taxonomy can be represented as a BioChemEntity. As
+    it also exists as a term in an ontology, it would be nice to capture that information
+    via categoryCode.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Any suitable controlled vocabulary
+  example: |-
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "hasCategoryCode": [
+        {
+          "@type": "CategoryCode",
+          "codeValue": "P05067",
+          "url": "http://purl.uniprot.org/uniprot/P05067",
+          "inCodeSet": {
+            "@type": "CategoryCodeSet",
+            "name": "UniProt",
+            "url": "http://purl.uniprot.org/uniprot/"
+          }
+        },
+        {
+          "@type": "CategoryCode",
+          "codeValue": "Q423510",
+          "url": "https://www.wikidata.org/wiki/Q423510",
+          "inCodeSet": {
+            "@type": "CategoryCodeSet",
+            "name": "Wikidata",
+            "url": "https://www.wikidata.org"        
+          }
+        }
+      ]
     }
 - property: hasRepresentation
   expected_types:
@@ -268,6 +345,57 @@ mapping:
   cardinality: MANY
   controlled_vocab: ""
   example: ""
+- property: involvedInBP
+  expected_types:
+  - CategoryCode
+  - PropertyValue
+  description: ""
+  type: external
+  type_url: ' http://purl.obolibrary.org/obo/RO_0002331'
+  bsc_description: |-
+    RO:0002331 (is involved in). GO biological process this gene/protein is involved in.
+    Recommended range: BioChemEntity or CategoryCode, ProteinAnnotation if evidence should be included.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: '[Gene Ontology (GO)](http://www.geneontology.org)'
+  example: |-
+    //Protein involved in a GO biological process
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "involvedInBP": {
+        "@type": "CategoryCode",
+        "url": "http://purl.obolibrary.org/obo/GO_0000278",
+        "codeValue": "GO:0000278",
+        "name": "mitotic cell cycle"
+        }
+    }
+    
+    //With evidence
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "involvedInBP": {
+        "@type": "ProteinAnnotation",
+        "identifier": "GO:0000278",
+        "categoryCode": {
+          "@type": "CategoryCode",
+          "url": "http://purl.obolibrary.org/obo/GO_0000278",
+          "codeValue": "GO:0000278",
+          "name": "mitotic cell cycle"
+        },
+        "creationMethod": {
+          "@type": "PropertyValue",
+          "value": "imported manually asserted information used in automatic assertion",
+          "valueReference": {
+            "@type": "CategoryCode",
+            "codeValue": "ECO:0000322",
+            "inCategorySet": {
+              "@type": "CategoryCodeSet",
+              "name": "ECO Evidence Code Ontology"
+            }
+          }
+        }
+      }
+    }
 - property: isContainedIn
   expected_types:
   - BioChemEntity
@@ -278,10 +406,10 @@ mapping:
     sense) part of this BioChemEntity. _Inverse property: containedIn_ \n\n**Bioschemas
     Protein**: For proteins, it is recommended to at least specify the taxon/organism
     associated to the described protein. For taxon/organism, it is a good practice
-    to use categoryCode to point to a controlled vacabulary such as NCBI taxon or
-    UniProt Taxonomy. Including as well the GO cellular locations is optional; for
-    cellular locations it is a good practice to use categorryCode to point to a GO
-    Cellular Location term."
+    to use hasCategoryCode to point to a controlled vacabulary such as NCBI taxon
+    or UniProt Taxonomy. Including as well the GO cellular locations is optional;
+    for cellular locations it is a good practice to use hasCategorryCode to point
+    to a GO Cellular Location term."
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: Any suitable ontology
@@ -293,10 +421,32 @@ mapping:
         "identifier": "9606",
         "name": "Homo sapiens",
         "hasCategoryCode": {
-          "@type": "CategoryCode",
           "codeValue": "9606",
           "url": "http://purl.uniprot.org/taxonomy/9606"
-        }
+        },
+        "url": "http://www.uniprot.org/taxonomy/9606"
+      }
+    }
+- property: isTranslatedFrom
+  expected_types:
+  - BioChemEntity
+  - bioschemas:Gene
+  description: ""
+  type: external
+  type_url: http://semanticscience.org/resource/SIO_010083
+  bsc_description: SIO:010083 (is translated from). Gene(s) from which this protein
+    was translated from. In addtion to the schema:BioChemEntity type, this property
+    also expects a bioschemas:Gene profile.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: Any suitable ontology
+  example: |-
+    {
+      "@type": ["BioChemEntity", "Protein"],
+      "isTranslatedFrom": {
+        "@type": ["BioChemEntity", "Gene"],
+        "identifier": "ABL1",
+        "name": "ABL1"
       }
     }
 - property: location
@@ -341,16 +491,14 @@ mapping:
       "@id": "http://purl.uniprot.org/uniprot/P05519",
       "mainEntity": {
         "@type": ["BioChemEntity", "Protein"],
-        "name": "Name and any other property for this Protein entity following the specification on this page"
+        "name": "Name and any other property for this Protein entity"
       }
     }
 
     //Also possible from Protein
     {
       "@type": ["BioChemEntity", "Protein"],
-      "mainEntityOfPage": {
-        "@id": "http://purl.uniprot.org/uniprot/P05519"
-      }
+      "mainEntityOfPage": { "@id": "http://purl.uniprot.org/uniprot/P05519" }
     }
 - property: name
   expected_types:
@@ -366,108 +514,6 @@ mapping:
     {
       "@type": ["BioChemEntity", "Protein"],
       "name": "ABL1"
-    }
-- property: enablesMF
-  expected_types:
-  - CategoryCode
-  - PropertyValue
-  description: ""
-  type: external
-  type_url: ' http://purl.obolibrary.org/obo/RO_0002327'
-  bsc_description: "RO:0002327 (enables). GO molecular function enabled by the protein.
-    \nRecommended range: BioChemEntity or CategoryCode, ProteinAnnotation if evidence
-    should be included."
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: '[Gene Ontology (GO)](http://www.geneontology.org)'
-  example: |-
-    //Protein enabling a GO molecular function
-    {
-      "@type": ["BioChemEntity", "Protein"],
-      "enablesMF": {
-        "@type": "CategoryCode",
-        "url": "http://purl.obolibrary.org/obo/GO_0000166",
-        "codeValue": "GO:0000166",
-        "name": "nucleotide binding"
-        }
-    }
-
-    //With evidence
-    {
-      "@type": ["BioChemEntity", "Protein"],
-      "enablesMF": {
-        "@type": "ProteinAnnotation",
-        "identifier": "GO:0000166",
-        "categoryCode": {
-          "@type": "CategoryCode",
-          "url": "http://purl.obolibrary.org/obo/GO_0000166",
-          "codeValue": "GO:0000166",
-          "name": "nucleotide binding"
-        },
-        "creationMethod": {
-          "@type": "PropertyValue",
-          "value": "imported manually asserted information used in automatic assertion",
-          "valueReference": {
-            "@type": "CategoryCode",
-            "codeValue": "ECO:0000322",
-            "inCategorySet": {
-              "@type": "CategoryCodeSet",
-              "name": "ECO Evidence Code Ontology"
-            }
-          }
-        }
-      }
-    }
-- property: involvedInBP
-  expected_types:
-  - CategoryCode
-  - PropertyValue
-  description: ""
-  type: external
-  type_url: ' http://purl.obolibrary.org/obo/RO_0002331'
-  bsc_description: |-
-    RO:0002331 (is involved in). GO biological process this protein is involved in.
-    Recommended range: BioChemEntity or CategoryCode, ProteinAnnotation if evidence should be included.
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: '[Gene Ontology (GO)](http://www.geneontology.org)'
-  example: |-
-    //Protein involved in a GO biological process
-    {
-      "@type": ["BioChemEntity", "Protein"],
-      "involvedInBP": {
-        "@type": "CategoryCode",
-        "url": "http://purl.obolibrary.org/obo/GO_0000278",
-        "codeValue": "GO:0000278",
-        "name": "mitotic cell cycle"
-        }
-    }
-
-    //With evidence
-    {
-      "@type": ["BioChemEntity", "Protein"],
-      "involvedInBP": {
-        "@type": "ProteinAnnotation",
-        "identifier": "GO:0000278",
-        "categoryCode": {
-          "@type": "CategoryCode",
-          "url": "http://purl.obolibrary.org/obo/GO_0000278",
-          "codeValue": "GO:0000278",
-          "name": "mitotic cell cycle"
-        },
-        "creationMethod": {
-          "@type": "PropertyValue",
-          "value": "imported manually asserted information used in automatic assertion",
-          "valueReference": {
-            "@type": "CategoryCode",
-            "codeValue": "ECO:0000322",
-            "inCategorySet": {
-              "@type": "CategoryCodeSet",
-              "name": "ECO Evidence Code Ontology"
-            }
-          }
-        }
-      }
     }
 - property: sameAs
   expected_types:
@@ -487,54 +533,6 @@ mapping:
       "@type": ["BioChemEntity", "Protein"],
       "sameAs": ["https://www.wikidata.org/wiki/Q587961", "https//:identifiers.org/uniprot:P05519"]
     }
-- property: isTranslatedFrom
-  expected_types:
-  - BioChemEntity
-  - bioschemas:Gene
-  description: ""
-  type: external
-  type_url: http://semanticscience.org/resource/SIO_010083
-  bsc_description: SIO:010083 (is translated from). Gene(s) from which this protein
-    was translated from. In addtion to the schema:BioChemEntity type, this property
-    also expects a bioschemas:Gene profile.
-  marginality: Recommended
-  cardinality: MANY
-  controlled_vocab: Any suitable ontology
-  example: |-
-    {
-      "@type": ["BioChemEntity", "Protein"],
-      "isTranslatedFrom": {
-        "@type": ["BioChemEntity", "Gene"],
-        "identifier": "ABL1",
-        "name": "ABL1"
-      }
-    }
-- property: associatedWith
-  expected_types:
-  - MedicalCondition
-  - URL
-  description: ""
-  type: external
-  type_url: http://purl.obolibrary.org/obo/so#associated_with
-  bsc_description: Disease associated to this protein, if any.
-  marginality: Recommended
-  cardinality: MANY
-  controlled_vocab: ""
-  example: |-
-    {
-      "@type": ["BioChemEntity", "Protein"],
-      "associatedWith": {
-        "@type": "MedicalCondition",
-        "name": "Leukemia, chronic myeloid (CML)",
-        "code": {
-          "@type": "MedicalCode",
-          "codeValue": "608232",
-          "codingSystem": "OMIM"
-        },
-        "sameAs": "http://purl.uniprot.org/mim/608232",
-        "url": "http://www.uniprot.org/diseases/DI-03735"
-      }
-    }
 - property: url
   expected_types:
   - URL
@@ -552,7 +550,6 @@ mapping:
     }
 
 ---
-
 <!DOCTYPE HTML>
 <html>
    {% include head.html %}
