@@ -319,5 +319,77 @@ list:
     schema_org: Dataset
     bsc_profile: Dataset
     bsc_ver: 0.1
-    comments:          
+    comments:        
+-
+    name: DEB Register
+    highlight:
+    example_URL: https://deb-central.org/
+    resource_URL: https://deb-central.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:    
+-
+    name: DEB Register
+    highlight:
+    example_URL: https://deb-central.org/
+    resource_URL: https://deb-central.org/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.1
+    comments:  
+-
+    name: CHD7 Database
+    highlight:
+    example_URL: https://molgenis51.gcc.rug.nl/
+    resource_URL: https://molgenis51.gcc.rug.nl/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:        
+-
+    name: CHD7 Database
+    highlight:
+    example_URL: https://molgenis51.gcc.rug.nl/
+    resource_URL: https://molgenis51.gcc.rug.nl/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.1
+    comments:  
+-
+    name: International Microvillus Inclusion Disease (MVID) Patient Registry
+    highlight:
+    example_URL: http://mvid-central.org/
+    resource_URL: http://mvid-central.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:     
+-
+    name: International Microvillus Inclusion Disease (MVID) Patient Registry
+    highlight:
+    example_URL: http://mvid-central.org/
+    resource_URL: http://mvid-central.org/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.1
+    comments:  
+-
+    name: AIP Mutation Database 
+    highlight:
+    example_URL: https://aip.fipapatients.org/
+    resource_URL: https://aip.fipapatients.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:     
+-
+    name: AIP Mutation Database 
+    highlight:
+    example_URL: https://aip.fipapatients.org/
+    resource_URL: https://aip.fipapatients.org/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.1
+    comments:           
 ---
