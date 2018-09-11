@@ -38,9 +38,9 @@ description: |-
                 <td colspan="3">
                     <div class="repo-count"><strong>{{profile.items | size}}</strong></div>
                     {% if profile.name == "LabProtocol" or profile.name == "DataRecord" or profile.name == "BioChemEntity" %}
-                    <a href="http://bioschemas.org/types/{{profile.name}}/specification/" target="_blank">{{profile.name}}</a><br>
+                    <a href="/types/{{profile.name}}" target="_blank">{{profile.name}}</a><br>
                     {% else %}
-                    <a href="http://bioschemas.org/specifications/{{profile.name}}/specification/" target="_blank">{{profile.name}}</a><br>
+                    <a href="/specifications/{{profile.name}}" target="_blank">{{profile.name}}</a><br>
                     {% endif %}
                     <div class="plus-icon"><i class="fas fa-minus fa-lg"></i></div>
                 </td>
@@ -50,9 +50,9 @@ description: |-
                 <td colspan="3">
                     <div class="repo-count"><strong>{{profile.items | size}}</strong></div>
                     {% if profile.name == "LabProtocol" or profile.name == "DataRecord" or profile.name == "BioChemEntity" %}
-                    <a href="http://bioschemas.org/types/{{profile.name}}/specification/" target="_blank">{{profile.name}}</a><br>
+                    <a href="/types/{{profile.name}}" target="_blank">{{profile.name}}</a><br>
                     {% else %}
-                    <a href="http://bioschemas.org/specifications/{{profile.name}}/specification/" target="_blank">{{profile.name}}</a><br>
+                    <a href="/specifications/{{profile.name}}" target="_blank">{{profile.name}}</a><br>
                     {% endif %}
                     <div class="plus-icon"><i class="fas fa-plus fa-lg"></i></div>
                 </td>
@@ -113,7 +113,7 @@ description: |-
               <p> <strong>{{ story.date-added }}</strong> </p>
               <ul>
                 {% for spec in story.specs %}
-                  <li><a href="/specifications/{{ spec }}/specification/">{{ spec }}</a></li>
+                  <li><a href="/specifications/{{ spec }}">{{ spec }}</a></li>
                 {% endfor %}
               </ul>
               <p>
