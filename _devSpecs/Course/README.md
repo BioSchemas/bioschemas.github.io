@@ -9,8 +9,8 @@ Thing > CreativeWork > Course
 # Description
 
 # Links
-- [Specification](http://bioschemas.org/bsc_specs/Course/specification/)
-- [Specification source](specification.html)
+- [Specification](http://bioschemas.org/bsc_specs/Course/)
+- [Specification source](../Course.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1-nxYa8fEauokQYFWj6n9dkueL6HolXpqQpVQziARPfE/edit?usp=drivesdk)
 - [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/Course/examples)
 - [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20Course)

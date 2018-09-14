@@ -12,8 +12,8 @@ Experimental protocols are fundamental information structures that support the d
 [1]  Giraldo, O., Garcia, A., Corcho, O.: SMART Protocols: SeMAntic RepresenTation for Experimental Protocols, Riva del Garda, Trentino, Italy (2014). 4th Workshop on Linked Science 2014- Making Sense Out of Data (LISC2014)
  
 # Links 
-- [Specification](http://bioschemas.org/bsc_specs/LabProtocol/specification/)
-- [Specification source](specification.html)
+- [Specification](http://bioschemas.org/bsc_specs/LabProtocol/)
+- [Specification source](../LabProtocol.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1XjDEohCvIAc_VGExctGchLy4TqTfN6LpfIw1BxvWj_o/edit?usp=drivesdk)
 - [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/LabProtocol/examples)
 - [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20LabProtocol)
