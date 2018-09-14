@@ -1,0 +1,288 @@
+---
+name: Person
+
+status: revision
+spec_type: Profile
+group: people
+use_cases_url: /useCases/Persons/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1_Hc_RD0GvdxuuO921ZGoQGZEFkcEjcS5J6dQVD2cwiQ
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20person
+live_deploy: ''
+
+parent_type: Person
+hierarchy:
+- Thing
+- Person
+
+spec_mapping_url: https://docs.google.com/spreadsheets/d/17scwe6fx9-WHBDqxTdD20F0Ji8kX9S7TMN6tNuw-0jY/edit#gid=1261485211
+spec_info:
+  title: Person
+  subtitle: 'A specification for describing people in life sciences.'
+  description: 'The Life Science Person specification provides a way to describe bioscience
+    people on the World Wide Web. It defines a set of metadata and vocabularies, built
+    on top of existing technologies and standards, that can be used to represent the
+    profile information of people in Web pages and applications. The goal of the specification
+    is to make it easier to discover, life science profile information.'
+  version: 0.1
+  version_date: 20180314T144349
+  official_type: ""
+  full_example: "https://gist.github.com/kcmcleod/26b4392ec1ff48aabaf61f98586d177e"
+---
+
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  <table class="bioschemas_properties bsc_type">
+                     <thead>
+                        <tr>
+                           <th>Property</th>
+                           <th>Expected Type</th>
+                           <th>Description</th>
+                           <th>CD</th>
+                           <th>Controlled Vocabulary</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+<!-- MINIMUM -->
+                       <tr class="cardinality"><td colspan="5">Marginality: <b>Minimum</b></td></tr>
+                       <tr>
+                          <th><a href="http://schema.org/description">description</a></th>
+                          <td>
+                            <a href="http://schema.org/Text">Text</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: A description of the item.
+                          <td>MANY</td>
+                          <td></td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
+                          <td>
+                            <a href="http://schema.org/CreativeWork">CreativeWork</a><br />
+                            <a href="http://schema.org/URL">URL</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
+                          <td>MANY</td>
+                          <td></td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/name">name</a></th>
+                          <td>
+                            <a href="http://schema.org/Text">Text</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The name of the item.
+                          <td>ONE</td>
+                          <td></td>
+                       </tr>
+
+<!-- RECOMMENDED -->
+                       <tr class="cardinality"><td colspan="5">Marginality: <b>Recommended</b></td></tr>
+                       <tr>
+                          <th><a href="http://schema.org/email">email</a></th>
+                          <td>
+                            <a href="http://schema.org/ContactPoint">ContactPoint</a><br />
+                            <a href="http://schema.org/Organization">Organization</a><br />
+                            <a href="http://schema.org/Person">Person</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: Email address.
+                          <td>ONE</td>
+                          <td></td>
+                       </tr>
+                       <tr id="expertise">
+                          <th><a class="newBsc" href="#">expertise</a></th>
+                          <td>
+                            <a href="http://schema.org/URL">URL</a>
+                          </td>
+                          <td>
+                            <strong>Bioschemas</strong>: A description of the topic which this person has the most expertise in.
+                          <td>ONE</td>
+                          <td><a href="http://bioportal.bioontology.org/ontologies/EDAM?p=classes&conceptid=topic_0003">EDAM:Topic</a></td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/homeLocation">homeLocation</a></th>
+                          <td>
+                            <a href="http://schema.org/ContactPoint">ContactPoint</a><br />
+                            <a href="http://schema.org/Place">Place</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: A contact location for a person's residence.
+                          <td>ONE</td>
+                          <td></td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/image">image</a></th>
+                          <td>
+                            <a href="http://schema.org/ImageObject">ImageObject</a><br /><a href="http://schema.org/URL">URL</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: An image of the item. This can be a URL or a fully described ImageObject.
+                          <td>ONE</td>
+                          <td></td>
+                       </tr>
+                       <tr>
+                         <th><a href="http://schema.org/keywords">keywords</a></th>
+                         <td>
+                           <a href="http://schema.org/Text">Text</a>
+                         </td>
+                         <td>
+                           <strong>Schema</strong>: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.<br />
+                           <strong>Bioschemas</strong>: Keywords to describe the person. These should be single words or short phrases that relate to a person.
+                         </td>
+                         <td>ONE</td>
+                         <td></td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/memberOf">memberOf</a></th>
+                          <td>
+                            <a href="http://schema.org/Organization">Organization</a><br />
+                            <a href="http://schema.org/ProgramMembership">ProgramMembership</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: An Organization (or ProgramMembership) to which this Person or Organization belongs.
+                          <td>MANY</td>
+                          <td></td>
+                       </tr>
+                       <tr id="orcId">
+                          <th><a href="#">orcId</a></th>
+                          <td>
+                            <a href="http://schema.org/Text">Text</a><br />
+                            <a href="http://schema.org/URL">URL</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The url or ID of the person's ORCID (see: <a href="http://orcid.org">http://orcid.org</a>).
+                          <td>MANY</td>
+                          <td></td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/worksFor">worksFor</a></th>
+                          <td>
+                            <a href="http://schema.org/Organization">Organization</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: Organizations that the person works for.
+                          <td>MANY</td>
+                          <td></td>
+                       </tr>
+
+
+<!-- OPTIONAL -->
+                       <tr class="cardinality"><td colspan="5">Marginality: <b>Optional</b></td></tr>
+
+                       <tr id="advisor">
+                          <th><a class="newBsc" href="#">advisor</a></th>
+                          <td>
+                            <a href="http://schema.org/Person">Person</a>
+                          </td>
+                          <td>
+                            <strong>Bioschemas</strong>: A person who has been an educational, professional or personal advisor to the person.
+                          <td>MANY</td>
+                          <td></td>
+                       </tr>
+                       <tr id="curriculumVitae">
+                          <th><a class="newBsc" href="#">curriculumVitae</a></th>
+                          <td>
+                            <a href="http://schema.org/Text">Text</a><br />
+                            <a href="http://schema.org/URL">URL</a>
+                          </td>
+                          <td>
+                            <strong>Bioschemas</strong>: A link or body of text describing the person's notable achievements, employment history, and contact details.
+                          <td>ONE</td>
+                          <td></td>
+                       </tr>
+                       <tr id="experience">
+                          <th><a class="newBsc" href="#">experience</a></th>
+                          <td>
+                            <a href="http://schema.org/Text">Text</a>
+                          </td>
+                          <td>
+                            <strong>Bioschemas</strong>: A textual description of the professional experiences a person has acquired.
+                          <td>MANY</td>
+                          <td></td>
+                       </tr>
+                       <tr id="funding">
+                          <th><a class="newBsc" href="#">funding</a></th>
+                          <td>
+                            <a href="http://schema.org/Text">Text</a>
+                          </td>
+                          <td>
+                            <strong>Bioschemas</strong>: Textual description of current or past funding this person has acquired.
+                          <td>MANY</td>
+                          <td></td>
+                       </tr>
+                       <tr id="interest">
+                          <th><a class="newBsc" href="#">interest</a></th>
+                          <td>
+                            <a href="http://schema.org/Text">Text</a><br />
+                            <a href="http://schema.org/URL">URL</a>
+                          </td>
+                          <td>
+                            <strong>Bioschemas</strong>: Any interests held by the person. These should be single words or phrases that relate to a person.
+                          <td>MANY</td>
+                          <td></td>
+                       </tr>
+                       <tr id="internationalActivities">
+                          <th><a class="newBsc" href="#">internationalActivities</a></th>
+                          <td>
+                            <a href="http://schema.org/Text">Text</a>
+                          </td>
+                          <td>
+                            <strong>Bioschemas</strong>: Global connections related to teaching and scholarly work in the past 3 years.
+                          <td>MANY</td>
+                          <td></td>
+                       </tr>
+                       <tr id="journalReferee">
+                          <th><a class="newBsc" href="#">journalReferee</a></th>
+                          <td>
+                            <a href="http://schema.org/CreativeWork">CreativeWork</a>
+                          </td>
+                          <td>
+                            <strong>Bioschemas</strong>: Journals this person is a referee of.
+                          <td>MANY</td>
+                          <td></td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/language">language</a></th>
+                          <td>
+                            <a href="http://schema.org/Language">Language</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: A sub property of instrument. The language used on this action.<br />
+                            <strong>Bioschemas</strong>: The languages spoken by the person.
+                          <td>MANY</td>
+                          <td></td>
+                       </tr>
+                       <tr id="works">
+                          <th><a class="newBsc" href="#">works</a></th>
+                          <td>
+                            <a href="http://schema.org/CreativeWork">CreativeWork</a><br />
+                            <a href="http://schema.org/Text">Text</a>
+                          </td>
+                          <td>
+                            <strong>Bioschemas</strong>: All or notable publications, presentations, training materials, research outputs or any other body of work attributed to this person.
+                          <td>MANY</td>
+                          <td></td>
+                       </tr>
+                     </tbody>
+                  </table>
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+      
+      
+      
+   </body>
+</html>

@@ -1,0 +1,288 @@
+---
+name: LabProtocol
+
+status: revision
+spec_type: Profile
+group: labprotocols
+use_cases_url: /useCases/LabProtocols/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1RWYIphvcBMHl8SLJl5-xRMZI0YaYrtJtClBSoOPL4xQ
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20LabProtocol
+live_deploy: ''
+
+parent_type: CreativeWork
+hierarchy:
+- Thing
+- CreativeWork
+
+spec_mapping_url: https://docs.google.com/spreadsheets/d/11TB7hdjkxBqVJd-PGKDY5-6_RoWIIcMq49LF0vkg8CM/edit#gid=1261485211
+spec_info:
+  title: LabProtocol
+  subtitle: Bioschemas specification describing LabProtocol in the life-science.
+  description: An experimental protocol is a sequence of tasks and operations executed
+    to perform experimental research in biological and biomedical areas.Experimental
+    protocols are fundamental information structures that support the description
+    of the processes by means of which results are generated in experimental research
+    [1]. Experimental protocols describe how the data were produced, the steps undertaken
+    and conditions under which these steps were carried out.<br />[1]  Giraldo, O.,
+    García, A., López, F., & Corcho, O. (2017). Using semantics for representing experimental
+    protocols. Journal of Biomedical Semantics, 8, 52. <a href="http://doi.org/10.1186/s13326-017-0160-y">http://doi.org/10.1186/s13326-017-0160-y</a>
+  version: "0.2"
+  version_date: 20180309T000000
+  official_type: ""
+  full_example: "https://github.com/BioSchemas/specifications/tree/master/LabProtocol/examples/"
+mapping:
+- property: additionalType
+  expected_types:
+  - URL
+  description: An additional type for the item, typically used for adding more specific
+    types from external vocabularies in microdata syntax. This is a relationship between
+    something and a class that the thing is in. In RDFa syntax, it is better to use
+    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
+    tools may have only weaker understanding of extra types, in particular those defined
+    externally.
+  type: ""
+  type_url: ""
+  bsc_description: Optional for LabProtocol as it has its own type in schema.org.
+    If used, the recommended URL is experimental protocol as defined by SMART Protocols
+    (see Controlled Vocabulary).
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: '[SP:ExperimentalProtocol](http://purl.org/net/SMARTprotocol#ExperimentalProtocol)'
+  example: ""
+- property: ChEBI:reagent
+  expected_types:
+  - BioChemEntity
+  - Text
+  - URL
+  description: ""
+  type: external
+  type_url: http://purl.obolibrary.org/obo/CHEBI_33893
+  bsc_description: Reagent used in the protocol. It can be a record in a Dataset describing
+    the reagent or a BioChemEntity corresponding to the reagent or a URL pointing
+    to the type of reagent used. ChEBI and PubChem entities can be used whenever available.
+    Commercial names are also acceptable (URL if possible).
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: |-
+    [ChEBI](http://purl.bioontology.org/ontology/CHEBI)
+    [PubChem](https://pubchem.ncbi.nlm.nih.gov/)
+  example: ""
+- property: citation
+  expected_types:
+  - CreativeWork
+  - Text
+  description: A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: duration
+  expected_types:
+  - Duration
+  description: The duration of the item (movie, audio recording, event, etc.) in [ISO
+    8601](http://en.wikipedia.org/wiki/ISO_8601) date format.
+  type: ""
+  type_url: ""
+  bsc_description: The time it takes to actually carry out the protocol, in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601)
+    date format.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: hasPart
+  expected_types:
+  - CreativeWork
+  description: |-
+    Indicates a CreativeWork that is (in some sense) a part of this CreativeWork.
+    Inverse property: [isPartOf](http://schema.org/isPartOf).
+  type: ""
+  type_url: ""
+  bsc_description: |-
+    A particular case in Bioschemas is LabProtocol where structural elements are used to described advantages (situations the Protocol has been successfully employed), limitations (situations the Protocol would be unreliable or otherwise unsuccessful), applications (Applications of the protocol list the full diversity of the applications of the method and support if is possible to extend the range of applications of the protocol. e.g. northern blot assays, sequencing, etc.), and outcomes (outcome or expected result by a protocol execution).
+    For LabProtocol, in the applicationType, please use [http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol](http://purl.org/net/SMARTprotocol#AdvantageOfTheProtocol) for advantages, [http://purl.org/net/SMARTprotocol#LimitationOfTheProtocol](http://purl.org/net/SMARTprotocol#LimitationOfTheProtocol) for limitations, [http://purl.org/net/SMARTprotocol#ApplicationOfTheProtocol](http://purl.org/net/SMARTprotocol#ApplicationOfTheProtocol) for applicability, and [http://purl.org/net/SMARTprotocol#OutcomeOfTheProtocol](http://purl.org/net/SMARTprotocol#OutcomeOfTheProtocol) for outcomes.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: '[SMART Protocols](http://purl.bioontology.org/ontology/SP)'
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: instrument
+  expected_types:
+  - Text
+  - URL
+  - Thing
+  description: The object that helped the agent perform the action. e.g. John wrote
+    a book with a pen.
+  type: bioschemas
+  type_url: ""
+  bsc_description: |-
+    For LabProtocols it would be a laboratory equipment use by a person to follow one or more steps described in this LabProtocol.
+    **Note:** Bioschemas have added the following to the list of Expected Types: [Text](http://schema.org/Text) and [URL](http://schema.org/URL).
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: |-
+    [BAO](http://bioassayontology.org/)
+    [EFO](https://www.ebi.ac.uk/efo/)
+    [ERO](https://www.ebi.ac.uk/ols/ontologies/ero)
+    [OBI](http://obi-ontology.org/)
+  example: ""
+- property: isBasedOn
+  expected_types:
+  - CreativeWork
+  - URL
+  description: A resource that was used in the creation of this resource. This term
+    can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+    Supersedes isBasedOnUrl.
+  type: bioschemas
+  type_url: ""
+  bsc_description: '**Note**: Bioschemas have removed Product from the Expected Types.'
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: isPartOf
+  expected_types:
+  - CreativeWork
+  description: |-
+    Indicates a CreativeWork that this CreativeWork is (in some sense) part of.
+    Inverse property: hasPart.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: keywords
+  expected_types:
+  - Text
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: license
+  expected_types:
+  - CreativeWork
+  - URL
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: purpose
+  expected_types:
+  - Text
+  description: A goal towards an action is taken. Can be concrete or abstract.
+  type: bioschemas
+  type_url: ""
+  bsc_description: '**Note:** Bioschemas have changed the Expected Types by removing
+    [MedicalDevicePurpose](http://health-lifesci.schema.org/MedicalDevicePurpose)
+    and [Thing](http://schema.org/Thing), and adding [Text](http://schema.org/Text).'
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: '[SMART Protocols](http://purl.bioontology.org/ontology/SP)'
+  example: ""
+- property: rdf:type
+  expected_types:
+  - URL
+  description: ""
+  type: external
+  type_url: http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+  bsc_description: This is used by validation tools to indentify the profile used.
+    You must use the value specified in the Controlled Vocabulary column.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: sample
+  expected_types:
+  - BioChemEntity
+  - Text
+  - URL
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: Sample used in the protocol. It could be a record in a Dataset
+    describing the sample or a physical object corresponding to the sample or a URL
+    pointing to the type of sample used.
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: |-
+    [NCBI Taxonomy](https://www.ncbi.nlm.nih.gov/taxonomy)
+    [Uberon](http://uberon.github.io/)
+  example: ""
+- property: software
+  expected_types:
+  - SoftwareApplication
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: An application that can complete the request.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: step
+  expected_types:
+  - CreativeWork 
+  - HowToSection 
+  - HowToStep 
+  - Text
+  description: A single step item (as HowToStep, text, document, video, etc.) or a
+    HowToSection.
+  type: ""
+  type_url: ""
+  bsc_description: Use in LabProtocol to include the step by step process followed
+    in this protocol.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

@@ -36,7 +36,7 @@ title: Draft BioSchemas Specifications
             {% for spec in prof_specs %}
             <tr>
                 {% assign date_time = spec.spec_info.version_date %}
-               <th><a href="/devSpecs/{{spec.name}}/specification" title="{{ spec.spec_info.subtitle }}">{{ spec.spec_info.title }}</a><br />(v{{spec.spec_info.version}})<br />{{ date_time | date_to_long_string }}</th>
+               <th><a href="/devSpecs/{{spec.name}}/" title="{{ spec.spec_info.subtitle }}">{{ spec.spec_info.title }}</a><br />(v{{spec.spec_info.version}})<br />{{ date_time | date_to_long_string }}</th>
                <td>
                   {% assign group = site.groups | where:"identifier", spec.group %}
                   {% for g in group %}
@@ -123,7 +123,7 @@ title: Draft BioSchemas Specifications
         {% assign type_specs = site.devTypes | where: 'spec_type', 'Type'%} {% for spec in type_specs%}
         <tr>
             <th>
-                <a href="/devTypes/{{spec.name}}/specification" title="{{spec.subtitle}}">{{ spec.name }}</a>
+                <a href="/devTypes/{{spec.name}}/" title="{{spec.subtitle}}">{{ spec.name }}</a>
                 <br />(v{{spec.version}})
                 <br />{{spec.dateModified}}</th>
             <td>

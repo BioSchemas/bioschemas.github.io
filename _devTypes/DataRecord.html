@@ -1,0 +1,1019 @@
+---
+cross_walk_url: ''
+dateModified: 2018-02-25
+description: "A Record acts itself as a dataset although it refers to what could be
+  seen as the minimum compact, complete and auto-descriptive unit in a dataset, i.e.,
+  a record.\n\nBioschemas usage\n\nIn Life Sciences, records will represent a BioChemEntity."
+gh_examples: ''
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20DataRecord
+group: data
+hierarchy:
+- Thing
+- CreativeWork
+- Dataset
+live_deploy: ''
+name: DataRecord
+parent_type: Dataset
+spec_type: Type
+status: revision
+subtitle: Bioschemas specification describing a record in a dataset.
+use_cases_url: ''
+version: '0.1'
+
+bsc: #0B794B;
+pending: #0000CC;
+external: #454547;
+
+
+---
+
+
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+        <div class="wrapper">
+           <div id="main-content-wrapper" class="outer">
+              <section id="main_content" class="inner">
+                {% include type_start.html %}
+
+                <table class="bioschemas_properties bsc_type">
+                   <thead>
+                      <tr>
+                         <th>Property</th>
+                         <th>Expected Type</th>
+                         <th>Description</th>
+                      </tr>
+                   </thead>
+                   <tbody>
+<!-- New -->
+                     <tr class="new_props_sdo">
+                        <td colspan="3">
+                           New properties for <a style="color: #0B794B;" href="#">{{page.name}}</a> (pending schema.org integration).
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/additionalProperty">additionalProperty</a></th>
+                        <td>
+                           <a href="http://schema.org/PropertyValue">PropertyValue</a><br>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.  Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br/ >
+                          <strong>Bioschemas</strong>: Additional to the use of <a href="http://schema.org/name">name</a> and <a href="http://schema.org/description">description</a> to describe this property in a human-readable way,
+                          <a href="http://schema.org/additionalType">additionalType</a> should be used to specify the nature of the property/relation. For instance, if the property refers to a gene/protein disease association,
+                          you could use <a class="externalProp" href="http://semanticscience.org/resource/SIO_000983">SIO:000983 (gene-disease association)</a> as the <a href="http://schema.org/additionalType">additionalType</a> for the additionalProperty.
+                        </td>
+                      </tr>                     
+                     <tr id="isBasisFor">
+                        <th><a style="color: #0B794B;" href="#">isBasisFor</a></th>
+                        <td>
+                           <a href="http://schema.org/CreativeWork">CreativeWork</a><br>
+                           <a href="http://schema.org/Product">Product</a><br>
+                           <a href="http://schema.org/URL">URL</a><br>
+                        </td>
+                        <td>
+                          <strong>Bioschemas</strong>: A resource for which this resource is basis for. Inverse property: <a href="http://schema.org/isBasedOn">isBasedOn</a>.<br />
+                          <strong>Bioschemas DataRecord</strong>: Whenever possible use Evidence Codes (<a href="http://www.ebi.ac.uk/ols/ontologies/eco">ECO</a>).
+                        </td>
+                     </tr>
+                     <tr id="seeAlso">
+                        <th><a style="color: #0B794B;"  href="#">seeAlso</a></th>
+                        <td>
+                           <a href="http://schema.org/Thing">Thing</a><br />
+                           <a href="http://schema.org/URL">URL</a>
+                        </td>
+                        <td>
+                          <strong>Bioschemas</strong>: A pointer to any (somehow related) Thing. To be used whenever you are not so sure about the nature of the relation.
+                          Otherwise, use more precise terms from pre-existing Controlled Vocabularies.
+                        </td>
+                     </tr>
+<!-- Dataset -->
+                     <tr class="reu_props_sdo">
+                        <td colspan="3">Properties from <a href="http://schema.org/Dataset">Dataset</a></td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/distribution">distribution</a></th>
+                        <td>
+                           <a href="http://schema.org/DataDownload">DataDownload</a>
+                        </td>
+                        <td><strong>Schema</strong>: A downloadable form of this dataset, at a specific location, in a specific format.</td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/includedInDataCatalog">includedInDataCatalog</a></th>
+                        <td>
+                           <a href="http://schema.org/DataCatalog">DataCatalog</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: A data catalog which contains this dataset. Supersedes catalog, includedDataCatalog. <em>Inverse property: <a href="http://schema.org/dataset">dataset</a>.</em>
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/issn">issn</a></th>
+                        <td>
+                           <a href="http://schema.org/Text">Text</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a style="color: #0000CC;" href="http://pending.schema.org/measurementTechnique">measurementTechnique</a></th>
+                        <td>
+                           <a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: 	A technique or technology used in a Dataset (or DataDownload, DataCatalog), corresponding to the method used for measuring the corresponding variable(s) (described using <a style="color: #0000CC;" href="http://pending.schema.org/variableMeasured">variableMeasured</a>).
+                          This is oriented towards scientific and scholarly dataset publication but may have broader applicability; it is not intended as a full representation of measurement, but rather as a high level summary for dataset discovery.
+                          For example, if <a style="color: #0000CC;" href="http://pending.schema.org/variableMeasured">variableMeasured</a> is: molecule concentration, <a style="color: #0000CC;" href="http://pending.schema.org/measurementTechnique">measurementTechnique</a> could be: "mass spectrometry" or "nmr spectroscopy" or "colorimetry" or "immunofluorescence".<br />
+                          If the <a style="color: #0000CC;" href="http://pending.schema.org/variableMeasured">variableMeasured</a> is "depression rating", the <a style="color: #0000CC;" href="http://pending.schema.org/measurementTechnique">measurementTechnique</a> could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory".<br />
+                          If there are several <a style="color: #0000CC;" href="http://pending.schema.org/variableMeasured">variableMeasured</a> properties recorded for some given data object, use a <a href="http://schema.org/PropertyValue">PropertyValue</a> for each <a style="color: #0000CC;" href="http://pending.schema.org/variableMeasured">variableMeasured</a>
+                          and attach the corresponding <a style="color: #0000CC;" href="http://pending.schema.org/measurementTechnique">measurementTechnique</a>.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a style="color: #0000CC;" href="http://pending.schema.org/variableMeasured">variableMeasured</a></th>
+                        <td>
+                           <a href="http://schema.org/PropertyValue">PropertyValue</a><br /><a href="http://schema.org/Text">Text</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: 	The variableMeasured property can indicate (repeated as necessary) the variables that are measured in some dataset, either described as text or as pairs of identifier and description using <a href="http://schema.org/PropertyValue">PropertyValue</a>.
+                        </td>
+                     </tr>
+<!-- CREATIVEWORK -->
+                     <tr class="reu_props_sdo">
+                       <td colspan="3">Properties from <a href="http://schema.org/CreativeWork">CreativeWork</a></td>
+                     </tr>
+                     <tr>
+                        <th><a style="color: #0000CC;" href="http://pending.schema.org/about">about</a></th>
+                        <td>
+                           <a href="http://schema.org/Thing">Thing</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: The subject matter of the content. <em>Inverse property: subjectOf.</em>
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/accessMode">accessMode</a></th>
+                        <td>
+                           <a href="http://schema.org/Text">Text</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: The human sensory perceptual system or cognitive faculty through which a person may process or perceive information. Expected values include: auditory, tactile, textual, visual, colorDependent, chartOnVisual, chemOnVisual, diagramOnVisual, mathOnVisual, musicOnVisual, textOnVisual.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/accessModeSufficient">accessModeSufficient</a></th>
+                        <td>
+                           <a href="http://schema.org/Text">Text</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: A list of single or combined accessModes that are sufficient to understand all the intellectual content of a resource. Expected values include: auditory, tactile, textual, visual.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/accessibilityAPI">accessibilityAPI</a></th>
+                        <td>
+                           <a href="http://schema.org/Text">Text</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: Indicates that the resource is compatible with the referenced accessibility API (<a href="http://www.w3.org/wiki/WebSchemas/Accessibility">WebSchemas wiki lists possible values</a>).
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/accessibilityControl">accessibilityControl</a></th>
+                        <td>
+                           <a href="http://schema.org/Text">Text</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: Identifies input methods that are sufficient to fully control the described resource (<a href="http://www.w3.org/wiki/WebSchemas/Accessibility">WebSchemas wiki lists possible values</a>).
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/accessibilityFeature">accessibilityFeature</a></th>
+                        <td>
+                           <a href="http://schema.org/Text">Text</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility (<a href="http://www.w3.org/wiki/WebSchemas/Accessibility">WebSchemas wiki lists possible values</a>).
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/accessibilityHazard">accessibilityHazard</a></th>
+                        <td>
+                           <a href="http://schema.org/Text">Text</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: A characteristic of the described resource that is physiologically dangerous to some users. Related to WCAG 2.0 guideline 2.3 (<a href="http://www.w3.org/wiki/WebSchemas/Accessibility">WebSchemas wiki lists possible values</a>).
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/accessibilitySummary">accessibilitySummary</a></th>
+                        <td>
+                           <a href="http://schema.org/Text">Text</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: A human-readable summary of specific accessibility features or deficiencies, consistent with the other accessibility metadata but expressing subtleties such as "short descriptions are present but long descriptions will be needed for non-visual users" or "short descriptions are present and no long descriptions are needed."
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/accountablePerson">accountablePerson</a></th>
+                        <td>
+                           <a href="http://schema.org/Person">Person</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: Specifies the Person that is legally accountable for the CreativeWork.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/aggregateRating">aggregateRating</a></th>
+                        <td>
+                           <a href="http://schema.org/AggregateRating">AggregateRating</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: The overall rating, based on a collection of reviews or ratings, of the item.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/alternativeHeadline">alternativeHeadline</a></th>
+                        <td>
+                           <a href="http://schema.org/Text">Text</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: A secondary title of the CreativeWork.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/associatedMedia">associatedMedia</a></th>
+                        <td>
+                           <a href="http://schema.org/MediaObject">MediaObject</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: A media object that encodes this CreativeWork. This property is a synonym for encoding.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/audience">audience</a></th>
+                        <td>
+                           <a href="http://schema.org/Audience">Audience</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/audio">audio</a></th>
+                        <td>
+                           <a href="http://schema.org/AudioObject">AudioObject</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: An embedded audio object.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/author">author</a></th>
+                        <td>
+                           <a href="http://schema.org/Organization">Organization</a><br />
+                           <a href="http://schema.org/Person">Person</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/award">award</a></th>
+                        <td>
+                           <a href="http://schema.org/Text">Text</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: An award won by or for this item. Supersedes awards.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/character">character</a></th>
+                        <td>
+                           <a href="http://schema.org/Person">Person</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: Fictional person connected with a creative work.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/citation">citation</a></th>
+                        <td>
+                           <a href="http://schema.org/CreativeWork">CreativeWork</a><br />
+                           <a href="http://schema.org/Text">Text</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/comment">comment</a></th>
+                        <td>
+                           <a href="http://schema.org/Comment">Comment</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: Comments, typically from users.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/commentCount">commentCount</a></th>
+                        <td>
+                           <a href="http://schema.org/Integer">Integer</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/contentLocation">contentLocation</a></th>
+                        <td>
+                           <a href="http://schema.org/Place">Place</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: The location depicted or described in the content. For example, the location in a photograph or painting.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/contentRating">contentRating</a></th>
+                        <td>
+                           <a href="http://schema.org/Text">Text</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: Official rating of a piece of content—for example,'MPAA PG-13'.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a style="color: #0000CC;" href="http://pending.schema.org/contentReferenceTime">contentReferenceTime</a></th>
+                        <td>
+                           <a href="http://schema.org/DateTime">DateTime</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: The specific time described by a creative work, for works (e.g. articles, video objects etc.) that emphasise a particular moment within an Event.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/contributor">contributor</a></th>
+                        <td>
+                           <a href="http://schema.org/Organization">Organization</a><br /><a href="http://schema.org/Person">Person</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: A secondary contributor to the CreativeWork or Event.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/copyrightHolder">copyrightHolder</a></th>
+                        <td>
+                           <a href="http://schema.org/Organization">Organization</a><br /><a href="http://schema.org/Person">Person</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: The party holding the legal copyright to the CreativeWork.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/copyrightYear">copyrightYear</a></th>
+                        <td>
+                           <a href="http://schema.org/Number">Number</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: The year during which the claimed copyright for the CreativeWork was first asserted.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/creator">creator</a></th>
+                        <td>
+                           <a href="http://schema.org/Number">Organization</a><br /><a href="http://schema.org/Person">Person</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/dateCreated">dateCreated</a></th>
+                        <td>
+                           <a href="http://schema.org/Date">Date</a><br />
+                           <a href="http://schema.org/DateTime">DateTime</a>
+                        </td>
+                        <td><strong>Schema</strong>: The date on which the CreativeWork was created or the item was added to a DataFeed.</td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/dateModified">dateModified</a></th>
+                        <td>
+                           <a href="http://schema.org/Date">Date</a><br />
+                           <a href="http://schema.org/DateTime">DateTime</a>
+                        </td>
+                        <td><strong>Schema</strong>: The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.</td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/datePublished">datePublished</a></th>
+                        <td>
+                           <a href="http://schema.org/Date">Date</a>
+                        </td>
+                        <td><strong>Schema</strong>: Date of first broadcast/publication.</td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/discussionUrl">discussionUrl</a></th>
+                        <td>
+                           <a href="http://schema.org/URL">URL</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: A link to the page containing the comments of the CreativeWork.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/editor">editor</a></th>
+                        <td>
+                           <a href="http://schema.org/Person">Person</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: Specifies the Person who edited the CreativeWork.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/educationalAlignment">educationalAlignment</a></th>
+                        <td>
+                           <a href="http://schema.org/AlignmentObject">AlignmentObject</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: An alignment to an established educational framework.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/educationalUse">educationalUse</a></th>
+                        <td>
+                           <a href="http://schema.org/Text">Text</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: The purpose of a work in the context of education; for example, 'assignment', 'group work'.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/encoding">encoding</a></th>
+                        <td>
+                           <a href="http://schema.org/MediaObject">MediaObject</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: A media object that encodes this CreativeWork. This property is a synonym for associatedMedia. Supersedes encodings.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/exampleOfWork">exampleOfWork</a></th>
+                        <td>
+                           <a href="http://schema.org/CreativeWork">CreativeWork</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: A creative work that this work is an example/instance/realization/derivation of. <em>Inverse property: <a href="http://schema.org/workExample">workExample</a>.</em>
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/expires">expires</a></th>
+                        <td>
+                           <a href="http://schema.org/Date">Date</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: Date the content expires and is no longer useful or available. For example a <a href="http://schema.org/VideoObject">VideoObject</a> or <a href="http://schema.org/NewsArticle">NewsArticle</a> whose availability or relevance is time-limited, or a <a href="http://schema.org/ClaimReview">ClaimReview</a> fact check whose publisher wants to indicate that it may no longer be relevant (or helpful to highlight) after some date.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/fileFormat">fileFormat</a></th>
+                        <td>
+                           <a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: Media type, typically MIME format (see <a href="http://www.iana.org/assignments/media-types/media-types.xhtml">IANA site</a>) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/funder">funder</a></th>
+                        <td>
+                           <a href="http://schema.org/Organization">Organization</a><br /><a href="http://schema.org/Person">Person</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: A person or organization that supports (sponsors) something through some kind of financial contribution.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/genre">genre</a></th>
+                        <td>
+                           <a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: Genre of the creative work, broadcast channel or group.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/hasPart">hasPart</a></th>
+                        <td>
+                           <a href="http://schema.org/CreativeWork">CreativeWork</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: Indicates a CreativeWork that is (in some sense) a part of this CreativeWork. <em>Inverse property: <a href="http://schema.org/isPartOf">isPartOf</a>.</em>
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/headline">headline</a></th>
+                        <td>
+                           <a href="http://schema.org/Text">Text</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: Headline of the article.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/inLanguage">inLanguage</a></th>
+                        <td>
+                           <a href="http://schema.org/Language">Language</a><br /><a href="http://schema.org/Text">Text</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: The language of the content or performance or used in an action. Please use one of the language codes from the <a href="http://tools.ietf.org/html/bcp47">IETF BCP 47 standard</a>. See also <a href="http://schema.org/availableLanguage">availableLanguage</a>. Supersedes language.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/interactionStatistic">interactionStatistic</a></th>
+                        <td>
+                           <a href="http://schema.org/InteractionCounter">InteractionCounter</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used. Supersedes interactionCount.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/interactivityType">interactivityType</a></th>
+                        <td>
+                           <a href="http://schema.org/Text">Text</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: The predominant mode of learning supported by the learning resource. Acceptable values are 'active', 'expositive', or 'mixed'.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/isAccessibleForFree">isAccessibleForFree</a></th>
+                        <td>
+                           <a href="http://schema.org/Boolean">Boolean</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: A flag to signal that the item, event, or place is accessible for free. Supersedes free.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/isBasedOn">isBasedOn</a></th>
+                        <td>
+                           <a href="http://schema.org/CreativeWork">CreativeWork</a><br /><a href="http://schema.org/Product">Product</a><br /><a href="http://schema.org/URL">URL</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. <em>Supersedes isBasedOnUrl</em>.<br />
+                          <strong>Bioschemas</strong>: Whenever possible use <a href="http://www.ebi.ac.uk/ols/ontologies/eco">Evidence Codes (ECO)</a>.</td>
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/isFamilyFriendly">isFamilyFriendly</a></th>
+                        <td>
+                           <a href="http://schema.org/Boolean">Boolean</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: Indicates whether this content is family friendly.
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/isPartOf">isPartOf</a></th>
+                        <td>
+                           <a href="http://schema.org/CreativeWork">CreativeWork</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: Indicates a CreativeWork that this CreativeWork is (in some sense) part of. <em>Inverse property: <a href="http://schema.org/hasPart">hasPart</a>.</em>
+                        </td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/keywords">keywords</a></th>
+                        <td>
+                           <a href="http://schema.org/Text">Text</a>
+                        </td>
+                        <td><strong>Schema</strong>: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.</td>
+                      </tr>
+                      <tr>
+                         <th><a href="http://schema.org/learningResourceType">learningResourceType</a></th>
+                         <td>
+                            <a href="http://schema.org/Text">Text</a>
+                         </td>
+                         <td>
+                           <strong>Schema</strong>: The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.
+                         </td>
+                      </tr>
+                      <tr>
+                         <th><a href="http://schema.org/license">license</a></th>
+                         <td>
+                            <a href="http://schema.org/CreativeWork">CreativeWork</a><br /><a href="http://schema.org/URL">URL</a>
+                         </td>
+                         <td>
+                           <strong>Schema</strong>: A license document that applies to this content, typically indicated by URL.
+                         </td>
+                      </tr>
+                      <tr>
+                         <th><a href="http://schema.org/locationCreated">locationCreated</a></th>
+                         <td>
+                            <a href="http://schema.org/Place">Place</a>
+                         </td>
+                         <td>
+                           <strong>Schema</strong>: The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork.
+                         </td>
+                      </tr>
+                      <tr>
+                         <th><a href="http://schema.org/mainEntity">mainEntity</a></th>
+                         <td>
+                           <a href="http://schema.org/Thing">Thing</a>
+                         </td>
+                         <td>
+                           <strong>Schema</strong>: Indicates the primary entity described in some page or other CreativeWork. <em>Inverse-property: <a href="http:schema.org/mainEntityOfPage">mainEntityOfPage</a>.</em><br />
+                           <strong>Bioschemas</strong>: Bioschemas usage.  Link to the BioChemEntity represented by this record.
+                         </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/material">material</a></th>
+                          <td>
+                             <a href="http://schema.org/Product">Product</a><br /><a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: A material that something is made from, e.g. leather, wool, cotton, paper.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/mentions">mentions</a></th>
+                          <td>
+                             <a href="http://schema.org/Thing">Thing</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/offers">offers</a></th>
+                          <td>
+                             <a href="http://schema.org/Offer">Offer</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: An offer to provide this item—for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/position">position</a></th>
+                          <td>
+                             <a href="http://schema.org/Integer">Integer</a><br /><a href="http://schema.org/Text">Text</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The position of an item in a series or sequence of items.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/producer">producer</a></th>
+                          <td>
+                             <a href="http://schema.org/Organization">Organization</a><br /><a href="http://schema.org/Person">Person</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.).
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/provider">provider</a></th>
+                          <td>
+                             <a href="http://schema.org/Organization">Organization</a><br /><a href="http://schema.org/Person">Person</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/publication">publication</a></th>
+                          <td>
+                             <a href="http://schema.org/PublicationEvent">PublicationEvent</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: A publication event associated with the item.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/publication">publisher</a></th>
+                          <td>
+                             <a href="http://schema.org/Organization">Organization</a><br /><a href="http://schema.org/Person">Person</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The publisher of the creative work.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a class="pending" href="http://schema.org/publisherImprint">publisherImprint</a></th>
+                          <td>
+                             <a href="http://schema.org/Organization">Organization</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The publishing division which published the comic.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/publishingPrinciples">publishingPrinciples</a></th>
+                          <td>
+                             <a href="http://schema.org/CreativeWork">CreativeWork</a><br /><a href="http://schema.org/URL">URL</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The publishingPrinciples property indicates (typically via URL) a document describing the editorial principles of an <a href="http://schema.org/Organization">Organization</a> (or individual e.g. a <a href="http://schema.org/Person">Person</a> writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a <a href="http://schema.org/CreativeWork">CreativeWork</a> (e.g. <a href="http://schema.org/NewsArticle">NewsArticle</a>) the principles are those of the party primarily responsible for the creation of the <a href="http://schema.org/CreativeWork">CreativeWork</a>. <br />While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a <a href="http://schema.org/funder">funder</a>) can be expressed using schema.org terminology.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/recordedAt">recordedAt</a></th>
+                          <td>
+                             <a href="http://schema.org/Event">Event</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The Event where the CreativeWork was recorded. The CreativeWork may capture all or part of the event. <em>Inverse property: <a href="http://schema.org/recordedIn">recordedIn</a>.</em>
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/releasedEvent">releasedEvent</a></th>
+                          <td>
+                             <a href="http://schema.org/PublicationEvent">PublicationEvent</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The place and time the release was issued, expressed as a PublicationEvent.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/review">review</a></th>
+                          <td>
+                             <a href="http://schema.org/Review">Review</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: A review of the item. Supersedes reviews.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/schemaVersion">schemaVersion</a></th>
+                          <td>
+                             <a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: Indicates (by URL or string) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using an URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/sourceOrganization">sourceOrganization</a></th>
+                          <td>
+                             <a href="http://schema.org/Organization">Organization</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The Organization on whose behalf the creator was working.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/spatialCoverage">spatialCoverage</a></th>
+                          <td>
+                             <a href="http://schema.org/Place">Place</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The spatialCoverage of a CreativeWork indicates the place(s) which are the focus of the content. It is a subproperty of contentLocation intended primarily for more technical and detailed materials. For example with a Dataset, it indicates areas that the dataset describes: a dataset of New York weather would have spatialCoverage which was the place: the state of New York. Supersedes spatial.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/sponsor">sponsor</a></th>
+                          <td>
+                             <a href="http://schema.org/Organization">Organization</a><br /><a href="http://schema.org/Person">Person</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/temporalCoverage">temporalCoverage</a></th>
+                          <td>
+                             <a href="http://schema.org/DateTime">DateTime</a><br /><a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in <a href="https://en.wikipedia.org/wiki/ISO_8601#Time_intervals">ISO 8601 time interval format</a>. In the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written "2011/2012"). Other forms of content e.g. ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their temporalCoverage in broader terms - textually or via well-known URL. Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via "1939/1945". Supersedes datasetTimeInterval, temporal.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/text">text</a></th>
+                          <td>
+                             <a href="http://schema.org/Text">Text</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The textual content of this CreativeWork.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/thumbnailUrl">thumbnailUrl</a></th>
+                          <td>
+                             <a href="http://schema.org/URL">URL</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: A thumbnail image relevant to the Thing.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/timeRequired">timeRequired</a></th>
+                          <td>
+                             <a href="http://schema.org/Duration">Duration</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a style="color: #0000CC;"  href="http://pending.schema.org/translationOfWork">translationOfWork</a></th>
+                          <td>
+                             <a href="http://schema.org/CreativeWork">CreativeWork</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The work that this work has been translated from. e.g. 物种起源 is a translationOf “On the Origin of Species”. <em>Inverse property: <a style="color: #0000CC;"  href="http://pending.schema.org/workTranslation">workTranslation</a>.</em>
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/translator">translator</a></th>
+                          <td>
+                             <a href="http://schema.org/Organization">Organization</a><br /><a href="http://schema.org/Person">Person</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/typicalAgeRange">typicalAgeRange</a></th>
+                          <td>
+                             <a href="http://schema.org/Text">Text</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The typical expected age range, e.g. '7-9', '11-'.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/version">version</a></th>
+                          <td>
+                             <a href="http://schema.org/Number">Number</a><br /><a href="http://schema.org/Text">Text</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: The version of the CreativeWork embodied by a specified resource.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/video">video</a></th>
+                          <td>
+                             <a href="http://schema.org/VideoObject">VideoObject</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: An embedded video object.
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a href="http://schema.org/workExample">workExample</a></th>
+                          <td>
+                             <a href="http://schema.org/CreativeWork">CreativeWork</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: Example/instance/realization/derivation of the concept of this creative work. eg. The paperback edition, first edition, or eBook. <em>Inverse property: <a href="http://schema.org/exampleOfWork">exampleOfWork</a>.</em>
+                          </td>
+                       </tr>
+                       <tr>
+                          <th><a style="color: #0000CC;"  href="http://pending.schema.org/workTranslation">workTranslation</a></th>
+                          <td>
+                             <a href="http://schema.org/CreativeWork">CreativeWork</a>
+                          </td>
+                          <td>
+                            <strong>Schema</strong>: A work that is a translation of the content of this work. e.g. 西遊記 has an English workTranslation “Journey to the West”,a German workTranslation “Monkeys Pilgerfahrt” and a Vietnamese translation Tây du ký bình khảo.
+                            <em>Inverse property: <a style="color: #0000CC;"  href="http://pending.schema.org/translationOfWork">translationOfWork</a>.</em>
+                          </td>
+                       </tr>
+<!-- Thing -->
+                     <tr class="reu_props_sdo">
+                        <td colspan="3">Properties from <a href="http://schema.org/Thing">Thing</a></td>
+                     </tr>
+                     <tr>
+                        <th><a href="http://schema.org/additionalType">additionalType</a></th>
+                        <td>
+                           <a href="http://schema.org/URL">URL</a>
+                        </td>
+                        <td>
+                          <strong>Schema</strong>: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between
+                          something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker
+                          understanding of extra types, in particular those defined externally.<br />
+                          <strong>Bioschemas</strong>: Although not required, additionalType can be used to specify the nature of the record. For instance, a UniProt protein record would
+                          have <a style="color: #454547;" href="http://purl.uniprot.org/core/Protein">UP:Protein</a> as type.
+                        </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/alternateName">alternateName</a></th>
+                       <td>
+                         <a href="http://schema.org/Text">Text</a>
+                       </td>
+                       <td>
+                         <strong>Schema</strong>: An alias for the item.
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/description">description</a></th>
+                       <td>
+                         <a href="http://schema.org/Text">Text</a>
+                       </td>
+                       <td>
+                         <strong>Schema</strong>: A descripton of the item.
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/disambiguatingDescription">disambiguatingDescription</a></th>
+                       <td>
+                         <a href="http://schema.org/Text">Text</a>
+                       </td>
+                       <td>
+                         <strong>Schema</strong>: A sub property of description. A short description of the item used to disambiguate from other, similar items.
+                         Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/identifier">identifier</a></th>
+                       <td>
+                         <a href="http://schema.org/PropertyValue">PropertyValue</a><br /><a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         <strong>Schema</strong>: The identifier property represents any kind of identifier for any kind of <a href="http://schema.org/Thing">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc.
+                         Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.
+                         See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/image">image</a></th>
+                       <td>
+                         <a href="http://schema.org/ImageObject">ImageObject</a><br /><a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         <strong>Schema</strong>: An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
+                       <td>
+                         <a href="http://schema.org/CreativeWork">CreativeWork</a><br /><a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         <strong>Schema</strong>: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See
+                         <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br />
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/name">name</a></th>
+                       <td>
+                         <a href="http://schema.org/Text">Text</a>
+                       </td>
+                       <td>
+                         <strong>Schema</strong>: The name of the item.
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/potentialAction">potentialAction</a></th>
+                       <td>
+                         <a href="http://schema.org/Action">Action</a>
+                       </td>
+                       <td>
+                         <strong>Schema</strong>: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/sameAs">sameAs</a></th>
+                       <td>
+                         <a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         <strong>Schema</strong>: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a style="color: #0000CC;" href="http://pending.schema.org/subjectOf">subjectOf</a></th>
+                       <td>
+                         <a href="http://schema.org/CreativeWork">CreativeWork</a><br /><a href="http://schema.org/Event">Event</a>
+                       </td>
+                       <td>
+                         <strong>Schema</strong>: A CreativeWork or Event about this Thing. <em>Inverse property: <a href="http://schema.org/about">about</a>.</em>
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a href="http://schema.org/url">url</a></th>
+                       <td>
+                         <a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         <strong>Schema</strong>: URL of the item.
+                       </td>
+                     </tr>
+                   </tbody>
+                 </table>
+               </section>
+             </div>
+           </div>
+      </div>
+      {% include footer.html %}
+      
+      
+      
+   </body>
+</html>

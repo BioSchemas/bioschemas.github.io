@@ -1,7 +1,7 @@
 ---
 name: DataRecord
 
-status: release
+status: revision
 spec_type: Profile
 group: data
 use_cases_url: /useCases/Datasets
@@ -23,7 +23,7 @@ spec_info:
     be seen as the minimum compact, complete and auto-descriptive unit in a dataset,
     i.e., a record. Bioschemas usage In Life Sciences, records will represent a BioChemEntity.
   version: "0.1"
-  version_date: 20180225T000000
+  version_date: 20180425T170205
   official_type: ""
   full_example: https://github.com/BioSchemas/specifications/tree/master/DataRecord/examples/
 mapping:
@@ -181,7 +181,7 @@ mapping:
   - URL
   description: ""
   type: bioschemas
-  type_url: http://bioschemas.org/devSpecs/DataRecord/#
+  type_url: http://bioschemas.org/devSpecs/DataRecord/
   bsc_description: 'A resource for which this resource is basis for. Inverse property:  [isBasedOn](http://schema.org/isBasedOn).'
   marginality: Optional
   cardinality: MANY
@@ -240,11 +240,11 @@ mapping:
   example: ""
 - property: seeAlso
   expected_types:
-  - Thing
+  - Thing 
   - URL
   description: ""
   type: bioschemas
-  type_url: http://bioschemas.org/devSpecs/DataRecord/#
+  type_url: http://bioschemas.org/devSpecs/DataRecord/
   bsc_description: A pointer to any (somehow related) Thing. To be used whenever you
     are not so sure about the nature of the relation. Otherwise, use more precise
     terms from pre-existing Controlled Vocabularies.
