@@ -15,7 +15,7 @@ folder: https://drive.google.com/open?id=0B7X2x2IPBve7R3Uza1d6MGpuYVE
 usecase: ''
 crosswalk: https://docs.google.com/spreadsheets/d/1h0-fgqnRe25-tVCmu2yWNQjthLzgkW4a1TVNMpCABlc/edit#gid=1261485211
 spec-versions: [#
-  [{"spec-num": "0.2", "spec-url": "/specifications/BioChemEntity/specification/"}]#,
+  [{"spec-num": "0.2", "spec-url": "/specifications/BioChemEntity"}]#,
 ]
 test: false
 adoption: false
