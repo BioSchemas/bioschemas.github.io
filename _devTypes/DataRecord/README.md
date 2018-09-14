@@ -13,8 +13,8 @@ Bioschemas usage
 
 In Life Sciences, records will represent a BioChemEntity. A link to the represented physical entity should be done via “represents” property.  
 # Links 
-- [Specification](http://bioschemas.org/bsc_specs/DataRecord/specification/)
-- [Specification source](specification.html)
+- [Specification](http://bioschemas.org/bsc_specs/DataRecord/)
+- [Specification source](../DataRecord.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1RVMRrhdkNKVSKEubMuvX3xxZ3_ohpHggJpINAVLsMuI/edit?usp=drivesdk)
 - [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/DataRecord/examples)
 - [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20DataRecord)
