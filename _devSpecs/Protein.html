@@ -1,4 +1,5 @@
 ---
+redirect_from: "devSpecs/Protein/specification"
 name: Protein
 status: revision
 spec_type: Profile
@@ -130,7 +131,7 @@ mapping:
   - bioschemas:ProteinAnnotation
   description: ""
   type: bioschemas
-  type_url: http://bioschemas.org/types/BioChemEntity/specification/#contains
+  type_url: http://bioschemas.org/types/BioChemEntity/#contains
   bsc_description: |-
     Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. _Inverse property: isContainedIn_.
 
@@ -295,14 +296,14 @@ mapping:
   - URL
   description: ""
   type: bioschemas
-  type_url: http://bioschemas.org/types/BioChemEntity/specification/#hasRepresentation
+  type_url: http://bioschemas.org/types/BioChemEntity/#hasRepresentation
   bsc_description: "A representation for this entity other than, for instance, an
     image (use image property for that) or the main web page/record (use mainEntityOfPage
     for that), and see [background notes](http://schema.org/docs/datamodel.html#mainEntityBackground),
     for sameAs and url). \n\n**Bioschemas Protein**: This property could be used,
     for instance, to register a sequence protein as it is a representation of the
     protein. If you want to better define the nature of the representation, use a
-    PropertyValue as described in [additionalProperty](http://bioschemas.org/devSpecs/Protein/specification/#additionalProperty)."
+    PropertyValue as described in [additionalProperty](http://bioschemas.org/devSpecs/Protein/#additionalProperty)."
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -401,7 +402,7 @@ mapping:
   - BioChemEntity
   description: ""
   type: bioschemas
-  type_url: http://bioschemas.org/types/BioChemEntity/specification/#isContainedIn
+  type_url: http://bioschemas.org/types/BioChemEntity/#isContainedIn
   bsc_description: "Indicates a BioChemEntity that this BioChemEntity is (in some
     sense) part of this BioChemEntity. _Inverse property: containedIn_ \n\n**Bioschemas
     Protein**: For proteins, it is recommended to at least specify the taxon/organism
@@ -479,7 +480,7 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: "Link via DataRecord to the main DataRecord representing this entity
-    in a dataset. \n\n**Bioschemas Protein**: Currently not in use; use the [mainEntity](http://bioschemas.org/types/DataRecord/specification/)
+    in a dataset. \n\n**Bioschemas Protein**: Currently not in use; use the [mainEntity](http://bioschemas.org/types/DataRecord/)
     property from DataRecord instead."
   marginality: Optional
   cardinality: MANY

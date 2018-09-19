@@ -9,8 +9,8 @@ Thing
 # Description 
  
 # Links 
-- [Specification](http://bioschemas.org/bsc_specs/ProteinAnnotation/specification/)
-- [Specification source](specification.html)
+- [Specification](http://bioschemas.org/bsc_specs/ProteinAnnotation/)
+- [Specification source](../ProteinAnnotation.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1I0_i-j3MHedhLD53RIugEOSJtfF9CIN4Nm1eqsaHmxg/edit?usp=drivesdk)
 - [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/ProteinAnnotation/examples)
 - [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20ProteinAnnotation)

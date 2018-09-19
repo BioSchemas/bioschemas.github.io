@@ -9,8 +9,8 @@ Thing
 # Description
 
 # Links
-- [Specification](http://bioschemas.org/bsc_specs/Chemical/specification/)
-- [Specification source](specification.html)
+- [Specification](http://bioschemas.org/bsc_specs/Chemical/)
+- [Specification source](../Chemical.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1929wjxexWAQGuXP8qn9dI7HTbRIjGhqjazSnuSJaj0U/edit?usp=drivesdk)
 - [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/Chemical/examples)
 - [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20Chemical)
