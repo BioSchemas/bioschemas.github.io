@@ -1,0 +1,190 @@
+{
+  "@context": {
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfa": "http://www.w3.org/ns/rdfa#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "bs": "http://bioschemas.org/specifications/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sio": "http://semanticscience.org/resource/SIO_",
+    "pr": "http://purl.obolibrary.org/obo/PR_",
+    "so": "http://purl.obolibrary.org/obo/so#",
+    "ro": "http://purl.obolibrary.org/obo/RO_"
+  },
+  "@graph": [
+    {
+      "@id": "bs:Protein",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "This Protein profile specification presents the BioChemEntity usage when describing a Protein.",
+      "rdfs:label": "Protein",
+      "rdfs:subClassOf": {
+        "@id": "schema:BioChemEntity"
+      },
+      "skos:closeMatch": {
+        "@id": "pr:000000001"
+      },
+      "schema:sameAs": {
+        "@id": "https://bioschemas.org/specifications/Protein"
+      }
+    }, {
+      "@id": "schema:identifier",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:PropertyValue"
+        }, {
+          "@id": "schema:Text"
+        }, {
+          "@id": "schema:URL"
+        }
+      ]
+    }, {
+      "@id": "schema:name",
+      "schema:domainIncludes": {
+        "@id": "schema:Text"
+      }
+    }, {
+      "@id": "schema:description",
+      "schema:domainIncludes": {
+        "@id": "schema:Text"
+      }
+    }, {
+      "@id": "schema:image",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:ImageObject"
+        }, {
+          "@id": "schema:URL"
+        }
+      ]
+    }, {
+      "@id": "schema:url",
+      "schema:domainIncludes": {
+        "@id": "schema:URL"
+      }
+    }, {
+      "@id": "schema:additionalProperty",
+      "schema:domainIncludes": {
+        "@id": "schema:PropertyValue"
+      }
+    }, {
+      "@id": "schema:additionalType",
+      "schema:domainIncludes": {
+        "@id": "schema:URL"
+      }
+    }, {
+      "@id": "schema:alternateName",
+      "schema:domainIncludes": {
+        "@id": "schema:Text"
+      }
+    }, {
+      "@id": "schema:categoryCode",
+      "schema:domainIncludes": {
+        "@id": "schema:CategoryCode"
+      }
+    }, {
+      "@id": "schema:location",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Place"
+        }, {
+          "@id": "schema:PostalAddress"
+        }, {
+          "@id": "schema:PropertyValue"
+        }, {
+          "@id": "schema:Text"
+        }, {
+          "@id": "schema:URL"
+        }
+      ]
+    }, {
+      "@id": "schema:mainEntityOfPage",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:CreativeWork"
+        }, {
+          "@id": "schema:URL"
+        }
+      ]
+    }, {
+      "@id": "schema:sameAs",
+      "schema:domainIncludes": {
+        "@id": "schema:URL"
+      }
+    }, {
+      "@id": "schema:isContainedIn",
+      "schema:domainIncludes": {
+        "@id": "schema:BioChemEntity"
+      }
+    }, {
+      "@id": "schema:contains",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:BioChemEntity"
+        }, {
+          "@id": "bs:ProteinAnnotation"
+        }
+      ]
+    }, {
+      "@id": "schema:hasRepresentation",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:PropertyValue"
+        }, {
+          "@id": "Text"
+        }, {
+          "@id": "schema:URL"
+        }
+      ]
+    }, {
+      "@id": "bs:isTranslatedFrom",
+      "skos:closeMatch": {
+        "@id": "sio:010083"
+      },
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:BioChemEntity"
+        }, {
+          "@id": "bs:Gene"
+        }
+      ]
+    }, {
+      "@id": "bs:associatedWith",
+      "skos:closeMatch": {
+        "@id": "so:associated_with"
+      },
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:BioChemEntity"
+        }, {
+          "@id": "bs:Gene"
+        }
+      ]
+    }, {
+      "@id": "bs:enables",
+      "skos:closeMatch": {
+        "@id": "ro:0002327"
+      },
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:CategoryCode"
+        }, {
+          "@id": "schema:PropertyValue"
+        }
+      ]
+    }, {
+      "@id": "bs:involvedIn",
+      "skos:closeMatch": {
+        "@id": "ro:0002331"
+      },
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:CategoryCode"
+        }, {
+          "@id": "schema:PropertyValue"
+        }
+      ]
+    }
+  ]
+}
