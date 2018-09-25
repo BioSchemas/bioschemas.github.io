@@ -43,10 +43,10 @@
                   <h5>Specifications</h5>
                   <ul>
                      {% for spec in page.specifications %}
-                     <li><a href="/specifications/{{spec}}/specification/">{{spec}}</a></li>
+                     <li><a href="/specifications/{{spec}}">{{spec}}</a></li>
                      {% endfor %}
                      {% for spec in page.types %}
-                     <li><a href="/types/{{spec}}/specification/">{{spec}}</a></li>
+                     <li><a href="/types/{{spec}}">{{spec}}</a></li>
                      {% endfor %}
                   </ul>
                   {% endif %}
@@ -55,10 +55,10 @@
                   <h5>Draft specifications</h5>
                   <ul>
                      {% for spec in page.draft_specifications %}
-                     <li><a href="/devSpecs/{{spec}}/specification/">{{spec}}</a></li>
+                     <li><a href="/devSpecs/{{spec}}/">{{spec}}</a></li>
                      {% endfor %}
                      {% for spec in page.draft_types %}
-                     <li><a href="/devTypes/{{spec}}/specification/">{{spec}}</a></li>
+                     <li><a href="/devTypes/{{spec}}/">{{spec}}</a></li>
                      {% endfor %}
                   </ul>
                   {% endif %}

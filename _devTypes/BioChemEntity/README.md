@@ -13,8 +13,8 @@ Bioschemas usage
 
 A BioChemEntity is a flexible and extensible wrapper for Life Sciences entities. Representations of physical entities in Life Sciences are usually recorded in datasets; the link to a dataset should be done via properties. A particular Life Sciences entity, refer to as a profile in Bioschemas, will customize BioChemEntity by modifying the marginality, cardinality and ontologies used. For instance, a protein profile would recommend pointing to an organism a part of the minimum information, but not necessarily to a sample or disease. 
 # Links 
-- [Specification](http://bioschemas.org/bsc_specs/BioChemEntity/specification/)
-- [Specification source](specification.html)
+- [Specification](http://bioschemas.org/bsc_specs/BioChemEntity/)
+- [Specification source](../BioChemEntity.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1JUIPcHl4nx3XmYTmgFs8QWVg2y0omR5baH7PzPISBx4/edit?usp=drivesdk)
 - [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/BioChemEntity/examples)
 - [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20BioChemEntity)

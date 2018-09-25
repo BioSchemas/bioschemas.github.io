@@ -11,8 +11,8 @@ This document covers the schema.org and bioschemas.org properties necessary to d
 Note that this draft will be improved progressively through the bioschemas process.
  
 # Links 
-- [Specification](http://bioschemas.org/bsc_specs/DataCatalog/specification/)
-- [Specification source](specification.html)
+- [Specification](http://bioschemas.org/bsc_specs/DataCatalog/)
+- [Specification source](../DataCatalog.html)
 - [Mapping Spreadsheet](https://docs.google.com/spreadsheets/d/1rhbo4T3FAXUUh5cUVUTX3h7T--YRTYqTjYodot3sG9M/edit?usp=drivesdk)
 - [Coding Examples](https://github.com/BioSchemas/specifications/tree/master/DataCatalog/examples)
 - [GitHUb Issues](https://github.com/BioSchemas/bioschemas/labels/type%3A%20DataCatalog)

@@ -85,7 +85,7 @@
    <br />
    {%for branch_name in page.hierarchy %}
    {% if branch_name == "BioChemEntity" or branch_name == "DataRecord" or branch_name == "LabProtocol"  %}
-   <a href="/devTypes/{{branch_name}}/specification/">{{branch_name}}</a>
+   <a href="/devTypes/{{branch_name}}/">{{branch_name}}</a>
    {% else %}
    <a href="http://schema.org/{{branch_name}}">{{branch_name}}</a>
    {% endif %}
@@ -178,9 +178,9 @@
    <br />
    {% if page.name != 'Organization' and page.name != 'Person' and page.name != 'Chemical' and page.name != 'ChemicalStructure' and page.name != 'Course' and page.name != 'Standard' %}
    {% if page.status == 'release' %}
-   <p>You can read the <a href="/devSpecs/{{page.name}}/specification/">draft version of this specification here</a>.</p>
+   <p>You can read the <a href="/devSpecs/{{page.name}}/">draft version of this specification here</a>.</p>
    {% elsif page.status == 'revision' %}
-   <p>You can read the <a href="/specifications/{{page.name}}/specification/">release version of this specification here</a>.</p>
+   <p>You can read the <a href="/specifications/{{page.name}}">release version of this specification here</a>.</p>
    {% endif %}
    {% endif %}
 </section>
