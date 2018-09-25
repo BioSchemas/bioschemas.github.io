@@ -23,7 +23,7 @@ spec_info:
     scientific name, authority, taxonomic rank and vernacular names. It is also a
     means to link to existing taxonomic registers where each taxon has a URI.
   version: 0.1-draft
-  version_date: 20180913T161705
+  version_date: 20180925T134042
   official_type: http://rs.tdwg.org/dwc/terms/Taxon
   full_example: ../examples/
 mapping:
@@ -85,13 +85,11 @@ mapping:
   controlled_vocab: ""
   example: |-
     {
-        "name": "Delphinapterus leucas",
-        "dwc:scientificName": "Delphinapterus leucas (Pallas, 1776)",
-        "dwc:scientificNameAuthorship": "(Pallas, 1776)"
+        "name": "Delphinapterus leucas"
     }
 - property: rank
   expected_types:
-  - Text
+  - URL
   description: ""
   type: external
   type_url: http://rs.tdwg.org/ontology/voc/TaxonConcept#rank
@@ -99,7 +97,7 @@ mapping:
     vocabulary, typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata
     URIs
   marginality: Recommended
-  cardinality: ONE
+  cardinality: MANY
   controlled_vocab: ""
   example: |-
     {
@@ -141,9 +139,7 @@ mapping:
   controlled_vocab: ""
   example: |-
     {
-        "name": "Delphinapterus leucas",
-        "dwc:scientificName": "Delphinapterus leucas (Pallas, 1776)",
-        "dwc:scientificNameAuthorship": "(Pallas, 1776)"
+        "dwc:scientificName": "Delphinapterus leucas (Pallas, 1776)"
     }
 - property: scientificNameAuthorship
   expected_types:
@@ -159,8 +155,6 @@ mapping:
   controlled_vocab: ""
   example: |-
     {
-        "name": "Delphinapterus leucas",
-        "dwc:scientificName": "Delphinapterus leucas (Pallas, 1776)",
         "dwc:scientificNameAuthorship": "(Pallas, 1776)"
     }
 - property: taxonRank
