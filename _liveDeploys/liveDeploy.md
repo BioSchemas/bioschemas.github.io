@@ -391,5 +391,14 @@ list:
     schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.1
-    comments:           
+    comments:    
+-
+    name: Reactome
+    highlight:
+    example_URL: https://reactome.org/content/detail/R-HSA-449147
+    resource_URL: https://reactome.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:  
 ---
