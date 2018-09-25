@@ -4,7 +4,7 @@ name: Course
 
 status: revision
 spec_type: Profile
-group: trainingmaterials
+group: training
 use_cases_url: ''
 cross_walk_url: https://docs.google.com/spreadsheets/d/1cQ6mDbsG_cMX2EDAN8xH6-9yMRba8-rErlPeP8HTs8A
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Course
@@ -25,7 +25,7 @@ spec_info:
     - whereas a course instance is about the specific times and location of when that
     course is held. '
   version: 0.1-draft
-  version_date: 20180425T144349
+  version_date: 20180925T101652
   official_type: ""
   full_example: ""
 mapping:
@@ -33,14 +33,15 @@ mapping:
   expected_types:
   - Audience
   description: An intended audience, i.e. a group for whom something was created.
-    Supersedes [serviceAudience](http://schema.org/serviceAudience).
+    Supersedes serviceAudience.
   type: ""
   type_url: ""
   bsc_description: ""
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: "\"audience\": {\n  \"@type\": \"Audience\",\n  \"audienceType\": \"PhD
+    students\" \n}"
 - property: author
   expected_types:
   - Organization
@@ -52,36 +53,41 @@ mapping:
   type_url: ""
   bsc_description: ""
   marginality: Optional
-  cardinality: MANY
+  cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "author": [{
+      "@type": "Person",
+      "name": "Frank Sidebottom"
+    }]
 - property: courseCode
   expected_types:
   - Text
-  description: The identifier for the [Course](http://schema.org/Course) used by the
-    course [provider](http://schema.org/provider) (e.g. CS101 or 6.001).
+  description: The identifier for the Course used by the course provider (e.g. CS101
+    or 6.001).
   type: ""
   type_url: ""
   bsc_description: About this course.
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"courseCode": "CS101"'
 - property: coursePrerequisites
   expected_types:
   - AlignmentObject
   - Course
   - Text
-  description: Requirements for taking the [Course](http://schema.org/Course). May
-    be completion of another Course or a textual description like "permission of instructor".
-    Requirements may be a pre-requisite competency, referenced using [AlignmentObject](http://schema.org/AlignmentObject).
+  description: Requirements for taking the Course. May be completion of another Course
+    or a textual description like "permission of instructor". Requirements may be
+    a pre-requisite competency, referenced using AlignmentObject.
   type: ""
   type_url: ""
   bsc_description: Pre-requisite requirments before you can take this course.
-  marginality: Minimum
+  marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: '"coursePrerequisites": "You must first compelete the Foundation CS course;
+    FCS500"'
 - property: description
   expected_types:
   - Text
@@ -92,7 +98,8 @@ mapping:
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"This is a course ran at an institution. It''s ran periodically - specific
+    courses can be found through CourseInstances"'
 - property: hasCourseInstance
   expected_types:
   - CourseInstance
@@ -101,37 +108,54 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: ""
-  marginality: Optional
+  marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: "\"hasCourseInstance\": [\n{\n  \"@type\": \"CourseInstance\",\n  \"instructor\":
+    [{\n    \"@type\": \"Person\",\n    \"name\": \"Frank Sidebottom\"\n  },{ \n    \"@type\":
+    \"Person\",\n    \"name\": \"Dennis Ménaçe\"\n  }],\n  \"courseMode\": \"online\",\n
+    \ \"doorTime\": \"2019-02-04T11:00:00\",\n  \"duration\": \"P1DT6H\",\n  \"endTime\":
+    \"2019-02-05T17:00:00\",\n  \"eventStatus\": \"Rescheduled\",\n  \"funder\":  [{\n
+    \   \"@type\": \"Person\",\n    \"name\": \"Elizabeth Windsor\"\n  },{ \n    \"@type\":
+    \"Organization\",\n    \"name\": \"University of Manchester\"\n  }],\n  \"image\":
+    \"https://image.server.com/my-image.jpg\",\n  \"location\": {\n      \"@type\":
+    \"Place\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\":
+    \"1.17, Kilburn Building, University of Manchester\",\n        \"addressLocality\":
+    \"Manchester\",\n        \"addressRegion\": \"Greater Manchester\",\n        \"addressCountry\":
+    \"United Kingdom\",\n        \"postalCode\": \"M13 9PL\"\n      }\n  },\n  \"maximumAttendeeCapacity\":
+    35,\n  \"name\": \"Training Workshop\",\n  \"offers\":     {\n        \"@type\":
+    \"Offer\",\n        \"price\": \"100.00\",\n        \"priceCurrency\": \"GBP\",\n
+    \       \"url\": \"http://www.eventbrite.com/my-workshop\"\n  },\n  \"startDate\":
+    \"2019-02-04T09:00:00\",\n  \"subEvent\": [{\n        \"@type\": \"Event\",\n
+    \       \"name\": \"Satellite workshop\",\n        \"url\": \"https://my-training.com/SGM\",\n
+    \       \"description\": \"This is a satellite meeting being held during the workshop.\"\n
+    \ }],\n  \"url\": \"http://my-training.com\"\n}\n]"
 - property: image
   expected_types:
   - ImageObject
   - URL
-  description: An image of the item. This can be a URL or a fully described [ImageObject](http://schema.org/ImageObject).
+  description: An image of the item. This can be a URL or a fully described ImageObject.
   type: ""
   type_url: ""
   bsc_description: ""
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"image": "https://image.server.com/my-image.jpg"'
 - property: inLanguage
   expected_types:
   - Language
   - Text
   description: The language of the content or performance or used in an action. Please
-    use one of the language codes from the [IETF BCP 47](https://tools.ietf.org/html/bcp47)
-    standard. See also [availableLanguage](http://schema.org/availableLanguage). Supersedes
-    language.
+    use one of the language codes from the IETF BCP 47 standard. See also availableLanguage.
+    Supersedes language.
   type: ""
   type_url: ""
   bsc_description: ""
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"inLanguage": "English"'
 - property: keywords
   expected_types:
   - Text
@@ -144,14 +168,14 @@ mapping:
   marginality: Minimum
   cardinality: MANY
   controlled_vocab: '[EDAM](http://edamontology.org/page)'
-  example: ""
+  example: '"keywords": ["edam:1902"]'
 - property: name
   expected_types:
   - Text
   description: The name of the item.
   type: ""
   type_url: ""
-  bsc_description: Title of the course
+  bsc_description: ""
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
@@ -168,7 +192,8 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: "\"producer\":  [{\n  \"@type\": \"Person\",\n  \"name\": \"Elizabeth Windsor\"\n},{
+    \n  \"@type\": \"Organization\",\n  \"name\": \"University of Manchester\"\n}]"
 - property: provider
   expected_types:
   - Organization
@@ -182,20 +207,8 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
-- property: rdf:type
-  expected_types:
-  - URL
-  description: This is used by validation tools to indentify the profile used. You
-    must use the value specified in the Controlled Vocabulary column.
-  type: external
-  type_url: https://www.w3.org/1999/02/22-rdf-syntax-ns#type
-  bsc_description: This is used by validation tools to indentify the profile used.
-    You must use the value specified in the Controlled Vocabulary column.
-  marginality: Minimum
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
+  example: "\"provider\":  [{\n  \"@type\": \"Person\",\n  \"name\": \"Elizabeth Windsor\"\n},{
+    \n  \"@type\": \"Organization\",\n  \"name\": \"University of Manchester\"\n}]"
 - property: sponsor
   expected_types:
   - Organization
@@ -209,7 +222,8 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: "\"sponsor\":  [{\n  \"@type\": \"Person\",\n  \"name\": \"Elizabeth Windsor\"\n},{
+    \n  \"@type\": \"Organization\",\n  \"name\": \"University of Manchester\"\n}]"
 - property: thumbnailUrl
   expected_types:
   - URL
@@ -220,19 +234,18 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"thumbnailUrl": "https://image.server.com/my-image.jpg"'
 - property: url
   expected_types:
   - URL
   description: URL of the item.
   type: ""
   type_url: ""
-  bsc_description: URL fo the course page.
+  bsc_description: ""
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
-
+  example: '"image": "https://image.server.com/my-image.jpg"'
 ---
 <!DOCTYPE HTML>
 <html>
