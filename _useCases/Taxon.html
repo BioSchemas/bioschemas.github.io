@@ -1,0 +1,60 @@
+---
+name: Taxon
+group: biodiversity
+collection: useCases
+active: true
+---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                 <h1>Use Cases for {{page.name}}</h1>
+                 {% assign group = site.groups | where:"identifier", page.group %}
+                 {% for g in group %}
+                 <p>The following use cases were developed by the <a href="{{g.url}}">{{ g.name }}</a> group.
+                 {% endfor %}
+
+                 <h3>Findability</h3>
+                 <p>As an user, I would like to search information about a taxon (typically a species) using several entry points:</p>
+                 <ul>
+                   <li>Its accepted scientific name, e.g. Delphinapterus leucas, possibly including author name and publication date</li>
+                   <li>One of its synonym names, e.g. Balaena albicans</li>
+                   <li>One of its vernacular names, e.g. Beluga</li>
+                 </ul>
+
+                 <h3>Summarization</h3>
+                 <p>As an user, whenever I look up a species name, I would like to see a summary (such as regular result page summary or similar to Google's rich snippets) with information from different resources as well as links to them. This could basically include taxonomic information and scientific and vernacular names.</p>
+                 <p>In time, with other Bioschemas terms being specified, this could be enriched with traits (average body size, life expectancy etc.), geographic distribution, etc.</p>
+
+                 <h3>Links to external resources</h3>
+                 <p>To complement the summaries, as an user, I would like to get:</p>
+                 <ul>
+                   <li>A list of museums whose collections contain a specimen of the species I'm looking up,</li>
+                   <li>A list of zoos/aquariums/botanic gardens hosting living organisms of that species,</li>
+                   <li>A list of research projects that possibly study that species,</li>
+                   <li>...</li>
+                 </ul>
+
+                 <h3>Accessibility</h3>
+                 <p>As a user, I would like to be able to gather structured information, for instance, to visualize a consolidated map of all occurrences of a species collected from multiple data sources.</p>
+
+               </section>
+            </div>
+        </div>
+    </div>
+    {% include footer.html %}
+
+
+
+
+
+    </body>
+
+    </html>
