@@ -5,8 +5,8 @@ first-name: Niall
 last-name: Beard
 collection: people
 affiliation: University of Manchester
-homepage:
+homepage: 
 github_username: njall
 orcid:
-groups: [data, events, people, standards, tools, trainingmaterials]
+groups: [data, events, people, standards, tools, training]
 ---

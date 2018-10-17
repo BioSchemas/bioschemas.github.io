@@ -35,8 +35,10 @@ specifications:
     ]
 
 members:
-    - PhilBarker
-    - NiallBeard
+    - CeliaVanGelder
+    - MichelleBrazas
+    - SonikaTyagi
+    - TerriAtwood   
     - ChrisTaylor
     - PhilippeRocca-Serra
     - SusannaSansone
@@ -56,8 +58,9 @@ members:
     - ClaireJohnson
     - LeeLarcombe
     - AleksandraNenadic
-    - TerriAtwood
     - MichaelCrusoe
     - RafaelJimenez
-    - GabriellaRustici    
+
+
+
 ---
