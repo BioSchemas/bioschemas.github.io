@@ -39,6 +39,11 @@ members:
     - MichelleBrazas
     - SonikaTyagi
     - TerriAtwood   
+    - MateuszKuzak
+    - AnnetteMcgrath
+    - VictoriaDominguez
+
+Former members:    
     - ChrisTaylor
     - PhilippeRocca-Serra
     - SusannaSansone
@@ -50,7 +55,6 @@ members:
     - VickySchneider
     - AndraWaagmeester
     - SarahMorgan
-    - VictoriaDominguez
     - DanTimmons
     - AlejandraGonzalez-Beltran
     - GuillermoCalderonMantilla
@@ -60,7 +64,4 @@ members:
     - AleksandraNenadic
     - MichaelCrusoe
     - RafaelJimenez
-
-
-
 ---

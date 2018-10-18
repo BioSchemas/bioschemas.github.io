@@ -2,7 +2,7 @@
 layout: person-details
 id: TerriAtwood
 first-name: Teresa
-last-name: Atwood
+last-name: Attwood
 collection: people
 affiliation: University of Manchester
 homepage: https://www.research.manchester.ac.uk/portal/teresa.k.attwood.html
