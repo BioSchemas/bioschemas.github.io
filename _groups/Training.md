@@ -1,7 +1,7 @@
 ---
 layout: group-details
 identifier: training
-name: Training 
+name: Training
 collection: groups
 active: true
 type: generic
@@ -43,7 +43,7 @@ members:
     - AnnetteMcgrath
     - VictoriaDominguez
 
-Former members:    
+Former-Members:    
     - ChrisTaylor
     - PhilippeRocca-Serra
     - SusannaSansone
