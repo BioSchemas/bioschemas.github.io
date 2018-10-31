@@ -6,7 +6,7 @@ collection: groups
 active: true
 type: biological
 description: Specification for sample profile
-lead: [HelenParkinson, TonyBurdett, Melanie Courtot]
+lead: [HelenParkinson, TonyBurdett, MelanieCourtot]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20samples
 folder: https://drive.google.com/drive/folders/0Bw_p-HKWUjHoaWhkTnBka2FWRE0
 
