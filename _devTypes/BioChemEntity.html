@@ -141,11 +141,10 @@ external: #454547;
                          <a href="http://schema.org/URL">URL</a>
                        </td>
                        <td>
-                         <strong>Schema</strong>: An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax.
+                         An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax.
                          This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax -
                          the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those
-                         defined externally. <br />
-                         <strong>Bioschemas</strong>:  Whenever a suitable profile exists, the profile type should be used in addition to the BioChemEntity type. Other additional types are always possible via the additionalType property. For instance, http://purl.obolibrary.org/obo/PR_000000001 is the type used for the Protein profile but http://semanticscience.org/resource/SIO_010043 or https://www.wikidata.org/wiki/Q8054 can be used as an additionalType if that is useful to the data providers.
+                         defined externally.
                        </td>
                      </tr>
                      <tr>
@@ -154,7 +153,7 @@ external: #454547;
                          <a href="http://schema.org/Text">Text</a>
                        </td>
                        <td>
-                         <strong>Schema</strong>: An alias for the item.
+                         An alias for the item.
                        </td>
                      </tr>
                      <tr>
@@ -163,7 +162,7 @@ external: #454547;
                          <a href="http://schema.org/Text">Text</a>
                        </td>
                        <td>
-                         <strong>Schema</strong>: A descripton of the item.
+                         A descripton of the item.
                        </td>
                      </tr>
                      <tr>
@@ -172,40 +171,42 @@ external: #454547;
                          <a href="http://schema.org/Text">Text</a>
                        </td>
                        <td>
-                         <strong>Schema</strong>: A sub property of description. A short description of the item used to disambiguate from other, similar items.
-                         Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+                         A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
                        </td>
                      </tr>
                      <tr>
                        <th><a href="http://schema.org/identifier">identifier</a></th>
                        <td>
-                         <a href="http://schema.org/PropertyValue">PropertyValue</a><br /><a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
+                         <a href="http://schema.org/PropertyValue">PropertyValue</a> or<br/>
+                         <a href="http://schema.org/Text">Text</a> or<br/>
+                         <a href="http://schema.org/URL">URL</a>
                        </td>
                        <td>
-                         <strong>Schema</strong>: The identifier property represents any kind of identifier for any kind of <a href="http://schema.org/Thing">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc.
+                         The identifier property represents any kind of identifier for any kind of <a href="http://schema.org/Thing">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc.
                          Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.
-                         See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details. <br/>
-                         <strong>Bioschemas</strong>: We recommend you use either an authoritative source or identifiers.org whenever possible.
+                         See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.
                        </td>
                      </tr>
                      <tr>
                        <th><a href="http://schema.org/image">image</a></th>
                        <td>
-                         <a href="http://schema.org/ImageObject">ImageObject</a><br /><a href="http://schema.org/URL">URL</a>
+                         <a href="http://schema.org/ImageObject">ImageObject</a> or<br/>
+                         <a href="http://schema.org/URL">URL</a>
                        </td>
                        <td>
-                         <strong>Schema</strong>: An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.
+                         An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.
                        </td>
                      </tr>
                      <tr>
                        <th><a href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
                        <td>
-                         <a href="http://schema.org/CreativeWork">CreativeWork</a><br /><a href="http://schema.org/URL">URL</a>
+                         <a href="http://schema.org/CreativeWork">CreativeWork</a> or<br/>
+                         <a href="http://schema.org/URL">URL</a>
                        </td>
                        <td>
-                         <strong>Schema</strong>: Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See
-                         <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br />
-                         <strong>Bioschemas</strong>: Link via DataRecord or <a href="http://schema.org/URL">URL</a> to the main DataRecord representing this entity in a dataset.<br />
+                         Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See
+                         <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/>
+                         Inverse property: <a href="http://schema.org/mainEntity">mainEntity</a>
                        </td>
                      </tr>
                      <tr>
@@ -214,7 +215,7 @@ external: #454547;
                          <a href="http://schema.org/Text">Text</a>
                        </td>
                        <td>
-                         <strong>Schema</strong>: The name of the item.
+                         The name of the item.
                        </td>
                      </tr>
                      <tr>
@@ -223,7 +224,7 @@ external: #454547;
                          <a href="http://schema.org/Action">Action</a>
                        </td>
                        <td>
-                         <strong>Schema</strong>: Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+                         Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
                        </td>
                      </tr>
                      <tr>
@@ -232,16 +233,18 @@ external: #454547;
                          <a href="http://schema.org/URL">URL</a>
                        </td>
                        <td>
-                         <strong>Schema</strong>: URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+                         URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
                        </td>
                      </tr>
                      <tr>
                        <th><a style="color: #0000CC;" href="http://pending.schema.org/subjectOf">subjectOf</a></th>
                        <td>
-                         <a href="http://schema.org/CreativeWork">CreativeWork</a><br /><a href="http://schema.org/Event">Event</a>
+                         <a href="http://schema.org/CreativeWork">CreativeWork</a> or<br/>
+                         <a href="http://schema.org/Event">Event</a>
                        </td>
                        <td>
-                         <strong>Schema</strong>: A CreativeWork or Event about this Thing. <em>Inverse property: about.</em>
+                         A CreativeWork or Event about this Thing..<br/>
+                         Inverse property: <a href="http://schema.org/about">about</a>.
                        </td>
                      </tr>
                      <tr>
@@ -250,8 +253,7 @@ external: #454547;
                          <a href="http://schema.org/URL">URL</a>
                        </td>
                        <td>
-                         <strong>Schema</strong>: URL of the item.<br />
-                         <strong>Bioschemas</strong>: Link to the official webpage associated to this entity.
+                         URL of the item.
                        </td>
                      </tr>
                    </tbody>
