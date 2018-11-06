@@ -1,8 +1,9 @@
 {% if page.status == 'release' %}
-<h1>{{page.name}} Specification v. {{page.version}}</h1>
+<h1>{{page.name}} (Type)</h1>
 {% else %}
-<h1>{{page.name}} <u>DRAFT</u> Specification v. {{page.version}}</h1>
+<h1>{{page.name}} ()<u>DRAFT</u> Type)</h1>
 {% endif %}
+<h3><strong>Version:</strong> {{page.version}} ({{page.dateModified}})</h3>
 <h2>{{page.subtitle}}</h2>
 
 <br />
@@ -65,13 +66,11 @@
 
 <section id="description" class="tabs">
 <!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
-<h3>Description</h3>
-<p>{{page.description}}</p>
-<br />
+<h3>Canonical URL</h3>
+<a href="http://bioschemas.org/{{page.name}}">http://bioschemas.org/{{page.name}}</a>
 <h3>Schema.org hierarchy</h3>
 This is a new {{page.spec_type}} that fits into the schema.org hierarchy as follows:
-<br />
-<br />
+<br/>
 {%for branch_name in page.hierarchy %}
 <a href="http://schema.org/{{branch_name}}">{{branch_name}}</a>
 {%if forloop.index < page.hierarchy.size%}
@@ -82,6 +81,8 @@ This is a new {{page.spec_type}} that fits into the schema.org hierarchy as foll
 &gt;
 <a href="#">{{page.name}}</a>
 {%endif%}
+<h3>Description</h3>
+<p>{{page.description}}</p>
 </section>
 
 <section id="links" class="tabs">
