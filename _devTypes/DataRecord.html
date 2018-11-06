@@ -2,9 +2,7 @@
 redirect_from: "devTypes/DataRecord/specification"
 redirect_from: "devTypes/DataRecord/specification/"
 dateModified: 2018-11-06
-description: "A Record acts itself as a dataset although it refers to what could be
-  seen as the minimum compact, complete and auto-descriptive unit in a dataset, i.e.,
-  a record.\n\nBioschemas usage\n\nIn Life Sciences, records will represent a BioChemEntity."
+description: "A DataRecord acts itself as a dataset although it refers to what could be seen as the minimum compact, complete and auto-descriptive unit in a dataset."
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20DataRecord
 group: data
 hierarchy:
@@ -48,45 +46,40 @@ external: #454547;
                       </tr>
                    </thead>
                    <tbody>
-<!-- New -->
                      <tr class="new_props_sdo">
                         <td colspan="3">
-                           New properties for <a style="color: #0B794B;" href="#">{{page.name}}</a> (pending schema.org integration).
+                           Properties from <a style="color: #0B794B;" href="/{{page.name}}">{{page.name}}</a> (pending schema.org integration).
                         </td>
                      </tr>
-                     <tr>
-                        <th><a href="http://schema.org/additionalProperty">additionalProperty</a></th>
-                        <td>
-                           <a href="http://schema.org/PropertyValue">PropertyValue</a><br>
-                        </td>
-                        <td>
-                          <strong>Schema</strong>: A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.  Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br/ >
-                          <strong>Bioschemas</strong>: Additional to the use of <a href="http://schema.org/name">name</a> and <a href="http://schema.org/description">description</a> to describe this property in a human-readable way,
-                          <a href="http://schema.org/additionalType">additionalType</a> should be used to specify the nature of the property/relation. For instance, if the property refers to a gene/protein disease association,
-                          you could use <a class="externalProp" href="http://semanticscience.org/resource/SIO_000983">SIO:000983 (gene-disease association)</a> as the <a href="http://schema.org/additionalType">additionalType</a> for the additionalProperty.
-                        </td>
-                      </tr>
+                     <tr id="additionalProperty">
+                       <th><a href="http://schema.org/additionalProperty">additionalProperty</th>
+                       <td>
+                         <a href="http://schema.org/PropertyValue">PropertyValue</a>
+                       </td>
+                       <td>A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br/>
+                         Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br />
+                      </td>
+                     </tr>
                      <tr id="isBasisFor">
-                        <th><a style="color: #0B794B;" href="#">isBasisFor</a></th>
+                        <th style="color: #0B794B;">isBasisFor</th>
                         <td>
-                           <a href="http://schema.org/CreativeWork">CreativeWork</a><br>
-                           <a href="http://schema.org/Product">Product</a><br>
-                           <a href="http://schema.org/URL">URL</a><br>
-                        </td>
-                        <td>
-                          <strong>Bioschemas</strong>: A resource for which this resource is basis for. Inverse property: <a href="http://schema.org/isBasedOn">isBasedOn</a>.<br />
-                          <strong>Bioschemas DataRecord</strong>: Whenever possible use Evidence Codes (<a href="http://www.ebi.ac.uk/ols/ontologies/eco">ECO</a>).
-                        </td>
-                     </tr>
-                     <tr id="seeAlso">
-                        <th><a style="color: #0B794B;"  href="#">seeAlso</a></th>
-                        <td>
-                           <a href="http://schema.org/Thing">Thing</a><br />
+                           <a href="http://schema.org/CreativeWork">CreativeWork</a> or<br/>
+                           <a href="http://schema.org/Product">Product</a> or<br/>
                            <a href="http://schema.org/URL">URL</a>
                         </td>
                         <td>
-                          <strong>Bioschemas</strong>: A pointer to any (somehow related) Thing. To be used whenever you are not so sure about the nature of the relation.
-                          Otherwise, use more precise terms from pre-existing Controlled Vocabularies.
+                          A resource for which this resource is the basis for.<br/>
+                          Inverse property: isBasedOn
+                        </td>
+                     </tr>
+                     <tr id="seeAlso">
+                        <th style="color: #0B794B;">seeAlso</th>
+                        <td>
+                           <a href="http://schema.org/Thing">Thing</a> or<br/>
+                           <a href="http://schema.org/URL">URL</a>
+                        </td>
+                        <td>
+                          A pointer to any (somehow related) Thing. To be used whenever you are not so sure about the nature of the relation. Otherwise, use more precise terms from pre-existing Controlled Vocabularies.
                         </td>
                      </tr>
 <!-- Dataset -->
