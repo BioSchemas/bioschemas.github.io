@@ -91,15 +91,18 @@ external: #454547;
                         <td>
                            <a href="http://schema.org/DataDownload">DataDownload</a>
                         </td>
-                        <td><strong>Schema</strong>: A downloadable form of this dataset, at a specific location, in a specific format.</td>
+                        <td>
+                          A downloadable form of this dataset, at a specific location, in a specific format.
+                        </td>
                      </tr>
                      <tr>
-                        <th><a href="http://schema.org/includedInDataCatalog">includedInDataCatalog</a></th>
+                        <th>
+                          <a href="http://schema.org/includedInDataCatalog">includedInDataCatalog</a></th>
                         <td>
                            <a href="http://schema.org/DataCatalog">DataCatalog</a>
                         </td>
                         <td>
-                          <strong>Schema</strong>: A data catalog which contains this dataset. Supersedes catalog, includedDataCatalog. <em>Inverse property: <a href="http://schema.org/dataset">dataset</a>.</em>
+                          A data catalog which contains this dataset. Supersedes <a href="https://schema.org/catalog">catalog</a>, <a href="https://schema.org/includedDataCatalog">includedDataCatalog</a>.<br/> Inverse property: <a href="http://schema.org/dataset">dataset</a>.
                         </td>
                      </tr>
                      <tr>
@@ -108,30 +111,34 @@ external: #454547;
                            <a href="http://schema.org/Text">Text</a>
                         </td>
                         <td>
-                          <strong>Schema</strong>: The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
+                          The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
                         </td>
                      </tr>
                      <tr>
-                        <th><a style="color: #0000CC;" href="http://pending.schema.org/measurementTechnique">measurementTechnique</a></th>
+                        <th>
+                          <a style="color: #0000CC;" href="http://pending.schema.org/measurementTechnique">measurementTechnique</a>
+                        </th>
                         <td>
-                           <a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
+                           <a href="http://schema.org/Text">Text</a> or<br/>
+                           <a href="http://schema.org/URL">URL</a>
                         </td>
                         <td>
-                          <strong>Schema</strong>: 	A technique or technology used in a Dataset (or DataDownload, DataCatalog), corresponding to the method used for measuring the corresponding variable(s) (described using <a style="color: #0000CC;" href="http://pending.schema.org/variableMeasured">variableMeasured</a>).
-                          This is oriented towards scientific and scholarly dataset publication but may have broader applicability; it is not intended as a full representation of measurement, but rather as a high level summary for dataset discovery.
-                          For example, if <a style="color: #0000CC;" href="http://pending.schema.org/variableMeasured">variableMeasured</a> is: molecule concentration, <a style="color: #0000CC;" href="http://pending.schema.org/measurementTechnique">measurementTechnique</a> could be: "mass spectrometry" or "nmr spectroscopy" or "colorimetry" or "immunofluorescence".<br />
-                          If the <a style="color: #0000CC;" href="http://pending.schema.org/variableMeasured">variableMeasured</a> is "depression rating", the <a style="color: #0000CC;" href="http://pending.schema.org/measurementTechnique">measurementTechnique</a> could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory".<br />
-                          If there are several <a style="color: #0000CC;" href="http://pending.schema.org/variableMeasured">variableMeasured</a> properties recorded for some given data object, use a <a href="http://schema.org/PropertyValue">PropertyValue</a> for each <a style="color: #0000CC;" href="http://pending.schema.org/variableMeasured">variableMeasured</a>
-                          and attach the corresponding <a style="color: #0000CC;" href="http://pending.schema.org/measurementTechnique">measurementTechnique</a>.
+                          	A technique or technology used in a <a href="https://schema.org/Dataset">Dataset</a> (or <a href="https://schema.org/DataDownload">DataDownload</a>, <a href="https://schema.org/DataCatalog">DataCatalog</a>), corresponding to the method used for measuring the corresponding variable(s) (described using <a style="color: #0000CC;" href="http://pending.schema.org/variableMeasured">variableMeasured</a>). This is oriented towards scientific and scholarly dataset publication but may have broader applicability; it is not intended as a full representation of measurement, but rather as a high level summary for dataset discovery.<br/>
+                            For example, if <a style="color: #0000CC;" href="http://pending.schema.org/variableMeasured">variableMeasured</a> is: molecule concentration, <a style="color: #0000CC;" href="http://pending.schema.org/measurementTechnique">measurementTechnique</a> could be: "mass spectrometry" or "nmr spectroscopy" or "colorimetry" or "immunofluorescence".<br/>
+                            If the <a style="color: #0000CC;" href="http://pending.schema.org/variableMeasured">variableMeasured</a> is "depression rating", the <a style="color: #0000CC;" href="http://pending.schema.org/measurementTechnique">measurementTechnique</a> could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory".<br/>
+                            If there are several <a style="color: #0000CC;" href="http://pending.schema.org/variableMeasured">variableMeasured</a> properties recorded for some given data object, use a <a href="http://schema.org/PropertyValue">PropertyValue</a> for each <a style="color: #0000CC;" href="http://pending.schema.org/variableMeasured">variableMeasured</a> and attach the corresponding <a style="color: #0000CC;" href="http://pending.schema.org/measurementTechnique">measurementTechnique</a>.
                         </td>
                      </tr>
                      <tr>
-                        <th><a style="color: #0000CC;" href="http://pending.schema.org/variableMeasured">variableMeasured</a></th>
+                        <th>
+                          <a style="color: #0000CC;" href="http://pending.schema.org/variableMeasured">variableMeasured</a>
+                        </th>
                         <td>
-                           <a href="http://schema.org/PropertyValue">PropertyValue</a><br /><a href="http://schema.org/Text">Text</a>
+                           <a href="http://schema.org/PropertyValue">PropertyValue</a> or<br/>
+                           <a href="http://schema.org/Text">Text</a>
                         </td>
                         <td>
-                          <strong>Schema</strong>: 	The variableMeasured property can indicate (repeated as necessary) the variables that are measured in some dataset, either described as text or as pairs of identifier and description using <a href="http://schema.org/PropertyValue">PropertyValue</a>.
+                          	The variableMeasured property can indicate (repeated as necessary) the variables that are measured in some dataset, either described as text or as pairs of identifier and description using <a href="http://schema.org/PropertyValue">PropertyValue</a>.
                         </td>
                      </tr>
 <!-- CREATIVEWORK -->
