@@ -1,17 +1,16 @@
 ---
-redirect_from: "devTypes/BioChemEntity/specification"
-redirect_from: "devTypes/BioChemEntity/specification/"
+redirect_from: "Sample"
 dateModified: 2018-11-09
-description: "Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical."
+description: "A material entity that is a portion of a whole. <p>Comments: Typically samples are intended to be representative of the whole or aspects thereof. Examples of samples include biomedical samples (blood, urine) and commercial samples (carpet, metal).</p>"
 hierarchy:
 - Thing
-gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20BioChemEntity
-group: biologicalentities
-name: BioChemEntity
+gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Sample
+group: samples
+name: Sample
 parent_type: Thing
 spec_type: Type
-status: release #Revert to revision when working on the next version
-version: '0.6' #Change to 0.7-DRAFT when working on the next version
+status: release
+version: '0.1'
 
 bsc: #0B794B;
 pending: #0000CC;
@@ -55,69 +54,6 @@ external: #454547;
                        <td>A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br/>
                          Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br />
                       </td>
-                     </tr>
-                     <tr id="associatedDisease">
-                       <th style="color: #0B794B;">associatedDisease</th>
-                       <td>
-                         <a href="http://schema.org/MedicalCondition">MedicalCondition</a> or<br/>
-                         <a href="http://schema.org/URL">URL</a>
-                       </td>
-                       <td>
-                         Disease associated to this BioChemEntity.
-                       </td>
-                     </tr>
-                     <tr id="hasBioChemEntityPart">
-                       <th style="color: #0B794B;">hasBioChemEntityPart</th>
-                       <td>
-                         <a style="color: #0B794B;" href="/BioChemEntity">BioChemEntity</a> or<br/>
-                         <a href="http://schema.org/URL">URL</a>
-                       </td>
-                       <td>
-                         Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.<br/>
-                         Inverse property: contains
-                       </td>
-                     </tr>
-                     <tr>
-                       <th><a style="color: #0000CC;" href="http://pending.schema.org/hasCategoryCode">hasCategoryCode</a></th>
-                       <td>
-                         <a style="color: #0000CC;" href="http://pending.schema.org/CategoryCode">CategoryCode</a>
-                       </td>
-                       <td>
-                         A Category code contained in this code set.
-                       </td>
-                     </tr>
-                     <tr id="hasRepresentation">
-                       <th style="color: #0B794B;">hasRepresentation</th>
-                       <td>
-                         <a href="http://schema.org/PropertyValue">PropertyValue</a> or<br/>
-                         <a href="http://schema.org/Text">Text</a> or<br/>
-                         <a href="http://schema.org/URL">URL</a>
-                       </td>
-                       <td>
-                         A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.
-                       </td>
-                     </tr>
-                     <tr id="isPartOfBioChemEntity">
-                       <th style="color: #0B794B;">isPartOfBioChemEntity</th>
-                       <td>
-                         <a style="color: #0B794B;" href="/BioChemEntity">BioChemEntity</a> or<br/>
-                         <a href="http://schema.org/URL">URL</a>
-                       </td>
-                       <td>
-                         Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <br/>
-                         Inverse property: isContainedIn
-                       </td>
-                     </tr>
-                     <tr id="taxonomicRange">
-                       <th style="color: #0B794B;">taxonomicRange</th>
-                       <td>
-                         <a style="color: #0B794B;" href="/Taxon">Taxon</a> or<br/>
-                         <a href="http://schema.org/Text">Text</a> or<br/>
-                         <a href="http://schema.org/URL">URL</a>
-                       </td>
-                       <td>
-                         The taxonomic grouping of the organism that expresses, encodes, or in someway related to the BioChemEntity.
-                       </td>
                      </tr>
                      <tr class="reu_props_sdo">
                         <td colspan="3">Properties from <a href="http://schema.org/Thing">Thing</a></td>

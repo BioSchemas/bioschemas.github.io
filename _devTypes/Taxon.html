@@ -1,7 +1,6 @@
 ---
 dateModified: 2018-11-09
-description: "A set of organisms asserted to represent a natural cohesive biological unit.
-<p>Note: The set of organisms is inclusive of individuals living, recently dead, and yet to be born.</p>"
+description: "A set of organisms asserted to represent a natural cohesive biological unit."
 hierarchy:
 - Thing
 gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Taxon
@@ -10,7 +9,7 @@ name: Taxon
 parent_type: Thing
 spec_type: Type
 status: revision
-version: '0.1-DRAFT'
+version: '0.2-DRAFT'
 
 bsc: #0B794B;
 pending: #0000CC;
@@ -46,6 +45,17 @@ external: #454547;
                            Properties from <a style="color: #0B794B;" href="/{{page.name}}">{{page.name}}</a> (pending schema.org integration).
                         </td>
                      </tr>
+                     <tr id="ancestorTaxon">
+                       <th style="color: #0B794B;">ancestorTaxon</th>
+                       <td>
+                         <a style="color: #0B794B;" href="/Taxon">Taxon</a> or<br/>
+                         <a href="http://schema.org/Text">Text</a> or<br/>
+                         <a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         An ancestor taxa of the taxon in question, but not the closest parent. <br/>
+                         Inverse property: descendantTaxon
+                       </td>
                      </tr>
                      <tr id="childTaxon">
                        <th style="color: #0B794B;">childTaxon</th>
@@ -57,6 +67,27 @@ external: #454547;
                        <td>
                          Closest child taxa of the taxon in question. <br/>
                          Inverse property: parentTaxon
+                       </td>
+                     </tr>
+                     <tr id="descendantTaxon">
+                       <th style="color: #0B794B;">descendantTaxon</th>
+                       <td>
+                         <a style="color: #0B794B;" href="/Taxon">Taxon</a> or<br/>
+                         <a href="http://schema.org/Text">Text</a> or<br/>
+                         <a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         A descendant taxa of the taxon in question, but not the closest descendant. <br/>
+                         Inverse property: ancestorTaxon
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a style="color: #0000CC;" href="http://pending.schema.org/hasCategoryCode">hasCategoryCode</a></th>
+                       <td>
+                         <a style="color: #0000CC;" href="http://pending.schema.org/CategoryCode">CategoryCode</a>
+                       </td>
+                       <td>
+                         A Category code contained in this code set.
                        </td>
                      </tr>
                      <tr id="parentTaxon">

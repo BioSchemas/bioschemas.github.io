@@ -1,17 +1,17 @@
 ---
-redirect_from: "devTypes/BioChemEntity/specification"
-redirect_from: "devTypes/BioChemEntity/specification/"
+redirect_from: "Protein"
 dateModified: 2018-11-09
-description: "Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical."
+description: "A protein or a computationally generated protein annotation."
 hierarchy:
 - Thing
-gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20BioChemEntity
-group: biologicalentities
-name: BioChemEntity
-parent_type: Thing
+- BioChemEntity
+gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Protein
+group: proteins
+name: Protein
+parent_type: BioChemEntity
 spec_type: Type
-status: release #Revert to revision when working on the next version
-version: '0.6' #Change to 0.7-DRAFT when working on the next version
+status: release
+version: '0.1'
 
 bsc: #0B794B;
 pending: #0000CC;
@@ -46,6 +46,20 @@ external: #454547;
                         <td colspan="3">
                            Properties from <a style="color: #0B794B;" href="/{{page.name}}">{{page.name}}</a> (pending schema.org integration).
                         </td>
+                     </tr>
+                     <tr id="isEncodedBy">
+                       <th style="color: #0B794B;">isEncodedBy</th>
+                       <td>
+                         <a style="color: #0B794B;" href="/BioChemEntity">BioChemEntity</a> or<br/>
+                         <a style="color: #0B794B;" href="/Gene">Gene</a> or<br/>
+                         <a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         BioChemEntity  from which this protein was encoded from.
+                       </td>
+                     </tr>
+                     <tr class="reu_props_sdo">
+                        <td colspan="3">Properties from <a style="color: #0B794B;" href="/BioChemEntity">BioChemEntity</a></td>
                      </tr>
                      <tr id="additionalProperty">
                        <th><a href="http://schema.org/additionalProperty">additionalProperty</th>
