@@ -66,15 +66,15 @@ external: #454547;
                          Disease associated to this BioChemEntity.
                        </td>
                      </tr>
-                     <tr id="contains">
-                       <th style="color: #0B794B;">contains</th>
+                     <tr id="hasBioChemEntityPart">
+                       <th style="color: #0B794B;">hasBioChemEntityPart</th>
                        <td>
                          <a style="color: #0B794B;" href="/BioChemEntity">BioChemEntity</a> or<br/>
                          <a href="http://schema.org/URL">URL</a>
                        </td>
                        <td>
-                         Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <br/>
-                         Inverse property: isContainedIn
+                         Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.<br/>
+                         Inverse property: contains
                        </td>
                      </tr>
                      <tr id="hasRepresentation">
@@ -88,15 +88,15 @@ external: #454547;
                          A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.
                        </td>
                      </tr>
-                     <tr id="isContainedIn">
-                       <th style="color: #0B794B;">isContainedIn</th>
+                     <tr id="isPartOfBioChemEntity">
+                       <th style="color: #0B794B;">isPartOfBioChemEntity</th>
                        <td>
                          <a style="color: #0B794B;" href="/BioChemEntity">BioChemEntity</a> or<br/>
                          <a href="http://schema.org/URL">URL</a>
                        </td>
                        <td>
-                         Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.<br/>
-                         Inverse property: contains
+                         Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <br/>
+                         Inverse property: isContainedIn
                        </td>
                      </tr>
                      <tr>
