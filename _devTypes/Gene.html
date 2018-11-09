@@ -1,17 +1,16 @@
 ---
-redirect_from: "devTypes/BioChemEntity/specification"
-redirect_from: "devTypes/BioChemEntity/specification/"
 dateModified: 2018-11-09
-description: "Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical."
+description: "A gene."
 hierarchy:
 - Thing
-gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20BioChemEntity
-group: biologicalentities
-name: BioChemEntity
-parent_type: Thing
+- BioChemEntity
+gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Gene
+group: genes
+name: Gene
+parent_type: BioChemEntity
 spec_type: Type
 status: revision
-version: '0.6-DRAFT'
+version: '0.1-DRAFT'
 
 bsc: #0B794B;
 pending: #0000CC;
@@ -46,6 +45,20 @@ external: #454547;
                         <td colspan="3">
                            Properties from <a style="color: #0B794B;" href="/{{page.name}}">{{page.name}}</a> (pending schema.org integration).
                         </td>
+                     </tr>
+                     <tr id="encodes">
+                       <th style="color: #0B794B;">encodes</th>
+                       <td>
+                         <a style="color: #0B794B;" href="/BioChemEntity">BioChemEntity</a> or<br/>
+                         <a style="color: #0B794B;" href="/Protein">Protein</a> or<br/>
+                         <a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         This property is used to link to gene products encoded (even indirectly) from this gene such as RNA or proteins.
+                       </td>
+                     </tr>
+                     <tr class="reu_props_sdo">
+                        <td colspan="3">Properties from <a style="color: #0B794B;" href="/BioChemEntity">BioChemEntity</a></td>
                      </tr>
                      <tr id="additionalProperty">
                        <th><a href="http://schema.org/additionalProperty">additionalProperty</th>
