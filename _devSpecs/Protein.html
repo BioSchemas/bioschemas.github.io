@@ -357,10 +357,9 @@ mapping:
   cardinality: MANY
   controlled_vocab: Any suitable ontology
   example: |-
-    //Protein is part of (isContainedIn) a GO subcellular location
     {
       "@type": ["Protein"],
-      "isTranslatedFrom": {
+      "isEncodedBy": {
         "@type": ["Gene"],
         "identifier": "ABL1",
         "name": "ABL1"
