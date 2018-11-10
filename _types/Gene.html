@@ -1,15 +1,17 @@
 ---
-dateModified: 2018-11-09
-description: "A set of organisms asserted to represent a natural cohesive biological unit."
+redirect_from: "Gene"
+dateModified: 2018-11-10
+description: "A gene."
 hierarchy:
 - Thing
-gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Taxon
-group: biodiversity
-name: Taxon
-parent_type: Thing
+- BioChemEntity
+gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Gene
+group: genes
+name: Gene
+parent_type: BioChemEntity
 spec_type: Type
-status: revision
-version: '0.2-DRAFT'
+status: release
+version: '0.1'
 
 bsc: #0B794B;
 pending: #0000CC;
@@ -45,40 +47,48 @@ external: #454547;
                            Properties from <a style="color: #0B794B;" href="/{{page.name}}">{{page.name}}</a> (pending schema.org integration).
                         </td>
                      </tr>
-                     <tr id="ancestorTaxon">
-                       <th style="color: #0B794B;">ancestorTaxon</th>
+                     <tr id="encodes">
+                       <th style="color: #0B794B;">encodes</th>
                        <td>
-                         <a style="color: #0B794B;" href="/Taxon">Taxon</a> or<br/>
-                         <a href="http://schema.org/Text">Text</a> or<br/>
+                         <a style="color: #0B794B;" href="/BioChemEntity">BioChemEntity</a> or<br/>
+                         <a style="color: #0B794B;" href="/Protein">Protein</a> or<br/>
                          <a href="http://schema.org/URL">URL</a>
                        </td>
                        <td>
-                         An ancestor taxa of the taxon in question, but not the closest parent. <br/>
-                         Inverse property: descendantTaxon
+                         This property is used to link to gene products encoded (even indirectly) from this gene such as RNA or proteins.
                        </td>
                      </tr>
-                     <tr id="childTaxon">
-                       <th style="color: #0B794B;">childTaxon</th>
+                     <tr class="reu_props_sdo">
+                        <td colspan="3">Properties from <a style="color: #0B794B;" href="/BioChemEntity">BioChemEntity</a></td>
+                     </tr>
+                     <tr id="additionalProperty">
+                       <th><a href="http://schema.org/additionalProperty">additionalProperty</th>
                        <td>
-                         <a style="color: #0B794B;" href="/Taxon">Taxon</a> or<br/>
-                         <a href="http://schema.org/Text">Text</a> or<br/>
+                         <a href="http://schema.org/PropertyValue">PropertyValue</a>
+                       </td>
+                       <td>A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br/>
+                         Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br />
+                      </td>
+                     </tr>
+                     <tr id="associatedDisease">
+                       <th style="color: #0B794B;">associatedDisease</th>
+                       <td>
+                         <a href="http://schema.org/MedicalCondition">MedicalCondition</a> or<br/>
                          <a href="http://schema.org/URL">URL</a>
                        </td>
                        <td>
-                         Closest child taxa of the taxon in question. <br/>
-                         Inverse property: parentTaxon
+                         Disease associated to this BioChemEntity.
                        </td>
                      </tr>
-                     <tr id="descendantTaxon">
-                       <th style="color: #0B794B;">descendantTaxon</th>
+                     <tr id="hasBioChemEntityPart">
+                       <th style="color: #0B794B;">hasBioChemEntityPart</th>
                        <td>
-                         <a style="color: #0B794B;" href="/Taxon">Taxon</a> or<br/>
-                         <a href="http://schema.org/Text">Text</a> or<br/>
+                         <a style="color: #0B794B;" href="/BioChemEntity">BioChemEntity</a> or<br/>
                          <a href="http://schema.org/URL">URL</a>
                        </td>
                        <td>
-                         A descendant taxa of the taxon in question, but not the closest descendant. <br/>
-                         Inverse property: ancestorTaxon
+                         Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.<br/>
+                         Inverse property: isPartOfBioChemEntity
                        </td>
                      </tr>
                      <tr>
@@ -90,27 +100,37 @@ external: #454547;
                          A Category code contained in this code set.
                        </td>
                      </tr>
-                     <tr id="parentTaxon">
-                       <th style="color: #0B794B;">parentTaxon</th>
-                       <td>
-                         <a style="color: #0B794B;" href="/Taxon">Taxon</a> or<br/>
-                         <a href="http://schema.org/Text">Text</a> or<br/>
-                         <a href="http://schema.org/URL">URL</a>
-                       </td>
-                       <td>
-                         Closest parent taxon of the taxon in question. <br/>
-                         Inverse property: childTaxon
-                       </td>
-                     </tr>
-                     <tr id="taxonRank">
-                       <th style="color: #0B794B;">taxonRank</th>
+                     <tr id="hasRepresentation">
+                       <th style="color: #0B794B;">hasRepresentation</th>
                        <td>
                          <a href="http://schema.org/PropertyValue">PropertyValue</a> or<br/>
                          <a href="http://schema.org/Text">Text</a> or<br/>
                          <a href="http://schema.org/URL">URL</a>
                        </td>
                        <td>
-                         The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary – (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs).
+                         A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.
+                       </td>
+                     </tr>
+                     <tr id="isPartOfBioChemEntity">
+                       <th style="color: #0B794B;">isPartOfBioChemEntity</th>
+                       <td>
+                         <a style="color: #0B794B;" href="/BioChemEntity">BioChemEntity</a> or<br/>
+                         <a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <br/>
+                         Inverse property: hasBioChemEntityPart
+                       </td>
+                     </tr>
+                     <tr id="taxonomicRange">
+                       <th style="color: #0B794B;">taxonomicRange</th>
+                       <td>
+                         <a style="color: #0B794B;" href="/Taxon">Taxon</a> or<br/>
+                         <a href="http://schema.org/Text">Text</a> or<br/>
+                         <a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         The taxonomic grouping of the organism that expresses, encodes, or in someway related to the BioChemEntity.
                        </td>
                      </tr>
                      <tr class="reu_props_sdo">
