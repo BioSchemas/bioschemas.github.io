@@ -1,7 +1,7 @@
 ---
 redirect_from: "devTypes/BioChemEntity/specification"
 redirect_from: "devTypes/BioChemEntity/specification/"
-dateModified: 2018-11-09
+dateModified: 2018-11-10
 description: "Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical."
 hierarchy:
 - Thing
@@ -74,7 +74,7 @@ external: #454547;
                        </td>
                        <td>
                          Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.<br/>
-                         Inverse property: contains
+                         Inverse property: isPartOfBioChemEntity
                        </td>
                      </tr>
                      <tr>
@@ -105,7 +105,7 @@ external: #454547;
                        </td>
                        <td>
                          Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <br/>
-                         Inverse property: isContainedIn
+                         Inverse property: hasBioChemEntityPart
                        </td>
                      </tr>
                      <tr id="taxonomicRange">
