@@ -12,7 +12,7 @@ cross_walk_url: https://docs.google.com/spreadsheets/d/1HHa0P6bvym1sZcO4GZMH01J_
 gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Taxon
 live_deploy: ''
 
-parent_type: Thing
+parent_type: Taxon
 hierarchy:
 - Thing
 - Taxon
@@ -24,7 +24,7 @@ spec_info:
     scientific name, authority, taxonomic rank and vernacular names. It is also a
     means to link to existing taxonomic registers where each taxon has a URI.
   version: 0.3-draft
-  version_date: 20181109T130619
+  version_date: 20181110T112249
   official_type: http://bioschemas.org/Taxon
   full_example: https://github.com/BioSchemas/specifications/tree/master/Taxon/examples/
 mapping:
@@ -72,7 +72,9 @@ mapping:
   - Taxon
   - Text
   - URL
-  description: ""
+  description: |-
+    Closest child taxa of the taxon in question.
+    Inverse property: parentTaxon
   type: bioschemas
   type_url: http://bioschemas.org/childTaxon
   bsc_description: Direct, most proximate lower-rank child taxa
@@ -83,6 +85,17 @@ mapping:
     : [ \"WD:Q34740\",  \"genus\" ],\n    \"childTaxon\": { \n        \"@type\": \"Taxon\",\n
     \       \"name\": \"Delphinapterus leucas\",\n        \"taxonRank\" : [ \"WD:Q7432\",
     \ \"species\" ]\n    }\n}"
+- property: hasCategoryCode
+  expected_types:
+  - CategoryCode
+  description: A Category code contained in this code set.
+  type: pending
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
 - property: name
   expected_types:
   - Text
@@ -103,7 +116,9 @@ mapping:
   - Taxon
   - Text
   - URL
-  description: ""
+  description: |-
+    Closest parent taxon of the taxon in question.
+    Inverse property: childTaxon
   type: bioschemas
   type_url: http://bioschemas.org/parentTaxon
   bsc_description: Direct, most proximate higher-rank parent taxon
@@ -170,12 +185,12 @@ mapping:
   - PropertyValue
   - Text
   - URL
-  description: ""
+  description: The taxonomic rank of this taxon given preferably as a URI from a controlled
+    vocabulary (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata
+    URIs)
   type: bioschemas
   type_url: http://bioschemas.org/taxonRank
-  bsc_description: The taxonomic rank of this taxon given preferably as a URI from
-    a controlled vocabulary (typically the ranks from TDWG TaxonRank ontology or equivalent
-    Wikidata URIs)
+  bsc_description: ""
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
