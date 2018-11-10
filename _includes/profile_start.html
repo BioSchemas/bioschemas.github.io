@@ -71,12 +71,12 @@
 <section id="description" class="tabs">
    <!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
    <h3>Schema.org hierarchy</h3>
-   This {{page.spec_type}} profile fits into the schema.org hierarchy as follows:
+   This {{page.spec_type}} fits into the schema.org hierarchy as follows:
    <br />
    <br />
    {%for branch_name in page.hierarchy %}
    {% if branch_name == "BioChemEntity" or branch_name == "DataRecord" or branch_name == "LabProtocol" or branch_name == "Gene" or branch_name == "Protein" or branch_name == "Sample" or branch_name == "Taxon"  %}
-   <a href="/devTypes/{{branch_name}}/">{{branch_name}}</a>
+   <a href="/{{branch_name}}/">{{branch_name}}</a>
    {% else %}
    <a href="http://schema.org/{{branch_name}}">{{branch_name}}</a>
    {% endif %}
