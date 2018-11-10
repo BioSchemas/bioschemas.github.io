@@ -1,4 +1,4 @@
-<!-- 
+<!--
     ToDo: Remove this validation after all the specs
         are updated to the new specification_table template.
 -->
@@ -7,17 +7,20 @@
 {% assign current_name = page.name %}
 {% assign current_version = page.version %}
 {% assign current_subtitle = page.subtitle %}
+{% assign current_pubDate = page.dateModified %}
 {% else %}
 {% assign current_name = page.spec_info.title %}
 {% assign current_version = page.spec_info.version %}
 {% assign current_subtitle = page.spec_info.subtitle %}
+{% assign current_pubDate = page.spec_info.version_date %}
 {% endif %}
 
 {% if page.status == 'release' %}
-<h1>{{current_name}} Specification v. {{current_version}}</h1>
+<h1>{{current_name}} Profile</h1>
 {% else %}
-<h1>{{current_name}} <u>DRAFT</u> Specification v. {{current_version}}</h1>
+<h1>{{current_name}} <u>DRAFT</u> Profile</h1>
 {% endif %}
+<h3><strong>Version:</strong> {{current_version}} ({{current_pubDate | date_to_long_string }})
 <h2>{{current_subtitle}}</h2>
 <br />
 <input id="tab1" type="radio" name="tabs" checked>
@@ -58,7 +61,7 @@
         {% assign member-id = "/people/" | append: member-name %}
         {% assign member = site.people | where:"id", member-id | first %}
         <p><a href="{{ member.url }}">{{ member.first-name }} {{ member.last-name }}</a></p>
-        
+
         {% endunless %}
 
         {% endfor %}
@@ -67,25 +70,13 @@
 </section>
 <section id="description" class="tabs">
    <!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
-   <h3>Description</h3>
-   <!-- 
-       ToDo: Remove this validation after all the specs
-            are updated to the new specification_table template.
-    -->
-   {% assign description_prev = page.description %}
-   {% if description_prev != null%}
-   <p>{{page.description}}</p>
-   {% else %}
-   <p>{{page.spec_info.description}}</p>
-   {% endif %}
-   <br />
    <h3>Schema.org hierarchy</h3>
-   This is a new {{page.spec_type}} that fits into the schema.org hierarchy as follows:
+   This {{page.spec_type}} fits into the schema.org hierarchy as follows:
    <br />
    <br />
    {%for branch_name in page.hierarchy %}
    {% if branch_name == "BioChemEntity" or branch_name == "DataRecord" or branch_name == "LabProtocol" or branch_name == "Gene" or branch_name == "Protein" or branch_name == "Sample" or branch_name == "Taxon"  %}
-   <a href="/devTypes/{{branch_name}}/">{{branch_name}}</a>
+   <a href="/{{branch_name}}/">{{branch_name}}</a>
    {% else %}
    <a href="http://schema.org/{{branch_name}}">{{branch_name}}</a>
    {% endif %}
@@ -97,6 +88,18 @@
    &gt;
    <a href="#">{{page.name}}</a>
    {%endif%}
+   <h3>Description</h3>
+   <!--
+       ToDo: Remove this validation after all the specs
+            are updated to the new specification_table template.
+    -->
+   {% assign description_prev = page.description %}
+   {% if description_prev != null%}
+   <p>{{page.description}}</p>
+   {% else %}
+   <p>{{page.spec_info.description}}</p>
+   {% endif %}
+   <br />
 </section>
 <section id="links" class="tabs">
    <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto;">
