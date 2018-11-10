@@ -1,17 +1,16 @@
 ---
-dateModified: 2018-11-06
+dateModified: 2018-11-10
 description: "A protein or a computationally generated protein annotation."
 hierarchy:
 - Thing
-- Intangible
 - BioChemEntity
 gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Protein
 group: proteins
 name: Protein
 parent_type: BioChemEntity
 spec_type: Type
-status: revision
-version: '0.1-DRAFT'
+status: release #Revert to revision when working on the next version
+version: '0.1' #Change to 0.2-DRAFT when working on the next version
 
 bsc: #0B794B;
 pending: #0000CC;
@@ -80,15 +79,24 @@ external: #454547;
                          Disease associated to this BioChemEntity.
                        </td>
                      </tr>
-                     <tr id="contains">
-                       <th style="color: #0B794B;">contains</th>
+                     <tr id="hasBioChemEntityPart">
+                       <th style="color: #0B794B;">hasBioChemEntityPart</th>
                        <td>
                          <a style="color: #0B794B;" href="/BioChemEntity">BioChemEntity</a> or<br/>
                          <a href="http://schema.org/URL">URL</a>
                        </td>
                        <td>
-                         Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <br/>
-                         Inverse property: isContainedIn
+                         Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.<br/>
+                         Inverse property: isPartOfBioChemEntity
+                       </td>
+                     </tr>
+                     <tr>
+                       <th><a style="color: #0000CC;" href="http://pending.schema.org/hasCategoryCode">hasCategoryCode</a></th>
+                       <td>
+                         <a style="color: #0000CC;" href="http://pending.schema.org/CategoryCode">CategoryCode</a>
+                       </td>
+                       <td>
+                         A Category code contained in this code set.
                        </td>
                      </tr>
                      <tr id="hasRepresentation">
@@ -102,36 +110,15 @@ external: #454547;
                          A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.
                        </td>
                      </tr>
-                     <tr id="isContainedIn">
-                       <th style="color: #0B794B;">isContainedIn</th>
+                     <tr id="isPartOfBioChemEntity">
+                       <th style="color: #0B794B;">isPartOfBioChemEntity</th>
                        <td>
                          <a style="color: #0B794B;" href="/BioChemEntity">BioChemEntity</a> or<br/>
                          <a href="http://schema.org/URL">URL</a>
                        </td>
                        <td>
-                         Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.<br/>
-                         Inverse property: contains
-                       </td>
-                     </tr>
-                     <tr>
-                       <th><a href="http://schema.org/location">location</a></th>
-                       <td>
-                         <a href="http://schema.org/Place">Place</a> or<br/><a href="http://schema.org/PostalAddress">PostalAddress</a> or<br/>
-                         <a href="http://schema.org/Text">Text</a><br/>
-                       </td>
-                       <td>
-                         The location of for example where the event is happening, an organization is located, or where an action takes place.
-                       </td>
-                     </tr>
-                     <tr id="positionInRepresentation">
-                       <th style="color: #0B794B;">positionInRepresentation</th>
-                       <td>
-                         <a href="http://schema.org/PropertyValue">PropertyValue</a> or<br/>
-                         <a href="http://schema.org/Text">Text</a> or<br/>
-                         <a href="http://schema.org/URL">URL</a>
-                       </td>
-                       <td>
-                         Refers to a position in the chromosome or sequence. For instance, FALDO can be used for sequence coordinates.
+                         Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <br/>
+                         Inverse property: hasBioChemEntityPart
                        </td>
                      </tr>
                      <tr id="taxonomicRange">
