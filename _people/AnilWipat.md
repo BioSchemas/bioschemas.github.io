@@ -8,5 +8,5 @@ affiliation:
 homepage:
 github_username:
 orcid:
-groups: [data, datarepositories, standards, tools, validation]
+groups: [data, datarepositories, standards, tools, validation, dna]
 ---
