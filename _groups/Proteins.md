@@ -50,4 +50,5 @@ members:
     - RicardoArcila
     - StephenAnyango
     - GustavoSalazar-Orejuela
+    - NathanDunn
 ---
