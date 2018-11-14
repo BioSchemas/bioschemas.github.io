@@ -6,7 +6,7 @@ collection: groups
 active: true
 type: biological
 description: Specification for protein type
-lead: [RicardoArcila, DavidMendez]
+lead: [EgonWillighagen, RicardoArcila, DavidMendez]
 issues: https://github.com/BioSchemas/specifications/labels/type%3A%20Chemistry
 
 
