@@ -72,7 +72,7 @@
 This is a new {{page.spec_type}} that fits into the schema.org hierarchy as follows:
 <br/>
 {%for branch_name in page.hierarchy %}
-{% if branch_name == "BioChemEntity" or branch_name == "DataRecord" or branch_name == "LabProtocol" or branch_name == "Gene" or branch_name == "Protein" or branch_name == "Sample" or branch_name == "Taxon"  %}
+{% if branch_name == "BioChemEntity" or branch_name == "DataRecord" or branch_name == "LabProtocol" or branch_name == "Gene" or branch_name == "Protein" or branch_name == "Sample" or branch_name == "Taxon" or branch_name == "MolecularEntity" %}
 <a href="/{{branch_name}}">{{branch_name}}</a>
 {% else %}
 <a href="http://schema.org/{{branch_name}}">{{branch_name}}</a>
