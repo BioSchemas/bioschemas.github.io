@@ -1,0 +1,348 @@
+---
+redirect_from: "devSpecs/MolecularEntity/specification"
+redirect_from: "devSpecs/MolecularEntity/specification/"
+name: MolecularEntity
+
+status: revision
+spec_type: Profile
+group: chemicals
+use_cases_url: ''
+cross_walk_url: ''
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Chemistry
+live_deploy: ''
+
+parent_type: Thing
+hierarchy:
+- Thing
+
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1W67djQ6r0sgv7tdLypUtZqoCTr4mYXEoCY9iez18vrs/edit#gid=1483018794
+
+
+spec_info:
+  title: MolecularEntity
+  subtitle: Bioschemas profile describing a MolecularEntity
+  description: This specification describes a MolecularEntity which is any constitutionally
+    or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion,
+    complex, conformer etc., identifiable as a separately distinguishable entity.
+  version: 0.2-draft
+  version_date: 20181114T111335
+  official_type: ""
+  full_example: https://github.com/BioSchemas/specifications/blob/master/Chemical/examples/chembl-jsonld.json
+mapping:
+- property: alternateName
+  expected_types:
+  - Text
+  description: An alias for the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |2-
+            "alternateName": [
+                    "3-hydroxytyramine",
+                    "4-(2-aminoethyl)catechol",
+                    "4-(2-aminoethyl)pyrocatechol"
+            ]
+- property: biochemicalInteraction
+  expected_types:
+  - BioChemEntity
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: A BioChemEntity that is known to interact with the item.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    "biochemicalInteraction": [{
+        "@type": "BioChemEntity",
+        "identifier": "CHEMBL3510",
+        "name": "Carbonic anhydrase XIV",
+        "url": "https://www.ebi.ac.uk/chembl/beta/target_report_card/CHEMBL3510/"
+    }]
+- property: biochemicalSimilarity
+  expected_types:
+  - BioChemEntity
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: A similar molecular entity, e.g., obtained by fingerprint similarity
+    algorithms.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    "biochemicalSimilarity": [
+        {
+            "@type": "MolecularEntity",
+            "identifier": "CHEMBL31088",
+            "name": "DEOXIEPINEPHRINE",
+            "url": "https://www.ebi.ac.uk/chembl/beta/compound_report_card/CHEMBL31088/"
+        },
+        {
+            "@type": "MolecularEntity",
+            "identifier": "CHEMBL1950045",
+            "name": "3,4-Dihydroxyphenylethanol",
+            "url": "https://www.ebi.ac.uk/chembl/beta/compound_report_card/CHEMBL1950045/"
+        }
+    ]
+- property: biologicalRole
+  expected_types:
+  - DefinedTerm
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: A role played by the molecular entity within a biological context.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Any suitable ontology such as [ChEBI biological role](https://www.ebi.ac.uk/ols/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_24432)
+  example: |-
+    "biologicalRole": [
+        {
+            "@type": "DefinedTerm",
+            "inDefinedTermSet": "CHEBI:35522",
+            "termCode": "http://purl.obolibrary.org/obo/CHEBI_35522",
+            "name": "β-adrenergic agonist"
+        },
+        {
+            "@type": "DefinedTerm",
+            "inDefinedTermSet": "CHEBI:77746",
+            "termCode": "http://purl.obolibrary.org/obo/CHEBI_77746",
+            "name": "human metabolite"
+        }
+    ]
+- property: chemicalRole
+  expected_types:
+  - DefinedTerm
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: A role played by the molecular entity within a chemical context.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Any suitable ontology such as [ChEBI Chemical Role](https://www.ebi.ac.uk/ols/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_51086)
+  example: |-
+    "chemicalRole": [
+        {
+            "@type": "DefinedTerm",
+            "inDefinedTermSet": "CHEBI:39142",
+            "termCode": "http://purl.obolibrary.org/obo/CHEBI_39142",
+            "name": "Brønsted base"
+        }
+    ]
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: disambiguatingDescription
+  expected_types:
+  - Text
+  description: A sub property of description. A short description of the item used
+    to disambiguate from other, similar items. Information from other properties (in
+    particular, name) may be necessary for the description to be useful for disambiguation.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"identifier": "CHEMBL59" or "identifier": "CHEMBL:CHEMBL59" (Compact Identifier)
+    or "identifier":"http://identifiers.org/chembl.compound/CHEMBL59"'
+- property: image
+  expected_types:
+  - ImageObject
+  - URL
+  description: An image of the item. This can be a URL or a fully described ImageObject.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"image": "https://www.ebi.ac.uk/chembl/api/data/image/CHEMBL59.svg?engine=indigo"'
+- property: inChI
+  expected_types:
+  - Text
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: Non-proprietary identifier for chemical substances that can be
+    used in printed and electronic data sources thus enabling easier linking of diverse
+    data compilations.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"inChI": "InChI=1S/C8H11NO2/c9-4-3-6-1-2-7(10)8(11)5-6/h1-2,5,10-11H,3-4,9H2"'
+- property: inChIKey
+  expected_types:
+  - Text
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: InChIKey is a hashed version of the full InChI (using the SHA-256
+    algorithm)
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"inChIKey": "VYFYYTLLBUKUHU-UHFFFAOYSA-N"'
+- property: iupacName
+  expected_types:
+  - Text
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: Systematic method of naming organic chemical compounds as recommended
+    by the International Union of Pure and Applied Chemistry (IUPAC).
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"iupacName": "4-(2-aminoethyl)benzene-1,2-diol"'
+- property: molecularFormula
+  expected_types:
+  - Text
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: The empirical formula is the simplest whole number ratio of all
+    the atoms in a molecule.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"molecularFormula": "C8H11NO2"'
+- property: molecularWeight
+  expected_types:
+  - Number
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: 'This is the molecular weight of the entity being described, not
+    of the parent. '
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"molecularWeight": 153.181'
+- property: monoisotopicMolecularWeight
+  expected_types:
+  - Number
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: The monoisotopic mass is the sum of the masses of the atoms in
+    a molecule using the unbound, ground-state, rest mass of the principal (most abundant)
+    isotope for each element instead of the isotopic average mass.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"monoisotopicMolecularWeight": 153.079'
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"name": "Dopamine"'
+- property: potentialUse
+  expected_types:
+  - DefinedTerm
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: Intended use of the molecular entity by humans.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Any suitable ontology such as  [ChEBI Application](https://www.ebi.ac.uk/ols/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_33232)
+  example: |-
+    "potentialUse": [{
+        "@type": "DefinedTerm",
+        "inDefinedTermSet": "CHEBI:38147",
+        "termCode": "http://purl.obolibrary.org/obo/CHEBI_38147",
+        "name": "cardiotonic drug"
+    }]
+- property: sameAs
+  expected_types:
+  - URL
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"sameAs": "https://www.wikidata.org/wiki/Q170304"'
+- property: smiles
+  expected_types:
+  - Text
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: A specification in form of a line notation for describing the structure
+    of chemical species using short ASCII strings
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"smiles": ["NCCc1ccc(O)c(O)c1"]'
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"url": "https://www.ebi.ac.uk/chembl/beta/compound_report_card/CHEMBL59/"'
+
+
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

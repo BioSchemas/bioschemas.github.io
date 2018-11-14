@@ -6,7 +6,7 @@ collection: groups
 active: true
 type: biological
 description: Specification for protein type
-lead: [MichałNowotka]
+lead: [RicardoArcila, DavidMendez]
 issues: https://github.com/BioSchemas/specifications/labels/type%3A%20Chemistry
 
 
@@ -23,9 +23,12 @@ objectives:
   ]
 draft_specifications:
   [
-    'Chemical', 'ChemicalStructure'
+    'MolecularEntity', 'Chemical', 'ChemicalStructure'
   ]
 
 members:
-  - MichałNowotka
+  - AnnaGaulton
+  - RicardoArcila
+  - DavidMendez
+  - EgonWillighagen
 ---

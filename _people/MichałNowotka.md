@@ -8,5 +8,5 @@ affiliation: EMBL-EBI
 homepage:
 github_username: mnowotka
 orcid:
-groups: [chemicals]
+groups: []
 ---
