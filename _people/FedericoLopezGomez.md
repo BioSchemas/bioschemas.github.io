@@ -1,6 +1,6 @@
 ---
 layout: person-details
-id: FedericoLópezGómez
+id: FedericoLopezGomez
 first-name: Federico
 last-name: López Gómez
 collection: people
