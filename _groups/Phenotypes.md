@@ -6,7 +6,7 @@ collection: groups
 active: true
 type: biological
 description: Specification for phenotype profile
-lead: [CarlosHorro]
+lead: [FedericoLópezGómez]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20phenotypes
 folder:
 
@@ -26,7 +26,7 @@ abstract: 'Information of phenotypes is scattered in multiple and disperse sampl
 Not all the phenotype data repositories have a programmatic interface and the existing variety of programmatic interfaces are diverse and changeable.'
 objectives:
   [
-    'Relay on the metadata description defined by the ELIXIR plant use case',
+    'Relay on the metadata description defined by the ELIXIR plant use case and the IMPC mouse phenotype use case',
     'Automate the ingestion of sample metadata from phenotype data repositories into registries via Bioschemas.',
     'Engage and help data providers to test and adopt the exposure of phenotype metadata with Schema.org via Bioschemas.',
     'Make registries like TransPlant compliant with Schema.org via Bioschemas.',
@@ -34,7 +34,9 @@ objectives:
   ]
 
 members:
+    - FedericoLópezGómez
+    - LeylaGarcia
+    - RicardoArcila
     - PhilippeRocca-Serra
-    - CarlosHorro
     - AndraWaagmeester
 ---
