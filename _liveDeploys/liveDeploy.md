@@ -428,4 +428,13 @@ list:
     bsc_profile: Tool
     bsc_ver: 0.1
     comments:  
+-
+    name: ModelArchive
+    highlight: 
+    example_URL: https://modelarchive.org
+    resource_URL: https://modelarchive.org
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.1
+    comments:
 ---
