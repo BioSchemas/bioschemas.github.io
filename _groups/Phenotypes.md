@@ -6,7 +6,7 @@ collection: groups
 active: true
 type: biological
 description: Specification for phenotype profile
-lead: [FedericoLópezGómez]
+lead: [FedericoLopezGomez]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20phenotypes
 folder:
 
@@ -34,7 +34,7 @@ objectives:
   ]
 
 members:
-    - FedericoLópezGómez
+    - FedericoLopezGomez
     - LeylaGarcia
     - RicardoArcila
     - PhilippeRocca-Serra
