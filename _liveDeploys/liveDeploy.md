@@ -375,7 +375,7 @@ list:
     bsc_ver: 0.1
     comments:  
 -
-    name: AIP Mutation Database 
+    name: AIP Mutation Database
     highlight:
     example_URL: https://aip.fipapatients.org/
     resource_URL: https://aip.fipapatients.org/
@@ -384,7 +384,7 @@ list:
     bsc_ver: 0.1
     comments:     
 -
-    name: AIP Mutation Database 
+    name: AIP Mutation Database
     highlight:
     example_URL: https://aip.fipapatients.org/
     resource_URL: https://aip.fipapatients.org/
@@ -401,4 +401,40 @@ list:
     bsc_profile: Dataset
     bsc_ver: 0.1
     comments:  
+-
+    name: SWISS-MODEL Repository
+    highlight:
+    example_URL: https://swissmodel.expasy.org/repository
+    resource_URL: https://swissmodel.expasy.org/repository
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.1
+    comments:  
+-
+    name: SWISS-MODEL Repository
+    highlight: 12 Datasets
+    example_URL: https://swissmodel.expasy.org/repository
+    resource_URL: https://swissmodel.expasy.org/repository
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.2
+    comments:  
+-
+    name: SWISS-MODEL
+    highlight:
+    example_URL: https://swissmodel.expasy.org
+    resource_URL: https://swissmodel.expasy.org
+    schema_org: SoftwareApplication
+    bsc_profile: Tool
+    bsc_ver: 0.1
+    comments:  
+-
+    name: ModelArchive
+    highlight: 
+    example_URL: https://modelarchive.org
+    resource_URL: https://modelarchive.org
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.1
+    comments:
 ---
