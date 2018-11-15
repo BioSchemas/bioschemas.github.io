@@ -435,6 +435,6 @@ list:
     resource_URL: https://modelarchive.org
     schema_org: DataCatalog
     bsc_profile: DataCatalog
-    bsc_ver: 0.2
+    bsc_ver: 0.1
     comments:
 ---
