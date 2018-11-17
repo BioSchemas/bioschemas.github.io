@@ -400,5 +400,23 @@ list:
     schema_org: Dataset
     bsc_profile: Dataset
     bsc_ver: 0.1
-    comments:  
+    comments:
+-
+    name: ChEMBL
+    highlight:
+    example_URL: https://www.ebi.ac.uk/chembl/beta/
+    resource_URL: https://www.ebi.ac.uk/chembl/beta/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:
+-
+    name: ChEMBL
+    highlight:
+    example_URL: https://www.ebi.ac.uk/chembl/beta/compound_report_card/CHEMBL59/
+    resource_URL: https://www.ebi.ac.uk/chembl/beta/
+    schema_org: MolecularEntity
+    bsc_profile: MolecularEntity
+    bsc_ver: 0.1
+    comments:      
 ---
