@@ -7,7 +7,7 @@ status: revision
 spec_type: Profile
 group: datarepositories
 use_cases_url: /useCases/DataRepositories/
-cross_walk_url: https://docs.google.com/spreadsheets/d/1H12h5VpVNJFzNs2RQJWjXkauCEn3qEsVFzKRoiHHffY
+cross_walk_url: https://docs.google.com/spreadsheets/d/1mIRsRHdl9bzGQrOEVcMiwvh5ZsCcGNsNfai2sZOBxQ0/edit#gid=1483018794
 gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20DataCatalogue
 live_deploy: /liveDeploys/
 
@@ -17,22 +17,24 @@ hierarchy:
 - CreativeWork
 - DataCatalog
 
-spec_mapping_url: https://docs.google.com/spreadsheets/d/1rEQEnSXRnjMwK-27bGvDXmi01KzgaqQr1-p2uWoTFwU/edit#gid=1483018794
+spec_mapping_url: https://docs.google.com/spreadsheets/d/e/2PACX-1vTFUC82c17f3mE_ZUUR-lQQQv1MgeLP3A_s03gtf4WW7RrHNJJ7QB95stSRrmYqIEEnm2rTfozJA-Cl/pubhtml?gid=292464567&single=true
 spec_info:
   title: DataCatalog
-  subtitle: Bioschemas specification for describing data repositories and data catalogues
-    in the life-sciences
-  description: A guide for how to describe data catalogs/repositories in the life-sciences using Schema.org-like annotation.
-  version: 0.1-draft
-  version_date: 20180425T160608
-  official_type: ""
+  subtitle: ""
+  description: A guide for how to describe data catalogs/repositories in the life-sciences
+    using Schema.org-like annotation.
+  version: 0.2-DRAFT
+  version_date: 20181130T115638
+  official_type: http://schema.org/DataCatalog
   full_example: https://github.com/BioSchemas/specifications/tree/master/DataCatalog/examples/
 mapping:
-- property: alternateName
+- property: about
   expected_types:
-  - Text
-  description: An alias for the item.
-  type: ""
+  - Thing
+  description: |-
+    The subject matter of the content.
+    Inverse property: subjectOf.
+  type: schema.org
   type_url: ""
   bsc_description: ""
   marginality: Recommended
@@ -45,9 +47,33 @@ mapping:
   - Text
   description: A citation or reference to another creative work, such as another publication,
     web page, scholarly article, etc.
-  type: ""
+  type: schema.org
   type_url: ""
-  bsc_description: CreativeWork:Name,URL
+  bsc_description: A citation for a publication that describes the dataset.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "DataCatalog",
+    "citation": {
+        "@type": "ScholarlyArticle",
+        "headline": "The Reactome pathway knowledgebase.",
+        "identifier": [
+          "http://identifiers.org/pubmed/24243840"
+        ],
+        "datePublished": "2015-11"
+      }
+    }
+- property: creator
+  expected_types:
+  - Organization
+  - Person
+  description: The creator/author of this CreativeWork. This is the same as the Author
+    property for CreativeWork.
+  type: schema.org
+  type_url: ""
+  bsc_description: The name of the dataset creator (person or organization).
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
@@ -57,38 +83,11 @@ mapping:
   - Dataset
   description: |-
     A dataset contained in this catalog.
-    Inverse property: [includedInDataCatalog](http://schema.org/includedDataCatalog).
-  type: ""
+    Inverse property: includedInDataCatalog.
+  type: schema.org
   type_url: ""
   bsc_description: ""
   marginality: Recommended
-  cardinality: MANY
-  controlled_vocab: ""
-  example: ""
-- property: dateCreated
-  expected_types:
-  - Date
-  - DateTime
-  description: The date on which the CreativeWork was created or the item was added
-    to a DataFeed.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Recommended
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: dateModified
-  expected_types:
-  - Date
-  - DateTime
-  description: The date on which the CreativeWork was most recently modified or when
-    the item's entry was modified within a DataFeed.
-  type: ""
-  type_url: ""
-  bsc_description: The date on which the data catalog/repository was most recently
-    modified.
-  marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
   example: ""
@@ -96,30 +95,17 @@ mapping:
   expected_types:
   - Text
   description: A description of the item.
-  type: ""
+  type: schema.org
   type_url: ""
-  bsc_description: ""
+  bsc_description: A short summary describing a dataset.
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
-- property: fileFormat
-  expected_types:
-  - Text
-  - URL
-  description: Media type, typically MIME format (see IANA site) of the content e.g.
-    application/zip of a SoftwareApplication binary. In cases where a CreativeWork
-    has several media type representations, 'encoding' can be used to indicate each
-    MediaObject alongside particular fileFormat information. Unregistered or niche
-    file formats can be indicated instead via the most appropriate URL, e.g. defining
-    Web page or a Wikipedia entry.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: ""
-  example: ""
+  example: |-
+    {
+    "@type": "DataCatalog",
+     "description": "The Reactome project is a collaboration to develop a curated resource of core pathways and reactions in human biology."
+    }
 - property: identifier
   expected_types:
   - PropertyValue
@@ -130,105 +116,108 @@ mapping:
     properties for representing many of these, either as textual strings or as URL
     (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
     for more details.
-  type: ""
+  type: schema.org
   type_url: ""
-  bsc_description: Unique identifier for the data catalog.
-  marginality: Recommended
-  cardinality: ONE
+  bsc_description: Identifier of the DataCatalog in Curie form. Eg. prefix:accession.
+  marginality: Minimum
+  cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    {
+    "@type": "DataCatalog",
+    "identifier": "MIR:00000018"
+    }
 - property: keywords
   expected_types:
   - Text
   description: Keywords or tags used to describe this content. Multiple entries in
     a keywords list are typically delimited by commas.
-  type: ""
+  type: schema.org
   type_url: ""
-  bsc_description: Use terms from Controlled Vocabularies where possible.
+  bsc_description: These keywords provide a summary of the dataset.
   marginality: Minimum
-  cardinality: ONE
+  cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    {
+    "@type": "DataCatalog",
+    "keywords": [
+        "Pathways",
+        "Reactions"
+      ]
+    }
 - property: license
   expected_types:
   - CreativeWork
   - URL
   description: A license document that applies to this content, typically indicated
     by URL.
-  type: ""
+  type: schema.org
   type_url: ""
-  bsc_description: CreativeWork:Name,URL
+  bsc_description: A license under which the dataset is distributed.
   marginality: Recommended
   cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "DataCatalog",
+    "license": "http://www.ebi.ac.uk/about/terms-of-use"
+    }
+- property: measurementTechnique
+  expected_types:
+  - Text
+  - URL
+  description: |-
+    A technique or technology used in a Dataset (or DataDownload, DataCatalog), corresponding to the method used for measuring the corresponding variable(s) (described using variableMeasured). This is oriented towards scientific and scholarly dataset publication but may have broader applicability; it is not intended as a full representation of measurement, but rather as a high level summary for dataset discovery.
+    For example, if variableMeasured is: molecule concentration, measurementTechnique could be: "mass spectrometry" or "nmr spectroscopy" or "colorimetry" or "immunofluorescence".
+    If the variableMeasured is "depression rating", the measurementTechnique could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory".
+    If there are several variableMeasured properties recorded for some given data object, use a PropertyValue for each variableMeasured and attach the corresponding measurementTechnique.
+  type: pending
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
   controlled_vocab: ""
   example: ""
 - property: name
   expected_types:
   - Text
   description: The name of the item.
-  type: ""
+  type: schema.org
   type_url: ""
-  bsc_description: ""
+  bsc_description: A descriptive name of the dataset.
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
-- property: provider
-  expected_types:
-  - Organization
-  - Person
-  description: The service provider, service operator, or service performer; the goods
-    producer. Another party (a seller) may offer those services or goods on behalf
-    of the provider. A provider may also serve as the seller. Supersedes carrier.
-  type: ""
-  type_url: ""
-  bsc_description: Contact information for this data repository/catalog.
-  marginality: Minimum
-  cardinality: MANY
-  controlled_vocab: ""
-  example: ""
-- property: publication
-  expected_types:
-  - PublicationEvent
-  description: A publication event associated with the item.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Recommended
-  cardinality: MANY
-  controlled_vocab: ""
-  example: ""
-- property: rdf:type
-  expected_types:
-  - URL
-  description: ""
-  type: external
-  type_url: https://www.w3.org/1999/02/22-rdf-syntax-ns#type
-  bsc_description: This is used by validation tools to indentify the profile used.
-    You must use the value specified in the Controlled Vocabulary column.
-  marginality: Minimum
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: sourceOrganization
-  expected_types:
-  - Organization
-  description: The Organization on whose behalf the creator was working.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Recommended
-  cardinality: MANY
-  controlled_vocab: ""
-  example: ""
+  example: |-
+    {
+    "@type": "DataCatalog",
+    "name": "Reactome"
+    }
 - property: url
   expected_types:
   - URL
   description: URL of the item.
-  type: ""
+  type: schema.org
   type_url: ""
-  bsc_description: ""
+  bsc_description: The location of a page describing the dataset.
   marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "DataCatalog",
+    "url": "https://www.reactome.org/"
+    }
+- property: version
+  expected_types:
+  - Number
+  - Text
+  description: The version of the CreativeWork embodied by a specified resource.
+  type: schema.org
+  type_url: ""
+  bsc_description: The version number for this dataset.
+  marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
   example: ""
