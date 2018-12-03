@@ -400,7 +400,25 @@ list:
     schema_org: Dataset
     bsc_profile: Dataset
     bsc_ver: 0.1
-    comments:  
+    comments:
+-
+    name: ChEMBL
+    highlight:
+    example_URL: https://www.ebi.ac.uk/chembl/beta/
+    resource_URL: https://www.ebi.ac.uk/chembl/beta/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.2
+    comments:
+-
+    name: ChEMBL
+    highlight:
+    example_URL: https://www.ebi.ac.uk/chembl/beta/compound_report_card/CHEMBL59/
+    resource_URL: https://www.ebi.ac.uk/chembl/beta/
+    schema_org: MolecularEntity
+    bsc_profile: MolecularEntity
+    bsc_ver: 0.2-draft
+    comments:
 -
     name: SWISS-MODEL Repository
     highlight:
@@ -435,6 +453,51 @@ list:
     resource_URL: https://modelarchive.org
     schema_org: DataCatalog
     bsc_profile: DataCatalog
+    bsc_ver: 0.1
+    comments:
+-
+    name: HAMAP - Unirules
+    highlight: 1 dataset
+    example_URL: https://hamap.expasy.org/cgi-bin/unirule/unirule_browse.cgi
+    resource_URL: https://hamap.expasy.org
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:
+-
+    name: HAMAP - Proteomes
+    highlight: 2 datasets
+    example_URL: https://hamap.expasy.org/archaea.html
+    resource_URL: https://hamap.expasy.org/proteomes.html
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.1
+    comments:
+-
+    name: ENZYME - The Enzyme Data Bank
+    highlight: 4450 datasets
+    example_URL: https://enzyme.expasy.org/EC/1.1.3.-
+    resource_URL: https://enzyme.expasy.org
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:
+-
+    name: PROSITE - Protein domains, families and functional sites description
+    highlight: 1 dataset
+    example_URL: https://prosite.expasy.org/cgi-bin/prosite/prosite-list.pl
+    resource_URL: https://prosite.expasy.org
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:
+-
+    name: PROSITE motifs (profiles and patterns)
+    highlight: 1 dataset
+    example_URL: https://prosite.expasy.org/cgi-bin/prosite/prosite_browse.cgi
+    resource_URL: https://prosite.expasy.org
+    schema_org: Dataset
+    bsc_profile: Dataset
     bsc_ver: 0.1
     comments:
 ---
