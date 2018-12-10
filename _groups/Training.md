@@ -31,7 +31,7 @@ objectives:
 
 specifications:
     [
-      'Course', 'CourseInstance', 'TrainingMaterial'
+     'TrainingMaterial' #, 'Course', 'CourseInstance' #- still in draft phase so links break
     ]
 
 members:
