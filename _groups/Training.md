@@ -21,7 +21,7 @@ adoption: true
 applications: true
 
 # Page attributes
-abstract: 'The Bioschemas Training Group develops and maintains community specifications for describing training opportunities and resources in biosciences available on the internet.'
+abstract: 'The Bioschemas Training Group develops and maintains community specifications for describing training opportunities (face-to-face and online courses) and training resources (permanently accessible materials, videos, slides etc) in the Life sciences.'
 objectives:
   [
     'To develop a common schema to facilitate the description and dissemination of life science training materials, courses, and course instances using <a href="http://schema.org/">schema.org</a>.',
@@ -42,6 +42,17 @@ members:
     - MateuszKuzak
     - AnnetteMcgrath
     - VictoriaDominguez
+    - PhilBarker
+    - FrancisOuellette
+    - DaveClements
+    - EijaKorpelainen
+    - CharlotteZwetsloot
+    - MohammadAsifKhan
+    - VerenaRas
+    - AnnMeyer
+    - PaulaMartinez     
+    - SarahMorgan    
+    - LeylaGarcia
 
 Former members:    
     - ChrisTaylor
@@ -54,7 +65,6 @@ Former members:
     - ChristaJanko
     - VickySchneider
     - AndraWaagmeester
-    - SarahMorgan
     - DanTimmons
     - AlejandraGonzalez-Beltran
     - GuillermoCalderonMantilla
