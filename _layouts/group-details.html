@@ -29,17 +29,24 @@
                   </ul>
                   <br/>
                   {% endif %}
-                  {% if page.draft_specifications or page.draft_types %}
-                  <br />
-                  <h5>Draft specifications</h5>
+                  {% if page.draft_specifications %}
+                  <h5>Draft Profiles</h5>
                   <ul>
                      {% for spec in page.draft_specifications %}
                      {% assign spec-id = "/devSpecs/" | append: spec %}
                      {% assign profile = site.devSpecs | where: "name", spec | first %}
                      <li><a href="/devSpecs/{{spec}}/">{{spec}} (version {{profile.spec_info.version}})</a></li>
                      {% endfor %}
-                     {% for spec in page.draft_types %}
-                     <li><a href="/devTypes/{{spec}}/">{{spec}}</a></li>
+                  </ul>
+                  <br/>
+                  {% endif %}
+                  {% if page.draft_types %}
+                  <h5>Draft Types</h5>
+                  <ul>
+                     {% for type in page.draft_types %}
+                     {% assign type-id = "/devTypes/" | append: type %}
+                     {% assign draftType = site.devTypes | where: "name", type | first %}
+                     <li><a href="/devTypes/{{type}}/">{{type}} (version {{draftType.version}})</a></li>
                      {% endfor %}
                   </ul>
                   <br/>
