@@ -33,6 +33,10 @@ types:
     [
       'BioChemEntity'
     ]
+draft_types:
+    [
+      'BioChemEntity'
+    ]
 
 members:
   - PhilippeRocca-Serra
