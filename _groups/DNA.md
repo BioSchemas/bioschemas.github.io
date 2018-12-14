@@ -11,12 +11,6 @@ lead: [JamesAlastairMcLaughlin,ChristianAtallah]
 issues: https://github.com/BioSchemas/specifications/labels/type%3A%20DNA
 folder: https://drive.google.com/drive/folders/1Ar4E1UivzIfCxi8MB_FzYSkEO_EUbe8e
 
-# Progress status
-usecase: ''
-crosswalk: ''
-spec-versions: [
-
-]
 test: false
 adoption: false
 applications: false
@@ -27,14 +21,22 @@ objectives:
   [
   ]
 
-specifications:
+#specifications:
+#  [
+#  ]
+draft_specifications:
   [
+    'DNA'
+  ]
+#types:
+#  [
+#  ]
+draft_types:
+  [
+    'DNA'
   ]
 
 members:
     - NathanDunn
     - AnilWipat
 ---
-
-
-
