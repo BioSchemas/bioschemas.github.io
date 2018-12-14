@@ -7,7 +7,7 @@ active: true
 type: generic
 description: Specification for data catalog profile
 lead: [HenningHermjakob]
-issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20datarepository
+issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20DataCatalog
 folder: https://drive.google.com/open?id=0Bw_p-HKWUjHoNDJNUWltYVBkV1k
 
 # Page attributes

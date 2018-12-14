@@ -11,7 +11,7 @@ lead:
     - JustinClark-Casey
     - LeylaGarcia
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20tool
-folder: https://drive.google.com/drive/u/1/folders/0ByZjzHhAz30Ta0ZhWV8wb1p4TTA
+folder: https://drive.google.com/open?id=0BzDhyOWTnRNTYkdQNHppUjZ3U2M
 
 # Page attributes
 abstract: 'The Tools Group develops and maintains a community specification for describing life science tools.'

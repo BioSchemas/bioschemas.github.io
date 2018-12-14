@@ -9,7 +9,7 @@ description: Tools for validating markup against a specification
 lead: [AlasdairGray]
 
 # Progress status
-issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20validation
+issues: https://github.com/BioSchemas/bioschemas/labels/Validation
 
 # Page attributes
 abstract: 'Though search engines provide validation of the schema.org structured data provided in a page it does not make an analysis of the content of a site and do not validate important features in Bioschemas like compliance with content guidelines, vocabularies or cardinality.'

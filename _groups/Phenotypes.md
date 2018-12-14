@@ -7,7 +7,7 @@ active: true
 type: biological
 description: Specification for phenotype profile
 lead: [FedericoLopezGomez]
-issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20phenotypes
+issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Phenotype
 folder: https://drive.google.com/open?id=1zznGVUcp4yTSzyMoIA7BF9k-nieOSHbL
 
 # Page attributes
