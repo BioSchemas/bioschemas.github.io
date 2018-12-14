@@ -420,6 +420,15 @@ list:
     bsc_ver: 0.2-draft
     comments:
 -
+    name: Alliance of Genome Resources
+    highlight:
+    example_URL: https://www.alliancegenome.org/gene/RGD:620474
+    resource_URL: https://www.alliancegenome.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:
+-
     name: SWISS-MODEL Repository
     highlight:
     example_URL: https://swissmodel.expasy.org/repository
