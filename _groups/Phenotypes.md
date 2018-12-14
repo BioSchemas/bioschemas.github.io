@@ -10,10 +10,6 @@ lead: [FedericoLopezGomez]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20phenotypes
 folder: https://drive.google.com/open?id=1zznGVUcp4yTSzyMoIA7BF9k-nieOSHbL
 
-test: false
-adoption: false
-applications: false
-
 # Page attributes
 abstract: 'Information of phenotypes is scattered in multiple and disperse samples data repositories.
 Not all the phenotype data repositories have a programmatic interface and the existing variety of programmatic interfaces are diverse and changeable.'

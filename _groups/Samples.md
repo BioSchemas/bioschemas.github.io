@@ -10,10 +10,6 @@ lead: [HelenParkinson, TonyBurdett, MelanieCourtot]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20samples
 folder: https://drive.google.com/drive/folders/0Bw_p-HKWUjHoaWhkTnBka2FWRE0
 
-test: false
-adoption: false
-applications: false
-
 # Page attributes
 abstract: 'Information of samples is scattered in multiple and dispersed samples data repositories.
 Not all the sample data repositories have a programmatic interface and the existing variety of programmatic interfaces are diverse and changeable.'

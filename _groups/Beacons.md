@@ -10,10 +10,6 @@ lead: [SerenaScollen, AudaldLloret]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20beacons
 folder: https://drive.google.com/drive/folders/0BwpCuN9mloG8WTl6X3hkeFIwems
 
-test: false
-adoption: false
-applications: false
-
 # Page attributes
 abstract: 'At the moment the registration of a Beacon service in the Beacon Network is done manually and needs to be updated manually if the beacon service changes.'
 objectives:

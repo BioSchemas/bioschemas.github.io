@@ -10,10 +10,6 @@ lead: [NiallBeard, GabriellaRustici]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20training%20material
 folder: https://drive.google.com/drive/u/1/folders/0B6crv12s8piRT0w5VXRUc09VTFU
 
-test: true
-adoption: true
-applications: true
-
 # Page attributes
 abstract: 'The Bioschemas Training Group develops and maintains community specifications for describing training opportunities (face-to-face and online courses) and training resources (permanently accessible materials, videos, slides etc) in the Life sciences.'
 objectives:

@@ -11,10 +11,6 @@ lead:
 issues: https://github.com/BioSchemas/specifications/labels/type%3A%20Study
 folder: https://drive.google.com/drive/folders/1ml4elMOIlLUOie4i8gnXmP5eNn-8D2QD
 
-test: false
-adoption: false
-applications: false
-
 # Page attributes
 abstract: 'Properties to support the representation of scientific studies.'
 objectives:

@@ -8,11 +8,7 @@ type: biological
 description: Specification for protein type
 lead: [EgonWillighagen, RicardoArcila, DavidMendez]
 issues: https://github.com/BioSchemas/specifications/labels/type%3A%20Chemistry
-
-
-test: false
-adoption: false
-applications: false
+folder: https://drive.google.com/drive/folders/0B7J0zlrcfEkGNnk3MXhyb01mTEk
 
 # Page attributes
 abstract: 'Develop a Bioschemas profile around a chemical use case involving resources such as ChEMBL'

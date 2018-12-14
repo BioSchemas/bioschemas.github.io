@@ -10,10 +10,6 @@ lead: [HenningHermjakob]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20datarepository
 folder: https://drive.google.com/open?id=0Bw_p-HKWUjHoNDJNUWltYVBkV1k
 
-test: false
-adoption: false
-applications: false
-
 # Page attributes
 abstract: 'Most Life sciences data repositories are missing a home page providing information about themselves with consistent structured data that would help search engines and registries to index them.
 Several registries (eg. biosharing, bio.tools, identifiers.org, ...) maintain overlapping efforts to collect certain metadata (eg. title, description, keywords, ...) about “data repositories” (eg. UniProt Knowledgebase, Human Protein Atlas, Protein Data Bank, ...).

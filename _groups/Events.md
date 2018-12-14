@@ -10,10 +10,6 @@ lead: [MartinCook]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20event
 folder: https://drive.google.com/drive/u/1/folders/0B6crv12s8piRODVQX2U2NHlkdXM
 
-test: true
-adoption: true
-applications: true
-
 # Page attributes
 abstract: 'Most dataset repositories and registries of dataset do not provide structured data easily crawlable by search engines.
 Registries like DataMed, OMICsDI and BioSamples do automated ingestion of content mainly through APIs but not all the data repositories have a programmatic interface and the existing variety of programmatic interfaces are subject to changes which break integration workflows.'
