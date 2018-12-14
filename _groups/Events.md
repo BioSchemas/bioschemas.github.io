@@ -9,13 +9,7 @@ description: Specification for events
 lead: [MartinCook]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20event
 folder: https://drive.google.com/drive/u/1/folders/0B6crv12s8piRODVQX2U2NHlkdXM
-# Progress status
-usecase: true
-crosswalk: true
-spec-versions: [
-  [{"spec-num": "0.1", "spec-url": "https://docs.google.com/document/d/12O8gsOuH2qHKpis6vTHxXExraNH5XZEnoilwNgWWgaQ"}]#,
-  #[{"spec-num": "0.2", "spec-url": "https://docs.google.com/document/d/1fn-of4cxGJLYiw1G3-KepZsIE0Ptq4GSx-h3jPmvdvc"}]
-]
+
 test: true
 adoption: true
 applications: true
@@ -32,6 +26,10 @@ objectives:
   ]
 
 specifications:
+  [
+    'Event'
+  ]
+draft_specifications:
   [
     'Event'
   ]
