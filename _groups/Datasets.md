@@ -2,7 +2,6 @@
 layout: group-details
 identifier: data
 name: Datasets
-path: datasets.html
 collection: groups
 active: true
 type: generic
@@ -11,13 +10,6 @@ lead: [SusannaSansone]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20data
 folder: https://drive.google.com/open?id=0B2tKthYRS0f5aEhkU1Q4aEE5TEU
 
-# Progress status
-usecase: https://docs.google.com/document/d/1klUdYkCK-7YmbfKv2FNvBIOXZ1Pq9EhxvjceO7gWzfQ/edit#heading=h.ngffjf4and1x
-crosswalk: https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAvaADLmI_FrIk7O3BEkxY/edit#gid=0
-spec-versions: [
-  [{"spec-num": "0.1", "spec-url": "https://docs.google.com/document/d/1klUdYkCK-7YmbfKv2FNvBIOXZ1Pq9EhxvjceO7gWzfQ"}]#,
-  #[{"spec-num": "0.2", "spec-url": "https://docs.google.com/document/d/1fn-of4cxGJLYiw1G3-KepZsIE0Ptq4GSx-h3jPmvdvc"}]
-]
 test: false
 adoption: false
 applications: false
@@ -37,6 +29,18 @@ objectives:
 specifications:
   [
     'Dataset', 'DataRecord'
+  ]
+draft_specifications:
+  [
+    'Dataset', 'DataRecord'
+  ]
+types:
+  [
+    'DataRecord'
+  ]
+draft_types:
+  [
+    'DataRecord'
   ]
 
 members:
