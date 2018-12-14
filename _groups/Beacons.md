@@ -2,7 +2,6 @@
 layout: group-details
 identifier: beacons
 name: Beacons
-path: beacons.html
 collection: groups
 active: true
 type: generic
@@ -11,13 +10,6 @@ lead: [SerenaScollen, AudaldLloret]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20beacons
 folder: https://drive.google.com/drive/folders/0BwpCuN9mloG8WTl6X3hkeFIwems
 
-# Progress status
-usecase: ''
-crosswalk: https://docs.google.com/spreadsheets/d/1wLJa4LkCM8oIvBPTFS1IBcygRGBpSrAgNfRSEadVICo/edit#gid=1261485211
-spec-versions: [
-  [{"spec-num": "0.1", "spec-url": "https://docs.google.com/document/d/1kQE3lixvBjBiZ8X3I1Mi44c3dcdgf4SshoGdNX5-_TE"}]#,
-  #[{"spec-num": "0.2", "spec-url": "https://docs.google.com/document/d/1fn-of4cxGJLYiw1G3-KepZsIE0Ptq4GSx-h3jPmvdvc"}]
-]
 test: false
 adoption: false
 applications: false
