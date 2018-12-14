@@ -23,7 +23,11 @@ objectives:
   ]
 draft_specifications:
   [
-    'MolecularEntity', 'Chemical', 'ChemicalStructure'
+    'ChemicalSubstance', 'MolecularEntity'
+  ]
+draft_types:
+  [
+    'ChemicalSubstance', 'MolecularEntity'
   ]
 
 members:
