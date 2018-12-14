@@ -1,7 +1,7 @@
 ---
 layout: group-details
 identifier: training
-name: Training 
+name: Training
 collection: groups
 active: true
 type: generic
@@ -54,7 +54,7 @@ members:
     - SarahMorgan    
     - LeylaGarcia
 
-Former members:    
+Former-Members:    
     - ChrisTaylor
     - PhilippeRocca-Serra
     - SusannaSansone
