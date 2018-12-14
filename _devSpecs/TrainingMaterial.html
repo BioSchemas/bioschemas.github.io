@@ -16,20 +16,16 @@ hierarchy:
 - Thing
 - CreativeWork
 
-spec_mapping_url: https://docs.google.com/spreadsheets/d/17scwe6fx9-WHBDqxTdD20F0Ji8kX9S7TMN6tNuw-0jY/edit#gid=1261485211
+spec_mapping_url: https://docs.google.com/spreadsheets/d/11Vc6-XIW7xfbuSROcnZzdOUq6wNervm61tGClZ3K3N0/edit#gid=1261485211
+
 spec_info:
   title: TrainingMaterial
-  subtitle: 'A specification for describing training materials in life sciences.'
-  description: 'The Life Science Training Materials specification provides a way to describe
-    bioscience training material on the World Wide Web. It defines a set of metadata
-    and vocabularies, built on top of existing technologies and standards, that can
-    be used to represent events in Web pages and applications. The goal of the specification
-    is to make it easier to discover, exchange and integrate life science training material
-    information across the Internet.'
-  version: 0.2
-  version_date: 20180307T144349
+  subtitle: A specification for describing training materials in life sciences.
+  description: The Life Science Training Materials specification provides a way to describe bioscience training material on the World Wide Web. It defines a set of metadata and vocabularies, built on top of existing technologies and standards, that can be used to represent events in Web pages and applications. The goal of the specification is to make it easier to discover, exchange and integrate life science training material information across the Internet.
+  version: "0.4-draft"
+  version_date: 20181116T103334
   official_type: ""
-  full_example: "https://github.com/BioSchemas/specifications/tree/master/TrainingMaterial/examples/"
+  full_example: https://github.com/BioSchemas/specifications/tree/master/TrainingMaterial/examples/
 mapping:
 - property: about
   expected_types:
@@ -37,11 +33,15 @@ mapping:
   description: The subject matter of the content.
   type: ""
   type_url: ""
-  bsc_description: ""
-  marginality: Minimum
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
+  bsc_description: The subject of this Training Material. The topic, dataset, tools,
+    etc that this material is about.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: '[EDAM Topic Ontology](http://edamontology.org)'
+  example: "\"about\": [{\n  \"@type\": \"DefinedTerm\", \n  \"@id\": \"http://edamontology.org/topic_3316\",\n
+    \ \"inDefinedTermSet\": \"http://edamontology.org\",\n  \"termCode\": \"topic_3316\",\n
+    \ \"name\": \"Computer Science\",\n  \"url\": \"https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_3316\"\n},
+    {\n  \"@type\": \"Dataset\",\n   \"@id\": \"https://zenodo.org/record/1480624#.W-2as3r0nCM\"\n}]"
 - property: audience
   expected_types:
   - Audience
@@ -49,11 +49,12 @@ mapping:
     Supersedes serviceAudience.
   type: ""
   type_url: ""
-  bsc_description: Please choose values from [EDAM:Topic](http://edamontology.org/topic_0003).
-  marginality: Minimum
+  bsc_description: ""
+  marginality: Recommended
   cardinality: MANY
-  controlled_vocab: '[EDAM:Topic](http://edamontology.org/topic_0003)'
-  example: ""
+  controlled_vocab: ""
+  example: "\"audience\": {\n  \"@type\": \"Audience\",\n  \"audienceType\": \"PhD
+    students\" \n}"
 - property: author
   expected_types:
   - Organization
@@ -67,7 +68,9 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: "\"author\":  [{\n  \"@type\": \"Person\",\n  \"name\": \"Elizabeth Windsor\",\n
+    \ \"email\": \"e.r.windsor@gmail.com\"\n},{ \n  \"@type\": \"Organization\",\n
+    \ \"name\": \"University of Manchester\"\n}]"
 - property: contributor
   expected_types:
   - Organization
@@ -75,11 +78,13 @@ mapping:
   description: A secondary contributor to the CreativeWork or Event.
   type: ""
   type_url: ""
-  bsc_description: ""
-  marginality: Recommended
+  bsc_description: Add the names of organizations or persons who contributed but are
+    not considered authors
+  marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: "\"contributor\":  [{\n  \"@type\": \"Person\",\n  \"name\": \"Bob Smith\",\n},{
+    \n  \"@type\": \"Organization\",\n  \"name\": \"University of Edinburgh\"\n}]"
 - property: dateCreated
   expected_types:
   - Date
@@ -92,7 +97,7 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"dateCreated": "2018-07-04T11:24:13+00:00"'
 - property: dateModified
   expected_types:
   - Date
@@ -105,7 +110,18 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"dateModified": "2018-08-04T19:34:12+00:00"'
+- property: datePublished
+  expected_types:
+  - Date
+  description: Date of first broadcast/publication.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"datePublished": "2018-08-04T19:34:12+00:00"'
 - property: description
   expected_types:
   - Text
@@ -113,48 +129,43 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: ""
-  marginality: Recommended
+  marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
-- property: difficultyLevel
-  expected_types:
-  - Text
-  description: ""
-  type: bioschemas
-  type_url: ""
-  bsc_description: Difficulty level; level of experience required by users. Choose
-    value from Controlled Vocabulary column.
-  marginality: Recommended
-  cardinality: ONE
-  controlled_vocab: |-
-    - beginner
-    - intermediate
-    - advanced
-  example: ""
-- property: genre
-  expected_types:
-  - Text
-  - URL
-  description: Genre of the creative work, broadcast channel or group.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Minimum
-  cardinality: MANY
-  controlled_vocab: '[EDAM:Topic](http://edamontology.org/topic_0003)'
-  example: ""
+  example: |
+    "description": "This tutorial will take you through the basic usage of the command line shell. In it, you will discover what a shell is, skills for directory navigation, file manipulation, and how to run tools"
 - property: hasPart
   expected_types:
   - CreativeWork
+  - Trip
   description: |-
     Indicates a CreativeWork that is (in some sense) a part of this CreativeWork.
     Inverse property: isPartOf.
   type: ""
   type_url: ""
-  bsc_description: ""
+  bsc_description: A list of resources that are contained within the training material.
+    For example; recorded lectures, quizes, images, etc
   marginality: Optional
   cardinality: MANY
+  controlled_vocab: ""
+  example: "\"hasPart\": [\n{\n    \"@type\": \"CreativeWork\",\n    \"url\": \"http://directoryVisuals.io\",\n
+    \   \"name\": \"Shell Directory Visualizer\"\n }, \n {\n    \"@type\": \"CreativeWork\",\n
+    \   \"url\": \"http://shell.io\",\n    \"name\": \"Interactive Shell tutorial\"\n}]"
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: Permanent identifer, such as DOIs.
+  marginality: Optional
+  cardinality: ONE
   controlled_vocab: ""
   example: ""
 - property: inLanguage
@@ -168,10 +179,10 @@ mapping:
   type_url: ""
   bsc_description: Defaults to English if not specified. Please choose a value from
     [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
-  marginality: Optional
+  marginality: Recommended
   cardinality: ONE
   controlled_vocab: '[IETF BCP 47 standard](http://tools.ietf.org/html/bcp47)'
-  example: ""
+  example: '"inLanguage": " en-US"'
 - property: isPartOf
   expected_types:
   - CreativeWork
@@ -180,11 +191,16 @@ mapping:
     Inverse property: [hasPart](http://schema.org/hasPart).
   type: ""
   type_url: ""
-  bsc_description: ""
-  marginality: Optional
+  bsc_description: 'Describe any resources this training material is part of. '
+  marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "isPartOf": [{
+          "@type": "CreativeWork",
+          "url": "http://computerScience4LS.org",
+          "name": "The complete Computer Science for Life Scientists Coursebook"
+    }]
 - property: keywords
   expected_types:
   - Text
@@ -193,10 +209,10 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: ""
-  marginality: Recommended
+  marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"keywords": "Unix, Shell, Command Line Tools, Terminal, Bash"'
 - property: learningResourceType
   expected_types:
   - Text
@@ -204,13 +220,11 @@ mapping:
     For example, 'presentation', 'handout'.
   type: ""
   type_url: ""
-  bsc_description: Please either leave blank or select one of the values from the
-    Controlled Vocabulary column.
-  marginality: Optional
+  bsc_description: ""
+  marginality: Recommended
   cardinality: MANY
-  controlled_vocab: "- exercise files \n- handout \n- presentation \n- scripts \n-
-    video"
-  example: ""
+  controlled_vocab: ""
+  example: '"learningResourceType": ["handout"]'
 - property: license
   expected_types:
   - CreativeWork
@@ -219,9 +233,23 @@ mapping:
     by URL.
   type: ""
   type_url: ""
-  bsc_description: ""
+  bsc_description: If there is a licence it must be added.
   marginality: Recommended
-  cardinality: ONE
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"license": ["https://creativecommons.org/licenses/by/4.0/"]'
+- property: mainEntityOfPage
+  expected_types:
+  - CreativeWork
+  - URL
+  description: |-
+    Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details.
+    Inverse property: mainEntity.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
   controlled_vocab: ""
   example: ""
 - property: mentions
@@ -231,9 +259,8 @@ mapping:
     necessarily about a concept.
   type: ""
   type_url: ""
-  bsc_description: Can be used to link additional resources, such as datasets, tools,
-    etc.
-  marginality: Optional
+  bsc_description: External resources that are referenced within the training material
+  marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
   example: ""
@@ -247,41 +274,7 @@ mapping:
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
-- property: pid
-  expected_types:
-  - Text
-  description: ""
-  type: bioschemas
-  type_url: ""
-  bsc_description: Permanent identifer, such as DOIs.
-  marginality: Optional
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: rdf:type
-  expected_types:
-  - URL
-  description: ""
-  type: external
-  type_url: https://www.w3.org/1999/02/22-rdf-syntax-ns#type
-  bsc_description: This is used by validation tools to indentify the profile used.
-    You must use the value specified in the Controlled Vocabulary column.
-  marginality: Minimum
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: review
-  expected_types:
-  - Review
-  description: A review of the item. Supersedes reviews.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: ""
-  example: ""
+  example: '"name": "The Unix Command Line tutorial for Bioinformaticians"'
 - property: sameAs
   expected_types:
   - URL
@@ -292,9 +285,9 @@ mapping:
   type_url: ""
   bsc_description: ""
   marginality: Optional
-  cardinality: ONE
+  cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: '"sameAs": ["http://coursera.org/CLT"]'
 - property: timeRequired
   expected_types:
   - Duration
@@ -303,10 +296,10 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: Please specify in [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601).
-  marginality: Optional
+  marginality: Recommended
   cardinality: ONE
-  controlled_vocab: ""
-  example: ""
+  controlled_vocab: '[ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601).'
+  example: '"timeRequired": "P1W2DT5H"'
 - property: url
   expected_types:
   - URL
@@ -315,9 +308,9 @@ mapping:
   type_url: ""
   bsc_description: ""
   marginality: Recommended
-  cardinality: MANY
+  cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"url": "http://teach-me-ctl.com/tutorial"'
 - property: version
   expected_types:
   - Number
@@ -329,7 +322,7 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""  
+  example: '"version": "0.2.0"'
 ---
 <!DOCTYPE HTML>
 <html>
