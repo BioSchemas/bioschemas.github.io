@@ -1,12 +1,12 @@
 ---
 layout: person-details
 id: TerriAtwood
-first-name: Terri
-last-name: Atwood
+first-name: Teresa
+last-name: Attwood
 collection: people
-affiliation:
-homepage:
+affiliation: University of Manchester
+homepage: https://www.research.manchester.ac.uk/portal/teresa.k.attwood.html
 github_username:
-orcid:
-groups: [trainingmaterials]
+orcid: https://orcid.org/0000-0003-2409-4235
+groups: [training]
 ---

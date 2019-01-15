@@ -1,7 +1,7 @@
 ---
 layout: group-details
 identifier: training
-name: Training 
+name: Training
 collection: groups
 active: true
 type: generic
@@ -21,7 +21,7 @@ adoption: true
 applications: true
 
 # Page attributes
-abstract: 'The Bioschemas Training Group develops and maintains community specifications for describing training opportunities and resources in biosciences available on the internet.'
+abstract: 'The Bioschemas Training Group develops and maintains community specifications for describing training opportunities (face-to-face and online courses) and training resources (permanently accessible materials, videos, slides etc) in the Life sciences.'
 objectives:
   [
     'To develop a common schema to facilitate the description and dissemination of life science training materials, courses, and course instances using <a href="http://schema.org/">schema.org</a>.',
@@ -31,12 +31,34 @@ objectives:
 
 specifications:
     [
-      'Course', 'CourseInstance', 'TrainingMaterial'
+     'TrainingMaterial' #, 'Course', 'CourseInstance' #- still in draft phase so links break
+    ]
+draft_specifications:
+    [
+     'TrainingMaterial', 'Course', 'CourseInstance' #- still in draft phase so links break
     ]
 
 members:
+    - CeliaVanGelder
+    - MichelleBrazas
+    - SonikaTyagi
+    - TerriAtwood   
+    - MateuszKuzak
+    - AnnetteMcgrath
+    - VictoriaDominguez
     - PhilBarker
-    - NiallBeard
+    - FrancisOuellette
+    - DaveClements
+    - EijaKorpelainen
+    - CharlotteZwetsloot
+    - MohammadAsifKhan
+    - VerenaRas
+    - AnnMeyer
+    - PaulaMartinez     
+    - SarahMorgan    
+    - LeylaGarcia
+
+Former-Members:    
     - ChrisTaylor
     - PhilippeRocca-Serra
     - SusannaSansone
@@ -47,8 +69,6 @@ members:
     - ChristaJanko
     - VickySchneider
     - AndraWaagmeester
-    - SarahMorgan
-    - VictoriaDominguez
     - DanTimmons
     - AlejandraGonzalez-Beltran
     - GuillermoCalderonMantilla
@@ -56,8 +76,6 @@ members:
     - ClaireJohnson
     - LeeLarcombe
     - AleksandraNenadic
-    - TerriAtwood
     - MichaelCrusoe
     - RafaelJimenez
-    - GabriellaRustici    
 ---

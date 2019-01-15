@@ -17,29 +17,7 @@
                      {% endfor %}
                   </ol>
                   <br />
-                  <h5>Group Leaders</h5>
-                  <div id="leadTable">
-                     {% for leader in page.lead %}
-                     {% assign lead-id = "/people/" | append: leader %}
-                     {% assign author = site.people | where:"id", lead-id | first %}
-                     {% if author.homepage or author.github_username or author.orcid %}
-                     <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
-                     {% else %}
-                     <p>{{ author.first-name }} {{ author.last-name }}</p>
-                     {% endif %}
-                     {% endfor %}
-                  </div>
-                  <br />
-                  <h5>Other group members</h5>
-                  <div id="peopleTable">
-                    {% for member-name in page.members %}
-                    {% assign member-id = "/people/" | append: member-name %}
-                    {% assign member = site.people | where:"id", member-id | first %}
-                    <p><a href="{{ member.url }}">{{ member.first-name }} {{ member.last-name }}</a></p>
-                    {% endfor %}
-                  </div>
                   {% if page.specifications or page.types %}
-                  <br />
                   <h5>Specifications</h5>
                   <ul>
                      {% for spec in page.specifications %}
@@ -49,6 +27,7 @@
                      <li><a href="/types/{{spec}}">{{spec}}</a></li>
                      {% endfor %}
                   </ul>
+                  <br/>
                   {% endif %}
                   {% if page.draft_specifications or page.draft_types %}
                   <br />
@@ -61,6 +40,35 @@
                      <li><a href="/devTypes/{{spec}}/">{{spec}}</a></li>
                      {% endfor %}
                   </ul>
+                  <br/>
+                  {% endif %}
+                  <h5>Group Leaders</h5>
+                  <div id="leadTable">
+                     {% for leader in page.lead %}
+                     {% assign lead-id = "/people/" | append: leader %}
+                     {% assign author = site.people | where:"id", lead-id | first %}
+                     <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
+                     {% endfor %}
+                  </div>
+                  <br />
+                  <h5>Group Members</h5>
+                  <div id="peopleTable">
+                    {% for member-name in page.members %}
+                    {% assign member-id = "/people/" | append: member-name %}
+                    {% assign member = site.people | where:"id", member-id | first %}
+                    <p><a href="{{ member.url }}">{{ member.first-name }} {{ member.last-name }}</a></p>
+                    {% endfor %}
+                  </div>
+                  {% if page.Former-Members %}
+                  <br/>
+                  <h5>Former Group members</h5>
+                  <div id="formerPeopleTable">
+                    {% for member-name in page.Former-Members %}
+                    {% assign member-id = "/people/" | append: member-name %}
+                    {% assign member = site.people | where:"id", member-id | first %}
+                    <p><a href="{{ member.url }}">{{ member.first-name }} {{ member.last-name }}</a></p>
+                    {% endfor %}
+                  </div>
                   {% endif %}
                   {{ content }}
                </section>
@@ -71,18 +79,23 @@
       <script type="application/x-javascript">
          if(navigator.userAgent.match(/android/i)) {
              document.getElementById('peopleTable').style.columnCount = 1;
+             document.getElementById('formerPeopleTable').style.columnCount = 1;
              document.getElementById('leadTable').style.columnCount = 1;
          } else if(navigator.userAgent.match(/phone/i)) {
              document.getElementById('peopleTable').style.columnCount = 1;
+             document.getElementById('formerPeopleTable').style.columnCount = 1;
              document.getElementById('leadTable').style.columnCount = 1;
          } else if(navigator.userAgent.match(/tablet/i)) {
              document.getElementById('peopleTable').style.columnCount = 1;
+             document.getElementById('formerPeopleTable').style.columnCount = 1;
              document.getElementById('leadTable').style.columnCount = 1;
          } else if(navigator.userAgent.match(/ipad/i)) {
              document.getElementById('peopleTable').style.columnCount = 1;
+             document.getElementById('formerPeopleTable').style.columnCount = 1;
              document.getElementById('leadTable').style.columnCount = 1;
          } else {
              document.getElementById('peopleTable').style.columnCount = 4;
+             document.getElementById('formerPeopleTable').style.columnCount = 4;
              document.getElementById('leadTable').style.columnCount = 4;
          }
       </script>
