@@ -2,25 +2,13 @@
 layout: group-details
 identifier: data
 name: Datasets
-path: datasets.html
 collection: groups
 active: true
 type: generic
 description: Specification for Dataset
 lead: [SusannaSansone]
-issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20data
+issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Dataset
 folder: https://drive.google.com/open?id=0B2tKthYRS0f5aEhkU1Q4aEE5TEU
-
-# Progress status
-usecase: https://docs.google.com/document/d/1klUdYkCK-7YmbfKv2FNvBIOXZ1Pq9EhxvjceO7gWzfQ/edit#heading=h.ngffjf4and1x
-crosswalk: https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAvaADLmI_FrIk7O3BEkxY/edit#gid=0
-spec-versions: [
-  [{"spec-num": "0.1", "spec-url": "https://docs.google.com/document/d/1klUdYkCK-7YmbfKv2FNvBIOXZ1Pq9EhxvjceO7gWzfQ"}]#,
-  #[{"spec-num": "0.2", "spec-url": "https://docs.google.com/document/d/1fn-of4cxGJLYiw1G3-KepZsIE0Ptq4GSx-h3jPmvdvc"}]
-]
-test: false
-adoption: false
-applications: false
 
 # Page attributes
 abstract: 'Most dataset repositories and registries of dataset do not provide structured data easily crawlable by search engines.
@@ -37,6 +25,18 @@ objectives:
 specifications:
   [
     'Dataset', 'DataRecord'
+  ]
+draft_specifications:
+  [
+    'Dataset', 'DataRecord'
+  ]
+types:
+  [
+    'DataRecord'
+  ]
+draft_types:
+  [
+    'DataRecord'
   ]
 
 members:

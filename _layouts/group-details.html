@@ -10,6 +10,38 @@
                <section id="main_content" class="inner">
                   <h1>{{page.name}}</h1>
                   <p>{{page.abstract}}</p>
+                  <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto;">
+                     <thead>
+                        <tr>
+                           <th>Folder:</th>
+                           <td class="spec_links">
+                              {% if page.folder %}
+                              <a href="{{page.folder}}" target="_blank">
+                                <img src="/images/Google_Drive_logo.png" alt="View BioSchemas {{ page.name }} Folder">
+                              </a>
+                              {%else%}
+                              <a>
+                                <img src="/images/Google_Drive_logo.png" alt="View BioSchemas {{ page.name }} Folder"  style="filter: grayscale(100%);">
+                              </a>
+                              {%endif%}
+                           </td>
+                           <th>Task &amp; Issues:</th>
+                           <td class="spec_links">
+                              {% if page.gh_tasks == '' %}
+                              <a>
+                              <img src="/images/specs_tasks.png" alt="BioSchemas {{ page.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
+                              </a>
+                              {% else %}
+                              <a href="{{page.issues}}" target="_blank">
+                              <img src="/images/specs_tasks.png" alt="BioSchemas {{ page.name }} Github Tasks or Issues">
+                              </a>
+                              {% endif %}
+                           </td>
+
+                        </tr>
+                     </thead>
+                  </table>
+                  <br/>
                   <h5>Objectives</h5>
                   <ol>
                      {% for obj in page.objectives %}
@@ -17,27 +49,46 @@
                      {% endfor %}
                   </ol>
                   <br />
-                  {% if page.specifications or page.types %}
-                  <h5>Specifications</h5>
+                  {% if page.specifications %}
+                  <h5>Profiles</h5>
                   <ul>
                      {% for spec in page.specifications %}
-                     <li><a href="/specifications/{{spec}}">{{spec}}</a></li>
-                     {% endfor %}
-                     {% for spec in page.types %}
-                     <li><a href="/types/{{spec}}">{{spec}}</a></li>
+                     {% assign spec-id = "/specifications/" | append: spec %}
+                     {% assign profile = site.specifications | where: "name", spec | first %}
+                     <li><a href="/specifications/{{spec}}">{{spec}} (version {{profile.spec_info.version}})</a></li>
                      {% endfor %}
                   </ul>
                   <br/>
                   {% endif %}
-                  {% if page.draft_specifications or page.draft_types %}
-                  <br />
-                  <h5>Draft specifications</h5>
+                  {% if page.types %}
+                  <h5>Types</h5>
+                  <ul>
+                     {% for type in page.types %}
+                     {% assign type-id = "/types/" | append: type %}
+                     {% assign type-details = site.types | where: "name", type | first %}
+                     <li><a href="/types/{{type}}">{{type}} (version {{type-details.version}})</a></li>
+                     {% endfor %}
+                  </ul>
+                  <br/>
+                  {% endif %}
+                  {% if page.draft_specifications %}
+                  <h5>Draft Profiles</h5>
                   <ul>
                      {% for spec in page.draft_specifications %}
-                     <li><a href="/devSpecs/{{spec}}/">{{spec}}</a></li>
+                     {% assign spec-id = "/devSpecs/" | append: spec %}
+                     {% assign profile = site.devSpecs | where: "name", spec | first %}
+                     <li><a href="/devSpecs/{{spec}}/">{{spec}} (version {{profile.spec_info.version}})</a></li>
                      {% endfor %}
-                     {% for spec in page.draft_types %}
-                     <li><a href="/devTypes/{{spec}}/">{{spec}}</a></li>
+                  </ul>
+                  <br/>
+                  {% endif %}
+                  {% if page.draft_types %}
+                  <h5>Draft Types</h5>
+                  <ul>
+                     {% for type in page.draft_types %}
+                     {% assign type-id = "/devTypes/" | append: type %}
+                     {% assign type-details = site.devTypes | where: "name", type | first %}
+                     <li><a href="/devTypes/{{type}}/">{{type}} (version {{type-details.version}})</a></li>
                      {% endfor %}
                   </ul>
                   <br/>

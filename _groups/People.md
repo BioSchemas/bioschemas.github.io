@@ -6,15 +6,9 @@ collection: groups
 active: false
 type: generic
 description: Specification for describing people
-lead: [Niall Beard]
+lead: [NiallBeard]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20person
 folder: https://drive.google.com/drive/u/1/folders/0B6crv12s8piRd1hFM2JUeS1wSEk
-usecase: true
-crosswalk: true
-spec-versions: [
-  [{"spec-num": "0.1", "spec-url": "https://docs.google.com/document/d/1Hhm9uZ85eJvH6JG1ZoPz83E9bx-B95r2rW8vPZ2_XJE"}]#,
-  #[{"spec-num": "0.2", "spec-url": "https://docs.google.com/document/d/1fn-of4cxGJLYiw1G3-KepZsIE0Ptq4GSx-h3jPmvdvc"}]
-]
 
 # Page attributes
 abstract: 'Develops and maintains a community specification for describing life science people profiles.'
@@ -24,7 +18,7 @@ objectives:
     'To create a specification including a metadata schema, minimum information guidelines, recommended vocabularies as well as documentation and examples about how to use the schema.',
     'To engage the community interested to describe file science people profiles to participate and shape the specification.'
   ]
-types:
+draft_specifications:
     [
       'Person'
     ]
