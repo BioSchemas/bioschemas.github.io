@@ -7,8 +7,8 @@ status: revision
 spec_type: Profile
 group: datarepositories
 use_cases_url: /useCases/DataRepositories/
-cross_walk_url: https://docs.google.com/spreadsheets/d/1mIRsRHdl9bzGQrOEVcMiwvh5ZsCcGNsNfai2sZOBxQ0/edit#gid=1483018794
-gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20DataCatalogue
+cross_walk_url: https://docs.google.com/spreadsheets/d/1mIRsRHdl9bzGQrOEVcMiwvh5ZsCcGNsNfai2sZOBxQ0/
+gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20DataCatalog
 live_deploy: /liveDeploys/
 
 parent_type: DataCatalog
@@ -17,14 +17,14 @@ hierarchy:
 - CreativeWork
 - DataCatalog
 
-spec_mapping_url: https://docs.google.com/spreadsheets/d/e/2PACX-1vTFUC82c17f3mE_ZUUR-lQQQv1MgeLP3A_s03gtf4WW7RrHNJJ7QB95stSRrmYqIEEnm2rTfozJA-Cl/pubhtml?gid=292464567&single=true
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1mIRsRHdl9bzGQrOEVcMiwvh5ZsCcGNsNfai2sZOBxQ0/
 spec_info:
   title: DataCatalog
   subtitle: ""
   description: A guide for how to describe data catalogs/repositories in the life-sciences
     using Schema.org-like annotation.
   version: 0.2-DRAFT
-  version_date: 20190115T211050
+  version_date: 20190128T204141
   official_type: http://schema.org/DataCatalog
   full_example: https://github.com/BioSchemas/specifications/tree/master/DataCatalog/examples/
 mapping:
@@ -51,7 +51,11 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    {
+    "@type": "DataCatalog",
+    "alternateName": "Reactome Pathway Database"
+    }
 - property: citation
   expected_types:
   - CreativeWork
@@ -234,7 +238,15 @@ mapping:
   marginality: Minimum
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    {
+      "@type": "DataCatalog",
+      "provider": {
+        "@type": "Organization",
+        "name": "EMBL-EBI",
+        "url": "https://www.ebi.ac.uk"
+      }
+    }
 - property: sourceOrganization
   expected_types:
   - Organization
