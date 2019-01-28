@@ -1,0 +1,53 @@
+---
+redirect_from: "devSpecs/Journal/specification"
+redirect_from: "devSpecs/Journal/specification/"
+name: Journal
+
+status: revision
+spec_type: Profile
+group: biotea
+use_cases_url: https://docs.google.com/document/d/1ZhoYDIx5DP4q1L8k6DAL3EvFuEbTnD7P981Zav_ipuE
+cross_walk_url: [
+  https://docs.google.com/spreadsheets/d/1ecj0bzyRO3tSTyHrKtDGfBwC5bIhgRCmv3yR8ylR_G4, 
+  https://drive.google.com/drive/folders/1CgEyta4d7vFfYT7r7w9HtLZ4kAidDmJI
+]
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Journal
+live_deploy: ''
+
+parent_type: Collection
+hierarchy:
+- Thing
+- CreativeWork
+- Collection
+
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1cRtlx0UPer-qyLoEbynBsNINacAD--6UpJnWg4WLO2g
+spec_info:
+  title: Journal
+  subtitle: Bioschemas profile, based on Biotea model, describing a Journal in Life Sciences.
+  description: A Journal is a collection of publication issues, publication volumes or scholarly articles, or possibly, although no commonly, any mix from those mentioned. 
+  version: "0.1"
+  version_date: 20190128T000000
+  official_type: "schema:Collection"
+  full_example: ""
+mapping:
+
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>
