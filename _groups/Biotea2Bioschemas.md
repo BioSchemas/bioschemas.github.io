@@ -9,7 +9,6 @@ description: Specifications for scholarly publication related profiles
 lead:
     - AlexanderGarcia
     - LeylaGarcia
-    - DietrichRebholzSchuhmann
 issues: 
   - https://github.com/BioSchemas/bioschemas/labels/type%3A%20scholarlyarticle
   - https://github.com/BioSchemas/bioschemas/labels/type%3A%20Journal
@@ -21,7 +20,7 @@ abstract: 'In schema.org we find multiple types to describe scholarly publicatio
 objectives:
   [
     'Define marginality and cardinality for scholarly publications and related types such as journal, publication issue and publication volume',
-    'Recommend some ontologies that can be used as specialized values for some properties''
+    'Recommend some ontologies that can be used as specialized values for some properties'
   ]
 
 specifications:
@@ -35,6 +34,7 @@ draft_specifications:
 
 members:
     - OlgaXimenaGiraldo
-    - FedericoLópezGómez
+    - FedericoLopezGomez
+    - DietrichRebholzSchuhmann
     - MichelDumontier
 ---
