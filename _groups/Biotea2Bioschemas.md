@@ -12,6 +12,8 @@ lead:
 issues: 
   - https://github.com/BioSchemas/bioschemas/labels/type%3A%20scholarlyarticle
   - https://github.com/BioSchemas/bioschemas/labels/type%3A%20Journal
+  - https://github.com/BioSchemas/bioschemas/labels/type%3A%20PublicationIssue
+  - https://github.com/BioSchemas/bioschemas/labels/type%3A%20PublicationVolume
 folder: 
   - https://drive.google.com/drive/folders/1CgEyta4d7vFfYT7r7w9HtLZ4kAidDmJI
 
