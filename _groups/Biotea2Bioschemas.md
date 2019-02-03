@@ -31,7 +31,7 @@ specifications:
   ]
 draft_specifications:
   [
-    'ScholarlyArticle', 'Journal', 'PublicationIssue', 'PublicationVolume'
+    'ScholarlyArticle', 'Journal', 'PublicationIssue', 'PublicationVolume', 'SemanticScholarlyAnnotation'
   ]
 
 members:

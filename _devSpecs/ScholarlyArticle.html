@@ -26,7 +26,7 @@ spec_info:
   description: A ScholarlyArticle is an article commonly reporting a scientific research,
     for instance a journal article or thesis.
   version: "0.1"
-  version_date: 20190131T212823
+  version_date: 20190203T200419
   official_type: schema:ScholarlyArticle
   full_example: pending
 mapping:
@@ -100,7 +100,7 @@ mapping:
     methods, interviews, data sources, etc.
   type: ""
   type_url: ""
-  bsc_description: Abstract
+  bsc_description: Abstract.
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
@@ -116,6 +116,31 @@ mapping:
   bsc_description: ""
   marginality: Recommended
   cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: comment
+  expected_types:
+  - Comment
+  - SemanticScholarlyAnnotation
+  description: Comments, typically from users.
+  type: ""
+  type_url: ""
+  bsc_description: Semantic scholarly annotations identified in this scholarly article
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: commentCount
+  expected_types:
+  - Integer
+  description: The number of comments this CreativeWork (e.g. Article, Question or
+    Answer) has received. This is most applicable to works published in Web sites
+    with commenting system; additional comments may exist elsewhere.
+  type: ""
+  type_url: ""
+  bsc_description: Number of semantic scholarly annotations identified in this article
+  marginality: Optional
+  cardinality: ONE
   controlled_vocab: ""
   example: ""
 - property: copyrightHolder
@@ -201,7 +226,7 @@ mapping:
   description: Headline of the article.
   type: ""
   type_url: ""
-  bsc_description: Title of the article
+  bsc_description: Title of the article.
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
@@ -219,7 +244,7 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: A global a unique identifier for articles in their DOI. Any other
-    identifier can be included as an alternate name
+    identifier can be included as an alternate name.
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
@@ -339,7 +364,7 @@ mapping:
     website.
   type: ""
   type_url: ""
-  bsc_description: Any other link to this article, including those machine readable
+  bsc_description: Any other link to this article, including those machine readable.
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -350,7 +375,7 @@ mapping:
   description: URL of the item.
   type: ""
   type_url: ""
-  bsc_description: DOI is the recommended URL, any other should go as sameAs
+  bsc_description: DOI is the recommended URL, any other should go as sameAs.
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
@@ -379,6 +404,7 @@ mapping:
   controlled_vocab: ""
   example: ""
 ---
+
 <!DOCTYPE HTML>
 <html>
    {% include head.html %}
