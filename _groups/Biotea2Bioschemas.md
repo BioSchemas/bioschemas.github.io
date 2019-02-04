@@ -38,5 +38,4 @@ members:
     - OlgaXimenaGiraldo
     - FedericoLopezGomez
     - DietrichRebholzSchuhmann
-    - MichelDumontier
 ---
