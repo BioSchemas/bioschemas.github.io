@@ -21,21 +21,21 @@ objectives:
   ]
 specifications:
   [  
-    'Sample'
+    
   ]
 draft_specifications:
   [  
-    'Sample'
+    
   ]
 types:
   [  
-    'Sample'
+   
   ]
 draft_types:
   [  
-    'Sample'
+    'Workflow'
   ]
 
 members:
-    - ljgarcia
+    - LeylaGarcia
 ---
