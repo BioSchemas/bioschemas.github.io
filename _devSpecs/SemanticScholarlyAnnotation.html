@@ -23,8 +23,8 @@ spec_info:
     associated to a piece of text in a ScholarlyArticle in Life Sciences.
   description: A SemanticScholarlyAnnotation corresponds to an expression identified
     in a ScholarlyArticle and associated to an ontology term.
-  version: "0.1"
-  version_date: 20190203T195923
+  version: 0.1-DRAFT
+  version_date: 20190208T104450
   official_type: schema:CreativeWork
   full_example: pending
 mapping:
@@ -83,6 +83,23 @@ mapping:
   cardinality: MANY
   controlled_vocab: ""
   example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: If available.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
 - property: inLanguage
   expected_types:
   - Language
@@ -131,7 +148,10 @@ mapping:
      Inverse property: mainEntityOfPage.
   type: ""
   type_url: ""
-  bsc_description: Ontology terms associated to this annotation.
+  bsc_description: Ontology terms associated to this annotation. On the DefinedTerm,
+    use additionalType to link to a Unified Medical Language System (UMLS) semantic
+    type (TUI) or group, and sameAs to link to the corresponding concept unique identifier
+    (CUI), if available.
   marginality: Minimum
   cardinality: MANY
   controlled_vocab: ""
@@ -148,8 +168,8 @@ mapping:
   bsc_description: A list of links that can help a user understand and navigate to
     a section or paragraph in the scholarly article where this annotation is located.
     If a text is used, different steps on the list should be separated with the character
-    '>'. If a URL is used, it should identify the section or paragraph where this
-    annoation is found.
+    '>', being the sentence where the annotation is found the last element. If a URL
+    is used, it should identify the section or paragraph where this annoation is found.
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
@@ -160,7 +180,7 @@ mapping:
   description: The textual content of this CreativeWork.
   type: ""
   type_url: ""
-  bsc_description: Text expressions found in the text corresponding to this annotation.
+  bsc_description: Expression found in the text corresponding to this annotation.
   marginality: Minimum
   cardinality: MANY
   controlled_vocab: ""

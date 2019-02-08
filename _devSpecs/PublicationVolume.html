@@ -25,8 +25,8 @@ spec_info:
   description: A PublicationVolume is a collection of publication issues, or scholarly
     articles, or possibly, although no commonly, any mix from those mentioned. It
     is commonly part of a Journal.
-  version: "0.1"
-  version_date: 20190131T213221
+  version: 0.1-DRAFT
+  version_date: 20190208T104001
   official_type: schema:PublicationVolume
   full_example: pending
 mapping:
@@ -38,7 +38,7 @@ mapping:
      Inverse property: subjectOf.
   type: ""
   type_url: ""
-  bsc_description: Describes what this volume is about
+  bsc_description: Describes what this volume is about.
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
@@ -84,7 +84,7 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: Volumes in a journal are commonly identified by a number thus not
-    unique nor global. We recommend to use the URL as identifier whenever possible
+    unique nor global. We recommend to use the URL as identifier whenever possible.
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
@@ -111,7 +111,7 @@ mapping:
      Inverse property: hasPart.
   type: ""
   type_url: ""
-  bsc_description: A PublicationVolume is part of a Journal
+  bsc_description: A PublicationVolume is part of a Journal.
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
@@ -172,7 +172,7 @@ mapping:
     website.
   type: ""
   type_url: ""
-  bsc_description: Any other URL linking to this volume
+  bsc_description: Any other URL linking to this volume.
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
@@ -183,7 +183,7 @@ mapping:
   description: URL of the item.
   type: ""
   type_url: ""
-  bsc_description: Oficial URL
+  bsc_description: Oficial URL.
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
@@ -202,6 +202,7 @@ mapping:
   controlled_vocab: ""
   example: ""
 ---
+
 <!DOCTYPE HTML>
 <html>
    {% include head.html %}
