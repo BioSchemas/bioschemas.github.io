@@ -1,5 +1,6 @@
 ---
 redirect_from: "devSpecs/Course/specification"
+redirect_from: "devSpecs/Course/specification/"
 name: Course
 
 status: revision
@@ -16,7 +17,8 @@ hierarchy:
 - CreativeWork
 - Course
 
-spec_mapping_url: https://docs.google.com/spreadsheets/d/1Nqil3cuNB8XioeG3U8mBzV35IdKfcVVLvVOwuSk9xQk/edit#gid=1483018794
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1c41fgWiZJN0IeC-q15XN1DDJb6RZUqhugPSWuinsFXQ/edit#gid=1261485211
+
 spec_info:
   title: Course
   subtitle: 'Specification describing a course. '
@@ -25,7 +27,7 @@ spec_info:
     - whereas a course instance is about the specific times and location of when that
     course is held. '
   version: 0.4-draft
-  version_date: 20190207T101133
+  version_date: 20190208T153709
   official_type: ""
   full_example: ""
 mapping:
@@ -321,7 +323,10 @@ mapping:
     of skill levels include 'beginner', 'intermediate' or 'advanced'
   marginality: Recommended
   cardinality: MANY
-  controlled_vocab: ""
+  controlled_vocab: |-
+    - Beginner
+    - Intermediate
+    - Advanced
   example: '"skillLevel": "beginner"'
 - property: thumbnailUrl
   expected_types:

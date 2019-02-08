@@ -7,19 +7,8 @@ active: true
 type: generic
 description: Specification for data catalog profile
 lead: [HenningHermjakob]
-issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20datarepository
+issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20DataCatalog
 folder: https://drive.google.com/open?id=0Bw_p-HKWUjHoNDJNUWltYVBkV1k
-
-# Progress status
-usecase: https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAvaADLmI_FrIk7O3BEkxY/edit#gid=1439268036
-crosswalk: https://docs.google.com/spreadsheets/d/1H12h5VpVNJFzNs2RQJWjXkauCEn3qEsVFzKRoiHHffY/edit
-spec-versions: [
-  [{"spec-num": "0.1", "spec-url": "https://docs.google.com/document/d/1U51c2408X_j8itLt8b5j8aTLrab6OEuucXJUXYCV4y8"}]#,
-  #[{"spec-num": "0.2", "spec-url": "https://docs.google.com/document/d/1fn-of4cxGJLYiw1G3-KepZsIE0Ptq4GSx-h3jPmvdvc"}]
-]
-test: false
-adoption: false
-applications: false
 
 # Page attributes
 abstract: 'Most Life sciences data repositories are missing a home page providing information about themselves with consistent structured data that would help search engines and registries to index them.
@@ -34,6 +23,10 @@ objectives:
   ]
 
 specifications:
+  [
+    'DataCatalog'
+  ]
+draft_specifications:
   [
     'DataCatalog'
   ]

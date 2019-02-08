@@ -1,7 +1,7 @@
 ---
 layout: group-details
 identifier: training
-name: Training 
+name: Training
 collection: groups
 active: true
 type: generic
@@ -9,19 +9,9 @@ description: Specification for describing training resources such as materials a
 lead: [NiallBeard, GabriellaRustici]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20training%20material
 folder: https://drive.google.com/drive/u/1/folders/0B6crv12s8piRT0w5VXRUc09VTFU
-# Progress status
-usecase: true
-crosswalk: true
-spec-versions: [
-  [{"spec-num": "0.1", "spec-url": "/groups/trainings/full_training.html"}],
-  [{"spec-num": "0.2", "spec-url": "https://docs.google.com/document/d/1HG2fEjCoDUE4tn1XZ_ZIeWLEFXnI3YtS_FRIIFIbv-s"}]
-]
-test: true
-adoption: true
-applications: true
 
 # Page attributes
-abstract: 'The Bioschemas Training Group develops and maintains community specifications for describing training opportunities and resources in biosciences available on the internet.'
+abstract: 'The Bioschemas Training Group develops and maintains community specifications for describing training opportunities (face-to-face and online courses) and training resources (permanently accessible materials, videos, slides etc) in the Life sciences.'
 objectives:
   [
     'To develop a common schema to facilitate the description and dissemination of life science training materials, courses, and course instances using <a href="http://schema.org/">schema.org</a>.',
@@ -31,12 +21,34 @@ objectives:
 
 specifications:
     [
-      'Course', 'CourseInstance', 'TrainingMaterial'
+     'TrainingMaterial' #, 'Course', 'CourseInstance' #- still in draft phase so links break
+    ]
+draft_specifications:
+    [
+     'TrainingMaterial', 'Course', 'CourseInstance' #- still in draft phase so links break
     ]
 
 members:
+    - CeliaVanGelder
+    - MichelleBrazas
+    - SonikaTyagi
+    - TerriAtwood   
+    - MateuszKuzak
+    - AnnetteMcgrath
+    - VictoriaDominguez
     - PhilBarker
-    - NiallBeard
+    - FrancisOuellette
+    - DaveClements
+    - EijaKorpelainen
+    - CharlotteZwetsloot
+    - MohammadAsifKhan
+    - VerenaRas
+    - AnnMeyer
+    - PaulaMartinez     
+    - SarahMorgan    
+    - LeylaGarcia
+
+Former-Members:    
     - ChrisTaylor
     - PhilippeRocca-Serra
     - SusannaSansone
@@ -47,8 +59,6 @@ members:
     - ChristaJanko
     - VickySchneider
     - AndraWaagmeester
-    - SarahMorgan
-    - VictoriaDominguez
     - DanTimmons
     - AlejandraGonzalez-Beltran
     - GuillermoCalderonMantilla
@@ -56,8 +66,6 @@ members:
     - ClaireJohnson
     - LeeLarcombe
     - AleksandraNenadic
-    - TerriAtwood
     - MichaelCrusoe
     - RafaelJimenez
-    - GabriellaRustici    
 ---
