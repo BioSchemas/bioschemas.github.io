@@ -8,5 +8,5 @@ affiliation:
 homepage:
 github_username: timmonsd
 orcid:
-groups: [events, organizations, trainingmaterials, data, datarepositories, standards, tools, community]
+groups: [events, organizations, training, data, datarepositories, standards, tools, community]
 ---

@@ -89,7 +89,7 @@
                            <td>
                               {% for temp_exp_type in new_prop.expected_type %}
                               {% if temp_exp_type == "PhysicalEntity" or temp_exp_type == "LabProtocol" or temp_exp_type == "DataRecord" or temp_exp_type == "BioChemEntity" %}
-                              <a href="http://bioschemas.org/specifications/{{temp_exp_type}}/specification/">{{temp_exp_type}}</a><br>
+                              <a href="http://bioschemas.org/specifications/{{temp_exp_type}}">{{temp_exp_type}}</a><br>
                               {% else %}
                               <a href="http://schema.org/{{temp_exp_type}}">{{temp_exp_type}}</a><br>
                               {% endif %}

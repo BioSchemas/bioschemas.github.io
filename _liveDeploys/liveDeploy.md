@@ -319,5 +319,194 @@ list:
     schema_org: Dataset
     bsc_profile: Dataset
     bsc_ver: 0.1
-    comments:          
+    comments:        
+-
+    name: DEB Register
+    highlight:
+    example_URL: https://deb-central.org/
+    resource_URL: https://deb-central.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:    
+-
+    name: DEB Register
+    highlight:
+    example_URL: https://deb-central.org/
+    resource_URL: https://deb-central.org/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.1
+    comments:  
+-
+    name: CHD7 Database
+    highlight:
+    example_URL: https://molgenis51.gcc.rug.nl/
+    resource_URL: https://molgenis51.gcc.rug.nl/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:        
+-
+    name: CHD7 Database
+    highlight:
+    example_URL: https://molgenis51.gcc.rug.nl/
+    resource_URL: https://molgenis51.gcc.rug.nl/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.1
+    comments:  
+-
+    name: International Microvillus Inclusion Disease (MVID) Patient Registry
+    highlight:
+    example_URL: http://mvid-central.org/
+    resource_URL: http://mvid-central.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:     
+-
+    name: International Microvillus Inclusion Disease (MVID) Patient Registry
+    highlight:
+    example_URL: http://mvid-central.org/
+    resource_URL: http://mvid-central.org/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.1
+    comments:  
+-
+    name: AIP Mutation Database
+    highlight:
+    example_URL: https://aip.fipapatients.org/
+    resource_URL: https://aip.fipapatients.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:     
+-
+    name: AIP Mutation Database
+    highlight:
+    example_URL: https://aip.fipapatients.org/
+    resource_URL: https://aip.fipapatients.org/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.1
+    comments:    
+-
+    name: Reactome
+    highlight:
+    example_URL: https://reactome.org/content/detail/R-HSA-449147
+    resource_URL: https://reactome.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:
+-
+    name: ChEMBL
+    highlight:
+    example_URL: https://www.ebi.ac.uk/chembl/beta/
+    resource_URL: https://www.ebi.ac.uk/chembl/beta/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.2
+    comments:
+-
+    name: ChEMBL
+    highlight:
+    example_URL: https://www.ebi.ac.uk/chembl/beta/compound_report_card/CHEMBL59/
+    resource_URL: https://www.ebi.ac.uk/chembl/beta/
+    schema_org: MolecularEntity
+    bsc_profile: MolecularEntity
+    bsc_ver: 0.2-draft
+    comments:
+-
+    name: Alliance of Genome Resources
+    highlight:
+    example_URL: https://www.alliancegenome.org/gene/RGD:620474
+    resource_URL: https://www.alliancegenome.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:
+-
+    name: SWISS-MODEL Repository
+    highlight:
+    example_URL: https://swissmodel.expasy.org/repository
+    resource_URL: https://swissmodel.expasy.org/repository
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.1
+    comments:  
+-
+    name: SWISS-MODEL Repository
+    highlight: 12 Datasets
+    example_URL: https://swissmodel.expasy.org/repository
+    resource_URL: https://swissmodel.expasy.org/repository
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.2
+    comments:  
+-
+    name: SWISS-MODEL
+    highlight:
+    example_URL: https://swissmodel.expasy.org
+    resource_URL: https://swissmodel.expasy.org
+    schema_org: SoftwareApplication
+    bsc_profile: Tool
+    bsc_ver: 0.1
+    comments:  
+-
+    name: ModelArchive
+    highlight: 
+    example_URL: https://modelarchive.org
+    resource_URL: https://modelarchive.org
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.1
+    comments:
+-
+    name: HAMAP - Unirules
+    highlight: 1 dataset
+    example_URL: https://hamap.expasy.org/cgi-bin/unirule/unirule_browse.cgi
+    resource_URL: https://hamap.expasy.org
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:
+-
+    name: HAMAP - Proteomes
+    highlight: 2 datasets
+    example_URL: https://hamap.expasy.org/archaea.html
+    resource_URL: https://hamap.expasy.org/proteomes.html
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.1
+    comments:
+-
+    name: ENZYME - The Enzyme Data Bank
+    highlight: 4450 datasets
+    example_URL: https://enzyme.expasy.org/EC/1.1.3.-
+    resource_URL: https://enzyme.expasy.org
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:
+-
+    name: PROSITE - Protein domains, families and functional sites description
+    highlight: 1 dataset
+    example_URL: https://prosite.expasy.org/cgi-bin/prosite/prosite-list.pl
+    resource_URL: https://prosite.expasy.org
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:
+-
+    name: PROSITE motifs (profiles and patterns)
+    highlight: 1 dataset
+    example_URL: https://prosite.expasy.org/cgi-bin/prosite/prosite_browse.cgi
+    resource_URL: https://prosite.expasy.org
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.1
+    comments:
 ---

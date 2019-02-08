@@ -6,13 +6,9 @@ collection: groups
 active: true
 type: biological
 description: Specification for protein type
-lead: [MichałNowotka]
+lead: [EgonWillighagen, RicardoArcila, DavidMendez]
 issues: https://github.com/BioSchemas/specifications/labels/type%3A%20Chemistry
-
-
-test: false
-adoption: false
-applications: false
+folder: https://drive.google.com/drive/folders/0B7J0zlrcfEkGNnk3MXhyb01mTEk
 
 # Page attributes
 abstract: 'Develop a Bioschemas profile around a chemical use case involving resources such as ChEMBL'
@@ -23,9 +19,16 @@ objectives:
   ]
 draft_specifications:
   [
-    'Chemical', 'ChemicalStructure'
+    'ChemicalSubstance', 'MolecularEntity'
+  ]
+draft_types:
+  [
+    'ChemicalSubstance', 'MolecularEntity'
   ]
 
 members:
-  - MichałNowotka
+  - AnnaGaulton
+  - RicardoArcila
+  - DavidMendez
+  - EgonWillighagen
 ---

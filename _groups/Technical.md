@@ -1,4 +1,5 @@
 ---
+redirect_from: "/technical/"
 layout: group-details
 identifier: technical
 name: Technical
@@ -7,16 +8,11 @@ active: true
 type: generic
 description:
 lead: [JustinClark-Casey]
-issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20technical
-folder:
-usecase:
-crosswalk:
-spec-versions:
+issues: https://github.com/BioSchemas/bioschemas/labels/SupportSoftware
 
 # Page attributes
 abstract: 'The technical group focus on aspects of implementing <a href="http://bioschemas.org">Bioschemas</a> markup. Please see the <a href="http://bioschemas.org/specifications/">Specifications</a> page for the schemas themselves. Please see the <a href="http://bioschemas.org/tools/">tools</a> page for tools that can help in publishing or consuming markup.'
 objectives:
-specifications:
 
 members:
     - AlasdairGray

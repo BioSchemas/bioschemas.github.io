@@ -6,15 +6,12 @@ collection: groups
 active: false
 type: generic
 description: Specification for tools
-lead: [GiuseppeProfiti]
+lead:
+    - RicardoArcila
+    - JustinClark-Casey
+    - LeylaGarcia
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20tool
-folder: https://drive.google.com/drive/u/1/folders/0ByZjzHhAz30Ta0ZhWV8wb1p4TTA
-usecase: true
-crosswalk: true
-spec-versions: [
-  [{"spec-num": "0.1", "spec-url": "https://docs.google.com/document/d/1fQUPkjNnHfbx3dHtPeV_QXy_-DhUypoXliX1jE0AaYc"}]#,
-  #[{"spec-num": "0.2", "spec-url": "https://docs.google.com/document/d/1fn-of4cxGJLYiw1G3-KepZsIE0Ptq4GSx-h3jPmvdvc"}]
-]
+folder: https://drive.google.com/open?id=0BzDhyOWTnRNTYkdQNHppUjZ3U2M
 
 # Page attributes
 abstract: 'The Tools Group develops and maintains a community specification for describing life science tools.'
@@ -24,11 +21,19 @@ objectives:
   ]
 
 specifications:
-    [
-      'Tool'
-    ]
-    
+  [
+    'Tool'
+  ]
+draft_specifications:
+  [
+    'Tool'
+  ]
+
 members:
+    - GiuseppeProfiti
+    - RicardoArcila
+    - JustinClark-Casey
+    - LeylaGarcia
     - NiallBeard
     - PhilippeRocca-Serra
     - SusheelVarma
@@ -43,7 +48,6 @@ members:
     - AlejandraGonzalez-Beltran
     - GuillermoCalderonMantilla
     - RobertDFinn
-    - GiuseppeProfiti
     - JonIson
     - MartinCook
     - AurelienLuciani

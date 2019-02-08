@@ -6,23 +6,11 @@ collection: groups
 active: true
 type: biological
 description: Specification for protein type
-lead: [MariaMartin]
+lead:
+    - MariaMartin
+    - LeylaGarcia
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20protein
 folder: https://drive.google.com/drive/folders/0B0fE3oOZIq44eFktTmhFQlhLeDA
-
-# Progress status
-usecase: https://docs.google.com/document/d/1MNU-r7CMAvKdGav1VT3XeyQXr2XwRA6JXDsoWoA0R1E
-crosswalk: https://docs.google.com/spreadsheets/d/1QQH4AkzdwPT1Qt5OLmH5HosLpkFU7khwE4Ql9_Cb9ZQ
-spec-versions: [#
-  #[{"spec-num": "0.1", "spec-url": "https://docs.google.com/document/d/1fn-of4cxGJLYiw1G3-KepZsIE0Ptq4GSx-h3jPmvdvc"},
-  #[{"spec-num": "0.2", "spec-url": "https://docs.google.com/document/d/1fn-of4cxGJLYiw1G3-KepZsIE0Ptq4GSx-h3jPmvdvc"}
-  [{"spec-num": "0.3", "spec-url": "https://docs.google.com/document/d/14Wg-Rv9rri8pLRUP9FkVRq6geFuwb5mWbZos6MvxH6w"}],
-  [{"spec-num": "0.4", "spec-url": "/bsc_specs/Protein/specification/"}]
-  ]
-#]
-test: false
-adoption: false
-applications: false
 
 # Page attributes
 abstract: 'In schema.org we cannot find life science types (eg. protein, gene, biological pathway) except those types that overlap with healthcare and medicine domains defined by the health schema.org extension (eg. drug, artery).
@@ -36,16 +24,29 @@ specifications:
   [
     'Protein', 'ProteinAnnotation', 'ProteinStructure'
   ]
-proteins:
+draft_specifications:
+  [
+    'Protein', 'ProteinAnnotation', 'ProteinStructure'
+  ]
+types:
+  [
+    'Protein'
+  ]
+draft_types:
+  [
+    'Protein'
+  ]
+members:
+    - MariaMartin
+    - LeylaGarcia
     - AndraWaagmeester
     - SameerVelankar
-    - saqibmir
+    - SaqibMir
     - RobertDFinn
     - GiuseppeProfiti
-    - MariaMartin
     - AurelienLuciani
     - RicardoArcila
-    - anyango
+    - StephenAnyango
     - GustavoSalazar-Orejuela
-    - LeylaGarcia
+    - NathanDunn
 ---
