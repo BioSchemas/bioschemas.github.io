@@ -420,6 +420,29 @@ mapping:
   cardinality: ONE
   controlled_vocab: ""
   example: ""
+- property: sdDatePublished
+  expected_types:
+  - Date
+  description: Indicates the date on which the current structured data was generated / published. Typically used alongside sdPublisher.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: sdPublisher
+  expected_types:
+  - Organization
+  - Person 
+  description: Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The sdPublisher property helps make such practices more explicit.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
 ---
 
 <!DOCTYPE HTML>
