@@ -4,36 +4,41 @@ redirect_from: "devSpecs/Taxon/specification/"
 name: Taxon
 url: Taxon
 
-status: revision
+status: release # Change to revision if you are working on an update
 spec_type: Profile
 group: biodiversity
 use_cases_url: /useCases/Taxon/
-cross_walk_url: https://drive.google.com/open?id=1hHE7SHz9qt6Eg6j6DQgI9BwhrlGOwkO68fzek78m62I
+cross_walk_url: https://docs.google.com/spreadsheets/d/1HHa0P6bvym1sZcO4GZMH01J_Cl06eXH60IVTp0b_Nas/edit?ts=5be44b29#gid=1483018794
 gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Taxon
 live_deploy: ''
 
-parent_type: BioChemEntity
+parent_type: Taxon
 hierarchy:
 - Thing
-- BioChemEntity
+- Taxon
 
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
 spec_info:
   title: Taxon
-  subtitle: Bioschemas specification for describing a biological taxon
+  subtitle: Bioschemas profile for describing a biological taxon
   description: This profile aims to denote a taxon by common properties such as its
     scientific name, authority, taxonomic rank and vernacular names. It is also a
     means to link to existing taxonomic registers where each taxon has a URI.
-  version: 0.2-draft
-  version_date: 20180925T134042
-  official_type: http://rs.tdwg.org/dwc/terms/Taxon
+  version: 0.3
+  version_date: 20181110T112249
+  official_type: http://bioschemas.org/Taxon
   full_example: https://github.com/BioSchemas/specifications/tree/master/Taxon/examples/
 mapping:
 - property: additionalType
   expected_types:
   - URL
-  description: |-
-    An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.
-    BioChemEntity: Whenever a suitable profile exists, the profile type should be used in addition to the BioChemEntity type. Other additional types are always possible via the additionalType property. For instance, http://purl.obolibrary.org/obo/PR_000000001 is the type used for the Protein profile but http://semanticscience.org/resource/SIO_010043 or https://www.wikidata.org/wiki/Q8054 can be used as an additionalType if that results useful somehow to the data providers.
+  description: An additional type for the item, typically used for adding more specific
+    types from external vocabularies in microdata syntax. This is a relationship between
+    something and a class that the thing is in. In RDFa syntax, it is better to use
+    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
+    tools may have only weaker understanding of extra types, in particular those defined
+    externally.
   type: ""
   type_url: ""
   bsc_description: A Taxon type from a well known vocabulary, e.g. DarwinCore http://rs.tdwg.org/dwc/terms/Taxon
@@ -42,8 +47,11 @@ mapping:
   cardinality: MANY
   controlled_vocab: ""
   example: |-
-    {
-        "@type" : [ "BioChemEntity", "Taxon" ],
+    { "@context": [
+            "http://schema.org",
+            { "dwc": "http://rs.tdwg.org/dwc/terms/" }
+        ],
+        "@type" : "Taxon",
         "additionalType": "dwc:Taxon"
     }
 - property: alternateName
@@ -61,16 +69,33 @@ mapping:
     {
         "alternateName": "Balaena albicans Muller, 1776"
     }
-- property: isContainedIn
+- property: childTaxon
   expected_types:
-  - BioChemEntity
-  description: Indicates a BioChemEntity that this BioChemEntity is (in some sense)
-    part of.
+  - Taxon
+  - Text
+  - URL
+  description: |-
+    Closest child taxa of the taxon in question.
+    Inverse property: parentTaxon
   type: bioschemas
+  type_url: http://bioschemas.org/childTaxon
+  bsc_description: Direct, most proximate lower-rank child taxa
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: "{   \"@type\" : \"Taxon\",\n    \"name\": \"Delphinapterus\",\n    \"taxonRank\"
+    : [ \"WD:Q34740\",  \"genus\" ],\n    \"childTaxon\": { \n        \"@type\": \"Taxon\",\n
+    \       \"name\": \"Delphinapterus leucas\",\n        \"taxonRank\" : [ \"WD:Q7432\",
+    \ \"species\" ]\n    }\n}"
+- property: hasCategoryCode
+  expected_types:
+  - CategoryCode
+  description: A Category code contained in this code set.
+  type: pending
   type_url: ""
-  bsc_description: Direct, most proximate higher-rank parent taxon
-  marginality: Recommended
-  cardinality: ONE
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
   controlled_vocab: ""
   example: ""
 - property: name
@@ -79,7 +104,7 @@ mapping:
   description: The name of the item.
   type: ""
   type_url: ""
-  bsc_description: Taxon name (without authorship nor date information) of the currently
+  bsc_description: Taxon name without authorship nor date information of the currently
     valid (zoological) or accepted (botanical) taxon.
   marginality: Minimum
   cardinality: ONE
@@ -88,25 +113,23 @@ mapping:
     {
         "name": "Delphinapterus leucas"
     }
-- property: rank
+- property: parentTaxon
   expected_types:
+  - Taxon
+  - Text
   - URL
-  description: ""
-  type: external
-  type_url: http://rs.tdwg.org/ontology/voc/TaxonConcept#rank
-  bsc_description: The taxonomic rank of this name given as a URI from a controled
-    vocabulary, typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata
-    URIs
+  description: |-
+    Closest parent taxon of the taxon in question.
+    Inverse property: childTaxon
+  type: bioschemas
+  type_url: http://bioschemas.org/parentTaxon
+  bsc_description: Direct, most proximate higher-rank parent taxon
   marginality: Recommended
-  cardinality: MANY
+  cardinality: ONE
   controlled_vocab: ""
-  example: |-
-    {
-        "tc:rank": [
-          "http://rs.tdwg.org/ontology/voc/TaxonRank#Species",
-          "http://www.wikidata.org/entity/Q7432"
-        ]
-    }
+  example: "\"parentTaxon\": { \n    \"@type\": \"Taxon\",\n    \"@id\": \"WD:Q16628343\",\n
+    \   \"name\": \"Delphinapterus\",\n    \"taxonRank\" : [ \"WD:Q34740\",  \"genus\"
+    ]\n}"
 - property: sameAs
   expected_types:
   - URL
@@ -134,7 +157,8 @@ mapping:
   description: ""
   type: external
   type_url: http://rs.tdwg.org/dwc/terms/scientificName
-  bsc_description: Full scientific name, with authorship and date information if known
+  bsc_description: Full scientific name, with authorship and date information if know,
+    of the currently valid (zoological) or accepted (botanical) taxon.
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
@@ -160,27 +184,33 @@ mapping:
     }
 - property: taxonRank
   expected_types:
+  - PropertyValue
   - Text
-  description: ""
-  type: external
-  type_url: http://rs.tdwg.org/dwc/terms/taxonRank
-  bsc_description: The taxonomic rank of this name given as a literal
-  marginality: Optional
-  cardinality: ONE
+  - URL
+  description: The taxonomic rank of this taxon given preferably as a URI from a controlled
+    vocabulary (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata
+    URIs)
+  type: bioschemas
+  type_url: http://bioschemas.org/taxonRank
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
   controlled_vocab: ""
   example: |-
     {
-        "dwc:taxonRank": "species"
+        "taxonRank": [
+          "http://rs.tdwg.org/ontology/voc/TaxonRank#Species",
+          "http://www.wikidata.org/entity/Q7432",
+          "species"
+        ]
     }
 - property: url
   expected_types:
   - URL
-  description: |-
-    URL of the item.
-    BioChemEntity: Link to the official webpage associated to this entity.
+  description: URL of the item.
   type: ""
   type_url: ""
-  bsc_description: Link to the webpage associated with this taxon
+  bsc_description: Link to the webpage associated to this taxon
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""

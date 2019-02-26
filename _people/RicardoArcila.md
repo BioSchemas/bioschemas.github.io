@@ -4,7 +4,7 @@ id: RicardoArcila
 first-name: Ricardo
 last-name: Arcila
 collection: people
-affiliation: Elixir
+affiliation: EBI - EMBL
 homepage:
 github_username: ricardoaat
 orcid:

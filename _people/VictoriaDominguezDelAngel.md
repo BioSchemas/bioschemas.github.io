@@ -1,13 +1,9 @@
-
 ---
 layout: person-details
-id: VictoriaDominguez Del Angel
+id: VictoriaDominguez
 first-name: Victoria
-last-name: Dominguez Del Angel
+last-name: Dominguez
 collection: people
-affiliation:
-homepage:
-github_username: 
-orcid:
-groups: [training]
+affiliation: French Institute of Bioinformatics, France
+groups: [community, people, training]
 ---
