@@ -1,0 +1,46 @@
+---
+name: Genes
+group: genes
+collection: useCases
+active: true
+---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                 <h1>Use Cases for {{page.name}}</h1>
+                 {% assign group = site.groups | where:"identifier", page.group %}
+                 {% for g in group %}
+                 <p>The following use cases were developed by the <a href="{{g.url}}">{{ g.name }}</a> group.
+                 {% endfor %}
+
+                 <p>This use cases apply to the following biological types: “gene”.</p>
+
+                 <h3>Findability</h3>
+                 <p>As a user, I would like to find relevant/well-known resources regarding genes when looking by gene name or gene identifier.</p>
+
+                 <h3>Summarization</h3>
+                 <p>As a user, whenever I look for a gene, I would like to see a quick summary similar to the one provided for GeneWiki pages but including more resources.</p>
+
+                 <h3>Link to external resources</h3>
+                 <p>As a user, I want to be able to navigate from gene resources to other relevant and related resources.</p>
+               </section>
+            </div>
+        </div>
+    </div>
+    {% include footer.html %}
+
+    
+    
+    
+
+    </body>
+
+    </html>
