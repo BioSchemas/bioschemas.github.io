@@ -68,7 +68,7 @@ layout: default
 
                 <section class="upcoming-events">
                     <h3>Upcoming events</h3>
-                    {% assign sorted_meetings = (site.meetings | sort: 'start_date') %}
+                    {% assign sorted_meetings = site.meetings | sort: 'start_date' %}
                     {% assign count = 0 %}
                     {% for meeting in sorted_meetings %}
                     {% assign currentDate = site.time | date: '%F' %}
