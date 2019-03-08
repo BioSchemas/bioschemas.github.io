@@ -76,8 +76,8 @@ mapping:
   description: A description of the item.
   type: ""
   type_url: ""
-  bsc_description: "A description of the Course Instance. \n\n(courseInstance) description
-    can be used to override (course) description for specific course instances."
+  bsc_description: "A description of the course instance. \n\n(courseInstance) description
+    can be used to override (Course) description for specific course instances."
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
@@ -184,8 +184,8 @@ mapping:
     is located, or where an action takes place.
   type: ""
   type_url: ""
-  bsc_description: Location of the Course Instance. If the Course Instance is online,
-    add the connection details as text
+  bsc_description: Location of the CourseInstance. If the CourseInstance is online,
+    add the connection details as text.
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
@@ -259,7 +259,7 @@ mapping:
     rent the DVD of a movie, perform a service, or give away tickets to an event.
   type: ""
   type_url: ""
-  bsc_description: The cost an attendee would pay to attend this course
+  bsc_description: The cost an attendee would pay to attend this course.
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: Currency and value, Date specified price
@@ -342,11 +342,11 @@ mapping:
   expected_types:
   - Event
   description: |-
-    An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference. Supersedes subEvents.
+    An Event that is part of this Event. For example, a conference event includes many presentations, each of which is a subEvent of the conference. Supersedes subEvents.
     Inverse property: superEvent.
   type: ""
   type_url: ""
-  bsc_description: For events within events e.g. guest lecture within a workshop event
+  bsc_description: For events within events e.g. guest lecture within a workshop event.
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -361,7 +361,7 @@ mapping:
   expected_types:
   - Event
   description: |-
-    An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent.
+    An Event that this Event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent.
     Inverse property: subEvent.
   type: ""
   type_url: ""
@@ -384,7 +384,7 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: The preferred URL of this course instance. You must provide this
-    value if it is known
+    value if it is known.
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
@@ -398,8 +398,8 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: "The training material used in this specific course instance. \n\nInverse
-    property: workFeatured\n\nIf this is the same for all Course Instances, use hasPart
-    in Course instead"
+    property: workFeatured.\n\nIf this is the same for all CourseInstances of Course, use hasPart
+    in Course instead. "
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
