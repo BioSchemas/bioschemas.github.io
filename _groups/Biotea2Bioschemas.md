@@ -10,10 +10,11 @@ lead:
     - AlexanderGarcia
     - LeylaGarcia
 issues: 
-  - https://github.com/BioSchemas/bioschemas/labels/type%3A%20scholarlyarticle
+  - https://github.com/BioSchemas/bioschemas/labels/type%3A%20Scholarlyarticle
   - https://github.com/BioSchemas/bioschemas/labels/type%3A%20Journal
   - https://github.com/BioSchemas/bioschemas/labels/type%3A%20PublicationIssue
   - https://github.com/BioSchemas/bioschemas/labels/type%3A%20PublicationVolume
+  - https://github.com/BioSchemas/bioschemas/labels/type%3A%20SemanticAnnotation
 folder: 
   - https://drive.google.com/drive/folders/1CgEyta4d7vFfYT7r7w9HtLZ4kAidDmJI
 
@@ -31,11 +32,10 @@ specifications:
   ]
 draft_specifications:
   [
-    'ScholarlyArticle', 'Journal', 'PublicationIssue', 'PublicationVolume', 'SemanticScholarlyAnnotation'
+    'ScholarlyArticle', 'Journal', 'PublicationIssue', 'PublicationVolume', 'SemanticAnnotation'
   ]
 
 members:
     - OlgaXimenaGiraldo
-    - FedericoLopezGomez
     - DietrichRebholzSchuhmann
 ---

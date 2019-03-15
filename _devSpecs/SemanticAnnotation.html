@@ -1,14 +1,14 @@
 ---
-redirect_from: "devSpecs/SemanticScholarlyAnnotation/specification"
-redirect_from: "devSpecs/SemanticScholarlyAnnotation/specification/"
-name: SemanticScholarlyAnnotation
+redirect_from: "devSpecs/SemanticAnnotation/specification"
+redirect_from: "devSpecs/SemanticAnnotation/specification/"
+name: SemanticAnnotation
 
 status: revision
 spec_type: Profile
 group: biotea2bioschemas
 use_cases_url: https://docs.google.com/document/d/1ZhoYDIx5DP4q1L8k6DAL3EvFuEbTnD7P981Zav_ipuE
 cross_walk_url: https://docs.google.com/spreadsheets/d/1ecj0bzyRO3tSTyHrKtDGfBwC5bIhgRCmv3yR8ylR_G4
-gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20SemanticScholarlyAnnotation
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20SemanticAnnotation
 live_deploy: ''
 
 parent_type: Collection
@@ -18,16 +18,31 @@ hierarchy:
 
 spec_mapping_url: https://docs.google.com/spreadsheets/d/1_hsrPFM0htdoNaWF2PCg92bLf_ckOz8ird3kwJBANS0
 spec_info:
-  title: SemanticScholarlyAnnotation
+  title: SemanticAnnotation
   subtitle: Bioschemas profile, based on Biotea model, describing a semantic annotation
     associated to a piece of text in a ScholarlyArticle in Life Sciences.
-  description: A SemanticScholarlyAnnotation corresponds to an expression identified
-    in a ScholarlyArticle and associated to an ontology term.
+  description: A SemanticAnnotation currently corresponds to an expression identified
+    in a ScholarlyArticle and associated to an ontology term. It could apply as well to documents 
+    other than ScholarlyArticle, for instant patents and so.
   version: 0.1-DRAFT
   version_date: 20190208T104450
   official_type: schema:CreativeWork
-  full_example: pending
+  full_example: https://github.com/BioSchemas/specifications/tree/master/ScholarlyPublications
 mapping:
+- property: subjectOf
+  expected_types:
+  - CreativeWork
+  - Event
+  - ScholarlyPublication
+  description: A CreativeWork or Event about this Thing.
+  Inverse property: about.
+  type: ""
+  type_url: ""
+  bsc_description: The ScholarlyPublication where this annotation is found.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
 - property: commentCount
   expected_types:
   - Integer

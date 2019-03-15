@@ -21,13 +21,14 @@ spec_mapping_url: https://docs.google.com/spreadsheets/d/1cRtlx0UPer-qyLoEbynBsN
 spec_info:
   title: Journal
   subtitle: Bioschemas profile, based on Biotea model, describing a Journal in Life
-    Sciences.
+    Sciences. For markup purposes, we are keeping the schema:Periodical type so it
+    will be easily recognized and parsed by search engines.
   description: 'A Journal is a collection of publication issues, publication volumes
     or scholarly articles, or possibly, although no commonly, any mix from those mentioned. '
   version: 0.1-DRAFT
   version_date: 20190208T100317
   official_type: schema:Collection
-  full_example: pending
+  full_example: https://github.com/BioSchemas/specifications/tree/master/ScholarlyPublications
 mapping:
 - property: about
   expected_types:
@@ -83,20 +84,16 @@ mapping:
   cardinality: MANY
   controlled_vocab: ""
   example: ""
-- property: identifier
+- property: issn
   expected_types:
-  - PropertyValue
   - Text
   - URL
-  description: The identifier property represents any kind of identifier for any kind
-    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
-    properties for representing many of these, either as textual strings or as URL
-    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
-    for more details.
+  description: The International Standard Serial Number (ISSN) that identifies this serial publication. 
+    You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this 
+    serial publication.
   type: ""
   type_url: ""
-  bsc_description: 'Journals are commonly identified by their issn. We recommend to
-    use here the form namespace:id. For instance, issn:2041-1480. '
+  bsc_description: 'We recommend to use here the form namespace:id. For instance, issn:2041-1480.'
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
@@ -152,13 +149,13 @@ mapping:
   cardinality: ONE
   controlled_vocab: ""
   example: ""
-- property: headline
+- property: name
   expected_types:
   - Text
-  description: Headline of the article.
+  description: The name of the item.
   type: ""
   type_url: ""
-  bsc_description: Title of the journal.
+  bsc_description: "Title/name of the journal."
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""

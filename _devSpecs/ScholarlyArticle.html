@@ -28,7 +28,7 @@ spec_info:
   version: 0.1-DRAFT
   version_date: 20190208T095928
   official_type: schema:ScholarlyArticle
-  full_example: pending
+  full_example: https://github.com/BioSchemas/specifications/tree/master/ScholarlyPublications
 mapping:
 - property: alternateName
   expected_types:
@@ -118,29 +118,16 @@ mapping:
   cardinality: MANY
   controlled_vocab: ""
   example: ""
-- property: comment
+- property: about
   expected_types:
-  - Comment
-  - SemanticScholarlyAnnotation
-  description: Comments, typically from users.
+  - Thing
+  - SemanticAnnotation
+  description: "The subject matter of the content. Inverse property: subjectOf."
   type: ""
   type_url: ""
-  bsc_description: Semantic scholarly annotations identified in this scholarly article
+  bsc_description: Semantic annotations identified in this scholarly article.
   marginality: Recommended
   cardinality: MANY
-  controlled_vocab: ""
-  example: ""
-- property: commentCount
-  expected_types:
-  - Integer
-  description: The number of comments this CreativeWork (e.g. Article, Question or
-    Answer) has received. This is most applicable to works published in Web sites
-    with commenting system; additional comments may exist elsewhere.
-  type: ""
-  type_url: ""
-  bsc_description: Number of semantic scholarly annotations identified in this article
-  marginality: Optional
-  cardinality: ONE
   controlled_vocab: ""
   example: ""
 - property: copyrightHolder
@@ -202,22 +189,6 @@ mapping:
   bsc_description: ""
   marginality: Recommended
   cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: hasPart
-  expected_types:
-  - CreativeWork
-  - Trip
-  - ScholarlySemanticAnnotation
-  description: |-
-    Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).
-     Inverse property: isPartOf.
-  type: ""
-  type_url: ""
-  bsc_description: An article has part ScholarlySemanticAnnotation, i.e., entities
-    recognized in the text and associated to an ontology term.
-  marginality: Recommended
-  cardinality: MANY
   controlled_vocab: ""
   example: ""
 - property: headline
@@ -285,9 +256,7 @@ mapping:
     Supersedes isBasedOnUrl.
   type: ""
   type_url: ""
-  bsc_description: Link to any HTML other than the DOI one as well as to possible
-    web services, such as PMC OAI service, providing machine-readable versions used
-    to create this metadata.
+  bsc_description: Any previous version of this scholarly article.
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
@@ -417,29 +386,6 @@ mapping:
   type_url: ""
   bsc_description: ""
   marginality: Optional
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: sdDatePublished
-  expected_types:
-  - Date
-  description: Indicates the date on which the current structured data was generated / published. Typically used alongside sdPublisher.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Recommended
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: sdPublisher
-  expected_types:
-  - Organization
-  - Person 
-  description: Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The sdPublisher property helps make such practices more explicit.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
   example: ""
