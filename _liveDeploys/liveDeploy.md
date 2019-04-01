@@ -514,6 +514,15 @@ list:
     highlight:
     example_URL: https://www.ensembl.org/
     resource_URL: https://www.ensembl.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.2
+    comments:
+-
+    name: Ensembl Genome Browser
+    highlight:
+    example_URL: https://www.ensembl.org/
+    resource_URL: https://www.ensembl.org/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.2
