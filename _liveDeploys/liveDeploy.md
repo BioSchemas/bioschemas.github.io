@@ -107,7 +107,7 @@ list:
     comments:
 -
     name: Biosamples
-    highlight: 5 million+ pages
+    highlight: 10 million+ pages
     example_URL: https://www.ebi.ac.uk/biosamples/samples/SAMEA491372
     resource_URL: https://www.ebi.ac.uk/biosamples/
     schema_org:
