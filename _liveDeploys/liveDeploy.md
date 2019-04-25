@@ -52,15 +52,6 @@ list:
     bsc_ver: 0.1
     comments:
 -
-    name: Isaexplorer
-    highlight:
-    example_URL: http://scientificdata.isa-explorer.org/
-    resource_URL: http://scientificdata.isa-explorer.org/
-    schema_org: DataCatalog
-    bsc_profile: DataCatalog
-    bsc_ver: 0.1
-    comments:
--
     name: IUPHAR/BPS
     highlight:
     example_URL: http://www.guidetopharmacology.org/
