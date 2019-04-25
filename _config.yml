@@ -54,3 +54,6 @@ collections:
     permalink: /:collection/:path/
   stories:
     output: true
+  schema:
+    output: true
+    permalink: /:collection/:path/
