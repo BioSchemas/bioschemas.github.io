@@ -8,144 +8,160 @@ description: |-
 ---
 
 <div>
-    <h1>Software</h1>
-    <p>{{page.description | markdownify}}</p><br>
+  <h1>Software</h1>
+  <p>{{page.description | markdownify}}</p>
 
-    <div id="google">
-        <a name="googleDatasetSearch"><h2>Google Dataset Search</h2></a>
-        <a href="https://www.google.co.uk/about/"><img align="right" alt="Google logo" src="/images/google.png" width="250" style="border-left: 30px solid transparent"></a>
-        <p>
-            <a href="/specifications/Dataset/">Bioschemas specifies certain Dataset properties as mandatory</a> (name, description, keywords, etc.).  These
-            are a superset of <a href="https://developers.google.com/search/docs/data-types/dataset">the properties required by Google to index a dataset</a> (name and description).  Thus, a
-            dataset marked up with Bioschemas mandatory properties, where that markup can be reached by a sitemap or site
-            links, will also be available for Google's Dataset Search.
-        </p>
-        <p>
-            At Bioschemas we are working with Google and <a href="https://schema.org">schema.org</a> to improve existing schema.org types
-            and add new ones that will improve the findability of life sciences data.  This will enable search engines and
-            other applications to provide relevant and comprehensive search results.
-        </p>
-        <h4>Links</h4>
-        <ul>
-            <li>
-                <a href="https://toolbox.google.com/datasetsearch">Google Dataset Search</a>
-            </li>
-            <li>
-                <a href="https://developers.google.com/search/docs/data-types/dataset">Google Dataset specifications</a>
-            </li>
-        </ul>
-    </div>
-    <br>
-    <div id="buzzbang">
-        <h2>Buzzbang</h2>
-        <p>Open-source components for software to find, crawl and use Bioschemas markup, and for humans to search it.</p>
-        <h4>Description</h4><a href="http://buzzbang.science/"><img align="right" alt="BuzzBang logo." src="/images/buzzbangLogo.png" width="250"></a>
-        <p>The Buzzbang project develops components that other software can use to find, crawl and use Bioschemas markup. It also provides a Google-like frontend for humans to search it. It is at an early alpha stage but has already been used by some third-party prototype Bioschemas applications. Contributors and bug reports welcome!</p>
-        <h4>People</h4>
-        <ul>
-            <li>
-                <a href="http://bioschemas.org/people/JustinClark-Casey/">Justin Clark-Casey</a>
-               </li>
-               <li>
-                    <a href="http://bioschemas.org/people/AnkitKumarLohani/">Ankit Kumar Lohani</a>
-            </li>
-            <li>
-                <a href="http://bioschemas.org/people/RicardoArcila/">Ricardo Arcila</a>
-            </li>
-        </ul>
-        <h4>Links</h4>
-        <ul>
-            <li>
-                <a href="https://github.com/buzzbangorg/buzzbang-doc/wiki">Buzzbang project</a>
-            </li>
-            <li>
-                <a href="http://buzzbang.science/">Buzzbang search engine demo</a>
-            </li>
-        </ul>
-    </div>
-    <br>
-    <div id="goCrawlIt">
-        <h2>GoCrawlIt</h2>
-        <p>Minimal crawler and extractor of microdata and JSON-LD metadata.</p>
-        <h4>Description</h4>
-        <img align="right" alt="GoCrawlit gopher" src="/images/gocrawlit-gopher.png" width="150">
-        <p>This tool provides a way to extract JSON-LD and microdata markup information from a given website.</p>
-        <h4>People</h4>
-        <ul>
-            <li>
-                <a href="http://bioschemas.org/people/RicardoArcila/">Ricardo Arcila</a>
-            </li>
-        </ul>
-        <h4>Links</h4>
-        <ul>
-            <li>
-                <a href="https://github.com/ricardoaat/bioschemas-gocrawlit">https://github.com/ricardoaat/bioschemas-gocrawlit</a>
-            </li>
-        </ul>
-    </div>
-    <br>
-    <div id="goWeb">
-        <h2>GoWeb</h2>
-        <p>Application to help publishing Bioschemas profiles on the Bisochemas <a href="http://bioschemas.org/specifications">website</a>.</p>
-        <h4>Description</h4>
-        <img align="left" alt="GoBioschemas logo" src="/images/goweb-bioschemas-logo.svg" width="200">
-        <p>GoWeb is a simple application that helps us to create the <a href="http://bioschemas.org/specifications/" target="_blank">Bioschemas website specifications</a>. It extracts content from the google spreadsheets we use to define Bioschemas profiles (dataset, protein, samples, ...). The web specifications are created using <a href="http://yaml.org/" target="_blank">YAML</a> so they are also in a <a href="https://github.com/BioSchemas/bioschemas.github.io/tree/master/_specifications" target="_blank">machine readable format</a>. The combination of Google spreadsheets and GoWeb allows us to have a simple mechanism to define Bioschemas profiles and display them in a beautiful and consistent manner.</p>
-<p>We have created a Google Spreadsheet <a href="https://docs.google.com/spreadsheets/d/1kl92O05-_3kjYd37YK8q2eb4A1fpYvn3Mkk6HhtUBEs/edit#gid=1483018794" target="_blank">template</a> to help the community to define Bioschemas profiles. We have also described the <a href="https://github.com/BioSchemas/specifications/wiki/Bioschemas-Specification-Process" target="_blank">process</a> to create the web specifications using GoWeb.</p>
-<h4>People</h4>
-        <ul>
-            <li>
-                <a href="http://bioschemas.org/people/RicardoArcila/">Ricardo Arcila</a>
-            </li>
-        </ul>
-        <h4>Links</h4>
-        <ul>
-            <li>
-                <a href="https://github.com/BioSchemas/bioschema-goweb">https://github.com/BioSchemas/bioschema-goweb</a>
-            </li>
-        </ul>
-    </div>
-    <br>
-    <h2>Markup Builder</h2>
-    <p>A web application for prototyping markup against the Bioschemas <a href="http://bioschemas.org/specifications">profiles</a>.</p>
+  <blockquote>
+    <h6>Note:</h6>help us keep the above list updated: <a href="/howtojoin/">Join</a> the community and/or create a pull request on the <a href="https://github.com/BioSchemas/bioschemas.github.io">bioschemas github</a> community project.
+    <p></p>
+  </blockquote>
+
+  <div id="BioGen">
+    <h2>Bioschemas Generator</h2>
+    <p>A <a href="http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/">web application</a> for prototyping markup against the Bioschemas <a href="http://bioschemas.org/specifications">profiles</a>.</p>
+    <a href="http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/"><img align="right" alt="Bioschemas Generator screenshot" src="/images/bioschemasGenerator.png" width="500"></a>
     <h4>Description</h4>
-    <p>This web application supports users in the creation of Bioschemas compliant markup required for inclusion on their web resource. Bioschemas provides profiles for schema.org mark-up in order to structure and expose life-sciences metadata on the web. Each profile brings a list of allowed attributes with their constraints and properties. Some attributes are required, some are composite, some allow multiple values, some are under controlled vocabularies and some can even be all of that. We want to create a web application that assist users into the creation of their metadata structure, through dynamically generated forms, allowing an easier sharing over the web.</p>
+    <p>This web application supports users in the creation of Bioschemas compliant markup required for inclusion on their web resource. Bioschemas provides profiles for Schema.org mark-up in order to structure and expose life-sciences metadata on the web. Each profile brings a list of allowed attributes with their constraints and properties. Some attributes are required, some are composite, some allow multiple values, some are under controlled vocabularies, and some can even be all of that.</p>
+    <p>The Bioschemas Generator is a web application that assists users in the creation of their metadata structure, through dynamically generated forms, allowing easier development of Bioschemas compliant markup for web resources.</p>
     <h4>People</h4>
     <ul>
-        <li>
-            <a href="http://bioschemas.org/people/DominiqueBatista/">Dominique Batista</a>
-        </li>
-        <li>
-            <a href="http://bioschemas.org/people/AlasdairGray/">Alasdair Gray</a>
-        </li>
+      <li>
+        <a href="http://bioschemas.org/people/AlasdairGray/">Alasdair Gray</a>
+      </li>
     </ul>
-    </div>
-    <br>
-    <div id="validator">
-        <h2>Validata</h2>
-       <a href="https://github.com/HW-SWeL/Validata"><img align="right" alt="Validata screenshot" src="/images/validata.png" height="378" width="500"></a>
-        <p>A web application for validating Bioschemas markup against the <a href="http://bioschemas.org/specifications">specifications</a>.</p>
-        <h4>Description</h4>
-        <p>This web app supports users in testing whether their generated markup is compliant with the Bioschemas specifications. The validation engine currently supports machine processable constraint descriptions written in the <a href="http://shex.io/">Shape Expression (ShEx)</a> language which capture the Bioschema profiles. The Validata app allows users to supply some markup which is then compared to the profiles and generates an error report to the user for the snippet of code they provide.</p>
-        <h4>People</h4>
-        <ul>
-            <li>
-                <a href="http://bioschemas.org/people/AlasdairGray/">Alasdair Gray</a>
-            </li>
-            <li>
-                <a href="http://bioschemas.org/people/LeylaGarcia/">Leyla Garcia</a>
-            </li>
-            <li>Nikita Filippov</li>
-        </ul>
-        <h4>Links</h4>
-        <ul>
-            <li>
-                <a href="https://github.com/HW-SWeL/Validata">https://github.com/HW-SWeL/Validata</a>
-            </li>
-        </ul>
-    </div><br>
-    <br>
-    <blockquote>
-        <h6>Note:</h6>help us keep the above list updated: <a href="/howtojoin/">Join</a> the community and/or create a pull request on the <a href="https://github.com/BioSchemas/bioschemas.github.io">bioschemas github</a> community project.
-        <p></p>
-    </blockquote>
+    <h4>Links</h4>
+    <ul>
+      <li><a href="http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/">Bioschemas Generator</a></li>
+    </ul>
+  </div>
+  <div id="goWeb">
+    <h2>GoWeb</h2>
+    <p>Application to help publishing Bioschemas profiles on the Bisochemas <a href="http://bioschemas.org/specifications">website</a>.</p>
+    <img align="left" alt="GoBioschemas logo" src="/images/goweb-bioschemas-logo.svg" width="200">
+    <h4>Description</h4>
+    <p>GoWeb is a simple application that helps us to create the <a href="http://bioschemas.org/specifications/" target="_blank">Bioschemas website specifications</a>. It extracts content from the google spreadsheets we use to define Bioschemas profiles (dataset, protein, samples, ...). The web specifications are created using <a href="http://yaml.org/" target="_blank">YAML</a> so they are also in a <a href="https://github.com/BioSchemas/bioschemas.github.io/tree/master/_specifications" target="_blank">machine readable format</a>. The combination of Google spreadsheets and GoWeb allows us to have a simple mechanism to define Bioschemas profiles and display them in a beautiful and consistent manner.</p>
+    <p>We have created a Google Spreadsheet <a href="https://docs.google.com/spreadsheets/d/1kl92O05-_3kjYd37YK8q2eb4A1fpYvn3Mkk6HhtUBEs/edit#gid=1483018794" target="_blank">template</a> to help the community to define Bioschemas profiles. We have also described the <a href="https://github.com/BioSchemas/specifications/wiki/Bioschemas-Specification-Process" target="_blank">process</a> to create the web specifications using GoWeb.</p>
+    <h4>People</h4>
+    <ul>
+      <li>
+        <a href="http://bioschemas.org/people/RicardoArcila/">Ricardo Arcila</a>
+      </li>
+    </ul>
+    <h4>Links</h4>
+    <ul>
+      <li>
+        <a href="https://github.com/BioSchemas/bioschema-goweb">https://github.com/BioSchemas/bioschema-goweb</a>
+      </li>
+    </ul>
+  </div>
+  <div id="google">
+    <a name="googleDatasetSearch"><h2>Google Dataset Search</h2></a>
+    <p>Dataset specific search engine provided by Google.</p>
+    <a href="https://www.google.co.uk/about/"><img align="right" alt="Google logo" src="/images/google.png" width="250" style="border-left: 30px solid transparent"></a>
+    <h4>Description</h4>
+    <p>
+      <a href="/specifications/Dataset/">Bioschemas specifies certain Dataset properties as mandatory</a> (name, description, keywords, etc.).  These
+      are a superset of <a href="https://developers.google.com/search/docs/data-types/dataset">the properties required by Google to index a dataset</a> (name and description).  Thus, a
+      dataset marked up with Bioschemas mandatory properties, where that markup can be reached by a sitemap or site
+      links, will also be available for Google's Dataset Search.
+    </p>
+    <p>
+      At Bioschemas we are working with Google and <a href="https://schema.org">schema.org</a> to improve existing schema.org types
+      and add new ones that will improve the findability of life sciences data.  This will enable search engines and
+      other applications to provide relevant and comprehensive search results.
+    </p>
+    <h4>Links</h4>
+    <ul>
+      <li>
+        <a href="https://toolbox.google.com/datasetsearch">Google Dataset Search</a>
+      </li>
+      <li>
+        <a href="https://developers.google.com/search/docs/data-types/dataset">Google Dataset specifications</a>
+      </li>
+    </ul>
+  </div>
+  <div id="goCrawlIt">
+    <h2>GoCrawlIt</h2>
+    <p>Minimal crawler and extractor of microdata and JSON-LD metadata.</p>
+    <img align="left" alt="GoCrawlit gopher" src="/images/gocrawlit-gopher.png" width="150">
+    <h4>Description</h4>
+    <p>This tool provides a way to extract JSON-LD and microdata markup information from a given website.</p>
+    <h4>People</h4>
+    <ul>
+      <li>
+        <a href="http://bioschemas.org/people/RicardoArcila/">Ricardo Arcila</a>
+      </li>
+    </ul>
+    <h4>Links</h4>
+    <ul>
+      <li>
+        <a href="https://github.com/ricardoaat/bioschemas-gocrawlit">https://github.com/ricardoaat/bioschemas-gocrawlit</a>
+      </li>
+    </ul>
+  </div>
+  <div id="validator">
+    <h2>Validata</h2>
+    <p>A web application for validating Bioschemas markup against the <a href="http://bioschemas.org/specifications">specifications</a>.</p>
+    <a href="https://github.com/HW-SWeL/Validata"><img align="right" alt="Validata screenshot" src="/images/validata.png" height="378" width="500"></a>
+    <h4>Description</h4>
+    <p>This web app supports users in testing whether their generated markup is compliant with the Bioschemas specifications. The validation engine currently supports machine processable constraint descriptions written in the <a href="http://shex.io/">Shape Expression (ShEx)</a> language which capture the Bioschema profiles. The Validata app allows users to supply some markup which is then compared to the profiles and generates an error report to the user for the snippet of code they provide.</p>
+    <h4>People</h4>
+    <ul>
+      <li>
+        <a href="http://bioschemas.org/people/AlasdairGray/">Alasdair Gray</a>
+      </li>
+      <li>
+        <a href="http://bioschemas.org/people/LeylaGarcia/">Leyla Garcia</a>
+      </li>
+      <li>Nikita Filippov</li>
+    </ul>
+    <h4>Links</h4>
+    <ul>
+      <li>
+        <a href="https://github.com/HW-SWeL/Validata">https://github.com/HW-SWeL/Validata</a>
+      </li>
+    </ul>
+  </div>
+  <hr />
+  <h1>Archive</h1>
+  <p>A list of projects developed previously by the community that are now in hibernation.</p>
+  <div id="buzzbang">
+    <h2>Buzzbang</h2>
+    <p>Open-source components for software to find, crawl and use Bioschemas markup, and for humans to search it.</p>
+    <a href="http://buzzbang.science/"><img align="right" alt="BuzzBang logo." src="/images/buzzbangLogo.png" width="250"></a>
+    <h4>Description</h4>
+    <p>The Buzzbang project develops components that other software can use to find, crawl and use Bioschemas markup. It also provides a Google-like frontend for humans to search it. It is at an early alpha stage but has already been used by some third-party prototype Bioschemas applications. Contributors and bug reports welcome!</p>
+    <h4>People</h4>
+    <ul>
+      <li>
+        <a href="http://bioschemas.org/people/JustinClark-Casey/">Justin Clark-Casey</a>
+      </li>
+      <li>
+        <a href="http://bioschemas.org/people/AnkitKumarLohani/">Ankit Kumar Lohani</a>
+      </li>
+      <li>
+        <a href="http://bioschemas.org/people/RicardoArcila/">Ricardo Arcila</a>
+      </li>
+    </ul>
+    <h4>Links</h4>
+    <ul>
+      <li>
+        <a href="https://github.com/buzzbangorg/buzzbang-doc/wiki">Buzzbang project</a>
+      </li>
+    </ul>
+  </div>
+  <h2>Markup Builder</h2>
+  <p>A web application for prototyping markup against the Bioschemas <a href="http://bioschemas.org/specifications">profiles</a>.</p>
+  <h4>Description</h4>
+  <p>This web application supports users in the creation of Bioschemas compliant markup required for inclusion on their web resource. Bioschemas provides profiles for schema.org mark-up in order to structure and expose life-sciences metadata on the web. Each profile brings a list of allowed attributes with their constraints and properties. Some attributes are required, some are composite, some allow multiple values, some are under controlled vocabularies and some can even be all of that. We want to create a web application that assist users into the creation of their metadata structure, through dynamically generated forms, allowing an easier sharing over the web.</p>
+  <h4>People</h4>
+  <ul>
+    <li>
+      <a href="http://bioschemas.org/people/DominiqueBatista/">Dominique Batista</a>
+    </li>
+    <li>
+      <a href="http://bioschemas.org/people/AlasdairGray/">Alasdair Gray</a>
+    </li>
+  </ul>
+</div>
 </div>
