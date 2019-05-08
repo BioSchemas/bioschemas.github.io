@@ -527,4 +527,31 @@ list:
     bsc_profile: DataCatalog
     bsc_ver: 0.2
     comments:
+-
+    name: ITSoneDB
+    highlight:
+    example_URL: http://itsonedb.cloud.ba.infn.it/
+    resource_URL: http://itsonedb.cloud.ba.infn.it/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.2
+    comments:
+-
+    name: ITSOneDB Marine
+    highlight:
+    example_URL: http://itsonedb.cloud.ba.infn.it/
+    resource_URL: http://itsonedb.cloud.ba.infn.it/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.2
+    comments:
+-
+    name: ITSoneDB Eukaryotic
+    highlight:
+    example_URL: http://itsonedb.cloud.ba.infn.it/
+    resource_URL: http://itsonedb.cloud.ba.infn.it/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.2
+    comments:
 ---
