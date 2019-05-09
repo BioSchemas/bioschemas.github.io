@@ -48,5 +48,6 @@ members:
     - RicardoArcila
     - StephenAnyango
     - GustavoSalazar-Orejuela
+    - VictoriaDominguezDelAngel
     - NathanDunn
 ---
