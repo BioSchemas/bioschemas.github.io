@@ -6,7 +6,7 @@ last-name: Dominguez Del Angel
 collection: people
 affiliation: French Institute of Bioinformatics, France
 homepage:
-github_username: 
+github_username: VddA 
 orcid:
-groups: [community, people, training]
+groups: [proteins,community, people, training]
 ---
