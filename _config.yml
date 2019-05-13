@@ -15,6 +15,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://bioschemas.org" # the base hostname & protocol for your site
 twitter_username: BioSchemas
 github_username:  BioSchemas
+permalink: /404.html
 
 # Build settings
 markdown: kramdown
@@ -54,4 +55,3 @@ collections:
     permalink: /:collection/:path/
   stories:
     output: true
-  
