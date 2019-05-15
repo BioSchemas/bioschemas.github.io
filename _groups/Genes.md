@@ -45,4 +45,5 @@ members:
     - MichelDumontier
     - AndyJenkinson
     - RicardoArcila
+    - ChunleiWu
 ---
