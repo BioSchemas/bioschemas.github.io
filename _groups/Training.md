@@ -68,4 +68,5 @@ Former-Members:
     - AleksandraNenadic
     - MichaelCrusoe
     - RafaelJimenez
+    - VictoriaDominguezDelAngel
 ---
