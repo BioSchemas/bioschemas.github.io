@@ -47,6 +47,7 @@ members:
     - PaulaMartinez     
     - SarahMorgan    
     - LeylaGarcia
+    - VictoriaDominguezDelAngel
 
 Former-Members:    
     - ChrisTaylor
@@ -68,5 +69,4 @@ Former-Members:
     - AleksandraNenadic
     - MichaelCrusoe
     - RafaelJimenez
-    - VictoriaDominguezDelAngel
 ---
