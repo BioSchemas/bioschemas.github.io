@@ -55,4 +55,6 @@ members:
     - DavidvanEnckevort
     - AndyJenkinson
     - RafaelJimenez
+    - VictoriaDominguezDelAngel.md
+    
 ---
