@@ -8,5 +8,5 @@ affiliation: French Institute of Bioinformatics, France
 homepage:
 github_username: VddA 
 orcid:
-groups: [proteins,community, people, training]
+groups: [proteins,community, people, training, Events, Workflow]
 ---
