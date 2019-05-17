@@ -554,4 +554,13 @@ list:
     bsc_profile: Dataset
     bsc_ver: 0.2
     comments:
+-
+    name: Global Biodiversity Information Facility
+    highlight:
+    example_URL: https://www.gbif.org/dataset/c0cc29de-f49f-4b66-b4ec-c83afbb7101d
+    resource_URL: https://www.gbif.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.2
+    comments:
 ---
