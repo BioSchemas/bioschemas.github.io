@@ -21,7 +21,11 @@ layout: default
 {% endif %}
 
 {% if page.meeting-url %}
-  <p><strong>Meeting page:</strong> <a href="{{page.meeting-url}}">{{page.meeting-url}}</a></p>
+  {% if page.meeting-name %}
+    <p><strong>Meeting page:</strong> <a href="{{page.meeting-url}}">{{page.meeting-name}}</a></p>
+  {% else %}
+    <p><strong>Meeting page:</strong> <a href="{{page.meeting-url}}">{{page.meeting-url}}</a></p>
+    {% endif %}
 {% endif %}
 {% if page.agenda-doc %}
   <p><strong>Agenda:</strong> <a href="{{page.agenda-doc}}">Meeting Notes</a></p>
