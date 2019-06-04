@@ -2,8 +2,12 @@
 layout: default
 ---
 <h1>{{ page.name }}</h1>
-<p><strong>Dates:</strong> {{page.start_date | date_to_long_string}} To {{page.end_date | date_to_long_string}}</p>
+{% if page.start_date == page.end_date %}
+<p><strong>Date:</strong> {{page.start_date | date_to_long_string}}</p>
+{% else %}
+<p><strong>Dates:</strong> {{page.start_date | date_to_long_string}} - {{page.end_date | date_to_long_string}}</p>
 <p><strong>Venue:</strong> {{page.venue}}</p>
+{% endif %}
 
 {% if page.contact-people %}
 <strong>Contacts:</strong>
