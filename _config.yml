@@ -31,7 +31,7 @@ collections:
     permalink: /:collection/:path/
   devSpecs:
     output: true
-    permalink: /:collection/:path/
+    permalink: /specifications/drafts/:path/
   types:
     output: true
     permalink: /:collection/:path/
