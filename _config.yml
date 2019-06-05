@@ -37,7 +37,7 @@ collections:
     permalink: /:collection/:path/
   devTypes:
     output: true
-    permalink: /:collection/:path/
+    permalink: /types/drafts/:path/
   meetings:
     output: true
     permalink: /:collection/:path/ #Note, trailing / needed to avoid .html
