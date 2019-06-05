@@ -125,7 +125,7 @@ redirect_from:
         {% assign type_specs = site.devTypes | where: 'spec_type', 'Type'%} {% for spec in type_specs%}
         <tr>
             <th>
-                <a href="/devTypes/{{spec.name}}/" title="{{spec.subtitle}}">{{ spec.name }}</a>
+                <a href="/types/drafts/{{spec.name}}/" title="{{spec.subtitle}}">{{ spec.name }}</a>
                 <br />(v{{spec.version}})
                 <br />{{spec.dateModified}}</th>
             <td>
