@@ -17,8 +17,7 @@ hierarchy:
 - CreativeWork
 - Course
 
-spec_mapping_url: https://docs.google.com/spreadsheets/d/1c41fgWiZJN0IeC-q15XN1DDJb6RZUqhugPSWuinsFXQ/edit#gid=1261485211
-
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1kyTFfqoUveSeiGEp0K44R7oqLtGTbBWAY8lqlT4KWHo/edit#gid=1483018794
 spec_info:
   title: Course
   subtitle: 'Specification describing a course. '
@@ -26,8 +25,8 @@ spec_info:
     course is used to describe the broad, common aspects of a recurring training event
     - whereas a course instance is about the specific times and location of when that
     course is held. '
-  version: 0.5-draft
-  version_date: 20190225T145056
+  version: 0.6-draft
+  version_date: 20190606T160446
   official_type: ""
   full_example: ""
 mapping:
@@ -41,13 +40,52 @@ mapping:
   type_url: ""
   bsc_description: "The subject of this Course. \nUse the DefinedTerm type to add
     a controlled vocabulary term to categorise the course (such as using the [EDAM
-    Topic ontology](https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_0003)) "
+    Topic ontology](https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_0003))."
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: EDAM term
   example: "\"about\": [{\n  \"@type\": \"DefinedTerm\", \n  \"@id\": \"http://edamontology.org/topic_3316\",\n
     \ \"inDefinedTermSet\": \"http://edamontology.org\",\n  \"termCode\": \"topic_3316\",\n
     \ \"name\": \"Computer Science\",\n  \"url\": \"https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_3316\"\n}]"
+- property: abstract
+  expected_types:
+  - Text
+  description: A short, succinct description of the resource.
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |
+    "abstract": "This tutorial will take you through the basic usage of the command line shell. In it, you will discover what a shell is, skills for directory navigation, file manipulation, and how to run tools"
+- property: accessibilitySummary
+  expected_types:
+  - Text
+  description: A human-readable summary of specific accessibility features or deficiencies,
+    consistent with the other accessibility metadata but expressing subtleties such
+    as "short descriptions are present but long descriptions will be needed for non-visual
+    users" or "short descriptions are present and no long descriptions are needed."
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |
+    "accessibilitySummary": "Visual elements are not described."
+- property: aggregateRating
+  expected_types:
+  - AggregateRating
+  description: The overall rating, based on a collection of reviews or ratings, of
+    the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
 - property: alternateName
   expected_types:
   - Text
@@ -58,22 +96,56 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: 'alternateName: ["Comp-sci 101"]'
-- property: audience
+  example: '"alternateName": ["Comp-sci 101"]'
+- property: citation
   expected_types:
-  - Audience
-  description: An intended audience, i.e. a group for whom something was created.
-    Supersedes serviceAudience.
+  - CreativeWork
+  - Text
+  description: A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
   type: ""
   type_url: ""
-  bsc_description: 'The type of audience intended for your course. A succinct description
-    of the attendees. '
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: comment
+  expected_types:
+  - Comment
+  description: Comments, typically from users.
+  type: ""
+  type_url: ""
+  bsc_description: ""
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: "\"audience\": [{\n  \"@type\": \"Audience\",\n  \"audienceType\": \"PhD
-    students\" \n},\n{\n  \"@type\": \"Audience\",\n  \"audienceType\": \"Post-docs\"
-    \n}]"
+  example: ""
+- property: commentCount
+  expected_types:
+  - Integer
+  description: The number of comments this CreativeWork (e.g. Article, Question or
+    Answer) has received. This is most applicable to works published in Web sites
+    with commenting system; additional comments may exist elsewhere.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: contentReferenceTime
+  expected_types:
+  - DateTime
+  description: The specific time described by a creative work, for works (e.g. articles,
+    video objects etc.) that emphasise a particular moment within an Event.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
 - property: courseCode
   expected_types:
   - Text
@@ -160,9 +232,9 @@ mapping:
   type_url: ""
   bsc_description: ""
   marginality: Optional
-  cardinality: ONE
+  cardinality: MANY
   controlled_vocab: ""
-  example: '"dateModified": "2019-03-28 13:25:13 +0000"'
+  example: '"dateModified": ["2019-03-28 13:25:13 +0000"]'
 - property: description
   expected_types:
   - Text
@@ -184,7 +256,7 @@ mapping:
     of this course.
   type: ""
   type_url: ""
-  bsc_description: Strongly recommended if exists
+  bsc_description: Strongly recommended if exists.
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -197,9 +269,9 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: |-
-    A course may be ran multiple times in different locations or at different times. Use hasCourseInstance to list the offerings of this Course.
+    A course may be ran multiple times in different locations or at different times. Use hasCourseInstance to list the offerings of thisCourse.
 
-    Please see the [Course Instance specification](https://bioschemas.org/specifications/CourseInstance) for the full list of properties
+    Please see the [Course Instance specification](https://bioschemas.org/specifications/CourseInstance) for the full list of properties.
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
@@ -235,11 +307,11 @@ mapping:
   type_url: ""
   bsc_description: "A training material used in a course such as an exercise, handouts,
     or slides. \n\nInverse property: isPartOf.\n\nIf this varies in a CourseInstance,
-    use workFeatutred to override hasPart. "
+    use workFeatutred to override this property value. "
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: "hasPart: [{\n  \"@type\": \"TrainingMaterial\",\n\n  //Minimum\n  \"name\":
+  example: "\"hasPart\": [{\n  \"@type\": \"TrainingMaterial\",\n\n  //Minimum\n  \"name\":
     \"Course Slides for CS101\",\n  \"description\": \"The course slides contain diagrams,
     questions, and links to various resources about this course\",\n  \"keywords\":
     \"Computer Science, CS, Introductory\",\n\n  //Recommended\n  \"timeRequired\":
@@ -264,6 +336,21 @@ mapping:
   cardinality: ONE
   controlled_vocab: ""
   example: '"image": "https://image.server.com/my-image.jpg"'
+- property: isBasedOn
+  expected_types:
+  - CreativeWork
+  - Product
+  - URL
+  description: A resource that was used in the creation of this resource. This term
+    can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+    Supersedes isBasedOnUrl.
+  type: ""
+  type_url: ""
+  bsc_description: A course, book, or other resource this course is based on
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
 - property: keywords
   expected_types:
   - Text
@@ -276,6 +363,33 @@ mapping:
   cardinality: ONE
   controlled_vocab: ""
   example: '"keywords": "RNA-Seq, Workshop"'
+- property: learningOutcome
+  expected_types:
+  - Text
+  description: Statements that describe what knowledge and skills a student will acquire
+    from completing this training.
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: It is recommended you utilize terms from Blooms taxonomy
+  example: |
+    "learningOutcome": ["The student will be able to recall shell commands", "The student will be able to write code to copy files"", "The student will be able to discover new commands on their own"]
+- property: license
+  expected_types:
+  - CreativeWork
+  - URL
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  type: ""
+  type_url: ""
+  bsc_description: If you have an open source licence, include the short URL as found
+    in OSI [link]. Otherwise use CreativeWork to describe your custom licence
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
 - property: mentions
   expected_types:
   - Thing
@@ -291,7 +405,7 @@ mapping:
   cardinality: MANY
   controlled_vocab: ""
   example: |-
-    mentions: [{
+    "mentions": [{
       "@type": "Tool",
       "name": "Galaxy",
       "url": "https://bio.tools/galaxy",
@@ -324,7 +438,7 @@ mapping:
   type_url: ""
   bsc_description: |-
     The organization responsible for providing the educational input for the course, e.g. content, assessments, accreditation etc.
-    Note: providing a course goes beyond creating it as it implies some degree of academic responsibility for accrediting the content of the course, perhaps running assessments etc.
+    Note: providing a course goes beyond creating it as it implies some degree of academic responsibility for accrediting the content ofthe course, perhaps running assessments etc.
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
@@ -332,21 +446,15 @@ mapping:
     of Manchester\"\n}]"
 - property: skillLevel
   expected_types:
-  - DefinedTerm
   - Text
-  - URL
   description: The students level of ability in the topic being taught. Examples of
-    skill levels include 'beginner', 'intermediate' or 'advanced'
+    skill levels include 'beginner', 'intermediate' or 'advanced'.
   type: bioschemas
   type_url: ""
-  bsc_description: The students expected level of ability in the topic being taught.
-    Skill levels are 'beginner', 'intermediate' or 'advanced'
+  bsc_description: ""
   marginality: Recommended
-  cardinality: MANY
-  controlled_vocab: |-
-    - Beginner
-    - Intermediate
-    - Advanced
+  cardinality: ONE
+  controlled_vocab: ""
   example: '"skillLevel": "beginner"'
 - property: thumbnailUrl
   expected_types:
@@ -369,7 +477,7 @@ mapping:
   bsc_description: "Approximate or typical time it takes to work through this learning
     resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'. This
     should use the ISO 8601 duration format. \n\nIf this varies in a *CourseInstance*,
-    use _duration_ in *CourseInstance* to override timeRequired"
+    use _duration_ in *CourseInstance* to override timeRequired."
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ISO 8601
@@ -381,11 +489,35 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: The preferred URL of the course page. You must provide this value
-    if it is known
+    if it is known.
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
   example: '"url": "https://training.site/123"'
+- property: uses
+  expected_types:
+  - Thing
+  description: List resources utilized by this resource such as datasets, tools, technologies,
+    or other entities.
+  type: bioschemas
+  type_url: ""
+  bsc_description: Datasets, tools, technologies, entities etc, which will be utilized
+    in this Course.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    "uses": [{
+      "@type": "Tool",
+      "name": "Galaxy",
+      "url": "https://bio.tools/galaxy",
+      "description": "Open, web-based platform for data intensive biomedical research"
+    },{
+      "@type": "Dataset",
+      "name": "European Genome-phenome Archive",
+      "url": "https://www.ebi.ac.uk/ega/home",
+      "description": "The EGA archives a large number of datasets, the access to which is controlled by a Data Access Committee (DAC)."
+    }]
 ---
 <!DOCTYPE HTML>
 <html>
