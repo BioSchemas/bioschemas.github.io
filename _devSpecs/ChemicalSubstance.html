@@ -7,7 +7,7 @@ status: revision
 spec_type: Profile
 group: chemicals
 use_cases_url: '/useCases/ChemicalSubstance/'
-cross_walk_url: 'https://docs.google.com/spreadsheets/d/1ZuJHrUwpkWACAt0De6OXhlWZ9pSRTJ1m9H954i8-FvQ/edit?ts=5bebfe78&pli=1#gid=1261485211'
+cross_walk_url: 'https://docs.google.com/spreadsheets/d/1-E7IbF6Fe2uMyTpWMvthci8Lx58kXxlcz8BiXLmJTdk/'
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Chemistry
 live_deploy: ''
 
@@ -17,7 +17,7 @@ hierarchy:
 - BioChemEntity
 - ChemicalSubstance
 
-spec_mapping_url: https://docs.google.com/spreadsheets/d/1ZuJHrUwpkWACAt0De6OXhlWZ9pSRTJ1m9H954i8-FvQ/edit?ts=5bebfe78&pli=1#gid=1261485211
+spec_mapping_url: https://docs.google.com/spreadsheets/d/1-E7IbF6Fe2uMyTpWMvthci8Lx58kXxlcz8BiXLmJTdk/
 
 spec_info:
   title: ChemicalSubstance
@@ -25,10 +25,10 @@ spec_info:
   description: 'This specification describes a ChemicalSubstance which is ''a portion
     of matter of constant composition, composed of molecular entities of the same
     type or of different types'' (source: ChEBI).'
-  version: 0.1-draft
-  version_date: 20181207T110158
+  version: 0.2-DRAFT
+  version_date: 20190611T145905
   official_type: ""
-  full_example: https://github.com/BioSchemas/specifications/tree/master/ChemicalSubstance/examples/0.1-DRAFT/
+  full_example: https://github.com/BioSchemas/specifications/tree/master/ChemicalSubstance/examples
 mapping:
 - property: alternateName
   expected_types:
@@ -44,10 +44,10 @@ mapping:
     "alternateName": [
         "SiO2"
     ]
-- property: biochemicalInteraction
+- property: bioChemInteraction
   expected_types:
   - BioChemEntity
-  description: ""
+  description: A BioChemEntity that is known to interact with this item.
   type: bioschemas
   type_url: ""
   bsc_description: Interaction of the molecular entity with other BioChemical entities.
@@ -55,14 +55,14 @@ mapping:
   cardinality: MANY
   controlled_vocab: ""
   example: ""
-- property: 'biochemicalSimilarity '
+- property: bioChemSimilarity
   expected_types:
   - BioChemEntity
-  description: ""
+  description: A similar molecular entity, e.g., obtained by fingerprint similarity
+    algorithms.
   type: bioschemas
   type_url: ""
-  bsc_description: A similar molecular entity, e.g., obtained by fingerprint similarity
-    algorithms.
+  bsc_description: ""
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -70,10 +70,10 @@ mapping:
 - property: biologicalRole
   expected_types:
   - DefinedTerm
-  description: ""
+  description: A role played by the molecular entity within a biological context.
   type: bioschemas
   type_url: ""
-  bsc_description: A role played by the molecular entity within a biological context.
+  bsc_description: ""
   marginality: Optional
   cardinality: MANY
   controlled_vocab: Any suitable ontology such as [ChEBI biological role](https://www.ebi.ac.uk/ols/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_24432)
@@ -81,7 +81,7 @@ mapping:
 - property: chemicalRole
   expected_types:
   - DefinedTerm
-  description: ""
+  description: A role played by the molecular entity within a chemical context.
   type: bioschemas
   type_url: ""
   bsc_description: A role played by the molecular entity within a chemical context.
@@ -129,8 +129,9 @@ mapping:
   expected_types:
   - BioChemEntity
   - URL
-  description: Indicates a BioChemEntity that (in some sense) has this BioChemEntity
-    as a part.
+  description: |-
+    Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.
+    Inverse property: isPartOfBioChemEntity
   type: ""
   type_url: ""
   bsc_description: ""
@@ -176,12 +177,12 @@ mapping:
 - property: molecularFormula
   expected_types:
   - Text
-  description: 'Inverse property: isPartOfBioChemEntity'
+  description: The empirical formula is the simplest whole number ratio of all the
+    atoms in a molecule.
   type: bioschemas
   type_url: ""
-  bsc_description: The empirical formula is the simplest whole number ratio of all
-    the atoms in a molecule. Because for substances this often cannot accurately be
-    determined, an approximation is acceptable.
+  bsc_description: For substances this often cannot accurately be determined, an approximation
+    is acceptable.
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
@@ -200,10 +201,10 @@ mapping:
 - property: potentialUse
   expected_types:
   - DefinedTerm
-  description: ""
+  description: Intended use of the molecular entity by humans.
   type: bioschemas
   type_url: ""
-  bsc_description: Intended use of the molecular entity by humans.
+  bsc_description: ""
   marginality: Optional
   cardinality: MANY
   controlled_vocab: Any suitable ontology such as  [ChEBI Application](https://www.ebi.ac.uk/ols/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_33232)
