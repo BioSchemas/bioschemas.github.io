@@ -1,10 +1,10 @@
 ---
 layout: default
-title: BioSchemas Specifications
+title: BioSchemas Profiles
 ---
-<h1>Bioschemas Specifications</h1>
+<h1>Bioschemas Profiles</h1>
 
-<p>This page contains release versions of the Bioschemas specifications. Ongoing changes are published via the <a href="/specifications/drafts">drafts</a> page.</p>
+<p>This page contains release versions of the Bioschemas profile specifications. Ongoing changes are published via the <a href="/specifications/drafts">drafts</a> page.</p>
 <p>Should you wish to contact the community to discuss our efforts please email <a href="mailto:public-bioschemas@w3.org" itemprop="email">public-bioschemas@w3.org</a>.</p>
 
 <h2>Profiles</h2>
@@ -96,43 +96,3 @@ title: BioSchemas Specifications
       </tbody>
   </table>
 </div>
-
-
-<h2>Types</h2>
-<p>We have found it necessary to propose some additional types to the Schema.org vocabulary. 
-    These are specified below and are expected to be pushed up to Schema.org once they have stabilised. 
-    These types are used as the generic base for some of the profile specifications, such as protein.
-    Again, working versions are published in the <a href="/specifications/drafts">drafts</a> page.</p>
-
-<table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th style="text-align: center;">Group</th>
-        <th style="text-align: center;">Task &amp; Issues</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% assign type_specs = site.types | where: 'spec_type', 'Type'%}
-    {% for spec in  type_specs%}
-    <tr>
-        <th><a href="/types/{{spec.name}}" title="{{spec.subtitle}}">{{ spec.name }}</a><br />(v{{spec.version}})<br />{{spec.dateModified}}</th>
-        <td>
-        {% assign group = site.groups | where:"identifier", spec.group | first %}
-        <a href="{{group.url}}">{{group.name}}</a>
-        </td>
-        <td class="spec_links">
-            {% if spec.gh_tasks == '' %}
-              <a>
-                <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
-              </a>
-            {% else %}
-              <a href="{{spec.gh_tasks}}">
-                <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues">
-              </a>
-            {% endif %}
-        </td>
-    </tr>
-    {% endfor %}
-    </tbody>
-</table>

@@ -1,16 +1,15 @@
 ---
 layout: default
-title: Draft BioSchemas Specifications
+title: Draft BioSchemas Profiles
 redirect_from:
  - "/devSpecs/"
 ---
 
-<h1>Draft Bioschemas Specifications</h1>
-<p>The specifications on this page are a work in progress. We would be delighted to receive your comments on these specifications
-    (
-    <a href="mailto:public-bioschemas@w3.org" itemprop="email">public-bioschemas@w3.org</a>), but please do not use these within your work. Should you wish to markup your data according
-    to the Bioschema's specifications, use those described on the main
-    <a href="/specifications/">Specifications</a> page.</p>
+<h1>Draft Bioschemas Profiles</h1>
+<p>The specifications on this page are a work in progress. We would be delighted to receive your comments on these specifications (<a 
+    href="mailto:public-bioschemas@w3.org" itemprop="email">public-bioschemas@w3.org</a>), but please do not use these within your work. 
+    Should you wish to markup your data according to the Bioschema's specifications, use those described on the main 
+    <a href="/specifications/">Profiles</a> page.</p>
 <h2>Profiles</h2>
 <p>The Bioschemas' profiles define a community agreed layer over the Schema.org model providing additional constraints. These
     constraints capture (i) the information properties agreed by the community which are minimum (M), recommended (R), or
@@ -38,7 +37,7 @@ redirect_from:
             {% for spec in prof_specs %}
             <tr>
                 {% assign date_time = spec.spec_info.version_date %}
-               <th><a href="/devSpecs/{{spec.name}}/" title="{{ spec.spec_info.subtitle }}">{{ spec.spec_info.title }}</a><br />(v{{spec.spec_info.version}})<br />{{ date_time | date_to_long_string }}</th>
+               <th><a href="/specifications/drafts/{{spec.name}}/" title="{{ spec.spec_info.subtitle }}">{{ spec.spec_info.title }}</a><br />(v{{spec.spec_info.version}})<br />{{ date_time | date_to_long_string }}</th>
                <td>
                   {% assign group = site.groups | where:"identifier", spec.group %}
                   {% for g in group %}
@@ -105,45 +104,4 @@ redirect_from:
          </tbody>
     </table>
 </div>
-<h2>Types</h2>
-<p>We have found it necessary to propose some additional types to the Schema.org vocabulary. These are specified below and are
-    expected to be pushed up to Schema.org once they have stabalised.</p>
-<p>Once again, these documents represent a work in progress and should not be the basis of your own work.</p>
-<p>
-    <u>Note</u>: draft versions that are identical to the release version will only have a 2 digit version number, e.g.,
-    <em>v0.1</em>. If they have been updated the version number will contain 3 digits, e.g.,
-    <em>v0.1-draft.1</em>.</p>
-<table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th style="text-align: center;">Group</th>
-            <th style="text-align: center;">Task &amp; Issues</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% assign type_specs = site.devTypes | where: 'spec_type', 'Type'%} {% for spec in type_specs%}
-        <tr>
-            <th>
-                <a href="/devTypes/{{spec.name}}/" title="{{spec.subtitle}}">{{ spec.name }}</a>
-                <br />(v{{spec.version}})
-                <br />{{spec.dateModified}}</th>
-            <td>
-                {% assign group = site.groups | where:"identifier", spec.group | first%}
-                <a href="{{group.url}}">{{group.name}}</a>
-            </td>
-            <td class="spec_links">
-                {% if spec.gh_tasks == '' %}
-                <a>
-                    <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
-                </a>
-                {% else %}
-                <a href="{{spec.gh_tasks}}">
-                    <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues">
-                </a>
-                {% endif %}
-            </td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+
