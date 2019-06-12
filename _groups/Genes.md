@@ -39,8 +39,6 @@ draft_types:
   ]
 
 members:
-    - LeylaGarcia
-    - DeniseCarvalho-Silva
     - OlgaXimenaGiraldo
     - MichelDumontier
     - AndyJenkinson

@@ -41,7 +41,6 @@ draft_types:
 
 
 members:
-    - FedericoLopezGomez
     - LeylaGarcia
     - RicardoArcila
     - PhilippeRocca-Serra

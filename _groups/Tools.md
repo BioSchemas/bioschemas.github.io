@@ -31,9 +31,6 @@ draft_specifications:
 
 members:
     - GiuseppeProfiti
-    - RicardoArcila
-    - JustinClark-Casey
-    - LeylaGarcia
     - NiallBeard
     - PhilippeRocca-Serra
     - SusheelVarma

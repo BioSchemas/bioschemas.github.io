@@ -28,9 +28,7 @@ draft_specifications:
   ]
 
 members:
-  - AudaldLloret
   - SusheelVarma
-  - SerenaScollen
   - AndraWaagmeester
   - MichaelBaudis
   - RafaelJimenez

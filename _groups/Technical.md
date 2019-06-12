@@ -17,6 +17,7 @@ objectives:
 members:
     - AlasdairGray
     - RicardoArcila
+    - KennethMcLeod
 ---
 
 <div id="links">

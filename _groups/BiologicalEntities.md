@@ -28,8 +28,6 @@ draft_types:
     ]
 
 members:
-  - PhilippeRocca-Serra
-  - CarlosHorro
   - AndraWaagmeester
   - JustinClark-Casey
   - SameerVelankar
@@ -44,5 +42,4 @@ members:
   - MichelDumontier
   - anyango
   - AlexanderGarcia
-  - LeylaGarcia
 ---

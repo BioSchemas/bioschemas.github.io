@@ -40,7 +40,6 @@ members:
     - SusannaSansone
     - AnilWipat
     - DominiqueBatista
-    - PeterMcQuilton
     - EthyCannon
     - VickySchneider
     - AndraWaagmeester

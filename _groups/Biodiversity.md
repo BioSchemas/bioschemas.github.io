@@ -36,8 +36,6 @@ draft_types:
     'Taxon',
   ]
 members:
-    - FranckMichel
     - RicardoArcila
-    - LeylaGarcia
     - ylebras
 ---

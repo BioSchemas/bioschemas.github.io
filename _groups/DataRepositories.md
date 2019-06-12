@@ -40,7 +40,6 @@ members:
   - GianluigiZanetti
   - VickySchneider
   - AndraWaagmeester
-  - HenningHermjakob
   - HeimoMüller
   - JustinClark-Casey
   - MorrisSwertz

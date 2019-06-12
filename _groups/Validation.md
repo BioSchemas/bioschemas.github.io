@@ -27,7 +27,6 @@ members:
     - AndraWaagmeester
     - JustinClark-Casey
     - GuillermoCalderonMantilla
-    - AlasdairGray
     - RobertDFinn
     - GiuseppeProfiti
     - AurelienLuciani

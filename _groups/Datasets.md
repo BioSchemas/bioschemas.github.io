@@ -44,7 +44,6 @@ members:
   - PhilippeRocca-Serra
   - SusheelVarma
   - LizWilliams
-  - SusannaSansone
   - AnilWipat
   - PeterMcQuilton
   - GianluigiZanetti
@@ -70,6 +69,4 @@ members:
   - anyango
   - HaydeeArtaza
   - DavidvanEnckevort
-
-
 ---
