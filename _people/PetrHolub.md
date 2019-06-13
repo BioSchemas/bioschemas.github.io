@@ -7,5 +7,4 @@ affiliation: BBMRI-ERIC
 homepage: http://www.bbmri-eric.eu/BBMRI-ERIC/staff/
 github_username:
 orcid:
-groups: [data, datarepositories, events, labprotocols, samples]
 ---

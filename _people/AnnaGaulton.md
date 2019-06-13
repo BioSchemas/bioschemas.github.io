@@ -8,5 +8,4 @@ affiliation: EBI - EMBL
 homepage:
 github_username: agaulton
 orcid: 0000-0003-2634-7400
-groups: [chemicals]
 ---

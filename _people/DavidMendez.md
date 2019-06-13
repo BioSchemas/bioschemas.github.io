@@ -8,5 +8,4 @@ affiliation: EBI - EMBL
 homepage:
 github_username: nclopezo
 orcid: 0000-0002-0294-5484
-groups: [chemicals]
 ---

@@ -8,5 +8,4 @@ affiliation: University of Manchester
 homepage:
 github_username:
 orcid:
-groups: [events, organizations, training]
 ---

@@ -8,5 +8,4 @@ affiliation:
 homepage:
 github_username: robertopreste
 orcid:
-groups: [tools, community, validation]
 ---

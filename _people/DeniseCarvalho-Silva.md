@@ -8,5 +8,4 @@ affiliation:
 homepage:
 github_username: deniseome
 orcid:
-groups: [genes]
 ---

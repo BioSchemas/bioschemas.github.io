@@ -8,5 +8,4 @@ affiliation:
 homepage:
 github_username: spficklin
 orcid:
-groups: [datarepositories]
 ---

@@ -8,5 +8,4 @@ affiliation:
 homepage:
 github_username: ekcannon
 orcid:
-groups: [data, standards, community]
 ---

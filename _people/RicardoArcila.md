@@ -8,5 +8,4 @@ affiliation: EBI - EMBL
 homepage:
 github_username: ricardoaat
 orcid:
-groups: [genes, proteins, technical, tools]
 ---

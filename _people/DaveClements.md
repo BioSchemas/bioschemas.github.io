@@ -8,5 +8,4 @@ affiliation: Johns Hopkins University
 homepage:
 github_username: 
 orcid:
-groups: [training]
 ---

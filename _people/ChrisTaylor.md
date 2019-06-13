@@ -8,5 +8,4 @@ affiliation:
 homepage:
 github_username:
 orcid:
-groups: [training, community]
 ---

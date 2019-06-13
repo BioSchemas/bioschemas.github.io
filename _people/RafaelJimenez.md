@@ -8,5 +8,4 @@ affiliation: ELIXIR Hub
 homepage: https://www.linkedin.com/in/rafaelcjimenez/
 github_username: rajido
 orcid: 0000-0001-5404-7670
-groups: [events, organizations, people, training, tools, community, datarepositories, beacons, community, samples]
 ---

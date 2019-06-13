@@ -8,5 +8,4 @@ affiliation:
 homepage:
 github_username: terazus
 orcid:
-groups: [events, organizations, people, training, standards, tools]
 ---

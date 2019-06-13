@@ -8,5 +8,4 @@ affiliation: CSC - IT Center for Science
 homepage:
 github_username: 
 orcid:
-groups: [training]
 ---

@@ -8,5 +8,4 @@ affiliation: Ontology Engineering Group, Universidad Politécnica de Madrid, Spa
 homepage: http://oxgiraldo.wordpress.com/
 github_username:
 orcid: 0000-0003-2978-8922
-groups: [labprotocols, biologicalentities, genes, biotea2bioschemas]
 ---

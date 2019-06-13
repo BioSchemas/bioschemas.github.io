@@ -8,5 +8,4 @@ affiliation:
 homepage:
 github_username: nathandunn
 orcid:
-groups: [dna, proteins]
 ---
