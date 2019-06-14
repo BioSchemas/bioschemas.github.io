@@ -8,5 +8,4 @@ affiliation:
 homepage:
 github_username: ficolo
 orcid:
-groups: [events, tools, community, validation, labprotocols, phenotypes, biotea2bioschemas]
 ---

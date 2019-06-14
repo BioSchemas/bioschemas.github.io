@@ -8,5 +8,4 @@ affiliation:
 homepage:
 github_username: mr-c
 orcid:
-groups: [organizations, people, training, datarepositories, standards, tools, community, validation]
 ---

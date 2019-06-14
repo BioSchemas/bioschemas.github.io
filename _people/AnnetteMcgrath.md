@@ -2,7 +2,6 @@
 layout: person-details
 collection: people
 id: AnnetteMcgrath
-groups: [training]
 first-name: Annette
 last-name: McGrath
 affiliation: CSIRO

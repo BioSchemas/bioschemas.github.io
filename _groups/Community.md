@@ -37,9 +37,7 @@ members:
     - DanTimmons
     - AlejandraGonzalez-Beltran
     - GuillermoCalderonMantilla
-    - AlasdairGray
     - MartinCook
-    - CaroleGoble
     - anyango
     - PremyslVelek
     - MichaelCrusoe

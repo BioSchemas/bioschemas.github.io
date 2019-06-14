@@ -38,8 +38,6 @@ draft_types:
   ]
 
 members:
-    - OlgaXimenaGiraldo
-    - AlexanderGarcia
     - FedericoLópezGómez
     - LeylaGarcia
     - GianluigiZanetti

@@ -8,5 +8,4 @@ affiliation: Perdana University
 homepage:
 github_username: 
 orcid:
-groups: [training]
 ---

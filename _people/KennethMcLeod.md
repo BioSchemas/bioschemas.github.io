@@ -8,5 +8,4 @@ affiliation: Hertio-Watt University
 homepage: http://www.macs.hw.ac.uk/~kcm
 github_username:
 orcid:
-groups: [community]
 ---

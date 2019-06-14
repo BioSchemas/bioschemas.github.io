@@ -8,5 +8,4 @@ affiliation: Dutch Techcentre for Life Sciences (DTL)
 homepage:
 github_username: 
 orcid:
-groups: [training]
 ---

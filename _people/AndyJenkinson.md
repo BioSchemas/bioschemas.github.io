@@ -8,5 +8,4 @@ affiliation:
 homepage:
 github_username: andyjenkinson
 orcid:
-groups: [events, organizations, people, genes]
 ---

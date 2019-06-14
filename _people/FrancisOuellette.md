@@ -8,5 +8,4 @@ affiliation: bioinformatics.ca
 homepage:
 github_username: 
 orcid:
-groups: [training]
 ---

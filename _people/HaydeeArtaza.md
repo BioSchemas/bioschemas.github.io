@@ -8,5 +8,4 @@ affiliation:
 homepage:
 github_username: haydeeartaza
 orcid:
-groups: [data, datarepositories]
 ---

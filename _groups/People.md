@@ -24,7 +24,6 @@ draft_specifications:
     ]
 
 members:
-    - NiallBeard
     - PhilippeRocca-Serra
     - SusannaSansone
     - DominiqueBatista

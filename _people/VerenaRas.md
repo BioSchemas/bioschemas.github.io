@@ -8,5 +8,4 @@ affiliation: H3ABioNet
 homepage:
 github_username: 
 orcid:
-groups: [training]
 ---

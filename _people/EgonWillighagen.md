@@ -8,5 +8,4 @@ affiliation: Maastricht University
 homepage:
 github_username: egonw
 orcid: 0000-0001-7542-0286
-groups: [chemicals]
 ---

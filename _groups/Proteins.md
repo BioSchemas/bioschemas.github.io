@@ -37,8 +37,6 @@ draft_types:
     'Protein'
   ]
 members:
-    - MariaMartin
-    - LeylaGarcia
     - AndraWaagmeester
     - SameerVelankar
     - SaqibMir

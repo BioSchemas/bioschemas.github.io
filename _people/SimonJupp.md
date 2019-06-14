@@ -8,5 +8,4 @@ affiliation: European Bioinformatics Institute
 homepage:
 github_username:
 orcid:
-groups: [samples]
 ---

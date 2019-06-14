@@ -38,7 +38,6 @@ draft_types:
   ]
 
 members:
-    - HelenParkinson
     - PhilippeRocca-Serra
     - CarlosHorro
     - SimonJupp
@@ -46,7 +45,6 @@ members:
     - AndraWaagmeester
     - HeimoMüller
     - MorrisSwertz
-    - TonyBurdett
     - KaisaSilander
     - CaroleGoble
     - PetrHolub

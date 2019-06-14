@@ -45,7 +45,6 @@ members:
     - MorrisSwertz
     - DanTimmons
     - AlejandraGonzalez-Beltran
-    - MartinCook
     - KaisaSilander
     - PetrHolub
     - ClaireJohnson

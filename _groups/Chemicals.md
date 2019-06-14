@@ -28,7 +28,4 @@ draft_types:
 
 members:
   - AnnaGaulton
-  - RicardoArcila
-  - DavidMendez
-  - EgonWillighagen
 ---
