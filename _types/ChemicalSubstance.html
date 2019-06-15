@@ -1,19 +1,19 @@
 ---
 redirect_from:
-- "types/drafts/Protein/specification"
-- "types/drafts/Protein/specification/"
-- "/types/drafts/Protein/"
+- "devTypes/ChemicalSubstance/specification"
+- "devTypes/ChemicalSubstance/specification/"
+- "/devTypes/ChemicalSubstance/"
 dateModified: 2019-06-14
-description: "Protein is here used in its widest possible definition, as classes of amino acid based molecules. Amyloid-beta Protein in human (UniProt P05067), eukaryota (e.g. an OrthoDB group) or even a single molecule that one can point to are all of type schema:Protein. A protein can thus be a subclass of another protein, e.g. schema:Protein as a UniProt record can have multiple isoforms inside it which would also be schema:Protein. They can be imagined, synthetic, hypothetical or naturally occurring."
+description: "A chemical substance."
 hierarchy:
 - Thing
 - BioChemEntity
-gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Protein
-group: proteins
-name: Protein
+gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Chemicals
+group: chemicals
+name: ChemicalSubstance
 parent_type: BioChemEntity
 spec_type: Type
-status: release #Revert to revision when working on the next version
+status: revision
 version: '0.2-DRAFT'
 
 bsc: #0B794B;
@@ -47,25 +47,44 @@ external: #454547;
                    <tbody>
                      <tr class="new_props_sdo">
                         <td colspan="3">
-                           Properties from <a style="color: #0B794B;" href="/{{page.name}}">{{page.name}}</a> (pending schema.org integration).
+                           Properties from <a style="color: #0B794B;" href="/{{page.name}}">{{page.name}}</a> ( schema.org integration).
                         </td>
                      </tr>
-                     <tr id="hasSequence">
-                       <th style="color: #0B794B;">hasSequence</th>
-                       <td>
-                         <a href="http://schema.org/Text">Text</a>
-                       </td>
-                       <td>
-                         	Nucleotide or amino acid sequence.
-                       </td>
-                     </tr>
+                     <!-- ChemicalSubstance properties begin here -->
+
+                    <tr id="chemicalRole">
+                      <th style="color: #0B794B;">chemicalRole</th>
+                      <td>
+                          <a style="color: #0000CC;" href="http://schema.org/DefinedTerm">DefinedTerm</a>
+                      </td>
+                      <td>
+                          A role played by the molecular entity within a chemical context.
+                      </td>
+                    </tr>
+                    <tr id="molecularFormula">
+                      <th style="color: #0B794B;">molecularFormula</th>
+                      <td>
+                        <a href="http://schema.org/URL">Text</a>
+                      </td>
+                      <td>
+                        The empirical formula is the simplest whole number ratio of all the atoms in a molecule.
+                      </td>
+                    </tr>
+                    <tr id="potentialUse">
+                      <th style="color: #0B794B;">potentialUse</th>
+                      <td>
+                          <a style="color: #0000CC;" href="http://schema.org/DefinedTerm">DefinedTerm</a>
+                      </td>
+                      <td>
+                          Intended use of the molecular entity by humans.
+                      </td>
+                    </tr>
 
 
 
 
-
-                     <!-- BCE -->
-                   <tr class="reu_props_sdo">
+                    <!-- MolecularEntity properties ENDS here -->
+                     <tr class="reu_props_sdo">
                         <td colspan="3">Properties from <a style="color: #0B794B;" href="/BioChemEntity">BioChemEntity</a> (pending schema.org integration).</td>
                      </tr>
                        <tr id="associatedDisease">
@@ -194,7 +213,8 @@ external: #454547;
                      </tr>
 
 
-  						<!-- THING -->
+
+					<!-- THING -->
                      <tr class="reu_props_sdo">
                         <td colspan="3">Properties from <a href="http://schema.org/Thing">Thing</a></td>
                      </tr>
