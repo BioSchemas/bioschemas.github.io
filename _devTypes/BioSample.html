@@ -1,5 +1,5 @@
 ---
-redirect_from: 
+redirect_from:
 - "devTypes/Sample/specification"
 - "devTypes/Sample/specification/"
 - "/devTypes/Sample/"
@@ -50,7 +50,7 @@ external: #454547;
                            Properties from <a style="color: #0B794B;" href="/{{page.name}}">{{page.name}}</a> (pending schema.org integration).
                         </td>
                      </tr>
-                     
+
                      <tr id="additionalProperty">
                        <th><a href="http://schema.org/additionalProperty">additionalProperty</a></th>
                        <td>
@@ -59,7 +59,7 @@ external: #454547;
                        <td>A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br/>
                          Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br />
                       </td>
-                     </tr>                     
+                     </tr>
                      <tr id="collector">
                        <th style="color: #0B794B;">collector</th>
                        <td>
@@ -68,7 +68,7 @@ external: #454547;
                        </td>
                        <td>The Person or Organization who collected the Sample.
                       </td>
-                     </tr>                
+                     </tr>
                      <tr id="custodian">
                        <th style="color: #0B794B;">custodian</th>
                        <td>
@@ -77,7 +77,7 @@ external: #454547;
                        </td>
                        <td>The Person or Organization who is responsible for the Sample.
                       </td>
-                     </tr>       
+                     </tr>
                      <tr id="dateCreated">
                        <th><a href="http://schema.org/dateCreated">dateCreated</a></th>
                        <td>
@@ -86,7 +86,7 @@ external: #454547;
                        </td>
                        <td>The date on which the CreativeWork was created or the item was added to a DataFeed.
                       </td>
-                     </tr> 
+                     </tr>
                      <tr id="gender">
                        <th><a href="http://schema.org/gender">gender</a></th>
                        <td>
@@ -95,47 +95,47 @@ external: #454547;
                        </td>
                        <td>Gender of the person. While http://schema.org/Male and http://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender
                       </td>
-                     </tr> 
+                     </tr>
                      <tr id="isControl">
                        <th style="color: #0B794B;">isControl</a></th>
                        <td>
-                         <a href="http://schema.org/Boolean">Boolean</a> 
+                         <a href="http://schema.org/Boolean">Boolean</a>
                        </td>
                        <td>Indicates whether the sample is being used as a normal control, may be in combination with another sample.
                       </td>
-                     </tr>    
+                     </tr>
                      <tr id="itemLocation">
                        <th style="color: #0000CC;">itemLocation</a></th>
                        <td>
                          <a href="http://schema.org/Place">Place</a> or <br />
                          <a href="http://schema.org/PostalAddress">PostalAddress</a> or <br />
-                         <a href="http://schema.org/Text">Text</a>                                      
+                         <a href="http://schema.org/Text">Text</a>
                        </td>
                        <td>Current location of the item.
                       </td>
-                     </tr>     
+                     </tr>
                      <tr id="locationCreated">
                        <th><a href="http://schema.org/locationCreated">locationCreated</a></th>
                        <td>
-                         <a href="http://schema.org/Place">Place</a>                            
+                         <a href="http://schema.org/Place">Place</a>
                        </td>
                        <td>The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork.
                       </td>
-                     </tr>                                                                                                                         
+                     </tr>
                      <tr id="samplingAge">
                        <th style="color: #0B794B;">samplingAge</a></th>
                        <td>
-                         <a href="http://schema.org/Integer">Integer</a>                                      
+                         <a href="http://schema.org/Integer">Integer</a>
                        </td>
                        <td>The age of the object when the Sample was created.
                       </td>
-                     </tr>            
-                     
-                     
-                     <!-- BCE --> 
+                     </tr>
+
+
+                     <!-- BCE -->
                      <tr class="reu_props_sdo">
                         <td colspan="3">Properties from <a style="color: #0B794B;" href="/BioChemEntity">BioChemEntity</a> (pending schema.org integration).</td>
-                     </tr>                    
+                     </tr>
                        <tr id="associatedDisease">
                        <th style="color: #0B794B;">associatedDisease</th>
                        <td>
@@ -155,7 +155,7 @@ external: #454547;
                        <td>
                         A BioChemEntity that is know to interact with this item.
                        </td>
-                     </tr>     
+                     </tr>
                      <tr id="bioChemSimilarity">
                        <th style="color: #0B794B;">bioChemSimilarity</th>
                        <td>
@@ -164,7 +164,7 @@ external: #454547;
                        <td>
                         A similar molecular entity, e.g., obtained by fingerprint similarity algorithm.
                        </td>
-                     </tr>  
+                     </tr>
                      <tr id="biogicalRole">
                        <th style="color: #0B794B;">biogicalRole</th>
                        <td>
@@ -173,7 +173,7 @@ external: #454547;
                        <td>
                         A role played by the molecular entity within a biological context.
                        </td>
-                     </tr>                                                            
+                     </tr>
                      <tr id="hasBioChemEntityPart">
                        <th style="color: #0B794B;">hasBioChemEntityPart</th>
                        <td>
@@ -181,7 +181,7 @@ external: #454547;
                        </td>
                        <td>
                          Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.<br/>
-                         Inverse property: isPartOfBioChemEntity
+                         Inverse property: <span style="color: #0B794B;">isPartOfBioChemEntity</span>
                        </td>
                      </tr>
                       <tr id="hasMolecularFunction">
@@ -209,12 +209,13 @@ external: #454547;
                      <tr id="isEncodedByBioChemEntity">
                        <th style="color: #0B794B;">isEncodedByBioChemEntity</th>
                        <td>
-                         <a style="color: #0B794B;" href="/types/drafts/Gene">Gene</a> 
+                         <a style="color: #0B794B;" href="/types/drafts/Gene">Gene</a>
                        </td>
                        <td>
-                         Another BioChemEntity encoding this one. Inverse property: encodesBioChemEntity.
+                         Another BioChemEntity encoding this one. <br/>
+                         Inverse property: <span style="color: #0B794B;">encodesBioChemEntity.</span>
                        </td>
-                     </tr>                     
+                     </tr>
                      <tr id="isInvolvedInBiologicalProcess">
                        <th style="color: #0B794B;">isInvolvedInBiologicalProcess</th>
                        <td>
@@ -225,7 +226,7 @@ external: #454547;
                        <td>
                          Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.
                        </td>
-                     </tr>                     
+                     </tr>
                      <tr id="isLocatedInSubcellularLocation">
                        <th style="color: #0B794B;">isLocatedInSubcellularLocation</th>
                        <td>
@@ -236,15 +237,15 @@ external: #454547;
                        <td>
                          Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.
                        </td>
-                     </tr>                       
+                     </tr>
                      <tr id="isPartOfBioChemEntity">
                        <th style="color: #0B794B;">isPartOfBioChemEntity</th>
                        <td>
-                         <a style="color: #0B794B;" href="/types/drafts/BioChemEntity">BioChemEntity</a> 
+                         <a style="color: #0B794B;" href="/types/drafts/BioChemEntity">BioChemEntity</a>
                        </td>
                        <td>
                          Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <br/>
-                         Inverse property: hasBioChemEntityPart
+                         Inverse property: <span style="color: #0B794B;">hasBioChemEntityPart</span>
                        </td>
                      </tr>
                      <tr id="taxonomicRange">
@@ -399,4 +400,3 @@ external: #454547;
 
    </body>
 </html>
-                               

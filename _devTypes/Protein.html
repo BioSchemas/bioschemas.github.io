@@ -1,5 +1,5 @@
 ---
-redirect_from: 
+redirect_from:
 - "types/drafts/Protein/specification"
 - "types/drafts/Protein/specification/"
 - "/types/drafts/Protein/"
@@ -14,7 +14,7 @@ name: Protein
 parent_type: BioChemEntity
 spec_type: Type
 status: release #Revert to revision when working on the next version
-version: '0.2-DRAFT' 
+version: '0.2-DRAFT'
 
 bsc: #0B794B;
 pending: #0000CC;
@@ -59,15 +59,15 @@ external: #454547;
                          	Nucleotide or amino acid sequence.
                        </td>
                      </tr>
-                     
-                     
-                     
-                     
-                     
+
+
+
+
+
                      <!-- BCE -->
                    <tr class="reu_props_sdo">
                         <td colspan="3">Properties from <a style="color: #0B794B;" href="/BioChemEntity">BioChemEntity</a> (pending schema.org integration).</td>
-                     </tr>                    
+                     </tr>
                        <tr id="associatedDisease">
                        <th style="color: #0B794B;">associatedDisease</th>
                        <td>
@@ -87,7 +87,7 @@ external: #454547;
                        <td>
                         A BioChemEntity that is know to interact with this item.
                        </td>
-                     </tr>     
+                     </tr>
                      <tr id="bioChemSimilarity">
                        <th style="color: #0B794B;">bioChemSimilarity</th>
                        <td>
@@ -96,7 +96,7 @@ external: #454547;
                        <td>
                         A similar molecular entity, e.g., obtained by fingerprint similarity algorithm.
                        </td>
-                     </tr>  
+                     </tr>
                      <tr id="biogicalRole">
                        <th style="color: #0B794B;">biogicalRole</th>
                        <td>
@@ -105,7 +105,7 @@ external: #454547;
                        <td>
                         A role played by the molecular entity within a biological context.
                        </td>
-                     </tr>                                                            
+                     </tr>
                      <tr id="hasBioChemEntityPart">
                        <th style="color: #0B794B;">hasBioChemEntityPart</th>
                        <td>
@@ -113,7 +113,7 @@ external: #454547;
                        </td>
                        <td>
                          Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.<br/>
-                         Inverse property: isPartOfBioChemEntity
+                         Inverse property: <span style="color: #0B794B;">isPartOfBioChemEntity</span>
                        </td>
                      </tr>
                       <tr id="hasMolecularFunction">
@@ -141,12 +141,13 @@ external: #454547;
                      <tr id="isEncodedByBioChemEntity">
                        <th style="color: #0B794B;">isEncodedByBioChemEntity</th>
                        <td>
-                         <a style="color: #0B794B;" href="/types/drafts/Gene">Gene</a> 
+                         <a style="color: #0B794B;" href="/types/drafts/Gene">Gene</a>
                        </td>
                        <td>
-                         Another BioChemEntity encoding this one. Inverse property: encodesBioChemEntity.
+                         Another BioChemEntity encoding this one. <br/>
+                         Inverse property: <span style="color: #0B794B;">encodesBioChemEntity.</span>
                        </td>
-                     </tr>                     
+                     </tr>
                      <tr id="isInvolvedInBiologicalProcess">
                        <th style="color: #0B794B;">isInvolvedInBiologicalProcess</th>
                        <td>
@@ -157,7 +158,7 @@ external: #454547;
                        <td>
                          Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.
                        </td>
-                     </tr>                     
+                     </tr>
                      <tr id="isLocatedInSubcellularLocation">
                        <th style="color: #0B794B;">isLocatedInSubcellularLocation</th>
                        <td>
@@ -168,15 +169,15 @@ external: #454547;
                        <td>
                          Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.
                        </td>
-                     </tr>                       
+                     </tr>
                      <tr id="isPartOfBioChemEntity">
                        <th style="color: #0B794B;">isPartOfBioChemEntity</th>
                        <td>
-                         <a style="color: #0B794B;" href="/types/drafts/BioChemEntity">BioChemEntity</a> 
+                         <a style="color: #0B794B;" href="/types/drafts/BioChemEntity">BioChemEntity</a>
                        </td>
                        <td>
                          Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <br/>
-                         Inverse property: hasBioChemEntityPart
+                         Inverse property: <span style="color: #0B794B;">hasBioChemEntityPart</span>
                        </td>
                      </tr>
                      <tr id="taxonomicRange">
@@ -190,9 +191,9 @@ external: #454547;
                        <td>
                          The taxonomic grouping of the organism that expresses, encodes, or in someway related to the BioChemEntity.
                        </td>
-                     </tr>  
-  
-  
+                     </tr>
+
+
   						<!-- THING -->
                      <tr class="reu_props_sdo">
                         <td colspan="3">Properties from <a href="http://schema.org/Thing">Thing</a></td>
