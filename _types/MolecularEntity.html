@@ -1,19 +1,19 @@
 ---
 redirect_from:
-- "types/drafts/Protein/specification"
-- "types/drafts/Protein/specification/"
-- "/types/drafts/Protein/"
+- "types/drafts/MolecularEntity/specification"
+- "types/drafts/MolecularEntity/specification/"
+- "/types/drafts/MolecularEntity/"
 dateModified: 2019-06-14
-description: "Protein is here used in its widest possible definition, as classes of amino acid based molecules. Amyloid-beta Protein in human (UniProt P05067), eukaryota (e.g. an OrthoDB group) or even a single molecule that one can point to are all of type schema:Protein. A protein can thus be a subclass of another protein, e.g. schema:Protein as a UniProt record can have multiple isoforms inside it which would also be schema:Protein. They can be imagined, synthetic, hypothetical or naturally occurring."
+description: "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity."
 hierarchy:
 - Thing
 - BioChemEntity
-gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Protein
-group: proteins
-name: Protein
+gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Chemicals
+group: chemicals
+name: MolecularEntity
 parent_type: BioChemEntity
 spec_type: Type
-status: release #Revert to revision when working on the next version
+status: revision
 version: '0.2-DRAFT'
 
 bsc: #0B794B;
@@ -50,22 +50,96 @@ external: #454547;
                            Properties from <a style="color: #0B794B;" href="/{{page.name}}">{{page.name}}</a> (pending schema.org integration).
                         </td>
                      </tr>
-                     <tr id="hasSequence">
-                       <th style="color: #0B794B;">hasSequence</th>
-                       <td>
-                         <a href="http://schema.org/Text">Text</a>
-                       </td>
-                       <td>
-                         	Nucleotide or amino acid sequence.
-                       </td>
-                     </tr>
+                     <!-- MolecularEntity properties begin here -->
+                    <tr id="chemicalRole">
+                      <th style="color: #0B794B;">chemicalRole</th>
+                      <td>
+                        <a style="color: #0000CC;" href="http://.schema.org/DefinedTerm">DefinedTerm</a>
+                      </td>
+                      <td>
+                        A role played by the molecular entity within a chemical contex.
+                      </td>
+                    </tr>
+                    <tr id="inChI">
+                      <th style="color: #0B794B;">inChI</th>
+                      <td>
+                        <a href="http://schema.org/Text">Text</a>
+                      </td>
+                      <td>
+                        Non-proprietary identifier for chemical substances that can be used in printed and electronic data sources thus
+                        enabling easier linking of diverse data compilations.
+                      </td>
+                    </tr>
+                    <tr id="inChIKey">
+                      <th style="color: #0B794B;">inChIKey</th>
+                      <td>
+                        <a href="http://schema.org/Text">Text</a>
+                      </td>
+                      <td>
+                        InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm)
+                      </td>
+                    </tr>
+                    <tr id="iupacName">
+                      <th style="color: #0B794B;">iupacName</th>
+                      <td>
+                        <a href="http://schema.org/Text">Text</a>
+                      </td>
+                      <td>
+                        Systematic method of naming organic chemical compounds as recommended by the International Union of Pure and
+                        Applied Chemistry (IUPAC).
+                      </td>
+                    </tr>
+                    <tr id="molecularFormula">
+                      <th style="color: #0B794B;">molecularFormula</th>
+                      <td>
+                        <a href="http://schema.org/Test">Text</a>
+                      </td>
+                      <td>
+                        The empirical formula is the simplest whole number ratio of all the atoms in a molecule.
+                      </td>
+                    </tr>
+                    <tr id="molecularWeight">
+                      <th style="color: #0B794B;">molecularWeight</th>
+                      <td>
+                        <a href="http://schema.org/Mass">Mass</a>
+                      </td>
+                      <td>
+                        	This is the molecular weight of the entity being described, not of the parent. Units should be included in the form '&lt;Number&gt; &lt;Mass unit of measure&gt;', for example '0.01 mg'.
+                      </td>
+                    </tr>
+                    <tr id="monoisotopicMolecularWeight">
+                      <th style="color: #0B794B;">monoisotopicMolecularWeight</th>
+                      <td>
+                        <a href="http://schema.org/Mass">Mass</a>
+                      </td>
+                      <td>
+                          The monoisotopic mass is the sum of the masses of the atoms in a molecule using the unbound, ground-state, rest mass of the principal (most abundant) isotope for each element instead of the isotopic average mass. Please include the units the form '&lt;Number&gt; &lt;Mass unit of measure&gt;', for example '0.01 mg'.
+                      </td>
+                    </tr>
+                    <tr id="potentialUse">
+                      <th style="color: #0B794B;">potentialUse</th>
+                      <td>
+                          <a href="http://schema.org/DefinedTerm">DefinedTerm</a>
+                      </td>
+                      <td>
+                          Intended use of the molecular entity by humans.
+                      </td>
+                    </tr>
+                    <tr id="smiles">
+                      <th style="color: #0B794B;">smiles</th>
+                      <td>
+                        <a href="http://schema.org/Text">Text</a>
+                      </td>
+                      <td>
+                        A specification in form of a line notation for describing the structure of chemical species using short ASCII
+                        strings
+                      </td>
+                    </tr>
 
 
 
-
-
-                     <!-- BCE -->
-                   <tr class="reu_props_sdo">
+                    <!-- MolecularEntity properties ENDS here -->
+                     <tr class="reu_props_sdo">
                         <td colspan="3">Properties from <a style="color: #0B794B;" href="/BioChemEntity">BioChemEntity</a> (pending schema.org integration).</td>
                      </tr>
                        <tr id="associatedDisease">
@@ -113,7 +187,7 @@ external: #454547;
                        </td>
                        <td>
                          Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.<br/>
-                         Inverse property: <span style="color: #0B794B;">isPartOfBioChemEntity</span>
+                         Inverse property: <span style="color: #0B794B;"> isPartOfBioChemEntity</span>
                        </td>
                      </tr>
                       <tr id="hasMolecularFunction">
@@ -144,8 +218,7 @@ external: #454547;
                          <a style="color: #0B794B;" href="/types/drafts/Gene">Gene</a>
                        </td>
                        <td>
-                         Another BioChemEntity encoding this one. <br/>
-                         Inverse property: <span style="color: #0B794B;">encodesBioChemEntity.</span>
+                         Another BioChemEntity encoding this one. <br/>Inverse property: <span style="color: #0B794B;"> encodesBioChemEntity.</span>
                        </td>
                      </tr>
                      <tr id="isInvolvedInBiologicalProcess">
@@ -194,7 +267,11 @@ external: #454547;
                      </tr>
 
 
-  						<!-- THING -->
+
+
+
+
+                     <!-- THING -->
                      <tr class="reu_props_sdo">
                         <td colspan="3">Properties from <a href="http://schema.org/Thing">Thing</a></td>
                      </tr>

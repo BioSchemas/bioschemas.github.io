@@ -1,20 +1,20 @@
 ---
 redirect_from:
-- "types/drafts/Protein/specification"
-- "types/drafts/Protein/specification/"
-- "/types/drafts/Protein/"
+- "devTypes/Sample/specification"
+- "devTypes/Sample/specification/"
+- "/devTypes/Sample/"
 dateModified: 2019-06-14
-description: "Protein is here used in its widest possible definition, as classes of amino acid based molecules. Amyloid-beta Protein in human (UniProt P05067), eukaryota (e.g. an OrthoDB group) or even a single molecule that one can point to are all of type schema:Protein. A protein can thus be a subclass of another protein, e.g. schema:Protein as a UniProt record can have multiple isoforms inside it which would also be schema:Protein. They can be imagined, synthetic, hypothetical or naturally occurring."
+description: "A biological material entity that is representative of a whole. <br/> Comments: Typically samples are intended to be representative of the whole or aspects thereof. Examples of samples include biomedical samples (blood, urine) and plant specimens held at herbaria."
 hierarchy:
 - Thing
 - BioChemEntity
-gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Protein
-group: proteins
-name: Protein
+gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Sample
+group: samples
+name: BioSample
 parent_type: BioChemEntity
 spec_type: Type
-status: release #Revert to revision when working on the next version
-version: '0.2-DRAFT'
+status: revision
+version: '0.1-DRAFT'
 
 bsc: #0B794B;
 pending: #0000CC;
@@ -50,22 +50,90 @@ external: #454547;
                            Properties from <a style="color: #0B794B;" href="/{{page.name}}">{{page.name}}</a> (pending schema.org integration).
                         </td>
                      </tr>
-                     <tr id="hasSequence">
-                       <th style="color: #0B794B;">hasSequence</th>
+
+                     <tr id="additionalProperty">
+                       <th><a href="http://schema.org/additionalProperty">additionalProperty</a></th>
                        <td>
+                         <a href="http://schema.org/PropertyValue">PropertyValue</a>
+                       </td>
+                       <td>A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br/>
+                         Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br />
+                      </td>
+                     </tr>
+                     <tr id="collector">
+                       <th style="color: #0B794B;">collector</th>
+                       <td>
+                         <a href="http://schema.org/Organization">Organization</a> or <b/>
+                         <a href="http://schema.org/Person">Person</a>
+                       </td>
+                       <td>The Person or Organization who collected the Sample.
+                      </td>
+                     </tr>
+                     <tr id="custodian">
+                       <th style="color: #0B794B;">custodian</th>
+                       <td>
+                         <a href="http://schema.org/Organization">Organization</a> or <b/>
+                         <a href="http://schema.org/Person">Person</a>
+                       </td>
+                       <td>The Person or Organization who is responsible for the Sample.
+                      </td>
+                     </tr>
+                     <tr id="dateCreated">
+                       <th><a href="http://schema.org/dateCreated">dateCreated</a></th>
+                       <td>
+                         <a href="http://schema.org/Date">Date</a> or <b/>
+                         <a href="http://schema.org/DateTime">DateTime</a>
+                       </td>
+                       <td>The date on which the CreativeWork was created or the item was added to a DataFeed.
+                      </td>
+                     </tr>
+                     <tr id="gender">
+                       <th><a href="http://schema.org/gender">gender</a></th>
+                       <td>
+                         <a href="http://schema.org/GenderType">GenderType</a> or <b/>
                          <a href="http://schema.org/Text">Text</a>
                        </td>
+                       <td>Gender of the person. While http://schema.org/Male and http://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender
+                      </td>
+                     </tr>
+                     <tr id="isControl">
+                       <th style="color: #0B794B;">isControl</a></th>
                        <td>
-                         	Nucleotide or amino acid sequence.
+                         <a href="http://schema.org/Boolean">Boolean</a>
                        </td>
+                       <td>Indicates whether the sample is being used as a normal control, may be in combination with another sample.
+                      </td>
+                     </tr>
+                     <tr id="itemLocation">
+                       <th style="color: #0000CC;">itemLocation</a></th>
+                       <td>
+                         <a href="http://schema.org/Place">Place</a> or <br />
+                         <a href="http://schema.org/PostalAddress">PostalAddress</a> or <br />
+                         <a href="http://schema.org/Text">Text</a>
+                       </td>
+                       <td>Current location of the item.
+                      </td>
+                     </tr>
+                     <tr id="locationCreated">
+                       <th><a href="http://schema.org/locationCreated">locationCreated</a></th>
+                       <td>
+                         <a href="http://schema.org/Place">Place</a>
+                       </td>
+                       <td>The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork.
+                      </td>
+                     </tr>
+                     <tr id="samplingAge">
+                       <th style="color: #0B794B;">samplingAge</a></th>
+                       <td>
+                         <a href="http://schema.org/Integer">Integer</a>
+                       </td>
+                       <td>The age of the object when the Sample was created.
+                      </td>
                      </tr>
 
 
-
-
-
                      <!-- BCE -->
-                   <tr class="reu_props_sdo">
+                     <tr class="reu_props_sdo">
                         <td colspan="3">Properties from <a style="color: #0B794B;" href="/BioChemEntity">BioChemEntity</a> (pending schema.org integration).</td>
                      </tr>
                        <tr id="associatedDisease">
@@ -194,7 +262,8 @@ external: #454547;
                      </tr>
 
 
-  						<!-- THING -->
+
+					<!-- THING -->
                      <tr class="reu_props_sdo">
                         <td colspan="3">Properties from <a href="http://schema.org/Thing">Thing</a></td>
                      </tr>

@@ -1,12 +1,12 @@
 ---
-redirect_from: 
+redirect_from:
 - "devSpecs/Gene/specification"
 - "devSpecs/Gene/specification/"
 - "/devSpecs/Gene/"
 name: Gene
 url: Gene
 
-status: release # Change to revision if you are working on an update
+status: revision # Change to revision if you are working on an update
 spec_type: Profile
 group: genes
 use_cases_url: /useCases/Gene/
@@ -29,10 +29,10 @@ spec_info:
   subtitle: Bioschemas profile describing a Gene in Life Sciences
   description: This Gene profile specification presents the markup for describing
     a Gene.
-  version: 0.4
-  version_date: 20181110T092310
+  version: 0.5-DRAFT
+  version_date: 20190614T220732
   official_type: http://bioschemas.org/Gene
-  full_example: https://github.com/BioSchemas/Specifications/tree/master/Gene/
+  full_example: https://github.com/BioSchemas/Specifications/tree/master/Gene/examples
 mapping:
 - property: additionalProperty
   expected_types:
@@ -164,7 +164,9 @@ mapping:
 - property: hasBioChemEntityPart
   expected_types:
   - BioChemEntity
-  description: ""
+  description: |-
+    Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.
+    Inverse property: isPartOfBioChemEntity
   type: bioschemas
   type_url: http://bioschemas.org/hasBioChemEntityPart
   bsc_description: |+
