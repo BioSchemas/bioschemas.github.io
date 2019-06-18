@@ -48,4 +48,5 @@ members:
     - GustavoSalazar-Orejuela
     - VictoriaDominguezDelAngel
     - NathanDunn
+    - JervenBolleman
 ---
