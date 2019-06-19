@@ -6,7 +6,7 @@ redirect_from:
 name: Taxon
 url: Taxon
 
-status: release # Change to revision if you are working on an update
+status: revision # Change to revision if you are working on an update
 spec_type: Profile
 group: biodiversity
 use_cases_url: /useCases/Taxon/
@@ -26,10 +26,11 @@ spec_info:
   subtitle: Bioschemas profile for describing a biological taxon
   description: 'This profile aims to denote a taxon by common properties such as its
     scientific name, taxonomic rank and vernacular names. It is also a means to link
-    to existing taxonomic registers where each taxon has a URI.Changes in 0.4: parentTaxon,
-    childTaxon and taxonRank are moved to namespace schema.org.'
-  version: "0.4"
-  version_date: 20190617T154222
+    to existing taxonomic registers where each taxon has a URI. <br/>Changes in 0.4:
+    <ul><li>taxonRank promoted to minimal marginality</li><li>parentTaxon, childTaxon
+    and taxonRank are moved to namespace schema.org.</li><li>scientificName and scientificNameAuthorship removed</li></ul>'
+  version: 0.4-DRAFT
+  version_date: 20190619T133527
   official_type: http://schema.org/Taxon
   full_example: https://github.com/BioSchemas/specifications/tree/master/Taxon/examples/
 mapping:
