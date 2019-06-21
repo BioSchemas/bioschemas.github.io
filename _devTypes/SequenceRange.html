@@ -1,0 +1,281 @@
+---
+redirect_from:
+- "/SequenceRange"
+dateModified: 2019-06-21
+description:
+hierarchy:
+- Thing
+- BioChemEntity
+gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20SequenceRange
+group: proteins
+name: SequenceRange
+parent_type: BioChemEntity
+spec_type: Type
+status: revision #Revert to revision when working on the next version
+version: '0.1-DRAFT'
+
+bsc: #0B794B;
+pending : #0000CC;
+external: #454547;
+
+---
+
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+        <div class="wrapper">
+           <div id="main-content-wrapper" class="outer">
+              <section id="main_content" class="inner">
+                {% include type_start.html %}
+                <table class="definition-table">
+        <thead>
+  <tr><th>Property</th><th>Expected Type</th><th>Description</th>
+  </tr>
+  </thead>
+
+<tr class="supertype">
+     <th class="supertype-name" colspan="3">Properties from <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/SequenceRange">SequenceRange</a></th>
+
+</tr>
+
+<tbody class="supertype">
+  <tr typeof="rdfs:Property" resource="http://schema.org/endUncertainty">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#endUncertainty">endUncertainty</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp;<link property="domainIncludes" href="http://schema.org/SequenceRange"></td><td class="prop-desc" property="rdfs:comment">If the initial position is not known with reasonable certainty, specify here the uncertainty type as one of '&lt;' (any position before than rangeEnd), '&gt;' (any position after rangeEnd), '~' (around rangeEnd), '[#-#] (to indicate a range where rangeEnd could be located)'.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/rangeEnd">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#rangeEnd">rangeStart</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Integer" /><a   href="http://schema.org/Integer">Integer</a>&nbsp;<link property="domainIncludes" href="http://schema.org/SequenceRange"></td><td class="prop-desc" property="rdfs:comment">Final position of the range</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/rangeStart">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#rangeStart">rangeStart</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Integer" /><a   href="http://schema.org/Integer">Integer</a>&nbsp;<link property="domainIncludes" href="http://schema.org/SequenceRange"></td><td class="prop-desc" property="rdfs:comment">Initial position of the range.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/startUncertainty">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#startUncertainty">startUncertainty</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp;<link property="domainIncludes" href="http://schema.org/SequenceRange"></td><td class="prop-desc" property="rdfs:comment">If the initial position is not known with reasonable certainty, specify here the uncertainty type as one of '&lt;' (any position before than rangeStart), '&gt;' (any position after rangeStart), '~' (around the rangeStart), '[#-#] (to indicate a range where rangeStart could be located)'.</td></tr><tr class="supertype">
+                     <th class="supertype-name" colspan="3">Properties from <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioChemEntity">BioChemEntity</a></th>
+
+                </tr>
+
+                <tbody class="supertype">
+                  <tr typeof="rdfs:Property" resource="http://schema.org/associatedDisease">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#associatedDisease">associatedDisease</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/MedicalCondition" /><a   href="http://schema.org/MedicalCondition">MedicalCondition</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="http://schema.org/PropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">Disease associated to this BioChemEntity. Such disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/bioChemInteraction">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#bioChemInteraction">bioChemInteraction</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/BioChemEntity" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioChemEntity">BioChemEntity</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">A BioChemEntity that is known to interact with this item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/bioChemSimilarity">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#bioChemSimilarity">bioChemSimilarity</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/BioChemEntity" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioChemEntity">BioChemEntity</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">A similar molecular entity, e.g., obtained by fingerprint similarity algorithms.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/biologicalRole">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#biologicalRole">biologicalRole</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a title="Defined in extension: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/DefinedTerm">DefinedTerm</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">A role played by the molecular entity within a biological context.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasBioChemEntityPart">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasBioChemEntityPart">hasBioChemEntityPart</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/BioChemEntity" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioChemEntity">BioChemEntity</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.<br/> Inverse property: <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#isPartOfBioChemEntity">isPartOfBioChemEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasMolecularFunction">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasMolecularFunction">hasMolecularFunction</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a title="Defined in extension: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/DefinedTerm">DefinedTerm</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="http://schema.org/PropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasRepresentation">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasRepresentation">hasRepresentation</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="http://schema.org/PropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasSequenceAnnotation">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasSequenceAnnotation">hasSequenceAnnotation</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="http://schema.org/PropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/SequenceAnnotation" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/SequenceAnnotation">SequenceAnnotation</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">Pointer to a sequence annotation; please use PropertyValue if you want to include any evidence.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isEncodedByBioChemEntity">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#isEncodedByBioChemEntity">isEncodedByBioChemEntity</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/DNA" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/DNA">DNA</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Gene" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/Gene">Gene</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/RNA" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/RNA">RNA</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">Another BioChemEntity encoding by this one.<br/> Inverse property: <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#encodesBioChemEntity">encodesBioChemEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isInvolvedInBiologicalProcess">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#isInvolvedInBiologicalProcess">isInvolvedInBiologicalProcess</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a title="Defined in extension: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/DefinedTerm">DefinedTerm</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="http://schema.org/PropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isLocatedInSubcellularLocation">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#isLocatedInSubcellularLocation">isLocatedInSubcellularLocation</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a title="Defined in extension: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/DefinedTerm">DefinedTerm</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="http://schema.org/PropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isMatchedBy">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#isMatchedBy">isMatchedBy</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/SequenceMatchingModel" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/SequenceMatchingModel">SequenceMatchingModel</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">A model matching this BioChemEntity.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isPartOfBioChemEntity">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#isPartOfBioChemEntity">isPartOfBioChemEntity</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/BioChemEntity" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioChemEntity">BioChemEntity</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.<br/> Inverse property: <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasBioChemEntityPart">hasBioChemEntityPart</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/taxonomicRange">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#taxonomicRange">taxonomicRange</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a title="Defined in extension: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/DefinedTerm">DefinedTerm</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Taxon" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/Taxon">Taxon</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"><link property="domainIncludes" href="http://schema.org/Phenotype"></td><td class="prop-desc" property="rdfs:comment">The taxonomic grouping of the organism that expresses, encodes, or in someway related to the BioChemEntity.</td></tr><tr class="supertype">
+                     <th class="supertype-name" colspan="3">Properties from <a   href="http://schema.org/Thing">Thing</a></th>
+
+                </tr>
+
+                <tbody class="supertype">
+                  <tr typeof="rdfs:Property" resource="http://schema.org/additionalType">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/additionalType">additionalType</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Thing"></td><td class="prop-desc" property="rdfs:comment">An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/alternateName">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/alternateName">alternateName</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Thing"></td><td class="prop-desc" property="rdfs:comment">An alias for the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/description">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/description">description</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Thing"></td><td class="prop-desc" property="rdfs:comment">A description of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/disambiguatingDescription">disambiguatingDescription</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Thing"></td><td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/identifier">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/identifier">identifier</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="http://schema.org/PropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Thing"></td><td class="prop-desc" property="rdfs:comment">The identifier property represents any kind of identifier for any kind of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/image">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/image">image</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/ImageObject" /><a   href="http://schema.org/ImageObject">ImageObject</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Thing"></td><td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a> or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="http://schema.org/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Thing"></td><td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/> Inverse property: <a   href="http://schema.org/mainEntity">mainEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/name">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/name">name</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Thing"></td><td class="prop-desc" property="rdfs:comment">The name of the item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/potentialAction">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/potentialAction">potentialAction</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/Action" /><a   href="http://schema.org/Action">Action</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Thing"></td><td class="prop-desc" property="rdfs:comment">Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/sameAs">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/sameAs">sameAs</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Thing"></td><td class="prop-desc" property="rdfs:comment">URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/subjectOf">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/subjectOf">subjectOf</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="http://schema.org/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Event" /><a   href="http://schema.org/Event">Event</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Thing"></td><td class="prop-desc" property="rdfs:comment">A CreativeWork or Event about this Thing..<br/> Inverse property: <a   href="http://schema.org/about">about</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/url">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/url">url</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Thing"></td><td class="prop-desc" property="rdfs:comment">URL of the item.</td></tr>
+
+                </table>
+               </section>
+             </div>
+           </div>
+      </div>
+      {% include footer.html %}
+
+
+
+   </body>
+</html>
