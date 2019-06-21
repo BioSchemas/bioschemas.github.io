@@ -1076,8 +1076,13 @@ table.bioschemas_spec_list td {
     max-width: 20em;
 }
 
+.definition-table.bsc_type td
+{
+  max-width: 40em;
+}
+
 .bioschemas_properties.bsc_type td,
-.definition-table td
+.definition-table.bsc_type th
 {
     max-width: none;
 }
