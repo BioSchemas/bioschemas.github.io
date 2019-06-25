@@ -1,24 +1,21 @@
 ---
 redirect_from:
-- "devTypes/DNA/specification"
-- "devTypes/DNA/specification/"
-- "/devTypes/DNA/"
-- "/DNA"
+- "/Enzyme"
 dateModified: 2019-06-20
-description: "DNA"
+description:
 hierarchy:
 - Thing
 - BioChemEntity
-gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20DNA
-group: dna
-name: DNA
+gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Enzyme
+group: proteins
+name: Enzyme
 parent_type: BioChemEntity
 spec_type: Type
-status: revision
-version: '0.2-DRAFT'
+status: revision #Revert to revision when working on the next version
+version: '0.1-DRAFT'
 
 bsc: #0B794B;
-pending: #0000CC;
+pending : #0000CC;
 external: #454547;
 
 ---
@@ -36,6 +33,7 @@ external: #454547;
            <div id="main-content-wrapper" class="outer">
               <section id="main_content" class="inner">
                 {% include type_start.html %}
+
                 <table class="definition-table bsc_type">
                         <thead>
                   <tr><th>Property</th><th>Expected Type</th><th>Description</th>
@@ -43,33 +41,61 @@ external: #454547;
                   </thead>
 
                 <tr class="supertype">
-                     <th class="supertype-name" colspan="3">Properties from <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/DNA">DNA</a></th>
+                     <th class="supertype-name" colspan="3">Properties from <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/Enzyme">Enzyme</a></th>
 
                 </tr>
 
                 <tbody class="supertype">
-                  <tr typeof="rdfs:Property" resource="http://schema.org/encodesBioChemEntity">
+                  <tr typeof="rdfs:Property" resource="http://schema.org/hasAssociatedBioChemEntity">
 
                       <th class="prop-nam" scope="row">
 
-                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#encodesBioChemEntity">encodesBioChemEntity</a></code>
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasAssociatedBioChemEntity">hasAssociatedBioChemEntity</a></code>
                     </th>
                  <td class="prop-ect">
-                <link  property="rangeIncludes" href="http://schema.org/BioChemEntity" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioChemEntity">BioChemEntity</a>&nbsp;<link property="domainIncludes" href="http://schema.org/DNA"><link property="domainIncludes" href="http://schema.org/Gene"><link property="domainIncludes" href="http://schema.org/RNA"></td><td class="prop-desc" property="rdfs:comment">Another BioChemEntity encoded by this one.<br/> Inverse property: <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#isEncodedByBioChemEntity">isEncodedByBioChemEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasSequence">
+                <link  property="rangeIncludes" href="http://schema.org/Protein" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/Protein">Protein</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/RNA" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/RNA">RNA</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemStructure"><link property="domainIncludes" href="http://schema.org/Enzyme"></td><td class="prop-desc" property="rdfs:comment">Used to define the actual protein or RNA.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasCoenzyme">
 
                       <th class="prop-nam" scope="row">
 
-                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasSequence">hasSequence</a></code>
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasCoenzyme">hasCoenzyme</a></code>
                     </th>
                  <td class="prop-ect">
-                <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp;<link property="domainIncludes" href="http://schema.org/DNA"><link property="domainIncludes" href="http://schema.org/Gene"><link property="domainIncludes" href="http://schema.org/Protein"><link property="domainIncludes" href="http://schema.org/RNA"></td><td class="prop-desc" property="rdfs:comment">Nucleotide or amino acid sequence.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/topology">
+                <link  property="rangeIncludes" href="http://schema.org/BioChemEntity" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioChemEntity">BioChemEntity</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Enzyme"></td><td class="prop-desc" property="rdfs:comment">Conenzymes helping this enzyme in turning substrates into products.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasCofactor">
 
                       <th class="prop-nam" scope="row">
 
-                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#topology">One of Linear|Circular|Unspecified</a></code>
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasCofactor">hasCofactor</a></code>
                     </th>
                  <td class="prop-ect">
-                <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="./Text">Text</a>&nbsp;<link property="domainIncludes" href="http://schema.org/DNA"></td><td class="prop-desc" property="rdfs:comment">-</td></tr><tr class="supertype">
+                <link  property="rangeIncludes" href="http://schema.org/ChemicalSubstance" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/ChemicalSubstance">ChemicalSubstance</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Enzyme"></td><td class="prop-desc" property="rdfs:comment">Cofactor helping this enzyme to function.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasECNumber">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasECNumber">hasECNumber</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a title="Defined in extension: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/DefinedTerm">DefinedTerm</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Enzyme"></td><td class="prop-desc" property="rdfs:comment">Corresponding Enzyme Commission number.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasKineticRate">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasKineticRate">hasKineticRate</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Enzyme"></td><td class="prop-desc" property="rdfs:comment">-</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/optimalPH">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#optimalPH">optimalPH</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/Number" /><a   href="http://schema.org/Number">Number</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Enzyme"></td><td class="prop-desc" property="rdfs:comment">Optimal PHs.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/optimalTemperature">
+
+                      <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#optimalTemperature">optimalTemperature</a></code>
+                    </th>
+                 <td class="prop-ect">
+                <link  property="rangeIncludes" href="http://schema.org/Quantity" /><a   href="http://schema.org/Quantity">Quantity</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Enzyme"></td><td class="prop-desc" property="rdfs:comment">Optimal temperature in the form '&lt;Number&gt; &lt;Temperature unit of measure&gt;', for example '8 Celsius', at which this enzyme performs best.</td></tr><tr class="supertype">
                   <th class="supertype-name" colspan="3">Properties from <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioChemEntity">BioChemEntity</a></th>
 
              </tr>
@@ -266,7 +292,6 @@ external: #454547;
              <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Thing"></td><td class="prop-desc" property="rdfs:comment">URL of the item.</td></tr>
 
              </table>
-
                </section>
              </div>
            </div>

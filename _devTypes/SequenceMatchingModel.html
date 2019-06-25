@@ -1,26 +1,24 @@
 ---
 redirect_from:
-- "devTypes/LabProtocol/specification"
-- "devTypes/LabProtocol/specification/"
-- "/devTypes/LabProtocol/"
-- "/LabProtocol"
-cross_walk_url: https://docs.google.com/spreadsheets/d/1RWYIphvcBMHl8SLJl5-xRMZI0YaYrtJtClBSoOPL4xQ
-dateModified: 2019-06-20
-description: 'An experimental protocol is a sequence of tasks and operations executed to perform experimental research in biological and biomedical areas.'
-gh_examples: https://docs.google.com/document/d/16KlB9fE2s-USAf0Vo9cTbh_wKEc0BmSxCgQmKQXKLQ8/
-gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20LabProtocol
-group: labprotocols
+- "devTypes/SequenceMatchingModel/specification"
+- "devTypes/SequenceMatchingModel/specification/"
+- "/devTypes/SequenceMatchingModel/"
+- "/SequenceMatchingModel"
+dateModified: 2019-06-21
+description: 'A model used to determine sequence matches such as domains in proteins.'
+gh_examples:
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20SequenceMatchingModel
+group: proteins
 hierarchy:
 - Thing
 - CreativeWork
 live_deploy: ''
-name: LabProtocol
+name: SequenceMatchingModel
 parent_type: CreativeWork
 spec_type: Type
 status: revision
-subtitle: Bioschemas specification describing LabProtocol in the life-science.
 use_cases_url: ''
-version: '0.3-DRAFT'
+version: '0.1-DRAFT'
 
 bsc: #0B794B;
 pending: #0000CC;
@@ -39,95 +37,46 @@ external: #454547;
                <section id="main_content" class="inner">
                   {% include type_start.html %}
                   <table class="definition-table bsc_type">
-                          <thead>
-                    <tr><th>Property</th><th>Expected Type</th><th>Description</th>
-                    </tr>
-                    </thead>
+        <thead>
+  <tr><th>Property</th><th>Expected Type</th><th>Description</th>
+  </tr>
+  </thead>
 
-                  <tr class="supertype">
-                       <th class="supertype-name" colspan="3">Properties from <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/LabProtocol">LabProtocol</a></th>
+<tr class="supertype">
+     <th class="supertype-name" colspan="3">Properties from <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/SequenceMatchingModel">SequenceMatchingModel</a></th>
 
-                  </tr>
+</tr>
 
-                  <tbody class="supertype">
-                    <tr typeof="rdfs:Property" resource="http://schema.org/executionTime">
+<tbody class="supertype">
+  <tr typeof="rdfs:Property" resource="http://schema.org/biologicalType">
 
-                        <th class="prop-nam" scope="row">
+      <th class="prop-nam" scope="row">
 
-                  <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#executionTime">executiontime</a></code>
-                      </th>
-                   <td class="prop-ect">
-                  <link  property="rangeIncludes" href="http://schema.org/Duration" /><a   href="http://schema.org/Duration">Duration</a>&nbsp;<link property="domainIncludes" href="http://schema.org/LabProtocol"></td><td class="prop-desc" property="rdfs:comment">The time it takes to actually carry out the protocol in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/labEquipment">
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#biologicalType">biologicalType</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/BioChemEntity" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioChemEntity">BioChemEntity</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a title="Defined in extension: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/DefinedTerm">DefinedTerm</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/SequenceMatchingModel"></td><td class="prop-desc" property="rdfs:comment">Biological type targeted by this model, for instance domains or sites in proteins.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/match">
 
-                        <th class="prop-nam" scope="row">
+      <th class="prop-nam" scope="row">
 
-                  <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#labEquipment">labEquipment</a></code>
-                      </th>
-                   <td class="prop-ect">
-                  <link  property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a title="Defined in extension: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/DefinedTerm">DefinedTerm</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/LabProtocol"></td><td class="prop-desc" property="rdfs:comment">For LabProtocols it would be a laboratory equipment use by a person to follow one or more steps described in this LabProtocol.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/protocolAdvantage">
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#match">match</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/<built-in function id>" /><a   href="http://schema.org/todo"><built-in function id></a>&nbsp;<link property="domainIncludes" href="http://schema.org/SequenceMatchingModel"></td><td class="prop-desc" property="rdfs:comment">Entity matched by this model, for instance proteins where the domain targeted by this model are found.<br/> Inverse property: <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#isMatchedBy">isMatchedBy</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/modelDataset">
 
-                        <th class="prop-nam" scope="row">
+      <th class="prop-nam" scope="row">
 
-                  <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#protocolAdvantage">protocolAdvantage</a></code>
-                      </th>
-                   <td class="prop-ect">
-                  <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="http://schema.org/CreativeWork">CreativeWork</a>&nbsp;<link property="domainIncludes" href="http://schema.org/LabProtocol"></td><td class="prop-desc" property="rdfs:comment">Situations where the Protocol has been successfully employed.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/protocolApplication">
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#modelDataset">modelDataset</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Dataset" /><a   href="http://schema.org/Dataset">Dataset</a>&nbsp;<link property="domainIncludes" href="http://schema.org/SequenceMatchingModel"></td><td class="prop-desc" property="rdfs:comment">Dataset where this matching model has been recorded.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/modelSignature">
 
-                        <th class="prop-nam" scope="row">
+      <th class="prop-nam" scope="row">
 
-                  <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#protocolApplication">protocolLimitation</a></code>
-                      </th>
-                   <td class="prop-ect">
-                  <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="http://schema.org/CreativeWork">CreativeWork</a>&nbsp;<link property="domainIncludes" href="http://schema.org/LabProtocol"></td><td class="prop-desc" property="rdfs:comment">Applications of the protocol list the full diversity of the applications of the method and support if is possible to extend the range of applications of the protocol. e.g. northern blot assays, sequencing, etc.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/protocolLimitation">
-
-                        <th class="prop-nam" scope="row">
-
-                  <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#protocolLimitation">protocolLimitation</a></code>
-                      </th>
-                   <td class="prop-ect">
-                  <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="http://schema.org/CreativeWork">CreativeWork</a>&nbsp;<link property="domainIncludes" href="http://schema.org/LabProtocol"></td><td class="prop-desc" property="rdfs:comment">Situations where the Protocol would be unreliable or otherwise unsuccessful.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/protocolOutcome">
-
-                        <th class="prop-nam" scope="row">
-
-                  <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#protocolOutcome">protocolLimitation</a></code>
-                      </th>
-                   <td class="prop-ect">
-                  <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="http://schema.org/CreativeWork">CreativeWork</a>&nbsp;<link property="domainIncludes" href="http://schema.org/LabProtocol"></td><td class="prop-desc" property="rdfs:comment">Outcome or expected result by a protocol execution.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/purpose">
-
-                        <th class="prop-nam" scope="row">
-
-                  <code property="rdfs:label"><a   href="http://schema.org/purpose">purpose</a></code>
-                      </th>
-                   <td class="prop-ect">
-                  <link  property="rangeIncludes" href="http://schema.org/MedicalDevicePurpose" /><a   href="http://schema.org/MedicalDevicePurpose">MedicalDevicePurpose</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Thing" /><a   href="http://schema.org/Thing">Thing</a>&nbsp;<link property="domainIncludes" href="http://schema.org/AllocateAction"><link property="domainIncludes" href="http://schema.org/LabProtocol"><link property="domainIncludes" href="http://schema.org/MedicalDevice"><link property="domainIncludes" href="http://schema.org/PayAction"></td><td class="prop-desc" property="rdfs:comment">A goal towards an action is taken. Can be concrete or abstract.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/reagent">
-
-                        <th class="prop-nam" scope="row">
-
-                  <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#reagent">reagent</a></code>
-                      </th>
-                   <td class="prop-ect">
-                  <link  property="rangeIncludes" href="http://schema.org/BioChemEntity" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioChemEntity">BioChemEntity</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a title="Defined in extension: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/DefinedTerm">DefinedTerm</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/LabProtocol"></td><td class="prop-desc" property="rdfs:comment">Reagent used in the protocol. It can be a record in a Dataset describing the reagent or a BioChemEntity corresponding to the reagent or a URL pointing to the type of reagent used. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable (URL if possible).</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/sampleUsed">
-
-                        <th class="prop-nam" scope="row">
-
-                  <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#sampleUsed">sampleUsed</a></code>
-                      </th>
-                   <td class="prop-ect">
-                  <link  property="rangeIncludes" href="http://schema.org/BioChemEntity" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioChemEntity">BioChemEntity</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/BioSample" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioSample">BioSample</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a title="Defined in extension: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/DefinedTerm">DefinedTerm</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/LabProtocol"></td><td class="prop-desc" property="rdfs:comment">Sample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/software">
-
-                        <th class="prop-nam" scope="row">
-
-                  <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#software">software</a></code>
-                      </th>
-                   <td class="prop-ect">
-                  <link  property="rangeIncludes" href="http://schema.org/SoftwareApplication" /><a   href="http://schema.org/SoftwareApplication">SoftwareApplication</a>&nbsp;<link property="domainIncludes" href="http://schema.org/LabProtocol"></td><td class="prop-desc" property="rdfs:comment">Software or tool used as part of the lab protocol to complete a part of it.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/step">
-
-                        <th class="prop-nam" scope="row">
-
-                  <code property="rdfs:label"><a   href="http://schema.org/step">step</a></code>
-                      </th>
-                   <td class="prop-ect">
-                  <link  property="rangeIncludes" href="http://schema.org/CreativeWork" /><a   href="http://schema.org/CreativeWork">CreativeWork</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/HowToSection" /><a   href="http://schema.org/HowToSection">HowToSection</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/HowToStep" /><a   href="http://schema.org/HowToStep">HowToStep</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp;<link property="domainIncludes" href="http://schema.org/HowTo"><link property="domainIncludes" href="http://schema.org/LabProtocol"></td><td class="prop-desc" property="rdfs:comment">A single step item (as HowToStep, text, document, video, etc.) or a HowToSection. Supersedes <a   href="http://schema.org/steps">steps</a>.</td></tr><tr class="supertype">
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#modelSignature">modelSignature</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/<built-in function id>" /><a   href="http://schema.org/Image"><built-in function id></a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="http://schema.org/PropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp;<link property="domainIncludes" href="http://schema.org/SequenceMatchingModel"></td><td class="prop-desc" property="rdfs:comment">Representation of the model such as regular expresion or image.</td></tr><tr class="supertype">
                     <th class="supertype-name" colspan="3">Properties from <a   href="http://schema.org/CreativeWork">CreativeWork</a></th>
 
                </tr>

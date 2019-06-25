@@ -1,21 +1,21 @@
 ---
 redirect_from:
-- "devTypes/DNA/specification"
-- "devTypes/DNA/specification/"
-- "/devTypes/DNA/"
-- "/DNA"
-dateModified: 2019-06-20
-description: "DNA"
+- "devTypes/RNA/specification"
+- "devTypes/RNA/specification/"
+- "/devTypes/RNA/"
+- "/RNA"
+dateModified: 2019-06-21
+description: "RNA"
 hierarchy:
 - Thing
 - BioChemEntity
-gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20DNA
+gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20RNA
 group: dna
-name: DNA
+name: RNA
 parent_type: BioChemEntity
 spec_type: Type
 status: revision
-version: '0.2-DRAFT'
+version: '0.1-DRAFT'
 
 bsc: #0B794B;
 pending: #0000CC;
@@ -43,7 +43,7 @@ external: #454547;
                   </thead>
 
                 <tr class="supertype">
-                     <th class="supertype-name" colspan="3">Properties from <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/DNA">DNA</a></th>
+                     <th class="supertype-name" colspan="3">Properties from <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/RNA">RNA</a></th>
 
                 </tr>
 
@@ -62,14 +62,14 @@ external: #454547;
                 <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasSequence">hasSequence</a></code>
                     </th>
                  <td class="prop-ect">
-                <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp;<link property="domainIncludes" href="http://schema.org/DNA"><link property="domainIncludes" href="http://schema.org/Gene"><link property="domainIncludes" href="http://schema.org/Protein"><link property="domainIncludes" href="http://schema.org/RNA"></td><td class="prop-desc" property="rdfs:comment">Nucleotide or amino acid sequence.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/topology">
+                <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp;<link property="domainIncludes" href="http://schema.org/DNA"><link property="domainIncludes" href="http://schema.org/Gene"><link property="domainIncludes" href="http://schema.org/Protein"><link property="domainIncludes" href="http://schema.org/RNA"></td><td class="prop-desc" property="rdfs:comment">Nucleotide or amino acid sequence.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isCodingRNA">
 
-                      <th class="prop-nam" scope="row">
+      <th class="prop-nam" scope="row">
 
-                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#topology">One of Linear|Circular|Unspecified</a></code>
-                    </th>
-                 <td class="prop-ect">
-                <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="./Text">Text</a>&nbsp;<link property="domainIncludes" href="http://schema.org/DNA"></td><td class="prop-desc" property="rdfs:comment">-</td></tr><tr class="supertype">
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#isCodingRNA">isCodingRNA</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Boolean" /><a   href="http://schema.org/Boolean">Boolean</a>&nbsp;<link property="domainIncludes" href="http://schema.org/RNA"></td><td class="prop-desc" property="rdfs:comment">Indicates whether or not this RNA is a coding one.</td></tr><tr class="supertype">
                   <th class="supertype-name" colspan="3">Properties from <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioChemEntity">BioChemEntity</a></th>
 
              </tr>
