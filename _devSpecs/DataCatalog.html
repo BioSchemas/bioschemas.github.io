@@ -5,11 +5,11 @@ redirect_from:
 - "/devSpecs/DataCatalog/"
 name: DataCatalog
 
-status: release #revision replace with revision for next version
+status: revision #revision replace with revision for next version
 spec_type: Profile
 group: datarepositories
 use_cases_url: /useCases/DataRepository/
-cross_walk_url: https://docs.google.com/spreadsheets/d/1mIRsRHdl9bzGQrOEVcMiwvh5ZsCcGNsNfai2sZOBxQ0/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1kB_0vPm78oPZOE9wJWFvBnlU9PN6j9Jk0FzqoqxImYA/
 gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20DataCatalog
 live_deploy: /liveDeploys/
 
@@ -19,14 +19,13 @@ hierarchy:
 - CreativeWork
 - DataCatalog
 
-spec_mapping_url: https://docs.google.com/spreadsheets/d/1mIRsRHdl9bzGQrOEVcMiwvh5ZsCcGNsNfai2sZOBxQ0/
 spec_info:
   title: DataCatalog
   subtitle: ""
   description: A guide for how to describe data catalogs/repositories in the life-sciences
     using Schema.org-like annotation.
-  version: 0.2
-  version_date: 20190614T144341
+  version: 0.3-DRAFT
+  version_date: 20190620T095210
   official_type: http://schema.org/DataCatalog
   full_example: https://github.com/BioSchemas/specifications/tree/master/DataCatalog/examples/
 mapping:
@@ -92,9 +91,22 @@ mapping:
   type_url: ""
   bsc_description: ""
   marginality: Recommended
-  cardinality: ONE
+  cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    {
+      "@type": "DataCatalog",
+      "@id": "http://example.com/DataCatalog",
+      "dataset": [
+        {
+          "@type": "Dataset",
+          "@id": "http://example.com/Dataset1"
+        },{
+          "@type": "Dataset",
+          "@id": "http://example.com/Dataset2"
+        }
+      ]
+    }
 - property: dateCreated
   expected_types:
   - Date
