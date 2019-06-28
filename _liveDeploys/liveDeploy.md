@@ -563,4 +563,22 @@ list:
     bsc_profile: Dataset
     bsc_ver: 0.2
     comments:
+-
+    name: COSMIC Gene at Sanger
+    highlight:
+    example_URL: http://cancer.sanger.ac.uk/cosmic/
+    resource_URL: http://cancer.sanger.ac.uk/cosmic/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 
+    comments:    
+-
+    name: Alliance of Genome Resources
+    highlight: Provides MGI, FlyBase, RGD, WormBase, SGD and Zfin
+    example_URL: https://www.alliancegenome.org/gene/MGI:2442292
+    resource_URL: https://www.alliancegenome.org
+    schema_org: Gene
+    bsc_profile: Gene
+    bsc_ver: 0.5
+    comments:       
 ---
