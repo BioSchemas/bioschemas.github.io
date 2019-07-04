@@ -5,7 +5,7 @@ redirect_from:
 - "/devSpecs/DataCatalog/"
 name: DataCatalog
 
-status: revision #revision replace with revision for next version
+status: release #revision replace with revision for next version
 spec_type: Profile
 group: datarepositories
 use_cases_url: /useCases/DataRepository/
@@ -24,8 +24,8 @@ spec_info:
   subtitle: ""
   description: A guide for how to describe data catalogs/repositories in the life-sciences
     using Schema.org-like annotation.
-  version: 0.3-DRAFT
-  version_date: 20190620T095210
+  version: "0.3"
+  version_date: 20190701T144909
   official_type: http://schema.org/DataCatalog
   full_example: https://github.com/BioSchemas/specifications/tree/master/DataCatalog/examples/
 mapping:
@@ -96,7 +96,7 @@ mapping:
   example: |-
     {
       "@type": "DataCatalog",
-      "@id": "http://example.com/DataCatalog",
+      "@id": "http://example.com/DataCatalog"
       "dataset": [
         {
           "@type": "Dataset",
