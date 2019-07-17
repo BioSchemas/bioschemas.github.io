@@ -7,15 +7,6 @@ type: liveDeploy
 description: Services/sites implementing Bioschemas's markup
 list:
 -
-    name: Identifiers
-    highlight:
-    example_URL: http://identifiers.org/
-    resource_URL: http://identifiers.org/
-    schema_org: DataCatalog
-    bsc_profile: DataCatalog
-    bsc_ver: 0.1
-    comments: Could implement Dataset and DataRecord as well.
--
     name: Fairsharing
     highlight:
     example_URL: https://fairsharing.org/
@@ -42,6 +33,8 @@ list:
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments: Could implement Dataset and DataRecord as well.
+    node: SE
+    type: CDR
 -
     name: EGA
     highlight:
@@ -51,6 +44,7 @@ list:
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments:
+    node: EBI
 -
     name: Isaexplorer
     highlight:
@@ -78,6 +72,7 @@ list:
     bsc_profile: Dataset
     bsc_ver: 0.1
     comments:
+    node: EBI
 -
     name: MobiDB
     highlight:
@@ -87,6 +82,7 @@ list:
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments:
+    node: IT
 -
     name: MobiDB
     highlight:
@@ -96,6 +92,7 @@ list:
     bsc_profile: Dataset
     bsc_ver: 0.2
     comments: Can implement DataRecord type.
+    node: IT
 -
     name: Biosamples
     highlight:
@@ -105,6 +102,8 @@ list:
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments:
+    node: EBI    
+    type: EDD    
 -
     name: Biosamples
     highlight: 10 million+ pages
@@ -114,6 +113,8 @@ list:
     bsc_profile: Sample
     bsc_ver: 0.1
     comments:
+    node: EBI
+    type: EDD
 -
     name: DataMed
     highlight:
@@ -177,6 +178,7 @@ list:
     bsc_profile: Event
     bsc_ver: 0.1
     comments:    
+    node: UK
 -
     name: PDBe
     highlight: 140,000+ pages
@@ -186,6 +188,7 @@ list:
     bsc_profile: ProteinStructure
     bsc_ver: 0.1
     comments:
+    node: EBI
 -
     name: PDBe
     highlight: 214,000+ pages
@@ -195,6 +198,7 @@ list:
     bsc_profile: Protein
     bsc_ver: 0.1
     comments:    
+    node: EBI    
 -
     name: French Institute of Bioinformatics (IFB) Events
     highlight:
@@ -203,7 +207,8 @@ list:
     schema_org: Event
     bsc_profile: Event
     bsc_ver: 0.1
-    comments:     
+    comments:  
+    node: FR   
 -
     name: ELIXIR Portugal Events
     highlight:
@@ -213,6 +218,7 @@ list:
     bsc_profile: Event
     bsc_ver: 0.1
     comments:     
+    node: PT
 -
     name: SIB Events
     highlight:
@@ -222,6 +228,7 @@ list:
     bsc_profile: Event
     bsc_ver: 0.1
     comments:   
+    node: CH
 -
     name: ELIXIR Events
     highlight:
@@ -240,6 +247,7 @@ list:
     bsc_profile: Event
     bsc_ver: 0.1
     comments:
+    node: UK
 -
     name: HmmerWeb
     highlight: Result of searches are annotated (results last 1 week)
@@ -249,6 +257,7 @@ list:
     bsc_profile: Protein
     bsc_ver: 0.1
     comments:
+    node: EBI
 -
     name: HmmerWeb
     highlight: Result of searches are annotated (results last 1 week)
@@ -258,6 +267,7 @@ list:
     bsc_profile: ProteinStructure
     bsc_ver: 0.1
     comments:
+    node: EBI    
 -
     name: HmmerWeb
     highlight: Result of searches are annotated (results last 1 week)
@@ -266,7 +276,8 @@ list:
     schema_org:
     bsc_profile: ProteinAnnotation
     bsc_ver: 0.1
-    comments:         
+    comments:     
+    node: EBI        
 -
     name: Galaxy Project
     highlight:
@@ -284,6 +295,7 @@ list:
     bsc_profile: Dataset
     bsc_ver: 0.1
     comments:
+    node: EBI
 -
     name: CATH-Gene3D
     highlight:
@@ -293,15 +305,19 @@ list:
     bsc_profile: Dataset
     bsc_ver: 0.1
     comments:
+    node: UK
+    type: CDR & EDD
 -
     name: CATH-Gene3D
-    highlight:
+    highlight: 
     example_URL: http://www.cathdb.info
     resource_URL: http://www.cathdb.info
     schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments:  
+    node: UK
+    type: CDR & EDD  
 -
     name: The Molecular INTeraction Database (MINT)
     highlight:
@@ -311,6 +327,8 @@ list:
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments:    
+    node: IT
+    type: CDR
 -
     name: The Molecular INTeraction Database (MINT)
     highlight:
@@ -320,6 +338,8 @@ list:
     bsc_profile: Dataset
     bsc_ver: 0.1
     comments:        
+    node: IT    
+    type: CDR    
 -
     name: DEB Register
     highlight:
@@ -410,6 +430,8 @@ list:
     bsc_profile: Dataset
     bsc_ver: 0.2
     comments:
+    node: EBI    
+    type: CDR
 -
     name: ChEMBL
     highlight:
@@ -419,6 +441,7 @@ list:
     bsc_profile: MolecularEntity
     bsc_ver: 0.2-draft
     comments:
+    node: EBI
 -
     name: Alliance of Genome Resources
     highlight:
@@ -437,6 +460,7 @@ list:
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments:  
+    node: CH
 -
     name: SWISS-MODEL Repository
     highlight: 12 Datasets
@@ -446,6 +470,7 @@ list:
     bsc_profile: Dataset
     bsc_ver: 0.2
     comments:  
+    node: CH 
 -
     name: SWISS-MODEL
     highlight:
@@ -455,6 +480,7 @@ list:
     bsc_profile: Tool
     bsc_ver: 0.1
     comments:  
+    node: CH    
 -
     name: ModelArchive
     highlight:
@@ -482,6 +508,7 @@ list:
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments:
+    type: CDR & EDD
 -
     name: ENZYME - The Enzyme Data Bank
     highlight: 4450 datasets
@@ -518,6 +545,8 @@ list:
     bsc_profile: Dataset
     bsc_ver: 0.2
     comments:
+    node: EBI
+    type: CDR
 -
     name: Ensembl Genome Browser
     highlight:
@@ -527,6 +556,8 @@ list:
     bsc_profile: DataCatalog
     bsc_ver: 0.2
     comments:
+    node: EBI
+    type: CDR
 -
     name: ITSoneDB
     highlight:
@@ -536,6 +567,7 @@ list:
     bsc_profile: DataCatalog
     bsc_ver: 0.2
     comments:
+    node: IT
 -
     name: ITSOneDB Marine
     highlight:
@@ -545,6 +577,7 @@ list:
     bsc_profile: Dataset
     bsc_ver: 0.2
     comments:
+    node: IT
 -
     name: ITSoneDB Eukaryotic
     highlight:
@@ -554,6 +587,7 @@ list:
     bsc_profile: Dataset
     bsc_ver: 0.2
     comments:
+    node: IT
 -
     name: Global Biodiversity Information Facility
     highlight:
