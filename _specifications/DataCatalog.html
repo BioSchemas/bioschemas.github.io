@@ -7,7 +7,7 @@ status: release
 spec_type: Profile
 group: datarepositories
 use_cases_url: /useCases/DataRepository/
-cross_walk_url: https://docs.google.com/spreadsheets/d/1mIRsRHdl9bzGQrOEVcMiwvh5ZsCcGNsNfai2sZOBxQ0/
+cross_walk_url: https://drive.google.com/open?id=1kB_0vPm78oPZOE9wJWFvBnlU9PN6j9Jk0FzqoqxImYA
 gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20DataCatalogue
 live_deploy: /liveDeploys/
 
@@ -22,8 +22,8 @@ spec_info:
   subtitle: ""
   description: A guide for how to describe data catalogs/repositories in the life-sciences
     using Schema.org-like annotation.
-  version: 0.2
-  version_date: 20190614T144341
+  version: "0.3"
+  version_date: 20190701T144909
   official_type: http://schema.org/DataCatalog
   full_example: https://github.com/BioSchemas/specifications/tree/master/DataCatalog/examples/
 mapping:
@@ -89,9 +89,22 @@ mapping:
   type_url: ""
   bsc_description: ""
   marginality: Recommended
-  cardinality: ONE
+  cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    {
+      "@type": "DataCatalog",
+      "@id": "http://example.com/DataCatalog"
+      "dataset": [
+        {
+          "@type": "Dataset",
+          "@id": "http://example.com/Dataset1"
+        },{
+          "@type": "Dataset",
+          "@id": "http://example.com/Dataset2"
+        }
+      ]
+    }
 - property: dateCreated
   expected_types:
   - Date
