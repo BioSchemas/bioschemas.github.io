@@ -113,7 +113,7 @@ list:
     bsc_ver: 0.1
     comments:
     node: EBI    
-    type: EDD    
+    type: DDR    
 -
     name: Biosamples
     highlight: 10 million+ pages
@@ -124,7 +124,7 @@ list:
     bsc_ver: 0.1
     comments:
     node: EBI
-    type: EDD
+    type: DDR
 -
     name: DataMed
     highlight:
@@ -316,7 +316,7 @@ list:
     bsc_ver: 0.1
     comments:
     node: UK
-    type: CDR & EDD
+    type: CDR & DDR
 -
     name: CATH-Gene3D
     highlight: 
@@ -327,7 +327,7 @@ list:
     bsc_ver: 0.1
     comments:  
     node: UK
-    type: CDR & EDD  
+    type: CDR & DDR  
 -
     name: The Molecular INTeraction Database (MINT)
     highlight:
@@ -518,7 +518,7 @@ list:
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments:
-    type: CDR & EDD
+    type: CDR & DDR
 -
     name: ENZYME - The Enzyme Data Bank
     highlight: 4450 datasets
