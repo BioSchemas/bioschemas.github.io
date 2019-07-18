@@ -35,14 +35,6 @@ description: |-
             {% for group in groups %}
             {% assign group_index = forloop.index %}
             {% if group_index == 1%}            
-            {% elsif group_index == 2%}
-            <tr class="profile-row" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{group.name}}" aria-expanded="true" aria-controls="collapse{{group.name}}">
-                <td colspan="4">
-                    <div class="repo-count"><strong>{{group.items | size}}</strong></div>
-                    {{group.name}}<br>
-                    <div class="plus-icon"><i class="fas fa-minus fa-lg"></i></div>
-                </td>
-            </tr>
  
             {% else %}
             <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{group.name}}" aria-expanded="false" aria-controls="collapse{{group.name}}">
@@ -62,9 +54,7 @@ description: |-
         	<tr>
                 <td class="deploy-name-column hidden-row">
                 	{% if group_index == 1%}
-                
-                    {% elsif group_index == 2%}
-                    <div class="collapse show collapse{{group.name}} ">
+            
                     {% else %}
                     <div class="collapse collapse{{group.name}} ">
                     {% endif %}
@@ -76,8 +66,7 @@ description: |-
                 </td>
                 <td class="profile hidden-row">
 	                {% if group_index == 1%}
-                    {% elsif group_index == 2%}
-                    <div class="collapse show collapse{{group.name}}">
+
                     {% else %}
                     <div class="collapse collapse{{group.name}}">
                     {% endif %}
@@ -86,8 +75,7 @@ description: |-
                 </td>                
                 <td class="profile-version hidden-row">
 	                {% if group_index == 1%}
-                    {% elsif group_index == 2%}
-                    <div class="collapse show collapse{{group.name}}">
+
                     {% else %}
                     <div class="collapse collapse{{group.name}}">
                     {% endif %}
@@ -96,10 +84,8 @@ description: |-
                 </td>
                 <td class="structured-data-column hidden-row">
                     {% if live.example_URL != nil %}
-                    {% if group_index == 1%}
-                    
-                    {% elsif group_index == 2%}
-                    <div class="collapse show collapse{{group.name}}">
+                    {% if group_index == 1%}                    
+
                     {% else %}
                     <div class="collapse collapse{{group.name}}">
                     {% endif %}

@@ -35,19 +35,6 @@ description: |-
             {% assign profiles = liveDeploys.list | group_by: 'bsc_profile' | sort: 'name' %}
             {% for profile in profiles %}
             {% assign profile_index = forloop.index %}
-            {% if profile_index == 1%}
-            <tr class="profile-row" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{profile.name}}" aria-expanded="true" aria-controls="collapse{{profile.name}}">
-                <td colspan="3">
-                    <div class="repo-count"><strong>{{profile.items | size}}</strong></div>
-                    {% if profile.name == "LabProtocol" or profile.name == "DataRecord" or profile.name == "BioChemEntity" %}
-                    <a href="/types/{{profile.name}}" target="_blank">{{profile.name}}</a><br>
-                    {% else %}
-                    <a href="/specifications/{{profile.name}}" target="_blank">{{profile.name}}</a><br>
-                    {% endif %}
-                    <div class="plus-icon"><i class="fas fa-minus fa-lg"></i></div>
-                </td>
-            </tr>
-            {% else %}
             <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{profile.name}}" aria-expanded="false" aria-controls="collapse{{profile.name}}">
                 <td colspan="3">
                     <div class="repo-count"><strong>{{profile.items | size}}</strong></div>
@@ -59,16 +46,11 @@ description: |-
                     <div class="plus-icon"><i class="fas fa-plus fa-lg"></i></div>
                 </td>
             </tr>
-            {% endif %}
             {% assign live_sorted_list = profile.items | sort: 'name' %}
             {% for live in live_sorted_list %}
             <tr>
                 <td class="deploy-name-column hidden-row">
-                    {% if profile_index == 1%}
-                    <div class="collapse show collapse{{profile.name}} ">
-                    {% else %}
                     <div class="collapse collapse{{profile.name}} ">
-                    {% endif %}
                         <a href="{{live.resource_URL}}" target="_blank">{{live.name}}</a>
                         {% if live.highlight != nil %}
                         	<p class="highlightsText">{{live.highlight}}</p>
@@ -76,21 +58,13 @@ description: |-
                     </div>
                 </td>
                 <td class="profile-version hidden-row">
-                    {% if profile_index == 1%}
-                    <div class="collapse show collapse{{profile.name}}">
-                    {% else %}
                     <div class="collapse collapse{{profile.name}}">
-                    {% endif %}
                     {{live.bsc_ver}}
                     </div>
                 </td>
                 <td class="structured-data-column hidden-row">
                     {% if live.example_URL != nil %}
-                    {% if profile_index == 1%}
-                    <div class="collapse show collapse{{profile.name}}">
-                    {% else %}
                     <div class="collapse collapse{{profile.name}}">
-                    {% endif %}
                     <div class="google-sdtt-button">
                         <span class="tooltiptext">Visualise on GTest tool</span>
                         <a href="https://search.google.com/structured-data/testing-tool#url={{live.example_URL}}" class="btn btn-bioschema btn-block" target="_blank">visualise</a>
