@@ -7,6 +7,16 @@ type: liveDeploy
 description: Services/sites implementing Bioschemas's markup
 list:
 -
+    name: Identifiers
+    highlight:
+    example_URL: https://ebi.identifiers.org/
+    resource_URL: https://ebi.identifiers.org/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.1
+    node: EBI    
+    comments: 
+-
     name: Fairsharing
     highlight:
     example_URL: https://fairsharing.org/
