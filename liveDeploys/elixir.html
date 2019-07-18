@@ -21,12 +21,11 @@ description: |-
             <div class="col-md-8">
     <section class="live-deploy-table">
     	<h5>Elixir resources using Bioschema's markup</h5>
-        <!-- <h5>{{liveDeploys.description}}</h5> -->
-        <!-- <p><strong>{{elixirLD.list | size}}</strong> Elixir resources using Bioschemas.</p> -->
         <table>
             <thead>
                 <tr>
                     <th>Name</th>
+                    <th>Profile</th>
                     <th>Profile Version</th>
                     <th class="structured-data-column">Structured Data Testing Tool</th>
                 </tr>
@@ -34,12 +33,11 @@ description: |-
       		<tbody>
             {% assign groups = liveDeploys.list | group_by: 'node' | where_exp: "name", "name != nil" | sort: 'name' %}
             {% for group in groups %}
-	        <p>{{ forloop.index}} *** {{group.name }}</p>
             {% assign group_index = forloop.index %}
             {% if group_index == 1%}            
             {% elsif group_index == 2%}
             <tr class="profile-row" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{group.name}}" aria-expanded="true" aria-controls="collapse{{group.name}}">
-                <td colspan="3">
+                <td colspan="4">
                     <div class="repo-count"><strong>{{group.items | size}}</strong></div>
                     {{group.name}}<br>
                     <div class="plus-icon"><i class="fas fa-minus fa-lg"></i></div>
@@ -48,7 +46,7 @@ description: |-
  
             {% else %}
             <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{group.name}}" aria-expanded="false" aria-controls="collapse{{group.name}}">
-                <td colspan="3">
+                <td colspan="4">
                     <div class="repo-count"><strong>{{group.items | size}}</strong></div>
                    
                     {{group.name}}<br>                   
@@ -71,9 +69,21 @@ description: |-
                     <div class="collapse collapse{{group.name}} ">
                     {% endif %}
                         <a href="{{live.resource_URL}}" target="_blank">{{live.name}}</a>
-                        <p class="nodeText"><em>profile</em>: {{live.bsc_profile}} {% if live.type != nil %}  <em>type</em>: {{live.type}} {% endif %}<p>                   	
+                        {% if live.type != nil %}
+                        <p class="nodeText"><em>type</em>: {{live.type}}<p>                   	
+                        {% endif %}
                     </div>
                 </td>
+                <td class="profile hidden-row">
+	                {% if group_index == 1%}
+                    {% elsif group_index == 2%}
+                    <div class="collapse show collapse{{group.name}}">
+                    {% else %}
+                    <div class="collapse collapse{{group.name}}">
+                    {% endif %}
+                    {{live.bsc_profile}}
+                    </div>
+                </td>                
                 <td class="profile-version hidden-row">
 	                {% if group_index == 1%}
                     {% elsif group_index == 2%}
