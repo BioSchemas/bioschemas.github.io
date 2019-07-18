@@ -6,6 +6,8 @@ description: |-
     The link to Google’s SDTT shows one example from the site; however, many more may exist. For example, Biosamples have marked up all of their content (currently over 10 million samples).
     Please remember that Google sets minimum requirements for [schema.org](http://schema.org) markup, which may conflict with those of [Bioschemas](http://bioschemas.org). As such, Google's [Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool) may provide warnings or errors when the markup is perfectly compliant with both [schema.org](http://schema.org) and [Bioschemas](http://bioschemas.org).
     If your Bioschemas compliant site is not listed below, please email us at [enquiries@bioschemas.org](mailto:enquiries@bioschemas.org).
+    
+    To view an ELIXIR only list of live deploys [click here](./elixir).
 ---
 <div class="live-deploys">
 
@@ -70,15 +72,6 @@ description: |-
                         <a href="{{live.resource_URL}}" target="_blank">{{live.name}}</a>
                         {% if live.highlight != nil %}
                         	<p class="highlightsText">{{live.highlight}}</p>
-                        {% endif %}
-                        {% if live.node != nil %}
-                           	{% if live.type != nil %}
-	                         	<p class="nodeText">node: {{live.node}} type: {{live.type}}</p>
-	                    	{% else %}
-	                    		<p class="nodeText">node: {{live.node}}</p>
-	                    	{% endif %}
-	                    {% elsif live.type != nil %}
-	                    	<p class="nodeText"> type: {{live.type}}</p>
                         {% endif %}
                     </div>
                 </td>
