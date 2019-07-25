@@ -10,7 +10,7 @@ status: revision # Change to revision if you are working on an update
 spec_type: Profile
 group: biodiversity
 use_cases_url: /useCases/Taxon/
-cross_walk_url: https://docs.google.com/spreadsheets/d/1HHa0P6bvym1sZcO4GZMH01J_Cl06eXH60IVTp0b_Nas/edit?ts=5be44b29#gid=1483018794
+cross_walk_url: https://docs.google.com/spreadsheets/d/1f8ovXRF_T_y8CR1ThHgKkF9NjnpLkIoJ_UOlPQwD6DA/edit
 gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Taxon
 live_deploy: ''
 
@@ -27,8 +27,8 @@ spec_info:
   description: 'This profile aims to denote a taxon by common properties such as its
     scientific name, taxonomic rank and vernacular names. It is also a means to link
     to existing taxonomic registers where each taxon has a URI. <br/>Changes in 0.4:
-    <ul><li>taxonRank promoted to minimal marginality</li><li>parentTaxon, childTaxon
-    and taxonRank are moved to namespace schema.org.</li><li>scientificName and scientificNameAuthorship removed</li></ul>'
+    <ul>
+<li>taxonRank promoted to minimal marginality</li><li>parentTaxon, childTaxon and taxonRank are in namespace bioschemas.org until they be eventually accepted into schema.org.</li><li>scientificName and scientificNameAuthorship removed</li></ul>'
   version: 0.4-DRAFT
   version_date: 20190619T133527
   official_type: http://schema.org/Taxon
@@ -80,8 +80,8 @@ mapping:
   description: |-
     Closest child taxa of the taxon in question.
     Inverse property: parentTaxon
-  type: ""
-  type_url: ""
+  type: bioschemas
+  type_url: http://bioschemas.org/childTaxon
   bsc_description: Direct, most proximate lower-rank child taxa
   marginality: Optional
   cardinality: MANY
@@ -124,8 +124,8 @@ mapping:
   description: |-
     Closest parent taxon of the taxon in question.
     Inverse property: childTaxon
-  type: ""
-  type_url: ""
+  type: bioschemas
+  type_url: http://bioschemas.org/parentTaxon
   bsc_description: Direct, most proximate higher-rank parent taxon
   marginality: Recommended
   cardinality: ONE
@@ -160,8 +160,8 @@ mapping:
   description: The taxonomic rank of this taxon given preferably as a URI from a controlled
     vocabulary (e.g. the ranks from TDWG TaxonRank ontology or equivalent Wikidata
     URIs)
-  type: ""
-  type_url: ""
+  type: bioschemas
+  type_url: http://bioschemas.org/taxonRank
   bsc_description: ""
   marginality: Minimum
   cardinality: MANY
