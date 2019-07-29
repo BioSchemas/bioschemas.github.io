@@ -625,4 +625,40 @@ list:
     bsc_profile: Gene
     bsc_ver: 0.5
     comments:       
+-
+    name: SynBioHub
+    highlight: 
+    example_URL: https://synbiohub.org/
+    resource_URL: https://synbiohub.org/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.3
+    comments:     
+-
+    name: SynBioHub
+    highlight: 
+    example_URL: https://synbiohub.org/
+    resource_URL: https://synbiohub.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments:  
+-
+    name: SynBioHub
+    highlight: 
+    example_URL: https://synbiohub.org/public/igem/BBa_K165005/1
+    resource_URL: https://synbiohub.org/
+    schema_org: DataRecord
+    bsc_profile: DataRecord
+    bsc_ver: 0.2-DRAFT
+    comments:          
+-
+    name: SynBioHub
+    highlight: 
+    example_URL: https://synbiohub.org/public/igem/BBa_K165005/1
+    resource_URL: https://synbiohub.org/
+    schema_org: BioChemEntity
+    bsc_profile: BioChemEntity
+    bsc_ver: 0.7-RC
+    comments:    
 ---
