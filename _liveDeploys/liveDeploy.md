@@ -634,6 +634,7 @@ list:
     bsc_profile: DataCatalog
     bsc_ver: 0.3
     comments:     
+    node: UK
 -
     name: SynBioHub
     highlight: 
@@ -643,6 +644,7 @@ list:
     bsc_profile: Dataset
     bsc_ver: 0.3
     comments:  
+    node: UK
 -
     name: SynBioHub
     highlight: 
@@ -652,6 +654,7 @@ list:
     bsc_profile: DataRecord
     bsc_ver: 0.2-DRAFT
     comments:          
+    node: UK       
 -
     name: SynBioHub
     highlight: 
@@ -661,4 +664,5 @@ list:
     bsc_profile: BioChemEntity
     bsc_ver: 0.7-RC
     comments:    
+    node: UK
 ---
