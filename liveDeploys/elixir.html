@@ -52,6 +52,7 @@ description: |-
             {% endif %}   
             
             {% assign live_sorted_list = group.items | sort: 'node' | uniq %}
+            {% assign live_sorted_list = group.items | sort: 'name' | uniq %}
             {% for live in live_sorted_list %}
             {% if live.node != nil %}
 
