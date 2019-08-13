@@ -618,7 +618,7 @@ list:
     comments:    
 -
     name: Alliance of Genome Resources
-    highlight: Provides MGI, FlyBase, RGD, WormBase, SGD and Zfin
+    highlight: Provides MGI, FlyBase, RGD, WormBase, SGD and Zfin. Release 2.2.0 contains 276,945 Gene records.
     example_URL: https://www.alliancegenome.org/gene/MGI:2442292
     resource_URL: https://www.alliancegenome.org
     schema_org: Gene
