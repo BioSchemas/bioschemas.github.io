@@ -73,6 +73,7 @@ list:
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     comments:
+    node: UK
 -
     name: EGA Dataset
     highlight:
