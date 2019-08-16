@@ -9,8 +9,8 @@ list:
 -
     name: Identifiers
     highlight:
-    example_URL: https://ebi.identifiers.org/
-    resource_URL: https://ebi.identifiers.org/
+    example_URL: https://identifiers.org/
+    resource_URL: https://identifiers.org/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.1
