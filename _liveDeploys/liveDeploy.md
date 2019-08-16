@@ -65,10 +65,10 @@ list:
     bsc_ver: 0.1
     comments:
 -
-    name: IUPHAR/BPS
+    name: IUPHAR/BPS Guide to PHARMACOLOGY
     highlight:
-    example_URL: http://www.guidetopharmacology.org/
-    resource_URL: http://www.guidetopharmacology.org/
+    example_URL: https://www.guidetopharmacology.org/
+    resource_URL: https://www.guidetopharmacology.org/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.1
