@@ -86,10 +86,22 @@ mapping:
   cardinality: MANY
   controlled_vocab: ""
   example: ""
+- property: identifier
+  expected_types:
+  - URL
+  description: The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, 
+    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual 
+    strings or as URL (URI) links. See background notes for more details.
+  type: ""
+  type_url: ""
+  bsc_description: 'We recommend to use a FAIR identifier.'
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
 - property: issn
   expected_types:
   - Text
-  - URL
   description: The International Standard Serial Number (ISSN) that identifies this serial publication. 
     You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this 
     serial publication.
