@@ -6,7 +6,7 @@ collection: groups
 active: true
 type: generic
 description: Description for Workflow related data, pattern of activities and so on.
-lead: [VictoriaDominguezDelAngel]
+lead: [AlanWilliams]
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Workflow
 folder: https://drive.google.com/open?id=10QSvgnEGFXTeOT8qz4-4xwZgLT5GJrqG
 
@@ -37,6 +37,6 @@ draft_types:
   ]
 
 members:
+    - VictoriaDominguezDelAngel
     - LeylaGarcia
-    - AlanWilliams
 ---
