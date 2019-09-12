@@ -7,6 +7,7 @@ active: false
 type: generic
 description: Specification for describing people
 lead: [NiallBeard]
+email: niallbeard@gmail.com
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20person
 folder: https://drive.google.com/drive/u/1/folders/0B6crv12s8piRd1hFM2JUeS1wSEk
 

@@ -9,6 +9,7 @@ description: Specification for protein type
 lead:
     - MariaMartin
     - LeylaGarcia
+email: leylajael@gmail.com
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20protein
 folder: https://drive.google.com/drive/folders/0B0fE3oOZIq44eFktTmhFQlhLeDA
 

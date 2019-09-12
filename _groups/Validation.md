@@ -7,6 +7,7 @@ active: true
 type: other
 description: Tools for validating markup against a specification
 lead: [AlasdairGray]
+email: a.j.g.gray@hw.ac.uk
 
 # Progress status
 issues: https://github.com/BioSchemas/bioschemas/labels/Validation

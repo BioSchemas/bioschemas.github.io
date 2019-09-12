@@ -7,6 +7,7 @@ active: true
 type: generic
 description: Specification for describing training resources such as materials and courses.
 lead: [NiallBeard, GabriellaRustici]
+email: niallbeard@gmail.com,dr.gabry@gmail.com
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20training%20material
 folder: https://drive.google.com/drive/u/1/folders/0B6crv12s8piRT0w5VXRUc09VTFU
 
