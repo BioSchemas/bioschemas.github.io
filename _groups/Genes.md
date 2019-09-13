@@ -6,9 +6,8 @@ collection: groups
 active: true
 type: generic
 description: Specification for Beacon Type
-lead:
-    - LeylaGarcia
-    - DeniseCarvalho-Silva
+lead: [LeylaGarcia, DeniseCarvalho-Silva]
+email: enquiries@bioschemas.org
 issues: https://github.com/BioSchemas/specifications/labels/type%3A%20Gene
 folder: https://drive.google.com/open?id=10Qf59xiMItW4c48jYh3S1LEd8cCFv0sW
 

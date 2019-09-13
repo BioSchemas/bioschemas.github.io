@@ -7,6 +7,7 @@ active: false
 type: generic
 description: Specification for events
 lead: [MartinCook]
+email: enquiries@bioschemas.org
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20event
 folder: https://drive.google.com/drive/u/1/folders/0B6crv12s8piRODVQX2U2NHlkdXM
 

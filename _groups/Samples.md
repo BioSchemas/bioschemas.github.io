@@ -7,6 +7,7 @@ active: true
 type: biological
 description: Specification for sample profile
 lead: [HelenParkinson, TonyBurdett, MelanieCourtot]
+email: enquiries@bioschemas.org
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Sample
 folder: https://drive.google.com/drive/folders/0Bw_p-HKWUjHoaWhkTnBka2FWRE0
 

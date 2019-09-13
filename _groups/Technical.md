@@ -8,6 +8,7 @@ active: true
 type: generic
 description:
 lead: [JustinClark-Casey]
+email: enquiries@bioschemas.org
 issues: https://github.com/BioSchemas/bioschemas/labels/SupportSoftware
 
 # Page attributes

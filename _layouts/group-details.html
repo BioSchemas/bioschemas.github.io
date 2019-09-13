@@ -8,7 +8,15 @@
          <div class="wrapper">
             <div class="outer">
                <section id="main_content" class="inner">
-                  <h1>{{page.name}}</h1>
+                  <h1>{{page.name}}
+       <!-- join group button -->
+        <div class="git-edit" style="float: right;">
+            <a target="_blank" href="mailto:{{page.email}}?subject=[Bioschemas] request to join the {{page.name}} group&body=Please add me to the {{page.name}} group!" class="btn btn-bioschema btn-sm" role="button">
+                <b>Join the group</b>
+            </a>        
+        </div>                    
+                  </h1>           
+       
                   <p>{{page.abstract}}</p>
                   <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto;">
                      <thead>
@@ -37,7 +45,6 @@
                               </a>
                               {% endif %}
                            </td>
-
                         </tr>
                      </thead>
                   </table>

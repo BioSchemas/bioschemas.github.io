@@ -7,6 +7,7 @@ active: true
 type: generic
 description: Specification for biological entities
 lead: [CarlosHorro, LeylaGarcia, PhilippeRocca-Serra]
+email: enquiries@bioschemas.org
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20biochementity
 folder: https://drive.google.com/open?id=0B0fE3oOZIq44MUxtQWlYYmdvWnc
 
