@@ -34,4 +34,5 @@ draft_types:
 
 members: #List members
 - AhmedAli
+- PhilippeRocca-Serra
 ---
