@@ -7,6 +7,8 @@
 <h2>{{page.subtitle}}</h2>
 
 <br />
+<p>If you spot any errors or omissions with this type, please file an issue in our <a href="{{page.gh_tasks}}" target="_blank">GitHub</a>.</p>
+<br />
 
 <input id="tab1" type="radio" name="tabs" checked>
 <label for="tab1">Description</label>
@@ -105,12 +107,12 @@ This is a new {{page.spec_type}} that fits into the schema.org hierarchy as foll
     {% endfor %}
     </td>
     <td class="spec_links">
-        {% if spec.gh_tasks == '' %}
+        {% if page.gh_tasks == '' %}
           <a>
             <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
           </a>
         {% else %}
-          <a href="{{spec.gh_tasks}}">
+          <a href="{{page.gh_tasks}}" target="_blank">
             <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues">
           </a>
         {% endif %}

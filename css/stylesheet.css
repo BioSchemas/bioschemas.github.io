@@ -1168,7 +1168,7 @@ label {
     padding: 15px 25px;
     font-weight: 600;
     text-align: center;
-    color: #bbb;
+    color: #555;
     border: 1px solid transparent;
 }
 
@@ -1183,7 +1183,7 @@ label:hover {
 }
 
 input:checked+label {
-    color: #555;
+    color: #2b2b2b;
     border: 1px solid #ddd;
     border-top: 2px solid green;
     border-bottom: 1px solid #fff;
