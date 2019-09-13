@@ -6,9 +6,8 @@ collection: groups
 active: true
 type: generic
 description: Specification for biological laboratory protocol Type
-lead:
-    - OlgaXimenaGiraldo
-    - AlexanderGarcia
+lead: [OlgaXimenaGiraldo, AlexanderGarcia]
+email: enquiries@bioschemas.org
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20LabProtocol
 folder: https://drive.google.com/drive/folders/0B0fE3oOZIq44TzFwejFEbE9WdXM
 

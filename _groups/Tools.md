@@ -6,11 +6,8 @@ collection: groups
 active: false
 type: generic
 description: Specification for tools
-lead:
-    - RicardoArcila
-    - JustinClark-Casey
-    - LeylaGarcia
-email: justinccdev@gmail.com,arcila@ebi.ac.uk,leylajael@gmail.com
+lead: [RicardoArcila, JustinClark-Casey, LeylaGarcia]
+email: enquiries@bioschemas.org
 issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20tool
 folder: https://drive.google.com/open?id=0BzDhyOWTnRNTYkdQNHppUjZ3U2M
 
