@@ -24,7 +24,7 @@ types:
       'BioChemEntity'
     ]
 draft_types:
-    [x§
+    [
       'BioChemEntity'
     ]
 
