@@ -12,7 +12,7 @@ title: BioSchemas Groups
 
 <p>The following groups, responsible for creating specifications within the project, are active within the Bioschemas community:</p>
 <ul>
-{% assign sorted_groups = site.groups | sort: 'name' %}
+{% assign sorted_groups = site.groups | where:"layout","group-details" | sort: 'name' %}
 {% for group in sorted_groups %}
 <li><a href="{{group.url}}">{{group.name}}</a> - {{group.abstract}}</li>
 {% endfor %}

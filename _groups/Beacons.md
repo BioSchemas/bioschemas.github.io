@@ -27,10 +27,4 @@ draft_specifications:
   [
     'Beacon'
   ]
-
-members:
-  - SusheelVarma
-  - AndraWaagmeester
-  - MichaelBaudis
-  - RafaelJimenez
 ---

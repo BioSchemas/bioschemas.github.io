@@ -5,12 +5,28 @@ title: People
 
 <h1>People</h1>
 <div id="peopleTable">
+{% assign sorted_groups = site.groups | where:"type","members" | sort: 'name' %}
+{% for group in sorted_groups %}
+<h6>{{group.name}}</h6>
+
 <ul>
+
+{% assign members = group.members | sort: 'name' %}
+{% for member in members %}
+<li>{{ member }} </li>
+{% endfor %}
+
+
+<!-- 
     {% assign sorted_people = site.people | sort: 'last-name' %}
     {% for person in sorted_people %}
     <li><a href="{{ person.url }}">{{ person.first-name }} {{ person.last-name }}</a></li>
     {% endfor %}
+ -->
 </ul>
+{% endfor %}
+
+
 </div>
 
 <!-- change number columns based on device -->
@@ -24,7 +40,7 @@ title: People
     } else if(navigator.userAgent.match(/ipad/i)) {
         document.getElementById('peopleTable').style.columnCount = 1;                      
     } else {
-        document.getElementById('peopleTable').style.columnCount = 4;
+        document.getElementById('peopleTable').style.columnCount = 1;
     }
 </script>
 

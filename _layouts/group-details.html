@@ -100,6 +100,11 @@
                   </ul>
                   <br/>
                   {% endif %}
+                  
+    
+                
+         
+
                   <h5>Group Leaders</h5>
                   <div id="leadTable">
                      {% for leader in page.lead %}
@@ -110,6 +115,19 @@
                   </div>
                   <br />
                   <h5>Group Members</h5>
+<!-- Not convinced this a good approach -->                  
+{% assign sorted_groups = site.groups | where:"type","members" | sort: 'name' %}
+{% for group in sorted_groups %}
+{% if page.name == group.name %}
+{% assign members = group.members | sort: 'name' %}
+{% for member in members %}
+<li>{{ member }} </li>
+{% endfor %}
+{% endif %}
+{% endfor %}					
+
+					            
+<!-- 
                   <div id="peopleTable">
                     {% for member-name in page.members %}
                     {% assign member-id = "/people/" | append: member-name %}
@@ -127,7 +145,7 @@
                     <p><a href="{{ member.url }}">{{ member.first-name }} {{ member.last-name }}</a></p>
                     {% endfor %}
                   </div>
-                  {% endif %}
+                  {% endif %}-->
                   {{ content }}
                </section>
             </div>
