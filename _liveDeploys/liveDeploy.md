@@ -75,6 +75,16 @@ list:
     comments:
     node: UK
 -
+    name: IUPHAR/BPS Guide to PHARMACOLOGY
+    highlight: over 9,800 ligands
+    example_URL: https://www.guidetopharmacology.org/GRAC/LigandDisplayForward?ligandId=8299
+    resource_URL: https://www.guidetopharmacology.org/
+    schema_org: MolecularEntity
+    bsc_profile: MolecularEntity
+    bsc_ver: 0.2-DRAFT
+    comments: 
+    node: UK    
+-
     name: EGA Dataset
     highlight:
     example_URL: https://ega-archive.org/datasets/EGAD00000000001
