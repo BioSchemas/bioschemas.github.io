@@ -40,4 +40,5 @@ members:
     - QuentinGroom
     - RicardoArcila
     - ylebras
+    - RomanBaum
 ---
