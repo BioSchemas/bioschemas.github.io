@@ -676,4 +676,14 @@ list:
     bsc_ver: 0.7-RC
     comments:    
     node: UK
+-
+    name: National Museum of Natural History of Paris
+    highlight: 180,000+ species have been annotated
+    example_URL: https://inpn.mnhn.fr/espece/cd_nom/60878/
+    resource_URL: https://inpn.mnhn.fr/
+    schema_org: Taxon
+    bsc_profile: Taxon
+    bsc_ver: 0.4-DRAFT
+    comments:    
+    node: 
 ---
