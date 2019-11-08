@@ -44,4 +44,5 @@ members:
     - MichaelCrusoe
     - RobertoPreste
     - RafaelJimenez
+    - PetrosPapadopoulos
 ---
