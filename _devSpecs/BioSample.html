@@ -8,13 +8,13 @@ url: BioSample
 
 status: revision
 spec_type: Profile
-group: beacons
+group: samples
 use_cases_url: /useCases/Sample/
 cross_walk_url: https://docs.google.com/spreadsheets/d/1LM7FaSJABWU5uG9ns9EU73HtHuV93hwB1m5LuKb4mEk/edit#gid=1261485211
 gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Sample
 live_deploy: ''
 
-parent_type: DataCatalog
+parent_type: BioChemEntity
 hierarchy:
 - Thing
 - BioChemEntity
@@ -27,7 +27,7 @@ spec_info:
     Examples of samples include biomedical samples (blood, urine) and plant specimens
     held at herbaria.'
   version: 0.1-DRAFT
-  version_date: 20191111T104454
+  version_date: 20191111T161807
   official_type: https://bioschemas.org/BioSample
   full_example: ""
 mapping:
@@ -130,7 +130,7 @@ mapping:
   - DateTime
   description: The date on which the CreativeWork was created or the item was added
     to a DataFeed.
-  type: schema.org
+  type: ""
   type_url: ""
   bsc_description: The date the sample was created
   marginality: Optional
@@ -170,7 +170,7 @@ mapping:
   type_url: ""
   bsc_description: |-
     Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.
-    Inverse property:[isPartOfBioChemEntity](https://bioschemas.org/isPartOfBioChemEntity)
+    Inverse property:isPartOfBioChemEntity
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -213,7 +213,7 @@ mapping:
     properties for representing many of these, either as textual strings or as URL
     (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
     for more details.
-  type: schema.org
+  type: ""
   type_url: ""
   bsc_description: ""
   marginality: Minimum
@@ -240,7 +240,7 @@ mapping:
   type_url: ""
   bsc_description: |-
     Another BioChemEntity encoding this one.
-    Inverse property:[encodesBioChemEntity](https://bioschemas.org/encodesBioChemEntity).
+    Inverse property:encodesBioChemEntity.
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
@@ -281,7 +281,7 @@ mapping:
   type_url: ""
   bsc_description: |-
     Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
-    Inverse property: [hasBioChemEntityPart](https://bioschemas.org/hasBioChemEntityPart)
+    Inverse property:hasBioChemEntityPart
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -292,7 +292,7 @@ mapping:
   - PostalAdress
   - Text
   description: Current location of the item.
-  type: schema.org
+  type: ""
   type_url: ""
   bsc_description: ""
   marginality: Optional
@@ -306,7 +306,7 @@ mapping:
   - Text
   description: The location where the CreativeWork was created, which may not be the
     same as the location depicted in the CreativeWork.
-  type: schema.org
+  type: ""
   type_url: ""
   bsc_description: ""
   marginality: Optional
@@ -350,6 +350,7 @@ mapping:
   cardinality: ONE
   controlled_vocab: ""
   example: ""
+
 
 ---
 <!DOCTYPE HTML>
