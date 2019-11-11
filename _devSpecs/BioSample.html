@@ -1,0 +1,373 @@
+---
+redirect_from:
+- "devSpecs/BioSample/specification"
+- "devSpecs/BioSample/specification/"
+
+name: BioSample
+url: BioSample
+
+status: revision
+spec_type: Profile
+group: beacons
+use_cases_url: /useCases/Sample/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1LM7FaSJABWU5uG9ns9EU73HtHuV93hwB1m5LuKb4mEk/edit#gid=1261485211
+gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Sample
+live_deploy: ''
+
+parent_type: DataCatalog
+hierarchy:
+- Thing
+- BioChemEntity
+
+spec_info:
+  title: BioSample
+  subtitle: A bioschema's profile describing a biological sample.
+  description: 'A biological material entity that is representative of a whole.Comments:
+    Typically samples are intended to be representative of the whole or aspects thereof.
+    Examples of samples include biomedical samples (blood, urine) and plant specimens
+    held at herbaria.'
+  version: 0.1-DRAFT
+  version_date: 20191111T104454
+  official_type: https://bioschemas.org/BioSample
+  full_example: ""
+mapping:
+- property: additionalProperty
+  expected_types:
+  - PropertyValue
+  description: 'A property-value pair representing an additional characteristics of
+    the entitity, e.g. a product feature or another characteristic for which there
+    is no matching property in schema.org. Note: Publishers should be aware that applications
+    designed to use specific schema.org properties (e.g. http://schema.org/width,
+    http://schema.org/color, http://schema.org/gtin13, ...) will typically expect
+    such data to be provided using those properties, rather than using the generic
+    property/value mechanism.'
+  type: ""
+  type_url: ""
+  bsc_description: 'A property-value pair representing an additional characteristics
+    of the entity, e.g. “Organism: Homo sapiens” or “tissue type: leaf”. For details
+    of how to use [PropertyValue](http://bioschemas.org/specifications/Sample/specification/#PropertyValue)
+    see below.'
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: associatedDisease
+  expected_types:
+  - MedicalCondition
+  - PropertyValue
+  - URL
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: Disease associated to this BioChemEntity. Such a disease can be
+    a MedicalCondition or a URL. If you want to add an evidence supporting the association,
+    please use PropertyValue.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: bioChemInteraction
+  expected_types:
+  - BioChemEntity
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: A BioChemEntity that is know to interact with this item.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: bioChemSimilarity
+  expected_types:
+  - BioChemEntity
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: A similar molecular entity, e.g., obtained by fingerprint similarity
+    algorithm.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: biogicalRole
+  expected_types:
+  - DefinedTerm
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: A role played by the molecular entity within a biological context.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: collector
+  expected_types:
+  - Organizaton
+  - Person
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: The person or persons who created the sample
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: custodian
+  expected_types:
+  - Organizaton
+  - Person
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: The Person or Organization who is responsible for the Sample.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: dateCreated
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was created or the item was added
+    to a DataFeed.
+  type: schema.org
+  type_url: ""
+  bsc_description: The date the sample was created
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: gender
+  expected_types:
+  - GenderType
+  - Text
+  description: Gender of the person. While http://schema.org/Male and http://schema.org/Female
+    may be used, text strings are also acceptable for people who do not identify as
+    a binary gender.
+  type: ""
+  type_url: ""
+  bsc_description: Biological sex of the subject who provided the sample
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: hasBioChemEntityPart
+  expected_types:
+  - BioChemEntity
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: |-
+    Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.
+    Inverse property:[isPartOfBioChemEntity](https://bioschemas.org/isPartOfBioChemEntity)
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: hasMolecularFunction
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: Molecular function performed by this BioChemEntity; please use
+    PropertyValue if you want to include any evidence.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: hasRepresentation
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: A common representation such as a protein sequence or chemical
+    structure for this entity. For images use schema.org/image.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: schema.org
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: isControl
+  expected_types:
+  - Boolean
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: Indicates whether the sample is being use as a normal control,
+    often in combination with another sample
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: isEncodedByBioChemEntity
+  expected_types:
+  - Gene
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: |-
+    Another BioChemEntity encoding this one.
+    Inverse property:[encodesBioChemEntity](https://bioschemas.org/encodesBioChemEntity).
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: isInvolvedInBiologicalProcess
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: Biological process this BioChemEntity is involved in; please use
+    PropertyValue if you want to include any evidence.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: isLocatedInSubcellularLocation
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: Subcellular location where this BioChemEntity is located; please
+    use PropertyValue if you want to include any evidence.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: isPartOfBioChemEntity
+  expected_types:
+  - BioChemEntity
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: |-
+    Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
+    Inverse property: [hasBioChemEntityPart](https://bioschemas.org/hasBioChemEntityPart)
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: itemLocation
+  expected_types:
+  - Place
+  - PostalAdress
+  - Text
+  description: Current location of the item.
+  type: schema.org
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: locationCreated
+  expected_types:
+  - Place
+  - PostalAdress
+  - Text
+  description: The location where the CreativeWork was created, which may not be the
+    same as the location depicted in the CreativeWork.
+  type: schema.org
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: samplingAge
+  expected_types:
+  - Integer
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: The age of the object when the Sample was created.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: taxonomicRange
+  expected_types:
+  - DefinedTerm
+  - Taxon
+  - Text
+  - URL
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: The taxonomic grouping of the organism that expresses, encodes,
+    or in someway related to the BioChemEntity.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>
