@@ -29,9 +29,9 @@ collections:
   specifications:
     output: true
     permalink: /:collection/:path/
-  devSpecs:
-    output: true
-    permalink: /specifications/drafts/:path/
+#  devSpecs:
+#    output: true
+#    permalink: /specifications/drafts/:path/
   types:
     output: true
     permalink: /:collection/:path/
@@ -55,3 +55,6 @@ collections:
     permalink: /:collection/:path/
   stories:
     output: true
+  profiles:
+    output: true
+    permalink: /:collection/:path/
