@@ -15,7 +15,7 @@ list:
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     node: EBI    
-    comments: 
+    comments:
 -
     name: Fairsharing
     highlight:
@@ -82,7 +82,7 @@ list:
     schema_org: MolecularEntity
     bsc_profile: MolecularEntity
     bsc_ver: 0.2-DRAFT
-    comments: 
+    comments:
     node: UK    
 -
     name: EGA Dataset
@@ -330,7 +330,7 @@ list:
     type: CDR & DDR
 -
     name: CATH-Gene3D
-    highlight: 
+    highlight:
     example_URL: http://www.cathdb.info
     resource_URL: http://www.cathdb.info
     schema_org: DataCatalog
@@ -491,7 +491,7 @@ list:
     bsc_profile: Dataset
     bsc_ver: 0.2
     comments:  
-    node: CH 
+    node: CH
 -
     name: SWISS-MODEL
     highlight:
@@ -625,7 +625,7 @@ list:
     resource_URL: http://cancer.sanger.ac.uk/cosmic/
     schema_org: Dataset
     bsc_profile: Dataset
-    bsc_ver: 
+    bsc_ver:
     comments:    
 -
     name: Alliance of Genome Resources
@@ -638,7 +638,7 @@ list:
     comments:       
 -
     name: SynBioHub
-    highlight: 
+    highlight:
     example_URL: https://synbiohub.org/
     resource_URL: https://synbiohub.org/
     schema_org: DataCatalog
@@ -648,7 +648,7 @@ list:
     node: UK
 -
     name: SynBioHub
-    highlight: 
+    highlight:
     example_URL: https://synbiohub.org/
     resource_URL: https://synbiohub.org/
     schema_org: Dataset
@@ -658,7 +658,7 @@ list:
     node: UK
 -
     name: SynBioHub
-    highlight: 
+    highlight:
     example_URL: https://synbiohub.org/public/igem/BBa_K165005/1
     resource_URL: https://synbiohub.org/
     schema_org: DataRecord
@@ -668,7 +668,7 @@ list:
     node: UK       
 -
     name: SynBioHub
-    highlight: 
+    highlight:
     example_URL: https://synbiohub.org/public/igem/BBa_K165005/1
     resource_URL: https://synbiohub.org/
     schema_org: BioChemEntity
@@ -685,5 +685,26 @@ list:
     bsc_profile: Taxon
     bsc_ver: 0.4-DRAFT
     comments:    
-    node: 
+    node:
+-
+    name: FlyMine
+    highlight:
+    example_URL: https://flymine.org/
+    resource_URL: https://flymine.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments:  
+    node: UK
+-
+    name: HumanMine
+    highlight:
+    example_URL: https://humanmine.org/
+    resource_URL: https://humanmine.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments:  
+    node: UK
+
 ---
