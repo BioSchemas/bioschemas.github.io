@@ -159,13 +159,15 @@ mapping:
   expected_types:
   - Thing
   - DefinedTerm
+  - DefinedTermSet
   description: |-
     Indicates the primary entity described in some page or other CreativeWork.
      Inverse property: mainEntityOfPage.
   type: ""
   type_url: ""
-  bsc_description: Ontology terms associated to this annotation. On the DefinedTerm,
-    use additionalType to link to a Unified Medical Language System (UMLS) semantic
+  bsc_description: DefinedTerm(s), i.e., ontology terms, associated to this annotation. Use DefinedTermSet if multiple related 
+   terms should be seen as a whole, for instance MeSH descriptors accompanied by MeSH qualifiers .
+   On the DefinedTerm, use additionalType to link to a Unified Medical Language System (UMLS) semantic
     type (TUI) or group, and sameAs to link to the corresponding concept unique identifier
     (CUI), if available.
   marginality: Minimum
