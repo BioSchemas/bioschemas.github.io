@@ -21,7 +21,7 @@
 
 
 
-<section id="contributors" class="tabs">
+<section id="tab2Content" class="tabs">
 <h3>Contributors</h3>
 {% assign group = site.groups | where:"identifier", page.group %}
 {% for g in group %}
@@ -66,7 +66,7 @@
 </div>
 </section>
 
-<section id="description" class="tabs">
+<section id="tab1Content" class="tabs">
 <!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
 <h3>Canonical URL</h3>
 <a href="/{{page.name}}">http://bioschemas.org/{{page.name}}</a>
@@ -91,7 +91,7 @@ This is a new {{page.spec_type}} that fits into the schema.org hierarchy as foll
 <p>{{page.description}}</p>
 </section>
 
-<section id="links" class="tabs">
+<section id="tab3Content" class="tabs">
 <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto;">
     <thead>
     <tr>

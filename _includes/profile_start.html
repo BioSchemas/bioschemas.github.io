@@ -31,7 +31,7 @@
 <label for="tab2">Contributors</label>
 <input id="tab3" type="radio" name="tabs">
 <label for="tab3">Links</label>
-<section id="contributors" class="tabs">
+<section id="tab2Content" class="tabs">
    <h3>Contributors</h3>
    {% assign group = site.groups | where:"identifier", page.group %}
    {% for g in group %}
@@ -70,7 +70,7 @@
         {% endfor %}
    </div>
 </section>
-<section id="description" class="tabs">
+<section id="tab1Content" class="tabs">
    <!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
    <h3>Schema.org hierarchy</h3>
    This {{page.spec_type}} fits into the schema.org hierarchy as follows:
@@ -128,7 +128,7 @@
    
    <br />
 </section>
-<section id="links" class="tabs">
+<section id="tab3Content" class="tabs">
    <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto;">
       <thead>
          <tr>

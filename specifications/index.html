@@ -14,7 +14,7 @@ redirect_from:
 <b>Propose a new profile</b></a></div>
 </h1>
 
-<p>This page contains versions of the Bioschemas profiles. Profiles are sorted into one of the following categories: <a href="#release">RELEASE</a>, <a href="#draft">DRAFT</a> or <a href="#deprecated">DEPRECATED</a>.</p>
+<p>This page contains versions of the Bioschemas profiles. Profiles are sorted into one of the following categories: <em>RELEASE</em>, <em>DRAFT</em> or <em>DEPRECATED</em>.</p>
 <p><em>Released</em> profiles may have newer versions that are still in <em>draft</em> status. <em>Deprecated</em> means that the group developing it have suspended work; we would be delighted for you to continue it. Please email <a href="mailto:public-bioschemas@w3.org" itemprop="email">public-bioschemas@w3.org</a> to discuss.</p>
 <p>Should you wish to contact the community to discuss our efforts please email <a href="mailto:public-bioschemas@w3.org" itemprop="email">public-bioschemas@w3.org</a>.</p>
 
@@ -38,8 +38,14 @@ are guidelines suggesting how publishers can best describe their resource(s).</p
 	{% assign active_profile_names = active_profile_names | push: item.name %}
 {% endfor %}
 
-
-   <h3 id="release">RELEASE</h3>
+<input id="tab1" type="radio" name="tabs" checked>
+<label for="tab1">RELEASE</label>
+<input id="tab2" type="radio" name="tabs">
+<label for="tab2">DRAFT</label>
+<input id="tab3" type="radio" name="tabs">
+<label for="tab3">DEPRECATED</label>
+<section id="tab1Content" class="tabs">
+   <h3>RELEASE</h3>
    <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
       <thead>
       <tr>
@@ -67,9 +73,10 @@ are guidelines suggesting how publishers can best describe their resource(s).</p
       {% endfor %}
       </tbody>
   </table>
-  
-  <!--------------------------------------------------------------------------- --->
-   <h3 id="draft">DRAFT</h3>
+</section>
+
+<section id="tab2Content" class="tabs">  
+   <h3>DRAFT</h3>
    <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
       <thead>
       <tr>
@@ -97,9 +104,11 @@ are guidelines suggesting how publishers can best describe their resource(s).</p
       {% endfor %}
       </tbody>
   </table>  
+</section>
+
   
-    <!--------------------------------------------------------------------------- --->
-   <h3 id="deprecated">DEPRECATED</h3>
+<section id="tab3Content" class="tabs">
+   <h3>DEPRECATED</h3>
    <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
       <thead>
       <tr>
@@ -127,4 +136,25 @@ are guidelines suggesting how publishers can best describe their resource(s).</p
       {% endfor %}
       </tbody>
   </table>  
+</section>  
 </div>
+
+<!-- change number columns based on device -->
+<script type="application/x-javascript">
+   if(navigator.userAgent.match(/android/i)) {
+       document.getElementById('peopleTable').style.columnCount = 1;
+       document.getElementById('leadTable').style.columnCount = 1;
+   } else if(navigator.userAgent.match(/phone/i)) {
+       document.getElementById('peopleTable').style.columnCount = 1;
+       document.getElementById('leadTable').style.columnCount = 1;
+   } else if(navigator.userAgent.match(/tablet/i)) {
+       document.getElementById('peopleTable').style.columnCount = 1;
+       document.getElementById('leadTable').style.columnCount = 1;
+   } else if(navigator.userAgent.match(/ipad/i)) {
+       document.getElementById('peopleTable').style.columnCount = 1;
+       document.getElementById('leadTable').style.columnCount = 1;
+   } else {
+       document.getElementById('peopleTable').style.columnCount = 4;
+       document.getElementById('leadTable').style.columnCount = 4;
+   }
+</script>
