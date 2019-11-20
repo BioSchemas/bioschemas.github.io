@@ -51,7 +51,7 @@ mapping:
   description: An alias for the item.
   type: ""
   type_url: ""
-  bsc_description: ""
+  bsc_description: While name should be used for the official Journal name, abbreviations and others can be included here.
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -62,7 +62,7 @@ mapping:
   description: Specifies the Person who edited the CreativeWork.
   type: ""
   type_url: ""
-  bsc_description: ""
+  bsc_description: Journal editor, whenever possible please use the ORCID URL as persistent, unique, global identifier.
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -78,9 +78,9 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: "A Journal has part a PublicationVolume or PublicationIssue or
-    \nScholaryArticle. We recommend to at least include the highest level \n'hasPart',
-    e.g., PublicationVolume. It is also possible, i.e., optional,\n to 'hasPart' to
-    link as well directly to PublicationIssue and \nScholarlyArticle, making it easier
+    ScholaryArticle. We recommend to at least include the highest level 'hasPart',
+    e.g., PublicationVolume. It is also possible, i.e., optional, to 'hasPart' to
+    link as well directly to PublicationIssue and ScholarlyArticle, making it easier
     to find articles in this journal."
   marginality: Recommended
   cardinality: MANY
@@ -88,14 +88,17 @@ mapping:
   example: ""
 - property: identifier
   expected_types:
+  - PropertyValue
+  - Text
   - URL
-  description: The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, 
-    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual 
-    strings or as URL (URI) links. See background notes for more details.
+  description: The identifier property represents any kind of identifier for any kind of Thing, 
+    such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, 
+    either as textual strings or as URL (URI) links. See background notes for more details.
   type: ""
   type_url: ""
-  bsc_description: 'We recommend to use a FAIR identifier.'
-  marginality: Minimum
+  bsc_description: Mainly used by journal catalogs to record their own internal identifier. For instance, the National
+    Library of Medicine assigns the identifier 101531992 to the issn-e:2041-1480 Journal.
+  marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
   example: ""
@@ -107,7 +110,8 @@ mapping:
     serial publication.
   type: ""
   type_url: ""
-  bsc_description: 'We recommend to use here the form namespace:id. For instance, issn:2041-1480.'
+  bsc_description: 'We recommend to use here the form namespace:id in order to distinguish printed from electronical
+    ISSNs. For instance, issn-e:2041-1480 for the electronic online version or issn-p:0003-4819 for the printed version'
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
