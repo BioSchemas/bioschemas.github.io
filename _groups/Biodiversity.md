@@ -17,7 +17,7 @@ objectives:
   [
     'Define the main characteristics of a Taxon as a Bioschemas profile',
     'Make biodiversity-related web portals and data registries more findable using search engines',
-    'Facilitate the linking to major web portals and data registries such as GBIF, Enciclopedia of Life, Catalogue of Life',
+    'Facilitate the linking to major web portals and data registries such as GBIF, Encyclopedia of Life, Catalogue of Life',
     'Engage and help the biodiversity community to test and adopt the exposure of biodiversity markkup'
   ]
 specifications:
