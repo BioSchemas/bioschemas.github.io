@@ -15,8 +15,7 @@ redirect_from:
 </h1>
 
 <p>This page contains versions of the Bioschemas profiles. Profiles are sorted into one of the following categories: <em>RELEASE</em>, <em>DRAFT</em> or <em>DEPRECATED</em>.</p>
-<p><em>Released</em> profiles may have newer versions that are still in <em>draft</em> status. <em>Deprecated</em> means that the group developing it have suspended work; we would be delighted for you to continue it. Please email <a href="mailto:public-bioschemas@w3.org" itemprop="email">public-bioschemas@w3.org</a> to discuss.</p>
-<p>Should you wish to contact the community to discuss our efforts please email <a href="mailto:public-bioschemas@w3.org" itemprop="email">public-bioschemas@w3.org</a>.</p>
+ <p>Should you wish to contact the community to discuss our efforts please email <a href="mailto:public-bioschemas@w3.org" itemprop="email">public-bioschemas@w3.org</a>.</p>
 
 <h2>Profiles</h2>
 
@@ -47,6 +46,7 @@ are guidelines suggesting how publishers can best describe their resource(s).</p
 <section id="tab1Content" class="tabs">
    <h3>RELEASE</h3>
    <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
+      <p><em>Released</em> profiles may have newer versions that are still in <em>draft</em> status.</p>
       <thead>
       <tr>
           <th>Name</th>
@@ -76,6 +76,7 @@ are guidelines suggesting how publishers can best describe their resource(s).</p
 
 <section id="tab2Content" class="tabs">  
    <h3>DRAFT</h3>
+   <p><em>Draft</em> profiles are actively being worked on and are likely to change. There may also be an older version of the profile that reached <em>release</em> stage.</p>
    <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
       <thead>
       <tr>
@@ -108,6 +109,7 @@ are guidelines suggesting how publishers can best describe their resource(s).</p
   
 <section id="tab3Content" class="tabs">
    <h3>DEPRECATED</h3>
+   <p><em>Deprecated</em> means that the group developing it have suspended work; we would be delighted for you to continue it. Please email <a href="mailto:public-bioschemas@w3.org" itemprop="email">public-bioschemas@w3.org</a> to discuss.</p>
    <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
       <thead>
       <tr>
@@ -126,7 +128,7 @@ are guidelines suggesting how publishers can best describe their resource(s).</p
       {% if dep_profile_names contains spec.name %}
       {% if site.data.profile_versions[spec.name].latest_publication != nill %}
 	  {% if spec.spec_info.version == site.data.profile_versions[spec.name].latest_publication %}
-	        <!-- <p>{{spec.name}}</p> -->
+
 	  {% include profile_table_rows.html %}
 
       {% endif %}   
