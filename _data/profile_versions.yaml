@@ -3,7 +3,7 @@ Beacon:
     name: "Beacon"
     latest_publication: "0.2-DRAFT-2018_04_23"
     latest_release:
-    status: "deprecated"
+    status: "active"
 
 BioSample:
     name: "BioSample"
@@ -51,7 +51,7 @@ Event:
     name: "Event"
     latest_publication: "0.2-DRAFT-2019_06_14"
     latest_release:
-    status: "deprecated"
+    status: "active"
 
 Gene:
     name: "Gene"
@@ -93,7 +93,7 @@ Phenotype:
     name: "Phenotype"
     latest_publication: "0.1-DRAFT-2018_11_15"
     latest_release:
-    status: "deprecated"
+    status: "active"
 
 Protein:
     name: "Protein"
@@ -105,13 +105,13 @@ ProteinAnnotation:
     name: "ProteinAnnotation"
     latest_publication: "0.4-DRAFT-2018_02_25"
     latest_release:
-    status: "deprecated"
+    status: "active"
 
 ProteinStructure:
     name: "ProteinStructure"
     latest_publication: "0.5-DRAFT-2018_08_15"
     latest_release:
-    status: "deprecated"
+    status: "active"
 
 PublicationIssue:
     name: "PublicationIssue"
@@ -129,7 +129,7 @@ RNA:
     name: "RNA"
     latest_publication: "0.1-DRAFT-2019_11_15"
     latest_release:
-    status: "deprecated"
+    status: "active"
 
 Sample:
     name: "Sample"
@@ -153,7 +153,7 @@ Study:
     name: "Study"
     latest_publication: "0.1-DRAFT-2018_11_15"
     latest_release:
-    status: "deprecated"
+    status: "active"
 
 Taxon:
     name: "Taxon"
