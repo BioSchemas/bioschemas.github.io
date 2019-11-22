@@ -3,7 +3,8 @@ Beacon:
     name: "Beacon"
     latest_publication: "0.2-DRAFT-2018_04_23"
     latest_release:
-    status: "active"
+    status: "deprecated"
+    deprecated_date: "2019-11-22"
 
 BioSample:
     name: "BioSample"

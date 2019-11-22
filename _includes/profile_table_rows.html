@@ -1,6 +1,12 @@
       <tr>
           {% assign date_time = spec.spec_info.version_date %}
-          <th><a href="/profiles/{{spec.name}}" title="{{ spec.spec_info.subtitle }}">{{ spec.spec_info.title }}</a><br />(v{{spec.spec_info.version}})<br />{{ date_time | date_to_long_string }}</th>
+          <th><a href="/profiles/{{spec.name}}" title="{{ spec.spec_info.subtitle }}">{{ spec.spec_info.title }}</a><br />(v{{spec.spec_info.version}})<br />{{ date_time | date_to_long_string }}
+          
+          	{% if site.data.profile_versions[spec.name].status == "deprecated" %}
+          	<p>deprecated on: {{site.data.profile_versions[spec.name].deprecated_date }}<p>
+          	{% endif %}
+          
+          </th>
           <td>
             {% assign group = site.groups | where:"identifier", spec.group %}
             {% for g in group %}
