@@ -24,10 +24,7 @@ specifications:
   [
     'Gene'
   ]
-draft_specifications:
-  [
-    'Gene'
-  ]
+
 types:
   [
     'Gene'

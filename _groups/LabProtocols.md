@@ -23,10 +23,7 @@ specifications:
   [
     'LabProtocol'
   ]
-draft_specifications:
-  [
-    'LabProtocol'
-  ]
+
 types:
     [
       'LabProtocol'

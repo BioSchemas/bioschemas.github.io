@@ -27,14 +27,12 @@ specifications:
   [
     'Dataset', 'DataRecord'
   ]
-draft_specifications:
-  [
-    'Dataset', 'DataRecord'
-  ]
+
 types:
   [
     'DataRecord'
   ]
+
 draft_types:
   [
     'DataRecord'

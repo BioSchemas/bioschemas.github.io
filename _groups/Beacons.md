@@ -23,10 +23,6 @@ specifications:
   [
     'Beacon'
   ]
-draft_specifications:
-  [
-    'Beacon'
-  ]
 
 members:
   - SusheelVarma

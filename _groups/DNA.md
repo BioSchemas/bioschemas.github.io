@@ -18,16 +18,11 @@ objectives:
   [
   ]
 
-#specifications:
-#  [
-#  ]
-draft_specifications:
+specifications:
   [
     'DNA'
   ]
-#types:
-#  [
-#  ]
+
 draft_types:
   [
     'DNA'

@@ -24,10 +24,7 @@ specifications:
   [  
     
   ]
-draft_specifications:
-  [  
-    
-  ]
+  
 types:
   [  
    

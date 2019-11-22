@@ -23,10 +23,7 @@ specifications:
   [
     'Protein', 'ProteinAnnotation', 'ProteinStructure'
   ]
-draft_specifications:
-  [
-    'Protein', 'ProteinAnnotation', 'ProteinStructure'
-  ]
+
 types:
   [
     'Protein'

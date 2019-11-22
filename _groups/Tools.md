@@ -22,10 +22,7 @@ specifications:
   [
     'Tool'
   ]
-draft_specifications:
-  [
-    'Tool'
-  ]
+
 
 members:
     - GiuseppeProfiti

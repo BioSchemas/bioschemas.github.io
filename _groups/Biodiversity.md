@@ -24,14 +24,12 @@ specifications:
   [
     'Taxon'
   ]
-draft_specifications:
-  [
-    'Taxon',
-  ]
+
 types:
   [
     'Taxon'
   ]
+
 draft_types:
   [
     'Taxon',

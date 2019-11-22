@@ -17,10 +17,7 @@ objectives:
   [
   ]
 
-#specifications:
-#  [
-#  ]
-draft_specifications:
+specifications:
   [
     'Study'
   ]
