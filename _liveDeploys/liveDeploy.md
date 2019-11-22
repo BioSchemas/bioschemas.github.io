@@ -706,5 +706,65 @@ list:
     bsc_ver: 0.3
     comments:  
     node: UK
+-
+    name: DisProt
+    highlight:
+    example_URL: https://www.disprot.org/DP00086#DR
+    resource_URL: https://disprot.org/
+    schema_org: DataRecord
+    bsc_profile: DataRecord
+    bsc_ver: 0.2-DRAFT
+    comments:  
+    node: IT
+-
+    name: DisProt
+    highlight: 1.6k proteins
+    example_URL: https://www.disprot.org/DP00086
+    resource_URL: https://disprot.org/
+    schema_org: Protein
+    bsc_profile: Protein
+    bsc_ver: 0.9-DRAFT
+    comments:  
+    node: IT
+-
+    name: DisProt
+    highlight:
+    example_URL: https://www.disprot.org/
+    resource_URL: https://disprot.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments:  
+    node: IT
+-
+    name: DisProt
+    highlight:
+    example_URL: https://www.disprot.org/
+    resource_URL: https://disprot.org/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.3
+    comments:  
+    node: IT
+-
+    name: DisProt
+    highlight: 3.5k protein regions
+    example_URL: https://www.disprot.org/DP00086r026
+    resource_URL: https://disprot.org/
+    schema_org: SequenceAnnotation
+    bsc_profile: ProteinAnnotation
+    bsc_ver: 0.5-DRAFT
+    comments:  
+    node: IT
+-
+    name: DisProt
+    highlight: 3.5k protein regions
+    example_URL: https://www.disprot.org/DP00086r026
+    resource_URL: https://disprot.org/
+    schema_org: SequenceRange
+    bsc_profile: SequenceRange
+    bsc_ver: 0.1-DRAFT
+    comments:  
+    node: IT
 
 ---
