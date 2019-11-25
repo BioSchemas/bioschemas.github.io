@@ -62,7 +62,7 @@ Gene:
 
 Journal:
     name: "Journal"
-    latest_publication: "0.1-DRAFT-2019_05_09"
+    latest_publication: "0.1-DRAFT-2019_11_21"
     latest_release:
     status: "active"
 
@@ -146,7 +146,7 @@ ScholarlyArticle:
 
 SemanticAnnotation:
     name: "SemanticAnnotation"
-    latest_publication: "0.1-DRAFT-2019_02_08"
+    latest_publication: "0.1-DRAFT-2019_11_19"
     latest_release:
     status: "active"
 

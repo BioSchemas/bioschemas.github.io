@@ -1,7 +1,13 @@
 ---
+redirect_from: 
+- "devSpecs/SemanticAnnotation/specification"
+- "devSpecs/SemanticAnnotation/specification/"
+- "/devSpecs/SemanticAnnotation/"
+- "/profiles/SemanticAnnotation/"
+
 name: SemanticAnnotation
 
-previous_version: 
+previous_version: 0.1-DRAFT-2019_02_08
 previous_release: 
 
 status: revision
@@ -17,8 +23,6 @@ hierarchy:
 - Thing
 - CreativeWork
 
-# spec_info content generated using GOWeb
-# DO NOT MANUALLY EDIT THE CONTENT
 spec_info:
   title: SemanticAnnotation
   subtitle: Bioschemas profile, based on Biotea model, describing a semantic annotation
@@ -26,7 +30,7 @@ spec_info:
   description: A SemanticAnnotation currently corresponds to an expression identified
     in a ScholarlyArticle and associated to an ontology term. It could apply as well to documents 
     other than ScholarlyArticle, for instant patents and so.
-  version: 0.1-DRAFT-2019_02_08
+  version: 0.1-DRAFT-2019_11_19
   version_date: 20190208T104450
   official_type: schema:CreativeWork
   full_example: https://github.com/BioSchemas/specifications/tree/master/ScholarlyPublications
@@ -160,13 +164,15 @@ mapping:
   expected_types:
   - Thing
   - DefinedTerm
+  - DefinedTermSet
   description: |-
     Indicates the primary entity described in some page or other CreativeWork.
      Inverse property: mainEntityOfPage.
   type: ""
   type_url: ""
-  bsc_description: Ontology terms associated to this annotation. On the DefinedTerm,
-    use additionalType to link to a Unified Medical Language System (UMLS) semantic
+  bsc_description: DefinedTerm(s), i.e., ontology terms, associated to this annotation. Use DefinedTermSet if multiple related 
+   terms should be seen as a whole, for instance MeSH descriptors accompanied by MeSH qualifiers .
+   On the DefinedTerm, use additionalType to link to a Unified Medical Language System (UMLS) semantic
     type (TUI) or group, and sameAs to link to the corresponding concept unique identifier
     (CUI), if available.
   marginality: Minimum
