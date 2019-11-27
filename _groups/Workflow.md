@@ -39,5 +39,4 @@ draft_types:
 
 members:
     - VictoriaDominguezDelAngel
-    - LeylaGarcia
 ---

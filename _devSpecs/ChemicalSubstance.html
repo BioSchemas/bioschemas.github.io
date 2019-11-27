@@ -9,7 +9,7 @@ status: revision
 spec_type: Profile
 group: chemicals
 use_cases_url: '/useCases/ChemicalSubstance/'
-cross_walk_url: 'https://docs.google.com/spreadsheets/d/1-E7IbF6Fe2uMyTpWMvthci8Lx58kXxlcz8BiXLmJTdk/'
+cross_walk_url: 'https://docs.google.com/spreadsheets/d/1z1PsEDmDEADzc5NgvPlwEyXxAAA_m3U4QE5jrW8Qly8/edit#gid=1483018794'
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Chemistry
 live_deploy: ''
 
@@ -19,15 +19,14 @@ hierarchy:
 - BioChemEntity
 - ChemicalSubstance
 
-
 spec_info:
   title: ChemicalSubstance
   subtitle: Bioschemas profile describing a ChemicalEntity
-  description: 'This specification describes a ChemicalSubstance which is ''a portion
-    of matter of constant composition, composed of molecular entities of the same
-    type or of different types'' (source: ChEBI).'
-  version: 0.2-DRAFT
-  version_date: 20190611T145905
+  description: 'This profile describes a ChemicalSubstance which is ''a portion of
+    matter of constant composition, composed of molecular entities of the same type
+    or of different types'' (source: <a href=''https://www.ebi.ac.uk/chebi/searchId.do?chebiId=59999''>ChEBI:59999</a>).'
+  version: 0.3-DRAFT
+  version_date: 20191111T161831
   official_type: ""
   full_example: https://github.com/BioSchemas/specifications/tree/master/ChemicalSubstance/examples
 mapping:
@@ -59,8 +58,7 @@ mapping:
 - property: bioChemSimilarity
   expected_types:
   - BioChemEntity
-  description: A similar molecular entity, e.g., obtained by fingerprint similarity
-    algorithms.
+  description: A similar BioChemEntity, e.g., obtained by fingerprint similarity algorithms.
   type: bioschemas
   type_url: ""
   bsc_description: ""
@@ -71,7 +69,7 @@ mapping:
 - property: biologicalRole
   expected_types:
   - DefinedTerm
-  description: A role played by the molecular entity within a biological context.
+  description: A role played by the BioChemEntity within a biological context.
   type: bioschemas
   type_url: ""
   bsc_description: ""
@@ -79,10 +77,23 @@ mapping:
   cardinality: MANY
   controlled_vocab: Any suitable ontology such as [ChEBI biological role](https://www.ebi.ac.uk/ols/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_24432)
   example: ""
+- property: chemicalComposition
+  expected_types:
+  - Text
+  description: The chemical composition describes the identity and relative ratio
+    of the chemical elements that make up the substance.
+  type: bioschemas
+  type_url: ""
+  bsc_description: For substances this often cannot be accurately determined, an approximation
+    is acceptable.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"chemicalComposition": "SiO2"'
 - property: chemicalRole
   expected_types:
   - DefinedTerm
-  description: A role played by the molecular entity within a chemical context.
+  description: A role played by the BioChemEntity within a chemical context.
   type: bioschemas
   type_url: ""
   bsc_description: A role played by the molecular entity within a chemical context.
@@ -129,11 +140,10 @@ mapping:
 - property: hasBioChemEntityPart
   expected_types:
   - BioChemEntity
-  - URL
   description: |-
     Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.
-    Inverse property: isPartOfBioChemEntity
-  type: ""
+    Inverse property:isPartOfBioChemEntity.
+  type: bioschemas
   type_url: ""
   bsc_description: ""
   marginality: Recommended
@@ -152,10 +162,9 @@ mapping:
   - Text
   - URL
   description: The identifier property represents any kind of identifier for any kind
-    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
-    properties for representing many of these, either as textual strings or as URL
-    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
-    for more details.
+    ofThing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties
+    for representing many of these, either as textual strings or as URL (URI) links.
+    See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.
   type: ""
   type_url: ""
   bsc_description: ""
@@ -175,19 +184,6 @@ mapping:
   cardinality: MANY
   controlled_vocab: ""
   example: ""
-- property: molecularFormula
-  expected_types:
-  - Text
-  description: The empirical formula is the simplest whole number ratio of all the
-    atoms in a molecule.
-  type: bioschemas
-  type_url: ""
-  bsc_description: For substances this often cannot accurately be determined, an approximation
-    is acceptable.
-  marginality: Recommended
-  cardinality: ONE
-  controlled_vocab: ""
-  example: '"molecularFormula": "SiO2"'
 - property: name
   expected_types:
   - Text
@@ -202,7 +198,7 @@ mapping:
 - property: potentialUse
   expected_types:
   - DefinedTerm
-  description: Intended use of the molecular entity by humans.
+  description: Intended use of the BioChemEntity by humans.
   type: bioschemas
   type_url: ""
   bsc_description: ""
@@ -250,7 +246,7 @@ mapping:
   marginality: Minimum
   cardinality: MANY
   controlled_vocab: ""
-  example: '"url": "https://data.enanomapper.net/substance/NWKI-e624f68e-2e00-30e4-b4bb-9e34383580cb/study'
+  example: '"url": "https://data.enanomapper.net/substance/NWKI-e624f68e-2e00-30e4-b4bb-9e34383580cb/study"'
 
 ---
 <!DOCTYPE HTML>
