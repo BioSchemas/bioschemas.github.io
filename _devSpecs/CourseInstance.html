@@ -20,6 +20,7 @@ hierarchy:
 - Event
 - CourseInstance
 
+
 spec_info:
   title: CourseInstance
   subtitle: 'Specification describing the instance of a course. '
@@ -27,8 +28,8 @@ spec_info:
     used to describe the broad, common aspects of a recurring training event - whereas
     a course instance is about the specific times and location of when that course
     is held. '
-  version: 0.6-draft
-  version_date: 20190606T160552
+  version: "0.7-draft"
+  version_date: 20191108T154029
   official_type: ""
   full_example: ""
 mapping:
@@ -50,7 +51,8 @@ mapping:
   description: A secondary contributor to the CreativeWork or Event.
   type: ""
   type_url: ""
-  bsc_description: ""
+  bsc_description: 'Contributors are those who made non-authorship contributions:
+    e.g., critical review, commentary or revision.'
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -79,8 +81,8 @@ mapping:
   description: A description of the item.
   type: ""
   type_url: ""
-  bsc_description: "A description of the Course Instance. \n\n(CourseInstance) description
-    can be used to override (Course) description for varations in specific Course
+  bsc_description: "A description of the Course Instance. \n\n*CourseInstance* _description_
+    can be used to override *Course* _description_ for variations in specific Course
     Instances."
   marginality: Optional
   cardinality: ONE
@@ -93,8 +95,8 @@ mapping:
     8601 date format.
   type: ""
   type_url: ""
-  bsc_description: |
-    (CourseInstance) duration can be used to override (Course) timeRequired for varations in specific Course Instances.
+  bsc_description: '*CourseInstance* _duration_ can be used to override *Course* _timeRequired_
+    for variations in specific Course Instances.'
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
@@ -236,10 +238,12 @@ mapping:
     necessarily about, a concept.
   type: bioschemas
   type_url: ""
-  bsc_description: "Datasets, tools, technologies, entities etc, which are referred
-    to by this training material, but not actively used. \n\nSee 'uses' for resources
-    that are being used.\n\n(CourseInstance) uses can be used to override (Course)
-    uses for varations in specific Course Instances."
+  bsc_description: |-
+    Data-sets, tools, technologies, entities, etc. to which this Course Instance makes reference.
+
+    See ‘uses’ for resources that are actively being used.
+
+    *CourseInstance* _mentions_ can be used to override *Course* _mentions_ for variations in specific Course Instances.
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -262,9 +266,9 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: |
-    The name of the course.
+    The name of the Course.
 
-    (CourseInstance) Name can be used to override (Course) name for varations in specific Course Instances.
+    *CourseInstance* _name_ can be used to override *Course* _name_ for variations in specific Course Instances.
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
@@ -276,7 +280,7 @@ mapping:
     rent the DVD of a movie, perform a service, or give away tickets to an event.
   type: ""
   type_url: ""
-  bsc_description: The cost an attendee would pay to attend this course
+  bsc_description: The price an attendee would pay to attend this CourseInstance.
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: Currency and value, Date specified price
@@ -370,7 +374,7 @@ mapping:
   expected_types:
   - Event
   description: |-
-    An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of theconference. Supersedes subEvents.
+    An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference. Supersedes subEvents.
     Inverse property: superEvent.
   type: ""
   type_url: ""
@@ -411,8 +415,8 @@ mapping:
   description: URL of the item.
   type: ""
   type_url: ""
-  bsc_description: The preferred URL of this course instance. You must provide this
-    value if it is known
+  bsc_description: The preferred URL of this Course Instance page. This value must
+    be provided if it is known.
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
@@ -425,9 +429,9 @@ mapping:
   type: bioschemas
   type_url: ""
   bsc_description: |
-    Datasets, tools, technologies, entities etc, which will be utilized in this training material.
+    Data-sets, tools, technologies, entities, etc. that will be used in this Course Instance.
 
-    (CourseInstance) uses can be used to override (Course) uses for varations in specific Course Instances.
+    *CourseInstance* _uses_ can be used to override *Course* _uses_ for variations in specific Course Instances.
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -451,9 +455,10 @@ mapping:
     (a Movie at a ScreeningEvent).
   type: ""
   type_url: ""
-  bsc_description: "The training material used in this specific course instance. \n\nInverse
-    property: workFeatured\n\n(CourseInstance) workFeatured can be used to override
-    (Course) hasPart for varations in specific Course Instances.\n"
+  bsc_description: |
+    The Training Material used in this specific Course instance.
+
+    *CourseInstance* _workFeatured_ can be used to override *Course* _hasPart_ for variations in specific Course Instances.
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
