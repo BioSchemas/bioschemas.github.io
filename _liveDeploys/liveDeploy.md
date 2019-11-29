@@ -766,5 +766,16 @@ list:
     bsc_ver: 0.1-DRAFT
     comments:  
     node: IT
+-
+    name: STRING
+    highlight: 25 million+ protein networks
+    example_URL: https://string-db.org/network/9606.ENSP00000379258
+    resource_URL: https://string-db.org/
+    schema_org: Protein
+    bsc_profile: Protein
+    bsc_ver:
+    comments:  
+    node: CH
+    type: CDR
 
 ---
