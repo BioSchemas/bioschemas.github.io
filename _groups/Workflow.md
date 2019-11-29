@@ -15,10 +15,8 @@ folder: https://drive.google.com/open?id=10QSvgnEGFXTeOT8qz4-4xwZgLT5GJrqG
 abstract: 'A workflow consists of an orchestrated and repeatable pattern of activities enabled by the systematic organization of resources into processes that transform materials, provide services, or process information. It can be depicted as a sequence of operations, the work of a person or group, the work of an organization of staff, or one or more simple or complex mechanisms.'
 objectives:
   [
-    'Facilitate the .',
-    'Engage and helps',
-    'Contribute to contextualise information from ',
-    'Make registries like .'
+    'Facilitate the description of Workflows and WorkflowNodes',
+    'Contribute to contextualise information from existing Workflow registrie
   ]
 specifications:
   [  
