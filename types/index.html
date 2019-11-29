@@ -1,6 +1,10 @@
 ---
 layout: default
 title: BioSchemas Types
+redirect_from:
+ - "/devTypes/"
+ - "/types/drafts/"
+
 ---
 <h1>Bioschemas Types
 <div class="git-edit" style="float: right;">
@@ -15,9 +19,38 @@ title: BioSchemas Types
 <h2>Types</h2>
 <p>Schema.org describes ‘types’ of information, which then have ‘properties’. The types are things that we can talk about and the properties are the things that we can say about the type. We have found it necessary to propose some additional types to the Schema.org vocabulary to describe life sciences resources.</p>
 
-<p>The types specified below are Release Candidates (RC) for inclusion into Schema.org. They are currently undergoing final review. Comments on the <a href="https://lists.w3.org/Archives/Public/public-bioschemas/" itemprop="email">mailing list</a> or <a href="https://github.com/BioSchemas/specifications/issues">GitHub issue tracker</a> are encouraged.</p>
+<p>The types specified below in the <em>Release</em> tab are Release Candidates (RC) for inclusion into Schema.org. They are currently undergoing final review. Comments on the <a href="https://lists.w3.org/Archives/Public/public-bioschemas/" itemprop="email">mailing list</a> or <a href="https://github.com/BioSchemas/specifications/issues">GitHub issue tracker</a> are encouraged.</p>
+<br />
+{% assign dep_types = site.data.type_versions | where: 'status', 'deprecated' %}
+{% assign dep_types_names = "" | split: ',' %}
+{% for item in dep_types %}
+	{% assign dep_types_names = dep_types_names | push: item.name %}
+{% endfor %}
 
-<table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
+{% assign active_types = site.data.type_versions | where: 'status', 'active' %}
+{% assign active_types_names = "" | split: ',' %}
+{% for item in active_types %}
+	{% assign active_types_names = active_types_names | push: item.name %}
+{% endfor %}
+
+<!-- Tab layout for different profile release status -->
+<div class="bioschemas-spec-list-wrapper">
+<input id="tab1" type="radio" name="tabs" checked>
+<label for="tab1">RELEASE</label>
+<input id="tab2" type="radio" name="tabs">
+<label for="tab2">DRAFT</label>
+<!-- 
+<input id="tab3" type="radio" name="tabs">
+<label for="tab3">DEPRECATED</label>
+ -->
+
+
+<!-- RELEASED PROFILES -->
+<section id="tab1Content" class="tabs">
+   <h3>RELEASE</h3>
+       <p><em>Released</em> profiles have been agreed by the community and are widely deployed.</p>
+      <p>Please note that there may be a newer version in <em>draft</em> status when the community agree that a refinement is needed. Where applicable, these are linked from the release version with the label 'Latest draft'.</p>
+  <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
     <thead>
     <tr>
         <th>Name</th>
@@ -26,8 +59,11 @@ title: BioSchemas Types
     </tr>
     </thead>
     <tbody>
-    {% assign type_specs = site.types | where: 'spec_type', 'Type'%}
-    {% for spec in  type_specs%}
+      {% assign prof_types = site.types | where: 'spec_type', 'Type'%}
+      {% for spec in prof_types %}
+      {% if active_types_names contains spec.name %}     
+      {% if site.data.type_versions[spec.name].latest_release != nill %}
+	  {% if spec.version == site.data.type_versions[spec.name].latest_release %}
     <tr>
         <th><a href="/types/{{spec.name}}" title="{{spec.subtitle}}">{{ spec.name }}</a><br />(v{{spec.version}})<br />{{spec.dateModified}}</th>
         <td>
@@ -46,6 +82,124 @@ title: BioSchemas Types
             {% endif %}
         </td>
     </tr>
-    {% endfor %}
+
+
+      {% endif %}   
+      {% endif %}  
+      {% else %}    
+      <p>NNN{{spec.name}}NNN</p>
+      
+      {% endif %}
+      {% endfor %}
+    
+
+    </tbody>
+  </table>
+</section>
+
+<!-- DRAFT PROFILES -->
+<section id="tab2Content" class="tabs">
+   <h3>DRAFT</h3>
+   <p><em>Draft</em> profiles are actively being worked on and are likely to change. Disucssions take place on the mailing list and the <a href="https://github.com/BioSchemas/specifications/issues">issue tracker</a>.</p>
+   <p>Draft profiles are either working towards their first release or are refinements of a previously <em>released</em> profile.</p>
+<table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th style="text-align: center;">Group</th>
+        <th style="text-align: center;">Task &amp; Issues</th>
+    </tr>
+    </thead>
+    <tbody>
+      {% assign prof_types = site.types | where: 'spec_type', 'Type'%}
+      {% for spec in prof_types %}
+      {% if active_types_names contains spec.name %}     
+      
+      {% if site.data.type_versions[spec.name].latest_publication != nill %}
+	  {% if spec.version == site.data.type_versions[spec.name].latest_publication %}
+    <tr>
+        <th><a href="/types/{{spec.name}}" title="{{spec.subtitle}}">{{ spec.name }}</a><br />(v{{spec.version}})<br />{{spec.dateModified}}</th>
+        <td>
+        {% assign group = site.groups | where:"identifier", spec.group | first %}
+        <a href="{{group.url}}">{{group.name}}</a>
+        </td>
+        <td class="spec_links">
+            {% if spec.gh_tasks == '' %}
+              <a>
+                <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
+              </a>
+            {% else %}
+              <a href="{{spec.gh_tasks}}" target="_blank">
+                <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues">
+              </a>
+            {% endif %}
+        </td>
+    </tr>
+
+
+      {% endif %}   
+      {% endif %}  
+      {% else %}    
+      <p>NNN{{spec.name}}NNN</p>
+      
+      {% endif %}
+      {% endfor %}
+    
+
     </tbody>
 </table>
+</section>
+
+
+<!-- DRAFT PROFILES -->
+<!-- WONT WORK AS TAB COMMENTSED OUT ABIOVE -->
+<section id="tab3Content" class="tabs">
+   <h3>DEPRECATED</h3>
+<table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th style="text-align: center;">Group</th>
+        <th style="text-align: center;">Task &amp; Issues</th>
+    </tr>
+    </thead>
+    <tbody>
+      {% assign prof_types = site.types | where: 'spec_type', 'Type'%}
+      {% for spec in prof_types %}
+      {% if dep_types_names contains spec.name %}     
+      
+      {% if site.data.type_versions[spec.name].latest_publication != nill %}
+	  {% if spec.version == site.data.type_versions[spec.name].latest_publication %}
+    <tr>
+        <th><a href="/types/{{spec.name}}" title="{{spec.subtitle}}">{{ spec.name }}</a><br />(v{{spec.version}})<br />{{spec.dateModified}}</th>
+        <td>
+        {% assign group = site.groups | where:"identifier", spec.group | first %}
+        <a href="{{group.url}}">{{group.name}}</a>
+        </td>
+        <td class="spec_links">
+            {% if spec.gh_tasks == '' %}
+              <a>
+                <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
+              </a>
+            {% else %}
+              <a href="{{spec.gh_tasks}}" target="_blank">
+                <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues">
+              </a>
+            {% endif %}
+        </td>
+    </tr>
+
+
+      {% endif %}   
+      {% endif %}  
+      {% else %}    
+      <p>NNN{{spec.name}}NNN</p>
+      
+      {% endif %}
+      {% endfor %}
+
+    </tbody>
+</table>
+</section>   
+
+</div>

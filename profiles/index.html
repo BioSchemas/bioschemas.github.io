@@ -16,9 +16,8 @@ redirect_from:
 
 <p>The Bioschemas' profiles define a community agreed layer over the Schema.org vocabulary, providing additional constraints. These constraints capture (i) the information properties agreed by the community which are minimum (M), recommended (R), or optional (O), (ii) the cardinality of the property, i.e. whether it is expected to occur once or many times, and (iii) associated controlled vocabulary terms drawn from existing ontologies.</p>
 <p>These guidelines provide community best practice that lead to consisent markup of life sciences resources on the Web. Should you wish to discuss our efforts please email the community mailing list <a href="mailto:public-bioschemas@w3.org" itemprop="email">public-bioschemas@w3.org</a> or raise an <a href="https://github.com/BioSchemas/specifications/issues">issue</a>.</p>
+<br />
 
-<!-- Tab layout for different profile release status -->
-<div class="bioschemas-spec-list-wrapper">
 {% assign dep_profiles = site.data.profile_versions | where: 'status', 'deprecated' %}
 {% assign dep_profile_names = "" | split: ',' %}
 {% for item in dep_profiles %}
@@ -30,6 +29,10 @@ redirect_from:
 {% for item in active_profiles %}
 	{% assign active_profile_names = active_profile_names | push: item.name %}
 {% endfor %}
+
+
+<!-- Tab layout for different profile release status -->
+<div class="bioschemas-spec-list-wrapper">
 
 <input id="tab1" type="radio" name="tabs" checked>
 <label for="tab1">RELEASE</label>

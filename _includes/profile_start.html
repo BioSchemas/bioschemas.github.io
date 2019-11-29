@@ -17,6 +17,8 @@
 
 {% if page.status == 'release' %}
 <h1>{{current_name}} Profile</h1>
+{% elsif site.data.profile_versions[page.name].status == "deprecated"%}
+<h1>{{current_name}} <u>DEPRECATED</u> Profile</h1>
 {% else %}
 <h1>{{current_name}} <u>DRAFT</u> Profile</h1>
 {% endif %}
