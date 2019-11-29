@@ -26,7 +26,6 @@ hierarchy:
 
 # spec_info content generated using GOWeb
 # DO NOT MANUALLY EDIT THE CONTENT
-
 spec_info:
   title: Workflow
   subtitle: Bioschemas specification for describing a workflow in the Life Sciences
@@ -36,7 +35,7 @@ spec_info:
     of operations, the work of a person or group, the work of an organization of staff,
     or one or more simple or complex mechanisms. (source Wikipedia.org)
   version: 0.2-DRAFT-2019_11_29
-  version_date: 20191129T090436
+  version_date: 20191129T093338
   official_type: 'http://schema.org/Workflow '
   full_example: pending
 mapping:
@@ -126,7 +125,7 @@ mapping:
     properties for representing many of these, either as textual strings or as URL
     (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
     for more details.
-  type: schema.org
+  type: ""
   type_url: ""
   bsc_description: ""
   marginality: Optional
@@ -149,7 +148,7 @@ mapping:
   expected_types:
   - Thing
   description: ""
-  type: schema.org
+  type: bioschemas
   type_url: ""
   bsc_description: ""
   marginality: Minimum
@@ -185,8 +184,8 @@ mapping:
   expected_types:
   - Text
   description: The name of the item.
-  type: schema.org
-  type_url: https://schema.org/name
+  type: ""
+  type_url: ""
   bsc_description: ""
   marginality: Minimum
   cardinality: ONE
@@ -196,7 +195,7 @@ mapping:
   expected_types:
   - Thing
   description: ""
-  type: schema.org
+  type: bioschemas
   type_url: ""
   bsc_description: ""
   marginality: Minimum
@@ -222,10 +221,10 @@ mapping:
   description: 'Component dependency requirements for application. This includes runtime
     environments and shared libraries that are not included in the application distribution
     package, but required to run the application (Examples: DirectX, Java or .NET
-    runtime). Supersedesrequirements.'
-  type: schema.org
+    runtime). Supersedes requirements.'
+  type: bioschemas
   type_url: ""
-  bsc_description: ""
+  bsc_description: Renaming schema.org/requirements as softwareRequirements
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
@@ -265,6 +264,7 @@ mapping:
   cardinality: ONE
   controlled_vocab: ""
   example: ""
+
 ---
 <!DOCTYPE HTML>
 <html>
