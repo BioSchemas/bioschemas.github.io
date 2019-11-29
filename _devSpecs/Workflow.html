@@ -9,15 +9,15 @@ status: revision
 spec_type: Profile
 group: workflow
 use_cases_url: 
-cross_walk_url: https://docs.google.com/spreadsheets/d/1E_wZV77rHntJ6ismn7f-Gyng3XAEGY415xNiqwoihLM/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1Z3eQrj5Gbs3WGVd1cXUzpL6X1v8Y8cWg-oe2nKzXgzo/
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Workflow
 live_deploy: ''
 
-parent_type: HowTo
+parent_type: SoftwareSourceCode
 hierarchy:
 - Thing
 - CreativeWork
-- HowTo
+- SoftwareSourceCode
 
 spec_info:
   title: Workflow
@@ -26,37 +26,62 @@ spec_info:
     enabled by the systematic organization of resources into processes that transform
     materials, provide services, or process information. It can be depicted as a sequence
     of operations, the work of a person or group, the work of an organization of staff,
-    or one or more simple or complex mechanisms. (source Wikipedia.org).
-  version: 0.1-DRAFT
-  version_date: 20190208T162209
-  official_type: http://schema.org/HowTo
+    or one or more simple or complex mechanisms. (source Wikipedia.org)
+  version: 0.2-DRAFT
+  version_date: 20191129T093338
+  official_type: 'http://schema.org/Workflow '
   full_example: pending
 mapping:
-- property: accessibilityAPI
+- property: author
   expected_types:
-  - Text
-  description: Indicates that the resource is compatible with the referenced accessibility
-    API (WebSchemas wiki lists possible values).
+  - Organization
+  - Person
+  description: The author of this content or rating. Please note that author is special
+    in that HTML 5 provides a special mechanism for indicating authorship via the
+    rel tag. That is equivalent to this and may be used interchangeably.
   type: ""
   type_url: ""
-  bsc_description: If an API is available for the whole workflow, all the available
-    commands should be name
-  marginality: Optional
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: contributor
+  expected_types:
+  - Organization
+  - Person
+  description: A secondary contributor to the CreativeWork or Event.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
   example: ""
-- property: audience
+- property: dateCreated
   expected_types:
-  - Audience
-  - Text
-  description: An intended audience, i.e. a group for whom something was created.
-    Supersedes serviceAudience.
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was created or the item was added
+    to a DataFeed.
   type: ""
   type_url: ""
-  bsc_description: Domain of field this workflow is intended for, e.g., life sciences,
-    software devloper, genomics researchers, medical sciences
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: dateModified
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was most recently modified or when
+    the item's entry was modified within a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: ""
   marginality: Optional
-  cardinality: MANY
+  cardinality: ONE
   controlled_vocab: ""
   example: ""
 - property: description
@@ -68,6 +93,19 @@ mapping:
   bsc_description: ""
   marginality: Recommended
   cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: hasPart
+  expected_types:
+  - CreativeWork
+  description: |-
+    Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).
+    Inverse property: isPartOf.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
   controlled_vocab: ""
   example: ""
 - property: identifier
@@ -83,8 +121,8 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: ""
-  marginality: Minimum
-  cardinality: ONE
+  marginality: Optional
+  cardinality: MANY
   controlled_vocab: ""
   example: ""
 - property: image
@@ -95,8 +133,44 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: ""
-  marginality: Recommended
+  marginality: Optional
   cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: input
+  expected_types:
+  - Thing
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: keywords
+  expected_types:
+  - Text
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: license
+  expected_types:
+  - CreativeWork
+  - URL
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
   controlled_vocab: ""
   example: ""
 - property: name
@@ -110,16 +184,53 @@ mapping:
   cardinality: ONE
   controlled_vocab: ""
   example: ""
-- property: sameAs
+- property: output
   expected_types:
-  - URL
-  description: URL of a reference Web page that unambiguously indicates the item's
-    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
-    website.
+  - Thing
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: programmingLanguage
+  expected_types:
+  - ComputerLanguage
+  - Text
+  description: |
+    The computer programming language.
   type: ""
   type_url: ""
   bsc_description: ""
-  marginality: Optional
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: softwareRequirements
+  expected_types:
+  - Text orURL
+  description: 'Component dependency requirements for application. This includes runtime
+    environments and shared libraries that are not included in the application distribution
+    package, but required to run the application (Examples: DirectX, Java or .NET
+    runtime). Supersedes requirements.'
+  type: bioschemas
+  type_url: ""
+  bsc_description: Renaming schema.org/requirements as softwareRequirements
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: targetProduct
+  expected_types:
+  - SoftwareApplication
+  description: Target Operating System / Product to which the code applies. If applies
+    to several versions, just the product name can be used.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
   example: ""
@@ -131,6 +242,18 @@ mapping:
   type_url: ""
   bsc_description: ""
   marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: version
+  expected_types:
+  - Number
+  - Text
+  description: The version of the CreativeWork embodied by a specified resource.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
   example: ""
