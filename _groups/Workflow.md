@@ -20,27 +20,13 @@ objectives:
     'Advocate for the adoption of the markup by workflow management systems',
     'Advocate for the development of tools to support the markup and its use'.'
   ]
-specifications:
-  [  
-    
-  ]
-draft_specifications:
-  [  
-    
-  ]
-types:
-  [  
-    'None'
-   
-  ]
-draft_types:
-  [  
-    'None'
-  ]
 
 members:
     - VictoriaDominguezDelAngel
-    - carolegoble
-    - 
+    - CaroleGoble
+    - stain
+    - stuzart
+    - fbacall
+    - longr
     
 ---
