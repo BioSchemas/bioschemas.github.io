@@ -35,7 +35,7 @@ types:
   ]
 draft_types:
   [  
-    'None'
+    'Workflow'
   ]
 members:
     - VictoriaDominguezDelAngel
