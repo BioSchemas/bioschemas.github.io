@@ -302,7 +302,7 @@ list:
 -
     name: Galaxy Project
     highlight:
-    URL: https://galaxyproject.org/events/
+    resource_URL: https://galaxyproject.org/events/
     schema_org: Event
     bsc_profile: Event
     bsc_ver: 0.1
