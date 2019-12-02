@@ -9,111 +9,110 @@ BioChemEntity:
 BioChemStructure:
     name: "BioChemStructure"
     latest_publication: "0.1-DRAFT-2019_06_20"
-    latest_release: 
+    latest_release:
     status: "active"
 
 BioSample:
     name: "BioSample"
-    latest_publication: 
-    latest_release: "0.1-RC-2019_06_19"
+    latest_publication:
+    latest_release: "0.1-RELEASE-2019_06_19"
     status: "active"
 
 ChemicalSubstance:
     name: "ChemicalSubstance"
-    latest_publication: 
-    latest_release: "0.3-RC-2019_09_02"
+    latest_publication:
+    latest_release: "0.3-RELEASE-2019_09_02"
     status: "active"
 
 DataRecord:
     name: "DataRecord"
     latest_publication: "0.3-DRAFT-2019_06_20"
-    latest_release: 
+    latest_release:
     status: "active"
 
 DNA:
     name: "DNA"
     latest_publication: "0.2-DRAFT-2019_06_20"
-    latest_release: 
+    latest_release:
     status: "active"
 
 Enzyme:
     name: "Enzyme"
     latest_publication: "0.1-DRAFT-2019_06_20"
-    latest_release: 
+    latest_release:
     status: "active"
 
 Gene:
     name: "Gene"
-    latest_publication: 
-    latest_release: "0.3-RC-2019_09_02"
+    latest_publication:
+    latest_release: "0.3-RELEASE-2019_09_02"
     status: "active"
 
 LabProtocol:
     name: "LabProtocol"
     latest_publication: "0.3-DRAFT-2019_06_20"
-    latest_release: 
+    latest_release:
     status: "active"
 
 MolecularEntity:
     name: "MolecularEntity"
-    latest_publication: 
-    latest_release: "0.3-RC-2019_09_02"
+    latest_publication:
+    latest_release: "0.3-RELEASE-2019_09_02"
     status: "active"
 
 Phenotype:
     name: "Phenotype"
     latest_publication: "0.2-DRAFT-2019_06_21"
-    latest_release: 
+    latest_release:
     status: "active"
 
 Protein:
     name: "Protein"
-    latest_publication: 
-    latest_release: "0.3-RC-2019_09_02"
+    latest_publication:
+    latest_release: "0.3-RELEASE-2019_09_02"
     status: "active"
 
 RNA:
     name: "RNA"
     latest_publication: "0.1-DRAFT-2019_06_21"
-    latest_release: 
+    latest_release:
     status: "active"
 
 Sample:
     name: "Sample"
     latest_publication: "0.2-DRAFT-2018_11_09"
-    latest_release: 
+    latest_release:
     status: "active"
 
 SequenceAnnotation:
     name: "SequenceAnnotation"
     latest_publication: "0.1-DRAFT-2019_06_21"
-    latest_release: 
+    latest_release:
     status: "active"
 
 SequenceMatchingModel:
     name: "SequenceMatchingModel"
     latest_publication: "0.1-DRAFT-2019_06_21"
-    latest_release: 
+    latest_release:
     status: "active"
 
 SequenceRange:
     name: "SequenceRange"
     latest_publication: "0.1-DRAFT-2019_06_21"
-    latest_release: 
+    latest_release:
     status: "active"
 
 Study:
     name: "Study"
     latest_publication: "0.2-DRAFT-2019_06_21"
-    latest_release: 
+    latest_release:
     status: "active"
 
 Taxon:
     name: "Taxon"
-    latest_publication: 
-    latest_release: "0.3-RC-2019_11_18"
+    latest_publication:
+    latest_release: "0.3-RELEASE-2019_11_18"
     status: "active"
 
 
 ---
-

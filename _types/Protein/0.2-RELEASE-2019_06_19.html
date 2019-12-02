@@ -1,28 +1,19 @@
 ---
-redirect_from:
-- "/types/Taxon/specification"
-- "/types/Taxon/specification/"
-- "/Taxon"
-- "/Taxon/"
-- "/types/drafts/Taxon/"
-- "/types/Taxon"
-
-
-previous_version: '0.3-DRAFT-2019_11_14'
-previous_release: '0.1-RELEASE-2018_11_09'
-
+previous_version: '0.2-DRAFT-2019_06_14'
+previous_release: '0.1-RELEASE-2018_11_10'
 
 dateModified: 2019-06-14
-description: "A set of organisms asserted to represent a natural cohesive biological unit."
+description: "Protein is here used in its widest possible definition, as classes of amino acid based molecules. Amyloid-beta Protein in human (UniProt P05067), eukaryota (e.g. an OrthoDB group) or even a single molecule that one can point to are all of type schema:Protein. A protein can thus be a subclass of another protein, e.g. schema:Protein as a UniProt record can have multiple isoforms inside it which would also be schema:Protein. They can be imagined, synthetic, hypothetical or naturally occurring."
 hierarchy:
 - Thing
-gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Taxon
-group: biodiversity
-name: Taxon
-parent_type: Thing
+- BioChemEntity
+gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Protein
+group: proteins
+name: Protein
+parent_type: BioChemEntity
 spec_type: Type
 status: release #Revert to revision when working on the next version
-version: '0.3-RC-2019_11_18'
+version: '0.2-RELEASE-2019_06_19'
 
 bsc: #0B794B;
 pending: #0000CC;
@@ -58,53 +49,151 @@ external: #454547;
                            Properties from <a style="color: #0B794B;" href="/{{page.name}}">{{page.name}}</a> (pending schema.org integration).
                         </td>
                      </tr>
-                     <tr id="childTaxon">
-                       <th style="color: #0B794B;">childTaxon</th>
+                     <tr id="hasSequence">
+                       <th style="color: #0B794B;">hasSequence</th>
                        <td>
-                         <a style="color: #0B794B;" href="/types/drafts/Taxon">Taxon</a> or<br/>
-                         <a href="http://schema.org/Text">Text</a> or<br/>
+                         <a href="http://schema.org/Text">Text</a>
+                       </td>
+                       <td>
+                         	Nucleotide or amino acid sequence.
+                       </td>
+                     </tr>
+
+
+
+
+
+                     <!-- BCE -->
+                   <tr class="reu_props_sdo">
+                        <td colspan="3">Properties from <a style="color: #0B794B;" href="/BioChemEntity">BioChemEntity</a> (pending schema.org integration).</td>
+                     </tr>
+                       <tr id="associatedDisease">
+                       <th style="color: #0B794B;">associatedDisease</th>
+                       <td>
+                         <a href="http://schema.org/MedicalCondition">MedicalCondition</a> or<br/>
+                         <a href="http://schema.org/PropertyValue">PropertyValue</a> or<br/>
                          <a href="http://schema.org/URL">URL</a>
                        </td>
                        <td>
-                         Closest child taxa of the taxon in question. <br/>
-                         Inverse property: <span style="color: #0B794B;">parentTaxon</span>
+                         Disease associated to this BioChemEntity. Such a disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue.
                        </td>
                      </tr>
-                     <tr id="hasDefinedTerm">
-                       <th><a style="color: #0000CC;" href="http://pending.schema.org/hasDefinedTerm">hasDefinedTerm</a></th>
+                     <tr id="bioChemInteraction">
+                       <th style="color: #0B794B;">bioChemInteraction</th>
+                       <td>
+                         <a style="color: #0B794B;" href="/types/drafts/BioChemEntity">BioChemEntity</a>
+                       </td>
+                       <td>
+                        A BioChemEntity that is know to interact with this item.
+                       </td>
+                     </tr>
+                     <tr id="bioChemSimilarity">
+                       <th style="color: #0B794B;">bioChemSimilarity</th>
+                       <td>
+                         <a style="color: #0B794B;" href="/types/drafts/BioChemEntity">BioChemEntity</a>
+                       </td>
+                       <td>
+                        A similar molecular entity, e.g., obtained by fingerprint similarity algorithm.
+                       </td>
+                     </tr>
+                     <tr id="biogicalRole">
+                       <th style="color: #0B794B;">biogicalRole</th>
                        <td>
                          <a style="color: #0000CC;" href="http://schema.org/DefinedTerm">DefinedTerm</a>
                        </td>
                        <td>
-                         A Defined Term contained in this term set.
+                        A role played by the molecular entity within a biological context.
                        </td>
                      </tr>
-                     <tr id="parentTaxon">
-                       <th style="color: #0B794B;">parentTaxon</th>
+                     <tr id="hasBioChemEntityPart">
+                       <th style="color: #0B794B;">hasBioChemEntityPart</th>
                        <td>
-                         <a style="color: #0B794B;" href="/Taxon">Taxon</a> or<br/>
-                         <a href="http://schema.org/Text">Text</a> or<br/>
+                         <a style="color: #0B794B;" href="/types/drafts/BioChemEntity">BioChemEntity</a>
+                       </td>
+                       <td>
+                         Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.<br/>
+                         Inverse property: <span style="color: #0B794B;">isPartOfBioChemEntity</span>
+                       </td>
+                     </tr>
+                      <tr id="hasMolecularFunction">
+                       <th style="color: #0B794B;">hasMolecularFunction</th>
+                       <td>
+                         <a style="color: #0000CC;" href="http://schema.org/DefinedTerm">DefinedTerm</a> or<br/>
+                         <a href="http://schema.org/PropertyValue">PropertyValue</a>or<br/>
                          <a href="http://schema.org/URL">URL</a>
                        </td>
                        <td>
-                         Closest parent taxon of the taxon in question. <br/>
-                         Inverse property: <span style="color: #0B794B;">childTaxon</span>
+                         Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence.
                        </td>
                      </tr>
-                     <tr id="taxonRank">
-                       <th style="color: #0B794B;">taxonRank</th>
+                     <tr id="hasRepresentation">
+                       <th style="color: #0B794B;">hasRepresentation</th>
                        <td>
                          <a href="http://schema.org/PropertyValue">PropertyValue</a> or<br/>
                          <a href="http://schema.org/Text">Text</a> or<br/>
                          <a href="http://schema.org/URL">URL</a>
                        </td>
                        <td>
-                         The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary – (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs).
+                         A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.
+                       </td>
+                     </tr>
+                     <tr id="isEncodedByBioChemEntity">
+                       <th style="color: #0B794B;">isEncodedByBioChemEntity</th>
+                       <td>
+                         <a style="color: #0B794B;" href="/types/drafts/Gene">Gene</a>
+                       </td>
+                       <td>
+                         Another BioChemEntity encoding this one. <br/>
+                         Inverse property: <span style="color: #0B794B;">encodesBioChemEntity.</span>
+                       </td>
+                     </tr>
+                     <tr id="isInvolvedInBiologicalProcess">
+                       <th style="color: #0B794B;">isInvolvedInBiologicalProcess</th>
+                       <td>
+							<a style="color: #0000CC;" href="http://schema.org/DefinedTerm">DefinedTerm</a> or</b>
+							<a href="http://schema.org/PropertyValue">PropertyValue</a> or<br/>
+							<a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.
+                       </td>
+                     </tr>
+                     <tr id="isLocatedInSubcellularLocation">
+                       <th style="color: #0B794B;">isLocatedInSubcellularLocation</th>
+                       <td>
+							<a style="color: #0000CC;" href="http://schema.org/DefinedTerm">DefinedTerm</a> or</b>
+							<a href="http://schema.org/PropertyValue">PropertyValue</a> or<br/>
+							<a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.
+                       </td>
+                     </tr>
+                     <tr id="isPartOfBioChemEntity">
+                       <th style="color: #0B794B;">isPartOfBioChemEntity</th>
+                       <td>
+                         <a style="color: #0B794B;" href="/types/drafts/BioChemEntity">BioChemEntity</a>
+                       </td>
+                       <td>
+                         Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <br/>
+                         Inverse property: <span style="color: #0B794B;">hasBioChemEntityPart</span>
+                       </td>
+                     </tr>
+                     <tr id="taxonomicRange">
+                       <th style="color: #0B794B;">taxonomicRange</th>
+                       <td>
+                       	 <a style="color: #0000CC;" href="http://schema.org/DefinedTerm">DefinedTerm</a> or</b>
+                         <a style="color: #0B794B;" href="/types/drafts/Taxon">Taxon</a> or<br/>
+                         <a href="http://schema.org/Text">Text</a> or<br/>
+                         <a href="http://schema.org/URL">URL</a>
+                       </td>
+                       <td>
+                         The taxonomic grouping of the organism that expresses, encodes, or in someway related to the BioChemEntity.
                        </td>
                      </tr>
 
 
-                     <!-- THING -->
+  						<!-- THING -->
                      <tr class="reu_props_sdo">
                         <td colspan="3">Properties from <a href="http://schema.org/Thing">Thing</a></td>
                      </tr>
