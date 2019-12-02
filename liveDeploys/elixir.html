@@ -18,7 +18,7 @@ description: |-
     <div class="container-flow">
         <div class="row">
 
-            <div class="col-md-8">
+            <div class="col-md-10">
     <section class="live-deploy-table">
     	<h5>Elixir resources using Bioschema's markup</h5>
         <ul style='text-align: left;'>
@@ -29,28 +29,30 @@ description: |-
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Profile</th>
+                    <th class="profile-column">Profile</th>
                     <th>Profile Version</th>
+                    <th class="structured-data-column">Page</th>
                     <th class="structured-data-column">Structured Data Testing Tool</th>
+                    <th class="structured-data-column">Rich Snippet Tool</th>
                 </tr>
             </thead>
       		<tbody>
             {% assign groups = liveDeploys.list | group_by: 'node' | where_exp: "name", "name != nil" | sort: 'name' %}
             {% for group in groups %}
             {% assign group_index = forloop.index %}
-            {% if group_index == 1%}            
- 
+            {% if group_index == 1%}
+
             {% else %}
             <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{group.name}}" aria-expanded="false" aria-controls="collapse{{group.name}}">
-                <td colspan="4">
+                <td colspan="6">
                     <div class="repo-count"><strong>{{group.items | size}}</strong></div>
-                   
-                    {{group.name}}<br>                   
+
+                    {{group.name}}<br>
                     <div class="plus-icon"><i class="fas fa-plus fa-lg"></i></div>
                 </td>
-            </tr>              
-            {% endif %}   
-            
+            </tr>
+            {% endif %}
+
             {% assign live_sorted_list = group.items | sort: 'node' | uniq %}
             {% assign live_sorted_list = group.items | sort: 'name' | uniq %}
             {% for live in live_sorted_list %}
@@ -59,13 +61,13 @@ description: |-
         	<tr>
                 <td class="deploy-name-column hidden-row">
                 	{% if group_index == 1%}
-            
+
                     {% else %}
                     <div class="collapse collapse{{group.name}} ">
                     {% endif %}
                         <a href="{{live.resource_URL}}" target="_blank">{{live.name}}</a>
                         {% if live.type != nil %}
-                        <p class="nodeText"><em>type</em>: {{live.type}}<p>                   	
+                        <p class="nodeText"><em>type</em>: {{live.type}}<p>
                         {% endif %}
                     </div>
                 </td>
@@ -77,7 +79,7 @@ description: |-
                     {% endif %}
                     {{live.bsc_profile}}
                     </div>
-                </td>                
+                </td>
                 <td class="profile-version hidden-row">
 	                {% if group_index == 1%}
 
@@ -89,22 +91,50 @@ description: |-
                 </td>
                 <td class="structured-data-column hidden-row">
                     {% if live.example_URL != nil %}
-                    {% if group_index == 1%}                    
+                    {% if group_index == 1%}
 
                     {% else %}
                     <div class="collapse collapse{{group.name}}">
                     {% endif %}
                     <div class="google-sdtt-button">
-                        <span class="tooltiptext">Visualise on GTest tool</span>
-                        <a href="https://search.google.com/structured-data/testing-tool#url={{live.example_URL}}" class="btn btn-bioschema btn-block" target="_blank">visualise</a>
+                        <span class="tooltiptext">View example page</span>
+                        <a href="{{live.example_URL}}" class="btn btn-bioschema btn-block" target="_blank">view</a>
+                    </div>
+                    </div>
+                    {% endif %}
+                </td>
+                <td class="structured-data-column hidden-row">
+                    {% if live.example_URL != nil %}
+                    {% if group_index == 1%}
+
+                    {% else %}
+                    <div class="collapse collapse{{group.name}}">
+                    {% endif %}
+                    <div class="google-sdtt-button">
+                        <span class="tooltiptext">Visualise on structured data testing tool</span>
+                        <a href="https://search.google.com/structured-data/testing-tool?url={{live.example_URL}}" class="btn btn-bioschema btn-block" target="_blank">view</a>
+                    </div>
+                    </div>
+                    {% endif %}
+                </td>
+                <td class="structured-data-column hidden-row">
+                    {% if live.example_URL != nil %}
+                    {% if group_index == 1%}
+
+                    {% else %}
+                    <div class="collapse collapse{{group.name}}">
+                    {% endif %}
+                    <div class="google-sdtt-button">
+                        <span class="tooltiptext">Visualise on Rich Snippet tool</span>
+                        <a href="https://search.google.com/test/rich-results?url={{live.example_URL}}" class="btn btn-bioschema btn-block" target="_blank">view</a>
                     </div>
                     </div>
                     {% endif %}
                 </td>
             </tr>
-            
-            	 		
-			{% endif %}        
+
+
+			{% endif %}
             {% endfor %}
             {% endfor %}
       		</tbody>
