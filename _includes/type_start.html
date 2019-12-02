@@ -3,7 +3,6 @@
 {% elsif site.data.type_versions[page.name].status == "deprecated"%}
 <h1>{{current_name}} <u>DEPRECATED</u> Profile</h1>
 {% else %}
-{% else %}
 <h1>{{page.name}} <u>DRAFT</u> Type</h1>
 {% endif %}
 <h3><strong>Version:</strong> {{page.version}} ({{page.dateModified}})</h3>
@@ -94,27 +93,27 @@ This is a new {{page.spec_type}} that fits into the schema.org hierarchy as foll
 <p>{{page.description}}</p>
 
    <h3>Latest profiles</h3>
-   {% assign profile_versions = site.data.type_versions[page.name] %}   
+   {% assign profile_versions = site.data.type_versions[page.name] %}
    {% if profile_versions.latest_release != null %}
-   <p>Latest release: <a href="/types/{{page.name}}/{{profile_versions.latest_release}}/">{{profile_versions.latest_release}}</a></p>   
+   <p>Latest release: <a href="/types/{{page.name}}/{{profile_versions.latest_release}}/">{{profile_versions.latest_release}}</a></p>
    {% else %}
    <p>Latest release: none</p>
-   {% endif %}   
+   {% endif %}
    {% if profile_versions.latest_publication != null %}
-   <p>Latest draft: <a href="/types/{{page.name}}/{{profile_versions.latest_publication}}">{{profile_versions.latest_publication}}</a></p>   
+   <p>Latest draft: <a href="/types/{{page.name}}/{{profile_versions.latest_publication}}">{{profile_versions.latest_publication}}</a></p>
    {% endif %}
 
-   
+
    <h3>Previous profiles</h3>
    {% assign prev_version = page.previous_version %}
    {% if prev_version != null %}
-   <p>Previous version: <a href="/types/{{page.name}}/{{page.previous_version}}">{{page.previous_version}}</a></p>   
+   <p>Previous version: <a href="/types/{{page.name}}/{{page.previous_version}}">{{page.previous_version}}</a></p>
    {% else %}
    <p>Previous version: none</p>
    {% endif %}
    {% assign prev_release = page.previous_release %}
-   {% if prev_release != null %}   
-   <p>Previous release: <a href="/types/{{page.name}}/{{page.previous_release}}">{{page.previous_release}}</a></p>   
+   {% if prev_release != null %}
+   <p>Previous release: <a href="/types/{{page.name}}/{{page.previous_release}}">{{page.previous_release}}</a></p>
    {% endif %}
 
 </section>
