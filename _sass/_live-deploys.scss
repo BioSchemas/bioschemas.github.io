@@ -5,7 +5,8 @@
     }
     .live-deploy-table {
         text-align: center;
-        margin: 0 10% 0 10%;
+        margin: 0 1% 0 1%;
+        width: 90%;
     }
     .google-sdtt-button {
         position: relative;
@@ -72,7 +73,7 @@
             border-color: inherit;
             font-size: 100%;
             border-color: #fff;
-            border-width: 1em;            
+            border-width: 1em;
         }
         th {
             border-color: #fff;
@@ -87,7 +88,7 @@
             font-size: 100%;
         }
         td {
-            width: 100%;            
+            width: 100%;
             border: 0;
             padding: 0.625em;
             min-height: 1.25em;
@@ -115,7 +116,7 @@
         .structured-data-column {
             word-break: break-word;
             width:10em;
-            min-width: 10em;
+            min-width: 6em;
         }
         .profile-row {
             text-align: center;
@@ -159,19 +160,19 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         padding: 1em;
     }
-    
+
 	p.nodeText {
 		padding: 0;
 		margin: 0 10px 0;
 		font-size: 12px;
 		line-height : 14px;
-	}    
+	}
 
 	p.highlightsText {
 		font-style: italic;
 		padding: 0;
 		margin: 0 10px 0;
-		font-size: 12px;	
-		line-height : 14px;	
-	}	
+		font-size: 12px;
+		line-height : 14px;
+	}
 }
