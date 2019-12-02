@@ -5,7 +5,7 @@ redirect_from:
  - "/devSpecs/"
  - "/specifications/drafts/"
  - "/specifications/"
- 
+
 
 ---
 <h1>Bioschemas Profiles
@@ -15,7 +15,8 @@ redirect_from:
 </h1>
 
 <p>The Bioschemas' profiles define a community agreed layer over the Schema.org vocabulary, providing additional constraints. These constraints capture (i) the information properties agreed by the community which are minimum (M), recommended (R), or optional (O), (ii) the cardinality of the property, i.e. whether it is expected to occur once or many times, and (iii) associated controlled vocabulary terms drawn from existing ontologies.</p>
-<p>These guidelines provide community best practice that lead to consisent markup of life sciences resources on the Web. Should you wish to discuss our efforts please email the community mailing list <a href="mailto:public-bioschemas@w3.org" itemprop="email">public-bioschemas@w3.org</a> or raise an <a href="https://github.com/BioSchemas/specifications/issues">issue</a>.</p>
+<p>These guidelines provide community best practice that lead to consisent markup of life sciences resources on the Web. Comments and discussions on the <a href="https://lists.w3.org/Archives/Public/public-bioschemas/" itemprop="email">mailing list</a> or <a href="https://github.com/BioSchemas/specifications/issues">GitHub issue tracker</a> are encouraged.</p>
+
 <br />
 
 {% assign dep_profiles = site.data.profile_versions | where: 'status', 'deprecated' %}
@@ -58,16 +59,16 @@ redirect_from:
           <th style="text-align: center;">Live Deploys</th>
       </tr>
       </thead>
-	  <tbody>      
+	  <tbody>
       {% assign prof_specs = site.profiles | where: 'spec_type', 'Profile'%}
       {% for spec in prof_specs %}
-      {% if active_profile_names contains spec.name %}      
+      {% if active_profile_names contains spec.name %}
       {% if site.data.profile_versions[spec.name].latest_release != nill %}
 	  {% if spec.spec_info.version == site.data.profile_versions[spec.name].latest_release %}
 	  {% include profile_table_rows.html %}
 
-      {% endif %}   
-      {% endif %}      
+      {% endif %}
+      {% endif %}
       {% endif %}
       {% endfor %}
       </tbody>
@@ -77,8 +78,8 @@ redirect_from:
 <!-- DRAFT PROFILES -->
 <section id="tab2Content" class="tabs">
    <h3>DRAFT</h3>
-   <p><em>Draft</em> profiles are actively being worked on and are likely to change. Disucssions take place on the mailing list and the <a href="https://github.com/BioSchemas/specifications/issues">issue tracker</a>.</p>
-   <p>Draft profiles are either working towards their first release or are refinements of a previously <em>released</em> profile.</p>
+   <p><em>Draft</em> profiles are actively being worked on and are likely to change. Disucssions take place on the <a href="https://lists.w3.org/Archives/Public/public-bioschemas/" itemprop="email">mailing list</a> and the <a href="https://github.com/BioSchemas/specifications/issues">GitHub issue tracker</a>.</p>
+   <p>Draft profiles are either working towards their first release or are refinements of a previously <em>released</em> version.</p>
    <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
       <thead>
       <tr>
@@ -91,24 +92,24 @@ redirect_from:
           <th style="text-align: center;">Live Deploys</th>
       </tr>
       </thead>
-	  <tbody>      
+	  <tbody>
       {% assign prof_specs = site.profiles | where: 'spec_type', 'Profile'%}
       {% for spec in prof_specs %}
       {% if active_profile_names contains spec.name %}
       {% if site.data.profile_versions[spec.name].latest_publication != nill %}
 	  {% if spec.spec_info.version == site.data.profile_versions[spec.name].latest_publication %}
-	  
+
 	  {% include profile_table_rows.html %}
 
-      {% endif %}   
-      {% endif %}      
+      {% endif %}
+      {% endif %}
       {% endif %}
       {% endfor %}
       </tbody>
-  </table>  
+  </table>
 </section>
 
-  
+
 <section id="tab3Content" class="tabs">
    <h3>DEPRECATED</h3>
    <p><em>Deprecated</em> means that the group developing it have suspended work; we would be delighted for you to continue it. Please email <a href="mailto:public-bioschemas@w3.org" itemprop="email">public-bioschemas@w3.org</a> to discuss.</p>
@@ -124,7 +125,7 @@ redirect_from:
           <th style="text-align: center;">Live Deploys</th>
       </tr>
       </thead>
-	  <tbody>      
+	  <tbody>
       {% assign prof_specs = site.profiles | where: 'spec_type', 'Profile'%}
       {% for spec in prof_specs %}
       {% if dep_profile_names contains spec.name %}
@@ -133,13 +134,13 @@ redirect_from:
 
 	  {% include profile_table_rows.html %}
 
-      {% endif %}   
-      {% endif %}      
+      {% endif %}
+      {% endif %}
       {% endif %}
       {% endfor %}
       </tbody>
-  </table>  
-</section>  
+  </table>
+</section>
 </div>
 
 <!-- change number columns based on device -->
