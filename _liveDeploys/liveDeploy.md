@@ -272,8 +272,8 @@ list:
 -
     name: HmmerWeb
     highlight: Result of searches are annotated (results last 1 week)
-    example_URL:
-    resource_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+    example_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+    resource_URL: https://www.ebi.ac.uk/Tools/hmmer/
     schema_org:
     bsc_profile: Protein
     bsc_ver: 0.1
@@ -282,8 +282,8 @@ list:
 -
     name: HmmerWeb
     highlight: Result of searches are annotated (results last 1 week)
-    example_URL:
-    resource_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+    example_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+    resource_URL: https://www.ebi.ac.uk/Tools/hmmer/
     schema_org:
     bsc_profile: ProteinStructure
     bsc_ver: 0.1
@@ -292,8 +292,8 @@ list:
 -
     name: HmmerWeb
     highlight: Result of searches are annotated (results last 1 week)
-    example_URL:
-    resource_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+    example_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+    resource_URL: https://www.ebi.ac.uk/Tools/hmmer/
     schema_org:
     bsc_profile: ProteinAnnotation
     bsc_ver: 0.1
