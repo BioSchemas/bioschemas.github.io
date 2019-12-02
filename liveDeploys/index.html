@@ -52,7 +52,11 @@ description: |-
             <tr>
                 <td class="deploy-name-column hidden-row">
                     <div class="collapse collapse{{profile.name}} ">
+                      {% if live.resource_URL != nil %}
                         <a href="{{live.resource_URL}}" target="_blank">{{live.name}}</a>
+                      {% else %}
+                        {{live.name}}
+                      {% endif %}
                         {% if live.highlight != nil %}
                         	<p class="highlightsText">{{live.highlight}}</p>
                         {% endif %}
