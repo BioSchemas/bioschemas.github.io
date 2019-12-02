@@ -18,7 +18,7 @@ objectives:
     'Develop the metadata markup to find and register a workflow in a registry and exchange metadata between workflow registries',
     'Advocate for the adoption of the markup in workflow registries and repositories',
     'Advocate for the adoption of the markup by workflow management systems',
-    'Advocate for the development of tools to support the markup and its use'.'
+    'Advocate for the development of tools to support the markup and its use'
   ]
 
 members:
