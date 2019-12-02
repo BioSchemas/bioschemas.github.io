@@ -39,6 +39,6 @@ draft_types:
 
 members:
     - VictoriaDominguezDelAngel
-    - Leyla Garcia
+    - LeylaGarcia
     - Stuart Owen
 ---
