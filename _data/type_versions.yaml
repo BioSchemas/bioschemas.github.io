@@ -2,8 +2,8 @@
 
 BioChemEntity:
     name: "BioChemEntity"
-    latest_publication: 
-    latest_release: "0.7-RC-2019_06_19"
+    latest_publication:
+    latest_release: "0.7-RELEASE-2019_06_19"
     status: "active"
 
 BioChemStructure:
