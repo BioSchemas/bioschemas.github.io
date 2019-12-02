@@ -26,7 +26,7 @@ specifications:
   ]
 draft_specifications:
   [  
-
+    'Workflow'
   ]
 types:
   [  
@@ -35,7 +35,7 @@ types:
   ]
 draft_types:
   [  
-    'Workflow'
+    'None
   ]
 members:
     - VictoriaDominguezDelAngel
