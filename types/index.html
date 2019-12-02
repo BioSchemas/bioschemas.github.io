@@ -12,14 +12,9 @@ redirect_from:
 <b>Propose a new type</b></a></div>
 </h1>
 
-<p>This page contains versions of the Bioschemas types that are ready for integration into Schema.org.</p>
-<p>Other types on which the Bioschemas community are still discussing are published via the <a href="/types/drafts">drafts</a> page.</p>
-<p>Should you wish to contact the community to discuss our efforts please email <a href="mailto:public-bioschemas@w3.org" itemprop="email">public-bioschemas@w3.org</a>.</p>
+<p><a href="https://schema.org/">Schema.org</a> provides a vocabulary of terms that can be used to describe data on the Internet. The Bioschemas community are extending that vocabulary to be able to describe life sciences resources. Here we host the types and properties that are being proposed to the Schema.org vocabulary.</p>
 
-<h2>Types</h2>
-<p>Schema.org describes ‘types’ of information, which then have ‘properties’. The types are things that we can talk about and the properties are the things that we can say about the type. We have found it necessary to propose some additional types to the Schema.org vocabulary to describe life sciences resources.</p>
-
-<p>The types specified below in the <em>Release</em> tab are Release Candidates (RC) for inclusion into Schema.org. They are currently undergoing final review. Comments on the <a href="https://lists.w3.org/Archives/Public/public-bioschemas/" itemprop="email">mailing list</a> or <a href="https://github.com/BioSchemas/specifications/issues">GitHub issue tracker</a> are encouraged.</p>
+<p>Comments and discussions on the <a href="https://lists.w3.org/Archives/Public/public-bioschemas/" itemprop="email">mailing list</a> or <a href="https://github.com/BioSchemas/specifications/issues">GitHub issue tracker</a> are encouraged.</p>
 <br />
 {% assign dep_types = site.data.type_versions | where: 'status', 'deprecated' %}
 {% assign dep_types_names = "" | split: ',' %}
@@ -39,16 +34,16 @@ redirect_from:
 <label for="tab1">RELEASE</label>
 <input id="tab2" type="radio" name="tabs">
 <label for="tab2">DRAFT</label>
-<!-- 
+<!--
 <input id="tab3" type="radio" name="tabs">
 <label for="tab3">DEPRECATED</label>
  -->
 
 
-<!-- RELEASED PROFILES -->
+<!-- RELEASED TYPES -->
 <section id="tab1Content" class="tabs">
    <h3>RELEASE</h3>
-       <p><em>Released</em> profiles have been agreed by the community and are widely deployed.</p>
+       <p><em>Released</em> types have been agreed by the community and are widely deployed.</p>
       <p>Please note that there may be a newer version in <em>draft</em> status when the community agree that a refinement is needed. Where applicable, these are linked from the release version with the label 'Latest draft'.</p>
   <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
     <thead>
@@ -61,7 +56,7 @@ redirect_from:
     <tbody>
       {% assign prof_types = site.types | where: 'spec_type', 'Type'%}
       {% for spec in prof_types %}
-      {% if active_types_names contains spec.name %}     
+      {% if active_types_names contains spec.name %}
       {% if site.data.type_versions[spec.name].latest_release != nill %}
 	  {% if spec.version == site.data.type_versions[spec.name].latest_release %}
     <tr>
@@ -84,24 +79,24 @@ redirect_from:
     </tr>
 
 
-      {% endif %}   
-      {% endif %}  
-      {% else %}    
+      {% endif %}
+      {% endif %}
+      {% else %}
       <p>NNN{{spec.name}}NNN</p>
-      
+
       {% endif %}
       {% endfor %}
-    
+
 
     </tbody>
   </table>
 </section>
 
-<!-- DRAFT PROFILES -->
+<!-- DRAFT TYPES -->
 <section id="tab2Content" class="tabs">
    <h3>DRAFT</h3>
-   <p><em>Draft</em> profiles are actively being worked on and are likely to change. Disucssions take place on the mailing list and the <a href="https://github.com/BioSchemas/specifications/issues">issue tracker</a>.</p>
-   <p>Draft profiles are either working towards their first release or are refinements of a previously <em>released</em> profile.</p>
+   <p><em>Draft</em> types are actively being worked on and are likely to change. Disucssions take place on the <a href="https://lists.w3.org/Archives/Public/public-bioschemas/" itemprop="email">mailing list</a> and the <a href="https://github.com/BioSchemas/specifications/issues">GitHub issue tracker</a>.</p>
+   <p>Draft types are either working towards their first release or are refinements of a previously <em>released</em> version.</p>
 <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
     <thead>
     <tr>
@@ -113,8 +108,8 @@ redirect_from:
     <tbody>
       {% assign prof_types = site.types | where: 'spec_type', 'Type'%}
       {% for spec in prof_types %}
-      {% if active_types_names contains spec.name %}     
-      
+      {% if active_types_names contains spec.name %}
+
       {% if site.data.type_versions[spec.name].latest_publication != nill %}
 	  {% if spec.version == site.data.type_versions[spec.name].latest_publication %}
     <tr>
@@ -137,21 +132,21 @@ redirect_from:
     </tr>
 
 
-      {% endif %}   
-      {% endif %}  
-      {% else %}    
+      {% endif %}
+      {% endif %}
+      {% else %}
       <p>NNN{{spec.name}}NNN</p>
-      
+
       {% endif %}
       {% endfor %}
-    
+
 
     </tbody>
 </table>
 </section>
 
 
-<!-- DRAFT PROFILES -->
+<!-- DEPRECATED TYPES -->
 <!-- WONT WORK AS TAB COMMENTSED OUT ABIOVE -->
 <section id="tab3Content" class="tabs">
    <h3>DEPRECATED</h3>
@@ -166,8 +161,8 @@ redirect_from:
     <tbody>
       {% assign prof_types = site.types | where: 'spec_type', 'Type'%}
       {% for spec in prof_types %}
-      {% if dep_types_names contains spec.name %}     
-      
+      {% if dep_types_names contains spec.name %}
+
       {% if site.data.type_versions[spec.name].latest_publication != nill %}
 	  {% if spec.version == site.data.type_versions[spec.name].latest_publication %}
     <tr>
@@ -190,16 +185,16 @@ redirect_from:
     </tr>
 
 
-      {% endif %}   
-      {% endif %}  
-      {% else %}    
+      {% endif %}
+      {% endif %}
+      {% else %}
       <p>NNN{{spec.name}}NNN</p>
-      
+
       {% endif %}
       {% endfor %}
 
     </tbody>
 </table>
-</section>   
+</section>
 
 </div>
