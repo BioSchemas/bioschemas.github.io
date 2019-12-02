@@ -15,7 +15,6 @@ description: |-
     <p>{{page.description | markdownify}}</p>
     <br>
     {% assign liveDeploys = site.liveDeploys | where:"name", 'Live Deploys' | first %}
-    {% assign candidates = site.liveDeploys | where:"name", 'Candidates' | first %}
     <div class="container-flow">
         <div class="row">
 
