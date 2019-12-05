@@ -29,8 +29,9 @@ members:
     - CaroleGoble
     - NickJuty
     - LeylaGarcia
-    - stain
-    - fbacall
-    - longr
-    
+    - StianSoiland-Reyes
+#    - fbacall
+#    - longr
+#    - FrederikCoppens
+#    - PeterBlomberg
 ---
