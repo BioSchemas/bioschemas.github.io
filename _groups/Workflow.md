@@ -30,6 +30,7 @@ members:
     - NickJuty
     - LeylaGarcia
     - StianSoiland-Reyes
+    - JasperKoehorst
 #    - fbacall
 #    - longr
 #    - FrederikCoppens
