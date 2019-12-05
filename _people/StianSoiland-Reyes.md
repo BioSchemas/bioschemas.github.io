@@ -1,6 +1,6 @@
 ---
 layout: person-details
-id: StianSoilandReyes
+id: StianSoiland-Reyes
 first-name: Stian
 last-name: Soiland-Reyes
 collection: people
