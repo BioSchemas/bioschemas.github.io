@@ -15,7 +15,6 @@ description: |-
     <p>{{page.description | markdownify}}</p>
     <br>
     {% assign liveDeploys = site.liveDeploys | where:"name", 'Live Deploys' | first %}
-    {% assign candidates = site.liveDeploys | where:"name", 'Candidates' | first %}
     <div class="container-flow">
         <div class="row">
 
@@ -27,8 +26,10 @@ description: |-
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Profile Version</th>
+                    <th class="structured-data-column">Profile Version</th>
+                    <th class="structured-data-column">Page</th>
                     <th class="structured-data-column">Structured Data Testing Tool</th>
+                    <th class="structured-data-column">Rich Snippet Tool</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,7 +37,7 @@ description: |-
             {% for profile in profiles %}
             {% assign profile_index = forloop.index %}
             <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{profile.name}}" aria-expanded="false" aria-controls="collapse{{profile.name}}">
-                <td colspan="3">
+                <td colspan="5">
                     <div class="repo-count"><strong>{{profile.items | size}}</strong></div>
                     {% if profile.name == "LabProtocol" or profile.name == "DataRecord" or profile.name == "BioChemEntity" %}
                     <a href="/types/{{profile.name}}" target="_blank">{{profile.name}}</a><br>
@@ -51,7 +52,11 @@ description: |-
             <tr>
                 <td class="deploy-name-column hidden-row">
                     <div class="collapse collapse{{profile.name}} ">
+                      {% if live.resource_URL != nil %}
                         <a href="{{live.resource_URL}}" target="_blank">{{live.name}}</a>
+                      {% else %}
+                        {{live.name}}
+                      {% endif %}
                         {% if live.highlight != nil %}
                         	<p class="highlightsText">{{live.highlight}}</p>
                         {% endif %}
@@ -66,8 +71,28 @@ description: |-
                     {% if live.example_URL != nil %}
                     <div class="collapse collapse{{profile.name}}">
                     <div class="google-sdtt-button">
-                        <span class="tooltiptext">Visualise on GTest tool</span>
-                        <a href="https://search.google.com/structured-data/testing-tool#url={{live.example_URL}}" class="btn btn-bioschema btn-block" target="_blank">visualise</a>
+                        <span class="tooltiptext">View example page</span>
+                        <a href="{{live.example_URL}}" class="btn btn-bioschema btn-block" target="_blank">view</a>
+                    </div>
+                    </div>
+                    {% endif %}
+                </td>
+                <td class="structured-data-column hidden-row">
+                    {% if live.example_URL != nil %}
+                    <div class="collapse collapse{{profile.name}}">
+                    <div class="google-sdtt-button">
+                        <span class="tooltiptext">Visualise on structured data testing tool</span>
+                        <a href="https://search.google.com/structured-data/testing-tool?url={{live.example_URL}}" class="btn btn-bioschema btn-block" target="_blank">view</a>
+                    </div>
+                    </div>
+                    {% endif %}
+                </td>
+                <td class="structured-data-column hidden-row">
+                    {% if live.example_URL != nil %}
+                    <div class="collapse collapse{{profile.name}}">
+                    <div class="google-sdtt-button">
+                        <span class="tooltiptext">Visualise on Rich Snippet tool</span>
+                        <a href="https://search.google.com/test/rich-results?url={{live.example_URL}}" class="btn btn-bioschema btn-block" target="_blank">view</a>
                     </div>
                     </div>
                     {% endif %}

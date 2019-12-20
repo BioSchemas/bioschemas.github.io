@@ -15,7 +15,7 @@ list:
     bsc_profile: DataCatalog
     bsc_ver: 0.1
     node: EBI    
-    comments: 
+    comments:
 -
     name: Fairsharing
     highlight:
@@ -82,7 +82,7 @@ list:
     schema_org: MolecularEntity
     bsc_profile: MolecularEntity
     bsc_ver: 0.2-DRAFT
-    comments: 
+    comments:
     node: UK    
 -
     name: EGA Dataset
@@ -272,8 +272,8 @@ list:
 -
     name: HmmerWeb
     highlight: Result of searches are annotated (results last 1 week)
-    example_URL:
-    resource_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+    example_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+    resource_URL: https://www.ebi.ac.uk/Tools/hmmer/
     schema_org:
     bsc_profile: Protein
     bsc_ver: 0.1
@@ -282,8 +282,8 @@ list:
 -
     name: HmmerWeb
     highlight: Result of searches are annotated (results last 1 week)
-    example_URL:
-    resource_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+    example_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+    resource_URL: https://www.ebi.ac.uk/Tools/hmmer/
     schema_org:
     bsc_profile: ProteinStructure
     bsc_ver: 0.1
@@ -292,8 +292,8 @@ list:
 -
     name: HmmerWeb
     highlight: Result of searches are annotated (results last 1 week)
-    example_URL:
-    resource_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+    example_URL: https://www.ebi.ac.uk/Tools/hmmer/search/phmmer
+    resource_URL: https://www.ebi.ac.uk/Tools/hmmer/
     schema_org:
     bsc_profile: ProteinAnnotation
     bsc_ver: 0.1
@@ -302,7 +302,7 @@ list:
 -
     name: Galaxy Project
     highlight:
-    URL: https://galaxyproject.org/events/
+    resource_URL: https://galaxyproject.org/events/
     schema_org: Event
     bsc_profile: Event
     bsc_ver: 0.1
@@ -330,7 +330,7 @@ list:
     type: CDR & DDR
 -
     name: CATH-Gene3D
-    highlight: 
+    highlight:
     example_URL: http://www.cathdb.info
     resource_URL: http://www.cathdb.info
     schema_org: DataCatalog
@@ -491,7 +491,7 @@ list:
     bsc_profile: Dataset
     bsc_ver: 0.2
     comments:  
-    node: CH 
+    node: CH
 -
     name: SWISS-MODEL
     highlight:
@@ -625,7 +625,7 @@ list:
     resource_URL: http://cancer.sanger.ac.uk/cosmic/
     schema_org: Dataset
     bsc_profile: Dataset
-    bsc_ver: 
+    bsc_ver:
     comments:    
 -
     name: Alliance of Genome Resources
@@ -638,7 +638,7 @@ list:
     comments:       
 -
     name: SynBioHub
-    highlight: 
+    highlight:
     example_URL: https://synbiohub.org/
     resource_URL: https://synbiohub.org/
     schema_org: DataCatalog
@@ -648,7 +648,7 @@ list:
     node: UK
 -
     name: SynBioHub
-    highlight: 
+    highlight:
     example_URL: https://synbiohub.org/
     resource_URL: https://synbiohub.org/
     schema_org: Dataset
@@ -658,7 +658,7 @@ list:
     node: UK
 -
     name: SynBioHub
-    highlight: 
+    highlight:
     example_URL: https://synbiohub.org/public/igem/BBa_K165005/1
     resource_URL: https://synbiohub.org/
     schema_org: DataRecord
@@ -668,7 +668,7 @@ list:
     node: UK       
 -
     name: SynBioHub
-    highlight: 
+    highlight:
     example_URL: https://synbiohub.org/public/igem/BBa_K165005/1
     resource_URL: https://synbiohub.org/
     schema_org: BioChemEntity
@@ -685,5 +685,86 @@ list:
     bsc_profile: Taxon
     bsc_ver: 0.4-DRAFT
     comments:    
-    node: 
+    node:
+-
+    name: FlyMine
+    highlight:
+    example_URL: https://flymine.org/
+    resource_URL: https://flymine.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments:  
+    node: UK
+-
+    name: HumanMine
+    highlight:
+    example_URL: https://humanmine.org/
+    resource_URL: https://humanmine.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments:  
+    node: UK
+-
+    name: DisProt
+    highlight:
+    example_URL: https://www.disprot.org/DP00086#DR
+    resource_URL: https://disprot.org/
+    schema_org: DataRecord
+    bsc_profile: DataRecord
+    bsc_ver: 0.2-DRAFT
+    comments:  
+    node: IT
+-
+    name: DisProt
+    highlight: 1.6k proteins
+    example_URL: https://www.disprot.org/DP00086
+    resource_URL: https://disprot.org/
+    schema_org: Protein
+    bsc_profile: Protein
+    bsc_ver: 0.9-DRAFT
+    comments:  
+    node: IT
+-
+    name: DisProt
+    highlight:
+    example_URL: https://www.disprot.org/
+    resource_URL: https://disprot.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments:  
+    node: IT
+-
+    name: DisProt
+    highlight:
+    example_URL: https://www.disprot.org/
+    resource_URL: https://disprot.org/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.3
+    comments:  
+    node: IT
+-
+    name: DisProt
+    highlight: 3.5k protein regions
+    example_URL: https://www.disprot.org/DP00086r026
+    resource_URL: https://disprot.org/
+    schema_org: SequenceAnnotation
+    bsc_profile: ProteinAnnotation
+    bsc_ver: 0.5-DRAFT
+    comments:  
+    node: IT
+-
+    name: DisProt
+    highlight: 3.5k protein regions
+    example_URL: https://www.disprot.org/DP00086r026
+    resource_URL: https://disprot.org/
+    schema_org: SequenceRange
+    bsc_profile: SequenceRange
+    bsc_ver: 0.1-DRAFT
+    comments:  
+    node: IT
+
 ---
