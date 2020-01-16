@@ -32,6 +32,8 @@ members:
     - LeylaGarcia
     - StianSoiland-Reyes
     - JasperKoehorst
+    - MichaelCrusoe
+    - SheebaSamuel
 #    - fbacall
 #    - longr
 #    - FrederikCoppens
