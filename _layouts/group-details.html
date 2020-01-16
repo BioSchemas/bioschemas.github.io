@@ -58,11 +58,13 @@
                   <br />
                   {% if page.specifications %}
                   <h5>Profiles</h5>
-                  <ul>
+                  <ul>                     
                      {% for spec in page.specifications %}
-                     {% assign spec-id = "/specifications/" | append: spec %}
-                     {% assign profile = site.specifications | where: "name", spec | first %}
-                     <li><a href="/specifications/{{spec}}">{{spec}} (version {{profile.spec_info.version}})</a></li>
+				     {% if site.data.profile_versions[spec].latest_release != nill %}
+                      <li><a href="/profiles/{{spec}}">{{spec}} (version {{site.data.profile_versions[spec].latest_release}})</a></li>
+                     {% elsif site.data.profile_versions[spec].latest_publication != nill %}                     
+                      <li><a href="/profiles/{{spec}}">{{spec}} (version {{site.data.profile_versions[spec].latest_publication}})</a></li>
+                     {% endif %}                          
                      {% endfor %}
                   </ul>
                   <br/>
@@ -74,17 +76,6 @@
                      {% assign type-id = "/types/" | append: type %}
                      {% assign type-details = site.types | where: "name", type | first %}
                      <li><a href="/types/{{type}}">{{type}} (version {{type-details.version}})</a></li>
-                     {% endfor %}
-                  </ul>
-                  <br/>
-                  {% endif %}
-                  {% if page.draft_specifications %}
-                  <h5>Draft Profiles</h5>
-                  <ul>
-                     {% for spec in page.draft_specifications %}
-                     {% assign spec-id = "/devSpecs/" | append: spec %}
-                     {% assign profile = site.devSpecs | where: "name", spec | first %}
-                     <li><a href="/devSpecs/{{spec}}/">{{spec}} (version {{profile.spec_info.version}})</a></li>
                      {% endfor %}
                   </ul>
                   <br/>

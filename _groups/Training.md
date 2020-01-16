@@ -24,10 +24,7 @@ specifications:
     [
      'TrainingMaterial' #, 'Course', 'CourseInstance' #- still in draft phase so links break
     ]
-draft_specifications:
-    [
-     'TrainingMaterial', 'Course', 'CourseInstance' #- still in draft phase so links break
-    ]
+
 
 members:
     - CeliaVanGelder

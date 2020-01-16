@@ -19,6 +19,7 @@ members:
     - AlasdairGray
     - RicardoArcila
     - KennethMcLeod
+    - PetrosPapadopoulos
 ---
 
 <div id="links">

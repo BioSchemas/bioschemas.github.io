@@ -27,10 +27,7 @@ specifications:
   [
     'DataCatalog'
   ]
-draft_specifications:
-  [
-    'DataCatalog'
-  ]
+
 
 members:
   - PhilippeRocca-Serra

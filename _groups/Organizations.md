@@ -19,7 +19,8 @@ objectives:
     'To create a specification including a metadate schema, minimum information guidelines, recommended vocabularies as well as documentation and examples about how to use the schema.',
     'To engage the community interested to describe file science organizations to participate and shape the specification.'
   ]
-draft_specifications:
+
+specifications:
     [
       'Organization'
     ]

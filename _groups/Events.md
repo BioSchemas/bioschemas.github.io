@@ -26,10 +26,6 @@ specifications:
   [
     'Event'
   ]
-draft_specifications:
-  [
-    'Event'
-  ]
 
 members:
     - NiallBeard

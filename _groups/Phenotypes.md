@@ -23,11 +23,7 @@ objectives:
     'Focus on plant phenotypes but consider a general definition of phenotype taking into account different types of phenotypes. eg. biomedical phenotypes, mouse phenotypes, ...'
   ]
 
-#specifications:
-#  [
-#    'BioChemEntity'
-#  ]
-draft_specifications:
+specifications:
   [
     'Phenotype'
   ]

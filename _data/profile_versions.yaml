@@ -1,0 +1,183 @@
+---
+Beacon:
+    name: "Beacon"
+    latest_publication: "0.2-DRAFT-2018_04_23"
+    latest_release:
+    status: "deprecated"
+    deprecated_date: "2019-11-22"
+
+BioSample:
+    name: "BioSample"
+    latest_publication: "0.1-DRAFT-2019_11_12"
+    latest_release:
+    status: "active"
+
+ChemicalSubstance:
+    name: "ChemicalSubstance"
+    latest_publication: "0.3-DRAFT-2019_11_11"
+    latest_release:
+    status: "active"
+
+Course:
+    name: "Course"
+    latest_publication: "0.7-DRAFT-2019_11_08"
+    latest_release:
+    status: "active"
+
+CourseInstance:
+    name: "CourseInstance"
+    latest_publication: "0.7-DRAFT-2019_11_08"
+    latest_release:
+    status: "active"
+
+DataCatalog:
+    name: "DataCatalog"
+    latest_publication:
+    latest_release: "0.3-RELEASE-2019_07_01"
+    status: "active"
+
+DataRecord:
+    name: "DataRecord"
+    latest_publication: "0.2-DRAFT-2019_06_14"
+    latest_release:
+    status: "active"
+
+Dataset:
+    name: "Dataset"
+    latest_publication:
+    latest_release: "0.3-RELEASE-2019_06_14"
+    status: "active"
+
+Event:
+    name: "Event"
+    latest_publication: "0.2-DRAFT-2019_06_14"
+    latest_release:
+    status: "active"
+
+Gene:
+    name: "Gene"
+    latest_publication: "0.5-DRAFT-2019_06_14"
+    latest_release: "0.4-RELEASE-2019_11_10"
+    status: "active"
+
+Journal:
+    name: "Journal"
+    latest_publication: "0.1-DRAFT-2019_11_21"
+    latest_release:
+    status: "active"
+
+LabProtocol:
+    name: "LabProtocol"
+    latest_publication: "0.3-DRAFT-2019_06_14"
+    latest_release:
+    status: "active"
+
+MolecularEntity:
+    name: "MolecularEntity"
+    latest_publication: "0.4-DRAFT-2019_11_11"
+    latest_release:
+    status: "active"
+
+Organization:
+    name: "Organization"
+    latest_publication: "0.2-DRAFT-2019_07_19"
+    latest_release:
+    status: "active"
+
+Person:
+    name: "Person"
+    latest_publication: "0.2-DRAFT-2019_07_19"
+    latest_release:
+    status: "active"
+
+Phenotype:
+    name: "Phenotype"
+    latest_publication: "0.1-DRAFT-2018_11_15"
+    latest_release:
+    status: "active"
+
+Protein:
+    name: "Protein"
+    latest_publication: "0.9-DRAFT-2019_08_20"
+    latest_release: "0.6-RELEASE-2018_11_10"
+    status: "active"
+
+ProteinAnnotation:
+    name: "ProteinAnnotation"
+    latest_publication: "0.4-DRAFT-2018_02_25"
+    latest_release:
+    status: "active"
+
+ProteinStructure:
+    name: "ProteinStructure"
+    latest_publication: "0.5-DRAFT-2018_08_15"
+    latest_release:
+    status: "active"
+
+PublicationIssue:
+    name: "PublicationIssue"
+    latest_publication: "0.1-DRAFT-2019_02_08"
+    latest_release:
+    status: "active"
+
+PublicationVolume:
+    name: "PublicationVolume"
+    latest_publication: "0.1-DRAFT-2019_02_15"
+    latest_release:
+    status: "active"
+
+RNA:
+    name: "RNA"
+    latest_publication: "0.1-DRAFT-2019_11_15"
+    latest_release:
+    status: "active"
+
+Sample:
+    name: "Sample"
+    latest_publication:
+    latest_release: "0.2-RELEASE-2018_11_10"
+    status: "active"
+
+ScholarlyArticle:
+    name: "ScholarlyArticle"
+    latest_publication: "0.1-DRAFT-2019_03_15"
+    latest_release:
+    status: "active"
+
+SemanticAnnotation:
+    name: "SemanticAnnotation"
+    latest_publication: "0.1-DRAFT-2019_11_19"
+    latest_release:
+    status: "active"
+
+Study:
+    name: "Study"
+    latest_publication: "0.1-DRAFT-2018_11_15"
+    latest_release:
+    status: "active"
+
+Taxon:
+    name: "Taxon"
+    latest_publication: "0.4-DRAFT-2019_06_24"
+    latest_release: "0.3-RELEASE-2018_11_10"
+    status: "active"
+
+Tool:
+    name: "Tool"
+    latest_publication: "0.4-DRAFT-2019_07_19"
+    latest_release:
+    status: "active"
+
+TrainingMaterial:
+    name: "TrainingMaterial"
+    latest_publication: "0.7-DRAFT-2019_11_08"
+    latest_release:
+    status: "active"
+
+Workflow:
+    name: "Workflow"
+    latest_publication: "0.2-DRAFT-2019_11_29"
+    latest_release:
+    status: "active"
+
+---

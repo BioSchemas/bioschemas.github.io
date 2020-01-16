@@ -17,11 +17,8 @@ objectives:
   [
   'Develop a specification for how to use <a href="http://schema.org">schema.org</a> to describe standards within the Life Sciences.'
   ]
-#specifications:
-#  [  
-#    'Standards'
-#  ]
-draft_specifications:
+
+specifications:
   [  
     'Standard'
   ]

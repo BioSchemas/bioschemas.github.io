@@ -28,10 +28,6 @@ objectives:
 
 specifications:
   [
-
-  ]
-draft_specifications:
-  [
     'ScholarlyArticle', 'Journal', 'PublicationIssue', 'PublicationVolume', 'SemanticAnnotation'
   ]
 

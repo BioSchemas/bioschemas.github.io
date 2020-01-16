@@ -1189,9 +1189,9 @@ input:checked+label {
     border-bottom: 1px solid #fff;
 }
 
-#tab1:checked~#description,
-#tab2:checked~#contributors,
-#tab3:checked~#links {
+#tab1:checked~#tab1Content,
+#tab2:checked~#tab2Content,
+#tab3:checked~#tab3Content {
     display: block;
 }
 

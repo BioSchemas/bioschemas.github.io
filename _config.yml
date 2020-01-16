@@ -29,15 +29,15 @@ collections:
   specifications:
     output: true
     permalink: /:collection/:path/
-  devSpecs:
-    output: true
-    permalink: /specifications/drafts/:path/
+#  devSpecs:
+#    output: true
+#    permalink: /specifications/drafts/:path/
   types:
     output: true
     permalink: /:collection/:path/
-  devTypes:
-    output: true
-    permalink: /types/drafts/:path/
+#  devTypes:
+#    output: true
+#    permalink: /types/drafts/:path/
   meetings:
     output: true
     permalink: /:collection/:path/ #Note, trailing / needed to avoid .html
@@ -55,3 +55,6 @@ collections:
     permalink: /:collection/:path/
   stories:
     output: true
+  profiles:
+    output: true
+    permalink: /:collection/:path/

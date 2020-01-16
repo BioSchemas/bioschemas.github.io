@@ -20,7 +20,8 @@ objectives:
     'Advocate for the adoption of the markup by workflow management systems',
     'Advocate for the development of tools to support the markup and its use'
   ]
-draft_specifications:
+
+specifications:
   [  
     'Workflow'
   ]
