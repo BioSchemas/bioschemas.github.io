@@ -1,8 +1,11 @@
 ---
+redirect_from:
+- "/specifications/drafts/Protein"
+
 name: Protein
 
 previous_version: 0.8-DRAFT-2019_05_08
-previous_release: 
+previous_release:
 
 
 status: revision # Change to revision if you are working on an update
@@ -93,7 +96,7 @@ mapping:
       "@type": "Protein",
       "@id" : "http://purl.uniprot.org/uniprot/P05067",
       "bioChemInteraction": [
-        { "@id": "http://purl.uniprot.org/uniprot/Q306T3" }, 
+        { "@id": "http://purl.uniprot.org/uniprot/Q306T3" },
         { "@id": "http://purl.uniprot.org/uniprot/Q02410" }
       ]
     }
@@ -108,13 +111,13 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: 
+  example:
     {
       "@type": "Protein",
       "@id": "http://purl.uniprot.org/uniprot/P05067",
       "bioChemSimilarity": [
         { "@id" : "http://purl.uniprot.org/uniprot/O97584" },
-        { "@id" : "http://purl.uniprot.org/uniparc/UPI0000110448" } 
+        { "@id" : "http://purl.uniprot.org/uniparc/UPI0000110448" }
       ]
     }
 - property: description
@@ -178,7 +181,7 @@ mapping:
   bsc_description: '**Bioschemas Protein**: This property could be used, for instance,
     to register a sequence protein as it is a representation of the protein. If you
     want to better define the nature of the representation, use a PropertyValue where, for instance,
-    the property *name* is Sequence, the *value* are protein sequences, and the *referenceValue* 
+    the property *name* is Sequence, the *value* are protein sequences, and the *referenceValue*
     id the canonical sequence.'
   marginality: Recommended
   cardinality: MANY
@@ -189,7 +192,7 @@ mapping:
       "@id": "http://purl.uniprot.org/uniprot/P05067",
       "hasRepresentation": "MLPGLALLLLAAWTARALEVPTDGNAGLLAEPQIAMFCGR..."
     }
-    
+
     {
       "@type": "Protein",
       "@id": "http://purl.uniprot.org/uniprot/P05067",
@@ -339,7 +342,7 @@ mapping:
   example: |-
     {
       "@type": "Protein",
-      "@id" : "http://purl.uniprot.org/uniprot/P05519",   
+      "@id" : "http://purl.uniprot.org/uniprot/P05519",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.uniprot.org/uniprot/P05519"
