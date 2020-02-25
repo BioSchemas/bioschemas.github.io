@@ -162,6 +162,12 @@ Taxon:
     latest_release: "0.3-RELEASE-2018_11_10"
     status: "active"
 
+TaxonName:
+    name: "TaxonName"
+    latest_publication: "0.1-DRAFT-2020_02_14"
+    latest_release:
+    status: "active"
+
 Tool:
     name: "Tool"
     latest_publication: "0.4-DRAFT-2019_07_19"
