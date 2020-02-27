@@ -39,10 +39,10 @@ description: |-
             <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{profile.name}}" aria-expanded="false" aria-controls="collapse{{profile.name}}">
                 <td colspan="5">
                     <div class="repo-count"><strong>{{profile.items | size}}</strong></div>
-                    {% if profile.name == "LabProtocol" or profile.name == "DataRecord" or profile.name == "BioChemEntity" %}
-                    <a href="/types/{{profile.name}}" target="_blank">{{profile.name}}</a><br>
+                    {% if profile.name == "BioChemEntity" %}
+                    {{profile.name}}<a href="/types/{{profile.name}}" target="_blank"> <i class="fas fa-external-link-alt"></i></a><br>
                     {% else %}
-                    <a href="/specifications/{{profile.name}}" target="_blank">{{profile.name}}</a><br>
+                    {{profile.name}}<a href="/profiles/{{profile.name}}" target="_blank"> <i class="fas fa-external-link-alt"></i></a><br>
                     {% endif %}
                     <div class="plus-icon"><i class="fas fa-plus fa-lg"></i></div>
                 </td>
