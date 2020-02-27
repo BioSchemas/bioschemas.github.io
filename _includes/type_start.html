@@ -92,7 +92,7 @@ This is a new {{page.spec_type}} that fits into the schema.org hierarchy as foll
 <h3>Description</h3>
 <p>{{page.description}}</p>
 
-   <h3>Latest profiles</h3>
+   <h3>Latest types</h3>
    {% assign profile_versions = site.data.type_versions[page.name] %}
    {% if profile_versions.latest_release != null %}
    <p>Latest release: <a href="/types/{{page.name}}/{{profile_versions.latest_release}}/">{{profile_versions.latest_release}}</a></p>
@@ -104,7 +104,7 @@ This is a new {{page.spec_type}} that fits into the schema.org hierarchy as foll
    {% endif %}
 
 
-   <h3>Previous profiles</h3>
+   <h3>Previous types</h3>
    {% assign prev_version = page.previous_version %}
    {% if prev_version != null %}
    <p>Previous version: <a href="/types/{{page.name}}/{{page.previous_version}}">{{page.previous_version}}</a></p>
