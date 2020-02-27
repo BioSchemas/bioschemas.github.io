@@ -52,7 +52,7 @@ list:
     resource_URL: https://ega-archive.org/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
-    bsc_ver: 0.1
+    bsc_ver: 0.3
     comments:
     node: EBI
 -
@@ -86,12 +86,12 @@ list:
     node: UK    
 -
     name: EGA Dataset
-    highlight:
+    highlight: over 5,300 datasets
     example_URL: https://ega-archive.org/datasets/EGAD00000000001
     resource_URL: https://ega-archive.org/
     schema_org: Dataset
     bsc_profile: Dataset
-    bsc_ver: 0.1
+    bsc_ver: 0.3
     comments:
     node: EBI
 -
