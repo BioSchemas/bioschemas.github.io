@@ -176,7 +176,7 @@ TrainingMaterial:
 
 Workflow:
     name: "Workflow"
-    latest_publication: "0.3-DRAFT-2020_03_03"
+    latest_publication: "0.2-DRAFT-2019_11_29"
     latest_release:
     status: "active"
 
