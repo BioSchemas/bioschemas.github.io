@@ -100,7 +100,7 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: '"dateModified" : 2019-11-05"'
+  example: '"dateModified" : "2019-11-05"'
 - property: description
   expected_types:
   - Text
@@ -252,7 +252,8 @@ mapping:
   example: '"sdPublisher" : "IBISBA Admin"'
 - property: softwareRequirements
   expected_types:
-  - Text orURL
+  - Text
+  - URL
   description: 'Component dependency requirements for application. This includes runtime
     environments and shared libraries that are not included in the application distribution
     package, but required to run the application (Examples: DirectX, Java or .NET
