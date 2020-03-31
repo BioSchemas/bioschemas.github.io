@@ -14,7 +14,7 @@
             {% endfor %}
           </td>
           <td class="spec_links">
-            {% if spec.use_cases_url == '' %}
+            {% if spec.use_cases_url == '' or spec.use_cases_url == nil %}
             <a>
             <img src="/images/use_case_spec.png" alt="View BioSchemas {{ spec.spec_info.title }} Use Cases"  style="filter: grayscale(100%);">
             </a>
