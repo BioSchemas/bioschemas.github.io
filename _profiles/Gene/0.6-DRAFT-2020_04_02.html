@@ -25,10 +25,33 @@ hierarchy:
 spec_info:
   title: Gene
   subtitle: Bioschemas profile describing a Gene in Life Sciences
-  description: This Gene profile specification presents the markup for describing
+  description: 'This Gene profile specification presents the markup for describing
     a Gene.
+    
+    Changes introduced on Gene profile 0.6-DRAFT-2020_04_02 in response to
+    issue 353
+    * encodes property updated to encodesBioChemEntity, still recommended
+    *
+    additionalProperty removed
+    * associatedDisease range updated
+    * examples using DefinedTerm
+    now include link to external vocabularies via property inDefinedTermSet (hasMolecularFunction,
+    isInvolvedInBiologicalProcess, taxonomicRange). Note: isTranscribedInto and isVariantOf
+    do not exist on the Gene type so they were removed, isVariantOf was replaced on
+    Gene type by alternativeOf)* hasCategoryCode property removed
+    
+    Additional changes
+    after looking at BioChemEntity and Gene types:
+    * hasRepresentation moved to optional.
+    There is another property 
+    * hasBioPolymerSequence for the sequence text. hasRepresentation
+    can be used to link to a page containing the corresponding sequence so both are  now
+    optional and people can decide which one suits better to them
+    * properties directly
+    from Gene type not previously included on the Gene profile were added as optional
+    (expressedIn and hasStatus)'
   version: 0.6-DRAFT
-  version_date: 20200402T110715
+  version_date: 20200402T124348
   official_type: http://bioschemas.org/Gene
   full_example: https://github.com/BioSchemas/Specifications/tree/master/Gene/examples
 mapping:
