@@ -60,7 +60,7 @@
                   <h5>Profiles</h5>
 
                      {% for spec in page.specifications %}
-                      <strong>{{spec}}</strong>
+                      <p>{{spec}}</p>
                         <ul>
 				                 {% if site.data.profile_versions[spec].latest_release != nill %}
                         <li>Latest Release: <a href="/profiles/{{spec}}">(version {{site.data.profile_versions[spec].latest_release}})</a></li>
@@ -72,36 +72,38 @@
                      {% endfor %}
                   <br/>
                   {% endif %}
-                  {% if page.types or page.draft_types %}
+
                   <h5>Types</h5>
                   {% if page.types %}
-                  <ul>
                      {% for type in page.types %}
                      {% assign type-id = "/types/" | append: type %}
                      {% assign type-details = site.types | where: "name", type | first %}
-                     <li><a href="/types/{{type}}">{{type}} (version {{type-details.version}})</a></li>
+                  <p>{{type}}</p>
+                  <ul>
+                     <li>Latest Release: <a href="/types/{{type}}"> (version {{type-details.version}})</a></li>
                      {% endfor %}
                   </ul>
                   <br/>
-                  {% elsif page.draft_types%}
-                  <ul>
+                  {% endif %}
+                  {% if page.draft_types %}
+
                     {% for type in page.draft_types %}
+                    <p>{{type}}</p>
+                    <ul>
                     {% assign type-details = site.data.type_versions | where: "name", type | first %}
                     {% assign type-slash = type | append: "/" %}
                     {% assign type-v = type-slash | append: type-details.latest_release %}
-                    {% assign type-id = "/devTypes/" | append: type-v %}
-                    {% if type-details.latest_release != nill %}
-                    {% assign latest =  type-details.latest_release %}
-                    {% assign latestPorR = "Latest release: " %}
-                    {% elsif type-details.latest_publication != nill %}
+                    {% if type-details.latest_publication != nill %}
                     {% assign latest =  type-details.latest_publication %}
-                    {% assign latestPorR = "Latest draft: " %}
+                    {% elsif type-details.latest_release != nill %}
+                    {% assign latest = type-details.latest_release %}
                     {% endif %}
-                    <li><a href="/types/{{type}}/{{latest}}">{{latestPorR}}{{type}} (version {{latest}})</a></li>
+
+                    <li>Latest Draft: <a href="/types/{{type}}/{{latest}}">(version {{latest}})</a></li>
+                    </ul>
                     {% endfor %}
-                  </ul>
+
                   <br/>
-                  {% endif %}
                   {% endif %}
                   <h5>Group Leaders</h5>
                   <div id="leadTable">
