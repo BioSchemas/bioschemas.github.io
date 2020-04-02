@@ -9,7 +9,7 @@ status: revision # Change to revision if you are working on an update
 spec_type: Profile
 group: proteins
 use_cases_url: /useCases/Protein/
-cross_walk_url: https://docs.google.com/spreadsheets/d/1UbTy5OACa08ZTX9yk35AaVRUS6YBm1jBqwgG-Y41KGc
+cross_walk_url: https://docs.google.com/spreadsheets/d/1F8CafZUF9zw5HK-gKuiwwVqsjxPinEthXnrlI4Gzjzs
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Protein
 live_deploy: /liveDeploys/
 
@@ -24,18 +24,16 @@ hierarchy:
 spec_info:
   title: Protein
   subtitle: Bioschemas profile describing a Protein in Life Sciences.
-  description: 'This Protein profile specification presents the most common properties used for a 
-  Protein plus examples on how to use them.
-
-  Changes introduced on Protein profile 0.10-DRAFT-2020_04_02 in response to issue 410
-  * range of taxonomicRange updated
-  
-  Additional changes after looking at BioChemEntity and Protein types:
-  * hasRepresentation moved to optional. There is another property hasBioPolymerSequence for the 
-  sequence text. hasRepresentation can be used to link to a page containing the corresponding sequence 
-  so both are now optional and people can decide which one suits better to them'
-  version: 0.10-DRAFT-2020_04_02
-  version_date: 20200402T123112
+  description: This Protein profile specification presents the most common properties
+    used for a Protein plus examples on how to use them.Changes introduced on Protein
+    profile 0.10-DRAFT-2020_04_02 in response to <a href="https://github.com/BioSchemas/specifications/issues/410">issue
+    410</a>* range of taxonomicRange updatedAdditional changes after looking at BioChemEntity
+    and Protein types:* hasRepresentation moved to optional. There is another property
+    hasBioPolymerSequence for the sequence text. hasRepresentation can be used to
+    link to a page containing the corresponding sequence so both are now optional
+    and people can decide which one suits better to them
+  version: 0.10-DRAFT
+  version_date: 20200402T164516
   official_type: https://bioschemas.org/schema/Protein.html
   full_example: ""
 mapping:
@@ -392,6 +390,7 @@ mapping:
       "@type": "Protein",
       "url": "https://www.uniprot.org/uniprot/P05519"
     }
+
 
 
 ---
