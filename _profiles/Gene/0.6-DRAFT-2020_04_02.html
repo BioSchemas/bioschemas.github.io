@@ -8,7 +8,7 @@ status: revision # Change to revision if you are working on an update
 spec_type: Profile
 group: genes
 use_cases_url: /useCases/Gene/
-cross_walk_url: https://docs.google.com/spreadsheets/d/1nxWYEAgpW8EDWBHjUffz3F7wijSoAJeTZKEH5zytmDw
+cross_walk_url: https://docs.google.com/spreadsheets/d/1mN3b5_MsuSLWv3J7KVj8vY6lnPmlJa8iaIBbu2eQLOQ
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Gene
 live_deploy: /liveDeploys/
 
@@ -26,32 +26,22 @@ spec_info:
   title: Gene
   subtitle: Bioschemas profile describing a Gene in Life Sciences
   description: 'This Gene profile specification presents the markup for describing
-    a Gene.
-    
-    Changes introduced on Gene profile 0.6-DRAFT-2020_04_02 in response to
-    issue 353
-    * encodes property updated to encodesBioChemEntity, still recommended
-    *
-    additionalProperty removed
-    * associatedDisease range updated
-    * examples using DefinedTerm
+    a Gene.Changes introduced on Gene profile 0.6-DRAFT-2020_04_02 in response to
+    <a href="https://github.com/BioSchemas/specifications/issues/353">issue 353</a><ul><li>encodes
+    property updated to encodesBioChemEntity, still recommended</li><li>additionalProperty
+    removed</li><li>associatedDisease range updated</li><li>examples using DefinedTerm
     now include link to external vocabularies via property inDefinedTermSet (hasMolecularFunction,
     isInvolvedInBiologicalProcess, taxonomicRange). Note: isTranscribedInto and isVariantOf
     do not exist on the Gene type so they were removed, isVariantOf was replaced on
-    Gene type by alternativeOf)* hasCategoryCode property removed
-    
-    Additional changes
-    after looking at BioChemEntity and Gene types:
-    * hasRepresentation moved to optional.
-    There is another property 
-    * hasBioPolymerSequence for the sequence text. hasRepresentation
-    can be used to link to a page containing the corresponding sequence so both are  now
-    optional and people can decide which one suits better to them
-    * properties directly
-    from Gene type not previously included on the Gene profile were added as optional
-    (expressedIn and hasStatus)'
-  version: 0.6-DRAFT-2020_04_02
-  version_date: 20200402T124348
+    Gene type by alternativeOf)</li><li>hasCategoryCode property removed</li></ul>Additional
+    changes after looking at BioChemEntity and Gene types:<ul><li>hasRepresentation
+    moved to optional. There is another property</li><li>hasBioPolymerSequence for
+    the sequence text. hasRepresentation can be used to link to a page containing
+    the corresponding sequence so both are  now optional and people can decide which
+    one suits better to them</li><li>properties directly from Gene type not previously
+    included on the Gene profile were added as optional (expressedIn and hasStatus)</li></ul>'
+  version: 0.6-DRAFT
+  version_date: 20200402T194732
   official_type: http://bioschemas.org/Gene
   full_example: https://github.com/BioSchemas/Specifications/tree/master/Gene/examples
 mapping:
@@ -84,7 +74,8 @@ mapping:
   example: ""
 - property: associatedDisease
   expected_types:
-  - MedicalCondition orPropertyValue
+  - MedicalCondition
+  - PropertyValue
   - URL
   description: Disease associated to this BioChemEntity
   type: bioschemas
@@ -172,7 +163,9 @@ mapping:
   example: ""
 - property: hasMolecularFunction
   expected_types:
-  - DefinedTerm  orPropertyValue  orURL
+  - DefinedTerm
+  - PropertyValue
+  - URL
   description: ""
   type: bioschemas
   type_url: http://bioschemas.org/hasMolecularFunction
@@ -187,7 +180,9 @@ mapping:
     \     \"url\": \"https://bioportal.bioontology.org/ontologies/GO\"\n    } \n  }\n}"
 - property: hasRepresentation
   expected_types:
-  - PropertyValue  orText  orURL
+  - PropertyValue
+  - Text
+  - URL
   description: A common representation such as a protein sequence or chemical structure
     for this entity. For images use schema.org/image.
   type: bioschemas
@@ -268,7 +263,9 @@ mapping:
     }
 - property: isInvolvedInBiologicalProcess
   expected_types:
-  - DefinedTerm  orPropertyValue  orURL
+  - DefinedTerm
+  - PropertyValue
+  - URL
   description: ""
   type: bioschemas
   type_url: http://bioschemas.org/isInvolvedinBiologicalProcess
@@ -285,7 +282,9 @@ mapping:
     \   } \n  }\n}"
 - property: isLocatedInSubcellularLocation
   expected_types:
-  - DefinedTerm  orPropertyValue  orURL
+  - DefinedTerm
+  - PropertyValue
+  - URL
   description: ""
   type: bioschemas
   type_url: http://bioschemas.org/isLocatedInSubcellularLocation
@@ -383,7 +382,10 @@ mapping:
     }
 - property: taxonomicRange
   expected_types:
-  - DefinedTerm  orTaxon  orText  orURL
+  - DefinedTerm
+  - Taxon
+  - Text
+  - URL
   description: The taxonomic grouping of the organism that expresses, encodes, or
     in someway related to the BioChemEntity.
   type: bioschemas
@@ -412,6 +414,7 @@ mapping:
       "@type": "Gene",
       "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000142192;r=21:25880550-26171128"
     }
+
 
 
 ---
