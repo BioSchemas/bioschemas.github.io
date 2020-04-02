@@ -58,15 +58,18 @@
                   <br />
                   {% if page.specifications %}
                   <h5>Profiles</h5>
-                  <ul>
+
                      {% for spec in page.specifications %}
-				     {% if site.data.profile_versions[spec].latest_release != nill %}
-                      <li><a href="/profiles/{{spec}}">{{spec}} (version {{site.data.profile_versions[spec].latest_release}})</a></li>
-                     {% elsif site.data.profile_versions[spec].latest_publication != nill %}
-                      <li><a href="/profiles/{{spec}}">{{spec}} (version {{site.data.profile_versions[spec].latest_publication}})</a></li>
-                     {% endif %}
+                      <strong>{{spec}}</strong>
+                        <ul>
+				                 {% if site.data.profile_versions[spec].latest_release != nill %}
+                        <li>Latest Release: <a href="/profiles/{{spec}}">(version {{site.data.profile_versions[spec].latest_release}})</a></li>
+                        {% endif %}
+                        {% if site.data.profile_versions[spec].latest_publication != nill %}
+                        <li>Latest Draft: <a href="/profiles/{{spec}}">(version {{site.data.profile_versions[spec].latest_publication}})</a></li>
+                        {% endif %}
+                      </ul>
                      {% endfor %}
-                  </ul>
                   <br/>
                   {% endif %}
                   {% if page.types or page.draft_types %}
