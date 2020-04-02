@@ -13,10 +13,10 @@
         <div class="git-edit" style="float: right;">
             <a target="_blank" href="mailto:{{page.email}}?subject=[Bioschemas] request to join the {{page.name}} group&body=Please add me to the {{page.name}} group!" class="btn btn-bioschema btn-sm" role="button">
                 <b>Join the group</b>
-            </a>        
-        </div>                    
-                  </h1>           
-       
+            </a>
+        </div>
+                  </h1>
+
                   <p>{{page.abstract}}</p>
                   <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto;">
                      <thead>
@@ -58,19 +58,20 @@
                   <br />
                   {% if page.specifications %}
                   <h5>Profiles</h5>
-                  <ul>                     
+                  <ul>
                      {% for spec in page.specifications %}
 				     {% if site.data.profile_versions[spec].latest_release != nill %}
                       <li><a href="/profiles/{{spec}}">{{spec}} (version {{site.data.profile_versions[spec].latest_release}})</a></li>
-                     {% elsif site.data.profile_versions[spec].latest_publication != nill %}                     
+                     {% elsif site.data.profile_versions[spec].latest_publication != nill %}
                       <li><a href="/profiles/{{spec}}">{{spec}} (version {{site.data.profile_versions[spec].latest_publication}})</a></li>
-                     {% endif %}                          
+                     {% endif %}
                      {% endfor %}
                   </ul>
                   <br/>
                   {% endif %}
-                  {% if page.types %}
+                  {% if page.types or page.draft_types %}
                   <h5>Types</h5>
+                  {% if page.types %}
                   <ul>
                      {% for type in page.types %}
                      {% assign type-id = "/types/" | append: type %}
@@ -79,17 +80,25 @@
                      {% endfor %}
                   </ul>
                   <br/>
-                  {% endif %}
-                  {% if page.draft_types %}
-                  <h5>Draft Types</h5>
+                  {% elsif page.draft_types%}
                   <ul>
-                     {% for type in page.draft_types %}
-                     {% assign type-id = "/devTypes/" | append: type %}
-                     {% assign type-details = site.devTypes | where: "name", type | first %}
-                     <li><a href="/devTypes/{{type}}/">{{type}} (version {{type-details.version}})</a></li>
-                     {% endfor %}
+                    {% for type in page.draft_types %}
+                    {% assign type-details = site.data.type_versions | where: "name", type | first %}
+                    {% assign type-slash = type | append: "/" %}
+                    {% assign type-v = type-slash | append: type-details.latest_release %}
+                    {% assign type-id = "/devTypes/" | append: type-v %}
+                    {% if type-details.latest_release != nill %}
+                    {% assign latest =  type-details.latest_release %}
+                    {% assign latestPorR = "Latest release: " %}
+                    {% elsif type-details.latest_publication != nill %}
+                    {% assign latest =  type-details.latest_publication %}
+                    {% assign latestPorR = "Latest draft: " %}
+                    {% endif %}
+                    <li><a href="/types/{{type}}/{{latest}}">{{latestPorR}}{{type}} (version {{latest}})</a></li>
+                    {% endfor %}
                   </ul>
                   <br/>
+                  {% endif %}
                   {% endif %}
                   <h5>Group Leaders</h5>
                   <div id="leadTable">
