@@ -28,10 +28,7 @@ types:
   [
     'Protein'
   ]
-draft_types:
-  [
-    'Protein'
-  ]
+
 members:
     - AndraWaagmeester
     - SameerVelankar

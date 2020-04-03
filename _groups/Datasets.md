@@ -33,11 +33,6 @@ types:
     'DataRecord'
   ]
 
-draft_types:
-  [
-    'DataRecord'
-  ]
-
 members:
   - NiallBeard
   - PhilippeRocca-Serra
