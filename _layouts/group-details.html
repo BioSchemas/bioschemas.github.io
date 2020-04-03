@@ -73,38 +73,22 @@
                   <br/>
                   {% endif %}
 
-                  <h5>Types</h5>
                   {% if page.types %}
+                  <h5>Types</h5>
                      {% for type in page.types %}
-                     {% assign type-id = "/types/" | append: type %}
-                     {% assign type-details = site.types | where: "name", type | first %}
-                  <p>{{type}}</p>
-                  <ul>
-                     <li>Latest Release: <a href="/types/{{type}}"> (version {{type-details.version}})</a></li>
+                     <p>{{type}}</p>
+                     <ul>
+                       {% if site.data.type_versions[type].latest_release != nill %}
+                       <li>Latest Release: <a href="/types/{{type}}"> (version {{site.data.type_versions[type].latest_release}})</a></li>
+                       {% endif %}
+                       {% if site.data.type_versions[type].latest_publication != nill %}
+                       <li>Latest Draft: <a href="/types/{{type}}/{{site.data.type_versions[type].latest_publication}}">(version {{site.data.type_versions[type].latest_publication}})</a></li>
+                       {% endif %}
+                     </ul>
                      {% endfor %}
-                  </ul>
                   <br/>
                   {% endif %}
-                  {% if page.draft_types %}
 
-                    {% for type in page.draft_types %}
-                    <p>{{type}}</p>
-                    <ul>
-                    {% assign type-details = site.data.type_versions | where: "name", type | first %}
-                    {% assign type-slash = type | append: "/" %}
-                    {% assign type-v = type-slash | append: type-details.latest_release %}
-                    {% if type-details.latest_publication != nill %}
-                    {% assign latest =  type-details.latest_publication %}
-                    {% elsif type-details.latest_release != nill %}
-                    {% assign latest = type-details.latest_release %}
-                    {% endif %}
-
-                    <li>Latest Draft: <a href="/types/{{type}}/{{latest}}">(version {{latest}})</a></li>
-                    </ul>
-                    {% endfor %}
-
-                  <br/>
-                  {% endif %}
                   <h5>Group Leaders</h5>
                   <div id="leadTable">
                      {% for leader in page.lead %}
