@@ -24,7 +24,7 @@ specifications:
     'ChemicalSubstance', 'MolecularEntity'
   ]
 
-draft_types:
+types:
   [
     'ChemicalSubstance', 'MolecularEntity'
   ]

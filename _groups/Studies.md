@@ -21,10 +21,8 @@ specifications:
   [
     'Study'
   ]
-#types:
-#  [
-#  ]
-draft_types:
+
+types:
   [
     'Study'
   ]

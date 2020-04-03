@@ -30,10 +30,6 @@ types:
     'Taxon'
   ]
 
-draft_types:
-  [
-    'Taxon',
-  ]
 members:
     - QuentinGroom
     - RicardoArcila
