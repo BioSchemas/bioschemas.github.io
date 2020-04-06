@@ -26,13 +26,10 @@ specifications:
   [  
     'Sample'
   ]
+
 types:
   [  
-    'Sample'
-  ]
-draft_types:
-  [  
-    'Sample'
+    'BioSample', 'Sample'
   ]
 
 members:

@@ -23,10 +23,6 @@ types:
     [
       'BioChemEntity'
     ]
-draft_types:
-    [
-      'BioChemEntity'
-    ]
 
 members:
   - AndraWaagmeester
