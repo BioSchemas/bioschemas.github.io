@@ -66,7 +66,7 @@
                         <li>Latest Release: <a href="/profiles/{{spec}}">(version {{site.data.profile_versions[spec].latest_release}})</a></li>
                         {% endif %}
                         {% if site.data.profile_versions[spec].latest_publication != nill %}
-                        <li>Latest Draft: <a href="/profiles/{{spec}}">(version {{site.data.profile_versions[spec].latest_publication}})</a></li>
+                        <li>Latest Draft: <a href="/profiles/{{spec}}/{{site.data.profile_versions[spec].latest_publication}}">(version {{site.data.profile_versions[spec].latest_publication}})</a></li>
                         {% endif %}
                       </ul>
                      {% endfor %}
