@@ -14,8 +14,8 @@ BioSample:
 
 ChemicalSubstance:
     name: "ChemicalSubstance"
-    latest_publication: "0.3-DRAFT-2019_11_11"
-    latest_release:
+    latest_publication: 
+    latest_release: "0.4-RELEASE"
     status: "active"
 
 Course:
