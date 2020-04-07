@@ -158,8 +158,8 @@ Study:
 
 Taxon:
     name: "Taxon"
-    latest_publication: "0.5-DRAFT-2020_04_06"
-    latest_release: "0.3-RELEASE-2018_11_10"
+    latest_publication:
+    latest_release: "0.6-RELEASE"
     status: "active"
 
 Tool:
