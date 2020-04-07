@@ -74,8 +74,8 @@ LabProtocol:
 
 MolecularEntity:
     name: "MolecularEntity"
-    latest_publication: "0.4-DRAFT-2019_11_11"
-    latest_release:
+    latest_publication:
+    latest_release: "0.5-RELEASE"
     status: "active"
 
 Organization:
