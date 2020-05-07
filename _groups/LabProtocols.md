@@ -28,10 +28,6 @@ types:
     [
       'LabProtocol'
     ]
-draft_types:
-  [
-    'LabProtocol'
-  ]
 
 members:
     - FedericoLópezGómez

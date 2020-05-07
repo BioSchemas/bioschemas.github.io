@@ -27,11 +27,8 @@ specifications:
   [
     'Phenotype'
   ]
-#types:
-#    [
-#      'BioChemEntity'
-#    ]
-draft_types:
+
+types:
     [
       'Phenotype'
     ]

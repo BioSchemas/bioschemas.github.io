@@ -14,8 +14,8 @@ BioSample:
 
 ChemicalSubstance:
     name: "ChemicalSubstance"
-    latest_publication: "0.3-DRAFT-2019_11_11"
-    latest_release:
+    latest_publication: 
+    latest_release: "0.4-RELEASE"
     status: "active"
 
 Course:
@@ -56,8 +56,8 @@ Event:
 
 Gene:
     name: "Gene"
-    latest_publication: "0.5-DRAFT-2019_06_14"
-    latest_release: "0.4-RELEASE-2019_11_10"
+    latest_publication:
+    latest_release: "0.7-RELEASE"
     status: "active"
 
 Journal:
@@ -74,8 +74,8 @@ LabProtocol:
 
 MolecularEntity:
     name: "MolecularEntity"
-    latest_publication: "0.4-DRAFT-2019_11_11"
-    latest_release:
+    latest_publication:
+    latest_release: "0.5-RELEASE"
     status: "active"
 
 Organization:
@@ -98,8 +98,8 @@ Phenotype:
 
 Protein:
     name: "Protein"
-    latest_publication: "0.9-DRAFT-2019_08_20"
-    latest_release: "0.6-RELEASE-2018_11_10"
+    latest_publication:
+    latest_release: "0.11-RELEASE"
     status: "active"
 
 ProteinAnnotation:
@@ -158,8 +158,8 @@ Study:
 
 Taxon:
     name: "Taxon"
-    latest_publication: "0.4-DRAFT-2019_06_24"
-    latest_release: "0.3-RELEASE-2018_11_10"
+    latest_publication:
+    latest_release: "0.6-RELEASE"
     status: "active"
 
 Tool:
