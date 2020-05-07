@@ -5,7 +5,7 @@ title: ELIXIR All Hands 2020
 dates: 8-11 June 2020
 start_date: 2020-06-08
 end_date: 2020-06-11
-venue: Eye Filmmuseum, IJpromenade 1, Amsterdam, 1031 KT, Netherlands
+venue: Virtual (<del>Eye Filmmuseum, IJpromenade 1, Amsterdam, 1031 KT, Netherlands</del>)
 meeting-name: ELIXIR All Hands 2020
 meeting-url: https://elixir-europe.org/events/elixir-all-hands-2020
 agenda-doc:
