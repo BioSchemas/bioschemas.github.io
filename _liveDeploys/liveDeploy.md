@@ -786,4 +786,13 @@ list:
     bsc_ver: 0.3
     comments:
     node: UK
+-
+    name: eNanoMapper
+    highlight: currently 13 data sets around nanosafety
+    example_URL: https://data.enanomapper.net/bundle/00000000-0000-0000-0000-000000000001
+    resource_URL: https://data.enanomapper.net/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments: The list of data sets can be found at https://data.enanomapper.net/bundle. The name and description fields are missing, as they have to be added with JavaScript dynamically yet.
 ---
