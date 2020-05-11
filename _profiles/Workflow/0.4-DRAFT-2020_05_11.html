@@ -7,7 +7,7 @@ redirect_from:
 
 name: Workflow
 
-previous_version: 0.2-DRAFT-2019_11_29
+previous_version: 0.3-DRAFT-2020_03_03
 previous_release:
 
 status: revision
@@ -34,8 +34,8 @@ spec_info:
     materials, provide services, or process information. It can be depicted as a sequence
     of operations, the work of a person or group, the work of an organization of staff,
     or one or more simple or complex mechanisms. (source Wikipedia.org)
-  version: 0.4-DRAFT
-  version_date: 20200511T105452
+  version: 0.4-DRAFT-2020_05_11
+  version_date: 20200511T133048
   official_type: 'http://schema.org/Workflow '
   full_example: pending resolution of issues
 mapping:
@@ -49,7 +49,7 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: '"alternateName": {"Evolutionary Analysis"}'
 - property: citation
   expected_types:
   - CreativeWork
@@ -110,74 +110,6 @@ mapping:
         {
           "@type": "Person",
           "name": "Marius van den Beek"
-        },
-        {
-          "@type": "Person",
-          "name": "Dave Bouvier"
-        },
-        {
-          "@type": "Person",
-          "name": "John Chilton"
-        },
-        {
-          "@type": "Person",
-          "name": "Nate Coraor"
-        },
-        {
-          "@type": "Person",
-          "name": "Frederik Coppens"
-        },
-        {
-          "@type": "Person",
-          "name": "Bert Droesbeke"
-        },
-        {
-          "@type": "Person",
-          "name": "Ignacio Eguinoa"
-        },
-        {
-          "@type": "Person",
-          "name": "Simon Gladman"
-        },
-        {
-          "@type": "Person",
-          "name": "BjÃ¶rn GrÃ¼ning"
-        },
-        {
-          "@type": "Person",
-          "name": "Delphine LariviÃ¨re"
-        },
-        {
-          "@type": "Person",
-          "name": "Gildas Le CorguillÃ©"
-        },
-        {
-          "@type": "Person",
-          "name": "Andrew Lonie"
-        },
-        {
-          "@type": "Person",
-          "name": "Nicholas Keener"
-        },
-        {
-          "@type": "Person",
-          "name": "Sergei Kosakovsky Pond"
-        },
-        {
-          "@type": "Person",
-          "name": "Wolfgang Maier"
-        },
-        {
-          "@type": "Person",
-          "name": "Anton Nekrutenko"
-        },
-        {
-          "@type": "Person",
-          "name": "James Taylor"
-        },
-        {
-          "@type": "Person",
-          "name": "Steven Weaver"
         }
       ]
 - property: dateCreated
@@ -265,7 +197,7 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: '"identifier" : "https://workflowhub.eu/workflows/10"'
 - property: image
   expected_types:
   - ImageObject
@@ -280,16 +212,21 @@ mapping:
   example: '"image": "https://covid19.workflowhub.eu/workflows/10/diagram?version=1"'
 - property: input
   expected_types:
-  - FormalParameter
+  - PropertyValueSpecification
   description: an input required to use the workflow (eg. xl spreadsheet, xml file,
     ...)
-  type: bioschemas
-  type_url: FormalParameter
+  type: schema.org
+  type_url: PropertyValueSpecification
   bsc_description: ""
   marginality: Minimum
   cardinality: MANY
   controlled_vocab: ""
-  example: '"input" :  "#main/0_Input Dataset : File"'
+  example: |2-
+       "input" : {
+          "@type": "PropertyValueSpecification",
+           "name": "Input Dataset",
+          "valueRequired": true
+        }
 - property: keywords
   expected_types:
   - Text
@@ -328,10 +265,10 @@ mapping:
   example: '"name": "Genomics - Recombination and selection analysis"'
 - property: output
   expected_types:
-  - FormalParameter
+  - PropertyValueSpecification
   description: an output produced by the workflow
-  type: bioschemas
-  type_url: FormalParameter
+  type: schema.org
+  type_url: PropertyValueSpecification
   bsc_description: ""
   marginality: Minimum
   cardinality: MANY
@@ -373,7 +310,7 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: '"runtimePlatform": "https://usegalaxy.org/"'
 - property: sdPublisher
   expected_types:
   - Organization
@@ -424,7 +361,7 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: '"targetProduct": "Galaxy Project"'
 - property: url
   expected_types:
   - URL
@@ -449,7 +386,6 @@ mapping:
   cardinality: ONE
   controlled_vocab: ""
   example: '"version" : 1'
-
 ---
 <!DOCTYPE HTML>
 <html>
