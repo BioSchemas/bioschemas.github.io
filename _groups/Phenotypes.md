@@ -39,4 +39,5 @@ members:
     - RicardoArcila
     - PhilippeRocca-Serra
     - AndraWaagmeester
+    - GiuliaBabbi
 ---
