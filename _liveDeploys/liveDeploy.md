@@ -777,6 +777,16 @@ list:
     comments:
     node: CZ
 -
+    name: Scholia
+    highlight: More than 2.7M pages annotated with Taxon
+    example_URL: https://scholia.toolforge.org/taxon/Q15978631
+    resource_URL: https://scholia.toolforge.org/
+    schema_org: Taxon
+    bsc_profile: Taxon
+    bsc_ver: 0.6
+    comments: Live statistics from https://w.wiki/QYr
+    node: NL
+-
     name: PCDDB
     highlight:
     example_URL: https://pcddb.cryst.bbk.ac.uk/deposit/CD0000031000
