@@ -796,4 +796,24 @@ list:
     bsc_ver: 0.3
     comments:
     node: UK
+-
+    name: PhenPath
+    highlight:
+    example_URL: http://phenpath.biocomp.unibo.it/phenpath/
+    resource_URL: http://phenpath.biocomp.unibo.it/phenpath/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.3
+    comments:
+    node: IT
+-
+    name: PhenPath
+    highlight:
+    example_URL: http://phenpath.biocomp.unibo.it/cgi-bin/phenpath/ppDB.py
+    resource_URL: http://phenpath.biocomp.unibo.it/phenpath/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments:
+    node: IT
 ---
