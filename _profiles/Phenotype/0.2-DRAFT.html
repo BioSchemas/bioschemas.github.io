@@ -1,14 +1,20 @@
 ---
+redirect_from:
+- "devSpecs/Phenotype/specification"
+- "devSpecs/Phenotype/specification/"
+- "/devSpecs/Phenotype/"
+- "/profiles/Phenotype/"
+
 name: Phenotype
 
-previous_version:
+previous_version: 0.1-DRAFT-2018_11_15
 previous_release:
 
 status: revision
 spec_type: Profile
 group: phenotypes
 use_cases_url: '/useCases/Phenotype/'
-cross_walk_url: https://docs.google.com/spreadsheets/d/1ynkICcogm_eVDH2Y7IYr3Nf2GFbGntUWFN3yHy8bSGI
+cross_walk_url: https://docs.google.com/spreadsheets/d/1Vk8C-T6tjTL-s_u3xiCnjp87zVWCPQVbzySv1jqsK78/
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Phenotype
 live_deploy: ''
 
@@ -23,10 +29,12 @@ hierarchy:
 spec_info:
   title: Phenotype
   subtitle: Bioschemas profile describing a Phenotype in Life Sciences
-  description: This Phenotype type specification presents the markup for describing
-    a Phenotype.
-  version: 0.1-DRAFT-2018_11_15
-  version_date: 20181115T172726
+  description: 'This Phenotype type specification presents the markup for describing
+    a Phenotype.<h3>Changes from Previous Version</h3><ul><li>isAssociatedWith BioChemEntity
+    switch to recommended</li><li>taxonomicRange switch to recommended</li><li>new
+    property: associatedDisease</li></ul>'
+  version: 0.2-DRAFT
+  version_date: 20200512T203625
   official_type: http://bioschemas.org/Phenotype
   full_example: https://github.com/BioSchemas/Specifications/tree/master/Phenotype/
 mapping:
@@ -62,7 +70,7 @@ mapping:
   controlled_vocab: ""
   example: |-
     {
-        "@type": ["Phenotype"],
+        "@type": "Phenotype",
         "alternateName": "abnormal finger morphology"
     }
 - property: anatomicalLocation
@@ -79,14 +87,33 @@ mapping:
     of Anatomy Ontology](http://www.ontobee.org/ontology/FMA), [EMAPA](http://www.ontobee.org/ontology/EMAPA), '
   example: |-
     {
-      "@type": ["Phenotype"],
+      "@type": "Phenotype",
       "anatomicalLocation": {
-                    "@context": "http://schema.org",
                     "@type": "DefinedTerm",
                     "name": "limb digit",
                     "inDefinedTermSet": "http://purl.obolibrary.org/obo/emapa.owl",
                     "termCode": "EMAPA_32725"
             }
+    }
+- property: associatedDisease
+  expected_types:
+  - MedicalCondition
+  - PropertyValue
+  - URL
+  description: Disease associated to this BioChemEntity. Such a disease can be a MedicalCondition
+    or a URL. If you want to add an evidence supporting the association, please use
+    PropertyValue.
+  type: bioschemas
+  type_url: associatedDisease
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: 'Any term from a suitable ontology such as [OMIM](https://omim.org/),
+    [DO](https://disease-ontology.org/), '
+  example: |-
+    {
+      "@type": "Phenotype",
+            "associatedDisease": "https://omim.org/entry/605909?search=parkinson&highlight=parkinson"
     }
 - property: description
   expected_types:
@@ -100,7 +127,7 @@ mapping:
   controlled_vocab: ""
   example: |-
     {
-        "@type": ["Phenotype"],
+        "@type": "Phenotype",
         "description": "any structural anomaly of the fingers or toes"
     }
 - property: identifier
@@ -122,17 +149,17 @@ mapping:
   example: |-
     //Using a text
     {
-        "@type": ["Phenotype"],
+        "@type": "Phenotype",
         "identifier": "MP:0002110"
     }
     //Using a URL directly (looks like a text)
     {
-        "@type": ["Phenotype"],
+        "@type": "Phenotype",
         "identifier": "http://purl.obolibrary.org/obo/MP_0002110"
     }
     //Using a URL modeled as schema:URL (equivalent to the previous one but more verbose)
     {
-        "@type": ["Phenotype"],
+        "@type": "Phenotype",
         "identifier": {
           "@type": "URL",
           "url": "http://purl.obolibrary.org/obo/MP_0002110"
@@ -152,7 +179,7 @@ mapping:
   example: |
     //Using a URL directly (looks like a text)
     {
-      "@type": ["Phenotype"],
+      "@type": "Phenotype",
       "image": "http://www.ebi.ac.uk/mi/impc/phenotype-archive/media/images/900/M00571072_00021593_download_tn_large.jpg"
     }
 - property: isAssociatedWith
@@ -161,11 +188,18 @@ mapping:
   description: BioChemEntity that has some association with this Phenotype
   type: bioschemas
   type_url: isAssociatedWith
-  bsc_description: ""
-  marginality: Optional
-  cardinality: ""
+  bsc_description: Specifically useful for the molecular basis of the phenotype
+  marginality: Recommended
+  cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    {
+      "@type": "Phenotype",
+            "isAssociatedWith": {
+                    "@type": "Gene",
+                    "name": "Ascc2"
+            }
+    }
 - property: mainEntityOfPage
   expected_types:
   - CreativeWork
@@ -188,14 +222,14 @@ mapping:
       "@type": "DataRecord",
       "@id": "http://www.mousephenotype.org/data/phenotypes/MP:0002110"
       "mainEntity": {
-        "@type": ["Phenotype"],
+        "@type": "Phenotype",
         "name": "Name and any other property for this Phenotype entity"
       }
     }
 
     //Also possible from Phenotype
     {
-      "@type": ["Phenotype"],
+      "@type": "Phenotype",
       "mainEntityOfPage": { "@id": "http://www.mousephenotype.org/data/phenotypes/MP:0002110" }
     }
 - property: name
@@ -210,7 +244,7 @@ mapping:
   controlled_vocab: ""
   example: |-
     {
-      "@type": ["Phenotype"],
+      "@type": "Phenotype",
       "name": "abnormal digit morphology"
     }
 - property: sameAs
@@ -227,7 +261,7 @@ mapping:
   controlled_vocab: ""
   example: |-
     {
-      "@type": ["Phenotype"],
+      "@type": "Phenotype",
       "sameAs": "http://www.informatics.jax.org/vocab/mp_ontology/MP:0002110"
     }
 - property: taxonomicRange
@@ -239,14 +273,13 @@ mapping:
   type: bioschemas
   type_url: taxonomicRange
   bsc_description: ""
-  marginality: Optional
+  marginality: Recommended
   cardinality: ""
   controlled_vocab: NCBITaxon
   example: |-
     {
-      "@type": ["Phenotype"],
+      "@type": "Phenotype",
        "taxonomicRange": {
-                    "@context": "http://schema.org",
                     "@type": "Taxon",
                     "name": "Mus musculus",
                     "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=10090"
@@ -264,7 +297,7 @@ mapping:
   controlled_vocab: ""
   example: |-
     {
-      "@type": ["Phenotype"],
+      "@type": "Phenotype",
       "url": "http://www.mousephenotype.org/data/phenotypes/MP:0002110"
     }
 - property: valueReference
@@ -280,14 +313,14 @@ mapping:
     Phenotype Ontology](http://www.ontobee.org/ontology/MP), [Plant Phenotype Ontology](http://www.ontobee.org/ontology/flopo)
   example: |-
     {
-      "@type": ["Phenotype"],
+      "@type": "Phenotype",
        "valueReference": {
-                    "@context": "http://schema.org",
                     "@type": "DefinedTerm",
                     "inDefinedTermSet": "http://purl.obolibrary.org/obo/mp.owl",
                     "termCode": "MP:0002110"
             }
     }
+
 ---
 <!DOCTYPE HTML>
 <html>
