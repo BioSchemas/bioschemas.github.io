@@ -40,16 +40,32 @@ redirect_from:
                   <h3>Biotea model for metadata at a glance</h3>
                   <img src="https://dfzljdn9uc3pi.cloudfront.net/2018/4201/1/fig-3-2x.jpg" alt="Biotea model"/>
                   
-                  <h2>Biotea 2 Bioschemas - Use cases</h2>
+                  <h2>Use cases</h2>
+                  <p>
+                     The following use cases were derived from Biotea but they apply in general to search and retrieval of literature 
+                     metadata and associated entities. A user here is anyone looking for literature related metadata and associated
+                     entities, e.g., a researcher willing to find an articles about a particular protein or a researcher looking for 
+                     literature metadata in a standard format so they can create a literature metadata parser or aggregator.
+                  </p>   
                   <h3>Findability</h3>
                   <p>
-                     Easily finding scholarly publication available on the web for the research community, 
-                     related to entities used in their domain (via annotations with specialized vocabularies)
+                     As a user, I want to easily find scholarly publication available on the web, regardless whether or not
+                     they are all hosted on the same website. As a user, whenever possible, I also want to find biological 
+                     entities recognized in the text.
+                  </p>
+                  <p>
+                     How does Bioschemas could help here? Bioschemas markup can enable a extended version of Google Scholar, where even 
+                     institution hosted documents can be find, as far as they are marked up following the Scholarly Publication 
+                     profiles
                   </p>
 
                   <h3>Accessibility</h3>
                   <p>
-                     As publications are marked up with schema.org/Bioschemas, their key elements can be easily
+                     As a user, I want to get literature metadata in a standard format, regardless whether all articles are
+                     hosted on the same website or provide a specialized API.
+                  </p>
+                  <p>
+                     How does Bioschemas could help here? As publications are marked up with schema.org/Bioschemas, their key elements can be easily
                      accessible by people and machines. Currently, the
                      <a href="http://jats.niso.org/1.1/" target="_blank">Journal Article Tag Suite</a> is the default
                      format supported by main publishers (at least in the Life Sciences domain). The JATS XML format
@@ -66,18 +82,23 @@ redirect_from:
 
                   <h3>Summarization</h3>
                   <p>
-                     A summarization similar to those for movies would become possible thanks to schema.org/Bioschemas
+                     As a user, I want to see a summary similar to those for movies would become possible thanks to schema.org/Bioschemas
                       markup, providing a quick view regarding a publication.
+                  </p>
+                  <p>
+                     How does Bioschemas could help here? Imagine you go to Google Scholar or Wikidata (or any other place aggregating scholarly 
+                     publications metadata (it could be your institute or your own aggregating tool), thanks to Bioschemas markup, such 
+                     websites could also include a summary of, for instance, citing publications on the last 3 months!
                   </p>
 
                   <h3>Interoperability</h3>
                   <p>
-                     Interoperability refers to the use of common vocabs and annotation schemas for data 
-                     exchange purposes. For instance, by knowing that a protein is a protein then automatic 
-                     links can be built to specific dbs. By using common annotation schemas then annotations 
-                     can easily be exchanged (use cases for such tasks are part of the annotation ontology or 
-                     annotation framework). The exchange should also make it easier to identify the location of 
-                     the annotation in the text.
+                     As a user, I would like to know what publications involve proteins; even more, I would like to know what proteins 
+                     are mentioned in the text. 
+                  </p>
+                  <p>
+                     How Bioschemas could help here? By adding some "about" data to literature markup, e.g., proteins, it could be possible 
+                     to filter publications by the wort of BioChemEntity they mention.
                   </p>
                  
                </section>
