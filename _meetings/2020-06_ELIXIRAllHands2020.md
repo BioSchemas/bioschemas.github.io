@@ -15,10 +15,12 @@ attendees:
     - AlasdairGray
 ---
 
+During the ELIXIR All Hands Meeting 2020, the Interoperability Platform session will be dedicated to matters relating to the Bioschemas Strategic Implementation Study. Details of this session are in the [agenda document]({{agenda-doc}}).
+
 We have had two abstracts accepted for presentation at the ELIXIR All Hands Meeting 2020. The full abstracts are included below.
 
-- [Exploiting Bioschemas Markup to Support ELIXIR Communities](#exploiting-bioschemas-markup-to-support-elixir-communities)
-- [Discovering Biodiversity Resources on the Web](#discovering-biodiversity-resources-on-the-web)
+- [Exploiting Bioschemas Markup to Support ELIXIR Communities](#exploiting-bioschemas-markup-to-support-elixir-communities) accepted into the short talks session taking place on Wednesday 10 June at 10:00 (CEST)
+- [Discovering Biodiversity Resources on the Web](#discovering-biodiversity-resources-on-the-web) accepted into the [Biodiversity mini-symposium](https://docs.google.com/document/d/11NDVkT5baCmFfA0bUdIxCauiKhfQofQPiXkJsnVAbP0/edit?usp=sharing) taking place on Monday 8 June at 12:00 (CEST)
 
 
 ## Exploiting Bioschemas Markup to Support ELIXIR Communities
