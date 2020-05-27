@@ -8,7 +8,7 @@ end_date: 2020-06-11
 venue: Virtual (<del>Eye Filmmuseum, IJpromenade 1, Amsterdam, 1031 KT, Netherlands</del>)
 meeting-name: ELIXIR All Hands 2020
 meeting-url: https://elixir-europe.org/events/elixir-all-hands-2020
-agenda-doc: https://docs.google.com/document/d/1VxdgDAmvT4Gffx_h1DwU4YzR_X8Z4MXTVgdvlJPjIxU/edit#
+agenda-doc: https://docs.google.com/document/d/1XielRIo0MTuoUSImH6NMmR-Zp0JDQ2sMSrd0knTthX4/edit?usp=sharing
 contact-people:
     - AlasdairGray
 attendees:
