@@ -27,11 +27,8 @@ specifications:
   [
     'Phenotype'
   ]
-#types:
-#    [
-#      'BioChemEntity'
-#    ]
-draft_types:
+
+types:
     [
       'Phenotype'
     ]
@@ -42,4 +39,5 @@ members:
     - RicardoArcila
     - PhilippeRocca-Serra
     - AndraWaagmeester
+    - GiuliaBabbi
 ---

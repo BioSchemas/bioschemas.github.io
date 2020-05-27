@@ -26,10 +26,6 @@ specifications:
 #  [  
 #    'Standards'
 #  ]
-#draft_types:
-#  [  
-#    'Standard'
-#  ]
 
 members:
     - NiallBeard

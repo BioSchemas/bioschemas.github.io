@@ -25,6 +25,7 @@ specifications:
   [  
     'Workflow'
   ]
+  
 members:
     - VictoriaDominguezDelAngel
     - CaroleGoble

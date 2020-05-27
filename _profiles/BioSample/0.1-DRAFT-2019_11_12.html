@@ -52,7 +52,9 @@ mapping:
   example: ""
 - property: associatedDisease
   expected_types:
-  - MedicalCondition or PropertyValue or URL
+  - MedicalCondition
+  - PropertyValue
+  - URL
   description: Disease associated to this BioChemEntity. Such a disease can be a MedicalCondition
     or a URL. If you want to add an evidence supporting the association, please use
     PropertyValue.
@@ -99,7 +101,8 @@ mapping:
   example: ""
 - property: collector
   expected_types:
-  - Organization or Person
+  - Organization
+  - Person
   description: The Person or Organization who collected the Sample.
   type: ""
   type_url: ""
@@ -110,7 +113,8 @@ mapping:
   example: ""
 - property: custodian
   expected_types:
-  - Organization or Person
+  - Organization
+  - Person
   description: The Person or Organization who is responsible for the Sample.
   type: ""
   type_url: ""
@@ -121,7 +125,8 @@ mapping:
   example: ""
 - property: dateCreated
   expected_types:
-  - Date or DateTime
+  - Date
+  - DateTime
   description: The date on which the CreativeWork was created or the item was added
     to a DataFeed.
   type: ""
@@ -144,7 +149,8 @@ mapping:
   example: ""
 - property: gender
   expected_types:
-  - GenderType or Text
+  - GenderType
+  - Text
   description: Gender of the person. While http://schema.org/Male and http://schema.org/Female
     may be used, text strings are also acceptable for people who do not identify as
     a binary gender
@@ -170,7 +176,9 @@ mapping:
   example: ""
 - property: hasMolecularFunction
   expected_types:
-  - DefinedTerm or PropertyValue or URL
+  - DefinedTerm
+  - PropertyValue
+  - URL
   description: Molecular function performed by this BioChemEntity; please use PropertyValue
     if you want to include any evidence.
   type: bioschemas
@@ -182,7 +190,9 @@ mapping:
   example: ""
 - property: hasRepresentation
   expected_types:
-  - PropertyValue or Text or URL
+  - PropertyValue
+  - Text
+  - URL
   description: A common representation such as a protein sequence or chemical structure
     for this entity. For images use schema.org/image.
   type: bioschemas
@@ -194,7 +204,9 @@ mapping:
   example: ""
 - property: identifier
   expected_types:
-  - PropertyValue or Text or URL
+  - PropertyValue
+  - Text
+  - URL
   description: The identifier property represents any kind of identifier for any kind
     of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
     properties for representing many of these, either as textual strings or as URL
@@ -209,7 +221,8 @@ mapping:
   example: ""
 - property: image
   expected_types:
-  - ImageObject or URL
+  - ImageObject
+  - URL
   description: An image of the item. This can be a URL or a fully described ImageObject.
   type: ""
   type_url: ""
@@ -245,7 +258,9 @@ mapping:
   example: ""
 - property: isInvolvedInBiologicalProcess
   expected_types:
-  - DefinedTerm or PropertyValue or URL
+  - DefinedTerm
+  - PropertyValue
+  - URL
   description: Biological process this BioChemEntity is involved in; please use PropertyValue
     if you want to include any evidence.
   type: bioschemas
@@ -257,7 +272,9 @@ mapping:
   example: ""
 - property: isLocatedInSubcellularLocation
   expected_types:
-  - DefinedTerm or PropertyValue or URL
+  - DefinedTerm
+  - PropertyValue
+  - URL
   description: Subcellular location where this BioChemEntity is located; please use
     PropertyValue if you want to include any evidence.
   type: bioschemas
@@ -282,7 +299,9 @@ mapping:
   example: ""
 - property: itemLocation
   expected_types:
-  - Place or PostalAddress or Text
+  - Place
+  - PostalAddress
+  - Text
   description: Current location of the item.
   type: external
   type_url: ""
@@ -340,7 +359,10 @@ mapping:
   example: ""
 - property: taxonomicRange
   expected_types:
-  - DefinedTerm or Taxon or Text or URL
+  - DefinedTerm
+  - Taxon
+  - Text
+  - URL
   description: The taxonomic grouping of the organism that expresses, encodes, or
     in someway related to the BioChemEntity.
   type: bioschemas

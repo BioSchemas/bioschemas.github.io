@@ -52,7 +52,7 @@ list:
     resource_URL: https://ega-archive.org/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
-    bsc_ver: 0.1
+    bsc_ver: 0.3
     comments:
     node: EBI
 -
@@ -86,12 +86,12 @@ list:
     node: UK    
 -
     name: EGA Dataset
-    highlight:
+    highlight: over 5,300 datasets
     example_URL: https://ega-archive.org/datasets/EGAD00000000001
     resource_URL: https://ega-archive.org/
     schema_org: Dataset
     bsc_profile: Dataset
-    bsc_ver: 0.1
+    bsc_ver: 0.3
     comments:
     node: EBI
 -
@@ -766,5 +766,44 @@ list:
     bsc_ver: 0.1-DRAFT
     comments:  
     node: IT
-
+-
+    name: UniProt
+    highlight:
+    example_URL: https://www.uniprot.org/uniprot/
+    resource_URL: https://www.uniprot.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments:
+    node: CZ
+-
+    name: Scholia
+    highlight: More than 2.7M pages annotated with Taxon
+    example_URL: https://scholia.toolforge.org/taxon/Q15978631
+    resource_URL: https://scholia.toolforge.org/
+    schema_org: Taxon
+    bsc_profile: Taxon
+    bsc_ver: 0.6
+    comments: Live statistics from https://w.wiki/QYr
+    node: NL
+-
+    name: PCDDB
+    highlight:
+    example_URL: https://pcddb.cryst.bbk.ac.uk/
+    resource_URL: https://pcddb.cryst.bbk.ac.uk/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.3
+    comments:
+    node: UK
+-
+    name: PCDDB
+    highlight: 653 Datasets as of May 2020
+    example_URL: https://pcddb.cryst.bbk.ac.uk/deposit/CD0000031000
+    resource_URL: https://pcddb.cryst.bbk.ac.uk/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments:
+    node: UK
 ---

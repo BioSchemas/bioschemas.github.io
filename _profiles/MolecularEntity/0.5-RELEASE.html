@@ -1,16 +1,22 @@
 ---
+redirect_from:
+- "devSpecs/MolecularEntity/specification"
+- "devSpecs/MolecularEntity/specification/"
+- "/devSpecs/MolecularEntity/"
+- "/specifications/drafts/MolecularEntity"
+- "/profiles/MolecularEntity/"
 
 name: MolecularEntity
 
-previous_version: '0.2-DRAFT-2018_11_15'
+previous_version: '0.4-DRAFT-2019_11_11'
 previous_release:
 
 
-status: revision
+status: release
 spec_type: Profile
 group: chemicals
 use_cases_url: '/useCases/MolecularEntity/'
-cross_walk_url: https://docs.google.com/spreadsheets/d/1KXcNfvUCQQ0kYswp2w17ZQ_5I7xXiAX-0XtaGauSloU/edit#gid=1483018794
+cross_walk_url: 'https://docs.google.com/spreadsheets/d/1KKg8JJzK3GybuVrvdZxbMqG2PYkU_0e7gTUqWzGx3QQ/edit#gid=1483018794'
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Chemistry
 live_deploy: /liveDeploys/
 
@@ -28,9 +34,11 @@ spec_info:
   subtitle: Bioschemas profile describing a MolecularEntity
   description: 'Any constitutionally or isotopically distinct atom, molecule, ion,
     ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately
-    distinguishable entity. (Source: <a href=''https://www.ebi.ac.uk/chebi/searchId.do?chebiId=23367''>ChEBI:23367</a>)'
-  version: 0.4-DRAFT-2019_11_11
-  version_date: 20191111T212126
+    distinguishable entity. (Source: <a href=''https://www.ebi.ac.uk/chebi/searchId.do?chebiId=23367''>ChEBI:23367</a>)
+    <h4>Summary of Changes</h4>
+    This is the first release of the MolecularEntity profile. There are no changes from the previous draft.'
+  version: 0.5-RELEASE
+  version_date: 20200407T134325
   official_type: https://schema.org/MolecularEntity
   full_example: https://github.com/BioSchemas/specifications/blob/master/Chemical/examples/chembl-jsonld.json
 mapping:
@@ -435,7 +443,9 @@ mapping:
   expected_types:
   - Text
   description: A specification in form of a line notation for describing the structure
-    of chemical species using short ASCII strings.
+    of chemical species using short ASCII strings. Double bond stereochemistry \ indicators
+    may need to be escaped in the string in formats where the backslash is an escape
+    character.
   type: bioschemas
   type_url: ""
   bsc_description: ""
