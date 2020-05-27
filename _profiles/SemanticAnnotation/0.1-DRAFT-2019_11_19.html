@@ -1,14 +1,15 @@
 ---
-redirect_from: 
+redirect_from:
 - "devSpecs/SemanticAnnotation/specification"
 - "devSpecs/SemanticAnnotation/specification/"
 - "/devSpecs/SemanticAnnotation/"
+- "/specifications/drafts/SemanticAnnotation"
 - "/profiles/SemanticAnnotation/"
 
 name: SemanticAnnotation
 
 previous_version: 0.1-DRAFT-2019_02_08
-previous_release: 
+previous_release:
 
 status: revision
 spec_type: Profile
@@ -28,7 +29,7 @@ spec_info:
   subtitle: Bioschemas profile, based on Biotea model, describing a semantic annotation
     associated to a piece of text in a ScholarlyArticle in Life Sciences.
   description: A SemanticAnnotation currently corresponds to an expression identified
-    in a ScholarlyArticle and associated to an ontology term. It could apply as well to documents 
+    in a ScholarlyArticle and associated to an ontology term. It could apply as well to documents
     other than ScholarlyArticle, for instant patents and so.
   version: 0.1-DRAFT-2019_11_19
   version_date: 20190208T104450
@@ -170,7 +171,7 @@ mapping:
      Inverse property: mainEntityOfPage.
   type: ""
   type_url: ""
-  bsc_description: DefinedTerm(s), i.e., ontology terms, associated to this annotation. Use DefinedTermSet if multiple related 
+  bsc_description: DefinedTerm(s), i.e., ontology terms, associated to this annotation. Use DefinedTermSet if multiple related
    terms should be seen as a whole, for instance MeSH descriptors accompanied by MeSH qualifiers .
    On the DefinedTerm, use additionalType to link to a Unified Medical Language System (UMLS) semantic
     type (TUI) or group, and sameAs to link to the corresponding concept unique identifier
