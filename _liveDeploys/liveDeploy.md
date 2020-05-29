@@ -789,6 +789,16 @@ list:
 -
     name: PCDDB
     highlight:
+    example_URL: https://pcddb.cryst.bbk.ac.uk/
+    resource_URL: https://pcddb.cryst.bbk.ac.uk/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.3
+    comments:
+    node: UK
+-
+    name: PCDDB
+    highlight: 653 Datasets as of May 2020
     example_URL: https://pcddb.cryst.bbk.ac.uk/deposit/CD0000031000
     resource_URL: https://pcddb.cryst.bbk.ac.uk/
     schema_org: Dataset
@@ -814,6 +824,36 @@ list:
     schema_org: Dataset
     bsc_profile: Dataset
     bsc_ver: 0.3
+    comments:
+    node: IT
+-
+    name: eDGAR
+    highlight:
+    example_URL: http://edgar.biocomp.unibo.it/
+    resource_URL: http://edgar.biocomp.unibo.it/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.3
+    comments:
+    node: IT
+-
+    name: eDGAR
+    highlight:
+    example_URL: http://edgar.biocomp.unibo.it/
+    resource_URL: http://edgar.biocomp.unibo.it/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments:
+    node: IT
+-
+    name: eDGAR
+    highlight: 3,658 genes
+    example_URL: http://edgar.biocomp.unibo.it/cgi-bin/gene_disease_db/gene.py?gene=A2M
+    resource_URL: http://edgar.biocomp.unibo.it/
+    schema_org: Gene
+    bsc_profile: Gene
+    bsc_ver: 0.7
     comments:
     node: IT
 ---
