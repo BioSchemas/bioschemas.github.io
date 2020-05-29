@@ -71,7 +71,17 @@ list:
     resource_URL: https://www.guidetopharmacology.org/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
-    bsc_ver: 0.1
+    bsc_ver: 0.3
+    comments:
+    node: UK
+-
+    name: IUPHAR/BPS Guide to PHARMACOLOGY
+    highlight:
+    example_URL: https://www.guidetopharmacology.org/
+    resource_URL: https://www.guidetopharmacology.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
     comments:
     node: UK
 -
@@ -82,6 +92,16 @@ list:
     schema_org: MolecularEntity
     bsc_profile: MolecularEntity
     bsc_ver: 0.2-DRAFT
+    comments:
+    node: UK    
+-
+    name: IUPHAR/BPS Guide to PHARMACOLOGY
+    highlight: proteins associated with COVID-19
+    example_URL: https://www.guidetopharmacology.org/coronavirus.jsp
+    resource_URL: https://www.guidetopharmacology.org/
+    schema_org: Protein
+    bsc_profile: Protein
+    bsc_ver: 0.11
     comments:
     node: UK    
 -
