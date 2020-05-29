@@ -807,6 +807,26 @@ list:
     comments:
     node: UK
 -
+    name: PhenPath
+    highlight:
+    example_URL: http://phenpath.biocomp.unibo.it/phenpath/
+    resource_URL: http://phenpath.biocomp.unibo.it/phenpath/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.3
+    comments:
+    node: IT
+-
+    name: PhenPath
+    highlight:
+    example_URL: http://phenpath.biocomp.unibo.it/cgi-bin/phenpath/ppDB.py
+    resource_URL: http://phenpath.biocomp.unibo.it/phenpath/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments:
+    node: IT
+-
     name: eDGAR
     highlight:
     example_URL: http://edgar.biocomp.unibo.it/
@@ -815,7 +835,7 @@ list:
     bsc_profile: DataCatalog
     bsc_ver: 0.3
     comments:
-    node: UK
+    node: IT
 -
     name: eDGAR
     highlight:
@@ -825,7 +845,7 @@ list:
     bsc_profile: Dataset
     bsc_ver: 0.3
     comments:
-    node: UK
+    node: IT
 -
     name: eDGAR
     highlight: 3,658 genes
@@ -835,5 +855,5 @@ list:
     bsc_profile: Gene
     bsc_ver: 0.7
     comments:
-    node: UK
+    node: IT
 ---
