@@ -31,11 +31,13 @@ spec_info:
   subtitle: Bioschemas profile describing a Phenotype in Life Sciences
   description: 'This Phenotype type specification presents the markup for describing
     a Phenotype.<h3>Changes from Previous Version</h3><ul><li>isAssociatedWith BioChemEntity
-    switch to recommended</li><li>taxonomicRange switch to recommended</li><li>image
-    switch to optional and many</li><li>additionaType dropped</li><li>additionalProperty
-    description changed</li><li>new property: associatedDisease</li></ul>'
+    switch to recommended and renamed as bioChemAssociation with an improved description</li><li>taxonomicRange
+    switch to recommended</li><li>image switch to optional and many</li><li>additionaType
+    dropped</li><li>additionalProperty description changed</li><li>new property: associatedDisease</li><li>new
+    properties for GO associations: hasMolecularFunction, isInvolvedInBiologicalProcess
+    and isLocatedInSubcellularLocation</li></ul>'
   version: 0.2-DRAFT
-  version_date: 20200605T154739
+  version_date: 20200605T160522
   official_type: http://bioschemas.org/Phenotype
   full_example: https://github.com/BioSchemas/Specifications/tree/master/Phenotype/
 mapping:
@@ -152,7 +154,9 @@ mapping:
     }
 - property: hasMolecularFunction
   expected_types:
-  - DefinedTerm orPropertyValueorURL
+  - DefinedTerm
+  - PropertyValue
+  - URL
   description: Molecular function performed by this Phenotype.
   type: bioschemas
   type_url: hasMolecularFunction
@@ -215,7 +219,9 @@ mapping:
     }
 - property: isInvolvedInBiologicalProcess
   expected_types:
-  - DefinedTerm orPropertyValueorURL
+  - DefinedTerm
+  - PropertyValue
+  - URL
   description: Biological process this Phenotype is involved in.
   type: bioschemas
   type_url: isInvolvedInBiologicalProcess
@@ -226,7 +232,9 @@ mapping:
   example: ""
 - property: isLocatedInSubcellularLocation
   expected_types:
-  - DefinedTerm orPropertyValueorURL
+  - DefinedTerm
+  - PropertyValue
+  - URL
   description: Subcellular location where this Phenotype is located.
   type: bioschemas
   type_url: isLocatedInSubcellularLocation
@@ -355,8 +363,7 @@ mapping:
                     "termCode": "MP:0002110"
             }
     }
-
-
+    
 ---
 <!DOCTYPE HTML>
 <html>
