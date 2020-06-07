@@ -62,7 +62,7 @@ MolecularEntity:
 
 Phenotype:
     name: "Phenotype"
-    latest_publication: "0.2-DRAFT-2019_06_21"
+    latest_publication: "0.3-DRAFT-2020_06_07"
     latest_release:
     status: "active"
 
