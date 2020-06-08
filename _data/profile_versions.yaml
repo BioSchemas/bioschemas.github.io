@@ -14,7 +14,7 @@ BioSample:
 
 ChemicalSubstance:
     name: "ChemicalSubstance"
-    latest_publication: 
+    latest_publication:
     latest_release: "0.4-RELEASE"
     status: "active"
 
@@ -92,7 +92,7 @@ Person:
 
 Phenotype:
     name: "Phenotype"
-    latest_publication: "0.1-DRAFT-2018_11_15"
+    latest_publication: "0.2-DRAFT"
     latest_release:
     status: "active"
 

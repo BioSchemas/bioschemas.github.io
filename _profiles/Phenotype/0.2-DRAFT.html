@@ -1,14 +1,21 @@
 ---
+redirect_from:
+- "devSpecs/Phenotype/specification"
+- "devSpecs/Phenotype/specification/"
+- "/devSpecs/Phenotype/"
+- "/specifications/drafts/Phenotype"
+- "/profiles/Phenotype/"
+
 name: Phenotype
 
-previous_version:
+previous_version: 0.1-DRAFT-2018_11_15
 previous_release:
 
 status: revision
 spec_type: Profile
 group: phenotypes
 use_cases_url: '/useCases/Phenotype/'
-cross_walk_url: https://docs.google.com/spreadsheets/d/1ynkICcogm_eVDH2Y7IYr3Nf2GFbGntUWFN3yHy8bSGI
+cross_walk_url: https://docs.google.com/spreadsheets/d/1Vk8C-T6tjTL-s_u3xiCnjp87zVWCPQVbzySv1jqsK78/
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Phenotype
 live_deploy: ''
 
@@ -23,10 +30,15 @@ hierarchy:
 spec_info:
   title: Phenotype
   subtitle: Bioschemas profile describing a Phenotype in Life Sciences
-  description: This Phenotype type specification presents the markup for describing
-    a Phenotype.
-  version: 0.1-DRAFT-2018_11_15
-  version_date: 20181115T172726
+  description: 'This Phenotype type specification presents the markup for describing
+    a Phenotype.<h3>Changes from Previous Version</h3><ul><li>isAssociatedWith BioChemEntity
+    switch to recommended and renamed as bioChemAssociation with an improved description</li><li>taxonomicRange
+    switch to recommended</li><li>image switch to optional and many</li><li>additionalType
+    dropped</li><li>additionalProperty description changed</li><li>new property: associatedDisease</li><li>new
+    properties for GO associations: hasMolecularFunction, isInvolvedInBiologicalProcess
+    and isLocatedInSubcellularLocation</li></ul>'
+  version: 0.2-DRAFT
+  version_date: 20200605T160522
   official_type: http://bioschemas.org/Phenotype
   full_example: https://github.com/BioSchemas/Specifications/tree/master/Phenotype/
 mapping:
@@ -39,13 +51,12 @@ mapping:
     Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
   type: ""
   type_url: ""
-  bsc_description: Whenever possible, please use a property coined in a third-party
-    well-know vocabulary. For instance, you can directly use http://purl.obolibrary.org/obo/RO_0002327
-    as a property to express how a protein or gene enables some GO molecular function.
-    If you still want or need to use additionalProperty, please use (i) property name
-    to specify the name of the property, (ii) additionalType (if possible) to better
-    specify the nature of the property, and (iii) value to link to the object/range
-    of this property.
+  bsc_description: Before using this property, make sure none of the existing ones
+    covers your case. Whenever possible, please use a property coined in a third-party
+    well-know vocabulary. Please always use (i) property name to specify the name
+    of the property, (ii) additionalType (if possible) to better specify the nature
+    of the property (e.g., link to the third-party well-known vocabulary term), and
+    (iii) value to link to the object/range of this property.
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -62,7 +73,7 @@ mapping:
   controlled_vocab: ""
   example: |-
     {
-        "@type": ["Phenotype"],
+        "@type": "Phenotype",
         "alternateName": "abnormal finger morphology"
     }
 - property: anatomicalLocation
@@ -79,13 +90,52 @@ mapping:
     of Anatomy Ontology](http://www.ontobee.org/ontology/FMA), [EMAPA](http://www.ontobee.org/ontology/EMAPA), '
   example: |-
     {
-      "@type": ["Phenotype"],
+      "@type": "Phenotype",
       "anatomicalLocation": {
-                    "@context": "http://schema.org",
                     "@type": "DefinedTerm",
                     "name": "limb digit",
                     "inDefinedTermSet": "http://purl.obolibrary.org/obo/emapa.owl",
                     "termCode": "EMAPA_32725"
+            }
+    }
+- property: associatedDisease
+  expected_types:
+  - MedicalCondition
+  - PropertyValue
+  - URL
+  description: Disease associated to this BioChemEntity. Such a disease can be a MedicalCondition
+    or a URL. If you want to add an evidence supporting the association, please use
+    PropertyValue.
+  type: bioschemas
+  type_url: associatedDisease
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: 'Any term from a suitable ontology such as [OMIM](https://omim.org/),
+    [DO](https://disease-ontology.org/), '
+  example: |-
+    {
+      "@type": "Phenotype",
+            "associatedDisease": "https://omim.org/entry/605909?search=parkinson&highlight=parkinson"
+    }
+- property: bioChemAssociation
+  expected_types:
+  - BioChemEntity
+  description: BioChemEntity, e.g., gene, associated to this Phenotype and relevant
+    for its characterization, particularly useful for the molecular basis of this
+    Phenotype.
+  type: bioschemas
+  type_url: bioChemAssociation
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": "Phenotype",
+            "isAssociatedWith": {
+                    "@type": "Gene",
+                    "name": "Ascc2"
             }
     }
 - property: description
@@ -100,9 +150,22 @@ mapping:
   controlled_vocab: ""
   example: |-
     {
-        "@type": ["Phenotype"],
+        "@type": "Phenotype",
         "description": "any structural anomaly of the fingers or toes"
     }
+- property: hasMolecularFunction
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  description: Molecular function performed by this Phenotype.
+  type: bioschemas
+  type_url: hasMolecularFunction
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: GO molecular function branch
+  example: ""
 - property: identifier
   expected_types:
   - PropertyValue
@@ -122,17 +185,17 @@ mapping:
   example: |-
     //Using a text
     {
-        "@type": ["Phenotype"],
+        "@type": "Phenotype",
         "identifier": "MP:0002110"
     }
     //Using a URL directly (looks like a text)
     {
-        "@type": ["Phenotype"],
+        "@type": "Phenotype",
         "identifier": "http://purl.obolibrary.org/obo/MP_0002110"
     }
     //Using a URL modeled as schema:URL (equivalent to the previous one but more verbose)
     {
-        "@type": ["Phenotype"],
+        "@type": "Phenotype",
         "identifier": {
           "@type": "URL",
           "url": "http://purl.obolibrary.org/obo/MP_0002110"
@@ -146,25 +209,40 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: ""
-  marginality: Recommended
-  cardinality: ONE
+  marginality: Optional
+  cardinality: MANY
   controlled_vocab: ""
   example: |
     //Using a URL directly (looks like a text)
     {
-      "@type": ["Phenotype"],
+      "@type": "Phenotype",
       "image": "http://www.ebi.ac.uk/mi/impc/phenotype-archive/media/images/900/M00571072_00021593_download_tn_large.jpg"
     }
-- property: isAssociatedWith
+- property: isInvolvedInBiologicalProcess
   expected_types:
-  - BioChemEntity
-  description: BioChemEntity that has some association with this Phenotype
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  description: Biological process this Phenotype is involved in.
   type: bioschemas
-  type_url: isAssociatedWith
+  type_url: isInvolvedInBiologicalProcess
   bsc_description: ""
   marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
+  cardinality: MANY
+  controlled_vocab: GO biological process branch
+  example: ""
+- property: isLocatedInSubcellularLocation
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  description: Subcellular location where this Phenotype is located.
+  type: bioschemas
+  type_url: isLocatedInSubcellularLocation
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: GO subcellular location branch
   example: ""
 - property: mainEntityOfPage
   expected_types:
@@ -188,14 +266,14 @@ mapping:
       "@type": "DataRecord",
       "@id": "http://www.mousephenotype.org/data/phenotypes/MP:0002110"
       "mainEntity": {
-        "@type": ["Phenotype"],
+        "@type": "Phenotype",
         "name": "Name and any other property for this Phenotype entity"
       }
     }
 
     //Also possible from Phenotype
     {
-      "@type": ["Phenotype"],
+      "@type": "Phenotype",
       "mainEntityOfPage": { "@id": "http://www.mousephenotype.org/data/phenotypes/MP:0002110" }
     }
 - property: name
@@ -210,7 +288,7 @@ mapping:
   controlled_vocab: ""
   example: |-
     {
-      "@type": ["Phenotype"],
+      "@type": "Phenotype",
       "name": "abnormal digit morphology"
     }
 - property: sameAs
@@ -227,7 +305,7 @@ mapping:
   controlled_vocab: ""
   example: |-
     {
-      "@type": ["Phenotype"],
+      "@type": "Phenotype",
       "sameAs": "http://www.informatics.jax.org/vocab/mp_ontology/MP:0002110"
     }
 - property: taxonomicRange
@@ -239,14 +317,13 @@ mapping:
   type: bioschemas
   type_url: taxonomicRange
   bsc_description: ""
-  marginality: Optional
+  marginality: Recommended
   cardinality: ""
   controlled_vocab: NCBITaxon
   example: |-
     {
-      "@type": ["Phenotype"],
+      "@type": "Phenotype",
        "taxonomicRange": {
-                    "@context": "http://schema.org",
                     "@type": "Taxon",
                     "name": "Mus musculus",
                     "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=10090"
@@ -264,7 +341,7 @@ mapping:
   controlled_vocab: ""
   example: |-
     {
-      "@type": ["Phenotype"],
+      "@type": "Phenotype",
       "url": "http://www.mousephenotype.org/data/phenotypes/MP:0002110"
     }
 - property: valueReference
@@ -272,7 +349,7 @@ mapping:
   - DefinedTerm
   description: A DefinedTerm in this code set.
   type: ""
-  type_url: http://schema.org/valueReference
+  type_url: ""
   bsc_description: ""
   marginality: Optional
   cardinality: MANY
@@ -280,14 +357,14 @@ mapping:
     Phenotype Ontology](http://www.ontobee.org/ontology/MP), [Plant Phenotype Ontology](http://www.ontobee.org/ontology/flopo)
   example: |-
     {
-      "@type": ["Phenotype"],
+      "@type": "Phenotype",
        "valueReference": {
-                    "@context": "http://schema.org",
                     "@type": "DefinedTerm",
                     "inDefinedTermSet": "http://purl.obolibrary.org/obo/mp.owl",
                     "termCode": "MP:0002110"
             }
     }
+
 ---
 <!DOCTYPE HTML>
 <html>
