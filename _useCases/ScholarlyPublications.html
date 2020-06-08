@@ -1,0 +1,116 @@
+---
+name: Scholarly Publications
+group: publications
+collection: useCases
+active: true
+redirect_from:
+- "useCases/ScholarlyPublications/"
+- "useCases/Journal/"
+- "useCases/PublicationIssue"
+- "useCases/PublicationVolume"
+- "useCases/ScholarlyArticle"
+- "useCases/SemanticAnnotation"
+---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                 <h1>Use Cases for {{page.name}}</h1>
+                 {% assign group = site.groups | where:"identifier", page.group %}
+                 {% for g in group %}
+                 <p>The following use cases were developed by the <a href="{{g.url}}">{{ g.name }}</a> group.
+                 {% endfor %}
+
+                 <h2>Biotea 2 Bioschemas - Introduction</h2>
+                 <p>Biotea defines a model for metadata, references, content and named entities recognized in
+                    the text. Bioschemas profiles for scholarly publications focus on metadata only.
+                  </p>
+                  <p>How to cite Biotea: <br/>
+                     <li>Model: <a href="" target="_blank">https://jbiomedsem.biomedcentral.com/articles/10.1186/2041-1480-4-S1-S5</a></li>
+                     <li>Use cases: <a href="" target="_blank">https://peerj.com/articles/4201/</a></li>
+                  </p>
+
+                  <h3>Biotea model for metadata at a glance</h3>
+                  <img src="https://dfzljdn9uc3pi.cloudfront.net/2018/4201/1/fig-3-2x.jpg" alt="Biotea model"/>
+
+                  <h2>Use cases</h2>
+                  <p>
+                     The following use cases were derived from Biotea but they apply in general to search and retrieval of literature
+                     metadata and associated entities. A user here is anyone looking for literature related metadata and associated
+                     entities, e.g., a researcher trying to find articles about a particular protein or a researcher looking for
+                     literature metadata in a standard format so they can create a literature metadata parser or aggregator.
+                  </p>
+                  <h3>Findability</h3>
+                  <p>
+                     As a user, I want to easily find scholarly publications available on the web, regardless of where
+                     they are all hosted. As a user, whenever possible, I also want to find biological
+                     entities recognized in the text and use these to discover scholarly publications about the entity.
+                  </p>
+                  <p>
+                     Bioschemas markup can enable an extended version of Google Scholar, where even
+                     institution hosted documents can be found, as far as they are marked up following the Scholarly Publication
+                     profiles.
+                  </p>
+
+                  <h3>Accessibility</h3>
+                  <p>
+                     As a user, I want to get literature metadata in a standard format, regardless of whether all articles are
+                     hosted on the same website or provide a specialized API.
+                  </p>
+                  <p>
+                     As publications are marked up with Schema.org/Bioschemas, their key elements can be easily
+                     accessible by people and machines. Currently, the
+                     <a href="http://jats.niso.org/1.1/" target="_blank">Journal Article Tag Suite</a> is the default
+                     format supported by the main publishers in the Life Sciences domain. The JATS XML format
+                     is a comprehensive one including metadata, abstract, content and references. The format though
+                     lacks support for Linked Data. JSON is also supported via web services by some repositories
+                     such as <a href="https://www.ncbi.nlm.nih.gov/pubmed/" target="_blank">PubMed</a>
+                     -- see <a href="https://www.ncbi.nlm.nih.gov/books/NBK25500/" target="_blank">e-utils tools</a>,
+                     and <a href="https://europepmc.org/" target="_blank">Europe PMC</a>, see
+                     <a href="https://europepmc.org/RestfulWebService" target="_blank">RESTful services</a>.
+                     Biotea adds a semantic
+                     layer on top of JATS as well as an easy way to access content, via annotations, with no need to
+                     expose it all.
+                  </p>
+
+                  <h3>Summarization</h3>
+                  <p>
+                     As a user, I want to see a summary similar to those for movies when I search for articles. This would become possible thanks to Schema.org/Bioschemas
+                      markup, providing a quick view of the publication.
+                  </p>
+                  <p>
+                     Imagine you go to Google Scholar or Wikidata (or any other place aggregating scholarly
+                     publications metadata (it could be your institute or your own aggregating tool), thanks to Bioschemas markup, such
+                     websites could also include a summary of, for instance, citing publications on the last 3 months!
+                  </p>
+
+                  <h3>Interoperability</h3>
+                  <p>
+                     As a user, I would like to know what publications involve proteins; even more, I would like to know what proteins
+                     are mentioned in the text.
+                  </p>
+                  <p>
+                     By adding some "about" data to literature markup, e.g., proteins, it could be possible
+                     to filter publications by the BioChemEntity they mention.
+                  </p>
+
+               </section>
+            </div>
+        </div>
+    </div>
+    {% include footer.html %}
+
+
+
+
+
+    </body>
+
+    </html>
