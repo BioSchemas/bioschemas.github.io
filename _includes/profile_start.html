@@ -79,7 +79,7 @@
    <br />
    <br />
    {%for branch_name in page.hierarchy %}
-   {% if branch_name == "BioChemEntity" or branch_name == "DataRecord" or branch_name == "LabProtocol" or branch_name == "Gene" or branch_name == "Protein" or branch_name == "Sample" or branch_name == "Taxon" or branch_name == "MolecularEntity" %}
+   {% if branch_name == "BioChemEntity" or branch_name == "DataRecord" or branch_name == "LabProtocol" or branch_name == "Gene" or branch_name == "Protein" or branch_name == "Sample" or branch_name == "Taxon" or branch_name == "TaxonName" or branch_name == "MolecularEntity" %}
    <a href="/{{branch_name}}/">{{branch_name}}</a>
    {% else %}
    <a href="http://schema.org/{{branch_name}}">{{branch_name}}</a>
@@ -103,31 +103,31 @@
    {% else %}
    <p>{{page.spec_info.description}}</p>
    {% endif %}
-   
+
    <h3>Latest profiles</h3>
-   {% assign profile_versions = site.data.profile_versions[page.name] %}   
+   {% assign profile_versions = site.data.profile_versions[page.name] %}
    {% if profile_versions.latest_release != null %}
-   <p>Latest release: <a href="/profiles/{{page.name}}/{{profile_versions.latest_release}}/">{{profile_versions.latest_release}}</a></p>   
+   <p>Latest release: <a href="/profiles/{{page.name}}/{{profile_versions.latest_release}}/">{{profile_versions.latest_release}}</a></p>
    {% else %}
    <p>Latest release: none</p>
-   {% endif %}   
+   {% endif %}
    {% if profile_versions.latest_publication != null %}
-   <p>Latest draft: <a href="/profiles/{{page.name}}/{{profile_versions.latest_publication}}">{{profile_versions.latest_publication}}</a></p>   
+   <p>Latest draft: <a href="/profiles/{{page.name}}/{{profile_versions.latest_publication}}">{{profile_versions.latest_publication}}</a></p>
    {% endif %}
 
-   
+
    <h3>Previous profiles</h3>
    {% assign prev_version = page.previous_version %}
    {% if prev_version != null %}
-   <p>Previous version: <a href="/profiles/{{page.name}}/{{page.previous_version}}">{{page.previous_version}}</a></p>   
+   <p>Previous version: <a href="/profiles/{{page.name}}/{{page.previous_version}}">{{page.previous_version}}</a></p>
    {% else %}
    <p>Previous version: none</p>
    {% endif %}
    {% assign prev_release = page.previous_release %}
-   {% if prev_release != null %}   
-   <p>Previous release: <a href="/profiles/{{page.name}}/{{page.previous_release}}">{{page.previous_release}}</a></p>   
+   {% if prev_release != null %}
+   <p>Previous release: <a href="/profiles/{{page.name}}/{{page.previous_release}}">{{page.previous_release}}</a></p>
    {% endif %}
-   
+
    <br />
 </section>
 <section id="tab3Content" class="tabs">
