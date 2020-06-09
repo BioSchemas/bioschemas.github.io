@@ -158,7 +158,7 @@ Study:
 
 Taxon:
     name: "Taxon"
-    latest_publication:
+    latest_publication: "0.7-DRAFT"
     latest_release: "0.6-RELEASE"
     status: "active"
 
