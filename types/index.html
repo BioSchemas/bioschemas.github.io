@@ -113,7 +113,7 @@ redirect_from:
       {% if site.data.type_versions[spec.name].latest_publication != nill %}
 	  {% if spec.version == site.data.type_versions[spec.name].latest_publication %}
     <tr>
-        <th><a href="/types/{{spec.name}}" title="{{spec.subtitle}}">{{ spec.name }}</a><br />(v{{spec.version}})<br />{{spec.dateModified}}</th>
+        <th><a href="/types/{{spec.name}}/{{spec.version}}" title="{{spec.subtitle}}">{{ spec.name }}</a><br />(v{{spec.version}})<br />{{spec.dateModified}}</th>
         <td>
         {% assign group = site.groups | where:"identifier", spec.group | first %}
         <a href="{{group.url}}">{{group.name}}</a>

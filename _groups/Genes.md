@@ -29,10 +29,6 @@ types:
   [
     'Gene'
   ]
-draft_types:
-  [
-    'Gene'
-  ]
 
 members:
     - OlgaXimenaGiraldo

@@ -1,7 +1,7 @@
       <tr>
           {% assign date_time = spec.spec_info.version_date %}
-          <th><a href="/profiles/{{spec.name}}" title="{{ spec.spec_info.subtitle }}">{{ spec.spec_info.title }}</a><br />(v{{spec.spec_info.version}})<br />{{ date_time | date_to_long_string }}
-          
+          <th><a href="/profiles/{{spec.name}}/{{spec.spec_info.version}}" title="{{ spec.spec_info.subtitle }}">{{ spec.spec_info.title }}</a><br />(v{{spec.spec_info.version}})<br />{{ date_time | date_to_long_string }}
+
           	{% if site.data.profile_versions[spec.name].status == "deprecated" %}
           	<p>deprecated on: {{site.data.profile_versions[spec.name].deprecated_date }}<p>
           	{% endif %}
@@ -14,7 +14,7 @@
             {% endfor %}
           </td>
           <td class="spec_links">
-            {% if spec.use_cases_url == '' %}
+            {% if spec.use_cases_url == '' or spec.use_cases_url == nil %}
             <a>
             <img src="/images/use_case_spec.png" alt="View BioSchemas {{ spec.spec_info.title }} Use Cases"  style="filter: grayscale(100%);">
             </a>

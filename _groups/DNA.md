@@ -23,7 +23,7 @@ specifications:
     'DNA'
   ]
 
-draft_types:
+types:
   [
     'DNA'
   ]
