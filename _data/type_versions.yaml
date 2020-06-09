@@ -114,5 +114,11 @@ Taxon:
     latest_release: "0.3-RELEASE-2019_11_18"
     status: "active"
 
+TaxonName:
+    name: "TaxonName"
+    latest_publication: "0.1-DRAFT"
+    latest_release:
+    status: "active"
+
 
 ---
