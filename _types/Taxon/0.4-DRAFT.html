@@ -1,17 +1,12 @@
 ---
 redirect_from:
-- "/types/Taxon/specification"
-- "/types/Taxon/specification/"
-- "/Taxon"
-- "/Taxon/"
-- "/types/Taxon"
+- "/types/drafts/Taxon/"
+
+previous_version: '0.3-RELEASE-2019_11_18'
+previous_release: '0.3-RELEASE-2019_11_18'
 
 
-previous_version: '0.3-DRAFT-2019_11_14'
-previous_release: '0.1-RELEASE-2018_11_09'
-
-
-dateModified: 2019-06-14
+dateModified: 2020-06-09
 description: "A set of organisms asserted to represent a natural cohesive biological unit."
 hierarchy:
 - Thing
@@ -20,8 +15,8 @@ group: biodiversity
 name: Taxon
 parent_type: Thing
 spec_type: Type
-status: release #Revert to revision when working on the next version
-version: '0.3-RELEASE-2019_11_18'
+status: revision #Revert to revision when working on the next version
+version: '0.4-DRAFT'
 
 bsc: #0B794B;
 pending: #0000CC;
@@ -43,7 +38,7 @@ external: #454547;
               <section id="main_content" class="inner">
                 {% include type_start.html %}
 
-                <table class="bioschemas_properties bsc_type">
+                <table class="bioschemas_properties definition-table bsc_type">
                    <thead>
                       <tr>
                          <th>Property</th>
@@ -90,6 +85,14 @@ external: #454547;
                          Inverse property: <span style="color: #0B794B;">childTaxon</span>
                        </td>
                      </tr>
+                     <tr typeof="rdfs:Property" resource="#scientificName">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#scientificName">scientificName</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="/TaxonName" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/TaxonName">TaxonName</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="/Taxon"></td><td class="prop-desc" property="rdfs:comment">A TaxonName representing the currently valid (zoological) or accepted (botanical) name for that taxon.</td></tr>
                      <tr id="taxonRank">
                        <th style="color: #0B794B;">taxonRank</th>
                        <td>
