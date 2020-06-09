@@ -110,7 +110,7 @@ Study:
 
 Taxon:
     name: "Taxon"
-    latest_publication: 
+    latest_publication: "0.4-DRAFT"
     latest_release: "0.3-RELEASE-2019_11_18"
     status: "active"
 
