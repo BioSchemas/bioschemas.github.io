@@ -4,7 +4,7 @@ id: GianluigiZanetti
 first-name: Gianluigi
 last-name: Zanetti
 affiliation: CRS4
-homepage: http://www.crs4.it/peopledetails/7/gianluigi-zanetti/
+homepage: https://www.crs4.it/remembering/gianluigi-zanetti/
 github_username:
 orcid:
 ---
