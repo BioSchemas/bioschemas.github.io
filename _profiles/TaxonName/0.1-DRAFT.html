@@ -18,7 +18,8 @@ live_deploy: /liveDeploys/
 parent_type: TaxonName
 hierarchy:
 - Thing
-- Taxon
+- CreativeWork
+- TaxonName
 
 # spec_info content generated using GOWeb
 # DO NOT MANUALLY EDIT THE CONTENTspec_info:
@@ -29,10 +30,10 @@ spec_info:
   description: This profile povides a way to denote the scientific names of a taxon.
     The taxon accepted/valid name is linked to the taxon with property scientificName
     while the synonyms are linked with property alternateScientificName.
-  version: 0.1-DRAFT-2020_02_14
-  version_date: 20200214T142112
+  version: 0.1-DRAFT
+  version_date: 20200609T164927
   official_type: http://schema.org/TaxonName
-  full_example: https://github.com/BioSchemas/specifications/tree/master/TaxonName/examples/
+  full_example: https://github.com/BioSchemas/specifications/tree/master/TaxonName/0.1-DRAFT_examples
 mapping:
 - property: additionalType
   expected_types:
@@ -49,14 +50,14 @@ mapping:
     TDWG: http://rs.tdwg.org/ontology/voc/TaxonName#TaxonName'
   marginality: Optional
   cardinality: MANY
-  controlled_vocab: ""
-  example: |
+  controlled_vocab: |
     "@context": [
           "http://schema.org",
           { "tn": " http://rs.tdwg.org/ontology/voc/TaxonName#" }
       ],
     "@type" : "TaxonName",
     "additionalType": "tn:TaxonName"
+  example: ""
 - property: author
   expected_types:
   - Organization
@@ -64,7 +65,7 @@ mapping:
   description: The author of this content or rating. Please note that author is special
     in that HTML 5 provides a special mechanism for indicating authorship via the
     rel tag. That is equivalent to this and may be used interchangeably.
-  type: schema.org
+  type: ""
   type_url: ""
   bsc_description: Authorship and date information associated to this taxon name,
     formatted as per the numenclatural rules
@@ -84,7 +85,7 @@ mapping:
   type_url: ""
   bsc_description: ""
   marginality: Optional
-  cardinality: ""
+  cardinality: ONE
   controlled_vocab: ""
   example: ""
 - property: identifier
@@ -92,8 +93,10 @@ mapping:
   - PropertyValue
   - Text
   - URL
-  description: |
-    The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See background notes for more details.
   type: ""
   type_url: ""
   bsc_description: "A PropertyValue should be used to relate the taxon name with counterpart
@@ -117,8 +120,10 @@ mapping:
 - property: isBasedOn
   expected_types:
   - CreativeWork
-  description: 'A resource from which this work is derived or from which it is a modification
-    or adaption. Supersedes, isBasedOnUrl. '
+  - Product
+  - URL
+  description: A resource from which this work is derived or from which it is a modification
+    or adaption. Supersedes isBasedOnUrl.
   type: ""
   type_url: ""
   bsc_description: A CreativeWork, such as a scholarly article that coined the name
@@ -153,9 +158,9 @@ mapping:
   - PropertyValue
   - Text
   - URL
-  description: The taxonomic rank of this taxon name given preferably as a URI from
-    a controlled vocabulary (e.g. the ranks from TDWG TaxonRank ontology or equivalent
-    Wikidata URIs)
+  description: The taxonomic rank of this taxon given preferably as a URI from a controlled
+    vocabulary – (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata
+    URIs).
   type: bioschemas
   type_url: ""
   bsc_description: ""
