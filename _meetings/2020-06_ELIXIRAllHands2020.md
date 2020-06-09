@@ -17,10 +17,11 @@ attendees:
 
 During the ELIXIR All Hands Meeting 2020, the Interoperability Platform session will be dedicated to matters relating to the Bioschemas Strategic Implementation Study. Details of this session are in the [agenda document]({{agenda-doc}}).
 
-We have had two abstracts accepted for presentation at the ELIXIR All Hands Meeting 2020. The full abstracts are included below.
+We have had two abstracts and one poster accepted for presentation at the ELIXIR All Hands Meeting 2020. The full abstracts are included below.
 
 - [Exploiting Bioschemas Markup to Support ELIXIR Communities](#exploiting-bioschemas-markup-to-support-elixir-communities) accepted into the short talks session taking place on Wednesday 10 June at 10:00 (CEST)
 - [Discovering Biodiversity Resources on the Web](#discovering-biodiversity-resources-on-the-web) accepted into the [Biodiversity mini-symposium](https://docs.google.com/document/d/11NDVkT5baCmFfA0bUdIxCauiKhfQofQPiXkJsnVAbP0/edit?usp=sharing) taking place on Monday 8 June at 12:00 (CEST)
+- [eDGAR and PhenPath resources join the Bioschemas Community](#edgar-and-phenpath-resources-join-the-bioschemas-community)
 
 
 ## Exploiting Bioschemas Markup to Support ELIXIR Communities
@@ -44,3 +45,22 @@ Bioschemas is an approach to make life sciences resources more discoverable by e
 The Bioschemas community now has proposals for 17 types that extend the Schema.org vocabulary to enable it to be used by the life sciences community. These include types such as Taxon, BioSample, and Phenotype, that are directly relevant to the Biodiversity community. There are deployments of these at the National Museum of Natural History of Paris and the Botanical Collections at the Meise Botanic Garden, Belgium.
 
 To enable ELIXIR communities to exploit Bioschemas markup to populate community search portals, we have developed the B-MUSE directed crawler. B-MUSE will extract Bioschemas markup from a given set of pages or identifier pattern and make the structured content available for search. This approach has been demonstrated using the ELIXIR TeSS training portal, and is in active development in other ELIXIR communities, viz Rare Diseases, Plants, and Intrinsically Disordered Proteins.
+
+## eDGAR and PhenPath resources join the Bioschemas Community
+
+_Giulia Babbi, Leyla Garcia, Alasdair Gray, Pier Luigi Martelli, and Rita Casadio_
+
+Modern sequencing technologies allow dissecting the genetic component of phenotypic traits, particularly in relation to diseases. The number of known associations   between   genes   and   diseases   or   phenotypes   is   increasing; however,   the   information   is   still   sparse   among   different   resources.   The integrative analysis of different data is fundamental for the elucidation of the molecular mechanisms at the basis of the pathogenesis. To support this type of research, we recently developed eDGAR (edgar.biocomp.unibo.it) and PhenPath (phenpath.biocomp.unibo.it).
+
+eDGAR   is   a   database   collecting   and   organizing   data   on   gene/disease associations as derived from OMIM, Humsavar and ClinVar. eDGAR lists 2672 diseases related to 3658 different genes, for a total of 5729 gene-disease associations. eDGAR provides analysis on the sets of genes involved in the same disease, in terms of physical, functional, and regulatory interactions, as derived from PDB, BIOGRID, STRING, CORUM, and TRRUST. Moreover, eDGAR exploits   the   network-based   enrichment   algorithm   NET-GE   (net-ge.biocomp.unibo.it/enrich) to provide a functional characterization of these gene sets in terms of Gene Ontology terms and Pathways from KEGG and Reactome. With a similar idea, PhenPath extends the analysis to phenotypes associated with different diseases following the Human Phenotype Ontology and   of   the   OMIM   Clinical   Synopsys.   With   our   resource,   researchers   and physicians can easily associate genes to more than 7000 phenotypes and characterize   biological   pathways/processes   for   a   deeper   understanding   of molecular mechanisms and possible cures.
+
+To make resources fully exploitable, to improve the FAIRness of the data and analyses they provide, we marked them up with Bioschemas profiles: this
+implementation enables data interoperability and findability, allowing search engines and other resources to index and retrieve relevant information.
+
+Both resources have been endowed with Bioschemas profiles for different entities. In particular:
+1. Dataset, DataCatalog, Gene, Protein are marked-up for eDGAR
+2. Dataset, DataCatalog, and Phenotypes are marked up for PhenPath.
+
+Last versions of Bioschemas profiles have been adopted; in particular, this work represents the first adoption of the Phenotype profile. The profile for Phenotype was   developed   in   a   preliminary   draft   form   in   2018,   and   its   further implementations   are   now   a   topic   for   Bioschemas   community.   Recently Schema.org releases a type for MedicalSignOrSymptom, and the marking up of Phenotype profile could be a step forward in the directions of developing a profile   that,   starting   from   the   existing   type   in   Schema.org,   included characteristics that are crucial for the life sciences.
+
+This implementation provides a test for the efficacy and the completeness of the current profile and will help the definition of the requirements for its improvement, following the community needs and suggestions.
