@@ -797,30 +797,30 @@ list:
     comments:
     node: UK
 -
-    name: COVID-19 WorkflowHub
+    name: WorkflowHub
     highlight:
-    example_URL: https://covid19.workflowhub.eu/
-    resource_URL: https://covid19.workflowhub.eu/
+    example_URL: https://www.workflowhub.eu/
+    resource_URL: https://www.workflowhub.eu/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.3
     comments:
     node: UK
 -
-    name: COVID-19 WorkflowHub
-    highlight: 17 Covid-19 specific workflows
-    example_URL: https://covid19.workflowhub.eu/workflows/18
-    resource_URL: https://covid19.workflowhub.eu/
+    name: WorkflowHub
+    highlight: 31 workflows
+    example_URL: https://www.workflowhub.eu/workflows/18
+    resource_URL: https://www.workflowhub.eu/
     schema_org: SoftwareSourceCode
     bsc_profile: Workflow
     bsc_ver: 0.4-DRAFT
     comments:
     node: UK
 -
-    name: COVID-19 WorkflowHub
-    highlight: 20 people
-    example_URL: https://covid19.workflowhub.eu/people/9
-    resource_URL: https://covid19.workflowhub.eu/
+    name: WorkflowHub
+    highlight: 35 people
+    example_URL: https://www.workflowhub.eu/people/9
+    resource_URL: https://www.workflowhub.eu/
     schema_org: Person
     bsc_profile: Person
     bsc_ver: 0.2-DRAFT
