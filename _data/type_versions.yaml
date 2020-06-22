@@ -62,7 +62,7 @@ MolecularEntity:
 
 Phenotype:
     name: "Phenotype"
-    latest_publication: "0.2-DRAFT-2019_06_21"
+    latest_publication: "0.3-DRAFT-2020_06_07"
     latest_release:
     status: "active"
 
@@ -110,8 +110,14 @@ Study:
 
 Taxon:
     name: "Taxon"
-    latest_publication: 
+    latest_publication: "0.4-DRAFT"
     latest_release: "0.3-RELEASE-2019_11_18"
+    status: "active"
+
+TaxonName:
+    name: "TaxonName"
+    latest_publication: "0.1-DRAFT"
+    latest_release:
     status: "active"
 
 

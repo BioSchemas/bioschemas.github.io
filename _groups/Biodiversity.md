@@ -22,12 +22,12 @@ objectives:
   ]
 specifications:
   [
-    'Taxon'
+    'Taxon', 'TaxonName'
   ]
 
 types:
   [
-    'Taxon'
+    'Taxon', 'TaxonName'
   ]
 
 members:
