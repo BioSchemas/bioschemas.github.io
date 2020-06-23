@@ -42,6 +42,12 @@ Enzyme:
     latest_release:
     status: "active"
 
+FormalParameter:
+    name: "FormalParameter"
+    latest_publication: "0.1-DRAFT-2020_06_23"
+    latest_release:
+    status: "active"
+
 Gene:
     name: "Gene"
     latest_publication:
@@ -117,6 +123,12 @@ Taxon:
 TaxonName:
     name: "TaxonName"
     latest_publication: "0.1-DRAFT"
+    latest_release:
+    status: "active"
+
+Workflow:
+    name: "workflow"
+    latest_publication: "0.5-DRAFT_2020_06_23"
     latest_release:
     status: "active"
 

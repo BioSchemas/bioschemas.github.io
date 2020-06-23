@@ -54,6 +54,12 @@ Event:
     latest_release:
     status: "active"
 
+FormalParameter:
+    name: "FormalParameter"
+    latest_publication: "0.1-DRAFT-2020_06_23"
+    latest_release:
+    status: "active"
+
 Gene:
     name: "Gene"
     latest_publication:
@@ -182,7 +188,7 @@ TrainingMaterial:
 
 Workflow:
     name: "Workflow"
-    latest_publication: "0.4-DRAFT-2020_05_11"
+    latest_publication: "0.5-DRAFT-2020_06_23"
     latest_release:
     status: "active"
 

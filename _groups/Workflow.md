@@ -23,7 +23,14 @@ objectives:
 
 specifications:
   [  
-    'Workflow'
+    'Workflow',
+    'FormalParameter'
+  ]
+  
+types:
+  [  
+    'Workflow',
+    'FormalParameter'
   ]
   
 members:
