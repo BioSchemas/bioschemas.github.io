@@ -66,6 +66,16 @@ list:
     comments:
     node: EBI
 -
+    name: EGA
+    highlight: over 3,700 studies
+    example_URL: https://ega-archive.org/studies/EGAS00000000001
+    resource_URL: https://ega-archive.org/
+    schema_org: Study
+    bsc_profile: Study
+    bsc_ver: 0.1
+    comments:
+    node: EBI
+-
     name: Isaexplorer
     highlight:
     example_URL: http://scientificdata.isa-explorer.org/
