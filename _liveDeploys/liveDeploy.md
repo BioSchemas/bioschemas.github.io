@@ -805,7 +805,8 @@ list:
     bsc_profile: Dataset
     bsc_ver: 0.3
     comments:
-    node: CZ
+    node: CH
+    type: CDR
 -
     name: Scholia
     highlight: More than 2.7M pages annotated with Taxon
