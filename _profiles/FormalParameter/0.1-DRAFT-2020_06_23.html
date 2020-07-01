@@ -19,16 +19,17 @@ cross_walk_url:
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20FormalParameter
 live_deploy: ''
 
-parent_type: SoftwareSourceCode
+parent_type: FormalParameter
 hierarchy:
 - Thing
+- Intangible
 - FormalParameter
 
 # spec_info content generated using GOWeb
 # DO NOT MANUALLY EDIT THE CONTENT
 spec_info:
   title: FormalParameter
-  subtitle: A formal parameter is a slot that may be satisfied when the workflow is run. It appears as an Input or Output of a Workflow
+  subtitle: A formal parameter is a slot that may be satisfied when the workflow is run. It appears as an Input or Output of a Workflow 
   version: 0.1-DRAFT-2020_06_23
   version_date: 20200623T122152
   official_type: 'http://schema.org/FormalParameter '
@@ -102,18 +103,6 @@ mapping:
   cardinality: MANY
   controlled_vocab: ""
   example: ""
-- property: mandatory
-  expected_types:
-  - Boolean
-  description: If the FormalParameter must be specified. This is commonly only used
-    for Inputs
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
 - property: name
   expected_types:
   - Text
@@ -122,6 +111,18 @@ mapping:
   type_url: ""
   bsc_description: ""
   marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: valueRequired
+  expected_types:
+  - Boolean
+  description: If the FormalParameter must be specified. This is commonly only used
+    for Inputs
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
   example: ""

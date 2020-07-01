@@ -127,8 +127,8 @@ TaxonName:
     status: "active"
 
 Workflow:
-    name: "workflow"
-    latest_publication: "0.5-DRAFT_2020_06_23"
+    name: "Workflow"
+    latest_publication: "0.5-DRAFT-2020_06_23"
     latest_release:
     status: "active"
 
