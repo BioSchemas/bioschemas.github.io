@@ -5,6 +5,11 @@ redirect_from:
 - examples/
 - about/
 layout: default
+
+# Community Call details
+call-minutes: https://docs.google.com/document/d/1kd5F97ogdiPNhLTnkei-RVR8TC8Ohpc5QSPX3KsfDrk
+call-link: https://global.gotomeeting.com/join/415277165
+call-date: 2020-07-27T15:00BST
 ---
 <div id="landing" itemscope itemtype="http://schema.org/Organization">
    <meta itemprop="logo" content="http://bioschemas.org/images/square_logo2.png"/>
@@ -73,6 +78,20 @@ layout: default
 
                 <section class="upcoming-events">
                     <h3>Upcoming events</h3>
+                    <!-- Block for monthly community call -->
+                    <div class="event" itemscope itemtype="http://schema.org/Event">
+                        <strong><span class="title" itemprop="name">Monthly Community Call</span></strong>
+                        <p>The Bioschemas Community Call takes place on the 4th Monday of each month at 15:00 UK time.</p>
+                        <ul>
+                            <li><strong>Next call: {{ page.call-date | date: "%e %B, %Y %H:%M %Z" }}</strong>
+                              <meta itemprop="startDate" content="{{ page.call-date}}"/>
+                              <meta itemprop="endDate" content="{{ page.call-date }}"/></li>
+                            <li><a href="{{ page.call-minutes }}">Agenda</a></li>
+                            <li><a href="{{ page.call-link }}"><span itemprop="location">GoToMeeting</span></a></li>
+                        </ul>
+                    </div class="event">
+                    <!-- End of block for monthly community call -->
+                    <!-- Block for displaying next 3 meetings -->
                     {% assign sorted_meetings = site.meetings | sort: 'start_date' %}
                     {% assign count = 0 %}
                     {% for meeting in sorted_meetings %}
@@ -107,6 +126,7 @@ layout: default
                     {% break %}
                     {% endif %}
                     {% endfor %}
+                    <!-- End of block for showing next 3 meetings -->
                 </section>
                 <hr>
                 <section>
