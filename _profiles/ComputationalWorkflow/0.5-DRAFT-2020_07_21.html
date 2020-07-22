@@ -1,12 +1,12 @@
 ---
 redirect_from:
-- "devSpecs/Workflow/specification"
-- "devSpecs/Workflow/specification/"
-- "/devSpecs/Workflow/"
-- "/specifications/drafts/Workflow"
-- "/profiles/Workflow/"
+- "devSpecs/ComputationalWorkflow/specification"
+- "devSpecs/ComputationalWorkflow/specification/"
+- "/devSpecs/ComputationalWorkflow/"
+- "/specifications/drafts/ComputationalWorkflow"
+- "/profiles/ComputationalWorkflow/"
 
-name: Workflow
+name: ComputationalWorkflow
 
 previous_version: 0.4-DRAFT-2020_05_11
 previous_release:
@@ -15,31 +15,32 @@ status: revision
 spec_type: Profile
 group: workflow
 use_cases_url:
-cross_walk_url: https://docs.google.com/spreadsheets/d/10nptDOo0WCulyyZ2kXWoIF0Coq_hzd2SD1IEJCKHLz4/edit
+cross_walk_url: https://docs.google.com/spreadsheets/d/1O4kdba-_iHtRnoydfXelrGyuvZxJMGDBrPll9-hJsLw/edit#gid=1483018794
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Workflow
-live_deploy: ''
+live_deploy: /liveDeploys/
 
-parent_type: Workflow
+parent_type: ComputationalWorkflow
 hierarchy:
 - Thing
 - CreativeWork
 - SoftwareSourceCode
-- Workflow
+- ComputationalWorkflow
 
 # spec_info content generated using GOWeb
 # DO NOT MANUALLY EDIT THE CONTENT
 spec_info:
-  title: Workflow
-  subtitle: Bioschemas specification for describing a workflow in the Life Sciences
-  description: A workflow consists of an orchestrated and repeatable pattern of activity
-    enabled by the systematic organization of resources into processes that transform
-    materials, provide services, or process information. It can be depicted as a sequence
-    of operations, the work of a person or group, the work of an organization of staff,
-    or one or more simple or complex mechanisms. (source Wikipedia.org)
-  version: 0.5-DRAFT-2020_06_23
-  version_date: 20200623T122152
-  official_type: 'http://schema.org/Workflow '
-  full_example: pending resolution of issues
+  title: ComputationalWorkflow
+  subtitle: Bioschemas specification for describing a computational workflow in the
+    Life Sciences
+  description: A computational workflow consists of an orchestrated and repeatable
+    pattern of activity enabled by the systematic organization of resources into processes
+    that transform materials, provide services, or process information (source Wikipedia.org).
+    It is executed by a computational process and is thus distinct from laboratory
+    or business workflows.
+  version: 0.5-DRAFT-2020_07_21
+  version_date: 20200722T044734
+  official_type: http://bioschemas.org/ComputationalWorkflow
+  full_example: ""
 mapping:
 - property: alternateName
   expected_types:

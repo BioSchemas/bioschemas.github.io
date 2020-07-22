@@ -18,6 +18,12 @@ ChemicalSubstance:
     latest_release: "0.4-RELEASE"
     status: "active"
 
+ComputationalWorkflow:
+    name: "ComputationalWorkflow"
+    latest_publication: "0.5-DRAFT-2020_07_21"
+    latest_release:
+    status: "active"
+
 Course:
     name: "Course"
     latest_publication: "0.7-DRAFT-2019_11_08"
@@ -56,7 +62,7 @@ Event:
 
 FormalParameter:
     name: "FormalParameter"
-    latest_publication: "0.1-DRAFT-2020_06_23"
+    latest_publication: "0.1-DRAFT-2020_07_21"
     latest_release:
     status: "active"
 
@@ -183,12 +189,6 @@ Tool:
 TrainingMaterial:
     name: "TrainingMaterial"
     latest_publication: "0.7-DRAFT-2019_11_08"
-    latest_release:
-    status: "active"
-
-Workflow:
-    name: "Workflow"
-    latest_publication: "0.5-DRAFT-2020_06_23"
     latest_release:
     status: "active"
 

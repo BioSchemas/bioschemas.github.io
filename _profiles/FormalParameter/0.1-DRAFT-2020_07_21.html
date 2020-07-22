@@ -1,0 +1,146 @@
+---
+name: FormalParameter
+
+previous_version:
+previous_release:
+
+status: revision
+spec_type: Profile
+group: workflow
+use_cases_url:
+cross_walk_url: https://docs.google.com/spreadsheets/d/1VKntwxkgjvup6yfzaPZsBN3h5aKWU5nuTKGEds3GzeQ/edit#gid=1483018794
+gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Workflow
+live_deploy: /liveDeploys/
+
+parent_type: FormalParameter
+hierarchy:
+- Thing
+- Intangible
+- FormalParameter
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: FormalParameter
+  subtitle: Bioschemas specification for describing a formal parameter in the Life
+    Sciences.
+  description: A FormalParameter is an identified variable used to stand for the actual
+    value(s) are consumed/produced by a ComputationalWorkflow
+  version: 0.1-DRAFT-2020_07_21
+  version_date: 20200721T070439
+  official_type: http://schema.org/FormalParameter
+  full_example: pending resolution of issues
+mapping:
+- property: additionalType
+  expected_types:
+  - URL
+  description: An additional type for the item, typically used for adding more specific
+    types from external vocabularies in microdata syntax. This is a relationship between
+    something and a class that the thing is in. In RDFa syntax, it is better to use
+    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
+    tools may have only weaker understanding of extra types, in particular those defined
+    externally.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: http://edamontology.org/data_0006
+  example: ""
+- property: defaultValue
+  expected_types:
+  - Thing
+  description: The default value for the FormalParameter. This is commonly only used
+    for Inputs.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: The description may include verbatim the Workflow's description
+    of the FormalParameter and its type
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: encodingFormat
+  expected_types:
+  - Text
+  - URL
+  description: URLs to accepted formats
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: http://edamontology.org/format_1915
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See background notes for more details.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: valueRequired
+  expected_types:
+  - Boolean
+  description: If the FormalParameter must be specified. This is commonly only used
+    for Inputs
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  <div class="spec-table-wrapper">
+                    {% include specification_table.html %}
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

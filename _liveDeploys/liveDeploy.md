@@ -879,8 +879,8 @@ list:
 -
     name: WorkflowHub
     highlight:
-    example_URL: https://www.workflowhub.eu/
-    resource_URL: https://www.workflowhub.eu/
+    example_URL: https://workflowhub.eu/
+    resource_URL: https://workflowhub.eu/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
     bsc_ver: 0.3
@@ -889,18 +889,28 @@ list:
 -
     name: WorkflowHub
     highlight: 31 workflows
-    example_URL: https://www.workflowhub.eu/workflows/18
-    resource_URL: https://www.workflowhub.eu/
-    schema_org: SoftwareSourceCode
-    bsc_profile: Workflow
-    bsc_ver: 0.4-DRAFT
+    example_URL: https://workflowhub.eu/workflows/18
+    resource_URL: https://workflowhub.eu/
+    schema_org: ComputationalWorkflow
+    bsc_profile: ComputationalWorkflow
+    bsc_ver: 0.5-DRAFT
+    comments:
+    node: UK
+-
+    name: WorkflowHub
+    highlight: 31 workflows
+    example_URL: https://workflowhub.eu/workflows/18
+    resource_URL: https://workflowhub.eu/
+    schema_org: FormalParameter
+    bsc_profile: FormalParameter
+    bsc_ver: 0.1-DRAFT
     comments:
     node: UK
 -
     name: WorkflowHub
     highlight: 35 people
-    example_URL: https://www.workflowhub.eu/people/9
-    resource_URL: https://www.workflowhub.eu/
+    example_URL: https://workflowhub.eu/people/9
+    resource_URL: https://workflowhub.eu/
     schema_org: Person
     bsc_profile: Person
     bsc_ver: 0.2-DRAFT

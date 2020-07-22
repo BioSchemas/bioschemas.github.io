@@ -5,23 +5,28 @@ redirect_from:
 - "/devTypes/Workflow/"
 - "/Workflow"
 - "/types/Workflow"
+- "devTypes/ComputationalWorkflow/specification"
+- "devTypes/ComputationalWorkflow/specification/"
+- "/devTypes/ComputationalWorkflow/"
+- "/ComputationalWorkflow"
+- "/types/ComputationalWorkflow"
 
 previous_version:
 previous_release: 
 
-dateModified: 2020-06-23
-description: "A workflow consists of an orchestrated and repeatable pattern of activity enabled by the systematic organization of resources into processes that transform materials, provide services, or process information. It can be depicted as a sequence of operations, the work of a person or group, the work of an organization of staff, or one or more simple or complex mechanisms. (source Wikipedia.org)"
+dateModified: 2020-07-21
+description: "A computational workflow consists of an orchestrated and repeatable pattern of activity enabled by the systematic organization of resources into processes that transform materials, provide services, or process information (source Wikipedia.org). It is executed by a computational process and is thus distinct from laboratory or business workflows."
 hierarchy:
 - Thing
 - CreativeWork
 - SoftwareSourceCode
 gh_tasks: https://github.com/BioSchemas/specifications/labels/type%3A%20Workflow
 group: workflow
-name: Workflow
+name: ComputationalWorkflow
 parent_type: SoftwareSourceCode
 spec_type: Type
 status: revision
-version: '0.1-DRAFT-2020_06_23'
+version: '0.1-DRAFT-2020_07_21'
 
 bsc: #0B794B;
 pending: #0000CC;
@@ -43,13 +48,14 @@ external: #454547;
                 {% include type_start.html %}
 
 <table class="definition-table bsc_type">
+
         <thead>
   <tr><th>Property</th><th>Expected Type</th><th>Description</th>               
   </tr>
   </thead>
 
 <tr class="supertype">
-     <th class="supertype-name" colspan="3">Properties from <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/Workflow">Workflow</a></th>
+     <th class="supertype-name" colspan="3">Properties from <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/ComputationalWorkflow">ComputationalWorkflow</a></th>
   
 </tr>
 
@@ -61,28 +67,28 @@ external: #454547;
 <code property="rdfs:label"><a   href="http://schema.org/funding">funding</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Grant" /><a title="Defined in extension: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/Grant">Grant</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Workflow"></td><td class="prop-desc" property="rdfs:comment">The funding for the workflow</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/input">
+<link  property="rangeIncludes" href="http://schema.org/Grant" /><a title="Defined in extension: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/Grant">Grant</a>&nbsp;<link property="domainIncludes" href="http://schema.org/ComputationalWorkflow"></td><td class="prop-desc" property="rdfs:comment">The funding for the workflow</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/input">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#input">input</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/FormalParameter" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#FormalParameter">FormalParameter</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Workflow"></td><td class="prop-desc" property="rdfs:comment">An input required to use the workflow (eg. Excel spreadsheet, BAM file)</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/output">
+<link  property="rangeIncludes" href="http://schema.org/FormalParameter" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#FormalParameter">FormalParameter</a>&nbsp;<link property="domainIncludes" href="http://schema.org/ComputationalWorkflow"></td><td class="prop-desc" property="rdfs:comment">An input required to use the computational workflow (eg. Excel spreadsheet, BAM file)</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/output">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#output">output</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/FormalParameter" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#FormalParameter">FormalParameter</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Workflow"></td><td class="prop-desc" property="rdfs:comment">An output produced by the workflow</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/softwareRequirements">
+<link  property="rangeIncludes" href="http://schema.org/FormalParameter" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#FormalParameter">FormalParameter</a>&nbsp;<link property="domainIncludes" href="http://schema.org/ComputationalWorkflow"></td><td class="prop-desc" property="rdfs:comment">An output produced by the computational workflow</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/softwareRequirements">
     
       <th class="prop-nam" scope="row">
 
 <code property="rdfs:label"><a   href="http://schema.org/softwareRequirements">softwareRequirements</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/SoftwareApplication"><link property="domainIncludes" href="http://schema.org/Workflow"></td><td class="prop-desc" property="rdfs:comment">Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime). Supersedes <a   href="http://schema.org/requirements">requirements</a>.</td></tr><tr class="supertype">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/ComputationalWorkflow"><link property="domainIncludes" href="http://schema.org/SoftwareApplication"></td><td class="prop-desc" property="rdfs:comment">Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime). Supersedes <a   href="http://schema.org/requirements">requirements</a>.</td></tr><tr class="supertype">
      <th class="supertype-name" colspan="3">Properties from <a   href="http://schema.org/SoftwareSourceCode">SoftwareSourceCode</a></th>
   
 </tr>
@@ -883,8 +889,6 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
 <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Thing"></td><td class="prop-desc" property="rdfs:comment">URL of the item.</td></tr>
 
 </table>
-		
-
                </section>
              </div>
            </div>
