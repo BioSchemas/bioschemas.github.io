@@ -30,7 +30,8 @@ spec_info:
     application where mixed up in the previous draft, they have being revised.</li>      <li>Short
     examples have been added per properties, see <a href=''https://github.com/BioSchemas/specifications/issues/179''>issue
     179</a>.</li>      <li>Links to the ontologies were revised.</li>      <li>Property
-    descriptions were revised.</li>      <li>Still pending: issue 331.</li>    </ul>'
+    descriptions were revised.</li>      <li>Description propery removed as we have now steps.</li>      
+    <li>Still pending: issue 331.</li>    </ul>'
   version: 0.4-DRAFT
   version_date: 20200723T141248
   official_type: http://bioschemas.org/LabProtocol
@@ -146,22 +147,6 @@ mapping:
     {
       "@type": "LabProtocol",
       "datePublished": "2014-10-01T19:30"
-    }
-- property: description
-  expected_types:
-  - Text
-  description: A description of the item.
-  type: ""
-  type_url: ""
-  bsc_description: Use it in LabProtocol to include the step by step process followed
-    in this protocol.
-  marginality: Recommended
-  cardinality: ONE
-  controlled_vocab: ""
-  example: |-
-    {
-      "@type": "LabProtocol",
-      "description": "Step 1: Use a solvent resistant maker... Step2: Record weight"
     }
 - property: identifier
   expected_types:
