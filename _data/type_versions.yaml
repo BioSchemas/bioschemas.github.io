@@ -24,6 +24,12 @@ ChemicalSubstance:
     latest_release: "0.3-RELEASE-2019_09_02"
     status: "active"
 
+ComputationalWorkflow:
+    name: "ComputationalWorkflow"
+    latest_publication: "0.1-DRAFT-2020_07_21"
+    latest_release:
+    status: "active"
+
 DataRecord:
     name: "DataRecord"
     latest_publication: "0.3-DRAFT-2019_06_20"
@@ -39,6 +45,12 @@ DNA:
 Enzyme:
     name: "Enzyme"
     latest_publication: "0.1-DRAFT-2019_06_20"
+    latest_release:
+    status: "active"
+
+FormalParameter:
+    name: "FormalParameter"
+    latest_publication: "0.1-DRAFT-2020_07_21"
     latest_release:
     status: "active"
 
@@ -119,6 +131,7 @@ TaxonName:
     latest_publication: "0.1-DRAFT"
     latest_release:
     status: "active"
+
 
 
 ---
