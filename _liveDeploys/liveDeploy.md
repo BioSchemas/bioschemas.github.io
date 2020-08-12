@@ -927,4 +927,14 @@ list:
     bsc_ver: 0.2-DRAFT
     comments:
     node: UK
+-
+    name: BridgeDb
+    highlight: 23 identifier mapping databases for genes, proteins, complexes, metabolites, and more
+    example_URL: https://bridgedb.github.io/data/gene_database/
+    resource_URL: https://bridgedb.github.io/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments:
+    node: NL
 ---
