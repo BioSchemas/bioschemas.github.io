@@ -809,6 +809,36 @@ list:
     type: CDR
 -
     name: Scholia
+    highlight:
+    example_URL: https://scholia.toolforge.org/gene/Q18030793
+    resource_URL: https://scholia.toolforge.org/
+    schema_org: Gene
+    bsc_profile: Gene
+    bsc_ver: 0.7
+    comments:
+    node: NL
+-
+    name: Scholia
+    highlight: More than 1M pages annotated with chemical compounds
+    example_URL: https://scholia.toolforge.org/chemical/Q18216
+    resource_URL: https://scholia.toolforge.org/
+    schema_org: MolecularEntity
+    bsc_profile: MolecularEntity
+    bsc_ver: 0.5
+    comments: Live statistics from https://scholia.toolforge.org/chemical/
+    node: NL
+-
+    name: Scholia
+    highlight:
+    example_URL: https://scholia.toolforge.org/protein/Q424728
+    resource_URL: https://scholia.toolforge.org/
+    schema_org: Protein
+    bsc_profile: Protein
+    bsc_ver: 0.11
+    comments:
+    node: NL
+-
+    name: Scholia
     highlight: More than 2.7M pages annotated with Taxon
     example_URL: https://scholia.toolforge.org/taxon/Q15978631
     resource_URL: https://scholia.toolforge.org/
