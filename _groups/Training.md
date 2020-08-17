@@ -46,6 +46,7 @@ members:
     - SarahMorgan    
     - LeylaGarcia
     - VictoriaDominguezDelAngel
+    - PatriciaPalagi
 
 Former-Members:    
     - ChrisTaylor
