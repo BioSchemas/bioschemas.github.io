@@ -753,7 +753,7 @@ list:
     resource_URL: https://disprot.org/
     schema_org: Protein
     bsc_profile: Protein
-    bsc_ver: 0.9-DRAFT
+    bsc_ver: 0.11
     comments:  
     node: IT
 -
