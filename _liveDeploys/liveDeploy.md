@@ -967,4 +967,13 @@ list:
     bsc_ver: 0.3
     comments:
     node: NL
+-
+    name: NanoCommons
+    example_URL: https://nanocommons.github.io/specifications/jrc/
+    resource_URL: https://www.nanocommons.eu/
+    schema_org: ChemicalSubstance
+    bsc_profile: ChemicalSubstance
+    bsc_ver: 0.4
+    comments:
+    node: NL
 ---
