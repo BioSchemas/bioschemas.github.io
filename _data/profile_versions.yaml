@@ -80,7 +80,7 @@ Journal:
 
 LabProtocol:
     name: "LabProtocol"
-    latest_publication: "0.4-DRAFT-2020_07_23"
+    latest_publication: "0.5-DRAFT-2020_09_01"
     latest_release:
     status: "active"
 
