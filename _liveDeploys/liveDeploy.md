@@ -978,7 +978,7 @@ list:
     node: NL
 -
     name: opalesurfcasting.net
-    highlight: Dataset attaching french leisure sea fishing legislation to taxon
+    highlight: Datasets attaching french leisure sea fishing legislation to taxons
     example_URL: https://www.opalesurfcasting.net/connaissances/faune-et-flore/le-saumon-de-l-atlantique-salmo-salar.html
     resource_URL: https://www.opalesurfcasting.net/
     schema_org: Dataset
