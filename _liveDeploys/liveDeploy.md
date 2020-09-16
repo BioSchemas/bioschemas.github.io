@@ -985,5 +985,5 @@ list:
     bsc_profile: Taxon
     bsc_ver: 0.4-DRAFT
     comments:    
-    node:
+    node: FR
 ---
