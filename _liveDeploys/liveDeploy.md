@@ -976,4 +976,14 @@ list:
     bsc_ver: 0.4
     comments:
     node: NL
+-
+    name: opalesurfcasting.net
+    highlight: Dataset attaching french leisure sea fishing legislation to taxon
+    example_URL: https://www.opalesurfcasting.net/connaissances/faune-et-flore/le-saumon-de-l-atlantique-salmo-salar.html
+    resource_URL: https://www.opalesurfcasting.net/
+    schema_org: Dataset
+    bsc_profile: Taxon
+    bsc_ver: 0.4-DRAFT
+    comments:    
+    node:
 ---
