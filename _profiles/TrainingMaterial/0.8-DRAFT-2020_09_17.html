@@ -19,10 +19,11 @@ cross_walk_url: https://docs.google.com/spreadsheets/d/1wgpkliR8S6hoxIRtKTogPtFc
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Training%20material
 live_deploy: ''
 
-parent_type: CreativeWork
+parent_type: LearningResource
 hierarchy:
 - Thing
 - CreativeWork
+- LearningResource
 
 # spec_info content generated using GOWeb
 # DO NOT MANUALLY EDIT THE CONTENT
@@ -42,11 +43,12 @@ spec_info:
     this purpose(before it was used only for other works referenced by this TrainingMaterial</li>      <li>Changes
     skillLevel (non existant property) to educationalLevel</li>      <li>Changes status
     (non existant property) to creativeWorkStatus</li>      <li>Changes tranlastedInto
-    (non existant property) to workTranslation</li>      <li>Changes prepared by L.
-    Garcia</li>    </ul>'
-  version: "0.8-DRAFT-2020_09_17"
-  version_date: 20200917T184035
-  official_type: CreativeWork
+    (non existant property) to workTranslation</li>      <li>Changes parent type to
+    LearningResource, it was before CreativeWork, LearningResource extends it and
+    is more appropriate</li>      <li>Changes prepared by L. Garcia</li>    </ul>'
+  version: 0.8_DRAFT
+  version_date: 20200924T180129
+  official_type: LearningResource
   full_example: https://github.com/BioSchemas/specifications/tree/master/TrainingMaterial/examples/
 mapping:
 - property: about
@@ -160,7 +162,7 @@ mapping:
     - Active
     - Under development
     - Archived
-  example: '"status": "active"'
+  example: '"creativeWorkStatus": "active"'
 - property: dateCreated
   expected_types:
   - Date
@@ -389,7 +391,7 @@ mapping:
   - Event
   description: |-
     The Event where the CreativeWork was recorded. The CreativeWork may capture all or part of the event.
-     Inverse property: recordedIn.
+    Inverse property: recordedIn.
   type: ""
   type_url: ""
   bsc_description: "The course instance or event where this training material was
@@ -397,8 +399,7 @@ mapping:
     material is unique to a specific Course Instance."
   marginality: Optional
   cardinality: MANY
-  controlled_vocab: Link from a TrainingMaterial to the CourseInstance where the training
-    material was used. To link to the Course use isPartOf
+  controlled_vocab: ""
   example: |-
     "recordedAt": [
       {
