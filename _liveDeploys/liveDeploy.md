@@ -996,4 +996,14 @@ list:
     bsc_ver: 0.4-DRAFT
     comments:    
     node: FR
+-
+  name: MassBank Europe
+  highlight:
+  example_URL: https://massbank.eu/MassBank/RecordDisplay?id=LQB00001&dsn=RIKEN_IMS
+  resource_URL: https://massbank.eu/MassBank/
+  schema_org: MolecularEntity
+  bsc_profile: MolecularEntity
+  bsc_ver: 0.5-RELEASE
+  comments:
+  node: DE
 ---
