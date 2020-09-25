@@ -56,6 +56,26 @@ list:
     comments:
     node: EBI
 -
+    name: EGA Dataset
+    highlight: over 5,300 datasets
+    example_URL: https://ega-archive.org/datasets/EGAD00000000001
+    resource_URL: https://ega-archive.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments:
+    node: EBI
+-
+    name: EGA
+    highlight: over 3,700 studies
+    example_URL: https://ega-archive.org/studies/EGAS00000000001
+    resource_URL: https://ega-archive.org/
+    schema_org: Study
+    bsc_profile: Study
+    bsc_ver: 0.1
+    comments:
+    node: EBI
+-
     name: Isaexplorer
     highlight:
     example_URL: http://scientificdata.isa-explorer.org/
@@ -71,7 +91,17 @@ list:
     resource_URL: https://www.guidetopharmacology.org/
     schema_org: DataCatalog
     bsc_profile: DataCatalog
-    bsc_ver: 0.1
+    bsc_ver: 0.3
+    comments:
+    node: UK
+-
+    name: IUPHAR/BPS Guide to PHARMACOLOGY
+    highlight:
+    example_URL: https://www.guidetopharmacology.org/
+    resource_URL: https://www.guidetopharmacology.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
     comments:
     node: UK
 -
@@ -85,15 +115,15 @@ list:
     comments:
     node: UK    
 -
-    name: EGA Dataset
-    highlight: over 5,300 datasets
-    example_URL: https://ega-archive.org/datasets/EGAD00000000001
-    resource_URL: https://ega-archive.org/
-    schema_org: Dataset
-    bsc_profile: Dataset
-    bsc_ver: 0.3
+    name: IUPHAR/BPS Guide to PHARMACOLOGY
+    highlight: proteins associated with COVID-19
+    example_URL: https://www.guidetopharmacology.org/coronavirus.jsp
+    resource_URL: https://www.guidetopharmacology.org/
+    schema_org: Protein
+    bsc_profile: Protein
+    bsc_ver: 0.11
     comments:
-    node: EBI
+    node: UK    
 -
     name: MobiDB
     highlight:
@@ -683,9 +713,19 @@ list:
     resource_URL: https://inpn.mnhn.fr/
     schema_org: Taxon
     bsc_profile: Taxon
-    bsc_ver: 0.4-DRAFT
+    bsc_ver: 0.7-DRAFT
     comments:    
     node:
+-
+    name: National Museum of Natural History of Paris
+    highlight: 180,000+ species have been annotated
+    example_URL: https://inpn.mnhn.fr/espece/cd_nom/60878/
+    resource_URL: https://inpn.mnhn.fr/
+    schema_org: TaxonName
+    bsc_profile: TaxonName
+    bsc_ver: 0.1-DRAFT
+    comments:    
+    node:    
 -
     name: FlyMine
     highlight:
@@ -723,7 +763,7 @@ list:
     resource_URL: https://disprot.org/
     schema_org: Protein
     bsc_profile: Protein
-    bsc_ver: 0.9-DRAFT
+    bsc_ver: 0.11
     comments:  
     node: IT
 -
@@ -775,10 +815,61 @@ list:
     bsc_profile: Dataset
     bsc_ver: 0.3
     comments:
-    node: CZ
+    node: CH
+    type: CDR
+-
+    name: Scholia
+    highlight:
+    example_URL: https://scholia.toolforge.org/gene/Q18030793
+    resource_URL: https://scholia.toolforge.org/
+    schema_org: Gene
+    bsc_profile: Gene
+    bsc_ver: 0.7
+    comments:
+    node: NL
+-
+    name: Scholia
+    highlight: More than 1M pages annotated with chemical compounds
+    example_URL: https://scholia.toolforge.org/chemical/Q18216
+    resource_URL: https://scholia.toolforge.org/
+    schema_org: MolecularEntity
+    bsc_profile: MolecularEntity
+    bsc_ver: 0.5
+    comments: Live statistics from https://scholia.toolforge.org/chemical/
+    node: NL
+-
+    name: Scholia
+    highlight:
+    example_URL: https://scholia.toolforge.org/protein/Q424728
+    resource_URL: https://scholia.toolforge.org/
+    schema_org: Protein
+    bsc_profile: Protein
+    bsc_ver: 0.11
+    comments:
+    node: NL
+-
+    name: Scholia
+    highlight: More than 2.7M pages annotated with Taxon
+    example_URL: https://scholia.toolforge.org/taxon/Q15978631
+    resource_URL: https://scholia.toolforge.org/
+    schema_org: Taxon
+    bsc_profile: Taxon
+    bsc_ver: 0.6
+    comments: Live statistics from https://w.wiki/QYr
+    node: NL
 -
     name: PCDDB
     highlight:
+    example_URL: https://pcddb.cryst.bbk.ac.uk/
+    resource_URL: https://pcddb.cryst.bbk.ac.uk/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.3
+    comments:
+    node: UK
+-
+    name: PCDDB
+    highlight: 653 Datasets as of May 2020
     example_URL: https://pcddb.cryst.bbk.ac.uk/deposit/CD0000031000
     resource_URL: https://pcddb.cryst.bbk.ac.uk/
     schema_org: Dataset
@@ -787,13 +878,132 @@ list:
     comments:
     node: UK
 -
-    name: MassBank Europe
+    name: PhenPath
     highlight:
-    example_URL: https://massbank.eu/MassBank/RecordDisplay?id=LQB00001&dsn=RIKEN_IMS
-    resource_URL: https://massbank.eu/MassBank/
-    schema_org: MolecularEntity
-    bsc_profile: MolecularEntity
-    bsc_ver: 0.5-RELEASE
+    example_URL: http://phenpath.biocomp.unibo.it/phenpath/
+    resource_URL: http://phenpath.biocomp.unibo.it/phenpath/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.3
     comments:
-    node: DE
+    node: IT
+-
+    name: PhenPath
+    highlight:
+    example_URL: http://phenpath.biocomp.unibo.it/cgi-bin/phenpath/ppDB.py
+    resource_URL: http://phenpath.biocomp.unibo.it/phenpath/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments:
+    node: IT
+-
+    name: eDGAR
+    highlight:
+    example_URL: http://edgar.biocomp.unibo.it/
+    resource_URL: http://edgar.biocomp.unibo.it/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.3
+    comments:
+    node: IT
+-
+    name: eDGAR
+    highlight:
+    example_URL: http://edgar.biocomp.unibo.it/
+    resource_URL: http://edgar.biocomp.unibo.it/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments:
+    node: IT
+-
+    name: eDGAR
+    highlight: 3,658 genes
+    example_URL: http://edgar.biocomp.unibo.it/cgi-bin/gene_disease_db/gene.py?gene=A2M
+    resource_URL: http://edgar.biocomp.unibo.it/
+    schema_org: Gene
+    bsc_profile: Gene
+    bsc_ver: 0.7
+    comments:
+    node: IT
+-
+    name: WorkflowHub
+    highlight:
+    example_URL: https://workflowhub.eu/
+    resource_URL: https://workflowhub.eu/
+    schema_org: DataCatalog
+    bsc_profile: DataCatalog
+    bsc_ver: 0.3
+    comments:
+    node: UK
+-
+    name: WorkflowHub
+    highlight: 31 workflows
+    example_URL: https://workflowhub.eu/workflows/18
+    resource_URL: https://workflowhub.eu/
+    schema_org: ComputationalWorkflow
+    bsc_profile: ComputationalWorkflow
+    bsc_ver: 0.5-DRAFT
+    comments:
+    node: UK
+-
+    name: WorkflowHub
+    highlight: 31 workflows
+    example_URL: https://workflowhub.eu/workflows/18
+    resource_URL: https://workflowhub.eu/
+    schema_org: FormalParameter
+    bsc_profile: FormalParameter
+    bsc_ver: 0.1-DRAFT
+    comments:
+    node: UK
+-
+    name: WorkflowHub
+    highlight: 35 people
+    example_URL: https://workflowhub.eu/people/9
+    resource_URL: https://workflowhub.eu/
+    schema_org: Person
+    bsc_profile: Person
+    bsc_ver: 0.2-DRAFT
+    comments:
+    node: UK
+-
+    name: BridgeDb
+    highlight: 23 identifier mapping databases for genes, proteins, complexes, metabolites, and more
+    example_URL: https://bridgedb.github.io/data/gene_database/
+    resource_URL: https://bridgedb.github.io/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments:
+    node: NL
+-
+    name: NanoCommons
+    example_URL: https://nanocommons.github.io/specifications/jrc/
+    resource_URL: https://www.nanocommons.eu/
+    schema_org: ChemicalSubstance
+    bsc_profile: ChemicalSubstance
+    bsc_ver: 0.4
+    comments:
+    node: NL
+-
+    name: opalesurfcasting.net
+    highlight: Datasets attaching french leisure sea fishing legislation to taxons
+    example_URL: https://www.opalesurfcasting.net/connaissances/faune-et-flore/le-saumon-de-l-atlantique-salmo-salar.html
+    resource_URL: https://www.opalesurfcasting.net/
+    schema_org: Dataset
+    bsc_profile: Taxon
+    bsc_ver: 0.4-DRAFT
+    comments:    
+    node: FR
+-
+  name: MassBank Europe
+  highlight:
+  example_URL: https://massbank.eu/MassBank/RecordDisplay?id=LQB00001&dsn=RIKEN_IMS
+  resource_URL: https://massbank.eu/MassBank/
+  schema_org: MolecularEntity
+  bsc_profile: MolecularEntity
+  bsc_ver: 0.5-RELEASE
+  comments:
+  node: DE
 ---

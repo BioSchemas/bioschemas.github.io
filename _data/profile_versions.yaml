@@ -14,8 +14,14 @@ BioSample:
 
 ChemicalSubstance:
     name: "ChemicalSubstance"
-    latest_publication: 
+    latest_publication:
     latest_release: "0.4-RELEASE"
+    status: "active"
+
+ComputationalWorkflow:
+    name: "ComputationalWorkflow"
+    latest_publication: "0.5-DRAFT-2020_07_21"
+    latest_release:
     status: "active"
 
 Course:
@@ -54,6 +60,12 @@ Event:
     latest_release:
     status: "active"
 
+FormalParameter:
+    name: "FormalParameter"
+    latest_publication: "0.1-DRAFT-2020_07_21"
+    latest_release:
+    status: "active"
+
 Gene:
     name: "Gene"
     latest_publication:
@@ -68,7 +80,7 @@ Journal:
 
 LabProtocol:
     name: "LabProtocol"
-    latest_publication: "0.3-DRAFT-2019_06_14"
+    latest_publication: "0.5-DRAFT-2020_09_01"
     latest_release:
     status: "active"
 
@@ -92,7 +104,7 @@ Person:
 
 Phenotype:
     name: "Phenotype"
-    latest_publication: "0.1-DRAFT-2018_11_15"
+    latest_publication: "0.2-DRAFT"
     latest_release:
     status: "active"
 
@@ -158,8 +170,14 @@ Study:
 
 Taxon:
     name: "Taxon"
-    latest_publication:
+    latest_publication: "0.7-DRAFT"
     latest_release: "0.6-RELEASE"
+    status: "active"
+
+TaxonName:
+    name: "TaxonName"
+    latest_publication: "0.1-DRAFT"
+    latest_release:
     status: "active"
 
 Tool:
@@ -171,12 +189,6 @@ Tool:
 TrainingMaterial:
     name: "TrainingMaterial"
     latest_publication: "0.7-DRAFT-2019_11_08"
-    latest_release:
-    status: "active"
-
-Workflow:
-    name: "Workflow"
-    latest_publication: "0.3-DRAFT-2020_03_03"
     latest_release:
     status: "active"
 

@@ -5,6 +5,11 @@ redirect_from:
 - examples/
 - about/
 layout: default
+
+# Community Call details
+call-minutes: https://docs.google.com/document/d/1kd5F97ogdiPNhLTnkei-RVR8TC8Ohpc5QSPX3KsfDrk
+call-link: https://global.gotomeeting.com/join/415277165
+call-date: 2020-09-28T15:00BST
 ---
 <div id="landing" itemscope itemtype="http://schema.org/Organization">
    <meta itemprop="logo" content="http://bioschemas.org/images/square_logo2.png"/>
@@ -39,7 +44,7 @@ layout: default
                 <p>Bioschemas is making two main contributions:</p>
                 <ol>
                   <li>Proposing <a href="/types">new types and properties</a> to Schema.org to allow for the description of life science resources.</li>
-                  <li><a href="/specifications">Profiles</a> over the Schema.org types that identify the essential properties to use in describing a resource.</li>
+                  <li><a href="/profiles">Profiles</a> over the Schema.org types that identify the essential properties to use in describing a resource.</li>
                 </ol>
                 <p>
                 Bioschemas started as a community effort in November 2015. It operates as an open community initiative with <a href="/people/">representatives</a> from a wide variety of institutions. You are welcome to <a href="/howtojoin/">join the community</a>.</p>
@@ -55,11 +60,11 @@ layout: default
                 </p>
 
                 <h2>Bioschema Profiles</h2>
-                <p>To simplify the marking up of web resources, and to provide consistency of markup within the life sciences community, Bioschemas are defining <a href="/specifications">profiles</a> over types that state which properties must be used (minimum), should be used (recommended), and could be used (optional). The profiles also state the cardinality of usage of a property, and identify domain ontologies to use for the value of properties.</p>
+                <p>To simplify the marking up of web resources, and to provide consistency of markup within the life sciences community, Bioschemas are defining <a href="/profiles">profiles</a> over types that state which properties must be used (minimum), should be used (recommended), and could be used (optional). The profiles also state the cardinality of usage of a property, and identify domain ontologies to use for the value of properties.</p>
 
-                <p>For example, if we look at the <a href="https://schema.org/Dataset">schema.org/Dataset</a> type there are over 90 properties available to use. The <a href="/specifications/Dataset/"> Bioschemas profile over Dataset</a> brings this down to a more manageable number, with 5 mandatory properties and 8 recommended properties. Many of the other properties have little relevance for a Dataset. The dataset markup properties that Bioschemas specifies as mandatory will also make them findable by <a href="/software/index.html#googleDatasetSearch">Google's Dataset Search tool</a>.</p>
+                <p>For example, if we look at the <a href="https://schema.org/Dataset">schema.org/Dataset</a> type there are over 100 properties available to use. The <a href="/profiles/Dataset/"> Bioschemas profile over Dataset</a> brings this down to a more manageable number, with 5 mandatory properties and 8 recommended properties. Many of the other properties have little relevance for a Dataset. The dataset markup properties that Bioschemas specifies as mandatory will also make them findable by <a href="/software/index.html#googleDatasetSearch">Google's Dataset Search tool</a>.</p>
 
-                <p>The Bioschemas community are defining profiles over relevant existing Schema.org types, e.g. <a href="/specifications/DataCatalog/">DataCatalog</a>, <a href="/specifications/drafts/Course/">Course</a>, and <a href="/specifications/Tool/">SoftwareApplication</a>, and over the new types being defined for the life sciences, e.g. <a href="/specifications/Gene/">Gene</a>, <a href="/specifications/Protein/">Protein</a>, <a href="/specifications/Taxon/">Taxon</a>.</p>
+                <p>The Bioschemas community are defining profiles over relevant existing Schema.org types, e.g. <a href="/profiles/DataCatalog/">DataCatalog</a>, <a href="/profiles/Course/">Course</a>, and <a href="/profiles/Tool/">SoftwareApplication</a>, and over the new types being defined for the life sciences, e.g. <a href="/profiles/Gene/">Gene</a>, <a href="/profiles/Protein/">Protein</a>, and <a href="/profiles/Taxon/">Taxon</a>.</p>
 
                 <h2>Funding</h2>
                 <p>
@@ -73,6 +78,20 @@ layout: default
 
                 <section class="upcoming-events">
                     <h3>Upcoming events</h3>
+                    <!-- Block for monthly community call -->
+                    <div class="event" itemscope itemtype="http://schema.org/Event">
+                        <strong><span class="title" itemprop="name">Monthly Community Call</span></strong>
+                        <p>The Bioschemas Community Call takes place on the 4th Monday of each month at 15:00 UK time.</p>
+                        <ul>
+                            <li><strong>Next call: {{ page.call-date | date: "%e %B, %Y %H:%M %Z" }}</strong>
+                              <meta itemprop="startDate" content="{{ page.call-date}}"/>
+                              <meta itemprop="endDate" content="{{ page.call-date }}"/></li>
+                            <li><a href="{{ page.call-minutes }}">Agenda</a></li>
+                            <li><a href="{{ page.call-link }}"><span itemprop="location">GoToMeeting</span></a></li>
+                        </ul>
+                    </div class="event">
+                    <!-- End of block for monthly community call -->
+                    <!-- Block for displaying next 3 meetings -->
                     {% assign sorted_meetings = site.meetings | sort: 'start_date' %}
                     {% assign count = 0 %}
                     {% for meeting in sorted_meetings %}
@@ -107,11 +126,12 @@ layout: default
                     {% break %}
                     {% endif %}
                     {% endfor %}
+                    <!-- End of block for showing next 3 meetings -->
                 </section>
                 <hr>
                 <section>
                     <h3>Latest presentation</h3>
-                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQGjhnyEOSTpLstq0dl85HUwT554Ph-4OdyGMCt6fzMwxTLlP2hDKt8E8fArN7eNbRRX3IFANGCkuOP/embed?start=false&loop=false&delayms=3000" frameborder="0" width="350" height="225" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS_CdDXgHgeUJPAhgk-K9pOKePn04O32bnhM68WblY3-KC24eR2IC74TAGrjWxdvn3BC0hDDxm0hYYm/embed?start=true&loop=true&delayms=3000" frameborder="0" width="350" height="225" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
                 </section>
                 <hr>
                 <section>
