@@ -795,4 +795,5 @@ list:
     bsc_profile: MolecularEntity
     bsc_ver: 0.5-RELEASE
     comments:
+    node: DE
 ---
