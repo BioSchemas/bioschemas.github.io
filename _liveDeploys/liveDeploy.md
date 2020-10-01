@@ -1006,4 +1006,35 @@ list:
   bsc_ver: 0.5-RELEASE
   comments:
   node: DE
+-
+  name: iPPI-DB
+  highlight: 2,035 compounds
+  example_URL: https://ippidb.pasteur.fr/compounds/1103#compound
+  resource_URL: https://ippidb.pasteur.fr/
+  schema_org: MolecularEntity
+  bsc_profile: MolecularEntity
+  bsc_ver: 0.5
+  comments: Inhibitors of Protein-Protein Interaction Database
+  node: FR
+-
+  name: iPPI-DB
+  highlight:
+  example_URL: https://ippidb.pasteur.fr/
+  resource_URL: https://ippidb.pasteur.fr/
+  schema_org: Dataset
+  bsc_profile: Dataset
+  bsc_ver: 0.3
+  comments: Inhibitors of Protein-Protein Interaction Database
+  node: FR
+-
+  name: iPPI-DB
+  highlight:
+  example_URL: https://ippidb.pasteur.fr/
+  resource_URL: https://ippidb.pasteur.fr/
+  schema_org: DataCatalog
+  bsc_profile: DataCatalog
+  bsc_ver: 0.3
+  comments: Inhibitors of Protein-Protein Interaction Database
+  node: FR
+
 ---
