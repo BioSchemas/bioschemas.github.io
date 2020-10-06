@@ -713,9 +713,19 @@ list:
     resource_URL: https://inpn.mnhn.fr/
     schema_org: Taxon
     bsc_profile: Taxon
-    bsc_ver: 0.4-DRAFT
+    bsc_ver: 0.7-DRAFT
     comments:    
     node:
+-
+    name: National Museum of Natural History of Paris
+    highlight: 180,000+ species have been annotated
+    example_URL: https://inpn.mnhn.fr/espece/cd_nom/60878/
+    resource_URL: https://inpn.mnhn.fr/
+    schema_org: TaxonName
+    bsc_profile: TaxonName
+    bsc_ver: 0.1-DRAFT
+    comments:    
+    node:    
 -
     name: FlyMine
     highlight:
@@ -976,4 +986,24 @@ list:
     bsc_ver: 0.4
     comments:
     node: NL
+-
+    name: opalesurfcasting.net
+    highlight: Datasets attaching french leisure sea fishing legislation to taxons
+    example_URL: https://www.opalesurfcasting.net/connaissances/faune-et-flore/le-saumon-de-l-atlantique-salmo-salar.html
+    resource_URL: https://www.opalesurfcasting.net/
+    schema_org: Dataset
+    bsc_profile: Taxon
+    bsc_ver: 0.4-DRAFT
+    comments:    
+    node: FR
+-
+  name: MassBank Europe
+  highlight:
+  example_URL: https://massbank.eu/MassBank/RecordDisplay?id=LQB00001&dsn=RIKEN_IMS
+  resource_URL: https://massbank.eu/MassBank/
+  schema_org: MolecularEntity
+  bsc_profile: MolecularEntity
+  bsc_ver: 0.5-RELEASE
+  comments:
+  node: DE
 ---
