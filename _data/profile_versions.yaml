@@ -32,7 +32,7 @@ Course:
 
 CourseInstance:
     name: "CourseInstance"
-    latest_publication: "0.7-DRAFT-2019_11_08"
+    latest_publication: "0.8-DRAFT-2020_10_06"
     latest_release:
     status: "active"
 
