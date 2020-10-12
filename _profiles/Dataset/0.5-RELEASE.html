@@ -1,0 +1,71 @@
+---
+layout: profile-display
+previous_version: '0.4-DRAFT'
+previous_release: '0.3-RELEASE-2019_06_14'
+
+description: Dataset
+full_example: https://github.com/Bioschemas/specifications/tree/master/Dataset/examples/0.5-RELEASE
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20Dataset
+group: data
+hierarchy:
+- type_name: Thing
+  type_base_url: "https://schema.org/"
+- type_name: CreativeWork
+  type_base_url: "https://schema.org/"
+- type_name: Dataset
+  type_base_url: "https://schema.org/"
+mapping:
+- bsc_description: A short summary describing a dataset.
+  cardinality: ONE
+  controlled_vocab: ""
+  description: A description of the item.
+  example: |-
+    {
+    "@type": "Dataset",
+     "description": "Liquid chromatography coupled to mass spectrometry (LC-MS) has become a standard technology in metabolomics. In particular, label-free quantification based on LC-MS ..."
+    }
+  expected_types:
+  - type_name: Text
+    type_base_url: https://schema.org/
+  marginality: Minimum
+  property: description
+  type: ""
+  type_url: ""
+- bsc_description: Bioschemas description
+  cardinality: null
+  controlled_vocab: null
+  description: schema property description
+  example: null
+  expected_types:
+  - type_name: Text
+    type_base_url: https://schema.org/
+  - type_name: BioChemEntity
+    type_base_url: https://bioschemas.org/
+  marginality: Not Applicable
+  property: notApplicableProperty
+  type: null
+  type_url: null
+- bsc_description: Bioschemas description
+  cardinality: null
+  controlled_vocab: null
+  description: schema property description
+  example: null
+  expected_types:
+  - type_name: measurementTechnique
+    type_base_url: https://pending.schema.org/
+  - type_name: ExistingOtherType
+    type_base_url: https://example.com/
+  marginality: Unspecified
+  property: unspecifiedProperty
+  type: null
+  type_url: null
+name: Dataset
+official_type: Dataset
+schema_version: 10.0
+spec_type: Profile
+status: RELEASE
+type_base_url: https://schema.org/
+use_cases_url: /useCases/Dataset/
+version: '0.5-RELEASE'
+version_date: 20201007T133511
+---

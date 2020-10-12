@@ -8,7 +8,7 @@ type: other
 description: 'The objective of this workstream is to support this project and the involvement of the Bioschemas community.'
 lead: [CaroleGoble, AlasdairGray]
 email: enquiries@bioschemas.org
-issues: https://github.com/BioSchemas/bioschemas/labels/topic%3A%20community
+issues: https://github.com/Bioschemas/bioschemas/labels/topic%3A%20community
 folder: https://drive.google.com/drive/u/1/folders/0Bw_p-HKWUjHoRWgxWHcwVHNQUGM
 
 abstract: 'This project includes many stakeholders and several workstreams. For this project to be successful it will require good communication and coordination, not just among partners but also with the Bioschemas community.'
