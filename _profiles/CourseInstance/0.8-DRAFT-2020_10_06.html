@@ -1,15 +1,21 @@
 ---
+redirect_from:
+- "devSpecs/CourseInstance/specification"
+- "devSpecs/CourseInstance/specification/"
+- "/devSpecs/CourseInstance/"
+- "/specifications/drafts/CourseInstance"
+- '/profiles/CourseInstance/'
 
 name: CourseInstance
 
-previous_version: '0.6-DRAFT-2019_06_06'
+previous_version: '0.7-DRAFT-2019_11_08'
 previous_release:
 
 status: revision
 spec_type: Profile
 group: training
-use_cases_url: ''
-cross_walk_url: https://docs.google.com/spreadsheets/d/1aoXX0j0DzhmJBfMLNjkv0vVUMCnZsZtRyQhA75ZiY9c/edit#gid=1483018794
+use_cases_url: /useCases/TrainingGroup/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1rriBGZpJYcwIHbEzwkfbhPCn3KArC6wr9DhKFpTuIiQ
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20CourseInstance
 live_deploy: ''
 
@@ -27,11 +33,24 @@ spec_info:
   description: 'This specification can be used in tandem with a Course. A course is
     used to describe the broad, common aspects of a recurring training event - whereas
     a course instance is about the specific times and location of when that course
-    is held. '
-  version: "0.7-DRAFT-2019_11_08"
-  version_date: 20191108T154029
-  official_type: ""
-  full_example: ""
+    is held. <h4>Summary of Changes</h4>    Changes since previous draft 0.7 of the
+    CourseInstance profile:    <ul>     <li>Removed CourseInstance->mentions</li><li>Inserted
+    CourseInstance->courseWorkLoad (it was missing)</li><li>Inserted Event->eventAttendanceMode</li><li>Inserted
+    Event->eventSchedule</li><li>doorTime - added Time in Expected Type column (it
+    was missing)</li><li>location - added VirtualLocation in Expected Type column
+    (it was missing)</li><li>offers - added "Demand or" in Expected Type column (it
+    was missing)</li><li>offers - modified Description column (it was not the same
+    as in schema.org)</li><li>instructor - added BSC Description</li><li>duration
+    - changed the BSC Description (changed timeRequired by duration, which was changed
+    also in Course)</li><li>name - changed the BSC Description (made the description
+    more explicit)</li><li>offers - changed the BSC Description (corrected wording)</li><li>description
+    - extended the example</li><li>workFeatured - changed the BSC Description (extended
+    the description)</li><li>Adjusted Authors: Patricia Palagi to editor; Niall Beard
+    no longer editor</li> <li>Changes prepared by Patricia Palagi</li>    </ul>'
+  version: 0.8-DRAFT-2020_10_06
+  version_date: 20201006T134459
+  official_type: CourseInstance
+  full_example: https://github.com/BioSchemas/specifications/blob/master/CourseInstance/examples/08-DRAFT/courseInstance.json
 mapping:
 - property: alternateName
   expected_types:
@@ -57,7 +76,7 @@ mapping:
   cardinality: MANY
   controlled_vocab: ""
   example: "\"contributor\": [{\n  \"@type\": \"Person\",\n  \"name\": \"John Smith\"\n},{
-    \n  \"@type\": \"Person\",\n  \"name\": \"Janet Jones\"\n}]"
+    \n  \"@type\": \"Person\",\n  \"name\": \"Janet Jones\",\n \"url\": \"https://manchester.ac.uk/staff/profiles/janet-jones\"\n}]"
 - property: courseMode
   expected_types:
   - Text
@@ -81,13 +100,13 @@ mapping:
   description: A description of the item.
   type: ""
   type_url: ""
-  bsc_description: "A description of the Course Instance. \n\n*CourseInstance* _description_
-    can be used to override *Course* _description_ for variations in specific Course
-    Instances."
+  bsc_description: "A description of the Course Instance. \n\n(courseInstance) description
+    can be used to override (course) description for specific course instances."
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: '"description": "An instance of a course being ran"'
+  example: '"description": "An instance of a course being ran in an institution Y
+    in the Fall 2020 onsite"'
 - property: duration
   expected_types:
   - Duration
@@ -95,8 +114,8 @@ mapping:
     8601 date format.
   type: ""
   type_url: ""
-  bsc_description: '*CourseInstance* _duration_ can be used to override *Course* _timeRequired_
-    for variations in specific Course Instances.'
+  bsc_description: (CourseInstance) duration can be used to override (Course) duration
+    for specific course instances.
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
@@ -123,10 +142,8 @@ mapping:
   bsc_description: ""
   marginality: Optional
   cardinality: ONE
-  controlled_vocab: |-
-    - postponed
-    - cancelled
-    - date TBD
+  controlled_vocab: "- postponed\n- cancelled\n- date TBD\n- application open \n-
+    registration closed"
   example: '"eventStatus": "postponed"'
 - property: funder
   expected_types:
@@ -141,20 +158,7 @@ mapping:
   cardinality: MANY
   controlled_vocab: ""
   example: "\"funder\":  [{\n  \"@type\": \"Person\",\n  \"name\": \"John Smith\"\n},{
-    \n  \"@type\": \"Organization\",\n  \"name\": \"University of Manchester\"\n}]"
-- property: helper
-  expected_types:
-  - Person
-  description: A person who provides instructional assistance for the CourseInstance,
-    but is not the primary instructor
-  type: bioschemas
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: ""
-  example: "\"helper\": [{\n  \"@type\": \"Person\",\n  \"name\": \"Bob Terwiliker\"\n},{
-    \n  \"@type\": \"Person\",\n  \"name\": \"Terry Jones\",\n  \"url\": \"https://manchester.ac.uk/staff/profiles/t-jones\"\n}]"
+    \n  \"@type\": \"Organization\",\n  \"name\": \"University of South Africa\"\n}]"
 - property: image
   expected_types:
   - ImageObject
@@ -188,7 +192,8 @@ mapping:
     the CourseInstance.
   type: ""
   type_url: ""
-  bsc_description: ""
+  bsc_description: An instructor can be the main teacher or trainer, as well as a
+    training assistant, or a helper.
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
@@ -199,6 +204,7 @@ mapping:
   - Place
   - PostalAddress
   - Text
+  - VirtualLocation
   description: The location of for example where the event is happening, an organization
     is located, or where an action takes place.
   type: ""
@@ -230,54 +236,28 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ' "maximumAttendeeCapacity": 35'
-- property: mentions
-  expected_types:
-  - Thing
-  description: Indicates that the CourseInstance contains a reference to, but is not
-    necessarily about, a concept.
-  type: bioschemas
-  type_url: ""
-  bsc_description: |-
-    Data-sets, tools, technologies, entities, etc. to which this Course Instance makes reference.
-
-    See ‘uses’ for resources that are actively being used.
-
-    *CourseInstance* _mentions_ can be used to override *Course* _mentions_ for variations in specific Course Instances.
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: ""
-  example: |-
-    "mentions": [{
-      "@type": "Tool",
-      "name": "Galaxy",
-      "url": "https://bio.tools/galaxy",
-      "description": "Open, web-based platform for data intensive biomedical research"
-    },{
-      "@type": "Dataset",
-      "name": "European Genome-phenome Archive",
-      "url": "https://www.ebi.ac.uk/ega/home",
-      "description": "The EGA archives a large number of datasets, the access to which is controlled by a Data Access Committee (DAC)."
-    }]
+  example: ' "maximumAttendeeCapacity": "35"'
 - property: name
   expected_types:
   - Text
   description: The name of the item.
   type: ""
   type_url: ""
-  bsc_description: |
-    The name of the Course.
+  bsc_description: |-
+    The name of the course.
 
-    *CourseInstance* _name_ can be used to override *Course* _name_ for variations in specific Course Instances.
+    Course instance name can be used to override Course name for variations in specific Course instances. Use name from Course unless the Course instance has a different name from the course.
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: '"name": "RNA-seq in R for Autumn 2020 CS101"'
+  example: '"name": "RNA-seq data analysis in R in Autumn 2020 CS101"'
 - property: offers
   expected_types:
+  - Demand
   - Offer
-  description: An offer to provide this item—for example, an offer to sell a product,
-    rent the DVD of a movie, perform a service, or give away tickets to an event.
+  description: |-
+    An offer to provide this item—for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use businessFunction to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a Demand. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
+    Inverse property: itemOffered.
   type: ""
   type_url: ""
   bsc_description: The price an attendee would pay to attend this CourseInstance.
@@ -290,7 +270,7 @@ mapping:
         {
             "@type": "Offer",
             "name": "Early Bird Tickets",
-            "priceValidUntil": "2019-02-04T09:00:00",
+            "priceValidUntil": "2021-02-04T09:00:00",
             "price": "50.00",
             "priceCurrency": "GBP"
         },
@@ -298,15 +278,14 @@ mapping:
         //Academic Pricing
         {
           "@type": "Offer",
-          "name": "Academic Discount",
+          "name": "Academic Price",
           "price": "100.00",
-          "priceValidUntil": "2019-02-05T17:00:00",
+          "priceValidUntil": "2021-02-05T17:00:00",
           "eligibleCustomerType": {
             "@type": "BusinessEntityType",
             "name": "Academic"
           },
           "priceCurrency": "GBP",
-          "url": "http://www.eventbrite.com/my-workshop/academic"
         },
         //Industry Pricing
         {
@@ -318,7 +297,6 @@ mapping:
             "@type": "BusinessEntityType",
             "name": "Industrial"
           },
-          "url": "http://www.eventbrite.com/my-workshop/industry"
         },
         //First 50 tickets free
         {
@@ -346,18 +324,7 @@ mapping:
   controlled_vocab: ""
   example: "\"organizer\":  [{\n  \"@type\": \"Person\",\n  \"name\": \"Elizabeth
     Windsor\",\n  \"email\": \"e.r.windsor@gmail.com\"\n},{ \n  \"@type\": \"Organization\",\n
-    \ \"name\": \"University of Manchester\"\n}]"
-- property: review
-  expected_types:
-  - Review
-  description: A review of the item. Supersedes reviews.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: ""
-  example: ""
+    \ \"name\": \"University of Soth Wales\"\n}]\n"
 - property: startDate
   expected_types:
   - Date
@@ -382,7 +349,7 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: |-
+  example: |
     "subEvent": [{
           "@type": "Event",
           "name": "Lunch time Lecture",
@@ -405,48 +372,28 @@ mapping:
   example: |-
     "superEvent": [{
           "@type": "Event",
-          "name": "Galaxy Conference",
-          "url": "https://usegalaxy.org",
-          "description": "This years galaxy conference will contain a special education section"
-      }]
+          "name": "ISCB Conference",
+          "url": "https://www.iscb.org",
+          "description": "This years ISCB conference will contain a special education section"
+      },
+    {
+          "@type": "Event",
+          "name": "Online lecture",
+          "url": "https://onlinelectureat.org",
+          "description": "This online lecture describes the neXtProt database. It closes the general, and in person, course on protein sequence databases."
+    }]
 - property: url
   expected_types:
   - URL
   description: URL of the item.
   type: ""
   type_url: ""
-  bsc_description: The preferred URL of this Course Instance page. This value must
-    be provided if it is known.
+  bsc_description: The preferred URL of this course instance. You must provide this
+    value if it is known
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
   example: '"url": "http://example.com/rna-seq_in_r"'
-- property: uses
-  expected_types:
-  - Thing
-  description: List resources utilized by the CourseInstance such as datasets, tools,
-    technologies, or other entities.
-  type: bioschemas
-  type_url: ""
-  bsc_description: |
-    Data-sets, tools, technologies, entities, etc. that will be used in this Course Instance.
-
-    *CourseInstance* _uses_ can be used to override *Course* _uses_ for variations in specific Course Instances.
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: ""
-  example: |-
-    "uses": [{
-      "@type": "Tool",
-      "name": "Galaxy",
-      "url": "https://bio.tools/galaxy",
-      "description": "Open, web-based platform for data intensive biomedical research"
-    },{
-      "@type": "Dataset",
-      "name": "European Genome-phenome Archive",
-      "url": "https://www.ebi.ac.uk/ega/home",
-      "description": "The EGA archives a large number of datasets, the access to which is controlled by a Data Access Committee (DAC)."
-    }]
 - property: workFeatured
   expected_types:
   - CreativeWork
@@ -455,10 +402,9 @@ mapping:
     (a Movie at a ScreeningEvent).
   type: ""
   type_url: ""
-  bsc_description: |
-    The Training Material used in this specific Course instance.
-
-    *CourseInstance* _workFeatured_ can be used to override *Course* _hasPart_ for variations in specific Course Instances.
+  bsc_description: "The training material used in this specific course instance, or
+    produced for this course instance. \n\nInverse property: workFeatured\n\nIf this
+    is the same for all Course Instances, use hasPart and/or mentions in Course instead"
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -466,7 +412,11 @@ mapping:
     \"Course Slides for Autumn 2020 offering of CS101\",\n  \"url\": \"http://example.com/slides_website\"\n
     \ \"description\": \"The course slides contain diagrams, questions, and links
     to various resources about this course\" \n  \"keywords\": \"Computer Science,
-    CS, Introductory\"\n}]"
+    CS, Introductory\"\n},\n{\n  \"@type\": \"Thing\",\n  \"name\": \"neXtProt database\",\n
+    \ \"url\": \"https://www.nextprot.org\"\n  \"description\": \"The course instance
+    was dedicated to the neXtProt datbase and how to explore the universe of human
+    proteins\" \n  \"keywords\": \"Molecular Biology, Introductory\"\n}\n]"
+
 ---
 <!DOCTYPE HTML>
 <html>

@@ -27,8 +27,9 @@ specifications:
 
 
 members:
-    - CeliaVanGelder
     - MichelleBrazas
+    - PatriciaPalagi
+    - CeliaVanGelder
     - SonikaTyagi
     - TerriAtwood   
     - MateuszKuzak
@@ -46,7 +47,6 @@ members:
     - SarahMorgan    
     - LeylaGarcia
     - VictoriaDominguezDelAngel
-    - PatriciaPalagi
 
 Former-Members:    
     - ChrisTaylor
@@ -68,4 +68,5 @@ Former-Members:
     - AleksandraNenadic
     - MichaelCrusoe
     - RafaelJimenez
+
 ---
