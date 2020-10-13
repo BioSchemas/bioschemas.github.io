@@ -1016,6 +1016,7 @@ list:
   bsc_ver: 0.5
   comments: Inhibitors of Protein-Protein Interaction Database
   node: FR
+  sitemap: https://ippidb.pasteur.fr/sitemap.xml
 -
   name: iPPI-DB
   highlight:
@@ -1026,6 +1027,7 @@ list:
   bsc_ver: 0.3
   comments: Inhibitors of Protein-Protein Interaction Database
   node: FR
+  sitemap: https://ippidb.pasteur.fr/sitemap.xml
 -
   name: iPPI-DB
   highlight:
@@ -1036,5 +1038,5 @@ list:
   bsc_ver: 0.3
   comments: Inhibitors of Protein-Protein Interaction Database
   node: FR
-
+  sitemap: https://ippidb.pasteur.fr/sitemap.xml
 ---
