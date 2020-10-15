@@ -8,7 +8,7 @@ type: generic
 description: Specification for describing people
 lead: [NiallBeard]
 email: enquiries@bioschemas.org
-issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20person
+issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20person
 folder: https://drive.google.com/drive/u/1/folders/0B6crv12s8piRd1hFM2JUeS1wSEk
 
 # Page attributes

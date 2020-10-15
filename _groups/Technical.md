@@ -9,7 +9,7 @@ type: generic
 description:
 lead: [JustinClark-Casey]
 email: enquiries@bioschemas.org
-issues: https://github.com/BioSchemas/bioschemas/labels/SupportSoftware
+issues: https://github.com/Bioschemas/bioschemas/labels/SupportSoftware
 
 # Page attributes
 abstract: 'The technical group focus on aspects of implementing <a href="http://bioschemas.org">Bioschemas</a> markup. Please see the <a href="http://bioschemas.org/specifications/">Specifications</a> page for the schemas themselves. Please see the <a href="http://bioschemas.org/tools/">tools</a> page for tools that can help in publishing or consuming markup.'
@@ -26,7 +26,7 @@ members:
     <h3>Links</h3>
     <ul>
         <li>
-            <a href="https://github.com/BioSchemas/specifications/wiki/Technical">Main wiki page for Bioschemas implementation information </a>
+            <a href="https://github.com/Bioschemas/specifications/wiki/Technical">Main wiki page for Bioschemas implementation information </a>
         </li>
     </ul>
 </div>

@@ -1,0 +1,2692 @@
+---
+layout: profile-display
+previous_version: !!null ""
+previous_release: !!null ""
+name: BSDataset
+official_type: Dataset
+schema_version: '10.0'
+type_base_url: "https://schema.org/"
+description: "A body of structured information describing some topic(s) of interest."
+version: '0.1'
+version_date: 20201008T185344
+status: DRAFT
+spec_type: Profile
+group: data
+use_cases_url: /useCases/BSDataset/
+gh_tasks: "https://github.com/Bioschemas/specifications/labels/type%3A%20BSDataset"
+full_example: >-
+  https://github.com/Bioschemas/specifications/tree/master/BSDataset/examples/0.1
+hierarchy:
+- type_name: Thing
+  type_base_url: "https://schema.org/"
+- type_name: CreativeWork
+  type_base_url: "https://schema.org/"
+- type_name: Dataset
+  type_base_url: "https://schema.org/"
+mapping:
+- property: catalog
+  expected_types:
+  - type_name: DataCatalog
+    type_base_url: "https://schema.org/"
+  description: "A data catalog which contains this dataset."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: 'http://www.w3.org/ns/dcat#catalog'
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "catalog": {"@id": "https://example.com/datacatalog/345", "@type": "DataCatalog"}
+    }
+- property: datasetTimeInterval
+  expected_types:
+  - type_name: DateTime
+    type_base_url: "https://schema.org/"
+  description: >-
+    The range of temporal applicability of a dataset, e.g. for a 2011 census dataset,
+    the year 2011 (in ISO 8601 time interval format).
+  type: 'bioschemas'
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "datasetTimeInterval": "2020-10-08T17:33:08+01:00"
+    }
+- property: distribution
+  expected_types:
+  - type_name: DataDownload
+    type_base_url: "https://schema.org/"
+  description: >-
+    A downloadable form of this dataset, at a specific location, in a specific format.
+  type: 'external'
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "distribution": {"@id": "https://example.com/datadownload/345", "@type": "DataDownload"}
+    }
+- property: includedDataCatalog
+  expected_types:
+  - type_name: DataCatalog
+    type_base_url: "https://schema.org/"
+  description: >-
+    A data catalog which contains this dataset (this property was previously 'catalog',
+    preferred name is now 'includedInDataCatalog').
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "includedDataCatalog": {"@id": "https://example.com/datacatalog/345", "@type": "DataCatalog"}
+    }
+- property: includedInDataCatalog
+  expected_types:
+  - type_name: DataCatalog
+    type_base_url: "https://schema.org/"
+  description: "A data catalog which contains this dataset."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "includedInDataCatalog": {"@id": "https://example.com/datacatalog/345", "@type": "DataCatalog"}
+    }
+- property: issn
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: >-
+    The International Standard Serial Number (ISSN) that identifies this serial publication.
+    You can repeat this property to identify different formats of, or the linking
+    ISSN (ISSN-L) for, this serial publication.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "issn": "example issn"
+    }
+- property: measurementTechnique
+  expected_types:
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: |-
+    A technique or technology used in a <a class="localLink" href="http://schema.org/Dataset">Dataset</a> (or <a class="localLink" href="http://schema.org/DataDownload">DataDownload</a>, <a class="localLink" href="http://schema.org/DataCatalog">DataCatalog</a>),
+    corresponding to the method used for measuring the corresponding variable(s) (described using <a class="localLink" href="http://schema.org/variableMeasured">variableMeasured</a>). This is oriented towards scientific and scholarly dataset publication but may have broader applicability; it is not intended as a full representation of measurement, but rather as a high level summary for dataset discovery.<br/><br/>
+
+    For example, if <a class="localLink" href="http://schema.org/variableMeasured">variableMeasured</a> is: molecule concentration, <a class="localLink" href="http://schema.org/measurementTechnique">measurementTechnique</a> could be: "mass spectrometry" or "nmr spectroscopy" or "colorimetry" or "immunofluorescence".<br/><br/>
+
+    If the <a class="localLink" href="http://schema.org/variableMeasured">variableMeasured</a> is "depression rating", the <a class="localLink" href="http://schema.org/measurementTechnique">measurementTechnique</a> could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory".<br/><br/>
+
+    If there are several <a class="localLink" href="http://schema.org/variableMeasured">variableMeasured</a> properties recorded for some given data object, use a <a class="localLink" href="http://schema.org/PropertyValue">PropertyValue</a> for each <a class="localLink" href="http://schema.org/variableMeasured">variableMeasured</a> and attach the corresponding <a class="localLink" href="http://schema.org/measurementTechnique">measurementTechnique</a>.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "measurementTechnique": "https://purl.example.org/measurementtechnique-345"
+    }
+- property: variableMeasured
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  - type_name: PropertyValue
+    type_base_url: "https://schema.org/"
+  description: >-
+    The variableMeasured property can indicate (repeated as necessary) the  variables
+    that are measured in some dataset, either described as text or as pairs of identifier
+    and description using PropertyValue.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "variableMeasured": "example variablemeasured"
+    }
+- property: variablesMeasured
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  - type_name: PropertyValue
+    type_base_url: "https://schema.org/"
+  description: >-
+    Originally named <a class="localLink" href="http://schema.org/variablesMeasured">variablesMeasured</a>,
+    The <a class="localLink" href="http://schema.org/variableMeasured">variableMeasured</a>
+    property can indicate (repeated as necessary) the  variables that are measured
+    in some dataset, either described as text or as pairs of identifier and description
+    using PropertyValue.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "variablesMeasured": "example variablesmeasured"
+    }
+- property: about
+  expected_types:
+  - type_name: Thing
+    type_base_url: "https://schema.org/"
+  description: "The subject matter of the content."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "about": {"@id": "https://example.com/thing/345", "@type": "Thing"}
+    }
+- property: abstract
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: >-
+    An abstract is a short description that summarizes a <a class="localLink" href="http://schema.org/CreativeWork">CreativeWork</a>.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "abstract": "example abstract"
+    }
+- property: accessMode
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: >-
+    The human sensory perceptual system or cognitive faculty through which a person
+    may process or perceive information. Expected values include: auditory, tactile,
+    textual, visual, colorDependent, chartOnVisual, chemOnVisual, diagramOnVisual,
+    mathOnVisual, musicOnVisual, textOnVisual.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "accessMode": "example accessmode"
+    }
+- property: accessModeSufficient
+  expected_types:
+  - type_name: ItemList
+    type_base_url: "https://schema.org/"
+  description: >-
+    A list of single or combined accessModes that are sufficient to understand all
+    the intellectual content of a resource. Expected values include:  auditory, tactile,
+    textual, visual.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "accessModeSufficient": {"@type": "ItemList"}
+    }
+- property: accessibilityAPI
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: >-
+    Indicates that the resource is compatible with the referenced accessibility API
+    (<a href="http://www.w3.org/wiki/WebSchemas/Accessibility">WebSchemas wiki lists
+    possible values</a>).
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "accessibilityAPI": "example accessibilityapi"
+    }
+- property: accessibilityControl
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: >-
+    Identifies input methods that are sufficient to fully control the described resource
+    (<a href="http://www.w3.org/wiki/WebSchemas/Accessibility">WebSchemas wiki lists
+    possible values</a>).
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "accessibilityControl": "example accessibilitycontrol"
+    }
+- property: accessibilityFeature
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: >-
+    Content features of the resource, such as accessible media, alternatives and supported
+    enhancements for accessibility (<a href="http://www.w3.org/wiki/WebSchemas/Accessibility">WebSchemas
+    wiki lists possible values</a>).
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "accessibilityFeature": "example accessibilityfeature"
+    }
+- property: accessibilityHazard
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: >-
+    A characteristic of the described resource that is physiologically dangerous to
+    some users. Related to WCAG 2.0 guideline 2.3 (<a href="http://www.w3.org/wiki/WebSchemas/Accessibility">WebSchemas
+    wiki lists possible values</a>).
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "accessibilityHazard": "example accessibilityhazard"
+    }
+- property: accessibilitySummary
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: >-
+    A human-readable summary of specific accessibility features or deficiencies, consistent
+    with the other accessibility metadata but expressing subtleties such as "short
+    descriptions are present but long descriptions will be needed for non-visual users"
+    or "short descriptions are present and no long descriptions are needed."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "accessibilitySummary": "example accessibilitysummary"
+    }
+- property: accountablePerson
+  expected_types:
+  - type_name: Person
+    type_base_url: "https://schema.org/"
+  description: "Specifies the Person that is legally accountable for the CreativeWork."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "accountablePerson": {"@id": "https://orcid.org/0000-0002-1825-0097", "@type": "Person"}
+    }
+- property: acquireLicensePage
+  expected_types:
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  - type_name: CreativeWork
+    type_base_url: "https://schema.org/"
+  description: >-
+    Indicates a page documenting how licenses can be purchased or otherwise acquired,
+    for the current item.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "acquireLicensePage": "https://purl.example.org/acquirelicensepage-345"
+    }
+- property: aggregateRating
+  expected_types:
+  - type_name: AggregateRating
+    type_base_url: "https://schema.org/"
+  description: >-
+    The overall rating, based on a collection of reviews or ratings, of the item.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "aggregateRating": {"@type": "AggregateRating"}
+    }
+- property: alternativeHeadline
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: "A secondary title of the CreativeWork."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "alternativeHeadline": "example alternativeheadline"
+    }
+- property: assesses
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  - type_name: DefinedTerm
+    type_base_url: "https://schema.org/"
+  description: >-
+    The item being described is intended to assess the competency or learning outcome
+    defined by the referenced term.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "assesses": "example assesses"
+    }
+- property: associatedMedia
+  expected_types:
+  - type_name: MediaObject
+    type_base_url: "https://schema.org/"
+  description: >-
+    A media object that encodes this CreativeWork. This property is a synonym for
+    encoding.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "associatedMedia": {"@id": "https://example.com/mediaobject/345", "@type": "MediaObject"}
+    }
+- property: audience
+  expected_types:
+  - type_name: Audience
+    type_base_url: "https://schema.org/"
+  description: "An intended audience, i.e. a group for whom something was created."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "audience": {"@type": "Audience"}
+    }
+- property: audio
+  expected_types:
+  - type_name: MusicRecording
+    type_base_url: "https://schema.org/"
+  - type_name: AudioObject
+    type_base_url: "https://schema.org/"
+  - type_name: Clip
+    type_base_url: "https://schema.org/"
+  description: "An embedded audio object."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "audio": {"@id": "https://example.com/musicrecording/345", "@type": "MusicRecording"}
+    }
+- property: author
+  expected_types:
+  - type_name: Person
+    type_base_url: "https://schema.org/"
+  - type_name: Organization
+    type_base_url: "https://schema.org/"
+  description: >-
+    The author of this content or rating. Please note that author is special in that
+    HTML 5 provides a special mechanism for indicating authorship via the rel tag.
+    That is equivalent to this and may be used interchangeably.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "author": {"@id": "https://orcid.org/0000-0002-1825-0097", "@type": "Person"}
+    }
+- property: award
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: "An award won by or for this item."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "award": "example award"
+    }
+- property: awards
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: "Awards won by or for this item."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "awards": "example awards"
+    }
+- property: character
+  expected_types:
+  - type_name: Person
+    type_base_url: "https://schema.org/"
+  description: "Fictional person connected with a creative work."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "character": {"@id": "https://orcid.org/0000-0002-1825-0097", "@type": "Person"}
+    }
+- property: citation
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  - type_name: CreativeWork
+    type_base_url: "https://schema.org/"
+  description: >-
+    A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "citation": "example citation"
+    }
+- property: comment
+  expected_types:
+  - type_name: Comment
+    type_base_url: "https://schema.org/"
+  description: "Comments, typically from users."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "comment": {"@id": "https://example.com/comment/345", "@type": "Comment"}
+    }
+- property: commentCount
+  expected_types:
+  - type_name: Integer
+    type_base_url: "https://schema.org/"
+  description: >-
+    The number of comments this CreativeWork (e.g. Article, Question or Answer) has
+    received. This is most applicable to works published in Web sites with commenting
+    system; additional comments may exist elsewhere.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "commentCount": 123
+    }
+- property: conditionsOfAccess
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: |-
+    Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an <a class="localLink" href="http://schema.org/ArchiveComponent">ArchiveComponent</a> held by an <a class="localLink" href="http://schema.org/ArchiveOrganization">ArchiveOrganization</a>. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language.<br/><br/>
+
+    For example "Available by appointment from the Reading Room" or "Accessible only from logged-in accounts ".
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "conditionsOfAccess": "example conditionsofaccess"
+    }
+- property: contentLocation
+  expected_types:
+  - type_name: Place
+    type_base_url: "https://schema.org/"
+  description: >-
+    The location depicted or described in the content. For example, the location in
+    a photograph or painting.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "contentLocation": {"@id": "https://example.com/place/345", "@type": "Place"}
+    }
+- property: contentRating
+  expected_types:
+  - type_name: Rating
+    type_base_url: "https://schema.org/"
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: "Official rating of a piece of content&#x2014;for example,'MPAA PG-13'."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "contentRating": {"@type": "Rating"}
+    }
+- property: contentReferenceTime
+  expected_types:
+  - type_name: DateTime
+    type_base_url: "https://schema.org/"
+  description: >-
+    The specific time described by a creative work, for works (e.g. articles, video
+    objects etc.) that emphasise a particular moment within an Event.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "contentReferenceTime": "2020-10-08T17:33:08+01:00"
+    }
+- property: contributor
+  expected_types:
+  - type_name: Person
+    type_base_url: "https://schema.org/"
+  - type_name: Organization
+    type_base_url: "https://schema.org/"
+  description: "A secondary contributor to the CreativeWork or Event."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "contributor": {"@id": "https://orcid.org/0000-0002-1825-0097", "@type": "Person"}
+    }
+- property: copyrightHolder
+  expected_types:
+  - type_name: Person
+    type_base_url: "https://schema.org/"
+  - type_name: Organization
+    type_base_url: "https://schema.org/"
+  description: "The party holding the legal copyright to the CreativeWork."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "copyrightHolder": {"@id": "https://orcid.org/0000-0002-1825-0097", "@type": "Person"}
+    }
+- property: copyrightYear
+  expected_types:
+  - type_name: Number
+    type_base_url: "https://schema.org/"
+  description: >-
+    The year during which the claimed copyright for the CreativeWork was first asserted.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "copyrightYear": 123
+    }
+- property: correction
+  expected_types:
+  - type_name: CorrectionComment
+    type_base_url: "https://schema.org/"
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  description: >-
+    Indicates a correction to a <a class="localLink" href="http://schema.org/CreativeWork">CreativeWork</a>,
+    either via a <a class="localLink" href="http://schema.org/CorrectionComment">CorrectionComment</a>,
+    textually or in another document.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "correction": {"@id": "https://example.com/correctioncomment/345", "@type": "CorrectionComment"}
+    }
+- property: creativeWorkStatus
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  - type_name: DefinedTerm
+    type_base_url: "https://schema.org/"
+  description: >-
+    The status of a creative work in terms of its stage in a lifecycle. Example terms
+    include Incomplete, Draft, Published, Obsolete. Some organizations define a set
+    of terms for the stages of their publication lifecycle.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "creativeWorkStatus": "example creativeworkstatus"
+    }
+- property: creator
+  expected_types:
+  - type_name: Person
+    type_base_url: "https://schema.org/"
+  - type_name: Organization
+    type_base_url: "https://schema.org/"
+  description: >-
+    The creator/author of this CreativeWork. This is the same as the Author property
+    for CreativeWork.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "creator": {"@id": "https://orcid.org/0000-0002-1825-0097", "@type": "Person"}
+    }
+- property: dateCreated
+  expected_types:
+  - type_name: DateTime
+    type_base_url: "https://schema.org/"
+  - type_name: Date
+    type_base_url: "https://schema.org/"
+  description: >-
+    The date on which the CreativeWork was created or the item was added to a DataFeed.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "dateCreated": "2020-10-08T17:33:08+01:00"
+    }
+- property: dateModified
+  expected_types:
+  - type_name: DateTime
+    type_base_url: "https://schema.org/"
+  - type_name: Date
+    type_base_url: "https://schema.org/"
+  description: >-
+    The date on which the CreativeWork was most recently modified or when the item's
+    entry was modified within a DataFeed.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "dateModified": "2020-10-08T17:33:08+01:00"
+    }
+- property: datePublished
+  expected_types:
+  - type_name: Date
+    type_base_url: "https://schema.org/"
+  - type_name: DateTime
+    type_base_url: "https://schema.org/"
+  description: "Date of first broadcast/publication."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "datePublished": "2020-10-08"
+    }
+- property: discussionUrl
+  expected_types:
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  description: "A link to the page containing the comments of the CreativeWork."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "discussionUrl": "https://purl.example.org/discussionurl-345"
+    }
+- property: editEIDR
+  expected_types:
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: |-
+    An <a href="https://eidr.org/">EIDR</a> (Entertainment Identifier Registry) <a class="localLink" href="http://schema.org/identifier">identifier</a> representing a specific edit / edition for a work of film or television.<br/><br/>
+
+    For example, the motion picture known as "Ghostbusters" whose <a class="localLink" href="http://schema.org/titleEIDR">titleEIDR</a> is "10.5240/7EC7-228A-510A-053E-CBB8-J", has several edits e.g. "10.5240/1F2A-E1C5-680A-14C6-E76B-I" and "10.5240/8A35-3BEE-6497-5D12-9E4F-3".<br/><br/>
+
+    Since schema.org types like <a class="localLink" href="http://schema.org/Movie">Movie</a> and <a class="localLink" href="http://schema.org/TVEpisode">TVEpisode</a> can be used for both works and their multiple expressions, it is possible to use <a class="localLink" href="http://schema.org/titleEIDR">titleEIDR</a> alone (for a general description), or alongside <a class="localLink" href="http://schema.org/editEIDR">editEIDR</a> for a more edit-specific description.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "editEIDR": "https://purl.example.org/editeidr-345"
+    }
+- property: editor
+  expected_types:
+  - type_name: Person
+    type_base_url: "https://schema.org/"
+  description: "Specifies the Person who edited the CreativeWork."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "editor": {"@id": "https://orcid.org/0000-0002-1825-0097", "@type": "Person"}
+    }
+- property: educationalAlignment
+  expected_types:
+  - type_name: AlignmentObject
+    type_base_url: "https://schema.org/"
+  description: |-
+    An alignment to an established educational framework.<br/><br/>
+
+    This property should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource <a class="localLink" href="http://schema.org/teaches">teaches</a> or <a class="localLink" href="http://schema.org/assesses">assesses</a> a competency.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "educationalAlignment": {"@type": "AlignmentObject"}
+    }
+- property: educationalLevel
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  - type_name: DefinedTerm
+    type_base_url: "https://schema.org/"
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  description: >-
+    The level in terms of progression through an educational or training context.
+    Examples of educational levels include 'beginner', 'intermediate' or 'advanced',
+    and formal sets of level indicators.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "educationalLevel": "example educationallevel"
+    }
+- property: educationalUse
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: >-
+    The purpose of a work in the context of education; for example, 'assignment',
+    'group work'.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "educationalUse": "example educationaluse"
+    }
+- property: encoding
+  expected_types:
+  - type_name: MediaObject
+    type_base_url: "https://schema.org/"
+  description: >-
+    A media object that encodes this CreativeWork. This property is a synonym for
+    associatedMedia.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "encoding": {"@id": "https://example.com/mediaobject/345", "@type": "MediaObject"}
+    }
+- property: encodingFormat
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  description: |-
+    Media type typically expressed using a MIME format (see <a href="http://www.iana.org/assignments/media-types/media-types.xhtml">IANA site</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MDN reference</a>) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).<br/><br/>
+
+    In cases where a <a class="localLink" href="http://schema.org/CreativeWork">CreativeWork</a> has several media type representations, <a class="localLink" href="http://schema.org/encoding">encoding</a> can be used to indicate each <a class="localLink" href="http://schema.org/MediaObject">MediaObject</a> alongside particular <a class="localLink" href="http://schema.org/encodingFormat">encodingFormat</a> information.<br/><br/>
+
+    Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "encodingFormat": "example encodingformat"
+    }
+- property: encodings
+  expected_types:
+  - type_name: MediaObject
+    type_base_url: "https://schema.org/"
+  description: "A media object that encodes this CreativeWork."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "encodings": {"@id": "https://example.com/mediaobject/345", "@type": "MediaObject"}
+    }
+- property: exampleOfWork
+  expected_types:
+  - type_name: CreativeWork
+    type_base_url: "https://schema.org/"
+  description: >-
+    A creative work that this work is an example/instance/realization/derivation of.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "exampleOfWork": {"@id": "https://example.com/creativework/345", "@type": "CreativeWork"}
+    }
+- property: expires
+  expected_types:
+  - type_name: Date
+    type_base_url: "https://schema.org/"
+  description: >-
+    Date the content expires and is no longer useful or available. For example a <a
+    class="localLink" href="http://schema.org/VideoObject">VideoObject</a> or <a class="localLink"
+    href="http://schema.org/NewsArticle">NewsArticle</a> whose availability or relevance
+    is time-limited, or a <a class="localLink" href="http://schema.org/ClaimReview">ClaimReview</a>
+    fact check whose publisher wants to indicate that it may no longer be relevant
+    (or helpful to highlight) after some date.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "expires": "2020-10-08"
+    }
+- property: fileFormat
+  expected_types:
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: >-
+    Media type, typically MIME format (see <a href="http://www.iana.org/assignments/media-types/media-types.xhtml">IANA
+    site</a>) of the content e.g. application/zip of a SoftwareApplication binary.
+    In cases where a CreativeWork has several media type representations, 'encoding'
+    can be used to indicate each MediaObject alongside particular fileFormat information.
+    Unregistered or niche file formats can be indicated instead via the most appropriate
+    URL, e.g. defining Web page or a Wikipedia entry.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "fileFormat": "https://purl.example.org/fileformat-345"
+    }
+- property: funder
+  expected_types:
+  - type_name: Organization
+    type_base_url: "https://schema.org/"
+  - type_name: Person
+    type_base_url: "https://schema.org/"
+  description: >-
+    A person or organization that supports (sponsors) something through some kind
+    of financial contribution.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "funder": {"@id": "https://example.com/organization/345", "@type": "Organization"}
+    }
+- property: genre
+  expected_types:
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: "Genre of the creative work, broadcast channel or group."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "genre": "https://purl.example.org/genre-345"
+    }
+- property: hasPart
+  expected_types:
+  - type_name: CreativeWork
+    type_base_url: "https://schema.org/"
+  description: >-
+    Indicates an item or CreativeWork that is part of this item, or CreativeWork (in
+    some sense).
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "hasPart": {"@id": "https://example.com/creativework/345", "@type": "CreativeWork"}
+    }
+- property: headline
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: "Headline of the article."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "headline": "example headline"
+    }
+- property: inLanguage
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  - type_name: Language
+    type_base_url: "https://schema.org/"
+  description: >-
+    The language of the content or performance or used in an action. Please use one
+    of the language codes from the <a href="http://tools.ietf.org/html/bcp47">IETF
+    BCP 47 standard</a>. See also <a class="localLink" href="http://schema.org/availableLanguage">availableLanguage</a>.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "inLanguage": "example inlanguage"
+    }
+- property: interactionStatistic
+  expected_types:
+  - type_name: InteractionCounter
+    type_base_url: "https://schema.org/"
+  description: >-
+    The number of interactions for the CreativeWork using the WebSite or SoftwareApplication.
+    The most specific child type of InteractionCounter should be used.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "interactionStatistic": {"@type": "InteractionCounter"}
+    }
+- property: interactivityType
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: >-
+    The predominant mode of learning supported by the learning resource. Acceptable
+    values are 'active', 'expositive', or 'mixed'.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "interactivityType": "example interactivitytype"
+    }
+- property: isAccessibleForFree
+  expected_types:
+  - type_name: Boolean
+    type_base_url: "https://schema.org/"
+  description: "A flag to signal that the item, event, or place is accessible for\
+    \ free."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "isAccessibleForFree": false
+    }
+- property: isBasedOn
+  expected_types:
+  - type_name: Product
+    type_base_url: "https://schema.org/"
+  - type_name: CreativeWork
+    type_base_url: "https://schema.org/"
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  description: >-
+    A resource from which this work is derived or from which it is a modification
+    or adaption.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "isBasedOn": {"@id": "https://example.com/product/345", "@type": "Product"}
+    }
+- property: isBasedOnUrl
+  expected_types:
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  - type_name: CreativeWork
+    type_base_url: "https://schema.org/"
+  - type_name: Product
+    type_base_url: "https://schema.org/"
+  description: >-
+    A resource that was used in the creation of this resource. This term can be repeated
+    for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "isBasedOnUrl": "https://purl.example.org/isbasedonurl-345"
+    }
+- property: isFamilyFriendly
+  expected_types:
+  - type_name: Boolean
+    type_base_url: "https://schema.org/"
+  description: "Indicates whether this content is family friendly."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "isFamilyFriendly": false
+    }
+- property: isPartOf
+  expected_types:
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  - type_name: CreativeWork
+    type_base_url: "https://schema.org/"
+  description: >-
+    Indicates an item or CreativeWork that this item, or CreativeWork (in some sense),
+    is part of.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "isPartOf": "https://purl.example.org/ispartof-345"
+    }
+- property: keywords
+  expected_types:
+  - type_name: DefinedTerm
+    type_base_url: "https://schema.org/"
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: >-
+    Keywords or tags used to describe this content. Multiple entries in a keywords
+    list are typically delimited by commas.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "keywords": {"@type": "DefinedTerm"}
+    }
+- property: learningResourceType
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: >-
+    The predominant type or kind characterizing the learning resource. For example,
+    'presentation', 'handout'.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "learningResourceType": "example learningresourcetype"
+    }
+- property: license
+  expected_types:
+  - type_name: CreativeWork
+    type_base_url: "https://schema.org/"
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  description: "A license document that applies to this content, typically indicated\
+    \ by URL."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "license": {"@id": "https://example.com/creativework/345", "@type": "CreativeWork"}
+    }
+- property: locationCreated
+  expected_types:
+  - type_name: Place
+    type_base_url: "https://schema.org/"
+  description: >-
+    The location where the CreativeWork was created, which may not be the same as
+    the location depicted in the CreativeWork.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "locationCreated": {"@id": "https://example.com/place/345", "@type": "Place"}
+    }
+- property: mainEntity
+  expected_types:
+  - type_name: Thing
+    type_base_url: "https://schema.org/"
+  description: "Indicates the primary entity described in some page or other CreativeWork."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "mainEntity": {"@id": "https://example.com/thing/345", "@type": "Thing"}
+    }
+- property: maintainer
+  expected_types:
+  - type_name: Organization
+    type_base_url: "https://schema.org/"
+  - type_name: Person
+    type_base_url: "https://schema.org/"
+  description: >-
+    A maintainer of a <a class="localLink" href="http://schema.org/Dataset">Dataset</a>,
+    software package (<a class="localLink" href="http://schema.org/SoftwareApplication">SoftwareApplication</a>),
+    or other <a class="localLink" href="http://schema.org/Project">Project</a>. A
+    maintainer is a <a class="localLink" href="http://schema.org/Person">Person</a>
+    or <a class="localLink" href="http://schema.org/Organization">Organization</a>
+    that manages contributions to, and/or publication of, some (typically complex)
+    artifact. It is common for distributions of software and data to be based on "upstream"
+    sources. When <a class="localLink" href="http://schema.org/maintainer">maintainer</a>
+    is applied to a specific version of something e.g. a particular version or packaging
+    of a <a class="localLink" href="http://schema.org/Dataset">Dataset</a>, it is
+    always  possible that the upstream source has a different maintainer. The <a class="localLink"
+    href="http://schema.org/isBasedOn">isBasedOn</a> property can be used to indicate
+    such relationships between datasets to make the different maintenance roles clear.
+    Similarly in the case of software, a package may have dedicated maintainers working
+    on integration into software distributions such as Ubuntu, as well as upstream
+    maintainers of the underlying work.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "maintainer": {"@id": "https://example.com/organization/345", "@type": "Organization"}
+    }
+- property: material
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  - type_name: Product
+    type_base_url: "https://schema.org/"
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  description: "A material that something is made from, e.g. leather, wool, cotton,\
+    \ paper."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "material": "example material"
+    }
+- property: materialExtent
+  expected_types:
+  - type_name: QuantitativeValue
+    type_base_url: "https://schema.org/"
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: >-
+    The quantity of the materials being described or an expression of the physical
+    space they occupy.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "materialExtent": {"@type": "QuantitativeValue"}
+    }
+- property: mentions
+  expected_types:
+  - type_name: Thing
+    type_base_url: "https://schema.org/"
+  description: >-
+    Indicates that the CreativeWork contains a reference to, but is not necessarily
+    about a concept.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "mentions": {"@id": "https://example.com/thing/345", "@type": "Thing"}
+    }
+- property: offers
+  expected_types:
+  - type_name: Demand
+    type_base_url: "https://schema.org/"
+  - type_name: Offer
+    type_base_url: "https://schema.org/"
+  description: >-
+    An offer to provide this item&#x2014;for example, an offer to sell a product,
+    rent the DVD of a movie, perform a service, or give away tickets to an event.
+    Use <a class="localLink" href="http://schema.org/businessFunction">businessFunction</a>
+    to indicate the kind of transaction offered, i.e. sell, lease, etc. This property
+    can also be used to describe a <a class="localLink" href="http://schema.org/Demand">Demand</a>.
+    While this property is listed as expected on a number of common types, it can
+    be used in others. In that case, using a second type, such as Product or a subtype
+    of Product, can clarify the nature of the offer.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "offers": {"@type": "Demand"}
+    }
+- property: pattern
+  expected_types:
+  - type_name: DefinedTerm
+    type_base_url: "https://schema.org/"
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: >-
+    A pattern that something has, for example 'polka dot', 'striped', 'Canadian flag'.
+    Values are typically expressed as text, although links to controlled value schemes
+    are also supported.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "pattern": {"@type": "DefinedTerm"}
+    }
+- property: position
+  expected_types:
+  - type_name: Integer
+    type_base_url: "https://schema.org/"
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: "The position of an item in a series or sequence of items."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "position": 123
+    }
+- property: producer
+  expected_types:
+  - type_name: Organization
+    type_base_url: "https://schema.org/"
+  - type_name: Person
+    type_base_url: "https://schema.org/"
+  description: >-
+    The person or organization who produced the work (e.g. music album, movie, tv/radio
+    series etc.).
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "producer": {"@id": "https://example.com/organization/345", "@type": "Organization"}
+    }
+- property: provider
+  expected_types:
+  - type_name: Organization
+    type_base_url: "https://schema.org/"
+  - type_name: Person
+    type_base_url: "https://schema.org/"
+  description: >-
+    The service provider, service operator, or service performer; the goods producer.
+    Another party (a seller) may offer those services or goods on behalf of the provider.
+    A provider may also serve as the seller.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "provider": {"@id": "https://example.com/organization/345", "@type": "Organization"}
+    }
+- property: publication
+  expected_types:
+  - type_name: PublicationEvent
+    type_base_url: "https://schema.org/"
+  description: "A publication event associated with the item."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "publication": {"@id": "https://example.com/publicationevent/345", "@type": "PublicationEvent"}
+    }
+- property: publisher
+  expected_types:
+  - type_name: Person
+    type_base_url: "https://schema.org/"
+  - type_name: Organization
+    type_base_url: "https://schema.org/"
+  description: "The publisher of the creative work."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "publisher": {"@id": "https://orcid.org/0000-0002-1825-0097", "@type": "Person"}
+    }
+- property: publisherImprint
+  expected_types:
+  - type_name: Organization
+    type_base_url: "https://schema.org/"
+  description: "The publishing division which published the comic."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "publisherImprint": {"@id": "https://example.com/organization/345", "@type": "Organization"}
+    }
+- property: publishingPrinciples
+  expected_types:
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  - type_name: CreativeWork
+    type_base_url: "https://schema.org/"
+  description: |-
+    The publishingPrinciples property indicates (typically via <a class="localLink" href="http://schema.org/URL">URL</a>) a document describing the editorial principles of an <a class="localLink" href="http://schema.org/Organization">Organization</a> (or individual e.g. a <a class="localLink" href="http://schema.org/Person">Person</a> writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a <a class="localLink" href="http://schema.org/CreativeWork">CreativeWork</a> (e.g. <a class="localLink" href="http://schema.org/NewsArticle">NewsArticle</a>) the principles are those of the party primarily responsible for the creation of the <a class="localLink" href="http://schema.org/CreativeWork">CreativeWork</a>.<br/><br/>
+
+    While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a <a class="localLink" href="http://schema.org/funder">funder</a>) can be expressed using schema.org terminology.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "publishingPrinciples": "https://purl.example.org/publishingprinciples-345"
+    }
+- property: recordedAt
+  expected_types:
+  - type_name: Event
+    type_base_url: "https://schema.org/"
+  description: >-
+    The Event where the CreativeWork was recorded. The CreativeWork may capture all
+    or part of the event.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "recordedAt": {"@id": "https://example.com/event/345", "@type": "Event"}
+    }
+- property: releasedEvent
+  expected_types:
+  - type_name: PublicationEvent
+    type_base_url: "https://schema.org/"
+  description: "The place and time the release was issued, expressed as a PublicationEvent."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "releasedEvent": {"@id": "https://example.com/publicationevent/345", "@type": "PublicationEvent"}
+    }
+- property: review
+  expected_types:
+  - type_name: Review
+    type_base_url: "https://schema.org/"
+  description: "A review of the item."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "review": {"@id": "https://example.com/review/345", "@type": "Review"}
+    }
+- property: reviews
+  expected_types:
+  - type_name: Review
+    type_base_url: "https://schema.org/"
+  description: "Review of the item."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "reviews": {"@id": "https://example.com/review/345", "@type": "Review"}
+    }
+- property: schemaVersion
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  description: >-
+    Indicates (by URL or string) a particular version of a schema used in some CreativeWork.
+    For example, a document could declare a schemaVersion using an URL such as http://schema.org/version/2.0/
+    if precise indication of schema version was required by some application.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "schemaVersion": "example schemaversion"
+    }
+- property: sdDatePublished
+  expected_types:
+  - type_name: Date
+    type_base_url: "https://schema.org/"
+  description: >-
+    Indicates the date on which the current structured data was generated / published.
+    Typically used alongside <a class="localLink" href="http://schema.org/sdPublisher">sdPublisher</a>
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "sdDatePublished": "2020-10-08"
+    }
+- property: sdLicense
+  expected_types:
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  - type_name: CreativeWork
+    type_base_url: "https://schema.org/"
+  description: >-
+    A license document that applies to this structured data, typically indicated by
+    URL.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "sdLicense": "https://purl.example.org/sdlicense-345"
+    }
+- property: sdPublisher
+  expected_types:
+  - type_name: Organization
+    type_base_url: "https://schema.org/"
+  - type_name: Person
+    type_base_url: "https://schema.org/"
+  description: |-
+    Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The
+    <a class="localLink" href="http://schema.org/sdPublisher">sdPublisher</a> property helps make such practices more explicit.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "sdPublisher": {"@id": "https://example.com/organization/345", "@type": "Organization"}
+    }
+- property: size
+  expected_types:
+  - type_name: QuantitativeValue
+    type_base_url: "https://schema.org/"
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  - type_name: DefinedTerm
+    type_base_url: "https://schema.org/"
+  description: >-
+    A standardized size of a product or creative work, often simplifying richer information
+    into a simple textual string, either through referring to named sizes or (in the
+    case of product markup), by adopting conventional simplifications. Use of QuantitativeValue
+    with a unitCode or unitText can add more structure; in other cases, the /width,
+    /height, /depth and /weight properties may be more applicable.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "size": {"@type": "QuantitativeValue"}
+    }
+- property: sourceOrganization
+  expected_types:
+  - type_name: Organization
+    type_base_url: "https://schema.org/"
+  description: "The Organization on whose behalf the creator was working."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "sourceOrganization": {"@id": "https://example.com/organization/345", "@type": "Organization"}
+    }
+- property: spatial
+  expected_types:
+  - type_name: Place
+    type_base_url: "https://schema.org/"
+  description: |-
+    The "spatial" property can be used in cases when more specific properties
+    (e.g. <a class="localLink" href="http://schema.org/locationCreated">locationCreated</a>, <a class="localLink" href="http://schema.org/spatialCoverage">spatialCoverage</a>, <a class="localLink" href="http://schema.org/contentLocation">contentLocation</a>) are not known to be appropriate.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "spatial": {"@id": "https://example.com/place/345", "@type": "Place"}
+    }
+- property: spatialCoverage
+  expected_types:
+  - type_name: Place
+    type_base_url: "https://schema.org/"
+  description: |-
+    The spatialCoverage of a CreativeWork indicates the place(s) which are the focus of the content. It is a subproperty of
+          contentLocation intended primarily for more technical and detailed materials. For example with a Dataset, it indicates
+          areas that the dataset describes: a dataset of New York weather would have spatialCoverage which was the place: the state of New York.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "spatialCoverage": {"@id": "https://example.com/place/345", "@type": "Place"}
+    }
+- property: sponsor
+  expected_types:
+  - type_name: Person
+    type_base_url: "https://schema.org/"
+  - type_name: Organization
+    type_base_url: "https://schema.org/"
+  description: >-
+    A person or organization that supports a thing through a pledge, promise, or financial
+    contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "sponsor": {"@id": "https://orcid.org/0000-0002-1825-0097", "@type": "Person"}
+    }
+- property: teaches
+  expected_types:
+  - type_name: DefinedTerm
+    type_base_url: "https://schema.org/"
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: >-
+    The item being described is intended to help a person learn the competency or
+    learning outcome defined by the referenced term.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "teaches": {"@type": "DefinedTerm"}
+    }
+- property: temporal
+  expected_types:
+  - type_name: DateTime
+    type_base_url: "https://schema.org/"
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: |-
+    The "temporal" property can be used in cases where more specific properties
+    (e.g. <a class="localLink" href="http://schema.org/temporalCoverage">temporalCoverage</a>, <a class="localLink" href="http://schema.org/dateCreated">dateCreated</a>, <a class="localLink" href="http://schema.org/dateModified">dateModified</a>, <a class="localLink" href="http://schema.org/datePublished">datePublished</a>) are not known to be appropriate.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "temporal": "2020-10-08T17:33:08+01:00"
+    }
+- property: temporalCoverage
+  expected_types:
+  - type_name: DateTime
+    type_base_url: "https://schema.org/"
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: |-
+    The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in <a href="https://en.wikipedia.org/wiki/ISO_8601#Time_intervals">ISO 8601 time interval format</a>. In
+          the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written "2011/2012"). Other forms of content e.g. ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their temporalCoverage in broader terms - textually or via well-known URL.
+          Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via "1939/1945".<br/><br/>
+
+    Open-ended date ranges can be written with ".." in place of the end date. For example, "2015-11/.." indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "temporalCoverage": "2020-10-08T17:33:08+01:00"
+    }
+- property: text
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: "The textual content of this CreativeWork."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "text": "example text"
+    }
+- property: thumbnailUrl
+  expected_types:
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  description: "A thumbnail image relevant to the Thing."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "thumbnailUrl": "https://purl.example.org/thumbnailurl-345"
+    }
+- property: timeRequired
+  expected_types:
+  - type_name: Duration
+    type_base_url: "https://schema.org/"
+  description: >-
+    Approximate or typical time it takes to work with or through this learning resource
+    for the typical intended target audience, e.g. 'PT30M', 'PT1H25M'.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "timeRequired": {"@type": "Duration"}
+    }
+- property: translationOfWork
+  expected_types:
+  - type_name: CreativeWork
+    type_base_url: "https://schema.org/"
+  description: "The work that this work has been translated from. e.g. \u7269\u79CD\
+    \u8D77\u6E90 is a translationOf \u201COn the Origin of Species\u201D"
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "translationOfWork": {"@id": "https://example.com/creativework/345", "@type": "CreativeWork"}
+    }
+- property: translator
+  expected_types:
+  - type_name: Organization
+    type_base_url: "https://schema.org/"
+  - type_name: Person
+    type_base_url: "https://schema.org/"
+  description: >-
+    Organization or person who adapts a creative work to different languages, regional
+    differences and technical requirements of a target market, or that translates
+    during some event.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "translator": {"@id": "https://example.com/organization/345", "@type": "Organization"}
+    }
+- property: typicalAgeRange
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: "The typical expected age range, e.g. '7-9', '11-'."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "typicalAgeRange": "example typicalagerange"
+    }
+- property: usageInfo
+  expected_types:
+  - type_name: CreativeWork
+    type_base_url: "https://schema.org/"
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  description: |-
+    The schema.org <a class="localLink" href="http://schema.org/usageInfo">usageInfo</a> property indicates further information about a <a class="localLink" href="http://schema.org/CreativeWork">CreativeWork</a>. This property is applicable both to works that are freely available and to those that require payment or other transactions. It can reference additional information e.g. community expectations on preferred linking and citation conventions, as well as purchasing details. For something that can be commercially licensed, usageInfo can provide detailed, resource-specific information about licensing options.<br/><br/>
+
+    This property can be used alongside the license property which indicates license(s) applicable to some piece of content. The usageInfo property can provide information about other licensing options, e.g. acquiring commercial usage rights for an image that is also available under non-commercial creative commons licenses.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "usageInfo": {"@id": "https://example.com/creativework/345", "@type": "CreativeWork"}
+    }
+- property: version
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  - type_name: Number
+    type_base_url: "https://schema.org/"
+  description: "The version of the CreativeWork embodied by a specified resource."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "version": "example version"
+    }
+- property: video
+  expected_types:
+  - type_name: VideoObject
+    type_base_url: "https://schema.org/"
+  - type_name: Clip
+    type_base_url: "https://schema.org/"
+  description: "An embedded video object."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "video": {"@id": "https://example.com/videoobject/345", "@type": "VideoObject"}
+    }
+- property: workExample
+  expected_types:
+  - type_name: CreativeWork
+    type_base_url: "https://schema.org/"
+  description: >-
+    Example/instance/realization/derivation of the concept of this creative work.
+    eg. The paperback edition, first edition, or eBook.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "workExample": {"@id": "https://example.com/creativework/345", "@type": "CreativeWork"}
+    }
+- property: workTranslation
+  expected_types:
+  - type_name: CreativeWork
+    type_base_url: "https://schema.org/"
+  description: "A work that is a translation of the content of this work. e.g. \u897F\
+    \u904A\u8A18 has an English workTranslation \u201CJourney to the West\u201D,a\
+    \ German workTranslation \u201CMonkeys Pilgerfahrt\u201D and a Vietnamese  translation\
+    \ T\xE2y du k\xFD b\xECnh kh\u1EA3o."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "workTranslation": {"@id": "https://example.com/creativework/345", "@type": "CreativeWork"}
+    }
+- property: additionalType
+  expected_types:
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  description: >-
+    An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between
+    something and a class that the thing is in. In RDFa syntax, it is better to use
+    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
+    tools may have only weaker understanding of extra types, in particular those defined
+    externally.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "additionalType": "https://purl.example.org/additionaltype-345"
+    }
+- property: alternateName
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: "An alias for the item."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "alternateName": "example alternatename"
+    }
+- property: description
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: "A description of the item."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "description": "example description"
+    }
+- property: disambiguatingDescription
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: >-
+    A sub property of description. A short description of the item used to disambiguate
+    from other, similar items. Information from other properties (in particular, name)
+    may be necessary for the description to be useful for disambiguation.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "disambiguatingDescription": "example disambiguatingdescription"
+    }
+- property: identifier
+  expected_types:
+  - type_name: PropertyValue
+    type_base_url: "https://schema.org/"
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  description: >-
+    The identifier property represents any kind of identifier for any kind of <a class="localLink"
+    href="http://schema.org/Thing">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc.
+    Schema.org provides dedicated properties for representing many of these, either
+    as textual strings or as URL (URI) links. See <a href="/docs/datamodel.html#identifierBg">background
+    notes</a> for more details.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "identifier": {"@type": "PropertyValue"}
+    }
+- property: image
+  expected_types:
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  - type_name: ImageObject
+    type_base_url: "https://schema.org/"
+  description: >-
+    An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a>
+    or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "image": "https://purl.example.org/image-345"
+    }
+- property: mainEntityOfPage
+  expected_types:
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  - type_name: CreativeWork
+    type_base_url: "https://schema.org/"
+  description: >-
+    Indicates a page (or other CreativeWork) for which this thing is the main entity
+    being described. See <a href="/docs/datamodel.html#mainEntityBackground">background
+    notes</a> for details.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "mainEntityOfPage": "https://purl.example.org/mainentityofpage-345"
+    }
+- property: name
+  expected_types:
+  - type_name: Text
+    type_base_url: "https://schema.org/"
+  description: "The name of the item."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "name": "example name"
+    }
+- property: potentialAction
+  expected_types:
+  - type_name: Action
+    type_base_url: "https://schema.org/"
+  description: >-
+    Indicates a potential Action, which describes an idealized action in which this
+    thing would play an 'object' role.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "potentialAction": {"@id": "https://example.com/action/345", "@type": "Action"}
+    }
+- property: sameAs
+  expected_types:
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  description: >-
+    URL of a reference Web page that unambiguously indicates the item's identity.
+    E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "sameAs": "https://purl.example.org/sameas-345"
+    }
+- property: subjectOf
+  expected_types:
+  - type_name: CreativeWork
+    type_base_url: "https://schema.org/"
+  - type_name: Event
+    type_base_url: "https://schema.org/"
+  description: "A CreativeWork or Event about this Thing."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "subjectOf": {"@id": "https://example.com/creativework/345", "@type": "CreativeWork"}
+    }
+- property: url
+  expected_types:
+  - type_name: URL
+    type_base_url: "https://schema.org/"
+  description: "URL of the item."
+  type: ''
+  type_url: ''
+  bsc_description: "TODO: Bioschemas description"
+  equivalentProperty: ''
+  marginality: Unspecified
+  cardinality: ''
+  controlled_vocab: ''
+  example: |-
+    { "@context": "https://schema.org/",
+      "@id": "https://example.com/dataset/123",
+      "@type": "Dataset",
+      "url": "https://purl.example.org/url-345"
+    }
+---

@@ -9,11 +9,11 @@ description: Specifications for scholarly publication related profiles
 lead: [AlexanderGarcia, LeylaGarcia]
 email: enquiries@bioschemas.org
 issues:
-  - https://github.com/BioSchemas/bioschemas/labels/type%3A%20Scholarlyarticle
-  - https://github.com/BioSchemas/bioschemas/labels/type%3A%20Journal
-  - https://github.com/BioSchemas/bioschemas/labels/type%3A%20PublicationIssue
-  - https://github.com/BioSchemas/bioschemas/labels/type%3A%20PublicationVolume
-  - https://github.com/BioSchemas/bioschemas/labels/type%3A%20SemanticAnnotation
+  - https://github.com/Bioschemas/bioschemas/labels/type%3A%20Scholarlyarticle
+  - https://github.com/Bioschemas/bioschemas/labels/type%3A%20Journal
+  - https://github.com/Bioschemas/bioschemas/labels/type%3A%20PublicationIssue
+  - https://github.com/Bioschemas/bioschemas/labels/type%3A%20PublicationVolume
+  - https://github.com/Bioschemas/bioschemas/labels/type%3A%20SemanticAnnotation
 folder:
   - https://drive.google.com/drive/folders/1CgEyta4d7vFfYT7r7w9HtLZ4kAidDmJI
 

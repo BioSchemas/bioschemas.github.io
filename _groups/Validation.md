@@ -10,7 +10,7 @@ lead: [AlasdairGray]
 email: enquiries@bioschemas.org
 
 # Progress status
-issues: https://github.com/BioSchemas/bioschemas/labels/Validation
+issues: https://github.com/Bioschemas/bioschemas/labels/Validation
 
 # Page attributes
 abstract: 'Though search engines provide validation of the schema.org structured data provided in a page it does not make an analysis of the content of a site and do not validate important features in Bioschemas like compliance with content guidelines, vocabularies or cardinality.'

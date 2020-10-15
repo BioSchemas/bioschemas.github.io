@@ -8,7 +8,7 @@ type: generic
 description: Specification for tools
 lead: [RicardoArcila, JustinClark-Casey, LeylaGarcia]
 email: enquiries@bioschemas.org
-issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20tool
+issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20tool
 folder: https://drive.google.com/open?id=0BzDhyOWTnRNTYkdQNHppUjZ3U2M
 
 # Page attributes
