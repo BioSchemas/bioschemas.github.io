@@ -1,16 +1,23 @@
 ---
+redirect_from:
+- "devSpecs/FormalParameter/specification"
+- "devSpecs/FormalParameter/specification/"
+- "/devSpecs/FormalParameter/"
+- "/specifications/drafts/FormalParameter"
+- "/profiles/FormalParameter/"
+
 name: FormalParameter
 
-previous_version:
+previous_version: "0.1-DRAFT-2020_07_21"
 previous_release:
 
-status: revision
+status: release
 spec_type: Profile
 group: workflow
-use_cases_url:
-cross_walk_url: 
-gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20FormalParameter
-live_deploy: ''
+use_cases_url: /useCases/ComputationalWorkflow
+cross_walk_url: https://docs.google.com/spreadsheets/d/1JnumyGI3Mpt6YLTjIBiBFw7gQgaZ6kpRo_FUbb0P4rI/edit?usp=sharing
+gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Workflow
+live_deploy: /liveDeploys/
 
 parent_type: FormalParameter
 hierarchy:
@@ -22,11 +29,15 @@ hierarchy:
 # DO NOT MANUALLY EDIT THE CONTENT
 spec_info:
   title: FormalParameter
-  subtitle: A formal parameter is a slot that may be satisfied when the workflow is run. It appears as an Input or Output of a Workflow 
-  version: 0.1-DRAFT-2020_06_23
-  version_date: 20200623T122152
-  official_type: 'http://schema.org/FormalParameter '
-  full_example: pending resolution of issues
+  subtitle: Bioschemas specification for describing a formal parameter in the Life
+    Sciences.
+  description: A FormalParameter is an identified variable used to stand for the actual
+    value(s) are consumed/produced by a ComputationalWorkflow
+    <h3>Change Log</h3><p>No change from 0.1-DRAFT-2020_07_21</p>
+  version: 1.0-RELEASE
+  version_date: 20201019T135402
+  official_type: http://schema.org/FormalParameter
+  full_example: https://github.com/Bioschemas/specifications/tree/master/FormalParameter/examples/
 mapping:
 - property: additionalType
   expected_types:
