@@ -50,8 +50,8 @@ Enzyme:
 
 FormalParameter:
     name: "FormalParameter"
-    latest_publication: "0.1-DRAFT-2020_07_21"
-    latest_release:
+    latest_publication:
+    latest_release: "1.0-RELEASE"
     status: "active"
 
 Gene:
