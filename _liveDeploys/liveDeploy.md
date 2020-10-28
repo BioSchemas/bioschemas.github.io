@@ -1006,4 +1006,24 @@ list:
   bsc_ver: 0.5-RELEASE
   comments:
   node: DE
+-
+  name: COVID-19 Data Portal
+  highlight: Bringing together relevant datasets related to COVID-19 for sharing and analysis in an effort to accelerate coronavirus research.
+  example_URL: https://www.covid19dataportal.org/
+  resource_URL: https://www.covid19dataportal.org/
+  schema_org: DataCatalog
+  bsc_profile: DataCatalog
+  bsc_ver: 0.3
+  comments:
+  node: EBI
+-
+  name: COVID-19 Data Portal
+  highlight: Bringing together relevant datasets related to COVID-19 for sharing and analysis in an effort to accelerate coronavirus research.
+  example_URL: https://www.covid19dataportal.org/
+  resource_URL: https://www.covid19dataportal.org/
+  schema_org: Dataset
+  bsc_profile: Dataset
+  bsc_ver: 0.3
+  comments:
+  node: EBI
 ---
