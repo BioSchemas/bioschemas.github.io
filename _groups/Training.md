@@ -12,10 +12,10 @@ current-leads:
 - person: MichelleBrazas
   start-date: 2020-11-02
 former-leads:
-- lead: NiallBeard
+- person: NiallBeard
   start-date: 2018-09-25
   end-date: 2020-10-01
-- lead: GabriellaRustici
+- person: GabriellaRustici
   start-date: 2018-09-25
   end-date: 2020-10-01
 email: enquiries@bioschemas.org

@@ -115,9 +115,21 @@
                     <p><a href="{{ member.url }}">{{ member.first-name }} {{ member.last-name }}</a></p>
                     {% endfor %}
                   </div>
+                  {% if page.former-leads %}
+                    <br/>
+                    <h5>Former Group Leads</h5>
+                    <div id="formerLeadTable">
+                    {% for leader in page.former-leads %}
+                    {% assign lead-id = "/people/" | append: leader.person %}
+                    {% assign author = site.people | where:"id", lead-id | first %}
+                    <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a><br/>
+                       ({{leader.start-date | date: "%d-%b-%Y"}} – {{leader.end-date | date: "%d-%b-%Y"}})</p>
+                    {% endfor %}
+                    </div>
+                  {% endif %}
                   {% if page.Former-Members %}
                   <br/>
-                  <h5>Former Group members</h5>
+                  <h5>Former Group Members</h5>
                   <div id="formerPeopleTable">
                     {% for member-name in page.Former-Members %}
                     {% assign member-id = "/people/" | append: member-name %}
@@ -137,22 +149,27 @@
              document.getElementById('peopleTable').style.columnCount = 1;
              document.getElementById('formerPeopleTable').style.columnCount = 1;
              document.getElementById('leadTable').style.columnCount = 1;
+             document.getElementById('formerLeadTable').style.columnCount = 1;
          } else if(navigator.userAgent.match(/phone/i)) {
              document.getElementById('peopleTable').style.columnCount = 1;
              document.getElementById('formerPeopleTable').style.columnCount = 1;
              document.getElementById('leadTable').style.columnCount = 1;
+             document.getElementById('formerLeadTable').style.columnCount = 1;
          } else if(navigator.userAgent.match(/tablet/i)) {
              document.getElementById('peopleTable').style.columnCount = 1;
              document.getElementById('formerPeopleTable').style.columnCount = 1;
              document.getElementById('leadTable').style.columnCount = 1;
+             document.getElementById('formerLeadTable').style.columnCount = 1;
          } else if(navigator.userAgent.match(/ipad/i)) {
              document.getElementById('peopleTable').style.columnCount = 1;
              document.getElementById('formerPeopleTable').style.columnCount = 1;
              document.getElementById('leadTable').style.columnCount = 1;
+             document.getElementById('formerLeadTable').style.columnCount = 1;
          } else {
              document.getElementById('peopleTable').style.columnCount = 4;
              document.getElementById('formerPeopleTable').style.columnCount = 4;
              document.getElementById('leadTable').style.columnCount = 4;
+             document.getElementById('formerLeadTable').style.columnCount = 4;
          }
       </script>
       {% include footer.html %}
