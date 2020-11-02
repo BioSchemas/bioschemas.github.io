@@ -6,7 +6,18 @@ collection: groups
 active: true
 type: generic
 description: Specification for describing training resources such as materials and courses.
-lead: [PatriciaPalagi, MichelleBrazas]
+current-leads:
+- person: PatriciaPalagi
+  start-date: 2020-11-02
+- person: MichelleBrazas
+  start-date: 2020-11-02
+former-leads:
+- lead: NiallBeard
+  start-date: 2018-09-25
+  end-date: 2020-10-01
+- lead: GabriellaRustici
+  start-date: 2018-09-25
+  end-date: 2020-10-01
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20training%20material
 folder: https://drive.google.com/drive/u/1/folders/0B6crv12s8piRT0w5VXRUc09VTFU
