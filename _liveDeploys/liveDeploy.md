@@ -55,6 +55,7 @@ list:
     bsc_ver: 0.3
     comments:
     node: EBI
+    sitemap: https://ega-archive.org/sitemap.xml
 -
     name: EGA Dataset
     highlight: over 5,300 datasets
@@ -65,6 +66,7 @@ list:
     bsc_ver: 0.3
     comments:
     node: EBI
+    sitemap: https://ega-archive.org/sitemap.xml
 -
     name: EGA
     highlight: over 3,700 studies
@@ -75,6 +77,7 @@ list:
     bsc_ver: 0.1
     comments:
     node: EBI
+    sitemap: https://ega-archive.org/sitemap.xml
 -
     name: Isaexplorer
     highlight:
@@ -155,6 +158,7 @@ list:
     comments:
     node: EBI    
     type: DDR    
+    sitemap: https://www.ebi.ac.uk/biosamples/sitemap.xml
 -
     name: Biosamples
     highlight: 10 million+ pages
@@ -166,6 +170,7 @@ list:
     comments:
     node: EBI
     type: DDR
+    sitemap: https://www.ebi.ac.uk/biosamples/sitemap.xml
 -
     name: DataMed
     highlight:
@@ -756,6 +761,7 @@ list:
     bsc_ver: 0.2-DRAFT
     comments:  
     node: IT
+    sitemap: https://disprot.org/sitemap.xml
 -
     name: DisProt
     highlight: 1.6k proteins
@@ -766,6 +772,7 @@ list:
     bsc_ver: 0.11
     comments:  
     node: IT
+    sitemap: https://disprot.org/sitemap.xml
 -
     name: DisProt
     highlight:
@@ -776,6 +783,7 @@ list:
     bsc_ver: 0.3
     comments:  
     node: IT
+    sitemap: https://disprot.org/sitemap.xml
 -
     name: DisProt
     highlight:
@@ -786,6 +794,7 @@ list:
     bsc_ver: 0.3
     comments:  
     node: IT
+    sitemap: https://disprot.org/sitemap.xml
 -
     name: DisProt
     highlight: 3.5k protein regions
@@ -796,6 +805,7 @@ list:
     bsc_ver: 0.5-DRAFT
     comments:  
     node: IT
+    sitemap: https://disprot.org/sitemap.xml
 -
     name: DisProt
     highlight: 3.5k protein regions
@@ -806,6 +816,7 @@ list:
     bsc_ver: 0.1-DRAFT
     comments:  
     node: IT
+    sitemap: https://disprot.org/sitemap.xml
 -
     name: UniProt
     highlight:
@@ -1006,6 +1017,7 @@ list:
   bsc_ver: 0.5-RELEASE
   comments:
   node: DE
+  sitemap: https://massbank.eu/MassBank/sitemapindex.xml
 -
   name: iPPI-DB
   highlight: 2,035 compounds
