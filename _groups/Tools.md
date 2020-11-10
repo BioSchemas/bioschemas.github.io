@@ -20,7 +20,7 @@ objectives:
 
 specifications:
   [
-    'Tool'
+    'ComputationalTool'
   ]
 
 
