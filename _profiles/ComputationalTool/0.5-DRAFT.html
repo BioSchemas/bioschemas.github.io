@@ -1,17 +1,25 @@
 ---
 redirect_from:
-- "/profiles/ComputationalTool/0.4-DRAFT-2019_07_19/"
-- "/profiles/Tool/0.4-DRAFT-2019_07_19/"
-name: Tool
+- "devSpecs/Tool/specification"
+- "devSpecs/Tool/specification/"
+- "/devSpecs/Tool/"
+- "/specifications/drafts/Tool"
+- "/profiles/Tool/"
+- "/profiles/ComputationalTool/"
+- "/profiles/ComputationalTool/0.5-DRAFT/"
+- "/profiles/Tool/0.5-DRAFT/"
 
-previous_version: 0.3-DRAFT-2019_07_18
+
+name: ComputationalTool
+
+previous_version: 0.4-DRAFT-2019_07_19
 previous_release:
 
 status: revision
 spec_type: Profile
 group: tools
 use_cases_url: ''
-cross_walk_url: https://docs.google.com/spreadsheets/d/1kogQ4tLMbhnM-B8IKtFNmMenRgqopi76wGKCCyAqUXM
+cross_walk_url: https://docs.google.com/spreadsheets/d/1B7Ei57KSY13AFzWNNjvXnvKB5t7PxQAL7lvNOjisQ2o/edit?usp=sharing
 gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Tool
 live_deploy: /liveDeploys/
 
@@ -24,23 +32,34 @@ hierarchy:
 # spec_info content generated using GOWeb
 # DO NOT MANUALLY EDIT THE CONTENT
 spec_info:
-  title: Tool
-  subtitle: Bioschemas specification for describing a SoftwareApplication in the Life
-    Sciences
+  title: ComputationalTool
+  subtitle: Bioschemas specification for describing a SoftwareApplication in the Life Sciences
   description: The Life Science Tools specification provides a way to describe bioscience
     tools and software on the World Wide Web. It defines a set of metadata and vocabularies,
     built on top of existing technologies and standards, that can be used to represent
     such tools in Web pages and applications. The goal of the specification is to
     make it easier to discover, exchange and integrate information about life science
     tools across the Internet.
-  version: 0.4-DRAFT-2019_07_19
-  version_date: 20190719T132121
+    <h3>Summary of Changes</h3>
+    <p>Changes since the 0.4-DRAFT of the tools profile:</p>
+    <ul>
+      <li>Profile name changed from Tool to ComputationalTool</li>
+      <li>outputData and outputFormat replaced with serviceOutput</li>
+      <li>Expected types of additionalType changed from Text to URL</li>
+      <li>Expected types of applicationCategory extended to include URL</li>
+      <li>Expected types of applicationSubCategory extended to include URL</li>
+      <li>inputData and inputFormat replaced with edam:has_input </li>
+      <li>Expected types of featureList extended to include Text</li>
+      <li>Expected types of provider extended to include Person</li>
+    </ul>
+  version: 0.5-DRAFT
+  version_date: 20191126T141705
   official_type: http://schema.org/SoftwareApplication
-  full_example: https://github.com/Bioschemas/specifications/tree/master/Tool/examples/
+  full_example: https://github.com/BioSchemas/specifications/tree/master/Tool/examples/
 mapping:
 - property: additionalType
   expected_types:
-  - Text
+  - URL
   description: An additional type for the item, typically used for adding more specific
     types from external vocabularies in microdata syntax. This is a relationship between
     something and a class that the thing is in. In RDFa syntax, it is better to use
@@ -61,6 +80,7 @@ mapping:
 - property: applicationCategory
   expected_types:
   - Text
+  - URL
   description: Type of software application, e.g. 'Game, Multimedia'.
   type: ""
   type_url: ""
@@ -78,6 +98,7 @@ mapping:
 - property: applicationSubCategory
   expected_types:
   - Text
+  - URL
   description: Subcategory of the application, e.g. 'Arcade Game'.
   type: ""
   type_url: ""
@@ -114,7 +135,8 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: '@id either ORCiD if available(!) or otherwise http://resource#authorname.
+    Inside name, maybe homepage. In dump also email???'
 - property: citation
   expected_types:
   - CreativeWork
@@ -204,8 +226,21 @@ mapping:
        "@context": "http://schema.org",  "@type": "SoftwareApplication",
       "downloadURL": "https://github.com/sacdallago/cellmap"
     }
+- property: edam:has_input
+  expected_types:
+  - MediaObject
+  description: ""
+  type: external
+  type_url: http://edamontology.org/has_input
+  bsc_description: This is equivalent to edam:has_input. It should be modelled as
+    a MediaObject.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: EDAM Data, EDAM Format or/and IANA media type inside
 - property: featureList
   expected_types:
+  - Text
   - URL
   description: Features or modules provided by this application (and possibly required
     by other applications).
@@ -240,7 +275,7 @@ mapping:
   expected_types:
   - CreativeWork
   description: |-
-    Indicates a CreativeWork that is (in some sense) a part of this CreativeWork.
+    Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).
     Inverse property: isPartOf.
   type: ""
   type_url: ""
@@ -255,10 +290,9 @@ mapping:
   - Text
   - URL
   description: The identifier property represents any kind of identifier for any kind
-    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
-    properties for representing many of these, either as textual strings or as URL
-    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
-    for more details.
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties
+    for representing many of these, either as textual strings or as URL (URI) links.
+    See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.
   type: ""
   type_url: ""
   bsc_description: TODO
@@ -271,41 +305,6 @@ mapping:
       "@type": "SoftwareApplication",
       "@id": "https://bio.tools/peptideshaker",
       "identifier": "https://bio.tools/peptideshaker"
-    }
-- property: inputData
-  expected_types:
-  - URL
-  description: ""
-  type: external
-  type_url: 'http://semanticscience.org/resource/SIO_000230TODO: Type URL could also
-    be http://edamontology.org/has_input, after resolving is fixed there, in due course.'
-  bsc_description: |
-    The input data of the tool. Must be one or more of the [EDAM:Data](http://edamontology.org/data_0006) concept URIs.
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: '[EDAM:Data](http://edamontology.org/data_0006)'
-  example: |-
-    {
-      "@context": "http://schema.org",
-      "@type": "SoftwareApplication",
-      "inputData": "http://edamontology.org/data_0945"
-    }
-- property: inputFormat
-  expected_types:
-  - URL
-  description: ""
-  type: external
-  type_url: Could be a composition of http://edamontology/has_input http://edamontology.org/has_format
-  bsc_description: |
-    A supported format of the input data. Must be one or more of the [EDAM:Format](http://edamontology.org/format_1915) concept URIs.
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: '[EDAM:Data](http://edamontology.org/format_1915)'
-  example: |-
-    {
-      "@context": "http://schema.org",
-      "@type": "SoftwareApplication",
-      "inputFormat": "http://edamontology.org/format_3247"
     }
 - property: isAccessibleForFree
   expected_types:
@@ -330,9 +329,8 @@ mapping:
   - CreativeWork
   - Product
   - URL
-  description: A resource that was used in the creation of this resource. This term
-    can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
-    Supersedes isBasedOnUrl.
+  description: A resource from which this work is derived or from which it is a modification
+    or adaption. Supersedes isBasedOnUrl.
   type: ""
   type_url: ""
   bsc_description: A tool or another work which this tool is based on, or is an extension,
@@ -345,7 +343,7 @@ mapping:
   expected_types:
   - CreativeWork
   description: |-
-    Indicates a CreativeWork that this CreativeWork is (in some sense) part of.
+    Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.
     Inverse property: hasPart.
   type: ""
   type_url: ""
@@ -407,15 +405,11 @@ mapping:
   description: The name of the item.
   type: ""
   type_url: ""
-  bsc_description: Name of the tool.
+  bsc_description: ""
   marginality: Minimum
-  cardinality: ONE
+  cardinality: ""
   controlled_vocab: ""
-  example: |-
-    {
-       "@context": "http://schema.org",  "@type": "SoftwareApplication",
-      "name": "PeptideShaker"
-    }
+  example: ""
 - property: operatingSystem
   expected_types:
   - Text
@@ -433,42 +427,6 @@ mapping:
       "@context": "http://schema.org",
       "@type": "SoftwareApplication",
       "operatingSystem": ["Linux", "Windows", "Mac"]
-    }
-- property: outputData
-  expected_types:
-  - URL
-  description: ""
-  type: external
-  type_url: 'http://semanticscience.org/resource/SIO_000229TODO: Type URL could also
-    be http://edamontology.org/has_output, after resolving is fixed there, in due
-    course.'
-  bsc_description: The output data of the tool. Must be one or more of the [EDAM:Data](http://edamontology.org/data_0006)
-    concept URIs.
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: '[EDAM:Data](http://edamontology.org/data_0006)'
-  example: |-
-    {
-      "@context": "http://schema.org",
-      "@type": "SoftwareApplication",
-      "outputData": "http://edamontology.org/data_0945"
-    }
-- property: outputFormat
-  expected_types:
-  - URL
-  description: ""
-  type: external
-  type_url: Could be a composition of http://edamontology/has_output http://edamontology.org/has_format
-  bsc_description: |
-    A supported format of the output data. Must be one or more of the [EDAM:Format](http://edamontology.org/format_1915) concept URIs.
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: '[EDAM:Data](http://edamontology.org/format_1915)'
-  example: |-
-    {
-      "@context": "http://schema.org",
-      "@type": "SoftwareApplication",
-      "outputFormat": ["http://edamontology.org/format_3655", "http://edamontology.org/format_3247", "http://edamontology.org/format_3475"]
     }
 - property: programmingLanguage
   expected_types:
@@ -491,6 +449,7 @@ mapping:
 - property: provider
   expected_types:
   - Organization
+  - Person
   description: The service provider, service operator, or service performer; the goods
     producer. Another party (a seller) may offer those services or goods on behalf
     of the provider. A provider may also serve as the seller. Supersedes carrier.
@@ -512,6 +471,19 @@ mapping:
         "url": "http://www.ruhr-uni-bochum.de/mpc/medical_bioinformatics/bioinfraprot/"
       }
     }
+- property: serviceOutput
+  expected_types:
+  - MediaObject
+  description: The tangible thing generated by the service, e.g. a passport, permit,
+    etc. Supersedes produces.
+  type: ""
+  type_url: ""
+  bsc_description: This is equivalent to edam:has_output. It should be modelled as
+    a MediaObject.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: EDAM Data, EDAM Format or/and IANA media type inside
 - property: softwareAddOn
   expected_types:
   - SoftwareApplication
@@ -586,7 +558,6 @@ mapping:
        "@context": "http://schema.org",  "@type": "SoftwareApplication",
       "url": "http://compomics.github.io/projects/peptide-shaker.html"
     }
-
 
 ---
 
