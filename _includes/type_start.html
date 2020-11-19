@@ -6,7 +6,18 @@
 <h1>{{page.name}} <u>DRAFT</u> Type</h1>
 {% endif %}
 <h3><strong>Version:</strong> {{page.version}} ({{page.dateModified}})</h3>
-<h3><strong>Profile:</strong> <a href="/profiles/{{page.name}}">{{page.name}}</a></h3>
+{% if site.data.profile_versions[page.name].latest_release != nill or site.data.profile_versions[page.name].latest_publication != nill %}
+<h3><strong>Profile:</strong></h3>
+{% endif %}
+   <ul>
+    {% if site.data.profile_versions[page.name].latest_release != nill %}
+   <li>Latest Release: <a href="/profiles/{{page.name}}">{{page.name}} (version {{site.data.profile_versions[page.name].latest_release}})</a></li>
+   {% endif %}
+   {% if site.data.profile_versions[page.name].latest_publication != nill %}
+   <li>Latest Draft: <a href="/profiles/{{page.name}}/{{site.data.profile_versions[page.name].latest_publication}}">{{page.name}} (version {{site.data.profile_versions[page.name].latest_publication}})</a></li>
+   {% endif %}
+ </ul>
+
 <h2>{{page.subtitle}}</h2>
 
 <br />
