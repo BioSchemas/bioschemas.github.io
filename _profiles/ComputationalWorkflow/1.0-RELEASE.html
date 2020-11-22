@@ -35,18 +35,17 @@ hierarchy:
 # DO NOT MANUALLY EDIT THE CONTENT
 spec_info:
   title: ComputationalWorkflow
-  subtitle: Bioschemas specification for describing a computational workflow in the
+  subtitle: Bioschemas specification for describing a Computational Workflow in the
     Life Sciences
   description: A computational workflow consists of an orchestrated and repeatable
     pattern of activity enabled by the systematic organization of resources into processes
     that transform materials, provide services, or process information (source Wikipedia.org).
     It is executed by a computational process and is thus distinct from laboratory
     or business workflows.
-    <h3>Change Log</h3><p>No changes from 0.5-DRAFT.</p>
   version: 1.0-RELEASE
-  version_date: 20201019T134443
+  version_date: 20201122T102809
   official_type: http://bioschemas.org/ComputationalWorkflow
-  full_example: https://github.com/Bioschemas/specifications/tree/master/ComputationalWorkflow/examples/
+  full_example: ""
 mapping:
 - property: alternateName
   expected_types:
@@ -85,7 +84,7 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"conditionsOfAccess": "Only available to registered users on the website."'
 - property: contributor
   expected_types:
   - Organization
@@ -97,7 +96,18 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "contributor": [
+        {
+          "@type": "Person",
+          "@id": "https://workflowhub.eu/people/46",
+          "name": "Jasper Koehorst"
+        },
+        {
+          "@type": "Person",
+          "name": "Jesse van Dam"
+        }
+    ]
 - property: creativeWorkStatus
   expected_types:
   - DefinedTerm
@@ -171,7 +181,7 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"datePublished": "2020-11-09 12:30:14 UTC"'
 - property: description
   expected_types:
   - Text
@@ -185,6 +195,18 @@ mapping:
   example: '"description": "This workflow employs a recombination detection algorithm
     (GARD) developed by Kosakovsky Pond et al. and implemented in the hyphy package.
     More info can be found at https://covid19.galaxyproject.org/genomics/"'
+- property: documentation
+  expected_types:
+  - Text
+  - URL
+  description: Documentation describing the ComputationalWorkflow and its use.
+  type: ""
+  type_url: ""
+  bsc_description: Documentation describing the ComputationalWorkflow and its use.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"documentation": "https://www.youtube.com/watch?v=2J96sBpz_VQ"'
 - property: encodingFormat
   expected_types:
   - Text
@@ -205,14 +227,19 @@ mapping:
 - property: funding
   expected_types:
   - Grant
-  description: ""
+  description: The funding for the workflow
   type: ""
   type_url: ""
   bsc_description: ""
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "funding": {
+      "@type" : "Grant",
+      "identifier":  "https://cordis.europa.eu/project/id/730976",
+      "name": "Industrial Biotechnology Innovation and Synthetic Biology Accelerator"
+    }
 - property: hasPart
   expected_types:
   - CreativeWork
@@ -221,11 +248,16 @@ mapping:
     Inverse property: isPartOf.
   type: ""
   type_url: ""
-  bsc_description: ""
+  bsc_description: |-
+    The tools/scripts that are (potentially) used by the ComputationalWorkflow when it is executed,
+
+    The parts are not ordered; they normally correspond to steps in the workflow, there is no specified mapping.
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "hasPart": [{"@type" : "CreativeWork",
+    "url" : "https://www.ibbr.umd.edu/nmrpipe/" } ]
 - property: identifier
   expected_types:
   - PropertyValue
@@ -258,8 +290,8 @@ mapping:
 - property: input
   expected_types:
   - FormalParameter
-  description: an input required to use the workflow (eg. xl spreadsheet, xml file,
-    ...)
+  description: An input required to use the computational workflow (eg. Excel spreadsheet,
+    BAM file)
   type: bioschemas
   type_url: FormalParameter
   bsc_description: ""
@@ -267,9 +299,9 @@ mapping:
   cardinality: MANY
   controlled_vocab: ""
   example: |2-
-       "input" : {
-          "@type": "PropertyValueSpecification",
-           "name": "Input Dataset",
+       {
+          "@type": "FormalParameter",
+          "name": "filter_rrna",
           "valueRequired": true
         }
 - property: isBasedOn
@@ -281,11 +313,12 @@ mapping:
     or adaption. Supersedes isBasedOnUrl.
   type: ""
   type_url: ""
-  bsc_description: ""
+  bsc_description: This is normnally another ComputationalWorkflow, but may also be,
+    for example, a paper or a lab protocol.
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"isBasedOn" : "https://pypi.org/project/NMR-peaks-picking/"'
 - property: keywords
   expected_types:
   - Text
@@ -332,7 +365,11 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "maintainer": {
+     "@type": "Person",
+      "name": "Dannon Baker"
+    }
 - property: name
   expected_types:
   - Text
@@ -347,14 +384,18 @@ mapping:
 - property: output
   expected_types:
   - FormalParameter
-  description: an output produced by the workflow
+  description: An output produced by the workflow
   type: bioschemas
   type_url: FormalParameter
   bsc_description: ""
   marginality: Minimum
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |2-
+     {
+          "@type": "FormalParameter",
+          "name": "x1"
+        }
 - property: producer
   expected_types:
   - Organization
@@ -366,10 +407,20 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "producer": [
+        {
+          "@type": [
+            "Project",
+            "Organization"
+          ],
+          "@id": "https://workflowhub.eu/projects/16",
+          "name": "UNLOCK"
+        }
+      ]
 - property: programmingLanguage
   expected_types:
-  - ComputerLanguage
+  - ComputerLanguage orText
   description: |
     The computer programming language.
   type: ""
@@ -415,8 +466,7 @@ mapping:
     make such practices more explicit.
   type: ""
   type_url: ""
-  bsc_description: The party that publishes the structured data should normally be
-    the host site.
+  bsc_description: The host site for the ComputationalWorkflow
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
@@ -438,7 +488,7 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: '"softwareRequirements" : "https://pypi.org/project/cwltool/"'
 - property: targetProduct
   expected_types:
   - SoftwareApplication
@@ -450,7 +500,11 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: '"targetProduct": "Galaxy Project"'
+  example: |-
+    "targetProduct": {
+    "@type": "SoftwareApplication",
+    "name": "Galaxy Project"
+    }
 - property: url
   expected_types:
   - URL
@@ -469,7 +523,7 @@ mapping:
   description: The version of the CreativeWork embodied by a specified resource.
   type: ""
   type_url: ""
-  bsc_description: version is a release, date modified may not warrant a release,
+  bsc_description: Version is a release. The date modified may not warrant a release,
     but last date modified and access to all versions is important
   marginality: Minimum
   cardinality: ONE

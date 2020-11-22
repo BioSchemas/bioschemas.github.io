@@ -32,12 +32,12 @@ spec_info:
   subtitle: Bioschemas specification for describing a formal parameter in the Life
     Sciences.
   description: A FormalParameter is an identified variable used to stand for the actual
-    value(s) are consumed/produced by a ComputationalWorkflow
-    <h3>Change Log</h3><p>No change from 0.1-DRAFT-2020_07_21</p>
+    value(s) are consumed/produced by a ComputationalWorkflow<h3>Change Log</h3><p>No
+    change from 0.1-DRAFT-2020_07_21</p>
   version: 1.0-RELEASE
-  version_date: 20201019T135402
-  official_type: http://schema.org/FormalParameter
-  full_example: https://github.com/Bioschemas/specifications/tree/master/FormalParameter/examples/
+  version_date: 20201122T102938
+  official_type: https://schema.org/FormalParameter
+  full_example: ""
 mapping:
 - property: additionalType
   expected_types:
@@ -50,11 +50,11 @@ mapping:
     externally.
   type: ""
   type_url: ""
-  bsc_description: ""
+  bsc_description: The type of data consumed / produced at the FormalParameter
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: http://edamontology.org/data_0006
-  example: ""
+  example: '"additionalType" : "http://edamontology.org/data_3494"'
 - property: defaultValue
   expected_types:
   - Thing
@@ -77,8 +77,9 @@ mapping:
     of the FormalParameter and its type
   marginality: Recommended
   cardinality: ONE
-  controlled_vocab: ""
-  example: ""
+  controlled_vocab: '"description" : "The sequence to check for Maturity-onset diabetes
+    of the young"'
+  example: '"description" : "The DNA squence to compare against known sequences"'
 - property: encodingFormat
   expected_types:
   - Text
@@ -90,7 +91,7 @@ mapping:
   marginality: Minimum
   cardinality: MANY
   controlled_vocab: http://edamontology.org/format_1915
-  example: ""
+  example: '"encodingFormat" : "http://edamontology.org/format_1929"'
 - property: identifier
   expected_types:
   - PropertyValue
@@ -102,11 +103,14 @@ mapping:
     (URI) links. See background notes for more details.
   type: ""
   type_url: ""
-  bsc_description: ""
+  bsc_description: |-
+    Note that this is identification of what is produced / consumed by the FormalParameter.
+
+    The identifier may, for example, indicate a gene position that is expected to be read. The value supplied as the actual value will be read from that position.
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: '"identifier" : "17q12-q21"'
 - property: name
   expected_types:
   - Text
@@ -117,7 +121,7 @@ mapping:
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"name" : "dna_sequence"'
 - property: valueRequired
   expected_types:
   - Boolean
@@ -129,7 +133,7 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"valueRequired" : true'
 ---
 <!DOCTYPE HTML>
 <html>
