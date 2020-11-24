@@ -1,7 +1,14 @@
 ---
+redirect_from:
+- "devSpecs/Study/specification"
+- "devSpecs/Study/specification/"
+- "/devSpecs/Study/"
+- "/specifications/drafts/Study"
+- "/profiles/Study/"
+
 name: Study
 
-previous_version:
+previous_version: 0.1-DRAFT-2018_11_15
 previous_release:
 
 status: revision
@@ -24,10 +31,10 @@ spec_info:
   title: Study
   subtitle: ""
   description: This Study profile presents the marckup when describing a Study
-  version: 0.1-DRAFT-2018_11_15
-  version_date: 20181115T164019
+  version: 0.2-DRAFT
+  version_date: 20201124T173010
   official_type: http://bioschemas.org/Study
-  full_example: https://github.com/Bioschemas/specifications/tree/master/Study/examples
+  full_example: https://github.com/BioSchemas/specifications/tree/master/Study/examples
 mapping:
 - property: about
   expected_types:
@@ -126,6 +133,61 @@ mapping:
   cardinality: ""
   controlled_vocab: ""
   example: ""
+- property: endDate
+  expected_types:
+  - Date
+  - DateTime
+  description: The end date and time of the item (in <a href=http://en.wikipedia.org/wiki/ISO_8601>ISO
+    8601 date format</a>).
+  type: ""
+  type_url: ""
+  bsc_description: Used to indicate the end date of the study. (Extension of existing
+    schema.org property)
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+        "endDate": "2020-11-24"
+    }
+- property: http://purl.org/ppeo/PPEO.owl#hasGrowthChamber
+  expected_types:
+  - URL
+  description: has growth facility
+  type: external
+  type_url: http://purl.org/ppeo/PPEO.owl#hasGrowthChamber
+  bsc_description: The kind of growth facility used in a plant study
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: |-
+    [
+    {
+        "http://purl.org/ppeo/PPEO.owl#hasGrowthChamber": {
+            "http://purl.org/ppeo/PPEO.owl#hasType": "field"
+        }
+    },
+    {
+        "http://purl.org/ppeo/PPEO.owl#hasGrowthChamber": {
+            "http://purl.org/ppeo/PPEO.owl#hasType": "growth chamber"
+        }
+    },
+    {
+        "http://purl.org/ppeo/PPEO.owl#hasGrowthChamber": {
+            "http://purl.org/ppeo/PPEO.owl#hasType": "greenhouse"
+        }
+    },
+    {
+        "http://purl.org/ppeo/PPEO.owl#hasGrowthChamber": {
+            "http://purl.org/ppeo/PPEO.owl#hasType": "nursery"
+        }
+    }
+    ]
+  example: |-
+    {
+        "http://purl.org/ppeo/PPEO.owl#hasGrowthChamber": {
+            "http://purl.org/ppeo/PPEO.owl#hasType": "field"
+        }
+    }
 - property: identifier
   expected_types:
   - PropertyValue
@@ -192,6 +254,23 @@ mapping:
   cardinality: MANY
   controlled_vocab: ""
   example: ""
+- property: startDate
+  expected_types:
+  - Date
+  - DateTime
+  description: The start date and time of the item (in <a href=http://en.wikipedia.org/wiki/ISO_8601>ISO
+    8601 date format</a>).
+  type: ""
+  type_url: ""
+  bsc_description: Used to indicate the start date of the study. (Extension of existing
+    schema.org property)
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+        "startDate": "2019-11-24"
+    }
 - property: studyDomain
   expected_types:
   - Text
@@ -209,6 +288,24 @@ mapping:
   cardinality: ONE
   controlled_vocab: ""
   example: ""
+- property: studyLocation
+  expected_types:
+  - AdministrativeArea
+  - Place
+  description: The location in which the study is taking/took place.
+  type: ""
+  type_url: ""
+  bsc_description: (Reuse of property from MedicalStudy; Expected types extended.)
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+      "studyLocation": {
+        "@type": "Place",
+        "name": "France"
+      }
+    }
 - property: studyProcess
   expected_types:
   - Text
@@ -225,6 +322,23 @@ mapping:
   cardinality: MANY
   controlled_vocab: http://www.ebi.ac.uk/efo/EFO_0001433
   example: ""
+- property: studySubject
+  expected_types:
+  - BioChemEntity
+  - MedicalEntity
+  description: A subject of the study, i.e. one of the medical conditions, therapies,
+    devices, drugs, etc. investigated by the study.
+  type: ""
+  type_url: ""
+  bsc_description: (Reuse of property from MedicalStudy; Expected types extended.)
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: "{\n    \"@type\" : \"BioChemEntity\",\n    \"identifier\":\"Aus29020/annuello*27\",
+    \n    \"name\":\"Aus29020 = CROC_1/AE.SQUARROSA (517)\", \n    \"taxonomicRange\"
+    : {\n        \"@Type\":\"Taxon\", \n        \"parentTaxon\":\"https://www.wikidata.org/entity/Q161098\",
+    \ \n        \"taxonRank\": \"variety\", \n        \"name\":\"subsp. aestivum\"\n
+    \   }\n}"
 - property: url
   expected_types:
   - URL
@@ -236,6 +350,7 @@ mapping:
   cardinality: ""
   controlled_vocab: ""
   example: ""
+
 ---
 <!DOCTYPE HTML>
 <html>
