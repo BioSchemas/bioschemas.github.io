@@ -32,7 +32,7 @@ spec_info:
   subtitle: ""
   description: This Study profile presents the marckup when describing a Study
   version: 0.2-DRAFT
-  version_date: 20201124T173010
+  version_date: 20201124T173857
   official_type: http://bioschemas.org/Study
   full_example: https://github.com/BioSchemas/specifications/tree/master/Study/examples
 mapping:
@@ -137,7 +137,7 @@ mapping:
   expected_types:
   - Date
   - DateTime
-  description: The end date and time of the item (in <a href=http://en.wikipedia.org/wiki/ISO_8601>ISO
+  description: The end date and time of the item (in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO
     8601 date format</a>).
   type: ""
   type_url: ""
@@ -258,7 +258,7 @@ mapping:
   expected_types:
   - Date
   - DateTime
-  description: The start date and time of the item (in <a href=http://en.wikipedia.org/wiki/ISO_8601>ISO
+  description: The start date and time of the item (in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO
     8601 date format</a>).
   type: ""
   type_url: ""
@@ -350,7 +350,6 @@ mapping:
   cardinality: ""
   controlled_vocab: ""
   example: ""
-
 ---
 <!DOCTYPE HTML>
 <html>
