@@ -235,18 +235,8 @@
    {% endif %}
    {% endif %}
 </section>
-<br />
 <hr />
-<br />
-<h5>Key to specification table</h5>
-<br />
-<p>Schema.org properties where the Expected Types have been changed, or new (i.e., Bioschemas created) properties/types are <em style="color: #0B794B;"><strong>green</strong></em>.</p>
-<p>Schema.org properties/types are <em style="color: #990000;"><strong>red</strong></em>.</p>
-<p>Pending Schema.org properties/types are <em style="color: #0000CC;"><strong>blue</strong></em>.</p>
-<p>External (i.e., from 3rd party ontology) properties/types are <em style="color: #454547;"><strong>black</strong></em>.</p>
-<br />
-<p>CD = Cardinality</p>
-<br />
+{% include spec-table-key.html %}
 <!-- change number columns based on device -->
 <script type="application/x-javascript">
    if(navigator.userAgent.match(/android/i)) {
