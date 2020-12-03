@@ -28,7 +28,7 @@ objectives:
 
 specifications:
   [
-    'ScholarlyArticle', 'Journal', 'PublicationIssue', 'PublicationVolume', 'SemanticAnnotation'
+    'ScholarlyArticle', 'Journal', 'PublicationIssue', 'PublicationVolume', 'SemanticTextAnnotation'
   ]
 
 members:
