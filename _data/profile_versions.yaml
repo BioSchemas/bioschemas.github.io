@@ -188,7 +188,7 @@ TaxonName:
 
 TrainingMaterial:
     name: "TrainingMaterial"
-    latest_publication: "0.8-DRAFT-2020_10_06"
+    latest_publication: "0.9-DRAFT-2020_12_03"
     latest_release:
     status: "active"
 
