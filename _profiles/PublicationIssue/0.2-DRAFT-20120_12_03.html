@@ -1,35 +1,47 @@
 ---
-name: PublicationVolume
+redirect_from:
+- "devSpecs/PublicationIssue/specification"
+- "devSpecs/PublicationIssue/specification/"
+- "/devSpecs/PublicationIssue/"
+- "/specifications/drafts/PublicationIssue"
+- "/profiles/PublicationIssue/"
 
-previous_version: '0.1-DRAFT-2019_02_14'
+name: PublicationIssue
+
+previous_version: 0.1-DRAFT-2019_02_08
 previous_release:
+
 
 status: revision
 spec_type: Profile
 group: publications
 use_cases_url: /useCases/ScholarlyPublications/
-cross_walk_url: https://docs.google.com/spreadsheets/d/198jnxnTf6rUTPc0ZYgFkP3ZElvHylQU-Tx4LwFDHZQ0
-gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20PublicationVolume
+cross_walk_url: https://docs.google.com/spreadsheets/d/1051XQLDg3pcPPPg7ro9cVMZ3nMrQGsBm09a8i1OZarI/
+gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20PublicationIssue
 live_deploy: ''
 
-parent_type: PublicationVolume
+parent_type: PublicationIssue
 hierarchy:
 - Thing
 - CreativeWork
-- PublicationVolume
+- PublicationIssue
 
 # spec_info content generated using GOWeb
 # DO NOT MANUALLY EDIT THE CONTENT
 spec_info:
-  title: PublicationVolume
-  subtitle: Bioschemas profile, based on Biotea model, describing a PublicationVolume
+  title: PublicationIssue
+  subtitle: Bioschemas profile, based on Biotea model, describing a PublicationIssue
     in Life Sciences.
-  description: A PublicationVolume is a collection of publication issues, or scholarly
-    articles, or possibly, although no commonly, any mix from those mentioned. It
-    is commonly part of a Journal.
-  version: 0.1-DRAFT-2019_02_15
-  version_date: 20190208T104001
-  official_type: schema:PublicationVolume
+  description: 'A PublicationIssue is a collection of publication scholarly articles
+    published as a collection in a publication volume or a journal.
+    <h4>Summary of Changes</h4>
+    Changes since previous draft 0.1 of the PublicationIssue profile:
+    <ul>
+      <li>Keywords range updated as per changes on schema.org</li>
+    </ul>'
+  version: 0.2-DRAFT-2020_12_03
+  version_date: 20201203T221116
+  official_type: schema:PublicationIssue
   full_example: https://github.com/Bioschemas/specifications/tree/master/ScholarlyPublications
 mapping:
 - property: about
@@ -40,7 +52,7 @@ mapping:
      Inverse property: subjectOf.
   type: ""
   type_url: ""
-  bsc_description: Describes what this volume is about.
+  bsc_description: Describes what this issue is about.
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
@@ -58,17 +70,13 @@ mapping:
   example: ""
 - property: hasPart
   expected_types:
-  - PublicationIssue
   - ScholarlyArticle
   description: |-
     Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).
      Inverse property: isPartOf.
   type: ""
   type_url: ""
-  bsc_description: A PublicationVolume has part PublicationIssue (a.k.a. supplements)
-    or ScholaryArticle. We recommend to include at least the highest 'hasPart' level,
-    i.e., PublicationIssue. It is also possible to use 'hasPart' to link as well directly
-    to ScholarlyArticle, making it easier to find articles in this volume.
+  bsc_description: A PublicationIssue has part ScholarlyArticle.
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
@@ -85,8 +93,8 @@ mapping:
     for more details.
   type: ""
   type_url: ""
-  bsc_description: Volumes in a journal are commonly identified by a number thus not
-    unique nor global. We recommend to use the URL as identifier whenever possible.
+  bsc_description: Publication issues do not commonly have a global or unique identifier.
+    We recommend here to use the URL as identifier whenever possible.
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
@@ -107,20 +115,37 @@ mapping:
   example: ""
 - property: isPartOf
   expected_types:
+  - PublicationVolume
   - Journal
   description: |-
     Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.
      Inverse property: hasPart.
   type: ""
   type_url: ""
-  bsc_description: A PublicationVolume is part of a Journal.
+  bsc_description: A PublicationIssue is part of PublicationVoume or Journal. If it
+    is part of a PublicationVolume, optionally the 'isPartOf' a Journal could explicitely
+    indicated as well, making it easier to find the journal this issue belongs to.
   marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: issueNumber
+  expected_types:
+  - Integer
+  - Text
+  description: Identifies the issue of publication; for example, "iii" or "2".
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
   example: ""
 - property: keywords
   expected_types:
+  - DefinedTerm
   - Text
+  - URL
   description: Keywords or tags used to describe this content. Multiple entries in
     a keywords list are typically delimited by commas.
   type: ""
@@ -174,7 +199,7 @@ mapping:
     website.
   type: ""
   type_url: ""
-  bsc_description: Any other URL linking to this volume.
+  bsc_description: Any other link to this issue.
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -187,19 +212,6 @@ mapping:
   type_url: ""
   bsc_description: Oficial URL.
   marginality: Recommended
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: volumeNumber
-  expected_types:
-  - Integer
-  - Text
-  description: Identifies the volume of publication or multi-part work; for example,
-    "iii" or "2".
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
   example: ""

@@ -1,7 +1,14 @@
 ---
+redirect_from:
+- "devSpecs/PublicationVolume/specification"
+- "devSpecs/PublicationVolume/specification/"
+- "/devSpecs/PublicationVolume/"
+- "/specifications/drafts/PublicationVolume"
+- "/profiles/PublicationVolume/"
+
 name: PublicationVolume
 
-previous_version: '0.1-DRAFT-2019_02_14'
+previous_version: '0.1-DRAFT-2019_02_15'
 previous_release:
 
 status: revision
@@ -24,11 +31,16 @@ spec_info:
   title: PublicationVolume
   subtitle: Bioschemas profile, based on Biotea model, describing a PublicationVolume
     in Life Sciences.
-  description: A PublicationVolume is a collection of publication issues, or scholarly
+  description: 'A PublicationVolume is a collection of publication issues, or scholarly
     articles, or possibly, although no commonly, any mix from those mentioned. It
     is commonly part of a Journal.
-  version: 0.1-DRAFT-2019_02_15
-  version_date: 20190208T104001
+    <h4>Summary of Changes</h4>
+    Changes since previous draft 0.1 of the PublicationVolumen profile:
+    <ul>
+      <li>Keywords range updated as per changes on schema.org</li>
+    </ul>'
+  version: 0.2-DRAFT-2020_12_03
+  version_date: 20201203T221328
   official_type: schema:PublicationVolume
   full_example: https://github.com/Bioschemas/specifications/tree/master/ScholarlyPublications
 mapping:
@@ -120,7 +132,9 @@ mapping:
   example: ""
 - property: keywords
   expected_types:
+  - DefinedTerm
   - Text
+  - URL
   description: Keywords or tags used to describe this content. Multiple entries in
     a keywords list are typically delimited by commas.
   type: ""

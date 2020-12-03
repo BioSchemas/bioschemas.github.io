@@ -1,7 +1,14 @@
 ---
+redirect_from:
+- "devSpecs/Journal/specification"
+- "devSpecs/Journal/specification/"
+- "/devSpecs/Journal/"
+- "/specifications/drafts/Journal"
+- "/profiles/Journal/"
+
 name: Journal
 
-previous_version: '0.1-DRAFT-2019_11_20'
+previous_version: '0.1-DRAFT-2019_11_21'
 previous_release:
 
 status: revision
@@ -25,9 +32,14 @@ spec_info:
     Sciences. For markup purposes, we are keeping the schema:Periodical type so it
     will be easily recognized and parsed by search engines.
   description: 'A Journal is a collection of publication issues, publication volumes
-    or scholarly articles, or possibly, although no commonly, any mix from those mentioned. '
-  version: 0.1-DRAFT-2019_11_21
-  version_date: 20190509T053117
+    or scholarly articles, or possibly, although no commonly, any mix from those mentioned. 
+    <h4>Summary of Changes</h4>
+    Changes since previous draft 0.1 Journal profile:
+    <ul>
+      <li>Keywords range updated as per changes on schema.org</li>
+    </ul>'
+  version: 0.2-DRAFT-2020_12_03
+  version_date: 20201203T220620
   official_type: schema:Collection
   full_example: https://github.com/Bioschemas/specifications/tree/master/ScholarlyPublications
 mapping:
@@ -143,7 +155,9 @@ mapping:
   example: ""
 - property: keywords
   expected_types:
+  - DefinedTerm
   - Text
+  - URL
   description: Keywords or tags used to describe this content. Multiple entries in
     a keywords list are typically delimited by commas.
   type: ""
