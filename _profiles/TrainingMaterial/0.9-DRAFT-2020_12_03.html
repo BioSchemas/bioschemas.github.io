@@ -38,6 +38,7 @@ spec_info:
     science training material information across the Internet.<h4>Summary of Changes</h4>
     Changes since previous draft 0.8 of the TrainingMaterials profile:
     <ul>
+      <li>Adds competencyRequired which is now available</li>
       <li>Updates range for keywords and learningResource to reflect changes on schema.org</li>
       <li>Changes keywords to MANY as comma separation is not enough for DefinedTerm or URL (they need a list/array)</li>
       <li>Changes prepared by L. Garcia</li>
@@ -209,6 +210,21 @@ mapping:
   controlled_vocab: ""
   example: |
     "description": "This tutorial will take you through the basic usage of the command line shell. In it, you will discover what a shell is, skills for directory navigation, file manipulation, and how to run tools. To complete this training material you will need to have a shell (linux), powershell (windows), or terminal (mac) ready. You do not need any previous experience to complete the tasks"
+  - property: competencyRequired
+    expected_types:
+    - DefinedTerm
+    - Text
+    - URL
+    description: Knowledge, skill, ability or personal attribute that must be demonstrated by a 
+    person or other entity in order to do something such as earn an Educational Occupational 
+    Credential or understand a LearningResource.
+    type: ""
+    type_url: ""
+    bsc_description: 
+    marginality: Recommended
+    cardinality: MANY
+    controlled_vocab: 
+    example: '"competencyRequired": "SPARQL"'
 - property: educationalLevel
   expected_types:
   - DefinedTerm
