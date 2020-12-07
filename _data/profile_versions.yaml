@@ -80,7 +80,7 @@ Gene:
 
 Journal:
     name: "Journal"
-    latest_publication: "0.2-DRAFT-2020_12_03"
+    latest_publication: "0.1-DRAFT-2019_11_21"
     latest_release:
     status: "active"
 
@@ -134,13 +134,13 @@ ProteinStructure:
 
 PublicationIssue:
     name: "PublicationIssue"
-    latest_publication: "0.2-DRAFT-2020_12_03"
+    latest_publication: "0.1-DRAFT-2019_02_08"
     latest_release:
     status: "active"
 
 PublicationVolume:
     name: "PublicationVolume"
-    latest_publication: "0.2-DRAFT-2020_12_03"
+    latest_publication: "0.1-DRAFT-2019_02_15"
     latest_release:
     status: "active"
 
