@@ -1,14 +1,21 @@
 ---
+redirect_from:
+- "devSpecs/Journal/specification"
+- "devSpecs/Journal/specification/"
+- "/devSpecs/Journal/"
+- "/specifications/drafts/Journal"
+- "/profiles/Journal/"
+
 name: Journal
 
-previous_version: '0.1-DRAFT-2019_11_20'
+previous_version: '0.1-DRAFT-2019_11_21'
 previous_release:
 
 status: revision
 spec_type: Profile
 group: publications
 use_cases_url: /useCases/ScholarlyPublications/
-cross_walk_url: https://docs.google.com/spreadsheets/d/1cRtlx0UPer-qyLoEbynBsNINacAD--6UpJnWg4WLO2g
+cross_walk_url: https://docs.google.com/spreadsheets/d/1FM0-KW6MI3_-yvDUI_oZ8D5vR8muvmR9RHm7Ocd6YdU/
 gh_tasks: https://github.com/BioSchemas/specifications/labels/profile%3A%20Journal
 live_deploy: ''
 
@@ -22,14 +29,15 @@ hierarchy:
 spec_info:
   title: Journal
   subtitle: Bioschemas profile, based on Biotea model, describing a Journal in Life
-    Sciences. For markup purposes, we are keeping the schema:Periodical type so it
-    will be easily recognized and parsed by search engines.
+    Sciences.
   description: 'A Journal is a collection of publication issues, publication volumes
-    or scholarly articles, or possibly, although no commonly, any mix from those mentioned. '
-  version: 0.1-DRAFT-2019_11_21
-  version_date: 20190509T053117
+    or scholarly articles, or possibly, although no commonly, any mix from those mentioned.
+    <h4>Summary of Changes</h4>    Changes since previous draft 0.1 Journal profile:    <ul>      <li>Add
+    examples</li>      <li>Keywords range updated as per changes on schema.org</li>    </ul>'
+  version: 0.2-DRAFT-2020_12_03
+  version_date: 20201207T144107
   official_type: schema:Collection
-  full_example: https://github.com/Bioschemas/specifications/tree/master/ScholarlyPublications
+  full_example: https://github.com/BioSchemas/specifications/blob/master/Journal/examples/0.2-DRAFT/jbiomedsem.json
 mapping:
 - property: about
   expected_types:
@@ -41,16 +49,17 @@ mapping:
   type_url: ""
   bsc_description: Describes what this Journal is about.
   marginality: Optional
-  cardinality: MANY
+  cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"about": "Journal of Biomedical Semantics addresses issues of semantic
+    enrichment and semantic processing in the biomedical domain..."'
 - property: alternateName
   expected_types:
   - Text
   description: An alias for the item.
   type: ""
   type_url: ""
-  bsc_description: While name should be used for the official Journal name, abbreviations and others can be included here.
+  bsc_description: ""
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -61,11 +70,18 @@ mapping:
   description: Specifies the Person who edited the CreativeWork.
   type: ""
   type_url: ""
-  bsc_description: Journal editor, whenever possible please use the ORCID URL as persistent, unique, global identifier.
+  bsc_description: ""
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "editor": [
+      {
+        "@type": "Person",
+        "givenName": "Dietrich",
+        "familyName": "Rebholz-Schuhmann"
+      }
+    ]
 - property: hasPart
   expected_types:
   - PublicationIssue
@@ -77,44 +93,40 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: "A Journal has part a PublicationVolume or PublicationIssue or
-    ScholaryArticle. We recommend to at least include the highest level 'hasPart',
-    e.g., PublicationVolume. It is also possible, i.e., optional, to 'hasPart' to
-    link as well directly to PublicationIssue and ScholarlyArticle, making it easier
+    \nScholaryArticle. We recommend to at least include the highest level \n'hasPart',
+    e.g., PublicationVolume. It is also possible, i.e., optional,\n to 'hasPart' to
+    link as well directly to PublicationIssue and \nScholarlyArticle, making it easier
     to find articles in this journal."
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "hasPart": [
+      {"@id": "https://doi.org/10.1186/2041-1480-4-s1-s5"},
+      {
+        "@type": "PublicationVolume",
+        "url": "https://jbiomedsem.biomedcentral.com/articles/supplements/volume-4-supplement-1",
+        "volumeNumber": "Volume 4 supplement 1"
+      }
+    ]
 - property: identifier
   expected_types:
   - PropertyValue
   - Text
   - URL
-  description: The identifier property represents any kind of identifier for any kind of Thing,
-    such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these,
-    either as textual strings or as URL (URI) links. See background notes for more details.
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
   type: ""
   type_url: ""
-  bsc_description: Mainly used by journal catalogs to record their own internal identifier. For instance, the National
-    Library of Medicine assigns the identifier 101531992 to the issn-e:2041-1480 Journal.
-  marginality: Optional
+  bsc_description: 'Journals are commonly identified by their issn. We recommend to
+    use here the form namespace:id. For instance, issn:2041-1480. '
+  marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
-- property: issn
-  expected_types:
-  - Text
-  description: The International Standard Serial Number (ISSN) that identifies this serial publication.
-    You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this
-    serial publication.
-  type: ""
-  type_url: ""
-  bsc_description: 'We recommend to use here the form namespace:id in order to distinguish printed from electronical
-    ISSNs. For instance, issn-e:2041-1480 for the electronic online version or issn-p:0003-4819 for the printed version'
-  marginality: Recommended
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
+  example: '"identifier": "issn:2041-1480"'
 - property: inLanguage
   expected_types:
   - Language
@@ -137,13 +149,15 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: ""
-  marginality: Optional
+  marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"isAccessibleForFree": true'
 - property: keywords
   expected_types:
+  - DefinedTerm
   - Text
+  - URL
   description: Keywords or tags used to describe this content. Multiple entries in
     a keywords list are typically delimited by commas.
   type: ""
@@ -152,7 +166,8 @@ mapping:
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"keywords": "Biomedical semantics, semantic web, RDF, ontologies, linked
+    data"'
 - property: license
   expected_types:
   - CreativeWork
@@ -165,18 +180,18 @@ mapping:
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"license": "https://www.biomedcentral.com/about/policies/license-agreement"'
 - property: name
   expected_types:
   - Text
   description: The name of the item.
   type: ""
   type_url: ""
-  bsc_description: "Title/name of the journal."
+  bsc_description: ""
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"name": "Journal of Biomedical Semantics"'
 - property: publisher
   expected_types:
   - Organization
@@ -188,7 +203,14 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "publisher": [
+      {
+        "@type": "Organization",
+        "name": "BMC BioMedCentral",
+        "url": "https://www.biomedcentral.com"
+      }
+    ]
 - property: publishingPrinciples
   expected_types:
   - CreativeWork
@@ -203,7 +225,7 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"publishingPrinciples": "https://jbiomedsem.biomedcentral.com/submission-guidelines"'
 - property: sameAs
   expected_types:
   - URL
@@ -212,8 +234,8 @@ mapping:
     website.
   type: ""
   type_url: ""
-  bsc_description: Another possible URL for journals is the ISSN portal, for instance, the page
-    https://portal.issn.org/resource/ISSN/2041-1480 corresponds to the Journal issn_p:2041-1480
+  bsc_description: Any other URL linking to this Journal, preferrable in machine-readable
+    format.
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -224,11 +246,12 @@ mapping:
   description: URL of the item.
   type: ""
   type_url: ""
-  bsc_description: ""
+  bsc_description: Official URL.
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"url": "https://jbiomedsem.biomedcentral.com/"'
+
 ---
 
 <!DOCTYPE HTML>
