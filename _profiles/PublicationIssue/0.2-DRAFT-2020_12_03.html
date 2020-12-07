@@ -1,7 +1,14 @@
 ---
+redirect_from:
+- "devSpecs/PublicationIssue/specification"
+- "devSpecs/PublicationIssue/specification/"
+- "/devSpecs/PublicationIssue/"
+- "/specifications/drafts/PublicationIssue"
+- "/profiles/PublicationIssue/"
+
 name: PublicationIssue
 
-previous_version: 0.1-DRAFT-2019_01_31
+previous_version: 0.1-DRAFT-2019_02_08
 previous_release:
 
 
@@ -25,12 +32,14 @@ spec_info:
   title: PublicationIssue
   subtitle: Bioschemas profile, based on Biotea model, describing a PublicationIssue
     in Life Sciences.
-  description: A PublicationIssue is a collection of publication scholarly articles
-    published as a collection in a publication volume or a journal
-  version: 0.1-DRAFT-2019_02_08
-  version_date: 20190208T103820
+  description: 'A PublicationIssue is a collection of publication scholarly articles
+    published as a collection in a publication volume or a journal.<h4>Summary of
+    Changes</h4>    Changes since previous draft 0.1 of the PublicationIssue profile:    <ul>      <li>Add
+    examples</li>      <li>Keywords range updated as per changes on schema.org</li>    </ul>'
+  version: 0.2-DRAFT-2020_12_03
+  version_date: 20201207T155859
   official_type: schema:PublicationIssue
-  full_example: https://github.com/Bioschemas/specifications/tree/master/ScholarlyPublications
+  full_example: https://github.com/BioSchemas/specifications/blob/master/ScholarlyArticle/examples/0.2-DRAFT/jbiomedsem_issue.json
 mapping:
 - property: about
   expected_types:
@@ -44,7 +53,8 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"about": "Accuracy, efficiency and transferability are realistic issues
+    in clinical practice, and research hotspots as well..."'
 - property: editor
   expected_types:
   - Person
@@ -55,7 +65,14 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "editor": [
+      {
+        "@type": "Person",
+        "givenName": "Honghao",
+        "familyname": "Gao"
+      }
+    ]
 - property: hasPart
   expected_types:
   - ScholarlyArticle
@@ -68,7 +85,7 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: '"hasPart": "https://doi.org/exampleDOI/"'
 - property: identifier
   expected_types:
   - PropertyValue
@@ -86,7 +103,7 @@ mapping:
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"identifier": "https://jbiomedsem.biomedcentral.com/icccd2020"'
 - property: inLanguage
   expected_types:
   - Language
@@ -100,7 +117,7 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: '"inLanguage":"EN"'
 - property: isPartOf
   expected_types:
   - PublicationVolume
@@ -116,7 +133,14 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "isPartOf": [
+      {
+        "@type": "Periodical",
+        "identifier": "issn:2041-1480",
+        "name": "Journal of Biomedical Semantics"
+      }
+    ]
 - property: issueNumber
   expected_types:
   - Integer
@@ -128,10 +152,12 @@ mapping:
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"issueNumber": 1'
 - property: keywords
   expected_types:
+  - DefinedTerm
   - Text
+  - URL
   description: Keywords or tags used to describe this content. Multiple entries in
     a keywords list are typically delimited by commas.
   type: ""
@@ -140,7 +166,7 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"keywords": "Intelligence Computing, models, clinical data"'
 - property: pageEnd
   expected_types:
   - Integer
@@ -185,7 +211,8 @@ mapping:
     website.
   type: ""
   type_url: ""
-  bsc_description: Any other link to this issue.
+  bsc_description: Any other URL linking to this Issue, preferrable in machine-readable
+    format.
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -200,7 +227,8 @@ mapping:
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"url": "https://jbiomedsem.biomedcentral.com/icccd2020"'
+
 ---
 
 <!DOCTYPE HTML>
