@@ -1,0 +1,457 @@
+---
+redirect_from:
+- "devSpecs/ScholarlyArticle/specification"
+- "devSpecs/ScholarlyArticle/specification/"
+- "/devSpecs/ScholarlyArticle/"
+- "/specifications/drafts/ScholarlyArticle"
+- "/profiles/ScholarlyArticle/"
+
+name: ScholarlyArticle
+
+previous_version: 0.1-DRAFT-2019_03_15
+previous_release:
+
+status: revision
+spec_type: Profile
+group: publications
+use_cases_url: /useCases/ScholarlyPublications/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1-AtKXJ1FW57T2tDEKF0hlxraPVbLqnREr-kRpQK0vhQ/
+gh_tasks: https://github.com/BioSchemas/specifications/labels/profile%3A%20ScholarlyArticle
+live_deploy: ''
+
+parent_type: ScholarlyArticle
+hierarchy:
+- Thing
+- CreativeWork
+- Article
+- ScholarlyArticle
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: ScholarlyArticle
+  subtitle: Bioschemas profile, based on Biotea model, describing a ScholarlyArticle
+    in Life Sciences.
+  description: 'A ScholarlyArticle is an article commonly reporting a scientific research,
+    for instance a journal article or thesis. DOI is recommended as official idnetifier
+    (e.g., "@id" in JSON-LD)<h4>Summary of Changes</h4>    Changes since previous
+    draft 0.1 of the ScholarlyArticle profile:    <ul>      <li>Add examples</li>      <li>Updates
+    identifier property to MANY so multiple identifiers can be included</li>      <li>Uses
+    name for the title (as per schema.org examples) and keeps headline (optional)
+    for compatibility purposes</li>      <li>Simplifies the profile by removing alternateName
+    and alternativeHeadline as they are not commonly used</li>      <li>Changes sameAs
+    so it is used only for machine-readable representations</li>      <li>Changes
+    url so it is used for any (MANY) web page displaying this article</li>      <li>Changes
+    about to link to SemanticTextAnnotation (rather than SemanticAnnotation as only
+    those based on text are currently supported)</li>      <li>Uses abstract rather
+    than backstory to store the article abstract</li>      <li>Simplifies the profile
+    by removing copyrightHolder and copyrightYear are they are not commonly used</li>      <li>Adds
+    correction so it is possible to link to corrections of this article</li>      <li>Adds
+    editor and funder</li>      <li>Changes isAccessibleForFree to optional as license
+    is more common and has more information</li>      <li>Changes isBasedOn to optional
+    as it is not that common</li>      <li>Changes keywords to MANY as DefinedTerm
+    and URL would require them to be separated in a list rather by only commas</li>      <li>Adds
+    publisher as recommended (mandatory for Google Structured Data)</li>      <li>Removes
+    version</li>      <li>Removes article section as it referes to sports, culture
+    and so in a magazine</li>      <li>Makes pageStart and pageEnd optional</li>      <li>Removes
+    wordCount as not that common</li>      <li>Double checks the property range as
+    some has been updated in schema.org</li>      <li>Changes prepared by L. Garcia</li>    </ul>'
+  version: 0.2-DRAFT-2020_12_03
+  version_date: 20201207T134237
+  official_type: schema:ScholarlyArticle
+  full_example: https://github.com/BioSchemas/specifications/tree/master/ScholarlyArticle/examples/0.2-DRAFT/biotea_PMC35353.json
+mapping:
+- property: about
+  expected_types:
+  - Thing
+  description: |-
+    The subject matter of the content.
+     Inverse property: subjectOf.
+  type: ""
+  type_url: ""
+  bsc_description: SemanticTextAnnotations derived (manually or automatically) from
+    the text of this article
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    "about": [
+      {
+        "@type": "CreativeWork",
+        "mainEntity": {
+          "@type": "DefinedTerm",
+          "inDefinedTermSet": "https://bioportal.bioontology.org/ontologies/NCIT",
+          "termCode": "ncit:C61011",
+          "name": "Resource Description Framework",
+          "url": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61011",
+        },
+        "text": ["RDF"]
+      }
+    ]
+- property: abstract
+  expected_types:
+  - Text
+  description: An abstract is a short description that summarizes a CreativeWork.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ' "abstract": "Background: The World Wide Web has become a dissemination
+    platform for scientific and non-scientific publications..."'
+- property: articleBody
+  expected_types:
+  - Text
+  description: The actual body of the article.
+  type: ""
+  type_url: ""
+  bsc_description: If included, could be separated in paragraphs or so.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: author
+  expected_types:
+  - Organization
+  - Person
+  description: The author of this content or rating. Please note that author is special
+    in that HTML 5 provides a special mechanism for indicating authorship via the
+    rel tag. That is equivalent to this and may be used interchangeably.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    "author": [
+      {
+        "@type": "Person",
+        "givenName": "Alexander",
+        "familyName": "Garcia"
+      }
+    ]
+- property: citation
+  expected_types:
+  - CreativeWork
+  - Text
+  description: A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"citation": [{"@id": "doi.org/10.1016/j.jbi.2008.03.004"}]'
+- property: correction
+  expected_types:
+  - CorrectionComment
+  - Text
+  - URL
+  description: Indicates a correction to a CreativeWork, either via a CorrectionComment,
+    textually or in another document.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: dateCreated
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was created or the item was added
+    to a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: dateModified
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was most recently modified or when
+    the item's entry was modified within a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: datePublished
+  expected_types:
+  - Date
+  description: Date of first broadcast/publication.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"datePublished": "2013-04-15"'
+- property: editor
+  expected_types:
+  - Person
+  description: Specifies the Person who edited the CreativeWork.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: funder
+  expected_types:
+  - Organization
+  - Person
+  description: A person or organization that supports (sponsors) something through
+    some kind of financial contribution.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: headline
+  expected_types:
+  - Text
+  description: Headline of the article.
+  type: ""
+  type_url: ""
+  bsc_description: Title of the article (offer for compatibility, while schema.org
+    uses name for this purpose, some scholarly material repostitories/archives use
+    headline)
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"headline": "Biotea: RDFizing PubMed Central in support for the paper
+    as an interface to the Web of Data"'
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: A global a unique identifier for scholarly articles such as DOI.
+    Others such as PMID and PMC are also possible. Use the namespace:id format e.g.
+    doi, pmid and pmc . Follow community recommendations for the namespace
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"identifier": ["pmid:23734622", "pmc:3804025", "doi:10.1186/2041-1480-4-S1-S5"]'
+- property: inLanguage
+  expected_types:
+  - Language
+  - Text
+  description: The language of the content or performance or used in an action. Please
+    use one of the language codes from the IETF BCP 47 standard. See also availableLanguage.
+    Supersedes language.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"inLanguage": "EN"'
+- property: isAccessibleForFree
+  expected_types:
+  - Boolean
+  description: A flag to signal that the item, event, or place is accessible for free.
+    Supersedes free.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"isAccessibleForFree": true'
+- property: isBasedOn
+  expected_types:
+  - CreativeWork
+  - Product
+  - URL
+  description: A resource that was used in the creation of this resource. This term
+    can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+    Supersedes isBasedOnUrl.
+  type: ""
+  type_url: ""
+  bsc_description: Link to any HTML other than the DOI one as well as to possible
+    web services, such as PMC OAI service, providing machine-readable versions used
+    to create this metadata.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: isPartOf
+  expected_types:
+  - CreativeWork
+  - URL
+  - Periodical
+  - PublicationVolume
+  - PublicationIssue
+  description: |-
+    Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.
+     Inverse property: hasPart.
+  type: ""
+  type_url: ""
+  bsc_description: We recommend at least to inlcude a link to the most granular possible
+    level, e.g., PublicationIssue if available. It is also possible to use 'isPartOf'
+    to directly link to the PublicationVolume or the Journal (i.e. Periodical), making it easier to
+    find links to each other. It can also be part of another type, e.g., Dataset,
+    if needed.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: "\"isPartOf\": [\n  {\n    \"@type\": \"Periodical\",\n    \"identifier\":
+    \"issn:2041-1480\",\n    \"name\": \"Journal of Biomedical Semantics\", \n    \"url\":
+    \"https://jbiomedsem.biomedcentral.com/\"\n  }\n]"
+- property: keywords
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"keywords": "Semantic web, RDF, semantic annotations, scholarly publications"'
+- property: license
+  expected_types:
+  - CreativeWork
+  - URL
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"license": "http://creativecommons.org/licenses/by/2.0"'
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: Title of the article as per schema.org examples (headline is also
+    offered as optional for compatibility purposes)
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"name": "Biotea: RDFizing PubMed Central in support for the paper as an
+    interface to the Web of Data"'
+- property: pageEnd
+  expected_types:
+  - Integer
+  - Text
+  description: The page on which the work ends; for example "138" or "xvi".
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: pageStart
+  expected_types:
+  - Integer
+  - Text
+  description: The page on which the work starts; for example "135" or "xiii".
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: pagination
+  expected_types:
+  - Text
+  description: Any description of pages that is not separated into pageStart and pageEnd;
+    for example, "1-6, 9, 55" or "10-12, 46-49".
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: publisher
+  expected_types:
+  - Organization
+  - Person
+  description: The publisher of the creative work.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: sameAs
+  expected_types:
+  - URL
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  type: ""
+  type_url: ""
+  bsc_description: Any other machine readable description of this article.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: DOI if possible and any other available page displaying this article
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"url": ["https://jbiomedsem.biomedcentral.com/articles/10.1186/2041-1480-4-S1-S5",
+    "https://pubmed.ncbi.nlm.nih.gov/23734622/", "https://doi.org/10.1186/2041-1480-4-s1-s5",
+    "http://www.ncbi.nlm.nih.gov/pmc/articles/pmc3804025/"]'
+
+---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>
