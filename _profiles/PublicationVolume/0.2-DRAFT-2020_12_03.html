@@ -1,14 +1,21 @@
 ---
+redirect_from:
+- "devSpecs/PublicationVolume/specification"
+- "devSpecs/PublicationVolume/specification/"
+- "/devSpecs/PublicationVolume/"
+- "/specifications/drafts/PublicationVolume"
+- "/profiles/PublicationVolume/"
+
 name: PublicationVolume
 
-previous_version: '0.1-DRAFT-2019_02_14'
+previous_version: '0.1-DRAFT-2019_02_15'
 previous_release:
 
 status: revision
 spec_type: Profile
 group: publications
 use_cases_url: /useCases/ScholarlyPublications/
-cross_walk_url: https://docs.google.com/spreadsheets/d/198jnxnTf6rUTPc0ZYgFkP3ZElvHylQU-Tx4LwFDHZQ0
+cross_walk_url: https://docs.google.com/spreadsheets/d/1URvG6DVYNLwJvURHEUx7huEGxdVtURKCQ4KtQvvgwXw
 gh_tasks: https://github.com/BioSchemas/specifications/labels/profile%3A%20PublicationVolume
 live_deploy: ''
 
@@ -24,13 +31,15 @@ spec_info:
   title: PublicationVolume
   subtitle: Bioschemas profile, based on Biotea model, describing a PublicationVolume
     in Life Sciences.
-  description: A PublicationVolume is a collection of publication issues, or scholarly
+  description: 'A PublicationVolume is a collection of publication issues, or scholarly
     articles, or possibly, although no commonly, any mix from those mentioned. It
-    is commonly part of a Journal.
-  version: 0.1-DRAFT-2019_02_15
-  version_date: 20190208T104001
+    is commonly part of a Journal.<h4>Summary of Changes</h4>    Changes since previous
+    draft 0.1 of the PublicationVolumen profile:    <ul>      <li>Add examples</li>      <li>Keywords
+    range updated as per changes on schema.org</li>    </ul>'
+  version: 0.2-DRAFT-2020_12-03
+  version_date: 20201207T154000
   official_type: schema:PublicationVolume
-  full_example: https://github.com/Bioschemas/specifications/tree/master/ScholarlyPublications
+  full_example: https://github.com/BioSchemas/specifications/blob/master/ScholarlyArticle/examples/0.2-DRAFT/jbiomedsem_volume.json
 mapping:
 - property: about
   expected_types:
@@ -44,7 +53,7 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"about": "Extended versions of accepted papers submitted to Bio-ontologies"'
 - property: editor
   expected_types:
   - Person
@@ -55,7 +64,14 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "editor": [
+      {
+        "@type": "Person",
+        "givenName": "Larisa",
+        "familyname": "Soldatova"
+      }
+    ]
 - property: hasPart
   expected_types:
   - PublicationIssue
@@ -72,7 +88,10 @@ mapping:
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |
+    "hasPart": [
+      {"@id": "https://doi.org/10.1186/2041-1480-4-s1-s5"}
+    ]
 - property: identifier
   expected_types:
   - PropertyValue
@@ -90,7 +109,7 @@ mapping:
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"identifier": "https://jbiomedsem.biomedcentral.com/articles/supplements/volume-4-supplement-1"'
 - property: inLanguage
   expected_types:
   - Language
@@ -104,7 +123,7 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: '"inLanguage": "EN"'
 - property: isPartOf
   expected_types:
   - Journal
@@ -117,10 +136,19 @@ mapping:
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "isPartOf": [
+      {
+        "@type": "Periodical",
+        "identifier": "issn:2041-1480",
+        "name": "Journal of Biomedical Semantics"
+      }
+    ]
 - property: keywords
   expected_types:
+  - DefinedTerm
   - Text
+  - URL
   description: Keywords or tags used to describe this content. Multiple entries in
     a keywords list are typically delimited by commas.
   type: ""
@@ -129,7 +157,7 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"keywords": "Bio-ontologies, ISMB"'
 - property: pageEnd
   expected_types:
   - Integer
@@ -174,8 +202,9 @@ mapping:
     website.
   type: ""
   type_url: ""
-  bsc_description: Any other URL linking to this volume.
-  marginality: Optional
+  bsc_description: Any other URL linking to this volume, preferrable in machine-readable
+    format.
+  marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
   example: ""
@@ -186,10 +215,10 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: Oficial URL.
-  marginality: Recommended
+  marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"url": "https://jbiomedsem.biomedcentral.com/articles/supplements/volume-4-supplement-1"'
 - property: volumeNumber
   expected_types:
   - Integer
@@ -202,7 +231,8 @@ mapping:
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"volumeNumber": "Volume 4 supplement 1"'
+
 ---
 
 <!DOCTYPE HTML>
