@@ -10,6 +10,11 @@ redirect_from:
 - "/devSpecs/SemanticTextAnnotation/"
 - "/specifications/drafts/SemanticTextAnnotation"
 - "/profiles/SemanticTextAnnotation/"
+- "devSpecs/SemanticTextAnnotation/specification"
+- "devSpecs/SemanticTextAnnotation/specification/"
+- "/devSpecs/SemanticTextAnnotation/"
+- "/specifications/drafts/SemanticTextAnnotation"
+- "/profiles/SemanticTextAnnotation/"
 
 name: SemanticTextAnnotation
 
@@ -20,8 +25,8 @@ status: revision
 spec_type: Profile
 group: publications
 use_cases_url: /useCases/ScholarlyPublications/
-cross_walk_url: https://docs.google.com/spreadsheets/d/1_hsrPFM0htdoNaWF2PCg92bLf_ckOz8ird3kwJBANS0
-gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20SemanticAnnotation
+cross_walk_url: https://docs.google.com/spreadsheets/d/1FSz3Wn3pgUQl-fFx-mpz_qiuhxPJGMYGXRAEaZ9aPrU/
+gh_tasks: https://github.com/BioSchemas/specifications/labels/profile%3A%20SemanticTextAnnotation
 live_deploy: ''
 
 parent_type: Collection
@@ -33,28 +38,24 @@ spec_info:
   title: SemanticTextAnnotation
   subtitle: Bioschemas profile, based on Biotea model, describing a semantic annotation
     associated to a piece of text in a ScholarlyArticle in Life Sciences.
-  description: A SemanticAnnotation currently corresponds to an expression identified
-    in a ScholarlyArticle and associated to an ontology term. It could apply as well to documents
-    other than ScholarlyArticle, for instant patents and so.
+  description: 'A SemanticTextAnnotation corresponds to an expression identified in
+    a ScholarlyArticle and associated to an ontology term.<h4>Summary of Changes</h4>    Changes
+    since previous draft 0.1 of the SemanticAnnotation profile:    <ul>      <li>Add
+    examples</li>      <li>Updates name to SemanticTextAnnotation as currently only
+    text-based annotations are supported, if needd a supperclass SemanticAnnotation
+    can be created and then add support to, for instance, images or so</li>      <li>Changes
+    commentCount to optional as sometimes calculation is also possible</li>      <li>Changes
+    creator and dates to optional as they can also be provided at container/dataset
+    level only</li>      <li>Adds datePublished as optional</li>      <li>Removes
+    isAccessibleForFree and license (most likely to be found at container/dataset
+    level)</li>      <li>Adds isPartOf as optional to link to the dataset or collection
+    containing this annotation</li>      <li>Double checks the property range as some
+    has been updated in schema.org</li>      <li>Changes prepared by L. Garcia</li>    </ul>'
   version: 0.2-DRAFT-2020_12_03
-  version_date: 20190208T104450
+  version_date: 20201207T142101
   official_type: schema:CreativeWork
-  full_example: https://github.com/Bioschemas/specifications/tree/master/ScholarlyPublications
+  full_example: https://github.com/BioSchemas/specifications/blob/master/SemanticTextAnnotation/examples/0.2-DRAFT/biotea_annotations_PMC35353.json
 mapping:
-- property: subjectOf
-  expected_types:
-  - CreativeWork
-  - Event
-  - ScholarlyPublication
-  description: A CreativeWork or Event about this Thing.
-  Inverse property: about.
-  type: ""
-  type_url: ""
-  bsc_description: The ScholarlyPublication where this annotation is found.
-  marginality: Recommended
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
 - property: commentCount
   expected_types:
   - Integer
@@ -65,25 +66,29 @@ mapping:
   type_url: ""
   bsc_description: Number of times this annotation is found in the associated scholarly
     article.
-  marginality: Recommended
+  marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"commentCount": 5'
 - property: creator
   expected_types:
   - Organization
   - Person
-  - SoftwareApplication
   description: The creator/author of this CreativeWork. This is the same as the Author
     property for CreativeWork.
   type: ""
   type_url: ""
-  bsc_description: Person, organization or software application used to create this
-    annotation.
-  marginality: Recommended
+  bsc_description: ""
+  marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "creator": [
+      {
+        "@type": "Organization",
+        "name": Biotea project"
+      }
+    ]
 - property: dateCreated
   expected_types:
   - Date
@@ -93,10 +98,10 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: ""
-  marginality: Recommended
+  marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"dateCreated": "2013-01-30"'
 - property: dateModified
   expected_types:
   - Date
@@ -107,9 +112,20 @@ mapping:
   type_url: ""
   bsc_description: ""
   marginality: Optional
-  cardinality: MANY
+  cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"dateModified": "2013-01-30"'
+- property: datePublished
+  expected_types:
+  - Date
+  description: Date of first broadcast/publication.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"dateCreated": "2013-03-30"'
 - property: identifier
   expected_types:
   - PropertyValue
@@ -140,69 +156,75 @@ mapping:
   marginality: Optional
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
-- property: isAccessibleForFree
-  expected_types:
-  - Boolean
-  description: A flag to signal that the item, event, or place is accessible for free.
-    Supersedes free.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: license
+  example: '"inLanguage": "EN"'
+- property: isPartOf
   expected_types:
   - CreativeWork
-  - URL
-  description: A license document that applies to this content, typically indicated
-    by URL.
+  - Trip
+  - Journal
+  - PublicationVolume
+  - PublicationIssue
+  description: |-
+    Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.
+     Inverse property: hasPart.
   type: ""
   type_url: ""
-  bsc_description: ""
+  bsc_description: Dataset or collection aggregating this annotation
   marginality: Optional
-  cardinality: ONE
+  cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "isPartOf": [
+      {"@id": "https://doi.org/10.5281/zenodo.839715"}
+    ]
 - property: mainEntity
   expected_types:
-  - Thing
   - DefinedTerm
-  - DefinedTermSet
   description: |-
     Indicates the primary entity described in some page or other CreativeWork.
      Inverse property: mainEntityOfPage.
   type: ""
   type_url: ""
-  bsc_description: DefinedTerm(s), i.e., ontology terms, associated to this annotation. Use DefinedTermSet if multiple related
-   terms should be seen as a whole, for instance MeSH descriptors accompanied by MeSH qualifiers .
-   On the DefinedTerm, use additionalType to link to a Unified Medical Language System (UMLS) semantic
-    type (TUI) or group, and sameAs to link to the corresponding concept unique identifier
-    (CUI), if available.
+  bsc_description: |-
+    Ontology terms associated to this annotation. On the DefinedTerm, use additionalType to link to a Unified Medical Language System (UMLS) semantic type (TUI) or group, and sameAs to link to the corresponding concept unique identifier (CUI), if available.
+    Note: Bioschemas recommends using DefinedTerm rather than Thing (as specified in schema.org)
   marginality: Minimum
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    "mainEntity": {
+      "@type": "DefinedTerm",
+      "inDefinedTermSet": "https://bioportal.bioontology.org/ontologies/NCIT",
+      "termCode": "ncit:C61011",
+      "name": "Resource Description Framework",
+      "url": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61011",
+    }
 - property: position
   expected_types:
   - Integer
   - Text
-  - BreadcrumbList
-  - URL
   description: The position of an item in a series or sequence of items.
   type: ""
   type_url: ""
-  bsc_description: A list of links that can help a user understand and navigate to
-    a section or paragraph in the scholarly article where this annotation is located.
-    If a text is used, different steps on the list should be separated with the character
-    '>', being the sentence where the annotation is found the last element. If a URL
-    is used, it should identify the section or paragraph where this annoation is found.
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: subjectOf
+  expected_types:
+  - CreativeWork
+  - Event
+  description: "A CreativeWork or Event about this Thing. \nInverse property: about"
+  type: ""
+  type_url: ""
+  bsc_description: |-
+    ScholarlyArticle where this annotation is located. It is also possible to link from the ScholarlyArticle to the SemanticTextAnnotation via about
+    Note: For the Bioschemas case, the preferred property range is ScholarlyArticle
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: '"subjectOf": {"@id": "https://doi.org/10.1186/2041-1480-4-s1-s5"}'
 - property: text
   expected_types:
   - Text
@@ -213,7 +235,8 @@ mapping:
   marginality: Minimum
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: '"text": ["RDF"]'
+
 ---
 <!DOCTYPE HTML>
 <html>
