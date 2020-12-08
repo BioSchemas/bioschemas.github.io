@@ -15,7 +15,7 @@ status: revision
 spec_type: Profile
 group: training
 use_cases_url: /useCases/TrainingGroup/
-cross_walk_url: https://docs.google.com/spreadsheets/d/1s6PmpSRZaUqjkZjiyw5FDCTRy5mgHiwUCh8dqAiLfkk
+cross_walk_url: https://docs.google.com/spreadsheets/d/13jSA-R1i3fTxAFJ1md_LahAY2kmBJbwVgGA79OMBJ-w/
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Training%20material
 live_deploy: ''
 
@@ -35,18 +35,16 @@ spec_info:
     of metadata and vocabularies, built on top of existing technologies and standards,
     that can be used to represent events in Web pages and applications. The goal of
     the specification is to make it easier to discover, exchange and integrate life
-    science training material information across the Internet.<h4>Summary of Changes</h4>
-    Changes since previous draft 0.8 of the TrainingMaterials profile:
-    <ul>
-      <li>Adds competencyRequired which is now available</li>
-      <li>Updates range for keywords and learningResource to reflect changes on schema.org</li>
-      <li>Changes keywords to MANY as comma separation is not enough for DefinedTerm or URL (they need a list/array)</li>
-      <li>Changes prepared by L. Garcia</li>
-    </ul>'
-  version: 0.9-DRAFT-2020_12_03
-  version_date: 20201203T174725
+    science training material information across the Internet.<h4>Summary of Changes</h4>    Changes
+    since previous draft 0.8 of the TrainingMaterials profile:    <ul>      <li>Adds
+    competencyRequired which is now available</li>      <li>Updates range for keywords
+    and learningResourceType to reflect changes on schema.org</li>      <li>Changes
+    keywords to MANY as comma separation is not enough for DefinedTerm or URL (they
+    need a list/array)</li>    </ul>'
+  version: 0.9-DRAFT-2020_12_08
+  version_date: 20201208T223249
   official_type: LearningResource
-  full_example: https://github.com/BioSchemas/specifications/blob/master/TrainingMaterial/examples/0.8-DRAFT/trainingMaterial.json
+  full_example: https://github.com/BioSchemas/specifications/blob/master/TrainingMaterial/examples/0.9-DRAFT/trainingMaterial.json
 mapping:
 - property: about
   expected_types:
@@ -125,6 +123,21 @@ mapping:
   example: "\"author\":  [\n  {\n    \"@type\": \"Person\",\n    \"name\": \"Elizabeth
     Windsor\",\n    \"email\": \"e.r.windsor@gmail.com\"\n  },{ \n    \"@type\": \"Organization\",\n
     \   \"name\": \"University of Manchester\"\n  }\n]"
+- property: competencyRequired
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  description: Knowledge, skill, ability or personal attribute that must be demonstrated
+    by a person or other entity in order to do something such as earn an Educational
+    Occupational Credential or understand a LearningResource.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"competencyRequired": "SPARQL"'
 - property: contributor
   expected_types:
   - Organization
@@ -210,21 +223,6 @@ mapping:
   controlled_vocab: ""
   example: |
     "description": "This tutorial will take you through the basic usage of the command line shell. In it, you will discover what a shell is, skills for directory navigation, file manipulation, and how to run tools. To complete this training material you will need to have a shell (linux), powershell (windows), or terminal (mac) ready. You do not need any previous experience to complete the tasks"
-  - property: competencyRequired
-    expected_types:
-    - DefinedTerm
-    - Text
-    - URL
-    description: Knowledge, skill, ability or personal attribute that must be demonstrated by a 
-    person or other entity in order to do something such as earn an Educational Occupational 
-    Credential or understand a LearningResource.
-    type: ""
-    type_url: ""
-    bsc_description: 
-    marginality: Recommended
-    cardinality: MANY
-    controlled_vocab: 
-    example: '"competencyRequired": "SPARQL"'
 - property: educationalLevel
   expected_types:
   - DefinedTerm

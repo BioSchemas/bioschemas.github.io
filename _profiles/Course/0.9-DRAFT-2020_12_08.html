@@ -1,14 +1,21 @@
 ---
+redirect_from:
+- "devSpecs/Course/specification"
+- "devSpecs/Course/specification/"
+- "/devSpecs/Course/"
+- "/specifications/drafts/Course"
+- '/profiles/Course/'
+
 name: Course
 
-previous_version: '0.7-DRAFT-2019_11_08'
+previous_version: '0.8-DRAFT-2020_10_06'
 previous_release:
 
 status: revision
 spec_type: Profile
 group: training
 use_cases_url: /useCases/TrainingGroup/
-cross_walk_url: https://docs.google.com/spreadsheets/d/1450AqXkCqaLnTILb4z-HwkV0C3U4OvnMFaqsdB8WAW4
+cross_walk_url: https://docs.google.com/spreadsheets/d/17gJ9daQkj9YOOkXUs4VhjKnMQ2UzWPJ-fQIKSgHaBH4/
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Course
 live_deploy: ''
 
@@ -26,26 +33,13 @@ spec_info:
   description: 'This specification must be used in tandem with a courseInstance. A
     course is used to describe the broad, common aspects of a recurring training event
     - whereas a course instance is about the specific times and location of when that
-    course is held. <h4>Summary of Changes</h4>    Changes since previous draft 0.7
-    of the Course profile:    <ul>      <li>Added in missing properties from Course:
-    numberOfCredits; occupationalCredentialAwarded</li>      <li>Corrected ExpectedType
-    for properties under Course: numberOfCredits; educationalCredentialAwarded</li>      <li>Added
-    in missing properties from CreativeWork: abstract; acquireLicensePage; assesses;
-    conditionsOfAccess; creativeWorkStatus; editEIDR; educationalLevel; maintainer;
-    materialExtent; pattern; size; spatial; teaches; temporal; usageInfo </li>      <li>Corrected
-    ExpectedType for properties under CreativeWork: accessModeSufficient; audio; datePublished;
-    hasPart; isPartOf; offers; video</li>      <li>Corrected Description for properties
-    under CreativeWork: encoding; offers; spatialCoverage; temporalCoverage</li>      <li>Selected
-    new Bioschemas properties under CreativeWork: abstract, aggregateRating; citation;
-    comment; commentCount; educationalLevel; isBasedOn; license; teaches</li>      <li>Updated
-    description for Bioschemas properties under CreativeWork: mentions; </li>      <li>Updated
-    cardinality for Bioschemas properties under CreativeWork: keywords; </li>      <li>Deleted
-    Bioschemas property: skillLevel </li>         <li>Adjusted Authors: Michelle D
-    Brazas to editor; Niall Beard no longer editor </li>           </ul>'
-  version: 0.8-DRAFT-2020_10_06
-  version_date: 20201006T125606
+    course is held. <h4>Summary of Changes</h4>    Changes since previous draft 0.8
+    of the Course profile:    <ul>      <li>Update ranges as per latest version of
+    schema.org</li>         </ul>'
+  version: 0.9-DRAFT-2020_12_08
+  version_date: 20201208T223154
   official_type: Course
-  full_example: https://github.com/BioSchemas/specifications/blob/master/Course/examples/0.8-DRAFT/course.json
+  full_example: https://github.com/BioSchemas/specifications/blob/master/Course/examples/0.9-DRAFT/course.json
 mapping:
 - property: about
   expected_types:
@@ -413,12 +407,14 @@ mapping:
     ]
 - property: keywords
   expected_types:
+  - DefinedTerm
   - Text
+  - URL
   description: Keywords or tags used to describe this content. Multiple entries in
     a keywords list are typically delimited by commas.
   type: ""
   type_url: ""
-  bsc_description: ""
+  bsc_description: Free text keywords delimited by commas describing the Course content.
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""

@@ -32,7 +32,7 @@ ComputationalWorkflow:
 
 Course:
     name: "Course"
-    latest_publication: "0.8-DRAFT-2020_10_06"
+    latest_publication: "0.9-DRAFT-2020_12_08"
     latest_release:
     status: "active"
 
@@ -86,7 +86,7 @@ Journal:
 
 LabProtocol:
     name: "LabProtocol"
-    latest_publication: "0.6-DRAFT-2020_12_03"
+    latest_publication: "0.6-DRAFT-2020_12_08"
     latest_release:
     status: "active"
 
@@ -188,7 +188,7 @@ TaxonName:
 
 TrainingMaterial:
     name: "TrainingMaterial"
-    latest_publication: "0.9-DRAFT-2020_12_03"
+    latest_publication: "0.9-DRAFT-2020_12_08"
     latest_release:
     status: "active"
 
