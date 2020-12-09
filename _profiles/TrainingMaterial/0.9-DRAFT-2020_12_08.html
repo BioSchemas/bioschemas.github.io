@@ -1,14 +1,21 @@
 ---
+redirect_from:
+- "devSpecs/TrainingMaterial/specification"
+- "devSpecs/TrainingMaterial/specification/"
+- "/devSpecs/TrainingMaterial/"
+- "/specifications/drafts/TrainingMaterial"
+- "/profiles/TrainingMaterial/"
+
 name: TrainingMaterial
 
-previous_version: 0.7-DRAFT-2019_11_08
+previous_version: 0.8-DRAFT-2020_10_06
 previous_release:
 
 status: revision
 spec_type: Profile
 group: training
 use_cases_url: /useCases/TrainingGroup/
-cross_walk_url: https://docs.google.com/spreadsheets/d/1s6PmpSRZaUqjkZjiyw5FDCTRy5mgHiwUCh8dqAiLfkk
+cross_walk_url: https://docs.google.com/spreadsheets/d/13jSA-R1i3fTxAFJ1md_LahAY2kmBJbwVgGA79OMBJ-w/
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Training%20material
 live_deploy: ''
 
@@ -29,20 +36,15 @@ spec_info:
     that can be used to represent events in Web pages and applications. The goal of
     the specification is to make it easier to discover, exchange and integrate life
     science training material information across the Internet.<h4>Summary of Changes</h4>    Changes
-    since previous draft 0.7 of the TrainingMaterials profile:    <ul>      <li>Changes
-    learningOutcomes (non existant property) to teaches</li>      <li>Changes featuredInEvent
-    (non existant property) to recordedIn</li>      <li>Removes uses (non existant
-    property, used for works used by this TtrainingMaterial) and reuses mentions for
-    this purpose(before it was used only for other works referenced by this TrainingMaterial</li>      <li>Changes
-    skillLevel (non existant property) to educationalLevel</li>      <li>Changes status
-    (non existant property) to creativeWorkStatus</li>      <li>Changes tranlastedInto
-    (non existant property) to workTranslation</li>      <li>Changes parent type to
-    LearningResource, it was before CreativeWork, LearningResource extends it and
-    is more appropriate</li>      <li>Changes prepared by L. Garcia</li>    </ul>'
-  version: 0.8-DRAFT-2020_10_06
-  version_date: 20201006T120524
+    since previous draft 0.8 of the TrainingMaterials profile:    <ul>      <li>Adds
+    competencyRequired which is now available</li>      <li>Updates range for keywords
+    and learningResourceType to reflect changes on schema.org</li>      <li>Changes
+    keywords to MANY as comma separation is not enough for DefinedTerm or URL (they
+    need a list/array)</li>    </ul>'
+  version: 0.9-DRAFT-2020_12_08
+  version_date: 20201208T223249
   official_type: LearningResource
-  full_example: https://github.com/BioSchemas/specifications/blob/master/TrainingMaterial/examples/0.8-DRAFT/trainingMaterial.json
+  full_example: https://github.com/BioSchemas/specifications/blob/master/TrainingMaterial/examples/0.9-DRAFT/trainingMaterial.json
 mapping:
 - property: about
   expected_types:
@@ -121,6 +123,21 @@ mapping:
   example: "\"author\":  [\n  {\n    \"@type\": \"Person\",\n    \"name\": \"Elizabeth
     Windsor\",\n    \"email\": \"e.r.windsor@gmail.com\"\n  },{ \n    \"@type\": \"Organization\",\n
     \   \"name\": \"University of Manchester\"\n  }\n]"
+- property: competencyRequired
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  description: Knowledge, skill, ability or personal attribute that must be demonstrated
+    by a person or other entity in order to do something such as earn an Educational
+    Occupational Credential or understand a LearningResource.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"competencyRequired": "SPARQL"'
 - property: contributor
   expected_types:
   - Organization
@@ -306,18 +323,21 @@ mapping:
     ]
 - property: keywords
   expected_types:
+  - DefinedTerm
   - Text
+  - URL
   description: Keywords or tags used to describe this content. Multiple entries in
     a keywords list are typically delimited by commas.
   type: ""
   type_url: ""
   bsc_description: ""
   marginality: Minimum
-  cardinality: ONE
+  cardinality: MANY
   controlled_vocab: ""
   example: '"keywords": "Unix, Shell, Command Line Tools, Terminal, Bash"'
 - property: learningResourceType
   expected_types:
+  - DefinedTerm
   - Text
   description: The predominant type or kind characterizing the learning resource.
     For example, 'presentation', 'handout'.
