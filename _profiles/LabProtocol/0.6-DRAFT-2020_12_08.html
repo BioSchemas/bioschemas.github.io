@@ -1,14 +1,24 @@
 ---
+redirect_from:
+- "devSpecs/LabProtocol/specification"
+- "devSpecs/LabProtocol/specification/"
+- "/devSpecs/LabProtocol"
+- "/devSpecs/LabProtocol/"
+- "/specifications/drafts/LabProtocol"
+- "/specifications/drafts/LabProtocol/"
+- "/profiles/LabProtocol"
+- "/profiles/LabProtocol/"
+
 name: LabProtocol
 
-previous_version: '0.4-DRAFT-2020_07_23'
+previous_version: '0.5-DRAFT-2020_09_01'
 previous_release: 
 
 status: revision
 spec_type: Profile
 group: labprotocols
 use_cases_url: /useCases/LabProtocol/
-cross_walk_url: https://docs.google.com/spreadsheets/d/1dyRNuAI45zHbbv1b-tDBHwLQcEuzXP_7WmaXQm9YDlM
+cross_walk_url: https://docs.google.com/spreadsheets/d/1KfhBNetyt9xzI7cs3S6HwIWEsgWpPEKnGlqu19Q49vo/
 gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20LabProtocol
 live_deploy: ''
 
@@ -26,26 +36,15 @@ spec_info:
     LabProtocol is a sequence of tasks and operations executed to perform experimental
     research in biological and biomedical areas.
   description: 'This LabProtocol profile specification presents the markup for describing
-    a LabProtocol type according to Bioschemas. An experimental LabProtocol is a sequence of tasks 
-    and operations executed to perform experimental research in biological and biomedical areas. 
-    <h4>Summary of Changes</h4>    Changes since previous draft of the
-    LabProtocols profile:    <ul>      <li>LabProtocol profile definition updated
-    to the one on the type, see <a href=''https://github.com/Bioschemas/specifications/issues/331''>issue
-    331</a></li>      <li>Description property added, see <a href=''https://github.com/Bioschemas/specifications/issues/436''>issue
-    436</a></li>      <li>Title added as minimum, see <a href=''https://github.com/Bioschemas/specifications/issues/438''>issue
-    438</a>.</li>      <li>Protocol advantage property description updated, see <a
-    href=''https://github.com/Bioschemas/specifications/issues/440''>issue 440</a></li>      <li>Time
-    properties updated (totalTime as it was plus performTime and prepTime as optional),
-    see <a href=''https://github.com/Bioschemas/specifications/issues/441''>issue
-    441</a></li>      <li>ReagentUsed property description updated, now using CHEBI
-    definition, also MolecularEntity and ChemicalSubstance to the range list added,
-    see <a href=''https://github.com/Bioschemas/specifications/issues/442''>issue
-    442</a></li>            <li>LabProtocol now used as the parent type for this profile, 
-      see <a href=''https://github.com/Bioschemas/specifications/issues/443''>issue 443</a></li>    </ul>'
-  version: 0.5-DRAFT-2020_09_01
-  version_date: 20200901T154721
+    a LabProtocol type according to Bioschemas. An experimental LabProtocol is a sequence
+    of tasks and operations executed to perform experimental research in biological
+    and biomedical areas.<h4>Summary of Changes</h4>    Changes since previous draft
+    0.5 of the LabProtocols profile:    <ul>      <li>Keywords range updated as per
+    changes on schema.org</li>    </ul>'
+  version: 0.6-DRAFT-2020_12_08
+  version_date: 20201208T223218
   official_type: http://bioschemas.org/LabProtocol
-  full_example: https://github.com/Bioschemas/Specifications/tree/master/LabProtocol/examples
+  full_example: https://github.com/BioSchemas/specifications/tree/master/LabProtocol/examples/0.6-DRAFT
 mapping:
 - property: author
   expected_types:
@@ -250,7 +249,9 @@ mapping:
     }
 - property: keywords
   expected_types:
+  - DefinedTerm
   - Text
+  - URL
   description: Keywords or tags used to describe this content. Multiple entries in
     a keywords list are typically delimited by commas.
   type: ""
@@ -431,7 +432,7 @@ mapping:
   description: Reagents used in the protocol. ChEBI and PubChem entities can be used
     whenever available. Commercial names are also acceptable. A reagent is defined
     as 'A substance used in a chemical reaction to detect, measure, examine, or produce
-    other substances' in <a href='https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:33893'>CHEBI:33893</a>
+    other substances' in <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:33893">CHEBI:33893</a>
   type: bioschemas
   type_url: ""
   bsc_description: ""
@@ -498,8 +499,6 @@ mapping:
       "@type": "LabProtocol",
       "totalTime": "15:00:00"
     }
-
-
 
 ---
 <!DOCTYPE HTML>
