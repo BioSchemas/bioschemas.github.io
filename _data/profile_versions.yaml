@@ -80,7 +80,7 @@ Gene:
 
 Journal:
     name: "Journal"
-    latest_publication: "0.1-DRAFT-2019_11_21"
+    latest_publication: "0.2-DRAFT-2020_12_03"
     latest_release:
     status: "active"
 
@@ -134,13 +134,13 @@ ProteinStructure:
 
 PublicationIssue:
     name: "PublicationIssue"
-    latest_publication: "0.1-DRAFT-2019_02_08"
+    latest_publication: "0.2-DRAFT-2020_12_03"
     latest_release:
     status: "active"
 
 PublicationVolume:
     name: "PublicationVolume"
-    latest_publication: "0.1-DRAFT-2019_02_15"
+    latest_publication: "0.2-DRAFT-2020_12_03"
     latest_release:
     status: "active"
 
@@ -158,13 +158,13 @@ Sample:
 
 ScholarlyArticle:
     name: "ScholarlyArticle"
-    latest_publication: "0.1-DRAFT-2019_03_15"
+    latest_publication: "0.2-DRAFT-2020_12_03"
     latest_release:
     status: "active"
 
-SemanticAnnotation:
-    name: "SemanticAnnotation"
-    latest_publication: "0.1-DRAFT-2019_11_19"
+SemanticTextAnnotation:
+    name: "SemanticTextAnnotation"
+    latest_publication: "0.2-DRAFT-2020_12_03"
     latest_release:
     status: "active"
 
