@@ -1078,7 +1078,7 @@ list:
   resource_URL: https://bio.tools/covidmine
   schema_org: SoftwareApplication
   bsc_profile: ComputationalTool
-  bsc_ver: 0.5-DRAFT
+  bsc_ver: 0.4-DRAFT
   comments:
   node: DK, FR, ES
 ---
