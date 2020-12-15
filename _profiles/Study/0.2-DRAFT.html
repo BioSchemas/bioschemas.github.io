@@ -22,6 +22,7 @@ live_deploy: ''
 parent_type:
 hierarchy:
 - Thing
+- CreativeWork
 - Study
 
 
@@ -32,7 +33,7 @@ spec_info:
   subtitle: ""
   description: This Study profile presents the marckup when describing a Study
   version: 0.2-DRAFT
-  version_date: 20201214T164757
+  version_date: 20201215T170706
   official_type: http://bioschemas.org/Study
   full_example: https://github.com/BioSchemas/specifications/tree/master/Study/examples
 mapping:
@@ -80,7 +81,8 @@ mapping:
     rel tag. That is equivalent to this and may be used interchangeably.
   type: ""
   type_url: ""
-  bsc_description: ""
+  bsc_description: Used to indicate the person(s) or organizations that conducted
+    the Study. Please use creator to indicate the Research project
   marginality: Minimum
   cardinality: ""
   controlled_vocab: ""
@@ -98,6 +100,27 @@ mapping:
   cardinality: ""
   controlled_vocab: ""
   example: ""
+- property: creator
+  expected_types:
+  - Organization
+  - Person
+  description: The creator/author of this CreativeWork. This is the same as the Author
+    property for CreativeWork.
+  type: ""
+  type_url: ""
+  bsc_description: Used to specify the research project that created the study. Please
+    use author to indicate the organisation, or individuals that conducted the study.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+        "creator": {
+            "@type": "Organization",
+            "@id": "https://ror.org/018cxtf62",
+            "name": "Earlham Institute"
+        }
+    }
 - property: dateCreated
   expected_types:
   - Date
@@ -149,44 +172,6 @@ mapping:
   example: |-
     {
         "endDate": "2020-11-24"
-    }
-- property: PPEO:hasGrowthChamber
-  expected_types:
-  - URL
-  description: has growth facility
-  type: external
-  type_url: http://purl.org/ppeo/PPEO.owl#hasGrowthChamber
-  bsc_description: The kind of growth facility used in a plant study
-  marginality: Optional
-  cardinality: ONE
-  controlled_vocab: |-
-    [
-    {
-        "PPEO:hasGrowthChamber": {
-            "PPEO:hasType": "field"
-        }
-    },
-    {
-        "PPEO:hasGrowthChamber": {
-            "PPEO:hasType": "growth chamber"
-        }
-    },
-    {
-        "PPEO:hasGrowthChamber": {
-            "PPEO:hasType": "greenhouse"
-        }
-    },
-    {
-        "PPEO:hasGrowthChamber": {
-            "PPEO:hasType": "nursery"
-        }
-    }
-    ]
-  example: |-
-    {
-        "PPEO:hasGrowthChamber": {
-            "PPEO:hasType": "field"
-        }
     }
 - property: identifier
   expected_types:
@@ -241,6 +226,44 @@ mapping:
   cardinality: ""
   controlled_vocab: ""
   example: ""
+- property: PPEO:hasGrowthChamber
+  expected_types:
+  - URL
+  description: has growth facility
+  type: external
+  type_url: http://purl.org/ppeo/PPEO.owl#hasGrowthChamber
+  bsc_description: The kind of growth facility used in a plant study
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: |-
+    [
+    {
+        "PPEO:hasGrowthChamber": {
+            "PPEO:hasType": "field"
+        }
+    },
+    {
+        "PPEO:hasGrowthChamber": {
+            "PPEO:hasType": "growth chamber"
+        }
+    },
+    {
+        "PPEO:hasGrowthChamber": {
+            "PPEO:hasType": "greenhouse"
+        }
+    },
+    {
+        "PPEO:hasGrowthChamber": {
+            "PPEO:hasType": "nursery"
+        }
+    }
+    ]
+  example: |-
+    {
+        "http://purl.org/ppeo/PPEO.owl#hasGrowthChamber": {
+            "http://purl.org/ppeo/PPEO.owl#hasType": "field"
+        }
+    }
 - property: relatedStudy
   expected_types:
   - Thing
