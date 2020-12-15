@@ -195,7 +195,7 @@ list:
     example_URL: http://159.149.160.88/pscan/
     resource_URL: http://159.149.160.88/pscan/
     schema_org: SoftwareApplication
-    bsc_profile: Tool
+    bsc_profile: ComputationalTool
     bsc_ver: 0.1
     comments:
 -
@@ -204,7 +204,7 @@ list:
     example_URL: http://159.149.160.88/pscan_chip_dev/
     resource_URL: http://159.149.160.88/pscan_chip_dev/
     schema_org: SoftwareApplication
-    bsc_profile: Tool
+    bsc_profile: ComputationalTool
     bsc_ver: 0.1
     comments:
 -
@@ -213,7 +213,7 @@ list:
     example_URL: http://159.149.160.88/cscan/
     resource_URL: http://159.149.160.88/cscan/
     schema_org: SoftwareApplication
-    bsc_profile: Tool
+    bsc_profile: ComputationalTool
     bsc_ver: 0.1
     comments:
 -
@@ -222,7 +222,7 @@ list:
     example_URL: https://bar.biocomp.unibo.it/bar3/
     resource_URL: https://bar.biocomp.unibo.it/bar3/
     schema_org: SoftwareApplication
-    bsc_profile: Tool
+    bsc_profile: ComputationalTool
     bsc_ver: 0.1
     comments:
 -
@@ -533,7 +533,7 @@ list:
     example_URL: https://swissmodel.expasy.org
     resource_URL: https://swissmodel.expasy.org
     schema_org: SoftwareApplication
-    bsc_profile: Tool
+    bsc_profile: ComputationalTool
     bsc_ver: 0.1
     comments:  
     node: CH    
@@ -1071,4 +1071,14 @@ list:
   bsc_ver: 0.3
   comments:
   node: EBI
+-
+  name: Bio.Tools
+  highlight: 17090 tools
+  example_URL: https://bio.tools/covidmine
+  resource_URL: https://bio.tools/
+  schema_org: SoftwareApplication
+  bsc_profile: ComputationalTool
+  bsc_ver: 0.4-DRAFT
+  comments:
+  node: DK, FR, ES
 ---
