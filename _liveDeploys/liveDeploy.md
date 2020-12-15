@@ -1075,7 +1075,7 @@ list:
   name: Bio.Tools
   highlight: 17090 tools
   example_URL: https://bio.tools/covidmine
-  resource_URL: https://bio.tools/covidmine
+  resource_URL: https://bio.tools/
   schema_org: SoftwareApplication
   bsc_profile: ComputationalTool
   bsc_ver: 0.4-DRAFT
