@@ -52,8 +52,44 @@ external: #454547;
                        <th class="supertype-name" colspan="3">Properties from <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/Study">Study</a></th>
 
                   </tr>
-
                   <tbody class="supertype">
+                    <tr typeof="rdfs:Property" resource="https://schema.org/additionalProperty"><th class="prop-nam" scope="row">
+                      <code property="rdfs:label">
+                        <a href="https://schema.org/additionalProperty" class="ext ext-bio" title="studySubject">additionalProperty</a></code></th>
+                                <td class="prop-ect">
+                          <link  property="rangeIncludes" href="https://schema.org/PropertyValue" /><a   href="https://schema.org/PropertyValue">PropertyValue</a>
+                          <link property="domainIncludes" href="http://schema.org/Study"></td><td class="prop-desc" property="rdfs:comment"><p>A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.</p>
+                              <p>Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, …) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.</p>
+
+                            </td></tr>
+
+                    <tr typeof="rdfs:Property" resource="https://schema.org/endDate"><th class="prop-nam" scope="row">
+                      <code property="rdfs:label">
+                        <a href="https://schema.org/endDate" class="ext ext-bio" title="studySubject">endDate</a></code></th>
+                                <td class="prop-ect">
+                          <link  property="rangeIncludes" href="https://schema.org/Date" /><a   href="https://schema.org/Date">Date</a> &nbsp; or<br/>
+                          <link  property="rangeIncludes" href="https://schema.org/DateTime" /><a   href="https://schema.org/DateTime">DateTime</a>
+                          <link property="domainIncludes" href="http://schema.org/Study"></td><td class="prop-desc" property="rdfs:comment">The end date and time of the item (in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>).</td>
+                        </tr>
+
+                  <tr typeof="rdfs:Property" resource="#relatedStudy"><th class="prop-nam" scope="row">
+                    <code property="rdfs:label">
+
+
+                      <a href="#relatedStudy" class="ext ext-bio" title="studySubject">relatedStudy</a></code></th>
+                              <td class="prop-ect">
+                        <link  property="rangeIncludes" href="/Study" /><a   href="/Study">Study</a>
+                        <link property="domainIncludes" href="http://schema.org/Study"></td><td class="prop-desc" property="rdfs:comment">A study that is related to this one.</td></tr>
+
+                  <tr typeof="rdfs:Property" resource="https://schema.org/startDate"><th class="prop-nam" scope="row">
+                    <code property="rdfs:label">
+                      <a href="https://schema.org/startDate" class="ext ext-bio" title="studySubject">startDate</a></code></th>
+                              <td class="prop-ect">
+                        <link  property="rangeIncludes" href="https://schema.org/Date" /><a   href="https://schema.org/Date">Date</a> &nbsp; or<br/>
+                        <link  property="rangeIncludes" href="https://schema.org/DateTime" /><a   href="https://schema.org/DateTime">DateTime</a>
+                        <link property="domainIncludes" href="http://schema.org/Study"></td><td class="prop-desc" property="rdfs:comment">The start date and time of the item (in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>).</td>
+                      </tr>
+
                     <tr typeof="rdfs:Property" resource="http://schema.org/studyDomain">
 
                         <th class="prop-nam" scope="row">
@@ -61,7 +97,19 @@ external: #454547;
                   <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#studyDomain">studyDomain</a></code>
                       </th>
                    <td class="prop-ect">
-                  <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="http://schema.org/PropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Study"></td><td class="prop-desc" property="rdfs:comment">Define the domain of the study. For example, the domain could be astrophysics, functional genomics or earth science. Those domains can also have an ontology reference.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/studyProcess">
+                  <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="http://schema.org/PropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Study"></td><td class="prop-desc" property="rdfs:comment">Define the domain of the study. For example, the domain could be astrophysics, functional genomics or earth science. Those domains can also have an ontology reference.</td></tr>
+
+                <tr typeof="rdfs:Property" resource="https://schema.org/studyLocation"><th class="prop-nam" scope="row">
+                  <code property="rdfs:label">
+                    <a href="https://schema.org/studyLocation" class="ext ext-bio" title="studySubject">studyLocation</a></code></th>
+                            <td class="prop-ect">
+                      <link  property="rangeIncludes" href="https://schema.org/AdministrativeArea" /><a   href="https://schema.org/AdministrativeArea">AdministrativeArea</a>&nbsp; or <br/>
+                      <link  property="rangeIncludes" href="http://schema.org/Place" /><a   href="http://schema.org/Place">Place</a>
+                      <link property="domainIncludes" href="http://schema.org/Study"></td><td class="prop-desc" property="rdfs:comment"><p>The location in which the study is taking/took place.</p><p><strong>Note:</strong>Extended expected types to include Place.</p></td>
+                    </tr>
+
+
+                  <tr typeof="rdfs:Property" resource="http://schema.org/studyProcess">
 
                         <th class="prop-nam" scope="row">
 
