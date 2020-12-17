@@ -58,6 +58,7 @@ members:
     - SarahMorgan    
     - LeylaGarcia
     - VictoriaDominguezDelAngel
+    - ChrisChild
 
 Former-Members:    
     - ChrisTaylor
