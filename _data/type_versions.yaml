@@ -116,7 +116,7 @@ SequenceRange:
 
 Study:
     name: "Study"
-    latest_publication: "0.2-DRAFT-2019_06_21"
+    latest_publication: "0.3-DRAFT"
     latest_release:
     status: "active"
 

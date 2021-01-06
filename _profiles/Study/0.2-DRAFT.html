@@ -1,33 +1,43 @@
 ---
+redirect_from:
+- "devSpecs/Study/specification"
+- "devSpecs/Study/specification/"
+- "/devSpecs/Study/"
+- "/specifications/drafts/Study"
+- "/profiles/Study/"
+
 name: Study
 
-previous_version:
+previous_version: 0.1-DRAFT-2018_11_15
 previous_release:
 
 status: revision
 spec_type: Profile
 group: studies
 use_cases_url: /useCases/Study/
-cross_walk_url: https://docs.google.com/spreadsheets/d/12fvwLvsWsLF9Olz4ueiNn7pnU27OR_ejgxn8Oy4xFPs/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1320sC6scXagwB5kJyGObuW5YkWGrZ1JNIYk-rmC3pyE/
 gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Study
-live_deploy: ''
+live_deploy: /liveDeploys/
 
-parent_type:
+parent_type: Study
 hierarchy:
 - Thing
+- CreativeWork
 - Study
 
+schemaVersion: 11.01
+bioschemasVersion: 0.3-DRAFT
 
 # spec_info content generated using GOWeb
 # DO NOT MANUALLY EDIT THE CONTENT
 spec_info:
   title: Study
   subtitle: ""
-  description: This Study profile presents the marckup when describing a Study
-  version: 0.1-DRAFT-2018_11_15
-  version_date: 20181115T164019
+  description: This Study profile presents the markup when describing a Study
+  version: 0.2-DRAFT
+  version_date: 20201216T163439
   official_type: http://bioschemas.org/Study
-  full_example: https://github.com/Bioschemas/specifications/tree/master/Study/examples
+  full_example: https://github.com/BioSchemas/specifications/tree/master/study/examples
 mapping:
 - property: about
   expected_types:
@@ -73,7 +83,8 @@ mapping:
     rel tag. That is equivalent to this and may be used interchangeably.
   type: ""
   type_url: ""
-  bsc_description: ""
+  bsc_description: Used to indicate the person(s) or organizations that conducted
+    the Study. Please use creator to indicate the Research project
   marginality: Minimum
   cardinality: ""
   controlled_vocab: ""
@@ -91,6 +102,27 @@ mapping:
   cardinality: ""
   controlled_vocab: ""
   example: ""
+- property: creator
+  expected_types:
+  - Organization
+  - Person
+  description: The creator/author of this CreativeWork. This is the same as the Author
+    property for CreativeWork.
+  type: ""
+  type_url: ""
+  bsc_description: Used to specify the research project that created the study. Please
+    use author to indicate the organisation, or individuals that conducted the study.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+        "creator": {
+            "@type": "Organization",
+            "@id": "https://ror.org/018cxtf62",
+            "name": "Earlham Institute"
+        }
+    }
 - property: dateCreated
   expected_types:
   - Date
@@ -126,6 +158,23 @@ mapping:
   cardinality: ""
   controlled_vocab: ""
   example: ""
+- property: endDate
+  expected_types:
+  - Date
+  - DateTime
+  description: The end date and time of the item (in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO
+    8601 date format</a>).
+  type: ""
+  type_url: ""
+  bsc_description: Used to indicate the end date of the study. (Extension of existing
+    schema.org property)
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+        "endDate": "2020-11-24"
+    }
 - property: identifier
   expected_types:
   - PropertyValue
@@ -146,7 +195,7 @@ mapping:
 - property: isPartOf
   expected_types:
   - CreativeWork
-  - Trip
+  - URL
   description: 'Indicates an item or CreativeWork that this item, or CreativeWork
     (in some sense), is part of. Inverse property: hasPart.'
   type: ""
@@ -158,7 +207,9 @@ mapping:
   example: ""
 - property: keywords
   expected_types:
+  - DefinedTerm
   - Text
+  - URL
   description: Keywords or tags used to describe this content. Multiple entries in
     a keywords list are typically delimited by commas.
   type: ""
@@ -179,21 +230,82 @@ mapping:
   cardinality: ""
   controlled_vocab: ""
   example: ""
+- property: PPEO:hasGrowthChamber
+  expected_types:
+  - URL
+  description: has growth facility
+  type: external
+  type_url: http://purl.org/ppeo/PPEO.owl#hasGrowthChamber
+  bsc_description: The kind of growth facility used in a plant study
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: |-
+    [
+    {
+        "PPEO:hasGrowthChamber": {
+            "PPEO:hasType": "field"
+        }
+    },
+    {
+        "PPEO:hasGrowthChamber": {
+            "PPEO:hasType": "growth chamber"
+        }
+    },
+    {
+        "PPEO:hasGrowthChamber": {
+            "PPEO:hasType": "greenhouse"
+        }
+    },
+    {
+        "PPEO:hasGrowthChamber": {
+            "PPEO:hasType": "nursery"
+        }
+    }
+    ]
+  example: |-
+    {
+        "http://purl.org/ppeo/PPEO.owl#hasGrowthChamber": {
+            "http://purl.org/ppeo/PPEO.owl#hasType": "field"
+        }
+    }
 - property: relatedStudy
   expected_types:
-  - Thing
-  - URL
   - Study
-  description: Other related studies.
+  description: A study that is related to this one.
   type: bioschemas
   type_url: http://bioschemas.org/relatedStudy
   bsc_description: ""
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    {
+      "relatedStudy": {
+        "@type": "Study",
+        "@id": "https://ega-archive.org/studies/EGAS00000000001",
+        "name": "WTCCC case-control study for Bipolar Disorder"
+      }
+    }
+- property: startDate
+  expected_types:
+  - Date
+  - DateTime
+  description: The start date and time of the item (in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO
+    8601 date format</a>).
+  type: ""
+  type_url: ""
+  bsc_description: Used to indicate the start date of the study. (Extension of existing
+    schema.org property)
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+        "startDate": "2019-11-24"
+    }
 - property: studyDomain
   expected_types:
+  - PropertyValue
   - Text
   - URL
   description: Define the domain of the study. For example, the domain could be astrophysics,
@@ -209,8 +321,27 @@ mapping:
   cardinality: ONE
   controlled_vocab: ""
   example: ""
+- property: studyLocation
+  expected_types:
+  - AdministrativeArea
+  - Place
+  description: The location in which the study is taking/took place.
+  type: ""
+  type_url: ""
+  bsc_description: (Reuse of property from MedicalStudy; Expected types extended.)
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+      "studyLocation": {
+        "@type": "Place",
+        "name": "France"
+      }
+    }
 - property: studyProcess
   expected_types:
+  - PropertyValue
   - Text
   - URL
   description: |-
@@ -225,6 +356,23 @@ mapping:
   cardinality: MANY
   controlled_vocab: http://www.ebi.ac.uk/efo/EFO_0001433
   example: ""
+- property: studySubject
+  expected_types:
+  - BioChemEntity
+  - MedicalEntity
+  description: A subject of the study, i.e. one of the medical conditions, therapies,
+    devices, drugs, etc. investigated by the study.
+  type: ""
+  type_url: ""
+  bsc_description: (Reuse of property from MedicalStudy; Expected types extended.)
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: "{\n    \"@type\" : \"BioChemEntity\",\n    \"identifier\":\"Aus29020/annuello*27\",
+    \n    \"name\":\"Aus29020 = CROC_1/AE.SQUARROSA (517)\", \n    \"taxonomicRange\"
+    : {\n        \"@Type\":\"Taxon\", \n        \"parentTaxon\":\"https://www.wikidata.org/entity/Q161098\",
+    \ \n        \"taxonRank\": \"variety\", \n        \"name\":\"subsp. aestivum\"\n
+    \   }\n}"
 - property: url
   expected_types:
   - URL
