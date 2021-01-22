@@ -11,10 +11,16 @@ title: Bioschemas Tutorials
 
 If what we just said is not so clear to you yet, do not worry about it; this training portal is here to help you understand how to use Bioschemas Types and Profiles. Find below the right place to start with.
 - If you are new to schema.org and Bioschemas, please start with [What and why Schema.org](./what_why_schema)
+- If you already know about schema.org and want to get a better understanding on structured data benefits, please go have a look at our [pratical example on schema.org markup](./markup_examples)
 - If you already know about schema.org and want to learn more Bioschemas, please go to [What and why Bioschemas](./what_why_bioschemas)
 - If you already know about schema.org and Bioschemas, and you are ready to add markup to your resource, then go to our _How to_ section, [Starting by the selection of the right profile for your case](./howto/howto_right_profile)
-- [If you want to markup your own resource](./howto/howto_add_markup)
-- [Adding schema.org markup to a GitHub page](./howto/howto_add_github)
+- If you want to add Bioschema structured data to your pages, then go to our _How to_ section and learn how to [add markup to your own resource](./howto/howto_add_markup)
+- If you want to add markup to a GitHub pages, go to our _How to_ section and find information on [marking up on GitHub pages](./howto/howto_add_github)
 
 
 For feedback, questions and comments, please [create an issue](https://github.com/BioSchemas/specifications/issues) and label it `topic:Training Portal`.
+
+***
+&#9664; Previous tutorial: None | Next tutorial: [What and why schema.org](what_why_schema) &#9654; 
+
+***

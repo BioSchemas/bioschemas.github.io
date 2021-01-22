@@ -7,6 +7,11 @@ title: Bioschemas, what and why?
 
 >_In this tutorial you will learn what Bioschemas is, what the added value to schema.org.is and what the main elements in Bioschemas are._ 
 
+***
+&#9664; Previous tutorial: [Markup examples](./markup_examples) | Next tutorial: [How to select the right profile](./howto/howto_right_profile) &#9654; 
+
+***
+
 ## What is Bioschemas?
 
 Bioschemas is a community project built on top of schema.org, aiming to improve interoperability in Life Sciences so resources can better communicate and work together by using a common markup on their websites.
@@ -106,3 +111,8 @@ e.g., For the Event case, endDate should be ONE while organizer could be MANY
     </tr>
   </tbody>
 </table>
+
+***
+&#9664; Previous tutorial: [Markup examples](./markup_examples) | Next tutorial: [How to select the right profile](./howto/howto_right_profile) &#9654; 
+
+***

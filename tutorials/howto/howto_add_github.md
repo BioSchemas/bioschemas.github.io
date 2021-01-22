@@ -7,6 +7,11 @@ title: Adding schema.org to a GitHub Pages site
 
 >This guide will show you how to do add schema.org to GitHub Pages.
 
+***
+&#9664; Previous tutorial: [How to add markup to your own resource](./howto_add_markup) | Next tutorial: None &#9654; 
+
+***
+
 ## Github Pages
 
 [GitHub Pages](https://pages.github.com/) are an excellent platform for creating informative websites. The hosting is (currently) free which is a huge plus; the collaborative tools allow teams (that may be widely distributed, fluctuating, and/or voluntary) to contribute in a well-structured, verifiable, and open manner; and the version control capabilities are a must in any software project. It’s becoming an increasingly popular choice to make websites with. GitHub Pages makes use of the Jekyll templating engine.
@@ -19,7 +24,6 @@ First things first, follow [this guide to setting up Jekyll and hosting it on Gi
 
 In this tutorial we will work with a file structure like below. Something similar to the below should be generated once you generate a new Jekyll site, except for one or two difference. Firstly you can delete/ignore the folder `_posts`, and secondly we will add two folders called `_tutorials`and `_layouts`.
 
-***
 ```html
 ├── 404.html
 ├── Gemfile
@@ -32,7 +36,6 @@ In this tutorial we will work with a file structure like below. Something simila
 ├── about.md
 └── index.md
 ```
-***
 
 <br/>
 Let's create our first tutorial called `awesome-tutorial.md` in the `_tutorials` folder. 
@@ -41,7 +44,6 @@ Let's create our first tutorial called `awesome-tutorial.md` in the `_tutorials`
 
 Open `awesome-tutorial.md` and copy the snippet below into it. Jekyll allows you to put what's called [Front Matter](https://jekyllrb.com/docs/front-matter/) at the top of markdown file in [YAML](http://yaml.org/start.html) syntax. Front Matter contains variables, metadata, and layout configuration options. It must be surrounded by 3-hyphens above and below. Beneath that we can add the mark-down content of the webpage.
 
-***
 ```html
 awesome_tutorial.md
 ---
@@ -73,7 +75,6 @@ This is my tutorial. It's great because
 - It's got schema.org
 - I made it
 ```
-***
 
 <br/>
 
@@ -93,7 +94,6 @@ Let's create a new folder called `_layouts` and have a new empty file called `tu
 
 Open `tutorial.html` and add the following:
 
-***
 ```html
 tutorial.html
 
@@ -109,7 +109,6 @@ tutorial.html
   </body>
 </html>
 ```
-***
 
 <br/>
 This will be the basic layout of on any page that specifies `layout: tutorial` in it's YAML.  
@@ -119,7 +118,6 @@ When loading a page that specifies this layout, Jekyll will render tutorial.html
 To render our schema.org we pass the `schemadotorg` metadata to the `jsonify` function. This will convert our schemadotorg keys and values into one of the schema.org supported data-formats; [JSON-LD](https://json-ld.org/). 
 Before we can test this, we need to install the jsonify function. Open the file called Gemfile located in the root directory, and add the following lines:
 
-***
 ```html
 source "https://rubygems.org"
 gem "jekyll", "~> 3.7.3"
@@ -128,7 +126,6 @@ group :jekyll_plugins do
   gem "jekyll-json-ld"
 end
 ```
-***
 
 <br/>
 
@@ -158,7 +155,6 @@ If anything about your training material changes (add a new author, rename it et
 
 So instead of duplicating information, we should use the metadata to form the view that website users see. Go back to `_layouts/tutorial.html` and add some more template code to render the metadata variables within the HTML.
 
-***
 ```html
 tutorial.html
 
@@ -179,4 +175,8 @@ tutorial.html
   </body>
 </html>
 ```
+
+***
+&#9664; Previous tutorial: [How to add markup to your own resource](./howto_add_markup) | Next tutorial: None &#9654; 
+
 ***

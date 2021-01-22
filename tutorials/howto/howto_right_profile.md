@@ -7,6 +7,11 @@ title: How to select the right profile for your resource
 
 >In this how-to, we will guide you through the necessary steps for you to select a Bioschemas profile that will be later used to mark up to your own resources.
 
+***
+&#9664; Previous tutorial: [What and why bioschemas](../what_why_bioschemas) | Next tutorial: [How to add markup to your own resource](./howto_add_markup) &#9654; 
+
+***
+
 ## Your first encounter with Bioschemas profiles
 
 You can find the availabe Bioschemas profiles at http://bioschemas.org/specifications. There, you will be presented with a list of all the current and stable profiles. You can hover on the profile name to see a quick description. Should you need a more detailed information, just click on the profile name.
@@ -46,3 +51,8 @@ Also knows as data repository, a data catalog commonly aggregates more than one 
 ### Dataset
 
 If your resource provides data and you can easily identify a common entity type for all the data contained in it, you should probably go for a [Dataset](/specifications/Dataset) profile. Let's clarify what we mean by "common type". Let's suppose you have chemical compounds including drugs, proteins and cells. If you see them all as the same thing, chemical compound, you have one [Dataset](/specifications/Dataset), and you have found the right profile for you. However, if you actually distinguish drugs from proteins from cells and so, and (maybe even) tailor the information provided for each case, you have a data catalog and multiple datasets, you should use both, one DataCatalog and multiple [Datasets](/specifications/Dataset).
+
+***
+&#9664; Previous tutorial: [What and why bioschemas](../what_why_bioschemas) | Next tutorial: [How to add markup to your own resource](./howto_add_markup) &#9654; 
+
+***

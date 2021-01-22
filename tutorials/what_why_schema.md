@@ -5,6 +5,11 @@ title: Schema.org, what and why?
 
 # Schema.org, what and why?
 
+***
+&#9664; Previous tutorial: [Getting started](./index) | Next tutorial: [Markup examples](markup_examples) &#9654; 
+
+***
+
 ## What is schema.org?
 [Schema.org](https://schema.org/) is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.
 Structured data can be used to mark up all kinds of items from products to events to recipes.
@@ -32,31 +37,28 @@ You can use the schema.org vocabulary along with [Microdata](http://en.wikipedia
 
 * JSON-LD
 
-***
 ```json
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "SportsTeam",
-  "name": "San Francisco 49ers",
-  "member": {
-    "@type": "OrganizationRole",
-    "member": {
-      "@type": "Person",
-      "name": "Joe Montana"
-    },
-    "startDate": "1979",
-    "endDate": "1992",
-    "roleName": "Quarterback"
-  }
-}
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "SportsTeam",
+      "name": "San Francisco 49ers",
+      "member": {
+        "@type": "OrganizationRole",
+        "member": {
+          "@type": "Person",
+          "name": "Joe Montana"
+        },
+        "startDate": "1979",
+        "endDate": "1992",
+        "roleName": "Quarterback"
+      }
+    }
 </script>
 ```
-***
 
 * Microdata
 
-***
 ```html
 <div itemscope itemtype="http://schema.org/SportsTeam">
   <span itemprop="name">San Francisco 49ers</span>
@@ -71,11 +73,9 @@ You can use the schema.org vocabulary along with [Microdata](http://en.wikipedia
     <span itemprop="roleName">Quarterback</span>
 </div>
 ```
-***
 
 * RDFa
 
-***
 ```html
 <div vocab="http://schema.org/" typeof="SportsTeam">
   <span property="name">San Francisco 49ers</span>
@@ -88,4 +88,8 @@ You can use the schema.org vocabulary along with [Microdata](http://en.wikipedia
     <span property="roleName">Quarterback</span>
 </div>
 ```
+
+***
+&#9664; Previous tutorial: [Getting started](./index) | Next tutorial: [Markup examples](markup_examples) &#9654; 
+
 ***

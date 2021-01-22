@@ -7,6 +7,11 @@ title: How to mark up your own resource with Bioschemas
 
 >In this how-to, we will guide you through the necessary steps in order to get a JSON-LD markup describing your own resource using a Bioschemas profile
 
+***
+&#9664; Previous tutorial: [How to select the right profile](./howto_right_profile) | Next tutorial: [How to add markup to GitHub pages](./howto_add_github) &#9654; 
+
+***
+
 <table>
   <tbody>
     <tr>
@@ -50,3 +55,8 @@ Now, focus on a particular profile, have at hand the [corresponding specificatio
 ## Getting JSON-LD with gimme-my-jsonld
 
 In progress
+
+***
+&#9664; Previous tutorial: [How to select the right profile](./howto_right_profile) | Next tutorial: [How to add markup to GitHub pages](./howto_add_github) &#9654; 
+
+***
