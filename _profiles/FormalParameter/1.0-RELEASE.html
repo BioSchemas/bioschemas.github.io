@@ -35,7 +35,7 @@ spec_info:
     value(s) are consumed/produced by a ComputationalWorkflow<h3>Change Log</h3><p>No
     change from 0.1-DRAFT-2020_07_21</p>
   version: 1.0-RELEASE
-  version_date: 20201122T102938
+  version_date: 20210124T210904
   official_type: https://schema.org/FormalParameter
   full_example: ""
 mapping:
@@ -50,9 +50,12 @@ mapping:
     externally.
   type: ""
   type_url: ""
-  bsc_description: The type of data consumed / produced at the FormalParameter
-  marginality: Minimum
-  cardinality: ONE
+  bsc_description: |-
+    The type of data consumed / produced at the FormalParameter.
+
+    It is strongly recommented that this be specified. If it is not specified, then nothing should be assumed about the type of the FormalParameter.
+  marginality: Recommended
+  cardinality: MANY
   controlled_vocab: http://edamontology.org/data_0006
   example: '"additionalType" : "http://edamontology.org/data_3494"'
 - property: defaultValue
@@ -73,22 +76,29 @@ mapping:
   description: A description of the item.
   type: ""
   type_url: ""
-  bsc_description: The description may include verbatim the Workflow's description
-    of the FormalParameter and its type
+  bsc_description: The description may include verbatim the ComputationalWorkflow's
+    description of the FormalParameter and its type
   marginality: Recommended
   cardinality: ONE
-  controlled_vocab: '"description" : "The sequence to check for Maturity-onset diabetes
-    of the young"'
+  controlled_vocab: ""
   example: '"description" : "The DNA squence to compare against known sequences"'
 - property: encodingFormat
   expected_types:
   - Text
   - URL
-  description: URLs to accepted formats
+  description: |-
+    Media type typically expressed using a MIME format (see IANA site and MDN reference) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).
+
+    In cases where a CreativeWork has several media type representations, encoding can be used to indicate each MediaObject alongside particular encodingFormat information.
+
+    Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.
   type: ""
   type_url: ""
-  bsc_description: ""
-  marginality: Minimum
+  bsc_description: |-
+    URLs to accepted formats.
+
+    It is strongly recommented that this be specified. If it is not specified, then nothing should be assumed about the encoding formats of the FormalParameter.
+  marginality: Recommended
   cardinality: MANY
   controlled_vocab: http://edamontology.org/format_1915
   example: '"encodingFormat" : "http://edamontology.org/format_1929"'
