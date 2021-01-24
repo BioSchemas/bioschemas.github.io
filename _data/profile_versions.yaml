@@ -18,6 +18,12 @@ ChemicalSubstance:
     latest_release: "0.4-RELEASE"
     status: "active"
 
+ComputationalTool:
+    name: "ComputationalTool"
+    latest_publication: "0.5-DRAFT"
+    latest_release:
+    status: "active"
+
 ComputationalWorkflow:
     name: "ComputationalWorkflow"
     latest_publication:
@@ -177,12 +183,6 @@ Taxon:
 TaxonName:
     name: "TaxonName"
     latest_publication: "0.1-DRAFT"
-    latest_release:
-    status: "active"
-
-Tool:
-    name: "Tool"
-    latest_publication: "0.4-DRAFT-2019_07_19"
     latest_release:
     status: "active"
 

@@ -55,6 +55,7 @@ list:
     bsc_ver: 0.3
     comments:
     node: EBI
+    sitemap: https://ega-archive.org/sitemap.xml
 -
     name: EGA Dataset
     highlight: over 5,300 datasets
@@ -65,6 +66,7 @@ list:
     bsc_ver: 0.3
     comments:
     node: EBI
+    sitemap: https://ega-archive.org/sitemap.xml
 -
     name: EGA
     highlight: over 3,700 studies
@@ -75,6 +77,7 @@ list:
     bsc_ver: 0.1
     comments:
     node: EBI
+    sitemap: https://ega-archive.org/sitemap.xml
 -
     name: Isaexplorer
     highlight:
@@ -155,6 +158,7 @@ list:
     comments:
     node: EBI    
     type: DDR    
+    sitemap: https://www.ebi.ac.uk/biosamples/sitemap.xml
 -
     name: Biosamples
     highlight: 10 million+ pages
@@ -166,6 +170,7 @@ list:
     comments:
     node: EBI
     type: DDR
+    sitemap: https://www.ebi.ac.uk/biosamples/sitemap.xml
 -
     name: DataMed
     highlight:
@@ -756,6 +761,7 @@ list:
     bsc_ver: 0.2-DRAFT
     comments:  
     node: IT
+    sitemap: https://disprot.org/sitemap.xml
 -
     name: DisProt
     highlight: 1.6k proteins
@@ -766,6 +772,7 @@ list:
     bsc_ver: 0.11
     comments:  
     node: IT
+    sitemap: https://disprot.org/sitemap.xml
 -
     name: DisProt
     highlight:
@@ -776,6 +783,7 @@ list:
     bsc_ver: 0.3
     comments:  
     node: IT
+    sitemap: https://disprot.org/sitemap.xml
 -
     name: DisProt
     highlight:
@@ -786,6 +794,7 @@ list:
     bsc_ver: 0.3
     comments:  
     node: IT
+    sitemap: https://disprot.org/sitemap.xml
 -
     name: DisProt
     highlight: 3.5k protein regions
@@ -796,6 +805,7 @@ list:
     bsc_ver: 0.5-DRAFT
     comments:  
     node: IT
+    sitemap: https://disprot.org/sitemap.xml
 -
     name: DisProt
     highlight: 3.5k protein regions
@@ -806,6 +816,7 @@ list:
     bsc_ver: 0.1-DRAFT
     comments:  
     node: IT
+    sitemap: https://disprot.org/sitemap.xml
 -
     name: UniProt
     highlight:
@@ -1006,4 +1017,58 @@ list:
   bsc_ver: 0.5-RELEASE
   comments:
   node: DE
+  sitemap: https://massbank.eu/MassBank/sitemapindex.xml
+-
+  name: iPPI-DB
+  highlight: 2,035 compounds
+  example_URL: https://ippidb.pasteur.fr/compounds/1103#compound
+  resource_URL: https://ippidb.pasteur.fr/
+  schema_org: MolecularEntity
+  bsc_profile: MolecularEntity
+  bsc_ver: 0.5
+  comments: Inhibitors of Protein-Protein Interaction Database
+  node: FR
+  sitemap: https://ippidb.pasteur.fr/sitemap.xml
+-
+  name: iPPI-DB
+  highlight:
+  example_URL: https://ippidb.pasteur.fr/
+  resource_URL: https://ippidb.pasteur.fr/
+  schema_org: Dataset
+  bsc_profile: Dataset
+  bsc_ver: 0.3
+  comments: Inhibitors of Protein-Protein Interaction Database
+  node: FR
+  sitemap: https://ippidb.pasteur.fr/sitemap.xml
+-
+  name: iPPI-DB
+  highlight:
+  example_URL: https://ippidb.pasteur.fr/
+  resource_URL: https://ippidb.pasteur.fr/
+  schema_org: DataCatalog
+  bsc_profile: DataCatalog
+  bsc_ver: 0.3
+  comments: Inhibitors of Protein-Protein Interaction Database
+  node: FR
+  sitemap: https://ippidb.pasteur.fr/sitemap.xml
+-
+  name: COVID-19 Data Portal
+  highlight: Bringing together relevant datasets related to COVID-19 for sharing and analysis in an effort to accelerate coronavirus research.
+  example_URL: https://www.covid19dataportal.org/
+  resource_URL: https://www.covid19dataportal.org/
+  schema_org: DataCatalog
+  bsc_profile: DataCatalog
+  bsc_ver: 0.3
+  comments:
+  node: EBI
+-
+  name: COVID-19 Data Portal
+  highlight: Bringing together relevant datasets related to COVID-19 for sharing and analysis in an effort to accelerate coronavirus research.
+  example_URL: https://www.covid19dataportal.org/
+  resource_URL: https://www.covid19dataportal.org/
+  schema_org: Dataset
+  bsc_profile: Dataset
+  bsc_ver: 0.3
+  comments:
+  node: EBI
 ---
