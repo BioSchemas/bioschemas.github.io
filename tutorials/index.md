@@ -18,7 +18,7 @@ If what we just said is not so clear to you yet, do not worry about it; this tra
 - If you want to add markup to a GitHub pages, go to our _How to_ section and find information on [marking up on GitHub pages](./howto/howto_add_github)
 
 
-For feedback, questions and comments, please [create an issue](https://github.com/BioSchemas/specifications/issues) and label it `topic:Training Portal`.
+For feedback, questions and comments, please [create an issue](https://github.com/BioSchemas/specifications/labels/topic%3ATrainingPortal) and label it `topic:Training Portal`.
 
 ***
 &#9664; Previous tutorial: None | Next tutorial: [What and why schema.org](what_why_schema) &#9654; 
