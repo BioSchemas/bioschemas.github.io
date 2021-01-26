@@ -16,13 +16,13 @@ title: Adding schema.org to a GitHub Pages site
 
 [GitHub Pages](https://pages.github.com/) are an excellent platform for creating informative websites. The hosting is (currently) free which is a huge plus; the collaborative tools allow teams (that may be widely distributed, fluctuating, and/or voluntary) to contribute in a well-structured, verifiable, and open manner; and the version control capabilities are a must in any software project. It’s becoming an increasingly popular choice to make websites with. GitHub Pages makes use of the Jekyll templating engine.
 
-In this tutorial we will set up a new Jekyll site to share our training materials with, and mark-up them using schema.org. 
+In this tutorial we will set up a new Jekyll site to share our training materials with, and mark-up them using schema.org.
 
 ## Setting up a new Github Page site
 
 First things first, follow [this guide to setting up Jekyll and hosting it on GitHub pages](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/). Once you've got the correct environment setup, you can then create a new app by running `jekyll new my-tutorials`.
 
-In this tutorial we will work with a file structure like below. Something similar to the below should be generated once you generate a new Jekyll site, except for one or two difference. Firstly you can delete/ignore the folder `_posts`, and secondly we will add two folders called `_tutorials`and `_layouts`.
+In this tutorial we will work with a file structure like below. Something similar to the below should be generated once you generate a new Jekyll site, except for one or two difference. Firstly you can delete/ignore the folder `_posts`, and secondly we will add two folders called `_tutorials` and `_layouts`.
 
 ```html
 ├── 404.html
@@ -38,7 +38,7 @@ In this tutorial we will work with a file structure like below. Something simila
 ```
 
 <br/>
-Let's create our first tutorial called `awesome-tutorial.md` in the `_tutorials` folder. 
+Let's create our first tutorial called `awesome-tutorial.md` in the `_tutorials` folder.
 
 ## Adding metadata to your pages
 
@@ -84,9 +84,9 @@ The first two properties specify which vocabulary we are using - the [CreativeWo
 
 You will use a different schema type depending on which schema.org vocabulary you are describing (e.g. `"@type": "Event"` for events, `"@type": "Website"` to describe what your website is, or `"@type": "Recipe"` to describe a potato salad).
 
-Lines 6-18 is a list of key-value pairs. Each key is a property of the CreativeWork vocabulary (e.g. Keywords, Description, Name) along with its value (e.g. ["schemaorg"], "In order to establish...", Adding schema.org..."). The full list of properties, the expected types, and examples on how to use them are all available on vocabulary pages in http://schema.org/CreativeWork. 
+Lines 6-18 is a list of key-value pairs. Each key is a property of the CreativeWork vocabulary (e.g. Keywords, Description, Name) along with its value (e.g. ["schemaorg"], "In order to establish...", Adding schema.org..."). The full list of properties, the expected types, and examples on how to use them are all available on vocabulary pages in http://schema.org/CreativeWork.
 
-We’ve also added `layout: tutorial`to our YAML. This tells Jekyll (the underlying framework) that this page should be rendered as part of a HTML layout template called _tutorial_.
+We’ve also added `layout: tutorial` to our YAML. This tells Jekyll (the underlying framework) that this page should be rendered as part of a HTML layout template called _tutorial_.
 
 ## Rendering your Metadata
 
@@ -115,7 +115,7 @@ This will be the basic layout of on any page that specifies `layout: tutorial` i
 
 When loading a page that specifies this layout, Jekyll will render tutorial.html and inject the contents (Line 21-27) where the `{{ content }}` tag is. The metadata defined in Lines 2-18 can all be access by their keys.
 
-To render our schema.org we pass the `schemadotorg` metadata to the `jsonify` function. This will convert our schemadotorg keys and values into one of the schema.org supported data-formats; [JSON-LD](https://json-ld.org/). 
+To render our schema.org we pass the `schemadotorg` metadata to the `jsonify` function. This will convert our schemadotorg keys and values into one of the schema.org supported data-formats; [JSON-LD](https://json-ld.org/).
 Before we can test this, we need to install the jsonify function. Open the file called Gemfile located in the root directory, and add the following lines:
 
 ```html
