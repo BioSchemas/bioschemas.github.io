@@ -33,4 +33,5 @@ members:
     - AurelienLuciani
     - MichaelCrusoe
     - RobertoPreste
+    - AlbanGaignard
 ---
