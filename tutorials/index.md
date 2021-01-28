@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Bioschemas Tutorials
+
+redirect_from: 
+- "tutorials"
 ---
 
 # Getting Started with Bioschemas
