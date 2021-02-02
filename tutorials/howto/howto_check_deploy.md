@@ -16,7 +16,9 @@ title: Check Deployed Markup
 
 There are a few different ways to check that markup is being included on your webpage; regardless of whether the markup is rendered server side or injected client-side through Javascript. One of the simplest is to use your browser to inspect the rendered page content.
 
-In Firefox right click on the page and select ‘Inspect Element’, in Chrome it is the ‘Inspect’ option. You can then search within the generated HTML to look for ‘schema.org’.
+In Firefox right click on the page and select ‘Inspect Element’, in Chrome it is the ‘Inspect’ option. You can then search within the generated HTML to look for ‘schema.org’. This is depicted in the screenshot below for the DisProt protein DP00003.
+
+![Inspecting Markup using Chrome](../images/inspect-markup.png)
 
 ## Discovering what markup external services can retrieve
 
