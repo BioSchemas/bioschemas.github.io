@@ -43,17 +43,21 @@ The screenshot shows the tool results for the DisProt protein DP00003. Click [he
 This is a web deployment of a tool developed by the Heriot-Watt team that is a dedicated Bioschemas scraper. It is able to deal with a wider range of Single Page Application engines than the Google tool, but does not offer much in the way of a user interface. You need to parameterise your call to the `getRDF` method by supplying the `url` and the output type option; currently we support `jsonld` and `turtle`.
 
 For your example, to retrieve the content from the DisProt page for DP00003 we would use
-`http://lxbisel.macs.hw.ac.uk:8080/scraper/getRDF?url=https://disprot.org/DP00003&output=jsonld`
+[`http://lxbisel.macs.hw.ac.uk:8080/scraper/getRDF?url=https://disprot.org/DP00003&output=jsonld`](http://lxbisel.macs.hw.ac.uk:8080/scraper/getRDF?url=https://disprot.org/DP00003&output=jsonld)
 
 ### Bioschemas Validator (Experimental)
 
-http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/
+[http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/](http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/)
 
-This service builds on the BMUSE scraper and provides a validation interface against the Bioschemas profiles. (Note that since this reuses the BMUSE web scraper it currently pulls in the extra content which means that the page will not validate.)
+This service builds on the BMUSE scraper and provides a validation interface against the Bioschemas profiles.
 
 Once you have entered in your URL and loaded the content from your web page, you should select the profile that you want to validate against. The tool also needs to know which node from those detected should be validated against the profile as well as the marginality level that you want to validate at (minimal, recommended, optional).
 
 The error report is a bit terse but it will give you a green or red bar to indicate success or failure.
+
+The screenshot below shows the page for validating the DisProt protein DP00003 against the Gene profile at the minimal level. Click [here](http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/?url=https://disprot.org/DP00003) to try it yourself.
+
+![BioschemasValidator showing DisProt:DP00003](../images/BioschemasValidator.png)
 
 ***
 &#9664; Previous tutorial: [Hdding schema.org to a GitHub Pages site](./howto_add_github) | Next tutorial: None &#9654;
