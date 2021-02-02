@@ -2,7 +2,7 @@
 layout: default
 title: Bioschemas Tutorials
 
-redirect_from: 
+redirect_from:
 - "tutorials"
 ---
 
@@ -19,6 +19,7 @@ If what we just said is not so clear to you yet, do not worry about it; this tra
 - If you already know about Schema.org and Bioschemas, and you are ready to add markup to your resource, then go to our _How to_ section, [Starting by the selection of the right profile for your case](./howto/howto_right_profile)
 - If you want to add Bioschema structured data to your pages, then go to our _How to_ section and learn how to [add markup to your own resource](./howto/howto_add_markup)
 - If you want to add markup to a GitHub pages, go to our _How to_ section and find information on [marking up on GitHub pages](./howto/howto_add_github)
+- To check your that markup is deployed and can be retrieved by others, see our guide on [checking your deployed markup](./howto/howto_check_deploy)
 
 
 For feedback, questions and comments, please [create an issue](https://github.com/Bioschemas/specifications/labels/topic%3ATrainingPortal) and label it `topic:Training Portal`.
