@@ -22,19 +22,23 @@ In Firefox right click on the page and select ‘Inspect Element’, in Chrome i
 
 ## Discovering what markup external services can retrieve
 
-Once you have verified that the content is rendered on the page, you can test what external services are able to pick up. Some of these services simply retrieve the markup while others will validate it against a defined profile. 
+Once you have verified that the content is rendered on the page, you can test what external services are able to pick up. Some of these services simply retrieve the markup while others will validate it against a defined profile.
 
 Note that since Bioschemas is an evolving extension of Schema.org, not all types and properties will be known to all services. Additionally, only Bioschemas specific services will know about the Bioscheams profiles; proprietary services will validate against their own internal views of Schema.org.
 
 ### Google Structured Data Testing Tool
 
-https://search.google.com/structured-data/testing-tool
+[https://search.google.com/structured-data/testing-tool](https://search.google.com/structured-data/testing-tool)
 
 This site gives a nice hierarchical rendering of the discovered content but doesn’t always detect markup from Single Page Application engines. The site knows about the core Schema.org vocabulary and the properties that Google use within certain types for their search results. It does not know about the Bioschemas proposals for Schema.org types and properties or our profiles. As a result, you will get warnings and errors for using Bioschemas types.
 
+The screenshot shows the tool results for the DisProt protein DP00003. Click [here](https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fdisprot.org%2FDP00003) to see the results.
+
+![Google Structured Data Testing Tool showing DisProt:DP00003](../images/google_struct.png)
+
 ### Bioschemas Markup  Scraper and Extractor (BMUSE)
 
-http://lxbisel.macs.hw.ac.uk:8080/scraper/
+[http://lxbisel.macs.hw.ac.uk:8080/scraper/](http://lxbisel.macs.hw.ac.uk:8080/scraper/)
 
 This is a web deployment of a tool developed by the Heriot-Watt team that is a dedicated Bioschemas scraper. It is able to deal with a wider range of Single Page Application engines than the Google tool, but does not offer much in the way of a user interface. You need to parameterise your call to the `getRDF` method by supplying the `url` and the output type option; currently we support `jsonld` and `turtle`.
 
