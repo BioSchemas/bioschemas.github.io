@@ -1,0 +1,611 @@
+---
+redirect_from:
+- "/profiles/ComputationalTool/0.4-DRAFT-2019_07_19/"
+- "/profiles/Tool/0.4-DRAFT-2019_07_19/"
+name: Tool
+
+previous_version: 0.3-DRAFT-2019_07_18
+previous_release:
+
+status: revision
+spec_type: Profile
+group: tools
+use_cases_url: ''
+cross_walk_url: https://docs.google.com/spreadsheets/d/1kogQ4tLMbhnM-B8IKtFNmMenRgqopi76wGKCCyAqUXM
+gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Tool
+live_deploy: /liveDeploys/
+
+parent_type: SoftwareApplication
+hierarchy:
+- Thing
+- CreativeWork
+- SoftwareApplication
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: Tool
+  subtitle: Bioschemas specification for describing a SoftwareApplication in the Life
+    Sciences
+  description: The Life Science Tools specification provides a way to describe bioscience
+    tools and software on the World Wide Web. It defines a set of metadata and vocabularies,
+    built on top of existing technologies and standards, that can be used to represent
+    such tools in Web pages and applications. The goal of the specification is to
+    make it easier to discover, exchange and integrate information about life science
+    tools across the Internet.
+  version: 0.4-DRAFT-2019_07_19
+  version_date: 20190719T132121
+  official_type: http://schema.org/SoftwareApplication
+  full_example: https://github.com/Bioschemas/specifications/tree/master/Tool/examples/
+mapping:
+- property: additionalType
+  expected_types:
+  - Text
+  description: An additional type for the item, typically used for adding more specific
+    types from external vocabularies in microdata syntax. This is a relationship between
+    something and a class that the thing is in. In RDFa syntax, it is better to use
+    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
+    tools may have only weaker understanding of extra types, in particular those defined
+    externally.
+  type: ""
+  type_url: ""
+  bsc_description: |-
+    Type of tool e.g. Command-line tool, Web application etc.
+    **Note:** Bioschemas have changed [URL](http://schema.org/URL) to [Text](http://schema.org/Text) in the Expected Types. This will be reverted once Bio.Tools provides stable URIs for tool types.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: Please use terms from the 'Tool type' table in the [biotools documentation](https://biotools.readthedocs.io/en/latest/curators_guide.html#tool-type)
+  example: "{\n  \"@context\": \"http://schema.org\",\n  \"@id\": \"https://example.com/tool\",\n
+    \ \"@type\": \"SoftwareApplication\",\n  \"additionalType\": [\n    \"Command-line
+    tool\",\n    \"Web application\",\n    \"Web API\"\n  ]\n}\n  "
+- property: applicationCategory
+  expected_types:
+  - Text
+  description: Type of software application, e.g. 'Game, Multimedia'.
+  type: ""
+  type_url: ""
+  bsc_description: The high-level category in the global context, **please always
+    use "Computational science tool"**.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+      "@context": "http://schema.org",
+      "@type": "SoftwareApplication",
+      "applicationCategory": "Computational science tool"
+    }
+- property: applicationSubCategory
+  expected_types:
+  - Text
+  description: Subcategory of the application, e.g. 'Arcade Game'.
+  type: ""
+  type_url: ""
+  bsc_description: Use an [EDAM:Topic](http://edamontology.org/topic_0003) to describe
+    the category of application
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: '[EDAM:Topic](http://edamontology.org/topic_0003)'
+  example: "{\n  \"@context\": \"http://schema.org\",\n  \"@type\": \"SoftwareApplication\",\n
+    \ \"applicationCategory\": \"Computational science tool\",\n  \"applicationSubCategory\":
+    [\n    \"Sequence analysis\"\n  ]\n} "
+- property: applicationSuite
+  expected_types:
+  - Text
+  description: The name of the application suite to which the application belongs
+    (e.g. Excel belongs to Office).
+  type: ""
+  type_url: ""
+  bsc_description: A suite of tools, to which the tool belongs.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: author
+  expected_types:
+  - Organization
+  - Person
+  description: The author of this content or rating. Please note that author is special
+    in that HTML 5 provides a special mechanism for indicating authorship via the
+    rel tag. That is equivalent to this and may be used interchangeably.
+  type: ""
+  type_url: ""
+  bsc_description: TODO
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: citation
+  expected_types:
+  - CreativeWork
+  - Text
+  description: A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
+  type: ""
+  type_url: ""
+  bsc_description: Publication about this tool.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |+
+    {
+      "@context": "http://schema.org",
+      "@type": "SoftwareApplication",
+      "citation": "https://doi.org/10.1038/nbt.3109"
+    }
+
+- property: codeRepository
+  expected_types:
+  - URL
+  description: Link to the repository where the un-compiled, human readable code and
+    related code is located (SVN, github, CodePlex).
+  type: ""
+  type_url: ""
+  bsc_description: Link to the source code repository of the tool.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |
+    {
+      "@context": "http://schema.org",
+      "@type": ["SoftwareApplication", "SoftwareSourceCode"],
+      "codeRepository": "https://github.com/compomics/peptide-shaker"
+    }
+- property: contributor
+  expected_types:
+  - Organization
+  - Person
+  description: A secondary contributor to the CreativeWork or Event.
+  type: ""
+  type_url: ""
+  bsc_description: TODO
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: A short description of the tool.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+       "@context": "http://schema.org",  "@type": "SoftwareApplication",
+      "description": "PeptideShaker is a search engine independent platform for interpretation of proteomics identification results from multiple search engines, currently supporting X!Tandem, MS-GF+, MS Amanda, OMSSA, MyriMatch, Comet, Tide, Mascot, Andromeda and mzIdentML. By combining the results from multiple search engines, while re-calculating PTM localization scores and redoing the protein inference, PeptideShaker attempts to give you the best possible understanding of your proteomics data!"
+    }
+- property: discussionUrl
+  expected_types:
+  - URL
+  description: A link to the page containing the comments of the CreativeWork.
+  type: ""
+  type_url: ""
+  bsc_description: TODO
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: downloadUrl
+  expected_types:
+  - URL
+  description: If the file can be downloaded, URL to download the binary.
+  type: ""
+  type_url: ""
+  bsc_description: A link to the downloadable(s).
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+       "@context": "http://schema.org",  "@type": "SoftwareApplication",
+      "downloadURL": "https://github.com/sacdallago/cellmap"
+    }
+- property: featureList
+  expected_types:
+  - URL
+  description: Features or modules provided by this application (and possibly required
+    by other applications).
+  type: ""
+  type_url: ""
+  bsc_description: |-
+    Functionality provided by the tool.
+    **Note:** Bioschemas have removed [Text](http://schema.org/Text) from the Expected Types
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: '[EDAM:Operation](http://edamontology.org/operation_0004)'
+  example: |-
+    {
+      "@context": "http://schema.org",
+      "@type": "SoftwareApplication",
+      "featureList": ["http://edamontology.org/operation_3645", "http://edamontology.org/operation_3649"]
+    }
+- property: funder
+  expected_types:
+  - Organization
+  - Person
+  description: A person or organization that supports (sponsors) something through
+    some kind of financial contribution.
+  type: ""
+  type_url: ""
+  bsc_description: TODO
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: hasPart
+  expected_types:
+  - CreativeWork
+  description: |-
+    Indicates a CreativeWork that is (in some sense) a part of this CreativeWork.
+    Inverse property: isPartOf.
+  type: ""
+  type_url: ""
+  bsc_description: TODO
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: TODO
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+      "@context": "http://schema.org",
+      "@type": "SoftwareApplication",
+      "@id": "https://bio.tools/peptideshaker",
+      "identifier": "https://bio.tools/peptideshaker"
+    }
+- property: inputData
+  expected_types:
+  - URL
+  description: ""
+  type: external
+  type_url: 'http://semanticscience.org/resource/SIO_000230TODO: Type URL could also
+    be http://edamontology.org/has_input, after resolving is fixed there, in due course.'
+  bsc_description: |
+    The input data of the tool. Must be one or more of the [EDAM:Data](http://edamontology.org/data_0006) concept URIs.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: '[EDAM:Data](http://edamontology.org/data_0006)'
+  example: |-
+    {
+      "@context": "http://schema.org",
+      "@type": "SoftwareApplication",
+      "inputData": "http://edamontology.org/data_0945"
+    }
+- property: inputFormat
+  expected_types:
+  - URL
+  description: ""
+  type: external
+  type_url: Could be a composition of http://edamontology/has_input http://edamontology.org/has_format
+  bsc_description: |
+    A supported format of the input data. Must be one or more of the [EDAM:Format](http://edamontology.org/format_1915) concept URIs.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: '[EDAM:Data](http://edamontology.org/format_1915)'
+  example: |-
+    {
+      "@context": "http://schema.org",
+      "@type": "SoftwareApplication",
+      "inputFormat": "http://edamontology.org/format_3247"
+    }
+- property: isAccessibleForFree
+  expected_types:
+  - Boolean
+  description: A flag to signal that the item, event, or place is accessible for free.
+    Supersedes free.
+  type: ""
+  type_url: ""
+  bsc_description: A flag to signal that the tool or the service are available to
+    be used for free.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+      "@context": "http://schema.org",
+      "@type": "SoftwareApplication",
+      "isAccessibleForFree": "True"
+    }
+- property: isBasedOn
+  expected_types:
+  - CreativeWork
+  - Product
+  - URL
+  description: A resource that was used in the creation of this resource. This term
+    can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+    Supersedes isBasedOnUrl.
+  type: ""
+  type_url: ""
+  bsc_description: A tool or another work which this tool is based on, or is an extension,
+    distribution, or deployment of.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: isPartOf
+  expected_types:
+  - CreativeWork
+  description: |-
+    Indicates a CreativeWork that this CreativeWork is (in some sense) part of.
+    Inverse property: hasPart.
+  type: ""
+  type_url: ""
+  bsc_description: A collection, other than a suite of tools, to which the tool belongs.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: keywords
+  expected_types:
+  - Text
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  type: ""
+  type_url: ""
+  bsc_description: Additional keywords or tags important for this tool. Multiple entries
+    are delimited by commas.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '{ "@context": "http://schema.org", "@type": "SoftwareApplication", "keywords":
+    "Biology, chemistry, medicine" }'
+- property: license
+  expected_types:
+  - CreativeWork
+  - URL
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  type: ""
+  type_url: ""
+  bsc_description: The license of a software, curated dataset, etc.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: Use [SPDX list of licenses](https://spdx.org/licenses/) in form
+    https://spdx.org/licenses/<identifier>
+  example: |-
+    Example with standard license:
+
+    {
+      "@context": "http://schema.org",
+      "@type": "SoftwareApplication",
+      "license": "https://spdx.org/licenses/Apache-2.0"
+    }
+
+
+    Example with "custom" (i.e. made-up) license:
+
+    {
+      "@context": "http://schema.org",
+      "@type": "SoftwareApplication",
+      "license": {
+        "@type": "Comment",
+        "text": "This software is free for everybody, unless kittens are hurt."
+      }
+    }
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: Name of the tool.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+       "@context": "http://schema.org",  "@type": "SoftwareApplication",
+      "name": "PeptideShaker"
+    }
+- property: operatingSystem
+  expected_types:
+  - Text
+  description: Operating systems supported (Windows 7, OSX 10.6, Android 1.6).
+  type: ""
+  type_url: ""
+  bsc_description: Operating systems on which the tool can be used (without additional
+    wrapping).
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Please use terms from the 'Operating systems' table in the [biotools
+    documentation](https://biotools.readthedocs.io/en/latest/curators_guide.html#operating-system)
+  example: |-
+    {
+      "@context": "http://schema.org",
+      "@type": "SoftwareApplication",
+      "operatingSystem": ["Linux", "Windows", "Mac"]
+    }
+- property: outputData
+  expected_types:
+  - URL
+  description: ""
+  type: external
+  type_url: 'http://semanticscience.org/resource/SIO_000229TODO: Type URL could also
+    be http://edamontology.org/has_output, after resolving is fixed there, in due
+    course.'
+  bsc_description: The output data of the tool. Must be one or more of the [EDAM:Data](http://edamontology.org/data_0006)
+    concept URIs.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: '[EDAM:Data](http://edamontology.org/data_0006)'
+  example: |-
+    {
+      "@context": "http://schema.org",
+      "@type": "SoftwareApplication",
+      "outputData": "http://edamontology.org/data_0945"
+    }
+- property: outputFormat
+  expected_types:
+  - URL
+  description: ""
+  type: external
+  type_url: Could be a composition of http://edamontology/has_output http://edamontology.org/has_format
+  bsc_description: |
+    A supported format of the output data. Must be one or more of the [EDAM:Format](http://edamontology.org/format_1915) concept URIs.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: '[EDAM:Data](http://edamontology.org/format_1915)'
+  example: |-
+    {
+      "@context": "http://schema.org",
+      "@type": "SoftwareApplication",
+      "outputFormat": ["http://edamontology.org/format_3655", "http://edamontology.org/format_3247", "http://edamontology.org/format_3475"]
+    }
+- property: programmingLanguage
+  expected_types:
+  - ComputerLanguage
+  - Text
+  description: The computer programming language.
+  type: ""
+  type_url: ""
+  bsc_description: The main programming language(s) used to build or execute the tool.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Please use terms from the 'Programming language' table in the
+    [Bio.Tools documentation](https://biotools.readthedocs.io/en/latest/curators_guide.html#programming-language)
+  example: |
+    {
+      "@context": "http://schema.org",
+      "@type": ["SoftwareApplication", "SoftwareSourceCode"],
+      "programmingLanguage": "Java"
+    }
+- property: provider
+  expected_types:
+  - Organization
+  description: The service provider, service operator, or service performer; the goods
+    producer. Another party (a seller) may offer those services or goods on behalf
+    of the provider. A provider may also serve as the seller. Supersedes carrier.
+  type: ""
+  type_url: ""
+  bsc_description: |-
+    The provider organization of a web application, database portal, web service, etc.
+    **Note:** Bioschemas have removed [Person](http://schema.org/Person) from the Expected Types.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+      "@context": "http://schema.org",
+      "@type": "SoftwareApplication",
+      "provider": {
+        "@type": "Organization",
+        "name": "Bioinfra.Prot",
+        "url": "http://www.ruhr-uni-bochum.de/mpc/medical_bioinformatics/bioinfraprot/"
+      }
+    }
+- property: softwareAddOn
+  expected_types:
+  - SoftwareApplication
+  description: Additional content for a software application.
+  type: ""
+  type_url: ""
+  bsc_description: Additional sub-tools (add-ons, plug-ins, tools in a suite, etc.)
+    that are included in the tool or workflow.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: softwareHelp
+  expected_types:
+  - CreativeWork
+  description: Software application help.
+  type: ""
+  type_url: ""
+  bsc_description: A documentation of the tool.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+       "@context": "http://schema.org",  "@type": "SoftwareApplication",
+      "softwareHelp": "https://biotools.readthedocs.io/en/latest/"
+    }
+- property: softwareVersion
+  expected_types:
+  - Text
+  description: Version of the software instance.
+  type: ""
+  type_url: ""
+  bsc_description: Version(s) of the tool, which this information is valid for. Can
+    also be a comma-delimited list and include hyphen-separated ranges of versions.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+       "@context": "http://schema.org",  "@type": "SoftwareApplication",
+      "softwareVersion": "1.11, 1.12 - 1.13.6"
+    }
+- property: thumbnailUrl
+  expected_types:
+  - URL
+  description: A thumbnail image relevant to the Thing.
+  type: ""
+  type_url: ""
+  bsc_description: A small image representing the tool, such as an icon.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+      "@context": "http://schema.org",
+      "@type": "SoftwareApplication",
+      "thumbnailUrl": "https://compomics.github.io/favicon.ico"
+    }
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: Homepage of the tool.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+       "@context": "http://schema.org",  "@type": "SoftwareApplication",
+      "url": "http://compomics.github.io/projects/peptide-shaker.html"
+    }
+
+
+---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

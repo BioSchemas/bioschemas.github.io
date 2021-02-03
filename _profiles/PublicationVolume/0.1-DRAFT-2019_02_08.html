@@ -1,0 +1,227 @@
+---
+name: PublicationVolume
+
+previous_version: '0.1-DRAFT-2019_01_31'
+previous_release: 
+
+status: revision
+spec_type: Profile
+group: biotea2bioschemas
+use_cases_url: /useCases/PublicationVolume/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1ecj0bzyRO3tSTyHrKtDGfBwC5bIhgRCmv3yR8ylR_G4
+gh_tasks: https://github.com/BioSchemas/specifications/labels/profile%3A%20PublicationVolume
+live_deploy: ''
+
+
+parent_type: PublicationVolume
+hierarchy:
+- Thing
+- CreativeWork
+- PublicationVolume
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: PublicationVolume
+  subtitle: Bioschemas profile, based on Biotea model, describing a PublicationVolume
+    in Life Sciences.
+  description: A PublicationVolume is a collection of publication issues, or scholarly
+    articles, or possibly, although no commonly, any mix from those mentioned. It
+    is commonly part of a Journal.
+  version: 0.1-DRAFT-2019_02_08
+  version_date: 20190208T104001
+  official_type: schema:PublicationVolume
+  full_example: pending
+mapping:
+- property: about
+  expected_types:
+  - Thing
+  description: |-
+    The subject matter of the content.
+     Inverse property: subjectOf.
+  type: ""
+  type_url: ""
+  bsc_description: Describes what this volume is about.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: editor
+  expected_types:
+  - Person
+  description: Specifies the Person who edited the CreativeWork.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: hasPart
+  expected_types:
+  - PublicationIssue
+  - ScholarlyArticle
+  description: |-
+    Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).
+     Inverse property: isPartOf.
+  type: ""
+  type_url: ""
+  bsc_description: A PublicationVolume has part PublicationIssue (a.k.a. supplements)
+    or ScholaryArticle. We recommend to include at least the highest 'hasPart' level,
+    i.e., PublicationIssue. It is also possible to use 'hasPart' to link as well directly
+    to ScholarlyArticle, making it easier to find articles in this volume.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: Volumes in a journal are commonly identified by a number thus not
+    unique nor global. We recommend to use the URL as identifier whenever possible.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: inLanguage
+  expected_types:
+  - Language
+  - Text
+  description: The language of the content or performance or used in an action. Please
+    use one of the language codes from the IETF BCP 47 standard. See also availableLanguage.
+    Supersedes language.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: isPartOf
+  expected_types:
+  - Journal
+  description: |-
+    Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.
+     Inverse property: hasPart.
+  type: ""
+  type_url: ""
+  bsc_description: A PublicationVolume is part of a Journal.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: keywords
+  expected_types:
+  - Text
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: pageEnd
+  expected_types:
+  - Integer
+  - Text
+  description: The page on which the work ends; for example "138" or "xvi".
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: pageStart
+  expected_types:
+  - Integer
+  - Text
+  description: The page on which the work starts; for example "135" or "xiii".
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: pagination
+  expected_types:
+  - Text
+  description: Any description of pages that is not separated into pageStart and pageEnd;
+    for example, "1-6, 9, 55" or "10-12, 46-49".
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: sameAs
+  expected_types:
+  - URL
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  type: ""
+  type_url: ""
+  bsc_description: Any other URL linking to this volume.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: Oficial URL.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: volumeNumber
+  expected_types:
+  - Integer
+  - Text
+  description: Identifies the volume of publication or multi-part work; for example,
+    "iii" or "2".
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

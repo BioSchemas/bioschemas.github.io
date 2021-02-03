@@ -8,7 +8,7 @@ active: true
 type: biological
 description: Specification for protein annotation profile
 lead: [MariaMartin]
-issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20proteinannotations
+issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20proteinannotations
 folder: https://drive.google.com/drive/folders/0B0fE3oOZIq44c2dqVVRkaVZ6X2M
 
 # Progress status

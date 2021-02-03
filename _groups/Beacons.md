@@ -8,7 +8,7 @@ type: generic
 description: Specification for Beacon Type
 lead: [SerenaScollen, AudaldLloret]
 email: enquiries@bioschemas.org
-issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Beacon
+issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Beacon
 folder: https://drive.google.com/drive/folders/0BwpCuN9mloG8WTl6X3hkeFIwems
 
 # Page attributes
@@ -20,10 +20,6 @@ objectives:
   ]
 
 specifications:
-  [
-    'Beacon'
-  ]
-draft_specifications:
   [
     'Beacon'
   ]

@@ -1,0 +1,433 @@
+---
+redirect_from:
+- "devSpecs/Protein/specification"
+- "devSpecs/Protein/specification/"
+- "/devSpecs/Protein/"
+- "/specifications/Protein"
+- "/specifications/drafts/Protein"
+- "/profiles/Protein/"
+
+name: Protein
+
+previous_version: 0.10-DRAFT-2020_04_02
+previous_release: 0.6-RELEASE-2018_11_10
+
+
+status: release # Change to revision if you are working on an update
+spec_type: Profile
+group: proteins
+use_cases_url: /useCases/Protein/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1FgZIcvUqPNSjAivMOopEPP1cD8TJ8ofG7A51MdHhw8s/edit#gid=1483018794
+gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Protein
+live_deploy: /liveDeploys/
+
+parent_type: Protein
+hierarchy:
+- Thing
+- BioChemEntity
+- Protein
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: Protein
+  subtitle: Bioschemas profile describing a Protein in Life Sciences.
+  description: 'This Protein profile specification presents the most common properties
+    used for a Protein plus examples on how to use them.
+    <h4>Summary of Changes</h4>
+    Changes since previous release of the Protein Profile:
+    <ul>
+      <li>No changes at Minimum level</li>
+      <li>Various changes to properties at the Recommended level
+        <ul>
+          <li>some changes to the expected types</li>
+          <li>isEncodedBy renamed to isEncodedByBioChemEntity and types changed</li>
+          <li>image and isPartOfBioChemEntity demoted to optional</li>
+        </ul>
+      </li>
+      <li>Various changes at Optional level, several properties renamed. Removed additionalProperty and additionalType properties.</li>
+    </ul>
+    No Changes introduced since draft 0.10-DRAFT-2020_04_02'
+  version: 0.11-RELEASE
+  version_date: 20200407T140256
+  official_type: https://bioschemas.org/schema/Protein.html
+  full_example: ""
+mapping:
+- property: alternateName
+  expected_types:
+  - Text
+  description: An alias for the item.
+  type: ""
+  type_url: ""
+  bsc_description: Use it for alternate names of this Protein
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": "Protein",
+      "alternateName": ["ABL", "JTK7"]
+    }
+- property: associatedDisease
+  expected_types:
+  - MedicalCondition
+  - PropertyValue
+  - URL
+  description: Disease associated to this BioChemEntity. Such disease can be a MedicalCondition
+    or a URL. If you want to add an evidence supporting the association, please use
+    PropertyValue.
+  type: bioschemas
+  type_url: ""
+  bsc_description: Disease associated to this protein, if any.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": "Protein",
+      "associatedDisease": {
+        "@type": "MedicalCondition",
+        "name": "Leukemia, chronic myeloid (CML)",
+        "code": {
+          "@type": "MedicalCode",
+          "codeValue": "608232",
+          "codingSystem": "OMIM"
+        },
+        "id": "http://purl.uniprot.org/diseases/03735"
+      }
+    }
+- property: bioChemInteraction
+  expected_types:
+  - BioChemEntity
+  description: A BioChemEntity that is known to interact with this item.
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Any suitable source of information
+  example: "{\n  \"@type\": \"Protein\",\n  \"@id\" : \"http://purl.uniprot.org/uniprot/P05067\",\n
+    \ \"bioChemInteraction\": [{\n    \"@id\": \"http://purl.uniprot.org/uniprot/Q306T3\"
+    \n  },{\n    \"@id\": \"http://purl.uniprot.org/uniprot/Q02410\"\n  }]\n}"
+- property: bioChemSimilarity
+  expected_types:
+  - BioChemEntity
+  description: A similar molecular entity, e.g., obtained by fingerprint similarity
+    algorithms.
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: "{\n  \"@type\": \"Protein\",\n  \"@id\": \"http://purl.uniprot.org/uniprot/P05067\"
+    ,\n  \"bioChemSimilarity\": [{ \n    \"@id\" : \"http://purl.uniprot.org/uniprot/O97584\"
+    \n  }, { \"@id\" : \"http://purl.uniprot.org/uniparc/UPI0000110448\" } ]\n}"
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: 'Protein function. We recommend to start the description with "Function:
+    [...]".'
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": "Protein",
+      "description": "Function: Non-receptor tyrosine-protein kinase that plays a role..."
+    }
+- property: hasBioChemEntityPart
+  expected_types:
+  - BioChemEntity
+  - URL
+  description: 'Indicates a BioChemEntity that (in some sense) has this BioChemEntity
+    as a part. Inverse property: isPartOfBioChemEntity.'
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Any suitable ontology
+  example: ""
+- property: hasBioPolymerSequence
+  expected_types:
+  - Text
+  description: "A symbolic representation of a BioChemEnity. For example, a nucleotide
+    \nsequence of a Gene or an amino acid sequence of a Protein."
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": "Protein",
+      "hasSequence": "MVLSPADKTN"
+    }
+- property: hasMolecularFunction
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  description: Molecular function performed by this BioChemEntity
+  type: bioschemas
+  type_url: ""
+  bsc_description: GO term corresponding to the Molecular Function branch of the GO
+    ontology.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Any suitable ontology
+  example: |-
+    {
+      "@type": "Protein",
+      "hasMolecularFunction": "http://purl.obolibrary.org/obo/GO_0035325"
+    }
+- property: hasRepresentation
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: A common representation such as a protein sequence or chemical structure
+    for this entity. For images use schema.org/image.
+  type: bioschemas
+  type_url: ""
+  bsc_description: '**Bioschemas Protein**: This property could be used, for instance,
+    to link to a page containing the corresponding sequence protein. If you want to
+    better define the nature of the representation, use a PropertyValue as described
+    in [additionalProperty](http://bioschemas.org/devSpecs/Protein/specification/#additionalProperty).'
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": "Protein",
+      "identifier": "http://purl.uniprot.org/uniprot/P00519"
+    }
+- property: image
+  expected_types:
+  - ImageObject
+  - URL
+  description: An image of the item. This can be a URL or a fully described ImageObject.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: "{ \n  \"@type\": \"Protein\", \n  \"image\": \"https://commons.wikimedia.org/wiki/File:Spombe_Pop2p_protein_structure_rainbow.png\"
+    \"http://rdf.wwpdb.org/pdb/2WJD\"\n}"
+- property: isEncodedByBioChemEntity
+  expected_types:
+  - DNA
+  - Gene
+  - RNA
+  description: |-
+    Another BioChemEntity encoding by this one. Inverse property: encodesBioChemEntity.
+     Inverse property: encodesBioChemEntity.
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: Any suitable ontology
+  example: |-
+    {
+      "@type": "Protein",
+      "isEncodedByBioChemEntity": "https://www.ncbi.nlm.nih.gov/UniGene/clust.cgi?ORG=Hs&CID=146339"
+    }
+- property: isInvolvedInBiologicalProcess
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  description: Biological process this BioChemEntity is involved in; please use PropertyValue
+    if you want to include any evidence.
+  type: bioschemas
+  type_url: ""
+  bsc_description: Functional term corresponding to the biological process (typically
+    the Biological Process branch of the GO ontology).
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Any suitable ontology
+  example: |-
+    {
+      "@type": "Protein",
+      "isInvolvedInBiologicalProcess": "http://purl.obolibrary.org/obo/GO_0005739"
+    }
+- property: isLocatedInSubcellularLocation
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  description: Subcellular location where this BioChemEntity is located; please use
+    PropertyValue if you want to include any evidence.
+  type: bioschemas
+  type_url: ""
+  bsc_description: Functional term corresponding to the subcellular location (typically
+    the Subcellular Location branch of the GO ontology).
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Any suitable ontology
+  example: |-
+    {
+      "@type": "Protein",
+      "isLocatedInSubcellularLocation": "http://purl.obolibrary.org/obo/GO_0005739"
+    }
+- property: isPartOfBioChemEntity
+  expected_types:
+  - BioChemEntity
+  description: |-
+    Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: hasBioChemEntityPart.
+     Inverse property: hasBioChemEntityPart.
+  type: bioschemas
+  type_url: ""
+  bsc_description: '**Bioschemas Protein**: For proteins, it can be used to link to
+    protein sequence annotations such as domains, sites, regions, etc.'
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Any suitable ontology
+  example: |-
+    //Protein is part of a protein complex
+    {
+      "@type": "Protein",
+      "isPartOfBioChemEntity": {
+        "@type": "BioChemEntity",
+        "url": "https://www.ebi.ac.uk/complexportal/complex/CPX-2158"
+        }
+    }
+- property: mainEntityOfPage
+  expected_types:
+  - CreativeWork
+  - URL
+  description: |-
+    Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](http://schema.org/docs/datamodel.html#mainEntityBackground) for details.
+    Inverse property: mainEntity.
+  type: ""
+  type_url: ""
+  bsc_description: 'Link to the main DataRecord representing this entity in a dataset. '
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: "//From a webpage\n{\n\n  \"@type\": \"WebPage\",\n  \"@id\": \"https://www.uniprot.org/uniprot/P05519\",\n
+    \ \"mainEntity\": {\n    \"@type\": \"Protein\",\n    \"@id\" : \"http://purl.uniprot.org/uniprot/P05519\"\n
+    \   #Any other property for this Protein entity    \n  }\n}\n\n//Also possible
+    from Protein or any other entity referred to from the Protein, e.g., associated
+    disease\n{\n  \"@type\": \"Protein\",\n   \"@id\" : \"http://purl.uniprot.org/uniprot/P05519\"\n
+    \ \"mainEntityOfPage\": {\n     \"@id\": \"https://www.uniprot.org/uniprot/P05519\"
+    \n  }\n}"
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": "Protein",
+      "name": "ABL1"
+    }
+- property: sameAs
+  expected_types:
+  - URL
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  type: ""
+  type_url: ""
+  bsc_description: Link to any resource other than the Record and the official webpage,
+    for instance a Wikipedia page.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: "{\n  \"@type\": \"Protein\",\n  \"sameAs\": [\n    \"https://www.wikidata.org/wiki/Q587961\",
+    \n    \"https://identifiers.org/uniprot:P05519\",\n    \"https://purl.org/uniprot/P05519\"\n
+    \ ]\n}"
+- property: taxonomicRange
+  expected_types:
+  - DefinedTerm
+  - Taxon
+  - Text
+  - URL
+  description: The taxonomic grouping of the organism that expresses, encodes, or
+    in someway related to the BioChemEntity.
+  type: bioschemas
+  type_url: ""
+  bsc_description: '**Bioschemas Protein**: For proteins, it is recommended to use
+    this property to specify the taxon/organism corresponding to a genome including
+    a expressed gene that can be translated to this protein. For taxon/organism, it
+    is a good practice to use hasCategoryCode to point to a controlled vacabulary
+    such as NCBI taxon or UniProt Taxonomy. '
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: Taxonomies or any suitable controlled vocabulary
+  example: "{\n  \"@type\": \"Protein\",\n  \"taxonomicRange\": {\n    \"@type\":
+    \"DefinedTerm\",\n    \"termCode\": \"9606\",\n    \"url\": \"http://purl.bioontology.org/ontology/NCBITAXON/9606\",\n
+    \   \"sameAs\": \"http://purl.uniprot.org/taxonomy/9606\",\n    \"inDefinedTermSet\":
+    {\n      \"@type\": \"DefinedTermSet\",\n      \"name\": \"NCBI taxon\",\n      \"url\":
+    \"https://bioportal.bioontology.org/ontologies/NCBITAXON\"\n    } \n  }\n}\n//
+    This could also be e.g. all bacteria and does not need to be a single organism"
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: Link to the official webpage associated to this entity.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": "Protein",
+      "url": "https://www.uniprot.org/uniprot/P05519"
+    }
+
+
+
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  <div class="spec-table-wrapper">
+                    {% include specification_table.html %}
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

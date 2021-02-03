@@ -1,0 +1,164 @@
+---
+layout: default
+title: Bioschemas Profiles
+redirect_from:
+ - "/devSpecs/"
+ - "/specifications/drafts/"
+ - "/specifications/"
+
+
+---
+<h1>Bioschemas Profiles
+<div class="git-edit" style="float: right;">
+<a target="_blank" href="mailto:enquiries@bioschemas.org?subject=[Bioschemas] request to create a new profile" class="btn btn-bioschema btn-sm" role="button">
+<b>Propose a new profile</b></a></div>
+</h1>
+
+<p>The Bioschemas' profiles define a community agreed layer over the Schema.org vocabulary, providing additional constraints. These constraints capture (i) the information properties agreed by the community which are minimum (M), recommended (R), or optional (O), (ii) the cardinality of the property, i.e. whether it is expected to occur once or many times, and (iii) associated controlled vocabulary terms drawn from existing ontologies.</p>
+<p>These guidelines provide community best practice that lead to consisent markup of life sciences resources on the Web. Comments and discussions on the <a href="https://lists.w3.org/Archives/Public/public-bioschemas/" itemprop="email">mailing list</a> or <a href="https://github.com/Bioschemas/specifications/issues">GitHub issue tracker</a> are encouraged.</p>
+
+<br />
+
+{% assign dep_profiles = site.data.profile_versions | where: 'status', 'deprecated' %}
+{% assign dep_profile_names = "" | split: ',' %}
+{% for item in dep_profiles %}
+	{% assign dep_profile_names = dep_profile_names | push: item.name %}
+{% endfor %}
+
+{% assign active_profiles = site.data.profile_versions | where: 'status', 'active' %}
+{% assign active_profile_names = "" | split: ',' %}
+{% for item in active_profiles %}
+	{% assign active_profile_names = active_profile_names | push: item.name %}
+{% endfor %}
+
+
+<!-- Tab layout for different profile release status -->
+<div class="bioschemas-spec-list-wrapper">
+
+<input id="tab1" type="radio" name="tabs" checked>
+<label for="tab1">RELEASE</label>
+<input id="tab2" type="radio" name="tabs">
+<label for="tab2">DRAFT</label>
+<input id="tab3" type="radio" name="tabs">
+<label for="tab3">DEPRECATED</label>
+
+<!-- RELEASED PROFILES -->
+<section id="tab1Content" class="tabs">
+   <h3>RELEASE</h3>
+   <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
+      <p><em>Released</em> profiles have been agreed by the community and are widely deployed.</p>
+      <p>Please note that there may be a newer version in <em>draft</em> status when the community agree that a refinement is needed. Where applicable, these are linked from the release version with the label 'Latest draft'.</p>
+      <thead>
+      <tr>
+          <th>Name</th>
+          <th style="text-align: center;">Group</th>
+          <th style="text-align: center;">Use Cases</th>
+          <th style="text-align: center;">Cross Walk</th>
+          <th style="text-align: center;">Task &amp; Issues</th>
+          <th style="text-align: center;">Examples</th>
+          <th style="text-align: center;">Live Deploys</th>
+      </tr>
+      </thead>
+	  <tbody>
+      {% assign prof_specs = site.profiles | where: 'spec_type', 'Profile'%}
+      {% for spec in prof_specs %}
+      {% if active_profile_names contains spec.name %}
+      {% if site.data.profile_versions[spec.name].latest_release != nill %}
+	  {% if spec.spec_info.version == site.data.profile_versions[spec.name].latest_release %}
+	  {% include profile_table_rows.html %}
+
+      {% endif %}
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+      </tbody>
+  </table>
+</section>
+
+<!-- DRAFT PROFILES -->
+<section id="tab2Content" class="tabs">
+   <h3>DRAFT</h3>
+   <p><em>Draft</em> profiles are actively being worked on and are likely to change. Disucssions take place on the <a href="https://lists.w3.org/Archives/Public/public-bioschemas/" itemprop="email">mailing list</a> and the <a href="https://github.com/Bioschemas/specifications/issues">GitHub issue tracker</a>.</p>
+   <p>Draft profiles are either working towards their first release or are refinements of a previously <em>released</em> version.</p>
+   <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
+      <thead>
+      <tr>
+          <th>Name</th>
+          <th style="text-align: center;">Group</th>
+          <th style="text-align: center;">Use Cases</th>
+          <th style="text-align: center;">Cross Walk</th>
+          <th style="text-align: center;">Task &amp; Issues</th>
+          <th style="text-align: center;">Examples</th>
+          <th style="text-align: center;">Live Deploys</th>
+      </tr>
+      </thead>
+	  <tbody>
+      {% assign prof_specs = site.profiles | where: 'spec_type', 'Profile'%}
+      {% for spec in prof_specs %}
+      {% if active_profile_names contains spec.name %}
+      {% if site.data.profile_versions[spec.name].latest_publication != nill %}
+	  {% if spec.spec_info.version == site.data.profile_versions[spec.name].latest_publication %}
+
+	  {% include profile_table_rows.html %}
+
+      {% endif %}
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+      </tbody>
+  </table>
+</section>
+
+
+<section id="tab3Content" class="tabs">
+   <h3>DEPRECATED</h3>
+   <p><em>Deprecated</em> means that the group developing it have suspended work; we would be delighted for you to continue it. Please email <a href="mailto:public-bioschemas@w3.org" itemprop="email">public-bioschemas@w3.org</a> to discuss.</p>
+   <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
+      <thead>
+      <tr>
+          <th>Name</th>
+          <th style="text-align: center;">Group</th>
+          <th style="text-align: center;">Use Cases</th>
+          <th style="text-align: center;">Cross Walk</th>
+          <th style="text-align: center;">Task &amp; Issues</th>
+          <th style="text-align: center;">Examples</th>
+          <th style="text-align: center;">Live Deploys</th>
+      </tr>
+      </thead>
+	  <tbody>
+      {% assign prof_specs = site.profiles | where: 'spec_type', 'Profile'%}
+      {% for spec in prof_specs %}
+      {% if dep_profile_names contains spec.name %}
+      {% if site.data.profile_versions[spec.name].latest_publication != nill %}
+	  {% if spec.spec_info.version == site.data.profile_versions[spec.name].latest_publication %}
+
+	  {% include profile_table_rows.html %}
+
+      {% endif %}
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+      </tbody>
+  </table>
+</section>
+</div>
+
+<!-- change number columns based on device -->
+<script type="application/x-javascript">
+   if(navigator.userAgent.match(/android/i)) {
+       document.getElementById('peopleTable').style.columnCount = 1;
+       document.getElementById('leadTable').style.columnCount = 1;
+   } else if(navigator.userAgent.match(/phone/i)) {
+       document.getElementById('peopleTable').style.columnCount = 1;
+       document.getElementById('leadTable').style.columnCount = 1;
+   } else if(navigator.userAgent.match(/tablet/i)) {
+       document.getElementById('peopleTable').style.columnCount = 1;
+       document.getElementById('leadTable').style.columnCount = 1;
+   } else if(navigator.userAgent.match(/ipad/i)) {
+       document.getElementById('peopleTable').style.columnCount = 1;
+       document.getElementById('leadTable').style.columnCount = 1;
+   } else {
+       document.getElementById('peopleTable').style.columnCount = 4;
+       document.getElementById('leadTable').style.columnCount = 4;
+   }
+</script>

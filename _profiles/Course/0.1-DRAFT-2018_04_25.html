@@ -1,0 +1,258 @@
+---
+name: Course
+
+previous_version: 
+previous_release:
+
+status: revision
+spec_type: Profile
+group: trainingmaterials
+use_cases_url: ''
+cross_walk_url: https://docs.google.com/spreadsheets/d/1cQ6mDbsG_cMX2EDAN8xH6-9yMRba8-rErlPeP8HTs8A
+gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Course
+live_deploy: ''
+
+parent_type: Course
+hierarchy:
+- Thing
+- CreativeWork
+- Course
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: Course
+  subtitle: 'Specification describing a course. '
+  description: 'This specification must be used in tandem with a courseInstance. A
+    course is used to describe the broad, common aspects of a recurring training event
+    - whereas a course instance is about the specific times and location of when that
+    course is held. '
+  version: 0.1-DRAFT-2018_04_25
+  version_date: 20180425T144349
+  official_type: ""
+  full_example: ""
+mapping:
+- property: audience
+  expected_types:
+  - Audience
+  description: An intended audience, i.e. a group for whom something was created.
+    Supersedes [serviceAudience](http://schema.org/serviceAudience).
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: author
+  expected_types:
+  - Organization
+  - Person
+  description: The author of this content or rating. Please note that author is special
+    in that HTML 5 provides a special mechanism for indicating authorship via the
+    rel tag. That is equivalent to this and may be used interchangeably.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: courseCode
+  expected_types:
+  - Text
+  description: The identifier for the [Course](http://schema.org/Course) used by the
+    course [provider](http://schema.org/provider) (e.g. CS101 or 6.001).
+  type: ""
+  type_url: ""
+  bsc_description: About this course.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: coursePrerequisites
+  expected_types:
+  - AlignmentObject
+  - Course
+  - Text
+  description: Requirements for taking the [Course](http://schema.org/Course). May
+    be completion of another Course or a textual description like "permission of instructor".
+    Requirements may be a pre-requisite competency, referenced using [AlignmentObject](http://schema.org/AlignmentObject).
+  type: ""
+  type_url: ""
+  bsc_description: Pre-requisite requirments before you can take this course.
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: hasCourseInstance
+  expected_types:
+  - CourseInstance
+  description: An offering of the course at a specific time and place or through specific
+    media or mode of study or to a specific section of students.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: image
+  expected_types:
+  - ImageObject
+  - URL
+  description: An image of the item. This can be a URL or a fully described [ImageObject](http://schema.org/ImageObject).
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: inLanguage
+  expected_types:
+  - Language
+  - Text
+  description: The language of the content or performance or used in an action. Please
+    use one of the language codes from the [IETF BCP 47](https://tools.ietf.org/html/bcp47)
+    standard. See also [availableLanguage](http://schema.org/availableLanguage). Supersedes
+    language.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: keywords
+  expected_types:
+  - Text
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  type: ""
+  type_url: ""
+  bsc_description: Keywords describing course. Use terms from Controlled Vocabularies
+    where possible, e.g., [EDAM](http://edamontology.org/page).
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: '[EDAM](http://edamontology.org/page)'
+  example: ""
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: Title of the course
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: producer
+  expected_types:
+  - Organization
+  - Person
+  description: The person or organization who produced the work (e.g. music album,
+    movie, tv/radio series etc.).
+  type: ""
+  type_url: ""
+  bsc_description: Faciliator/contact person.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: provider
+  expected_types:
+  - Organization
+  - Person
+  description: The service provider, service operator, or service performer; the goods
+    producer. Another party (a seller) may offer those services or goods on behalf
+    of the provider. A provider may also serve as the seller. Supersedes carrier.
+  type: ""
+  type_url: ""
+  bsc_description: Host organization.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: rdf:type
+  expected_types:
+  - URL
+  description: This is used by validation tools to indentify the profile used. You
+    must use the value specified in the Controlled Vocabulary column.
+  type: external
+  type_url: https://www.w3.org/1999/02/22-rdf-syntax-ns#type
+  bsc_description: This is used by validation tools to indentify the profile used.
+    You must use the value specified in the Controlled Vocabulary column.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: sponsor
+  expected_types:
+  - Organization
+  - Person
+  description: A person or organization that supports a thing through a pledge, promise,
+    or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor
+    of an event.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: thumbnailUrl
+  expected_types:
+  - URL
+  description: A thumbnail image relevant to the Thing.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: URL fo the course page.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

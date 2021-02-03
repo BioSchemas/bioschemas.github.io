@@ -6,15 +6,15 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: BioSchemas
+title: Bioschemas
 email: contact@bioschemas.org
 description: > # this means to ignore newlines until "baseurl:"
-  BioSchemas relies and extends from schema.org and aims to reuse existing
+  Bioschemas relies and extends from schema.org and aims to reuse existing
   standards and reach consensus among a wide number of life sciences organizations and communities.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://bioschemas.org" # the base hostname & protocol for your site
-twitter_username: BioSchemas
-github_username:  BioSchemas
+twitter_username: Bioschemas
+github_username:  Bioschemas
 permalink: /404.html
 
 # Build settings
@@ -29,15 +29,15 @@ collections:
   specifications:
     output: true
     permalink: /:collection/:path/
-  devSpecs:
-    output: true
-    permalink: /specifications/drafts/:path/
+#  devSpecs:
+#    output: true
+#    permalink: /specifications/drafts/:path/
   types:
     output: true
     permalink: /:collection/:path/
-  devTypes:
-    output: true
-    permalink: /types/drafts/:path/
+#  devTypes:
+#    output: true
+#    permalink: /types/drafts/:path/
   meetings:
     output: true
     permalink: /:collection/:path/ #Note, trailing / needed to avoid .html
@@ -55,3 +55,6 @@ collections:
     permalink: /:collection/:path/
   stories:
     output: true
+  profiles:
+    output: true
+    permalink: /:collection/:path/

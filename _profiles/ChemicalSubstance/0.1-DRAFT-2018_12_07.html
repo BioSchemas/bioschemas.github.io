@@ -1,0 +1,273 @@
+---
+name: ChemicalSubstance
+
+previous_version: 
+previous_release: 
+
+status: revision
+spec_type: Profile
+group: chemicals
+use_cases_url: '/useCases/ChemicalSubstance/'
+cross_walk_url: 'https://docs.google.com/spreadsheets/d/1ZuJHrUwpkWACAt0De6OXhlWZ9pSRTJ1m9H954i8-FvQ/edit?ts=5bebfe78&pli=1#gid=1261485211'
+gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Chemistry
+live_deploy: ''
+
+parent_type: Thing
+hierarchy:
+- Thing
+- BioChemEntity
+- ChemicalSubstance
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: ChemicalSubstance
+  subtitle: Bioschemas profile describing a ChemicalEntity
+  description: 'This specification describes a ChemicalSubstance which is ''a portion
+    of matter of constant composition, composed of molecular entities of the same
+    type or of different types'' (source: ChEBI).'
+  version: 0.1-DRAFT-2018_12_07
+  version_date: 20181207T110158
+  official_type: ""
+  full_example: https://github.com/Bioschemas/specifications/tree/master/ChemicalSubstance/examples/0.1-DRAFT/
+mapping:
+- property: alternateName
+  expected_types:
+  - Text
+  description: An alias for the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    "alternateName": [
+        "SiO2"
+    ]
+- property: biochemicalInteraction
+  expected_types:
+  - BioChemEntity
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: Interaction of the molecular entity with other BioChemical entities.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: 'biochemicalSimilarity '
+  expected_types:
+  - BioChemEntity
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: A similar molecular entity, e.g., obtained by fingerprint similarity
+    algorithms.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: biologicalRole
+  expected_types:
+  - DefinedTerm
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: A role played by the molecular entity within a biological context.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Any suitable ontology such as [ChEBI biological role](https://www.ebi.ac.uk/ols/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_24432)
+  example: ""
+- property: chemicalRole
+  expected_types:
+  - DefinedTerm
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: A role played by the molecular entity within a chemical context.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Any suitable ontology such as [ChEBI Chemical Role](https://www.ebi.ac.uk/ols/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_51086)
+  example: |-
+    "chemicalRole": [{
+        "@type": "DefinedTerm",
+        "@id": "http://purl.bioontology.org/ontology/npo#NPO_1909",
+        "inDefinedTermSet": {
+            "@type": "DefinedTermSet",
+            "@id": "https://github.com/enanomapper/ontologies/blob/master/enanomapper.owl",
+            "name": "eNanoMapper ontology"
+        },
+        "termCode": "NPO_1909",
+        "name": "engineered nanomaterial",
+        "url": "http://bioportal.bioontology.org/ontologies/ENM/?p=classes&conceptid=http%3A%2F%2Fpurl.bioontology.org%2Fontology%2Fnpo%23NPO_1909"
+    }]
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: disambiguatingDescription
+  expected_types:
+  - Text
+  description: A sub property of description. A short description of the item used
+    to disambiguate from other, similar items. Information from other properties (in
+    particular, name) may be necessary for the description to be useful for disambiguation.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: hasBioChemEntityPart
+  expected_types:
+  - BioChemEntity
+  - URL
+  description: Indicates a BioChemEntity that (in some sense) has this BioChemEntity
+    as a part.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    "hasBioChemEntityPart": [{
+        "@type": "BioChemEntity",
+        "identifier": "CHEBI:30563",
+        "name": "silicon dioxide",
+        "url": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:30563"
+    }]
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"identifier": "https://data.enanomapper.net/substance/NWKI-e624f68e-2e00-30e4-b4bb-9e34383580cb/study"'
+- property: image
+  expected_types:
+  - ImageObject
+  - URL
+  description: An image of the item. This can be a URL or a fully described ImageObject.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: molecularFormula
+  expected_types:
+  - Text
+  description: 'Inverse property: isPartOfBioChemEntity'
+  type: bioschemas
+  type_url: ""
+  bsc_description: The empirical formula is the simplest whole number ratio of all
+    the atoms in a molecule. Because for substances this often cannot accurately be
+    determined, an approximation is acceptable.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"molecularFormula": "SiO2"'
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"name": "JRCNM10404",'
+- property: potentialUse
+  expected_types:
+  - DefinedTerm
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: Intended use of the molecular entity by humans.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Any suitable ontology such as  [ChEBI Application](https://www.ebi.ac.uk/ols/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_33232)
+  example: |-
+    "potentialUse": [{
+            "@type": "DefinedTerm",
+            "@id": "http://purl.obolibrary.org/obo/CHEBI_23888",
+            "inDefinedTermSet": "ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl",
+            "termCode": "CHEBI:23888",
+            "name": "drug",
+            "url": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:23888"
+        },
+        {
+            "@type": "DefinedTerm",
+            "@id": "http://purl.enanomapper.org/onto/ENM_8000194",
+            "inDefinedTermSet": "http://purl.enanomapper.net/onto/enanomapper.owl",
+            "termCode": "ENM_8000194",
+            "name": "food flavouring and nutrient",
+            "url": "https://www.ebi.ac.uk/ols/ontologies/enm/terms?iri=http%3A%2F%2Fpurl.enanomapper.org%2Fonto%2FENM_8000194"
+        }
+    ]
+- property: sameAs
+  expected_types:
+  - URL
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"sameAs": "https://www.wikidata.org/wiki/Q58630711"'
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"url": "https://data.enanomapper.net/substance/NWKI-e624f68e-2e00-30e4-b4bb-9e34383580cb/study'
+
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

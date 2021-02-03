@@ -1,0 +1,394 @@
+---
+redirect_from:
+- "devSpecs/RNA/specification"
+- "devSpecs/RNA/specification/"
+- "/devSpecs/RNA/"
+- "/specifications/drafts/RNA"
+- "/profiles/RNA/"
+
+name: RNA
+
+previous_version:
+previous_release:
+
+status: revision # Change to revision if you are working on an update
+spec_type: Profile
+group: DNA
+use_cases_url: /useCases/DNA/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1N2_6iLktDXlcgkuXJdpW4UKg9M9Q08VfMqtDDS5tEp4/edit#gid=292464567
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20RNA
+live_deploy: /liveDeploys/
+
+parent_type: BioChemEntity
+hierarchy:
+- Thing
+- BioChemEntity
+- RNA
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: RNA
+  subtitle: ""
+  description: ""
+  version: 0.1-DRAFT-2019_11_15
+  version_date: 20191115T181208
+  official_type: RNA
+  full_example: ""
+mapping:
+- property: additionalType
+  expected_types:
+  - URL
+  description: An additional type for the item, typically used for adding more specific
+    types from external vocabularies in microdata syntax. This is a relationship between
+    something and a class that the thing is in. In RDFa syntax, it is better to use
+    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
+    tools may have only weaker understanding of extra types, in particular those defined
+    externally.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: alternateName
+  expected_types:
+  - Text
+  description: An alias for the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: associatedDisease
+  expected_types:
+  - MedicalCondition
+  - PropertyValue
+  - URL
+  description: Disease associated to this BioChemEntity. Such disease can be a MedicalCondition
+    or a URL. If you want to add an evidence supporting the association, please use
+    PropertyValue.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: bioChemInteraction
+  expected_types:
+  - BioChemEntity
+  description: A BioChemEntity that is known to interact with this item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: bioChemSimilarity
+  expected_types:
+  - BioChemEntity
+  description: A similar molecular entity, e.g., obtained by fingerprint similarity
+    algorithms.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: biologicalRole
+  expected_types:
+  - DefinedTerm
+  description: A role played by the molecular entity within a biological context.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: disambiguatingDescription
+  expected_types:
+  - Text
+  description: A sub property of description. A short description of the item used
+    to disambiguate from other, similar items. Information from other properties (in
+    particular, name) may be necessary for the description to be useful for disambiguation.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: encodesBioChemEntity
+  expected_types:
+  - BioChemEntity
+  description: |-
+    Another BioChemEntity encoded by this one.
+    Inverse property:isEncodedByBioChemEntity.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: hasBioChemEntityPart
+  expected_types:
+  - BioChemEntity
+  description: |-
+    Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.
+    Inverse property:isPartOfBioChemEntity.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: hasMolecularFunction
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  description: Molecular function performed by this BioChemEntity; please use PropertyValue
+    if you want to include any evidence.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: hasRepresentation
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: A common representation such as a protein sequence or chemical structure
+    for this entity. For images use schema.org/image.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: hasSequence
+  expected_types:
+  - Text
+  description: Nucleotide or amino acid sequence.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: hasSequenceAnnotation
+  expected_types:
+  - PropertyValue
+  - SequenceAnnotation
+  description: Pointer to a sequence annotation; please use PropertyValue if you want
+    to include any evidence.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    ofThing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties
+    for representing many of these, either as textual strings or as URL (URI) links.
+    Seebackground notesfor more details.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: image
+  expected_types:
+  - ImageObject
+  - URL
+  description: An image of the item. This can be aURLor a fully describedImageObject.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: isCodingRNA
+  expected_types:
+  - Boolean
+  description: Indicates whether or not this RNA is a coding one.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: isEncodedByBioChemEntity
+  expected_types:
+  - DNA
+  - Gene
+  - RNA
+  description: |-
+    Another BioChemEntity encoding by this one.
+    Inverse property:encodesBioChemEntity.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: isInvolvedInBiologicalProcess
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  description: Biological process this BioChemEntity is involved in; please use PropertyValue
+    if you want to include any evidence.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: isLocatedInSubcellularLocation
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  description: Subcellular location where this BioChemEntity is located; please use
+    PropertyValue if you want to include any evidence.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: isMatchedBy
+  expected_types:
+  - SequenceMatchingModel
+  description: A model matching this BioChemEntity.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: isPartOfBioChemEntity
+  expected_types:
+  - BioChemEntity
+  description: |-
+    Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
+    Inverse property:hasBioChemEntityPart.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: sameAs
+  expected_types:
+  - URL
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: taxonomicRange
+  expected_types:
+  - DefinedTerm
+  - Taxon
+  - Text
+  - URL
+  description: The taxonomic grouping of the organism that expresses, encodes, or
+    in someway related to the BioChemEntity.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  <div class="spec-table-wrapper">
+                    {% include specification_table.html %}
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

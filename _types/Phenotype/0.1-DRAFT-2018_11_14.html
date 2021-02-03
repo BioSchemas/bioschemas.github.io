@@ -1,0 +1,222 @@
+---
+previous_version: 
+previous_release: 
+
+
+dateModified: 2018-11-14
+description: "A phenotype."
+hierarchy:
+- Thing
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20Phenotypes
+group: phenotypes
+name: Phenotype
+parent_type: Thing
+spec_type: Type
+status: revision
+version: '0.1-DRAFT-2018_11_14'
+
+bsc: #0B794B;
+pending: #0000CC;
+external: #454547;
+
+---
+
+
+<!DOCTYPE HTML>
+<html>
+{% include head.html %}
+
+<body>
+  {% include header.html %}
+  {% include navbar.html %}
+  <div class="page-content">
+    <div class="wrapper">
+      <div id="main-content-wrapper" class="outer">
+        <section id="main_content" class="inner">
+          {% include type_start.html %}
+
+          <table class="bioschemas_properties bsc_type">
+            <thead>
+              <tr>
+                <th>Property</th>
+                <th>Expected Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="new_props_sdo">
+                <td colspan="3">
+                  Properties from <a style="color: #0B794B;" href="/{{page.name}}">{{page.name}}</a> (pending
+                  schema.org integration).
+                </td>
+              </tr>
+              <!-- Phenotype properties begin here -->
+              <tr id="anatomicalLocation">
+                <th style="color: #0B794B;">anatomicalLocation</th>
+                <td>
+                  <a href="http://schema.org/DefinedTerm">DefinedTerm</a>
+                </td>
+                <td>
+                  Any part of an organism, typically a component of an anatomical system. Organs, tissues, and cells
+                  are all anatomical locations.
+                </td>
+              </tr>
+              <tr id="isAssociatedWith">
+                <th style="color: #0B794B;">isAssociatedWith</th>
+                <td>
+                  <a href="http://schema.org/DefinedTerm">DefinedTerm</a>
+                </td>
+                <td>
+                  BioChemEntity that has some association with this Phenotype
+                </td>
+              </tr>
+              <!-- Phenotype properties ENDS here -->
+              <tr class="reu_props_sdo">
+                <td colspan="3">Properties from <a href="http://schema.org/Thing">Thing</a></td>
+              </tr>
+              <tr>
+                <th><a href="http://schema.org/additionalType">additionalType</a></th>
+                <td>
+                  <a href="http://schema.org/URL">URL</a>
+                </td>
+                <td>
+                  An additional type for the item, typically used for adding more specific types from external
+                  vocabularies in microdata syntax.
+                  This is a relationship between something and a class that the thing is in. In RDFa syntax, it is
+                  better to use the native RDFa syntax -
+                  the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of
+                  extra types, in particular those
+                  defined externally.
+                </td>
+              </tr>
+              <tr>
+                <th><a href="http://schema.org/alternateName">alternateName</a></th>
+                <td>
+                  <a href="http://schema.org/Text">Text</a>
+                </td>
+                <td>
+                  An alias for the item.
+                </td>
+              </tr>
+              <tr>
+                <th><a href="http://schema.org/description">description</a></th>
+                <td>
+                  <a href="http://schema.org/Text">Text</a>
+                </td>
+                <td>
+                  A descripton of the item.
+                </td>
+              </tr>
+              <tr>
+                <th><a href="http://schema.org/disambiguatingDescription">disambiguatingDescription</a></th>
+                <td>
+                  <a href="http://schema.org/Text">Text</a>
+                </td>
+                <td>
+                  A sub property of description. A short description of the item used to disambiguate from other,
+                  similar items. Information from other properties (in particular, name) may be necessary for the
+                  description to be useful for disambiguation.
+                </td>
+              </tr>
+              <tr>
+                <th><a href="http://schema.org/identifier">identifier</a></th>
+                <td>
+                  <a href="http://schema.org/PropertyValue">PropertyValue</a> or<br />
+                  <a href="http://schema.org/Text">Text</a> or<br />
+                  <a href="http://schema.org/URL">URL</a>
+                </td>
+                <td>
+                  The identifier property represents any kind of identifier for any kind of <a href="http://schema.org/Thing">Thing</a>,
+                  such as ISBNs, GTIN codes, UUIDs etc.
+                  Schema.org provides dedicated properties for representing many of these, either as textual strings or
+                  as URL (URI) links.
+                  See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more
+                  details.
+                </td>
+              </tr>
+              <tr>
+                <th><a href="http://schema.org/image">image</a></th>
+                <td>
+                  <a href="http://schema.org/ImageObject">ImageObject</a> or<br />
+                  <a href="http://schema.org/URL">URL</a>
+                </td>
+                <td>
+                  An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a
+                    href="http://schema.org/ImageObject">ImageObject</a>.
+                </td>
+              </tr>
+              <tr>
+                <th><a href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
+                <td>
+                  <a href="http://schema.org/CreativeWork">CreativeWork</a> or<br />
+                  <a href="http://schema.org/URL">URL</a>
+                </td>
+                <td>
+                  Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See
+                  <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a> for
+                  details.<br />
+                  Inverse property: <a href="http://schema.org/mainEntity">mainEntity</a>
+                </td>
+              </tr>
+              <tr>
+                <th><a href="http://schema.org/name">name</a></th>
+                <td>
+                  <a href="http://schema.org/Text">Text</a>
+                </td>
+                <td>
+                  The name of the item.
+                </td>
+              </tr>
+              <tr>
+                <th><a href="http://schema.org/potentialAction">potentialAction</a></th>
+                <td>
+                  <a href="http://schema.org/Action">Action</a>
+                </td>
+                <td>
+                  Indicates a potential Action, which describes an idealized action in which this thing would play an
+                  'object' role.
+                </td>
+              </tr>
+              <tr>
+                <th><a href="http://schema.org/sameAs">sameAs</a></th>
+                <td>
+                  <a href="http://schema.org/URL">URL</a>
+                </td>
+                <td>
+                  URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the
+                  item's Wikipedia page, Wikidata entry, or official website.
+                </td>
+              </tr>
+              <tr>
+                <th><a style="color: #0000CC;" href="http://pending.schema.org/subjectOf">subjectOf</a></th>
+                <td>
+                  <a href="http://schema.org/CreativeWork">CreativeWork</a> or<br />
+                  <a href="http://schema.org/Event">Event</a>
+                </td>
+                <td>
+                  A CreativeWork or Event about this Thing..<br />
+                  Inverse property: <a href="http://schema.org/about">about</a>.
+                </td>
+              </tr>
+              <tr>
+                <th><a href="http://schema.org/url">url</a></th>
+                <td>
+                  <a href="http://schema.org/URL">URL</a>
+                </td>
+                <td>
+                  URL of the item.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+  </div>
+  {% include footer.html %}
+
+
+
+</body>
+
+</html>

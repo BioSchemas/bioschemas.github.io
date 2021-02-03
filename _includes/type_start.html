@@ -1,9 +1,23 @@
 {% if page.status == 'release' %}
 <h1>{{page.name}} (Type)</h1>
+{% elsif site.data.type_versions[page.name].status == "deprecated"%}
+<h1>{{current_name}} <u>DEPRECATED</u> Profile</h1>
 {% else %}
 <h1>{{page.name}} <u>DRAFT</u> Type</h1>
 {% endif %}
 <h3><strong>Version:</strong> {{page.version}} ({{page.dateModified}})</h3>
+{% if site.data.profile_versions[page.name].latest_release != nill or site.data.profile_versions[page.name].latest_publication != nill %}
+<h3><strong>Profile:</strong></h3>
+{% endif %}
+   <ul>
+    {% if site.data.profile_versions[page.name].latest_release != nill %}
+   <li>Latest Release: <a href="/profiles/{{page.name}}">{{page.name}} (version {{site.data.profile_versions[page.name].latest_release}})</a></li>
+   {% endif %}
+   {% if site.data.profile_versions[page.name].latest_publication != nill %}
+   <li>Latest Draft: <a href="/profiles/{{page.name}}/{{site.data.profile_versions[page.name].latest_publication}}">{{page.name}} (version {{site.data.profile_versions[page.name].latest_publication}})</a></li>
+   {% endif %}
+ </ul>
+
 <h2>{{page.subtitle}}</h2>
 
 <br />
@@ -21,7 +35,7 @@
 
 
 
-<section id="contributors" class="tabs">
+<section id="tab2Content" class="tabs">
 <h3>Contributors</h3>
 {% assign group = site.groups | where:"identifier", page.group %}
 {% for g in group %}
@@ -66,15 +80,34 @@
 </div>
 </section>
 
-<section id="description" class="tabs">
+<section id="tab1Content" class="tabs">
 <!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
 <h3>Canonical URL</h3>
-<a href="/{{page.name}}">http://bioschemas.org/{{page.name}}</a>
+<a href="/{{page.name}}">https://bioschemas.org/{{page.name}}</a>
 <h3>Schema.org hierarchy</h3>
 This is a new {{page.spec_type}} that fits into the schema.org hierarchy as follows:
 <br/>
 {%for branch_name in page.hierarchy %}
-{% if branch_name == "BioChemEntity" or branch_name == "DataRecord" or branch_name == "LabProtocol" or branch_name == "Gene" or branch_name == "Protein" or branch_name == "Sample" or branch_name == "Taxon" or branch_name == "MolecularEntity" %}
+{% if branch_name == "BioChemEntity" or
+  branch_name == "BioChemStructure" or
+  branch_name == "BioSample" or
+  branch_name == "ChemicalSubstance" or
+  branch_name == "DataRecord" or
+  branch_name == "DNA" or
+  branch_name == "Enzyme" or
+  branch_name == "Gene" or
+  branch_name == "LabProtocol" or
+  branch_name == "MolecularEntity" or
+  branch_name == "Phenotype" or
+  branch_name == "Protein" or
+  branch_name == "RNA" or
+  branch_name == "Sample" or
+  branch_name == "SequenceAnnotation" or
+  branch_name == "SequenceMatchingModel" or
+  branch_name == "SequenceRange" or
+  branch_name == "Study" or
+  branch_name == "Taxon" or
+  branch_name == "TaxonName" %}
 <a href="/{{branch_name}}">{{branch_name}}</a>
 {% else %}
 <a href="http://schema.org/{{branch_name}}">{{branch_name}}</a>
@@ -89,9 +122,34 @@ This is a new {{page.spec_type}} that fits into the schema.org hierarchy as foll
 {%endif%}
 <h3>Description</h3>
 <p>{{page.description}}</p>
+
+   <h3>Latest types</h3>
+   {% assign profile_versions = site.data.type_versions[page.name] %}
+   {% if profile_versions.latest_release != null %}
+   <p>Latest release: <a href="/types/{{page.name}}/{{profile_versions.latest_release}}/">{{profile_versions.latest_release}}</a></p>
+   {% else %}
+   <p>Latest release: none</p>
+   {% endif %}
+   {% if profile_versions.latest_publication != null %}
+   <p>Latest draft: <a href="/types/{{page.name}}/{{profile_versions.latest_publication}}">{{profile_versions.latest_publication}}</a></p>
+   {% endif %}
+
+
+   <h3>Previous types</h3>
+   {% assign prev_version = page.previous_version %}
+   {% if prev_version != null %}
+   <p>Previous version: <a href="/types/{{page.name}}/{{page.previous_version}}">{{page.previous_version}}</a></p>
+   {% else %}
+   <p>Previous version: none</p>
+   {% endif %}
+   {% assign prev_release = page.previous_release %}
+   {% if prev_release != null %}
+   <p>Previous release: <a href="/types/{{page.name}}/{{page.previous_release}}">{{page.previous_release}}</a></p>
+   {% endif %}
+
 </section>
 
-<section id="links" class="tabs">
+<section id="tab3Content" class="tabs">
 <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto;">
     <thead>
     <tr>
@@ -109,38 +167,22 @@ This is a new {{page.spec_type}} that fits into the schema.org hierarchy as foll
     <td class="spec_links">
         {% if page.gh_tasks == '' %}
           <a>
-            <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
+            <img src="/images/specs_tasks.png" alt="Bioschemas {{ spec.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
           </a>
         {% else %}
           <a href="{{page.gh_tasks}}" target="_blank">
-            <img src="/images/specs_tasks.png" alt="BioSchemas {{ spec.name }} Github Tasks or Issues">
+            <img src="/images/specs_tasks.png" alt="Bioschemas {{ spec.name }} Github Tasks or Issues">
           </a>
         {% endif %}
     </td>
 </tr>
 </tbody>
 </table>
-<br />
-{% if page.status == 'release' %}
-<p>You can read the <a href="/types/drafts/{{page.name}}/">draft version of this specification here</a>.</p>
-{% elsif page.status == 'revision' %}
-<p>You can read the <a href="/types/{{page.name}}">release version of this specification here</a>.</p>
-{% endif %}
 
 </section>
 
-<br />
 <hr />
-<br />
-<h5>Key to specification table</h5>
-<br />
-<p>Schema.org properties where the Expected Types have been changed, or new (i.e., Bioschemas created) properties/types are <em style="color: #0B794B;"><strong>green</strong></em>.</p>
-<p>Schema.org properties/types are <em style="color: #990000;"><strong>red</strong></em>.</p>
-<p>Pending Schema.org properties/types are <em style="color: #0000CC;"><strong>blue</strong></em>.</p>
-<p>External (i.e., from 3rd party ontology) properties/types are <em style="color: #454547;"><strong>black</strong></em>.</p>
-<br />
-<p>CD = Cardinality</p>
-<br />
+{% include spec-table-key.html %}
 <!-- change number columns based on device -->
 <script type="application/x-javascript">
    if(navigator.userAgent.match(/android/i)) {

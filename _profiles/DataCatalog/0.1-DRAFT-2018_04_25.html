@@ -1,0 +1,257 @@
+---
+name: DataCatalog
+
+previous_version: 
+previous_release: 
+
+status: revision
+spec_type: Profile
+group: datarepositories
+use_cases_url: /useCases/DataRepositories/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1H12h5VpVNJFzNs2RQJWjXkauCEn3qEsVFzKRoiHHffY
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20DataCatalogue
+live_deploy: /liveDeploys/
+
+
+parent_type: DataCatalog
+hierarchy:
+- Thing
+- CreativeWork
+- DataCatalog
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: DataCatalog
+  subtitle: Bioschemas specification for describing data repositories and data catalogues
+    in the life-sciences
+  description: A guide for how to describe data catalogs/repositories in the life-sciences using Schema.org-like annotation.
+  version: 0.1-DRAFT-2018_04_25
+  version_date: 20180425T160608
+  official_type: ""
+  full_example: https://github.com/Bioschemas/specifications/tree/master/DataCatalog/examples/
+mapping:
+- property: alternateName
+  expected_types:
+  - Text
+  description: An alias for the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: citation
+  expected_types:
+  - CreativeWork
+  - Text
+  description: A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
+  type: ""
+  type_url: ""
+  bsc_description: CreativeWork:Name,URL
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: dataset
+  expected_types:
+  - Dataset
+  description: |-
+    A dataset contained in this catalog.
+    Inverse property: [includedInDataCatalog](http://schema.org/includedDataCatalog).
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: dateCreated
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was created or the item was added
+    to a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: dateModified
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was most recently modified or when
+    the item's entry was modified within a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: The date on which the data catalog/repository was most recently
+    modified.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: fileFormat
+  expected_types:
+  - Text
+  - URL
+  description: Media type, typically MIME format (see IANA site) of the content e.g.
+    application/zip of a SoftwareApplication binary. In cases where a CreativeWork
+    has several media type representations, 'encoding' can be used to indicate each
+    MediaObject alongside particular fileFormat information. Unregistered or niche
+    file formats can be indicated instead via the most appropriate URL, e.g. defining
+    Web page or a Wikipedia entry.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: Unique identifier for the data catalog.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: keywords
+  expected_types:
+  - Text
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  type: ""
+  type_url: ""
+  bsc_description: Use terms from Controlled Vocabularies where possible.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: license
+  expected_types:
+  - CreativeWork
+  - URL
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  type: ""
+  type_url: ""
+  bsc_description: CreativeWork:Name,URL
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: provider
+  expected_types:
+  - Organization
+  - Person
+  description: The service provider, service operator, or service performer; the goods
+    producer. Another party (a seller) may offer those services or goods on behalf
+    of the provider. A provider may also serve as the seller. Supersedes carrier.
+  type: ""
+  type_url: ""
+  bsc_description: Contact information for this data repository/catalog.
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: publication
+  expected_types:
+  - PublicationEvent
+  description: A publication event associated with the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: rdf:type
+  expected_types:
+  - URL
+  description: ""
+  type: external
+  type_url: https://www.w3.org/1999/02/22-rdf-syntax-ns#type
+  bsc_description: This is used by validation tools to indentify the profile used.
+    You must use the value specified in the Controlled Vocabulary column.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: sourceOrganization
+  expected_types:
+  - Organization
+  description: The Organization on whose behalf the creator was working.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

@@ -8,7 +8,7 @@ type: generic
 description: Specification for describing people
 lead: [NiallBeard]
 email: enquiries@bioschemas.org
-issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20person
+issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20person
 folder: https://drive.google.com/drive/u/1/folders/0B6crv12s8piRd1hFM2JUeS1wSEk
 
 # Page attributes
@@ -19,7 +19,8 @@ objectives:
     'To create a specification including a metadata schema, minimum information guidelines, recommended vocabularies as well as documentation and examples about how to use the schema.',
     'To engage the community interested to describe file science people profiles to participate and shape the specification.'
   ]
-draft_specifications:
+
+specifications:
     [
       'Person'
     ]

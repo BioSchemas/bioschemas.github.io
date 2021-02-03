@@ -17,6 +17,8 @@
 
 {% if page.status == 'release' %}
 <h1>{{current_name}} Profile</h1>
+{% elsif site.data.profile_versions[page.name].status == "deprecated"%}
+<h1>{{current_name}} <u>DEPRECATED</u> Profile</h1>
 {% else %}
 <h1>{{current_name}} <u>DRAFT</u> Profile</h1>
 {% endif %}
@@ -31,7 +33,7 @@
 <label for="tab2">Contributors</label>
 <input id="tab3" type="radio" name="tabs">
 <label for="tab3">Links</label>
-<section id="contributors" class="tabs">
+<section id="tab2Content" class="tabs">
    <h3>Contributors</h3>
    {% assign group = site.groups | where:"identifier", page.group %}
    {% for g in group %}
@@ -70,14 +72,33 @@
         {% endfor %}
    </div>
 </section>
-<section id="description" class="tabs">
+<section id="tab1Content" class="tabs">
    <!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
    <h3>Schema.org hierarchy</h3>
    This {{page.spec_type}} fits into the schema.org hierarchy as follows:
    <br />
    <br />
    {%for branch_name in page.hierarchy %}
-   {% if branch_name == "BioChemEntity" or branch_name == "DataRecord" or branch_name == "LabProtocol" or branch_name == "Gene" or branch_name == "Protein" or branch_name == "Sample" or branch_name == "Taxon" or branch_name == "MolecularEntity" %}
+   {% if branch_name == "BioChemEntity" or
+     branch_name == "BioChemStructure" or
+     branch_name == "BioSample" or
+     branch_name == "ChemicalSubstance" or
+     branch_name == "DataRecord" or
+     branch_name == "DNA" or
+     branch_name == "Enzyme" or
+     branch_name == "Gene" or
+     branch_name == "LabProtocol" or
+     branch_name == "MolecularEntity" or
+     branch_name == "Phenotype" or
+     branch_name == "Protein" or
+     branch_name == "RNA" or
+     branch_name == "Sample" or
+     branch_name == "SequenceAnnotation" or
+     branch_name == "SequenceMatchingModel" or
+     branch_name == "SequenceRange" or
+     branch_name == "Study" or
+     branch_name == "Taxon" or
+     branch_name == "TaxonName"%}
    <a href="/{{branch_name}}/">{{branch_name}}</a>
    {% else %}
    <a href="http://schema.org/{{branch_name}}">{{branch_name}}</a>
@@ -96,14 +117,39 @@
             are updated to the new specification_table template.
     -->
    {% assign description_prev = page.description %}
-   {% if description_prev != null%}
+   {% if description_prev != null %}
    <p>{{page.description}}</p>
    {% else %}
    <p>{{page.spec_info.description}}</p>
    {% endif %}
+
+   <h3>Latest profiles</h3>
+   {% assign profile_versions = site.data.profile_versions[page.name] %}
+   {% if profile_versions.latest_release != null %}
+   <p>Latest release: <a href="/profiles/{{page.name}}/{{profile_versions.latest_release}}/">{{profile_versions.latest_release}}</a></p>
+   {% else %}
+   <p>Latest release: none</p>
+   {% endif %}
+   {% if profile_versions.latest_publication != null %}
+   <p>Latest draft: <a href="/profiles/{{page.name}}/{{profile_versions.latest_publication}}">{{profile_versions.latest_publication}}</a></p>
+   {% endif %}
+
+
+   <h3>Previous profiles</h3>
+   {% assign prev_version = page.previous_version %}
+   {% if prev_version != null %}
+   <p>Previous version: <a href="/profiles/{{page.name}}/{{page.previous_version}}">{{page.previous_version}}</a></p>
+   {% else %}
+   <p>Previous version: none</p>
+   {% endif %}
+   {% assign prev_release = page.previous_release %}
+   {% if prev_release != null %}
+   <p>Previous release: <a href="/profiles/{{page.name}}/{{page.previous_release}}">{{page.previous_release}}</a></p>
+   {% endif %}
+
    <br />
 </section>
-<section id="links" class="tabs">
+<section id="tab3Content" class="tabs">
    <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto;">
       <thead>
          <tr>
@@ -123,57 +169,57 @@
                {% endfor %}
             </td>
             <td class="spec_links">
-               {% if page.use_cases_url == '' %}
+               {% if page.use_cases_url == '' or page.use_cases_url == nil %}
                <a>
-               <img src="/images/use_case_spec.png" alt="View BioSchemas {{ page.name }} Use Cases"  style="filter: grayscale(100%);">
+               <img src="/images/use_case_spec.png" alt="View Bioschemas {{ page.name }} Use Cases"  style="filter: grayscale(100%);">
                </a>
                {%else%}
                <a href="{{page.use_cases_url}}">
-               <img src="/images/use_case_spec.png" alt="View BioSchemas {{ page.name }} Use Cases">
+               <img src="/images/use_case_spec.png" alt="View Bioschemas {{ page.name }} Use Cases">
                </a>
                {%endif%}
             </td>
             <td class="spec_links">
                {% if page.cross_walk_url == '' %}
                <a>
-               <img src="/images/cross_walk.png" alt="View BioSchemas {{ page.name }} Cross Walk"  style="filter: grayscale(100%);">
+               <img src="/images/cross_walk.png" alt="View Bioschemas {{ page.name }} Cross Walk"  style="filter: grayscale(100%);">
                </a>
                {%else%}
                <a href="{{page.cross_walk_url}}" target="_blank">
-               <img src="/images/cross_walk.png" alt="View BioSchemas {{ page.name }} Cross Walk">
+               <img src="/images/cross_walk.png" alt="View Bioschemas {{ page.name }} Cross Walk">
                </a>
                {%endif%}
             </td>
             <td class="spec_links">
                {% if page.gh_tasks == '' %}
                <a>
-               <img src="/images/specs_tasks.png" alt="BioSchemas {{ page.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
+               <img src="/images/specs_tasks.png" alt="Bioschemas {{ page.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
                </a>
                {% else %}
                <a href="{{page.gh_tasks}}" target="_blank">
-               <img src="/images/specs_tasks.png" alt="BioSchemas {{ page.name }} Github Tasks or Issues">
+               <img src="/images/specs_tasks.png" alt="Bioschemas {{ page.name }} Github Tasks or Issues">
                </a>
                {% endif %}
             </td>
             <td class="spec_links" target="_blank">
                {% if page.spec_info.full_example == '' %}
                <a>
-               <img src="/images/spec_examples.png" alt="View BioSchemas {{ page.name }} Examples" style="filter: grayscale(100%);">
+               <img src="/images/spec_examples.png" alt="View Bioschemas {{ page.name }} Examples" style="filter: grayscale(100%);">
                </a>
                {% else %}
                <a href="{{page.spec_info.full_example}}" target="_blank">
-               <img src="/images/spec_examples.png" alt="View BioSchemas {{ page.name }} Examples">
+               <img src="/images/spec_examples.png" alt="View Bioschemas {{ page.name }} Examples">
                </a>
                {% endif %}
             </td>
             <td class="spec_links">
                {% if page.live_deploy == '' %}
                <a>
-               <img src="/images/live_deploy.png" alt="View BioSchemas {{ page.name }} Examples" style="filter: grayscale(100%);">
+               <img src="/images/live_deploy.png" alt="View Bioschemas {{ page.name }} Examples" style="filter: grayscale(100%);">
                </a>
                {% else %}
                <a href="{{page.live_deploy}}">
-               <img src="/images/live_deploy.png" alt="View BioSchemas {{ page.name }} Examples">
+               <img src="/images/live_deploy.png" alt="View Bioschemas {{ page.name }} Examples">
                </a>
                {% endif %}
             </td>
@@ -189,18 +235,8 @@
    {% endif %}
    {% endif %}
 </section>
-<br />
 <hr />
-<br />
-<h5>Key to specification table</h5>
-<br />
-<p>Schema.org properties where the Expected Types have been changed, or new (i.e., Bioschemas created) properties/types are <em style="color: #0B794B;"><strong>green</strong></em>.</p>
-<p>Schema.org properties/types are <em style="color: #990000;"><strong>red</strong></em>.</p>
-<p>Pending Schema.org properties/types are <em style="color: #0000CC;"><strong>blue</strong></em>.</p>
-<p>External (i.e., from 3rd party ontology) properties/types are <em style="color: #454547;"><strong>black</strong></em>.</p>
-<br />
-<p>CD = Cardinality</p>
-<br />
+{% include spec-table-key.html %}
 <!-- change number columns based on device -->
 <script type="application/x-javascript">
    if(navigator.userAgent.match(/android/i)) {

@@ -5,3 +5,4 @@ _site/
 /bioschemas.github.io.iml
 /_bsc_specs.zip
 *.iml
+.jekyll-cache/

@@ -1,0 +1,366 @@
+---
+redirect_from:
+- "devSpecs/ProteinStructure/specification"
+- "devSpecs/ProteinStructure/specification/"
+- "/devSpecs/ProteinStructure/"
+- "/specifications/drafts/ProteinStructure"
+- "/profiles/ProteinStructure/"
+
+name: ProteinStructure
+
+previous_version:
+previous_release:
+
+status: revision
+spec_type: Profile
+group: proteins
+use_cases_url: /useCases/Protein/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1MfvX5tJs5mKA835e-98eaLmN5_5xYjFfcMcbtdMRtC4
+gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Protein
+live_deploy: /liveDeploys/
+
+
+parent_type: BioChemEntity
+hierarchy:
+- Thing
+- BioChemEntity
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: ProteinStructure
+  subtitle: Bioschemas specification describing a ProteinStructure (BioChemEntity
+    profile) in Life Sciences
+  description: This profile specification presents the BioChemEntity usage when describing
+    a Protein structure.
+  version: 0.5-DRAFT-2018_08_15
+  version_date: 20180815T152857
+  official_type: http://semanticscience.org/resource/SIO_011119
+  full_example: https://gist.github.com/kcmcleod/8b14caeeb7fa0cae2242af18c97c6690
+mapping:
+- property: additionalProperty
+  expected_types:
+  - PropertyValue
+  description: |-
+    A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.
+
+    Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
+  type: ""
+  type_url: ""
+  bsc_description: As much a possible, do not use it! Alternatively, consider reusing
+    properties/relations already coined in controlled vocabularies. We recommed to
+    look at the [OBO Relations Ontology (RO)](http://obofoundry.org/ontology/ro.html)
+    or the [Semanticscience Integrated Ontology (SIO)](http://sio.semanticscience.org/)
+    as starting points.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: additionalType
+  expected_types:
+  - URL
+  description: An additional type for the item, typically used for adding more specific
+    types from external vocabularies in microdata syntax. This is a relationship between
+    something and a class that the thing is in. In RDFa syntax, it is better to use
+    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
+    tools may have only weaker understanding of extra types, in particular those defined
+    externally.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: alternateName
+  expected_types:
+  - Text
+  description: An alias for the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: boundMolecule
+  expected_types:
+  - Text
+  - URL
+  description: ""
+  type: ""
+  type_url: ""
+  bsc_description: Bound molecules
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": ["BioChemEntity", "ProteinStructure"],
+      "boundMolecule": [
+         "http://identifiers.org/pdb.ligand:NI",
+         "http://identifiers.org/pdb.ligand:SO4"
+      ]
+    }
+- property: contains
+  expected_types:
+  - BioChemEntity
+  - URL
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: 'Indicates a BioChemEntity that is (in some sense) a part of this
+    BioChemEntity. Inverse property: isContainedIn.'
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": ["BioChemEntity", "ProteinStructure"],
+      "contains": {
+          "@type": ["BioChemEntity", "ProteinAnnotation"],
+          "@id": "http://identifiers.org/interpro:IPR001357",
+          "aditionalType": "http://semanticscience.org/resource/SIO_001379",
+          "identifier": "interpro:IPR001357",
+          "name": "BRCT domain"
+        }
+    }
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: expressionSystem
+  expected_types:
+  - BioChemEntity
+  - Taxon
+  description: ""
+  type: ""
+  type_url: ""
+  bsc_description: Organism where this protein extructure is expresed
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": ["BioChemEntity", "ProteinStructure"],
+      "expressionSystem": {
+        "@type": ["BioChemEntity", "Taxon"],
+        "@id": "http://identifiers.org/taxonomy:9606",
+        "name": "Homo sapiens"
+      }
+    }
+- property: hasCategoryCode
+  expected_types:
+  - CategoryCode
+  description: A Category code contained in this code set.
+  type: ""
+  type_url: ""
+  bsc_description: A controlled vocabulary term equivalent to this entity. For instance,
+    an organism coined in NCBI taxonomy can be represented as a BioChemEntity. As
+    it also exists as a term in an ontology, it would be nice to capture that information
+    via categoryCode.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Any suitable controlled vocabulary
+  example: ""
+- property: hasRepresentation
+  expected_types:
+  - PropertyValue orText orURL
+  description: A representation for this entity other than, for instance, an image
+    (use image property for that) or the main web page/record (use mainEntityOfPage
+    for that), and see background notes, for sameAs and url).
+  type: bioschemas
+  type_url: ""
+  bsc_description: Representation of this entity. For instance, a chemical structure
+    or sequence.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": ["BioChemEntity", "ProteinStructure"],
+      "identifier": "pdb:3pxa"
+    }
+- property: image
+  expected_types:
+  - ImageObject
+  - URL
+  description: An image of the item. This can be a URL or a fully described ImageObject.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": ["BioChemEntity", "ProteinStructure"],
+      "image": "https://www.ebi.ac.uk/pdbe/entry/pdb/3pxa/portfolio/?view=entry_index#ad-image-0"
+    }
+- property: isContainedIn
+  expected_types:
+  - BioChemEntity orURL
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: 'Indicates a BioChemEntity that this BioChemEntity is (in some
+    sense) a part of. Inverse property: contains.'
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: location
+  expected_types:
+  - Place
+  - PostalAddress
+  - PropertyValue
+  - Text
+  - URL
+  description: The location of for example where the event is happening, an organization
+    is located, or where an action takes place.
+  type: bioschemas
+  type_url: ""
+  bsc_description: |-
+    The location can refer to a position in the chromosome or sequence or to a physical place where, for instance, a sample is stored. Using [additionalType](http://bioschemas.org/devSpecs/ProteinAnnotation/#additionalType) is advised to make this distinction. For instance, [FALDO](https://github.com/OBF/FALDO) can be used for sequence co-ordinates.
+    **Note:** The list of Expected Types has been extended as schema.org/location only has Place, PostalAddress and Text.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: mainEntityOfPage
+  expected_types:
+  - CreativeWork
+  - URL
+  description: |-
+    Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details.
+    Inverse property: mainEntity.
+  type: ""
+  type_url: ""
+  bsc_description: Link via DataRecord or URL to the main Record representing this
+    entity in a dataset.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example:  |-
+    //Preferred way from DataRecord
+    {
+      "@type": "DataRecord",
+      "@id": "https://www.ebi.ac.uk/pdbe/entry/pdb/3pxa",
+      "mainEntity": {
+        "@type": ["BioChemEntity", "ProteinStructure"],
+        "name": "Name and any other property for this ProteinStructure entity"
+      }
+    }
+
+    //Also possible from ProteinStructure
+    {
+      "@type": ["BioChemEntity", "ProteinStructure"],
+      "mainEntityOfPage": { "@id": "https://www.ebi.ac.uk/pdbe/entry/pdb/3pxa" }
+    }
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": ["BioChemEntity", "ProteinStructure"],
+      "name": "Impact of BRCA1 BRCT domain missense substitutions on phospho-peptide recognition: G1656D"
+    }
+- property: sameAs
+  expected_types:
+  - URL
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  type: ""
+  type_url: ""
+  bsc_description: Link to any resource other than the Record and the official webpage,
+    for instance a Wikipedia page.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: structureDeterminationMethod
+  expected_types:
+  - Text
+  - URL
+  description: ""
+  type: ""
+  type_url: ""
+  bsc_description: Method used to determine the protein structure
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": ["BioChemEntity", "ProteinStructure"],
+      "structureDeterminationMethod": "X-ray diffraction"
+    }
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: Link to the official webpage associated to this entity.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": ["BioChemEntity", "ProteinStructure"],
+      "url": "https://www.ebi.ac.uk/pdbe/entry/pdb/3pxa"
+    }
+
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  <div class="spec-table-wrapper">
+                    {% include specification_table.html %}
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

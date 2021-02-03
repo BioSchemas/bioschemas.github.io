@@ -1,0 +1,297 @@
+---
+name: DataCatalog
+
+previous_version: '0.2-DRAFT-2019_01_15'
+previous_release: 
+
+status: revision
+spec_type: Profile
+group: datarepositories
+use_cases_url: /useCases/DataRepositories/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1mIRsRHdl9bzGQrOEVcMiwvh5ZsCcGNsNfai2sZOBxQ0/
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20DataCatalog
+live_deploy: /liveDeploys/
+
+parent_type: DataCatalog
+hierarchy:
+- Thing
+- CreativeWork
+- DataCatalog
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: DataCatalog
+  subtitle: ""
+  description: A guide for how to describe data catalogs/repositories in the life-sciences
+    using Schema.org-like annotation.
+  version: 0.2-DRAFT-2019_01_28
+  version_date: 20190128T204141
+  official_type: http://schema.org/DataCatalog
+  full_example: https://github.com/Bioschemas/specifications/tree/master/DataCatalog/examples/
+mapping:
+- property: about
+  expected_types:
+  - Thing
+  description: |-
+    The subject matter of the content.
+    Inverse property: subjectOf.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: alternateName
+  expected_types:
+  - Text
+  description: An alias for the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "DataCatalog",
+    "alternateName": "Reactome Pathway Database"
+    }
+- property: citation
+  expected_types:
+  - CreativeWork
+  - Text
+  description: A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
+  type: ""
+  type_url: ""
+  bsc_description: A citation for a publication that describes the dataset.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "DataCatalog",
+    "citation": {
+        "@type": "ScholarlyArticle",
+        "headline": "The Reactome pathway knowledgebase.",
+        "identifier": [
+          "http://identifiers.org/pubmed/24243840"
+        ],
+        "datePublished": "2015-11"
+      }
+    }
+- property: dataset
+  expected_types:
+  - Dataset
+  description: |-
+    A dataset contained in this catalog.
+    Inverse property: includedInDataCatalog.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: dateCreated
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was created or the item was added
+    to a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: dateModified
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was most recently modified or when
+    the item's entry was modified within a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: The date on which the data catalog/repository was most recently
+    modified.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: A short summary describing a dataset.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "DataCatalog",
+     "description": "The Reactome project is a collaboration to develop a curated resource of core pathways and reactions in human biology."
+    }
+- property: encodingFormat
+  expected_types:
+  - Text
+  - URL
+  description: Media type typically expressed using a MIME format (see IANA site and
+    MDN reference) e.g. application/zip for a SoftwareApplication binary, audio/mpeg
+    for .mp3 etc.). In cases where a CreativeWork has several media type representations,
+    encoding can be used to indicate each MediaObject alongside particular encodingFormat
+    information. Unregistered or niche encoding and file formats can be indicated
+    instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata
+    entry. Supersedes fileFormat.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: Identifier of the DataCatalog in Curie form. Eg. prefix:accession.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "DataCatalog",
+    "identifier": "MIR:00000018"
+    }
+- property: keywords
+  expected_types:
+  - Text
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  type: ""
+  type_url: ""
+  bsc_description: These keywords provide a summary of the dataset.
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "DataCatalog",
+    "keywords": [
+        "Pathways",
+        "Reactions"
+      ]
+    }
+- property: license
+  expected_types:
+  - CreativeWork
+  - URL
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  type: ""
+  type_url: ""
+  bsc_description: A license under which the dataset is distributed.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "DataCatalog",
+    "license": "http://www.ebi.ac.uk/about/terms-of-use"
+    }
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: A descriptive name of the dataset.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "DataCatalog",
+    "name": "Reactome"
+    }
+- property: provider
+  expected_types:
+  - Organization
+  - Person
+  description: The service provider, service operator, or service performer; the goods
+    producer. Another party (a seller) may offer those services or goods on behalf
+    of the provider. A provider may also serve as the seller. Supersedes carrier.
+  type: ""
+  type_url: ""
+  bsc_description: Contact information for this data repository/catalog.
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": "DataCatalog",
+      "provider": {
+        "@type": "Organization",
+        "name": "EMBL-EBI",
+        "url": "https://www.ebi.ac.uk"
+      }
+    }
+- property: sourceOrganization
+  expected_types:
+  - Organization
+  description: The Organization on whose behalf the creator was working.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: The location of a page describing the dataset.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "DataCatalog",
+    "url": "https://www.reactome.org/"
+    }
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

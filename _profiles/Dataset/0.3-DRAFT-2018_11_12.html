@@ -1,0 +1,308 @@
+---
+name: Dataset
+
+previous_version: '0.2-DRAFT-2018_02_25'
+previous_release: 
+
+status: revision
+spec_type: Profile
+group: data
+use_cases_url: /useCases/Datasets
+cross_walk_url: https://docs.google.com/spreadsheets/d/1IUw5tdUvzTs3ogxgBNYTtUrVtlO2Czv6yiavyNfct8w/edit#gid=1483018794
+gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Dataset
+live_deploy: /liveDeploys/
+
+parent_type: Dataset
+hierarchy:
+- Thing
+- CreativeWork
+- Dataset
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: Dataset
+  subtitle: ""
+  description: A guide for how to describe datasets in the life-sciences using Schema.org-like
+    annotation.
+  version: 0.3-DRAFT-2018_11_12
+  version_date: 20181127T101121
+  official_type: http://schema.org/Dataset
+  full_example: https://github.com/Bioschemas/specifications/tree/master/Dataset/examples/
+mapping:
+- property: citation
+  expected_types:
+  - CreativeWork
+  - Text
+  description: A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
+  type: ""
+  type_url: ""
+  bsc_description: A citation for a publication that describes the dataset.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "Dataset",
+    "citation": {
+        "@type": "ScholarlyArticle",
+        "headline": "Automated Label-free Quantification of Metabolites from Liquid Chromatographyâ€“Mass Spectrometry Data",
+        "identifier": [
+          "http://doi.org/10.1074/mcp.M113.031278",
+          "https://www.ncbi.nlm.nih.gov/pubmed/24176773"
+        ],
+        "datePublished": "2014-01"
+      }
+    }
+- property: creator
+  expected_types:
+  - Organization
+  - Person
+  description: The creator/author of this CreativeWork. This is the same as the Author
+    property for CreativeWork.
+  type: ""
+  type_url: ""
+  bsc_description: The name of the dataset creator (person or organization).
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "Dataset",
+    "creator": {
+        "@type": "Person",
+        "familyName": "Kohlbacher",
+        "givenName": "Oliver",
+        "email": "oliver.kohlbacher@uni-tuebingen.de",
+        "affiliation": "Wilhelm Schickard Institute for Computer Science, University of Tubingen"
+      }
+    }
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: A short summary describing a dataset.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "Dataset",
+     "description": "Liquid chromatography coupled to mass spectrometry (LC-MS) has become a standard technology in metabolomics. In particular, label-free quantification based on LC-MS ..."
+    }
+- property: distribution
+  expected_types:
+  - DataDownload
+  description: A downloadable form of this dataset, at a specific location, in a specific
+    format.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "Dataset",
+    "distribution": [
+        {
+          "@type": "DataDownload",
+          "name": "UniParc XML",
+          "fileFormat": "xml",
+          "contentURL": "ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/uniparc/uniparc_all.xml.gz"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "UniParc FASTA",
+          "fileFormat": "fasta",
+          "contentURL": "ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/uniparc/uniparc_active.fasta.gz"
+        }
+    ]
+    }
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "Dataset",
+    "identifier": "MTBLS234"
+    }
+- property: includedInDataCatalog
+  expected_types:
+  - DataCatalog
+  description: |-
+    A data catalog which contains this dataset. Supersedes catalog, includedDataCatalog.
+    Inverse property: dataset.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "Dataset",
+    "includedinDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "EMBL-EBI Metabolights",
+        "url": "http://www.ebi.ac.uk/metabolights"
+      }
+    }
+- property: keywords
+  expected_types:
+  - Text
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  type: ""
+  type_url: ""
+  bsc_description: These keywords provide a summary of the dataset.
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "Dataset",
+    "keywords": [
+        "Mass spectrometry",
+        "Plasma",
+        "Spike-in",
+        "Control"
+      ]
+    }
+- property: license
+  expected_types:
+  - CreativeWork
+  - URL
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  type: ""
+  type_url: ""
+  bsc_description: A license under which the dataset is distributed.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "Dataset",
+    "license": "http://www.ebi.ac.uk/about/terms-of-use"
+    }
+- property: measurementTechnique
+  expected_types:
+  - Text
+  - URL
+  description: |-
+    A technique or technology used in a Dataset (or DataDownload, DataCatalog), corresponding to the method used for measuring the corresponding variable(s) (described using variableMeasured). This is oriented towards scientific and scholarly dataset publication but may have broader applicability; it is not intended as a full representation of measurement, but rather as a high level summary for dataset discovery.
+    For example, if variableMeasured is: molecule concentration, measurementTechnique could be: "mass spectrometry" or "nmr spectroscopy" or "colorimetry" or "immunofluorescence".
+    If the variableMeasured is "depression rating", the measurementTechnique could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory".
+    If there are several variableMeasured properties recorded for some given data object, use a PropertyValue for each variableMeasured and attach the corresponding measurementTechnique.
+  type: pending
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "Dataset",
+    "measurementTechnique": "mass spectrometry"
+    }
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: A descriptive name of the dataset.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "Dataset",
+    "name": "Automated Label-free Quantification of Metabolites from Liquid Chromatographyâ€“Mass Spectrometry Data (Plasma)Automated Label-free Quantification of Metabolites from Liquid Chromatographyâ€“Mass Spectrometry Data (Plasma)"
+    }
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: The location of a page describing the dataset.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "Dataset",
+    "url": "http://www.ebi.ac.uk/metabolights/MTBLS234"
+    }
+- property: variableMeasured
+  expected_types:
+  - PropertyValue
+  - Text
+  description: The variableMeasured property can indicate (repeated as necessary)
+    the variables that are measured in some dataset, either described as text or as
+    pairs of identifier and description using PropertyValue.
+  type: pending
+  type_url: ""
+  bsc_description: What does the dataset measure? (e.g., temperature, pressure).
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "Dataset",
+    "variablesMeasured": "metabolite concentration"
+    }
+- property: version
+  expected_types:
+  - Number
+  - Text
+  description: The version of the CreativeWork embodied by a specified resource.
+  type: ""
+  type_url: ""
+  bsc_description: The version number for this dataset.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+    "@type": "Dataset",
+    "version": "8.0.1 c"
+    }
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

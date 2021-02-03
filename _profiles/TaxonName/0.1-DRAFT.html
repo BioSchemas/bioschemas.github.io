@@ -1,0 +1,210 @@
+---
+redirect_from:
+- '/profiles/TaxonName/'
+
+name: TaxonName
+
+previous_version:
+previous_release:
+
+status: revision # Change to revision if you are working on an update
+spec_type: Profile
+group: biodiversity
+use_cases_url: /useCases/TaxonName/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1cQPR7KGU0fOHXiRoaJpahEgrX9i6SIc36X8cupfg6_4/
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20Taxon
+live_deploy: /liveDeploys/
+
+parent_type: TaxonName
+hierarchy:
+- Thing
+- CreativeWork
+- TaxonName
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENTspec_info:
+spec_info:
+  title: TaxonName
+  subtitle: 'Bioschemas profile for describing a name of a biological taxon, may it
+    be valid (zoology) / accepted (botany) or not '
+  description: This profile povides a way to denote the scientific names of a taxon.
+    The taxon accepted/valid name is linked to the taxon with property scientificName
+    while the synonyms are linked with property alternateScientificName.
+  version: 0.1-DRAFT
+  version_date: 20200609T164927
+  official_type: http://schema.org/TaxonName
+  full_example: https://github.com/Bioschemas/specifications/tree/master/TaxonName/0.1-DRAFT_examples
+mapping:
+- property: additionalType
+  expected_types:
+  - URL
+  description: An additional type for the item, typically used for adding more specific
+    types from external vocabularies in microdata syntax. This is a relationship between
+    something and a class that the thing is in. In RDFa syntax, it is better to use
+    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
+    tools may have only weaker understanding of extra types, in particular those defined
+    externally.
+  type: ""
+  type_url: ""
+  bsc_description: 'An equivalent TaxonName type from a well known vocabulary, e.g.
+    TDWG: http://rs.tdwg.org/ontology/voc/TaxonName#TaxonName'
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: |
+    "@context": [
+          "http://schema.org",
+          { "tn": " http://rs.tdwg.org/ontology/voc/TaxonName#" }
+      ],
+    "@type" : "TaxonName",
+    "additionalType": "tn:TaxonName"
+  example: ""
+- property: author
+  expected_types:
+  - Organization
+  - Person
+  description: The author of this content or rating. Please note that author is special
+    in that HTML 5 provides a special mechanism for indicating authorship via the
+    rel tag. That is equivalent to this and may be used interchangeably.
+  type: ""
+  type_url: ""
+  bsc_description: Authorship and date information associated to this taxon name,
+    formatted as per the numenclatural rules
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+        "name": "Delphinapterus leucas",
+        "author": "(Pallas, 1776)"
+    }
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See background notes for more details.
+  type: ""
+  type_url: ""
+  bsc_description: "A PropertyValue should be used to relate the taxon name with counterpart
+    identifiers within well known authorities such as GBIF, WoRMS, EoL etc.\nWikidata
+    properties may be used in this respect, e.g.:\nNCBI id (https://www.wikidata.org/entity/P685),
+    \nGBIF id (https://www.wikidata.org/entity/P846),\nEoL id (https://www.wikidata.org/entity/P830),
+    \niNaturalist id (https://www.wikidata.org/entity/P3151), \nWoRMS id (https://www.wikidata.org/entity/P850),
+    \nFishbase id (https://www.wikidata.org/entity/P938),\nTAXREF id (https://www.wikidata.org/entity/P3186),\n...\n"
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: |
+    "identifier": [
+        {
+            "@type": "PropertyValue",
+            "name": "WoRMS id",
+            "propertyID": "https://www.wikidata.org/entity/P850",
+            "value": "137115"
+        }
+    ]
+- property: isBasedOn
+  expected_types:
+  - CreativeWork
+  - Product
+  - URL
+  description: A resource from which this work is derived or from which it is a modification
+    or adaption. Supersedes isBasedOnUrl.
+  type: ""
+  type_url: ""
+  bsc_description: A CreativeWork, such as a scholarly article that coined the name
+    or asserted its status
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |
+    "isBasedOn": {
+        "@type": "ScholarlyArticle",
+        "name": "...",
+        "author": [ "First Author", "Second Author" ],
+        "datePublished": "..."
+    }
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: A name of that taxon without authorship and date information
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+        "name": "Delphinapterus leucas",
+        "author": "(Pallas, 1776)"
+    }
+- property: taxonRank
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The taxonomic rank of this taxon given preferably as a URI from a controlled
+    vocabulary – (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata
+    URIs).
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |
+    "taxonRank": [
+      "http://rs.tdwg.org/ontology/voc/TaxonRank#Species",
+      "http://www.wikidata.org/entity/Q7432",
+      "species"
+    ]
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: Link to the webpage associated to this taxon
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+
+---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  <div class="spec-table-wrapper">
+                    {% include specification_table.html %}
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

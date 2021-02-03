@@ -8,7 +8,7 @@ type: generic
 description: Specification for standards
 lead: [PeterMcQuilton]
 email: enquiries@bioschemas.org
-issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20standard
+issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20standard
 folder: https://drive.google.com/drive/u/1/folders/0Bw_p-HKWUjHoaDRIWlVwUXNJcHM
 
 # Page attributes
@@ -17,21 +17,14 @@ objectives:
   [
   'Develop a specification for how to use <a href="http://schema.org">schema.org</a> to describe standards within the Life Sciences.'
   ]
-#specifications:
-#  [  
-#    'Standards'
-#  ]
-draft_specifications:
+
+specifications:
   [  
     'Standard'
   ]
 #types:
 #  [  
 #    'Standards'
-#  ]
-#draft_types:
-#  [  
-#    'Standard'
 #  ]
 
 members:

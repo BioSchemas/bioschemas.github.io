@@ -8,7 +8,7 @@ type: biological
 description: Specification for phenotype profile
 lead: [FedericoLopezGomez]
 email: enquiries@bioschemas.org
-issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Phenotype
+issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Phenotype
 folder: https://drive.google.com/open?id=1zznGVUcp4yTSzyMoIA7BF9k-nieOSHbL
 
 # Page attributes
@@ -23,19 +23,12 @@ objectives:
     'Focus on plant phenotypes but consider a general definition of phenotype taking into account different types of phenotypes. eg. biomedical phenotypes, mouse phenotypes, ...'
   ]
 
-#specifications:
-#  [
-#    'BioChemEntity'
-#  ]
-draft_specifications:
+specifications:
   [
     'Phenotype'
   ]
-#types:
-#    [
-#      'BioChemEntity'
-#    ]
-draft_types:
+
+types:
     [
       'Phenotype'
     ]
@@ -46,4 +39,5 @@ members:
     - RicardoArcila
     - PhilippeRocca-Serra
     - AndraWaagmeester
+    - GiuliaBabbi
 ---

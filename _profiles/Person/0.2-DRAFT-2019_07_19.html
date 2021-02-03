@@ -1,0 +1,310 @@
+---
+redirect_from:
+- "devSpecs/Person/specification"
+- "devSpecs/Person/specification/"
+- "/devSpecs/Person/"
+- "/specifications/drafts/Person"
+- "/profiles/Person/"
+
+name: Person
+
+previous_version: 0.1-DRAFT-2018_03_14
+previous_release:
+
+status: revision
+spec_type: Profile
+group: people
+use_cases_url: /useCases/Person/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1vliGiKWlHzqXWcGPa15l0PzJbQGXPKxYPq8Mups_or4
+gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20person
+live_deploy: ''
+
+
+parent_type: Person
+hierarchy:
+- Thing
+- Person
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: Person
+  subtitle: A specification for describing people in life sciences
+  description: The Life Science Person specification provides a way to describe bioscience
+    events on the World Wide Web. It defines a set of metadata and vocabularies, built
+    on top of existing technologies and standards, that can be used to represent the
+    profile information of people in Web pages and applications. The goal of the specification
+    is to make it easier to discover, life science profile information.
+  version: 0.2-DRAFT-2019_07_19
+  version_date: 20190719T132200
+  official_type: Person
+  full_example: ""
+mapping:
+- property: advisor
+  expected_types:
+  - Person
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: A person who has been an educational, professional or personal
+    advisor to the person.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: curriculumVitae
+  expected_types:
+  - Text
+  - URL
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: A link or body of text describing the person's notable achievements,
+    employment history, and contact details.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: email
+  expected_types:
+  - ContactPoint
+  - Organization
+  - Place
+  description: Email address.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: experience
+  expected_types:
+  - Text
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: A textual description of the professional experiences a person
+    has acquired.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: expertise
+  expected_types:
+  - URL
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: A textual description of the topic which a person has the most
+    expertise in. This should make use of an ontology such as the EDAM ontology
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: '[EDAM:Topic](http://edamontology.org/topic_0003)'
+  example: ""
+- property: funding
+  expected_types:
+  - Text
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: Textual description of current or past funding ths person has acquired
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: homeLocation
+  expected_types:
+  - ContactPoint
+  - Place
+  description: A contact location for a person's residence.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: image
+  expected_types:
+  - ImageObject
+  - URL
+  description: An image of the item. This can be a URL or a fully described ImageObject.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: interest
+  expected_types:
+  - Text
+  - URL
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: Any interests held by the person. These should be single words
+    or short phrases that relate to a person
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: '[EDAM:Topic](http://edamontology.org/topic_0003)'
+  example: ""
+- property: internatonalActivities
+  expected_types:
+  - Text
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: Global connetions related to teaching and scholarly work in the
+    past 3 years
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: journalReferee
+  expected_types:
+  - CreativeWork
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: Which journals this person is a reeree of
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: keywords
+  expected_types:
+  - Text
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  type: schema.org
+  type_url: ""
+  bsc_description: Keywords to describe the person. These should be single words or
+    short phrases that relate to a person.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: knowsLanguage
+  expected_types:
+  - Language
+  description: Of a Person, and less typically of an Organization, to indicate a known
+    language. We do not distinguish skill levels or reading/writing/speaking/signing
+    here. Use language codes from the IETF BCP 47 standard.
+  type: pending
+  type_url: ""
+  bsc_description: A list of languages spoken by the Person
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: mainEntityOfPage
+  expected_types:
+  - CreativeWork
+  - URL
+  description: |-
+    Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details.
+    Inverse property: mainEntity.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: memberOf
+  expected_types:
+  - Organization
+  - ProgramMembership
+  description: |-
+    An Organization (or ProgramMembership) to which this Person or Organization belongs.
+    Inverse property: member.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: orcid
+  expected_types:
+  - Text
+  - URL
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: The url of ID of the person's ORCID (see http://orcid.org)
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: works
+  expected_types:
+  - CreativeWork
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: All or notable publications, presentations, training materials,
+    research outputs or any other body of work attributed to this person.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: worksFor
+  expected_types:
+  - Organization
+  description: Organizations that the person works for.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+
+
+---
+
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

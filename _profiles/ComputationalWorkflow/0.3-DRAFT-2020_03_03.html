@@ -1,0 +1,323 @@
+---
+redirect_from:
+- "/profiles/Workflow/0.3-DRAFT-2020_03_03/"
+
+name: Workflow
+
+previous_version: 0.2-DRAFT-2019_11_29
+previous_release:
+
+status: revision
+spec_type: Profile
+group: workflow
+use_cases_url:
+cross_walk_url: https://docs.google.com/spreadsheets/d/1ovlPQqq6roDayInfj9e9FRidriw9Do4p7EVNF9hWCYU/edit
+gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Workflow
+live_deploy: ''
+
+parent_type: SoftwareSourceCode
+hierarchy:
+- Thing
+- CreativeWork
+- SoftwareSourceCode
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: Workflow
+  subtitle: Bioschemas specification for describing a workflow in the Life Sciences
+  description: A workflow consists of an orchestrated and repeatable pattern of activity
+    enabled by the systematic organization of resources into processes that transform
+    materials, provide services, or process information. It can be depicted as a sequence
+    of operations, the work of a person or group, the work of an organization of staff,
+    or one or more simple or complex mechanisms. (source Wikipedia.org)
+  version: 0.3-DRAFT-2020_03_03
+  version_date: 20200303T202719
+  official_type: 'http://schema.org/Workflow '
+  full_example: pending resolution of issues
+mapping:
+- property: alternateName
+  expected_types:
+  - Text
+  description: An alias for the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: contributor
+  expected_types:
+  - Organization
+  - Person
+  description: A secondary contributor to the CreativeWork or Event.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"contributor" : "Stefan Helfrich"'
+- property: creator
+  expected_types:
+  - Organization
+  - Person
+  description: The creator/author of this CreativeWork. This is the same as the Author
+    property for CreativeWork.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"creator" : "Thomas Duigou"'
+- property: dateCreated
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was created or the item was added
+    to a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"dateCreated" ; "2019-04-30"'
+- property: dateModified
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was most recently modified or when
+    the item's entry was modified within a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"dateModified" : "2019-11-05"'
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"description": "RetroPath2.0 builds a reaction network from a set of source
+    compounds to a set of sink compounds. When applied in a retrosynthetic fashion,
+    the source is composed of the target compounds and the sink is composed of the
+    available reactants (for instance in the context of metabolic engineering the
+    sink is the set of native metabolites of a chassis strain). From amongst all the
+    chemical reactions generated using RetroPath2.0 (in the retrosynthetic way), only
+    a subset may effectively link a source to a subset of sink compounds. This sub-network
+    is considered as a scope and is output in dedicated files."'
+- property: hasPart
+  expected_types:
+  - CreativeWork
+  description: |-
+    Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).
+    Inverse property: isPartOf.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"identifier": "72782bbecfeff6f3e43e2278ee3353adf4515207"'
+- property: image
+  expected_types:
+  - ImageObject
+  - URL
+  description: An image of the item. This can be a URL or a fully described ImageObject.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: input
+  expected_types:
+  - Thing
+  description: the input required to use the workflow (eg. xl spreadsheet, xml file,
+    ...)
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: keywords
+  expected_types:
+  - Text
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: license
+  expected_types:
+  - CreativeWork
+  - URL
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"license" : "https://spdx.org/licenses/CC-BY-4.0.html"'
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: The name of the item as input
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"name": "RetroPath2.0 IBISBA workflow node"'
+- property: output
+  expected_types:
+  - Thing
+  description: the output produced by the workflow
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: programmingLanguage
+  expected_types:
+  - ComputerLanguage
+  - Text
+  description: |
+    The computer programming language.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: sdPublisher
+  expected_types:
+  - Organization
+  - Person
+  description: Indicates the party responsible for generating and publishing the current
+    structured data markup, typically in cases where the structured data is derived
+    automatically from existing published content but published on a different site.
+    For example, student projects and open data initiatives often re-publish existing
+    content with more explicitly structured metadata. The sdPublisherproperty helps
+    make such practices more explicit.
+  type: schema.org
+  type_url: Person
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"sdPublisher" : "IBISBA Admin"'
+- property: softwareRequirements
+  expected_types:
+  - Text
+  - URL
+  description: 'Component dependency requirements for application. This includes runtime
+    environments and shared libraries that are not included in the application distribution
+    package, but required to run the application (Examples: DirectX, Java or .NET
+    runtime). Supersedes requirements.'
+  type: bioschemas
+  type_url: ""
+  bsc_description: Renaming schema.org/requirements as softwareRequirements
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: targetProduct
+  expected_types:
+  - SoftwareApplication
+  description: Target Operating System / Product to which the code applies. If applies
+    to several versions, just the product name can be used.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: version
+  expected_types:
+  - Number
+  - Text
+  description: The version of the CreativeWork embodied by a specified resource.
+  type: ""
+  type_url: ""
+  bsc_description: version is a release, date modified may not warrant a release,
+    but last date modified and access to all versions is important
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"version" : 1'
+
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  <div class="spec-table-wrapper">
+                    {% include specification_table.html %}
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

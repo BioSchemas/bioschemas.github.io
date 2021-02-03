@@ -1,0 +1,239 @@
+---
+name: Journal
+
+previous_version: '0.1-DRAFT-2019_02_08'
+previous_release: 
+
+status: revision
+spec_type: Profile
+group: biotea2bioschemas
+use_cases_url: /useCases/PublicationIssue/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1ecj0bzyRO3tSTyHrKtDGfBwC5bIhgRCmv3yR8ylR_G4
+gh_tasks: https://github.com/BioSchemas/specifications/labels/profile%3A%20Journal
+live_deploy: ''
+
+parent_type: Periodical
+hierarchy:
+- Thing
+- CreativeWork
+- CreativeWorkSeries
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: Journal
+  subtitle: Bioschemas profile, based on Biotea model, describing a Journal in Life
+    Sciences.
+  description: 'A Journal is a collection of publication issues, publication volumes
+    or scholarly articles, or possibly, although no commonly, any mix from those mentioned. '
+  version: 0.1-DRAFT-2019_03_02
+  version_date: 20190208T100317
+  official_type: schema:Collection
+  full_example: pending
+mapping:
+- property: about
+  expected_types:
+  - Thing
+  description: |-
+    The subject matter of the content.
+     Inverse property: subjectOf.
+  type: ""
+  type_url: ""
+  bsc_description: Describes what this Journal is about.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: alternateName
+  expected_types:
+  - Text
+  description: An alias for the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: editor
+  expected_types:
+  - Person
+  description: Specifies the Person who edited the CreativeWork.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: hasPart
+  expected_types:
+  - PublicationIssue
+  - PublicationVolume
+  - ScholarlyArticle
+  description: |-
+    Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).
+     Inverse property: isPartOf.
+  type: ""
+  type_url: ""
+  bsc_description: "A Journal has part a PublicationVolume or PublicationIssue or
+    \nScholaryArticle. We recommend to at least include the highest level \n'hasPart',
+    e.g., PublicationVolume. It is also possible, i.e., optional,\n to 'hasPart' to
+    link as well directly to PublicationIssue and \nScholarlyArticle, making it easier
+    to find articles in this journal."
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: 'Journals are commonly identified by their issn. We recommend to
+    use here the form namespace:id. For instance, issn:2041-1480. '
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: inLanguage
+  expected_types:
+  - Language
+  - Text
+  description: The language of the content or performance or used in an action. Please
+    use one of the language codes from the IETF BCP 47 standard. See also availableLanguage.
+    Supersedes language.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: isAccessibleForFree
+  expected_types:
+  - Boolean
+  description: A flag to signal that the item, event, or place is accessible for free.
+    Supersedes free.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: keywords
+  expected_types:
+  - Text
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: license
+  expected_types:
+  - CreativeWork
+  - URL
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: headline
+  expected_types:
+  - Text
+  description: Headline of the article.
+  type: ""
+  type_url: ""
+  bsc_description: Title of the journal.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: publisher
+  expected_types:
+  - Organization
+  - Person
+  description: The publisher of the creative work.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: publishingPrinciples
+  expected_types:
+  - CreativeWork
+  - URL
+  description: |-
+    The publishingPrinciples property indicates (typically via URL) a document describing the editorial principles of an Organization (or individual e.g. a Person writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a CreativeWork (e.g. NewsArticle) the principles are those of the party primarily responsible for the creation of the CreativeWork.
+
+     While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a funder) can be expressed using schema.org terminology.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: sameAs
+  expected_types:
+  - URL
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

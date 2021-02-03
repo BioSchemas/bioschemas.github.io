@@ -1,0 +1,252 @@
+---
+name: Journal
+
+previous_version: '0.1-DRAFT-2019_11_20'
+previous_release:
+
+status: revision
+spec_type: Profile
+group: publications
+use_cases_url: /useCases/ScholarlyPublications/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1cRtlx0UPer-qyLoEbynBsNINacAD--6UpJnWg4WLO2g
+gh_tasks: https://github.com/BioSchemas/specifications/labels/profile%3A%20Journal
+live_deploy: ''
+
+parent_type: Periodical
+hierarchy:
+- Thing
+- CreativeWork
+- CreativeWorkSeries
+
+
+spec_info:
+  title: Journal
+  subtitle: Bioschemas profile, based on Biotea model, describing a Journal in Life
+    Sciences. For markup purposes, we are keeping the schema:Periodical type so it
+    will be easily recognized and parsed by search engines.
+  description: 'A Journal is a collection of publication issues, publication volumes
+    or scholarly articles, or possibly, although no commonly, any mix from those mentioned. '
+  version: 0.1-DRAFT-2019_11_21
+  version_date: 20190509T053117
+  official_type: schema:Collection
+  full_example: https://github.com/Bioschemas/specifications/tree/master/ScholarlyPublications
+mapping:
+- property: about
+  expected_types:
+  - Thing
+  description: |-
+    The subject matter of the content.
+     Inverse property: subjectOf.
+  type: ""
+  type_url: ""
+  bsc_description: Describes what this Journal is about.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: alternateName
+  expected_types:
+  - Text
+  description: An alias for the item.
+  type: ""
+  type_url: ""
+  bsc_description: While name should be used for the official Journal name, abbreviations and others can be included here.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: editor
+  expected_types:
+  - Person
+  description: Specifies the Person who edited the CreativeWork.
+  type: ""
+  type_url: ""
+  bsc_description: Journal editor, whenever possible please use the ORCID URL as persistent, unique, global identifier.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: hasPart
+  expected_types:
+  - PublicationIssue
+  - PublicationVolume
+  - ScholarlyArticle
+  description: |-
+    Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).
+     Inverse property: isPartOf.
+  type: ""
+  type_url: ""
+  bsc_description: "A Journal has part a PublicationVolume or PublicationIssue or
+    ScholaryArticle. We recommend to at least include the highest level 'hasPart',
+    e.g., PublicationVolume. It is also possible, i.e., optional, to 'hasPart' to
+    link as well directly to PublicationIssue and ScholarlyArticle, making it easier
+    to find articles in this journal."
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind of Thing,
+    such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these,
+    either as textual strings or as URL (URI) links. See background notes for more details.
+  type: ""
+  type_url: ""
+  bsc_description: Mainly used by journal catalogs to record their own internal identifier. For instance, the National
+    Library of Medicine assigns the identifier 101531992 to the issn-e:2041-1480 Journal.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: issn
+  expected_types:
+  - Text
+  description: The International Standard Serial Number (ISSN) that identifies this serial publication.
+    You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this
+    serial publication.
+  type: ""
+  type_url: ""
+  bsc_description: 'We recommend to use here the form namespace:id in order to distinguish printed from electronical
+    ISSNs. For instance, issn-e:2041-1480 for the electronic online version or issn-p:0003-4819 for the printed version'
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: inLanguage
+  expected_types:
+  - Language
+  - Text
+  description: The language of the content or performance or used in an action. Please
+    use one of the language codes from the IETF BCP 47 standard. See also availableLanguage.
+    Supersedes language.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: isAccessibleForFree
+  expected_types:
+  - Boolean
+  description: A flag to signal that the item, event, or place is accessible for free.
+    Supersedes free.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: keywords
+  expected_types:
+  - Text
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: license
+  expected_types:
+  - CreativeWork
+  - URL
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: "Title/name of the journal."
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: publisher
+  expected_types:
+  - Organization
+  - Person
+  description: The publisher of the creative work.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: publishingPrinciples
+  expected_types:
+  - CreativeWork
+  - URL
+  description: |-
+    The publishingPrinciples property indicates (typically via URL) a document describing the editorial principles of an Organization (or individual e.g. a Person writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a CreativeWork (e.g. NewsArticle) the principles are those of the party primarily responsible for the creation of the CreativeWork.
+
+     While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a funder) can be expressed using schema.org terminology.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: sameAs
+  expected_types:
+  - URL
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  type: ""
+  type_url: ""
+  bsc_description: Another possible URL for journals is the ISSN portal, for instance, the page
+    https://portal.issn.org/resource/ISSN/2041-1480 corresponds to the Journal issn_p:2041-1480
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

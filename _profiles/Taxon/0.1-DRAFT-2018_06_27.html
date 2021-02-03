@@ -1,0 +1,225 @@
+---
+name: Taxon
+
+previous_version: 
+previous_release: 
+
+status: revision
+spec_type: Profile
+group: biodiversity
+use_cases_url: ''
+cross_walk_url: https://drive.google.com/open?id=1hHE7SHz9qt6Eg6j6DQgI9BwhrlGOwkO68fzek78m62I
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20Taxon
+live_deploy: ''
+
+parent_type: BioChemEntity
+hierarchy:
+- Thing
+- BioChemEntity
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: Taxon
+  subtitle: Bioschemas specification for describing a biological taxon
+  description: This profile aims to denote a taxon by common properties such as its
+    scientific name, authority, taxonomic rank and vernacular names. It is also a
+    means to link to existing taxonomic registers where each taxon has a URI.
+  version: 0.1-DRAFT-2018_06_27
+  version_date: 20180627T095507
+  official_type: http://rs.tdwg.org/dwc/terms/Taxon
+  full_example: 'https://github.com/Bioschemas/specifications/tree/master/Taxon/examples'
+mapping:
+- property: additionalType
+  expected_types:
+  - URL
+  description: |-
+    An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.
+    BioChemEntity: Whenever a suitable profile exists, the profile type should be used in addition to the BioChemEntity type. Other additional types are always possible via the additionalType property. For instance, http://purl.obolibrary.org/obo/PR_000000001 is the type used for the Protein profile but http://semanticscience.org/resource/SIO_010043 or https://www.wikidata.org/wiki/Q8054 can be used as an additionalType if that results useful somehow to the data providers.
+  type: ""
+  type_url: ""
+  bsc_description: A Taxon type from a well known vocabulary, e.g. DarwinCore http://rs.tdwg.org/dwc/terms/Taxon
+    or http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+        "@type" : [ "BioChemEntity", "Taxon" ],
+        "additionalType": "dwc:Taxon"
+    }
+- property: alternateName
+  expected_types:
+  - Text
+  description: An alias for the item.
+  type: ""
+  type_url: ""
+  bsc_description: Scientific name, possibly including authorship and date information,
+    of a synonym of the currently valid (zoological) or accepted (botanical) taxon.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+        "name": "Delphinapterus leucas (Pallas, 1776)",
+        "alternateName": "Balaena albicans Muller, 1776"
+    }
+- property: isContainedIn
+  expected_types:
+  - BioChemEntity
+  description: Indicates a BioChemEntity that this BioChemEntity is (in some sense)
+    part of.
+  type: bioschemas
+  type_url: ""
+  bsc_description: Direct, most proximate higher-rank parent taxon
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: Scientific name, possibly including authorship and date information
+    of the currently valid (zoological) or accepted (botanical) taxon. If the authorship
+    and date information are not included, then they should be provided in the scientifiName
+    property.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+        "name": "Delphinapterus leucas (Pallas, 1776)",
+        "alternateName": "Balaena albicans Muller, 1776"
+    }
+- property: rank
+  expected_types:
+  - Text
+  description: ""
+  type: external
+  type_url: http://rs.tdwg.org/ontology/voc/TaxonConcept#rank
+  bsc_description: The taxonomic rank of this name
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: "{\n    \"dwc:taxonRank\": \"species\",    \n    \"tc:rank\": \"http://rs.tdwg.org/ontology/voc/TaxonRank#Species\",\n}"
+- property: sameAs
+  expected_types:
+  - URL
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  type: ""
+  type_url: ""
+  bsc_description: URL of third-party webpages describing the same taxon
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+        "sameAs": [
+            "http://eol.org/pages/328541",
+            "http://en.wikipedia.org/w/index.php?title=Beluga_whale",
+            "http://www.catalogueoflife.org/annual-checklist/details/species/id/6850357",
+            "http://www.iucnredlist.org/details/6335"
+        ]
+    }
+- property: scientificName
+  expected_types:
+  - Text
+  description: ""
+  type: ""
+  type_url: http://rs.tdwg.org/dwc/terms/scientificName
+  bsc_description: Full scientific name, with authorship and date information if known
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+        "dwc:scientificName": "Delphinapterus leucas (Pallas, 1776)",
+        "dwc:scientificNameAuthorship": "(Pallas, 1776)"
+    }
+- property: scientificNameAuthorship
+  expected_types:
+  - Text
+  description: ""
+  type: external
+  type_url: http://rs.tdwg.org/dwc/terms/scientificNameAuthorship
+  bsc_description: 'Authorship information for the scientificName formatted according
+    to the conventions of the applicable nomenclatural Code. Example: "(Torr.) J.T.
+    Howell", "(Martinovský) Tzvelev", "(Györfi, 1952)"'
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+        "dwc:scientificName": "Delphinapterus leucas (Pallas, 1776)",
+        "dwc:scientificNameAuthorship": "(Pallas, 1776)"
+    }
+- property: taxonRank
+  expected_types:
+  - Text
+  description: ""
+  type: external
+  type_url: http://rs.tdwg.org/dwc/terms/taxonRank
+  bsc_description: The taxonomic rank of this name
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: "{\n    \"dwc:taxonRank\": \"species\",    \n    \"tc:rank\": \"http://rs.tdwg.org/ontology/voc/TaxonRank#Species\",\n}"
+- property: url
+  expected_types:
+  - URL
+  description: |-
+    URL of the item.
+    BioChemEntity: Link to the official webpage associated to this entity.
+  type: ""
+  type_url: ""
+  bsc_description: Link to the webpage associated with this taxon
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: vernacularName
+  expected_types:
+  - Text
+  description: ""
+  type: external
+  type_url: http://rs.tdwg.org/dwc/terms/vernacularName
+  bsc_description: A vernacular (common) name of the taxon
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+        "dwc:vernacularName": [
+            { "@language": "en", "@value": "Beluga Whale" },
+            { "@language": "fr", "@value": "Bélouga" }
+        ]
+    }
+
+---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  <div class="spec-table-wrapper">
+                    {% include specification_table.html %}
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

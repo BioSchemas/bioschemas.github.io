@@ -8,7 +8,7 @@ type: biological
 description: Specification for biodiversity-related profiles and/or types
 lead: [FranckMichel, LeylaGarcia]
 email: enquiries@bioschemas.org
-issues: https://github.com/BioSchemas/specifications/labels/type%3A%20Taxon
+issues: https://github.com/Bioschemas/specifications/labels/type%3A%20Taxon
 folder: https://drive.google.com/drive/folders/1Fp2AKbb07So7rVvUhnQIjpl8HLPSwpbP
 
 # Page attributes
@@ -22,23 +22,18 @@ objectives:
   ]
 specifications:
   [
-    'Taxon'
+    'Taxon', 'TaxonName'
   ]
-draft_specifications:
-  [
-    'Taxon',
-  ]
+
 types:
   [
-    'Taxon'
+    'Taxon', 'TaxonName'
   ]
-draft_types:
-  [
-    'Taxon',
-  ]
+
 members:
     - QuentinGroom
     - RicardoArcila
     - ylebras
     - RomanBaum
+    - MattYoder
 ---

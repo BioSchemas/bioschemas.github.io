@@ -8,7 +8,7 @@ type: generic
 description: Specification for Dataset
 lead: [SusannaSansone]
 email: enquiries@bioschemas.org
-issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Dataset
+issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Dataset
 folder: https://drive.google.com/open?id=0B2tKthYRS0f5aEhkU1Q4aEE5TEU
 
 # Page attributes
@@ -27,15 +27,8 @@ specifications:
   [
     'Dataset', 'DataRecord'
   ]
-draft_specifications:
-  [
-    'Dataset', 'DataRecord'
-  ]
+
 types:
-  [
-    'DataRecord'
-  ]
-draft_types:
   [
     'DataRecord'
   ]

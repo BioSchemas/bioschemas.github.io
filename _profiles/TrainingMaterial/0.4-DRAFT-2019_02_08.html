@@ -1,0 +1,409 @@
+---
+name: TrainingMaterial
+
+previous_version: 0.4-DRAFT-2018_11_16
+previous_release:
+
+status: revision
+spec_type: Profile
+group: training
+use_cases_url: /useCases/TrainingMaterials/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1cQ6mDbsG_cMX2EDAN8xH6-9yMRba8-rErlPeP8HTs8A
+gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Training%20material
+live_deploy: ''
+
+parent_type: CreativeWork
+hierarchy:
+- Thing
+- CreativeWork
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: TrainingMaterial
+  subtitle: A specification for describing training materials in life sciences.
+  description: The Life Science Training Materials specification provides a way to
+    describe bioscience training material on the World Wide Web. It defines a set
+    of metadata and vocabularies, built on top of existing technologies and standards,
+    that can be used to represent events in Web pages and applications. The goal of
+    the specification is to make it easier to discover, exchange and integrate life
+    science training material information across the Internet.
+  version: 0.4-DRAFT-2019_02_08
+  version_date: 20190208T145314
+  official_type: ""
+  full_example: https://github.com/Bioschemas/specifications/tree/master/TrainingMaterial/examples/
+mapping:
+- property: about
+  expected_types:
+  - Thing
+  description: The subject matter of the content.
+  type: ""
+  type_url: ""
+  bsc_description: 'The subject of this Training Material. Use the definedTerm schema
+    to add a controlled vocabulary term such as EDAM that descibes the subject . '
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: '[EDAM Topic Ontology](http://edamontology.org)'
+  example: "\"about\": [{\n  \"@type\": \"DefinedTerm\", \n  \"@id\": \"http://edamontology.org/topic_3316\",\n
+    \ \"inDefinedTermSet\": \"http://edamontology.org\",\n  \"termCode\": \"topic_3316\",\n
+    \ \"name\": \"Computer Science\",\n  \"url\": \"https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_3316\"\n},
+    {\n  \"@type\": \"Dataset\",\n   \"@id\": \"https://zenodo.org/record/1480624#.W-2as3r0nCM\"\n}]"
+- property: audience
+  expected_types:
+  - Audience
+  description: An intended audience, i.e. a group for whom something was created.
+    Supersedes serviceAudience.
+  type: ""
+  type_url: ""
+  bsc_description: 'The type of audience intended for your course. Whereas "about"
+    describes topic and "skillLevel" describes their abilities; "audience" is a succinct
+    description of the attendees. '
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: "\"audience\": {\n  \"@type\": \"Audience\",\n  \"audienceType\": \"PhD
+    students\" \n}"
+- property: author
+  expected_types:
+  - Organization
+  - Person
+  description: The author of this content or rating. Please note that author is special
+    in that HTML 5 provides a special mechanism for indicating authorship via the
+    rel tag. That is equivalent to this and may be used interchangeably.
+  type: ""
+  type_url: ""
+  bsc_description: The main authors of the training material. Use the contributor
+    field for secondary contributors
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: "\"author\":  [{\n  \"@type\": \"Person\",\n  \"name\": \"Elizabeth Windsor\",\n
+    \ \"email\": \"e.r.windsor@gmail.com\"\n},{ \n  \"@type\": \"Organization\",\n
+    \ \"name\": \"University of Manchester\"\n}]"
+- property: contributor
+  expected_types:
+  - Organization
+  - Person
+  description: A secondary contributor to the CreativeWork or Event.
+  type: ""
+  type_url: ""
+  bsc_description: Add the names of organizations or persons who contributed but are
+    not considered authors
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: "\"contributor\":  [{\n  \"@type\": \"Person\",\n  \"name\": \"Bob Smith\",\n},{
+    \n  \"@type\": \"Organization\",\n  \"name\": \"University of Edinburgh\"\n}]"
+- property: dateCreated
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was created or the item was added
+    to a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"dateCreated": "2018-07-04T11:24:13+00:00"'
+- property: dateModified
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was most recently modified or when
+    the item's entry was modified within a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"dateModified": "2018-08-04T19:34:12+00:00"'
+- property: datePublished
+  expected_types:
+  - Date
+  description: Date of first broadcast/publication.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"datePublished": "2018-08-04T19:34:12+00:00"'
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |
+    "description": "This tutorial will take you through the basic usage of the command line shell. In it, you will discover what a shell is, skills for directory navigation, file manipulation, and how to run tools"
+- property: hasPart
+  expected_types:
+  - CreativeWork
+  - Trip
+  description: Event
+  type: ""
+  type_url: ""
+  bsc_description: |
+    A sub-training material or externally referenced training material
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: "\"hasPart\": [\n{\n    \"@type\": \"CreativeWork\",\n    \"url\": \"http://directoryVisuals.io\",\n
+    \   \"name\": \"Shell Directory Visualizer\"\n }, \n {\n    \"@type\": \"CreativeWork\",\n
+    \   \"url\": \"http://shell.io\",\n    \"name\": \"Interactive Shell tutorial\"\n}]"
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: |
+    An identifier for this resource such as a DOI or compact URI
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    "identifier": [
+      "http://identifiers.org/my-org/13412",
+      "http://dx.doi.org/12349302"
+    ]
+- property: inLanguage
+  expected_types:
+  - Language
+  - Text
+  description: The language of the content or performance or used in an action. Please
+    use one of the language codes from the IETF BCP 47 standard. See also [availableLanguage](http://schema.org/availableLanguage).
+    Supersedes language.
+  type: ""
+  type_url: ""
+  bsc_description: Defaults to English if not specified. Please choose a value from
+    [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: '[IETF BCP 47 standard](http://tools.ietf.org/html/bcp47)'
+  example: '"inLanguage": " en-US"'
+- property: isPartOf
+  expected_types:
+  - CreativeWork
+  description: |-
+    Indicates a CreativeWork that this CreativeWork is (in some sense) part of.
+    Inverse property: [hasPart](http://schema.org/hasPart).
+  type: ""
+  type_url: ""
+  bsc_description: "The Course this Training Material was/will be used in. Or a training
+    material this training material is a part of (for example, if this is a module
+    in a book, isPartOf can describe the book).\n\nInverse property: hasPart\n\nIf
+    this varies in CourseInstances, use the featuredIn property "
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    "isPartOf": [{
+          "@type": "CreativeWork",
+          "url": "http://computerScience4LS.org",
+          "name": "The complete Computer Science for Life Scientists Coursebook"
+    }]
+- property: keywords
+  expected_types:
+  - Text
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"keywords": "Unix, Shell, Command Line Tools, Terminal, Bash"'
+- property: learningResourceType
+  expected_types:
+  - Text
+  description: The predominant type or kind characterizing the learning resource.
+    For example, 'presentation', 'handout'.
+  type: ""
+  type_url: ""
+  bsc_description: This may include things such as video lecture, e-Learning module,
+    or tutorial.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"learningResourceType": ["handout"]'
+- property: license
+  expected_types:
+  - CreativeWork
+  - URL
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  type: ""
+  type_url: ""
+  bsc_description: If there is a licence it must be added.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"license": ["https://creativecommons.org/licenses/by/4.0/"]'
+- property: mainEntityOfPage
+  expected_types:
+  - CreativeWork
+  - URL
+  description: |-
+    Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details.
+    Inverse property: mainEntity.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: mentions
+  expected_types:
+  - Thing
+  description: Indicates that the CreativeWork contains a reference to, but is not
+    necessarily about a concept.
+  type: ""
+  type_url: ""
+  bsc_description: Datasets, tools, etc, to which are used by or referred to by this
+    training material
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    "mentions": [{
+      "@type": "Tool",
+      "name": "Galaxy",
+      "url": "https://bio.tools/galaxy",
+      "description": "Open, web-based platform for data intensive biomedical research"
+    },{
+      "@type": "Dataset",
+      "name": "European Genome-phenome Archive",
+      "url": "https://www.ebi.ac.uk/ega/home",
+      "description": "The EGA archives a large number of datasets, the access to which is controlled by a Data Access Committee (DAC)."
+    }]
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"name": "The Unix Command Line tutorial for Bioinformaticians"'
+- property: sameAs
+  expected_types:
+  - URL
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"sameAs": ["http://coursera.org/CLT"]'
+- property: skillLevel
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: The students level of ability in the topic being taught. Examples
+    of skill levels include 'beginner', 'intermediate' or 'advanced'
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    "educationalLevel": [{
+      "@type": "
+    }]
+- property: status
+  expected_types:
+  - Text
+  description: ""
+  type: bioschemas
+  type_url: ""
+  bsc_description: The status of a training material. If this is not filled in it
+    will be regarded as Active. Options are Active, Under development, and Archived.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: |-
+    - Active
+    - Under development
+    - Archived
+  example: '"status": "active"'
+- property: timeRequired
+  expected_types:
+  - Duration
+  description: Approximate or typical time it takes to work with or through this learning
+    resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.
+  type: ""
+  type_url: ""
+  bsc_description: Please specify in [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601).
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: '[ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601).'
+  example: '"timeRequired": "P1W2DT5H"'
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"url": "http://teach-me-ctl.com/tutorial"'
+- property: version
+  expected_types:
+  - Number
+  - Text
+  description: The version of the CreativeWork embodied by a specified resource.
+  type: ""
+  type_url: ""
+  bsc_description: If this training material is versioned, its strongly recommended
+    you add it
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"version": "0.2.0"'
+  
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  <div class="spec-table-wrapper">
+                    {% include specification_table.html %}
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

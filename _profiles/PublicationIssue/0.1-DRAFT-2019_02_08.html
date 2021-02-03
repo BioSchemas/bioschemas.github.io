@@ -1,0 +1,224 @@
+---
+name: PublicationIssue
+
+previous_version: 0.1-DRAFT-2019_01_31
+previous_release:
+
+
+status: revision
+spec_type: Profile
+group: publications
+use_cases_url: /useCases/ScholarlyPublications/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1051XQLDg3pcPPPg7ro9cVMZ3nMrQGsBm09a8i1OZarI/
+gh_tasks: https://github.com/BioSchemas/specifications/labels/profile%3A%20PublicationIssue
+live_deploy: ''
+
+parent_type: PublicationIssue
+hierarchy:
+- Thing
+- CreativeWork
+- PublicationIssue
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: PublicationIssue
+  subtitle: Bioschemas profile, based on Biotea model, describing a PublicationIssue
+    in Life Sciences.
+  description: A PublicationIssue is a collection of publication scholarly articles
+    published as a collection in a publication volume or a journal
+  version: 0.1-DRAFT-2019_02_08
+  version_date: 20190208T103820
+  official_type: schema:PublicationIssue
+  full_example: https://github.com/Bioschemas/specifications/tree/master/ScholarlyPublications
+mapping:
+- property: about
+  expected_types:
+  - Thing
+  description: |-
+    The subject matter of the content.
+     Inverse property: subjectOf.
+  type: ""
+  type_url: ""
+  bsc_description: Describes what this issue is about.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: editor
+  expected_types:
+  - Person
+  description: Specifies the Person who edited the CreativeWork.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: hasPart
+  expected_types:
+  - ScholarlyArticle
+  description: |-
+    Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).
+     Inverse property: isPartOf.
+  type: ""
+  type_url: ""
+  bsc_description: A PublicationIssue has part ScholarlyArticle.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: Publication issues do not commonly have a global or unique identifier.
+    We recommend here to use the URL as identifier whenever possible.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: inLanguage
+  expected_types:
+  - Language
+  - Text
+  description: The language of the content or performance or used in an action. Please
+    use one of the language codes from the IETF BCP 47 standard. See also availableLanguage.
+    Supersedes language.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: isPartOf
+  expected_types:
+  - PublicationVolume
+  - Journal
+  description: |-
+    Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.
+     Inverse property: hasPart.
+  type: ""
+  type_url: ""
+  bsc_description: A PublicationIssue is part of PublicationVoume or Journal. If it
+    is part of a PublicationVolume, optionally the 'isPartOf' a Journal could explicitely
+    indicated as well, making it easier to find the journal this issue belongs to.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: issueNumber
+  expected_types:
+  - Integer
+  - Text
+  description: Identifies the issue of publication; for example, "iii" or "2".
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: keywords
+  expected_types:
+  - Text
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: pageEnd
+  expected_types:
+  - Integer
+  - Text
+  description: The page on which the work ends; for example "138" or "xvi".
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: pageStart
+  expected_types:
+  - Integer
+  - Text
+  description: The page on which the work starts; for example "135" or "xiii".
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: pagination
+  expected_types:
+  - Text
+  description: Any description of pages that is not separated into pageStart and pageEnd;
+    for example, "1-6, 9, 55" or "10-12, 46-49".
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: sameAs
+  expected_types:
+  - URL
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  type: ""
+  type_url: ""
+  bsc_description: Any other link to this issue.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: Oficial URL.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

@@ -9,11 +9,7 @@ description: Specifications for scholarly publication related profiles
 lead: [AlexanderGarcia, LeylaGarcia]
 email: enquiries@bioschemas.org
 issues:
-  - https://github.com/BioSchemas/bioschemas/labels/type%3A%20Scholarlyarticle
-  - https://github.com/BioSchemas/bioschemas/labels/type%3A%20Journal
-  - https://github.com/BioSchemas/bioschemas/labels/type%3A%20PublicationIssue
-  - https://github.com/BioSchemas/bioschemas/labels/type%3A%20PublicationVolume
-  - https://github.com/BioSchemas/bioschemas/labels/type%3A%20SemanticAnnotation
+  - https://github.com/BioSchemas/specifications/labels/group%3A%20Scholarly%20Publication
 folder:
   - https://drive.google.com/drive/folders/1CgEyta4d7vFfYT7r7w9HtLZ4kAidDmJI
 
@@ -28,11 +24,7 @@ objectives:
 
 specifications:
   [
-
-  ]
-draft_specifications:
-  [
-    'ScholarlyArticle', 'Journal', 'PublicationIssue', 'PublicationVolume', 'SemanticAnnotation'
+    'ScholarlyArticle', 'Journal', 'PublicationIssue', 'PublicationVolume', 'SemanticTextAnnotation'
   ]
 
 members:

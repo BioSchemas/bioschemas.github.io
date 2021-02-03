@@ -1,0 +1,545 @@
+---
+
+name: Course
+
+previous_version: '0.6-DRAFT-2019_06_06'
+previous_release:
+
+status: revision
+spec_type: Profile
+group: training
+use_cases_url: https://docs.google.com/spreadsheets/d/1kyTFfqoUveSeiGEp0K44R7oqLtGTbBWAY8lqlT4KWHo/edit#gid=1483018794
+cross_walk_url: https://docs.google.com/spreadsheets/d/1cQ6mDbsG_cMX2EDAN8xH6-9yMRba8-rErlPeP8HTs8A
+gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Course
+live_deploy: ''
+
+parent_type: Course
+hierarchy:
+- Thing
+- CreativeWork
+- Course
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: Course
+  subtitle: 'Specification describing a course. '
+  description: 'This specification must be used in tandem with a courseInstance. A
+    course is used to describe the broad, common aspects of a recurring training event
+    - whereas a course instance is about the specific times and location of when that
+    course is held. '
+  version: "0.7-DRAFT-2019_11_08"
+  version_date: 20191108T153809
+  official_type: ""
+  full_example: ""
+mapping:
+- property: about
+  expected_types:
+  - Thing
+  description: |-
+    The subject matter of the content.
+    Inverse property: subjectOf.
+  type: ""
+  type_url: ""
+  bsc_description: The subject of this Course. Use the DefinedTerm type to add a controlled-vocabulary
+    term to categorise the course (e.g., using the [EDAM Topic ontology](EDAM Topic
+    ontology](https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_0003)).
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: EDAM term
+  example: "\"about\": [{\n  \"@type\": \"DefinedTerm\", \n  \"@id\": \"http://edamontology.org/topic_3316\",\n
+    \ \"inDefinedTermSet\": \"http://edamontology.org\",\n  \"termCode\": \"topic_3316\",\n
+    \ \"name\": \"Computer Science\",\n  \"url\": \"https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_3316\"\n}]"
+- property: abstract
+  expected_types:
+  - Text
+  description: A brief overview of the item.
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |
+    "abstract": "This tutorial will take you through the basic usage of the command line shell. In it, you will discover what a shell is, skills for directory navigation, file manipulation, and how to run tools"
+- property: accessibilitySummary
+  expected_types:
+  - Text
+  description: A human-readable summary of specific accessibility features or deficiencies,
+    consistent with the other accessibility metadata but expressing subtleties such
+    as "short descriptions are present but long descriptions will be needed for non-visual
+    users" or "short descriptions are present and no long descriptions are needed."
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |
+    "accessibilitySummary": "Visual elements are not described."
+- property: aggregateRating
+  expected_types:
+  - AggregateRating
+  description: The overall rating, based on a collection of reviews or ratings, of
+    the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: alternateName
+  expected_types:
+  - Text
+  description: An alias for the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"alternateName": ["Comp-sci 101"]'
+- property: citation
+  expected_types:
+  - CreativeWork
+  - Text
+  description: A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: comment
+  expected_types:
+  - Comment
+  description: Comments, typically from users.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: commentCount
+  expected_types:
+  - Integer
+  description: The number of comments this CreativeWork (e.g. Article, Question or
+    Answer) has received. This is most applicable to works published in Web sites
+    with commenting system; additional comments may exist elsewhere.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: contentReferenceTime
+  expected_types:
+  - DateTime
+  description: The specific time described by a creative work, for works (e.g. articles,
+    video objects etc.) that emphasise a particular moment within an Event.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: courseCode
+  expected_types:
+  - Text
+  description: The identifier for the Course used by the course provider (e.g. CS101
+    or 6.001).
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"courseCode": "CS101"'
+- property: coursePrerequisites
+  expected_types:
+  - AlignmentObject
+  - Course
+  - Text
+  description: Requirements for taking the Course. May be completion of another Course
+    or a textual description like "permission of instructor". Requirements may be
+    a pre-requisite competency, referenced using AlignmentObject.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    "coursePrerequisites": [
+         {
+              "@type": "AlignmentObject",
+              "alignmentType": "educationalLevel",
+              "educationalFramework": "QAA",
+              "targetName": "Higher Education Credit Framework For England",
+              "targetUrl": "https://www.qaa.ac.uk/docs/qaa/quality-code/academic-credit-framework.pdf?sfvrsn=940bf781_12"
+        },
+        {
+            "@type": "Course",
+            //Minimal
+            "name": "Foundation Course in CS",
+            "description": "This course introduces you to the very basic, foundational concepts of computers and programming",
+            "keywords": "CS, foundation, course, eLearning",
+            //Recommended
+            "url": "http://my-training.site/myPrerequisiteCourse",
+            "timeRequired": "P1W2DT5H",
+            "skillLevel": "beginner"
+        }
+    ]
+- property: creator
+  expected_types:
+  - Organization
+  - Person
+  description: The creator/author of this CreativeWork. This is the same as the Author
+    property for CreativeWork.
+  type: ""
+  type_url: ""
+  bsc_description: The creator/author of the course. Note, this may be different from
+    the instructor who delivers it (descibed in CourseInstance), or the author who
+    created the training materials used.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: "\"author\":  [{\n  \"@type\": \"Person\",\n  \"name\": \"Elizabeth Windsor\"\n},{
+    \n  \"@type\": \"Organization\",\n  \"name\": \"University of Manchester\"\n}]"
+- property: dateCreated
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was created or the item was added
+    to a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"dateCreated": "2019-02-18 09:00:00 +0000"'
+- property: dateModified
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was most recently modified or when
+    the item's entry was modified within a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"dateModified": ["2019-03-28 13:25:13 +0000"]'
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"description": "This is a course ran at an institution. It''s ran periodically
+    - specific courses can be found through CourseInstances"'
+- property: educationalCredentialAwarded
+  expected_types:
+  - Text
+  - URL
+  description: A description of the qualification, award, certificate, diploma or
+    other educational credential awarded as a consequence of successful completion
+    of this course.
+  type: ""
+  type_url: ""
+  bsc_description: Strongly recommended if it exists.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"educationalCredentialAwarded": "Certified Software Carpentry Instructor"'
+- property: hasCourseInstance
+  expected_types:
+  - CourseInstance
+  description: An offering of the course at a specific time and place or through specific
+    media or mode of study or to a specific section of students.
+  type: ""
+  type_url: ""
+  bsc_description: |-
+    A course may be run multiple times in different locations or at different times. Use hasCourseInstance to list the offerings of this Course.
+
+    Please see the [Course Instance specification](https://bioschemas.org/specifications/CourseInstance) for the full list of properties.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: "\"hasCourseInstance\": [\n    {\n      \"@type\": \"CourseInstance\",\n\n
+    \     //Minimal\n      \"courseMode\": \"online\",\n      \"location\": {\n          \"@type\":
+    \"Place\",\n          \"address\": {\n            \"@type\": \"PostalAddress\",\n
+    \           \"streetAddress\": \"1.17, Kilburn Building, University of Manchester\",\n
+    \           \"addressLocality\": \"Manchester\",\n            \"addressRegion\":
+    \"Greater Manchester\",\n            \"addressCountry\": \"United Kingdom\",\n
+    \           \"postalCode\": \"M13 9PL\"\n          }\n      },\n      //Recommended\n
+    \     \"url\": \"http://my-training.site/myCourse/courseInstance\",\n      \"inLanguage\":
+    \"en-GB\",\n      \"instructor\": [{\n        \"@type\": \"Person\",\n        \"name\":
+    \"John Smith\"\n      },{ \n        \"@type\": \"Person\",\n        \"name\":
+    \"Bob Jones\"\n      }],\n      \"startDate\": \"2019-02-04T11:00:00\",\n      \"endDate\":
+    \"2019-02-05T17:00:00\",\n      \"offers\":     {\n            \"@type\": \"Offer\",\n
+    \           \"price\": \"100.00\",\n            \"priceCurrency\": \"GBP\",\n
+    \           \"url\": \"http://www.eventbrite.com/my-workshop\"\n      },\n      \"mentions\":
+    [{\n          \"@type\": \"Tool\",\n          \"name\": \"Galaxy\",\n          \"url\":
+    \"https://bio.tools/galaxy\",\n          \"description\": \"Open, web-based platform
+    for data intensive biomedical research\"\n       },\n       {\n          \"@type\":
+    \"Dataset\",\n          \"name\": \"European Genome-phenome Archive\",\n          \"url\":
+    \"https://www.ebi.ac.uk/ega/home\",\n          \"description\": \"The EGA archives
+    a large number of datasets, the access to which is controlled by a Data Access
+    Committee (DAC).\"\n        }],\n    }\n]"
+- property: hasPart
+  expected_types:
+  - CreativeWork
+  - Trip
+  description: |-
+    Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).
+    Inverse property: isPartOf.
+  type: ""
+  type_url: ""
+  bsc_description: |
+    Training Materials used in a Course, such as exercises, handouts or slides.
+
+    If this varies in a *CourseInstance*, use _workFeatured_ in *CourseInstance* to override _hasPart_.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: "\"hasPart\": [{\n  \"@type\": \"TrainingMaterial\",\n\n  //Minimum\n  \"name\":
+    \"Course Slides for CS101\",\n  \"description\": \"The course slides contain diagrams,
+    questions, and links to various resources about this course\",\n  \"keywords\":
+    \"Computer Science, CS, Introductory\",\n\n  //Recommended\n  \"timeRequired\":
+    \"P1W2DT5H\",\n  \"learningResourceType\": [\"slides\"],\n  \"url\": \"http://example.com/slides_website\",\n
+    \ \"license\": [\"https://creativecommons.org/licenses/by/4.0/\"],\n  \"skillLevel\":
+    \"beginner\",\n  \"identifier\": [\"http://identifiers.org/my-org/13412\"],\n
+    \ \"about\": [{\n      \"@type\": \"DefinedTerm\", \n      \"@id\": \"http://edamontology.org/topic_3316\",\n
+    \     \"inDefinedTermSet\": \"http://edamontology.org\",\n      \"termCode\":
+    \"topic_3316\",\n      \"name\": \"Computer Science\",\n      \"url\": \"https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_3316\"\n
+    \ }],\n  \"inLanguage\": \"en-GB\",\n  \"mentions\": [{\n      \"@type\": \"Tool\",\n
+    \     \"name\": \"Galaxy\",\n      \"url\": \"https://bio.tools/galaxy\",\n      \"description\":
+    \"Open, web-based platform for data intensive biomedical research\"\n   }]\n}]"
+- property: image
+  expected_types:
+  - ImageObject
+  - URL
+  description: An image of the item. This can be a URL or a fully described ImageObject.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"image": "https://image.server.com/my-image.jpg"'
+- property: isBasedOn
+  expected_types:
+  - CreativeWork
+  - Product
+  - URL
+  description: A resource that was used in the creation of this resource. This term
+    can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+    Supersedes isBasedOnUrl.
+  type: ""
+  type_url: ""
+  bsc_description: A course, book or other resource on which this Course is based.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: keywords
+  expected_types:
+  - Text
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"keywords": "RNA-Seq, Workshop"'
+- property: learningOutcome
+  expected_types:
+  - Text
+  description: Statements that describe what knowledge, skills or abilities students
+    should acquire on completion of this Course
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: It is recommended that you utilize terms from the Blooms taxonomy
+  example: |
+    "learningOutcome": ["The student will be able to recall shell commands", "The student will be able to write code to copy files"", "The student will be able to discover new commands on their own"]
+- property: license
+  expected_types:
+  - CreativeWork
+  - URL
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  type: ""
+  type_url: ""
+  bsc_description: If the Course has an open-source licence, include the short URL,
+    as found in [OSI](https://opensource.org/licenses). Otherwise use CreativeWork
+    to describe your custom licence.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: mentions
+  expected_types:
+  - Thing
+  description: Indicates that the CreativeWork contains a reference to, but is not
+    necessarily about a concept.
+  type: ""
+  type_url: ""
+  bsc_description: |-
+    Data-sets, tools, technologies, entities, etc. to which this Course makes reference.
+
+    See ‘uses’ for resources that are actively utilised in this Course.
+
+    If this varies in a *CourseInstance*, use the *CourseInstance* version of _mentions_ to override this _mentions_.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    "mentions": [{
+      "@type": "Tool",
+      "name": "Galaxy",
+      "url": "https://bio.tools/galaxy",
+      "description": "Open, web-based platform for data intensive biomedical research"
+    },{
+      "@type": "Dataset",
+      "name": "European Genome-phenome Archive",
+      "url": "https://www.ebi.ac.uk/ega/home",
+      "description": "The EGA archives a large number of datasets, the access to which is controlled by a Data Access Committee (DAC)."
+    }]
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"name": "My Course"'
+- property: provider
+  expected_types:
+  - Organization
+  - Person
+  description: The service provider, service operator, or service performer; the goods
+    producer. Another party (a seller) may offer those services or goods on behalf
+    of the provider. A provider may also serve as the seller. Supersedes carrier.
+  type: ""
+  type_url: ""
+  bsc_description: 'The organisation responsible for providing the educational input
+    for the Course: e.g., content, assessments, accreditation, etc. Note: providing
+    a Course goes beyond creating it, as it implies some degree of academic responsibility
+    for accrediting the Course content, perhaps running assessments, etc.'
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: "\"provider\":  [{ \n  \"@type\": \"Organization\",\n  \"name\": \"University
+    of Manchester\"\n}]"
+- property: skillLevel
+  expected_types:
+  - Text
+  description: The target skill level in the topic being taught. Examples of skill levels
+    include ‘beginner’, ‘intermediate’ or ‘advanced’.
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"skillLevel": "beginner"'
+- property: thumbnailUrl
+  expected_types:
+  - URL
+  description: A thumbnail image relevant to the Thing.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"thumbnailUrl": "https://image.server.com/my-image.jpg"'
+- property: timeRequired
+  expected_types:
+  - Duration
+  description: Approximate or typical time it takes to work with or through this learning
+    resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.
+  type: ""
+  type_url: ""
+  bsc_description: "This should use the ISO 8601 duration format. \n\nIf this varies
+    in a *CourseInstance*, use _duration_ in *CourseInstance* to override _timeRequired_."
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ISO 8601
+  example: '"timeRequired": "P3D"'
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: The preferred URL of the Course page. You must provide this value
+    if it is known.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"url": "https://training.site/123"'
+- property: uses
+  expected_types:
+  - Thing
+  description: Lists datasets, tools, technologies, or other entities used.
+  type: bioschemas
+  type_url: ""
+  bsc_description: Data-sets, tools, technologies, entities, etc. that are actively
+    utilised in this Course.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    "uses": [{
+      "@type": "Tool",
+      "name": "Galaxy",
+      "url": "https://bio.tools/galaxy",
+      "description": "Open, web-based platform for data intensive biomedical research"
+    },{
+      "@type": "Dataset",
+      "name": "European Genome-phenome Archive",
+      "url": "https://www.ebi.ac.uk/ega/home",
+      "description": "The EGA archives a large number of datasets, the access to which is controlled by a Data Access Committee (DAC)."
+    }]
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

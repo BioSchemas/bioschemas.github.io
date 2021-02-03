@@ -8,7 +8,7 @@ type: biological
 description: Specification for sample profile
 lead: [HelenParkinson, TonyBurdett, MelanieCourtot]
 email: enquiries@bioschemas.org
-issues: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Sample
+issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Sample
 folder: https://drive.google.com/drive/folders/0Bw_p-HKWUjHoaWhkTnBka2FWRE0
 
 # Page attributes
@@ -21,21 +21,15 @@ objectives:
     'Contribute to contextualise information from data sample registries (eg. Biosamples) and biobank sample repositories (eg. NL Biobank) and Biobank Registries (eg. BBMRI Biobank directory)',
     'Make registries like Biosamples compliant with Bioschemas.'
   ]
+
 specifications:
   [  
     'Sample'
   ]
-draft_specifications:
-  [  
-    'Sample'
-  ]
+
 types:
   [  
-    'Sample'
-  ]
-draft_types:
-  [  
-    'Sample'
+    'BioSample', 'Sample'
   ]
 
 members:

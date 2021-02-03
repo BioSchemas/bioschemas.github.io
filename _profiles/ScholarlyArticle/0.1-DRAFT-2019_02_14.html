@@ -1,0 +1,468 @@
+---
+name: ScholarlyArticle
+
+previous_version: 0.1-DRAFT-2019_02_08
+previous_release: 
+
+status: revision
+spec_type: Profile
+group: biotea2bioschemas
+use_cases_url: /useCases/ScholarlyArticle/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1ecj0bzyRO3tSTyHrKtDGfBwC5bIhgRCmv3yR8ylR_G4
+gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20ScholarlyArticle
+live_deploy: ''
+
+parent_type: ScholarlyArticle
+hierarchy:
+- Thing
+- CreativeWork
+- Article
+- ScholarlyArticle
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: ScholarlyArticle
+  subtitle: Bioschemas profile, based on Biotea model, describing a ScholarlyArticle
+    in Life Sciences.
+  description: A ScholarlyArticle is an article commonly reporting a scientific research,
+    for instance a journal article or thesis.
+  version: 0.1-DRAFT-2019_02_14
+  version_date: 20190208T095928
+  official_type: schema:ScholarlyArticle
+  full_example: pending
+mapping:
+- property: alternateName
+  expected_types:
+  - Text
+  description: An alias for the item.
+  type: ""
+  type_url: ""
+  bsc_description: Any othe name, including alternate identifiers in the form namespace:id
+    such as pmcid:PMC3804025 or pmid:29312824.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: alternativeHeadline
+  expected_types:
+  - Text
+  description: A secondary title of the CreativeWork.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: articleBody
+  expected_types:
+  - Text
+  description: The actual body of the article.
+  type: ""
+  type_url: ""
+  bsc_description: If included, could be separated in paragraphs or so.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: articleSection
+  expected_types:
+  - Text
+  description: Articles may belong to one or more 'sections' in a magazine or newspaper,
+    such as Sports, Lifestyle, etc.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: author
+  expected_types:
+  - Organization
+  - Person
+  description: The author of this content or rating. Please note that author is special
+    in that HTML 5 provides a special mechanism for indicating authorship via the
+    rel tag. That is equivalent to this and may be used interchangeably.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: backstory
+  expected_types:
+  - CreativeWork
+  - Text
+  description: For an Article, typically a NewsArticle, the backstory property provides
+    a textual summary giving a brief explanation of why and how an article was created.
+    In a journalistic setting this could include information about reporting process,
+    methods, interviews, data sources, etc.
+  type: ""
+  type_url: ""
+  bsc_description: Abstract.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: citation
+  expected_types:
+  - CreativeWork
+  - Text
+  description: A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: comment
+  expected_types:
+  - Comment
+  - SemanticScholarlyAnnotation
+  description: Comments, typically from users.
+  type: ""
+  type_url: ""
+  bsc_description: Semantic scholarly annotations identified in this scholarly article
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: commentCount
+  expected_types:
+  - Integer
+  description: The number of comments this CreativeWork (e.g. Article, Question or
+    Answer) has received. This is most applicable to works published in Web sites
+    with commenting system; additional comments may exist elsewhere.
+  type: ""
+  type_url: ""
+  bsc_description: Number of semantic scholarly annotations identified in this article
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: copyrightHolder
+  expected_types:
+  - Organization
+  - Person
+  description: The party holding the legal copyright to the CreativeWork.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: copyrightYear
+  expected_types:
+  - Number
+  description: The year during which the claimed copyright for the CreativeWork was
+    first asserted.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: dateCreated
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was created or the item was added
+    to a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: dateModified
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was most recently modified or when
+    the item's entry was modified within a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: datePublished
+  expected_types:
+  - Date
+  description: Date of first broadcast/publication.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: hasPart
+  expected_types:
+  - CreativeWork
+  - Trip
+  - ScholarlySemanticAnnotation
+  description: |-
+    Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).
+     Inverse property: isPartOf.
+  type: ""
+  type_url: ""
+  bsc_description: An article has part ScholarlySemanticAnnotation, i.e., entities
+    recognized in the text and associated to an ontology term.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: headline
+  expected_types:
+  - Text
+  description: Headline of the article.
+  type: ""
+  type_url: ""
+  bsc_description: Title of the article.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: A global a unique identifier for articles in their DOI. Any other
+    identifier can be included as an alternate name.
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: inLanguage
+  expected_types:
+  - Language
+  - Text
+  description: The language of the content or performance or used in an action. Please
+    use one of the language codes from the IETF BCP 47 standard. See also availableLanguage.
+    Supersedes language.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: isAccessibleForFree
+  expected_types:
+  - Boolean
+  description: A flag to signal that the item, event, or place is accessible for free.
+    Supersedes free.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: isBasedOn
+  expected_types:
+  - CreativeWork
+  - Product
+  - URL
+  description: A resource that was used in the creation of this resource. This term
+    can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.
+    Supersedes isBasedOnUrl.
+  type: ""
+  type_url: ""
+  bsc_description: Link to any HTML other than the DOI one as well as to possible
+    web services, such as PMC OAI service, providing machine-readable versions used
+    to create this metadata.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: isPartOf
+  expected_types:
+  - CreativeWork
+  - Trip
+  - Journal
+  - PublicationVolume
+  - PublicationIssue
+  description: |-
+    Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.
+     Inverse property: hasPart.
+  type: ""
+  type_url: ""
+  bsc_description: We recommend at least to inlcude a link to the lowest level possible,
+    i.e., PublicationIssue. It is also possible to use 'isPartOf' to link as well
+    directly to the PublicationVolume or the Journal, making it easier to find links
+    to each other.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: keywords
+  expected_types:
+  - Text
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: license
+  expected_types:
+  - CreativeWork
+  - URL
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: pageEnd
+  expected_types:
+  - Integer
+  - Text
+  description: The page on which the work ends; for example "138" or "xvi".
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: pageStart
+  expected_types:
+  - Integer
+  - Text
+  description: The page on which the work starts; for example "135" or "xiii".
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: pagination
+  expected_types:
+  - Text
+  description: Any description of pages that is not separated into pageStart and pageEnd;
+    for example, "1-6, 9, 55" or "10-12, 46-49".
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: sameAs
+  expected_types:
+  - URL
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  type: ""
+  type_url: ""
+  bsc_description: Any other link to this article, including those machine readable.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: DOI is the recommended URL, any other should go as sameAs.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: version
+  expected_types:
+  - Number
+  - Text
+  description: The version of the CreativeWork embodied by a specified resource.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: wordCount
+  expected_types:
+  - Integer
+  description: The number of words in the text of the Article.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: sdDatePublished
+  expected_types:
+  - Date
+  description: Indicates the date on which the current structured data was generated / published. Typically used alongside sdPublisher.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: sdPublisher
+  expected_types:
+  - Organization
+  - Person 
+  description: Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The sdPublisher property helps make such practices more explicit.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

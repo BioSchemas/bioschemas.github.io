@@ -1,0 +1,289 @@
+---
+name: CourseInstance
+
+previous_version: 
+previous_release:
+
+status: revision
+spec_type: Profile
+group: training
+use_cases_url: ''
+cross_walk_url: ''
+gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20CourseInstance
+live_deploy: ''
+
+parent_type: CourseInstance
+hierarchy:
+- Thing
+- Event
+- CourseInstance
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: CourseInstance
+  subtitle: 'Specification describing the instance of a course. '
+  description: 'This specification can be used in tandem with a Course. A course is
+    used to describe the broad, common aspects of a recurring training event - whereas
+    a course instance is about the specific times and location of when that course
+    is held. '
+  version: 0.1-DRAFT-2018_09_24
+  version_date: 20180924T171952
+  official_type: ""
+  full_example: ""
+mapping:
+- property: contributor
+  expected_types:
+  - Organization
+  - Person
+  description: A secondary contributor to the CreativeWork or Event.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: "\"contributor\": [{\n  \"@type\": \"Person\",\n  \"name\": \"Frank Sidebottom\"\n},{
+    \n  \"@type\": \"Person\",\n  \"name\": \"Dennis Ménaçe\"\n}]"
+- property: courseMode
+  expected_types:
+  - Text
+  - URL
+  description: The medium or means of delivery of the course instance or the mode
+    of study, either as a text label (e.g. "online", "onsite" or "blended"; "synchronous"
+    or "asynchronous"; "full-time" or "part-time") or as a URL reference to a term
+    from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous
+    ).
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: '"online", "onsite" or "blended"; "synchronous" or "asynchronous";
+    "full-time" or "part-time"'
+  example: '"courseMode": "online"'
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"description": "An instance of a course being ran"'
+- property: doorTime
+  expected_types:
+  - DateTime
+  description: The time admission will commence.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"doorTime": "2019-02-04T11:00:00"'
+- property: duration
+  expected_types:
+  - Duration
+  description: The duration of the item (movie, audio recording, event, etc.) in ISO
+    8601 date format.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"duration": "P1DT6H"'
+- property: endDate
+  expected_types:
+  - Date
+  - DateTime
+  description: The end date and time of the item (in ISO 8601 date format).
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"endTime": "2019-02-05T17:00:00"'
+- property: eventStatus
+  expected_types:
+  - EventStatusType
+  description: An eventStatus of an event represents its status; particularly useful
+    when an event is cancelled or rescheduled.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"eventStatus": "Rescheduled"'
+- property: funder
+  expected_types:
+  - Organization
+  - Person
+  description: A person or organization that supports (sponsors) something through
+    some kind of financial contribution.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: "\"funder\":  [{\n  \"@type\": \"Person\",\n  \"name\": \"Elizabeth Windsor\"\n},{
+    \n  \"@type\": \"Organization\",\n  \"name\": \"University of Manchester\"\n}]"
+- property: image
+  expected_types:
+  - ImageObject
+  - URL
+  description: An image of the item. This can be a URL or a fully described ImageObject.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"image": "https://image.server.com/my-image.jpg"'
+- property: instructor
+  expected_types:
+  - Person
+  description: A person assigned to instruct or provide instructional assistance for
+    the CourseInstance.
+  type: ""
+  type_url: ""
+  bsc_description: Faculty instructing course instance
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: "\"instructor\": [{\n  \"@type\": \"Person\",\n  \"name\": \"Alan Smithee\"\n},{
+    \n  \"@type\": \"Person\",\n  \"name\": \"John Smith\",\n  \"sameAs\": \"https://manchester.ac.uk/staff/profiles/john-smith\"\n}]"
+- property: location
+  expected_types:
+  - Place
+  - PostalAddress
+  - Text
+  description: The location of for example where the event is happening, an organization
+    is located, or where an action takes place.
+  type: ""
+  type_url: ""
+  bsc_description: Location of the course instance
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    "location": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1.17, Kilburn Building, University of Manchester",
+          "addressLocality": "Manchester",
+          "addressRegion": "Greater Manchester",
+          "addressCountry": "United Kingdom",
+          "postalCode": "M13 9PL"
+        }
+    }
+- property: maximumAttendeeCapacity
+  expected_types:
+  - Integer
+  description: The total number of individuals that may attend an event or venue.
+  type: ""
+  type_url: ""
+  bsc_description: Maximum number of attendees
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ' "maximumAttendeeCapacity": 35'
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"name": "RNA-seq in R"'
+- property: offers
+  expected_types:
+  - Offer
+  description: An offer to provide this item—for example, an offer to sell a product,
+    rent the DVD of a movie, perform a service, or give away tickets to an event.
+  type: ""
+  type_url: ""
+  bsc_description: Cost to attend the course
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: Currency and value, Date specified price
+  example: |-
+    "offers":     {
+          "@type": "Offer",
+          "price": "100.00",
+          "priceCurrency": "GBP",
+          "url": "http://www.eventbrite.com/my-workshop"
+    }
+- property: startDate
+  expected_types:
+  - Date
+  - DateTime
+  description: The start date and time of the item (in ISO 8601 date format).
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"startDate": "2019-02-04T09:00:00"'
+- property: subEvent
+  expected_types:
+  - Event
+  description: |-
+    An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference. Supersedes subEvents.
+    Inverse property: superEvent.
+  type: ""
+  type_url: ""
+  bsc_description: For events within events e.g. guest lecture event within a workshop
+    event
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    "subEvent": [{
+          "@type": "Event",
+          "name": "Lunch time Lecture",
+          "url": "https://lectureatlunch.com",
+          "description": "This special lecture hosted during lunchtime as part of the RNA-SEQ in R workshop demonstrates some of the latest technologies available."
+      }]
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: URL of the course instance
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"url": "http://example.com/rna-seq_in_r"'
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

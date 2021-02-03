@@ -1,0 +1,441 @@
+---
+name: Gene
+
+previous_version: '0.5-DRAFT-2019_06_14'
+previous_release: 
+
+status: revision # Change to revision if you are working on an update
+spec_type: Profile
+group: genes
+use_cases_url: /useCases/Gene/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1mN3b5_MsuSLWv3J7KVj8vY6lnPmlJa8iaIBbu2eQLOQ
+gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Gene
+live_deploy: /liveDeploys/
+
+
+parent_type: Gene
+hierarchy:
+- Thing
+- BioChemEntity
+- Gene
+
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: Gene
+  subtitle: Bioschemas profile describing a Gene in Life Sciences
+  description: 'This Gene profile specification presents the markup for describing
+    a Gene.
+    <h4>Summary of Changes</h4>
+    Changes introduced on Gene profile 0.6-DRAFT-2020_04_02 in response to
+    <a href="https://github.com/Bioschemas/specifications/issues/353">issue 353</a><ul><li>encodes
+    property updated to encodesBioChemEntity, still recommended</li><li>additionalProperty
+    removed</li><li>associatedDisease range updated</li><li>examples using DefinedTerm
+    now include link to external vocabularies via property inDefinedTermSet (hasMolecularFunction,
+    isInvolvedInBiologicalProcess, taxonomicRange). Note: isTranscribedInto and isVariantOf
+    do not exist on the Gene type so they were removed, isVariantOf was replaced on
+    Gene type by alternativeOf)</li><li>hasCategoryCode property removed</li></ul>Additional
+    changes after looking at BioChemEntity and Gene types:<ul><li>hasRepresentation
+    moved to optional. There is another property</li><li>hasBioPolymerSequence for
+    the sequence text. hasRepresentation can be used to link to a page containing
+    the corresponding sequence so both are  now optional and people can decide which
+    one suits better to them</li><li>properties directly from Gene type not previously
+    included on the Gene profile were added as optional (expressedIn and hasStatus)</li></ul>'
+  version: 0.6-DRAFT-2020_04_02
+  version_date: 20200402T194732
+  official_type: http://bioschemas.org/Gene
+  full_example: https://github.com/Bioschemas/Specifications/tree/master/Gene/examples
+mapping:
+- property: alternateName
+  expected_types:
+  - Text
+  description: An alias for the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+        "@type": "Gene",
+        "alternateName": "AD1"
+    }
+- property: alternativeOf
+  expected_types:
+  - Gene
+  description: ""
+  type: bioschemas
+  type_url: http://bioschemas.org/alternativeOf
+  bsc_description: Is variant of. Use this property to express when a gene is a variant
+    of any other gene.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: associatedDisease
+  expected_types:
+  - MedicalCondition
+  - PropertyValue
+  - URL
+  description: Disease associated to this BioChemEntity
+  type: bioschemas
+  type_url: http://bioschemas.org/associatedDisease
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: ""
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+        "@type": "Gene",
+        "description": "amyloid beta precursor"
+    }
+- property: encodesBioChemEntity
+  expected_types:
+  - BioChemEntity
+  description: This property is used to link to gene products encoded (even indirectly)
+    from this gene such as RNA or proteins.
+  type: bioschemas
+  type_url: http://bioschemas.org/encodesBioChemEntity
+  bsc_description: For genes, this property is used to express in a generic way gene
+    products encoded by this gene, for instance RNA or Protein
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: "{\n  \"@type\": \"Gene\",\n  \"encodesBioChemEntity\": { \n    \"@type\":
+    \"Protein\",\n    \"identifier\": \"uniprotkb:P05067\",\n    \"url\": \"https://www.uniprot.org/uniprot/P05067\"\n
+    \ }\n}"
+- property: expressedIn
+  expected_types:
+  - AnatomicalStructure
+  - AnatomicalSystem
+  - BioChemEntity
+  - DefinedTerm
+  description: |-
+    Tissue, organ, biological sample, etc in which activity of this gene has
+     been observed experimentally. For example brain, digestive system.
+  type: bioschemas
+  type_url: http://bioschemas.org/expressedIn
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: hasBioChemEntityPart
+  expected_types:
+  - BioChemEntity
+  description: |-
+    Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.
+    Inverse property: isPartOfBioChemEntity
+  type: bioschemas
+  type_url: http://bioschemas.org/hasBioChemEntityPart
+  bsc_description: |+
+    For genes, it can be used to link to gene sequence annotations such as variants or so.
+
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: "//Contains a variant\n{\n  \"@type\": \"Gene\",\n  \"hasBioChemEntityPart\":
+    { \n    \"@type\": \"BioChemEntity\",\n    \"identifier\": \"rs577882423\",\n
+    \   },\n    \"url\": \"https://www.ensembl.org/Homo_sapiens/Variation/Summary?db=core;g=ENSG00000142192;r=21:25880550-26171128;vf=110312838\"\n
+    \ }\n}\n"
+- property: hasBioPolymerSequence
+  expected_types:
+  - Text
+  description: "A symbolic representation of a BioChemEnity. For example, a nucleotide
+    \nsequence of a Gene or an amino acid sequence of a Protein."
+  type: bioschemas
+  type_url: http://bioschema.org/hasBioPolymerSequence
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: hasMolecularFunction
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  description: ""
+  type: bioschemas
+  type_url: http://bioschemas.org/hasMolecularFunction
+  bsc_description: "GO molecular function enabled by the gene/protein. \n"
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Only the molecular function branch of [Gene Ontology (GO)](http://www.geneontology.org)
+  example: "//Gene enabling a GO molecular function\n{\n  \"@type\": \"Gene\",\n  \"hasMolecularFunction\":
+    {\n    \"@type\": \"DefinedTerm\",\n    \"url\": \"http://purl.obolibrary.org/obo/GO_0000166\",\n
+    \   \"termCode\": \"GO:0000166\",\n    \"name\": \"nucleotide binding\",\n    \"inDefinedTermSet\":
+    {\n      \"@type\": \"DefinedTermSet\",\n      \"name\": \"Gene Ontology\",\n
+    \     \"url\": \"https://bioportal.bioontology.org/ontologies/GO\"\n    } \n  }\n}"
+- property: hasRepresentation
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: A common representation such as a protein sequence or chemical structure
+    for this entity. For images use schema.org/image.
+  type: bioschemas
+  type_url: http://bioschemas.org/hasRepresentation
+  bsc_description: For genes it can be used to link to a page with the corresponding
+    sequence. If you want to better define the nature of the representation, use a
+    PropertyValue as described in additionalProperty or a third-party ontology predicate.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": "Gene",
+      "hasRepresentation": "https://www.ncbi.nlm.nih.gov/nuccore/NC_000021.9?report=fasta&from=25880550&to=26171128&strand=true"
+    }
+- property: hasStatus
+  expected_types:
+  - Text
+  description: One of pseudogene, dead, killed, live, predicted, suppressed.
+  type: bioschemas
+  type_url: http://bioschemas.org/hasStatus
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    //Using a text, remember you still need @id in any case
+    {
+        "@type": "Gene",
+        "identifier": "ENSG00000142192"
+    }
+    //Using a URL directly (looks like a text), remember you need @id in any case
+    {
+        "@type": "Gene",
+        "identifier": "http://identifiers.org/ensembl:ENSG00000142192"
+    }
+    //Using a URL modeled as schema:URL (equivalent to the previous one but more verbose), remember you need @id in any case
+    {
+        "@type": "Gene",
+        "identifier": {
+          "@type": "URL",
+          "url": "http://identifiers.org/ensembl:ENSG00000142192"
+        }
+    }
+- property: image
+  expected_types:
+  - ImageObject
+  - URL
+  description: An image of the item. This can be a URL or a fully described ImageObject.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    //Using a URL directly (looks like a text)
+    {
+      "@type": "Gene",
+      "image": "https://en.wikipedia.org/wiki/Amyloid_precursor_protein#/media/File:Ideogram_human_chromosome_21.svg"
+    }
+- property: isInvolvedInBiologicalProcess
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  description: ""
+  type: bioschemas
+  type_url: http://bioschemas.org/isInvolvedinBiologicalProcess
+  bsc_description: |
+    GO biological process this gene/protein is involved in.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Only the biological process branch of [Gene Ontology (GO)](http://www.geneontology.org)
+  example: "//Gene involved in a GO biological process\n{\n  \"@type\": \"Gene\",\n
+    \ \"isInvolvedInBiologicalProcess\": {\n    \"@type\": \"DefefinedTerm\",\n    \"url\":
+    \"http://purl.obolibrary.org/obo/GO_0000278\",\n    \"termCode\": \"GO:0000278\",\n
+    \   \"name\": \"mitotic cell cycle\",\n    \"inDefinedTermSet\": {\n      \"@type\":
+    \"DefinedTermSet\",\n      \"name\": \"Gene Ontology\",\n      \"url\": \"https://bioportal.bioontology.org/ontologies/GO\"\n
+    \   } \n  }\n}"
+- property: isLocatedInSubcellularLocation
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  description: ""
+  type: bioschemas
+  type_url: http://bioschemas.org/isLocatedInSubcellularLocation
+  bsc_description: |
+    GO subcellular location this gene/protein is located in.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Only the subcellular location branch of [Gene Ontology (GO)](http://www.geneontology.org)
+  example: ""
+- property: isPartOfBioChemEntity
+  expected_types:
+  - BioChemEntity
+  description: |-
+    Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
+    Inverse property: hasBioChemEntity
+  type: bioschemas
+  type_url: http://bioschemas.org/isPartOfBioChemEntity
+  bsc_description: For genes, it is recommended to at least specify the DNA/chromosome
+    containing this gene
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |
+    //Is contained in a chromosome in positions X to Y
+    {
+      "@type": "Gene",
+      "isPartOfBioChemEntity": {
+        "@type": "BioChemEntity",
+        "name": "Chromosome 21",
+      }
+    }
+- property: mainEntityOfPage
+  expected_types:
+  - CreativeWork
+  - URL
+  description: |-
+    Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](http://schema.org/docs/datamodel.html#mainEntityBackground) for details.
+    Inverse property: mainEntity.
+  type: ""
+  type_url: ""
+  bsc_description: Link via DataRecord to the main DataRecord representing this entity
+    in a dataset. It is usually preferred to use mainEntity from a DataRecord to point
+    to its corresponding entity.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    //From DataRecord
+    {
+
+      "@type": "DataRecord",
+      "@id": "http://rdf.ebi.ac.uk/resource/ensembl/ENSG00000142192",
+      "mainEntity": {
+        "@type": "Gene",
+        "name": "Name and any other property for this Gene entity"
+      }
+    }
+
+    //Also possible from Gene
+    {
+      "@type": "Gene",
+      "mainEntityOfPage": { "@id": "http://rdf.ebi.ac.uk/resource/ensembl/ENSG00000142192" }
+    }
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": "Gene",
+      "name": "APP"
+    }
+- property: sameAs
+  expected_types:
+  - URL
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": "Gene",
+      "sameAs": "https://www.wikidata.org/wiki/Q14865870"
+    }
+- property: taxonomicRange
+  expected_types:
+  - DefinedTerm
+  - Taxon
+  - Text
+  - URL
+  description: The taxonomic grouping of the organism that expresses, encodes, or
+    in someway related to the BioChemEntity.
+  type: bioschemas
+  type_url: http://bioschemas.org/taxonomicRange
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ""
+  controlled_vocab: ""
+  example: "{\n  \"@type\": \"Gene\",\n  \"taxonomicRange\": {\n    \"@type\": \"DefinedTerm\",\n
+    \   \"termCode\": \"9606\",\n    \"url\": \"http://purl.bioontology.org/ontology/NCBITAXON/9606\",\n
+    \   \"sameAs\": \"http://purl.uniprot.org/taxonomy/9606\",\n    \"inDefinedTermSet\":
+    {\n      \"@type\": \"DefinedTermSet\",\n      \"name\": \"NCBI taxon\",\n      \"url\":
+    \"https://bioportal.bioontology.org/ontologies/NCBITAXON\"\n    } \n  }\n}"
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: Link to the official webpage associated to this entity.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": "Gene",
+      "url": "https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000142192;r=21:25880550-26171128"
+    }
+
+
+
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>
