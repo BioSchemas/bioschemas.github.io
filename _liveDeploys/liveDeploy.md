@@ -1099,7 +1099,7 @@ list:
   resource_URL: https://string-db.org/
   schema_org: Protein
   bsc_profile: Protein
-  bsc_ver:
+  bsc_ver: 0.9-DRAFT
   comments:  
   node: CH
   type: CDR
