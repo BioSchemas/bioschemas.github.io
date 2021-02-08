@@ -998,6 +998,15 @@ list:
     comments:
     node: NL
 -
+    name: NanoCommons
+    example_URL: https://nanocommons.github.io/datasets/
+    resource_URL: https://www.nanocommons.eu/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments: Open License datasets
+    node: NL
+-
     name: opalesurfcasting.net
     highlight: Datasets attaching french leisure sea fishing legislation to taxons
     example_URL: https://www.opalesurfcasting.net/connaissances/faune-et-flore/le-saumon-de-l-atlantique-salmo-salar.html
