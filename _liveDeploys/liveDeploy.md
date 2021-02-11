@@ -46,6 +46,15 @@ list:
     node: SE
     type: CDR
 -
+    name: WikiPathways
+    example_URL: https://wikipathways.org/
+    resource_URL: https://wikipathways.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments: 
+    node: NL
+-
     name: EGA
     highlight:
     example_URL: https://ega-archive.org/
