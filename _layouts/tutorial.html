@@ -10,14 +10,25 @@
               <section id="main_content" class="inner">
 
     <h1>{{ page.bioschemas.name }}</h1>
-    <p><strong>Authors:</strong> </p>
     {% if page.bioschemas.author %}
+    <p><strong>Authors:</strong> </p>
     <ul>
       {% for author in page.bioschemas.author %}
         <li><a href="{{author.url}}">{{author.name}}</a></li>
       {% endfor %}
     </ul>
     {% endif %}
+
+    {% if page.bioschemas.contributor %}
+    <p><strong>Contributors:</strong> </p>
+    <ul>
+      {% for contributor in page.bioschemas.contributor %}
+        <li><a href="{{contributor.url}}">{{contributor.name}}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+
     <p>{{ page.bioschemas.description }}</p>
     <p>This tutorial is aimed at {{page.bioschemas.audience.first.name }}
     </p>
