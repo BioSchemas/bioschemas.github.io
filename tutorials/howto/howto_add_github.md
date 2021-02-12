@@ -8,7 +8,7 @@ title: Adding schema.org to a GitHub Pages site
 >This guide will show you how to do add schema.org to GitHub Pages.
 
 ***
-&#9664; Previous tutorial: [How to add markup to your own resource](./howto_add_markup) | Next tutorial: None &#9654; 
+&#9664; Previous tutorial: [How to add markup to your own resource](./howto_add_markup) | Next tutorial: [How to check your deployed markup](howto_check_deploy) &#9654;
 
 ***
 
@@ -129,7 +129,7 @@ end
 
 <br/>
 
-Now, in your terminal you can run bundle install to install the `jekyll-json-ldgem` (see [step 2.5](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/) for help). 
+Now, in your terminal you can run bundle install to install the `jekyll-json-ldgem` (see [step 2.5](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/) for help).
 
 Once bundle has install the gem, you can start the jekyll server by running `jekyll serve` and navigate to `127.0.0.1:4000/tutorials/awesome-tutorial.html` in your browser (see [step 4[(https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)] for help) to see your resulting website!
 
@@ -171,12 +171,12 @@ tutorial.html
         <i>{{ page.schemaorg.about }} </i><br>
         This tutorial is aimed at:
           {{page.schemaorg.audience.first.name}}
-       {{ content }} 
+       {{ content }}
   </body>
 </html>
 ```
 
 ***
-&#9664; Previous tutorial: [How to add markup to your own resource](./howto_add_markup) | Next tutorial: None &#9654; 
+&#9664; Previous tutorial: [How to add markup to your own resource](./howto_add_markup) | Next tutorial: [How to check your deployed markup](howto_check_deploy) &#9654;
 
 ***
