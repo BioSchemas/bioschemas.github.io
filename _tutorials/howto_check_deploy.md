@@ -10,9 +10,10 @@ bioschemas:
     name: WebMaster
   name: "How to check your Bioschemas deployment"
   author:
-  - Alasdair Gray
-  contributor:
   - "@type": Person
+    name: "Alasdair Gray"
+    "@id": https://bioschemas.org/people/AlasdairGray
+    url: https://bioschemas.org/people/AlasdairGray
   description: "Check that your markup is deployed on your site and retrievable through common tools."
   keywords: ["schemaorg", "JSON-LD"]
   license: CC-BY 4.0

@@ -10,11 +10,15 @@ bioschemas:
     name: WebMaster
   name: "Adding schema.org to a GitHub Pages site"
   author:
-  - Niall Beard
+  - "@type": Person
+    name: "Niall Beard"
+    "@id": https://bioschemas.org/people/NiallBeard
+    url: https://bioschemas.org/people/NiallBeard
   contributor:
   - "@type": Person
     name: "Alasdair Gray"
     "@id": https://bioschemas.org/people/AlasdairGray
+    url: https://bioschemas.org/people/AlasdairGray
   description: "This guide will show you how to do add schema.org to GitHub Pages."
   keywords: ["schemaorg", "TeSS"]
   license: CC-BY 4.0
