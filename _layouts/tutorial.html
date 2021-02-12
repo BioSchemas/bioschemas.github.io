@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <script type="application/ld+json">
-         {{ page.bioschemas | jsonify }}
-      </script>
-  </head>
+  {% include head.html %}
   <body>
+    {% include header.html %}
+    {% include navbar.html %}
+    <div class="page-content container">
+      <div class="wrapper">
+          <div class="outer">
+              <section id="main_content" class="inner">
+
     <h1>{{ page.bioschemas.name }}</h1>
     <p><strong>Authors:</strong> {{ page.bioschemas.author | join: ' and '}}</p>
     <p>{{ page.bioschemas.description }}</p>
@@ -13,5 +16,11 @@
     </p>
     <hr/>
     {{ content }}
+  </section>
+</div>
+</div>
+</div>
+
+{% include footer.html %}
   </body>
 </html>
