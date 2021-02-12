@@ -1,6 +1,22 @@
 ---
-layout: default
+layout: tutorial
 title: Check Deployed Markup
+bioschemas:
+  "@context": https://schema.org/
+  "@type": LearningResource
+  about: "Checking that your markup is deployed and retrievable."
+  audience:
+  - "@type": Audience
+    name: WebMaster
+  name: "How to check your Bioschemas deployment"
+  author:
+  - Alasdair Gray
+  contributor:
+  - "@type": Person
+  description: "Check that your markup is deployed on your site and retrievable through common tools."
+  keywords: ["schemaorg", "JSON-LD"]
+  license: CC-BY 4.0
+  version: 1.0
 ---
 
 # How to check deployed Bioschemas markup?
