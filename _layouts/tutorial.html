@@ -6,6 +6,12 @@
       </script>
   </head>
   <body>
+    <h1>{{ page.bioschemas.name }}</h1>
+    <p><strong>Authors:</strong> {{ page.bioschemas.author | join: ' and '}}</p>
+    <p>{{ page.bioschemas.description }}</p>
+    <p>This tutorial is aimed at {{page.bioschemas.audience.first.name }}
+    </p>
+    <hr/>
     {{ content }}
   </body>
 </html>
