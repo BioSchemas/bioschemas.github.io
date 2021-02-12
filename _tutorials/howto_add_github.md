@@ -1,6 +1,24 @@
 ---
-layout: default
+layout: tutorial
 title: Adding schema.org to a GitHub Pages site
+bioschemas:
+  "@context": https://schema.org/
+  "@type": LearningResource
+  about: "Adding LearningResource markup to tutorials hosted on GitHub."
+  audience:
+  - "@type": Audience
+    name: WebMaster
+  name: "Adding schema.org to a GitHub Pages site"
+  author:
+  - Niall Beard
+  contributor:
+  - "@type": Person
+    name: "Alasdair Gray"
+    "@id": https://bioschemas.org/people/AlasdairGray
+  description: "This guide will show you how to do add schema.org to GitHub Pages."
+  keywords: ["schemaorg", "TeSS"]
+  license: CC-BY 4.0
+  version: 2.0
 ---
 
 # Adding schema.org to a GitHub Pages site
