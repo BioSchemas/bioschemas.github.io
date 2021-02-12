@@ -4,7 +4,8 @@ title: Check Deployed Markup
 bioschemas:
   "@context": https://schema.org/
   "@type": LearningResource
-  about: "Checking that your markup is deployed and retrievable."
+  about:
+  - "@id": http://edamontology.org/topic_0089
   audience:
   - "@type": Audience
     name: WebMaster
