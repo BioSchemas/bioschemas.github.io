@@ -10,6 +10,9 @@
               <section id="main_content" class="inner">
 
     <h1>{{ page.bioschemas.name }}</h1>
+    <blockquote>
+      {{ page.bioschemas.description }}
+    </blockquote>
     {% if page.bioschemas.author %}
     <p><strong>Authors:</strong> </p>
     <ul>
@@ -29,9 +32,7 @@
     {% endif %}
 
 
-    <p>{{ page.bioschemas.description }}</p>
-    <p>This tutorial is aimed at {{page.bioschemas.audience.first.name }}
-    </p>
+    <p>This tutorial is aimed at {{page.bioschemas.audience.first.name }}</p>
     <hr/>
     {{ content }}
   </section>
