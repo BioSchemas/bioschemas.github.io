@@ -16,7 +16,7 @@ bioschemas:
     "@id": https://bioschemas.org/people/AlasdairGray
     url: https://bioschemas.org/people/AlasdairGray
   description: "Check that your markup is deployed on your site and retrievable through common tools."
-  keywords: ["schemaorg", "JSON-LD"]
+  keywords: "schemaorg, JSON-LD"
   license: CC-BY 4.0
   version: 1.0
 ---
