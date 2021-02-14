@@ -51,8 +51,10 @@
       {% endfor %}
     </ul>
     {% endif %}
-    
 
+    {% if page.bioschemas.license %}
+    <p><strong>License:</strong> {{page.bioschemas.license}}</p>
+    {% endif %}
     <hr/>
     {{ content }}
   </section>
