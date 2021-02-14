@@ -1,6 +1,13 @@
 ---
 layout: tutorial
 title: Adding schema.org to a GitHub Pages site
+nextTutorial:
+  link: howto_check_deploy
+  title: How to check your deployed markup
+previousTutorial:
+  link: howto_add_markup
+  title: How to add markup to your own resource
+
 bioschemas:
   "@context": https://schema.org/
   "@type": LearningResource
@@ -23,15 +30,6 @@ bioschemas:
   license: CC-BY 4.0
   version: 2.0
 ---
-
-# Adding schema.org to a GitHub Pages site
-
->This guide will show you how to do add schema.org to GitHub Pages.
-
-***
-&#9664; Previous tutorial: [How to add markup to your own resource](./howto_add_markup) | Next tutorial: [How to check your deployed markup](howto_check_deploy) &#9654;
-
-***
 
 ## Github Pages
 
@@ -196,8 +194,3 @@ tutorial.html
   </body>
 </html>
 ```
-
-***
-&#9664; Previous tutorial: [How to add markup to your own resource](./howto_add_markup) | Next tutorial: [How to check your deployed markup](howto_check_deploy) &#9654;
-
-***

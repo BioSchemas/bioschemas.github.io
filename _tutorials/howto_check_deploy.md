@@ -1,6 +1,11 @@
 ---
 layout: tutorial
 title: Check Deployed Markup
+
+previousTutorial:
+  link: howto_add_github
+  title: Adding schema.org to a GitHub Pages site
+
 bioschemas:
   "@context": https://schema.org/
   "@type": LearningResource
@@ -15,20 +20,11 @@ bioschemas:
     name: "Alasdair Gray"
     "@id": https://bioschemas.org/people/AlasdairGray
     url: https://bioschemas.org/people/AlasdairGray
-  description: "Check that your markup is deployed on your site and retrievable through common tools."
+  description: "This guide will show you how to check your deployed markup, both locally and what is retrieved by external services."
   keywords: "schemaorg, JSON-LD"
   license: CC-BY 4.0
   version: 1.0
 ---
-
-# How to check deployed Bioschemas markup?
-
-> This guide will show you how to check your deployed markup, both locally and what is retrieved by external services.
-
-***
-&#9664; Previous tutorial: [Adding schema.org to a GitHub Pages site](./howto_add_github) | Next tutorial: None &#9654;
-
-***
 
 ## Using a browser to check your deployment
 
@@ -76,8 +72,3 @@ The error report is minimal but it will give you a green or red bar to indicate 
 The screenshot below shows the page for validating the DisProt protein DP00003 against the Gene profile at the minimal level. Click [here](http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/?url=https://disprot.org/DP00003) to try it yourself.
 
 ![BioschemasValidator showing DisProt:DP00003](../images/BioschemasValidator.png)
-
-***
-&#9664; Previous tutorial: [Hdding schema.org to a GitHub Pages site](./howto_add_github) | Next tutorial: None &#9654;
-
-***
