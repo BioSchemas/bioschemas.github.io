@@ -1,0 +1,17 @@
+<hr/>
+&#9664;
+Previous tutorial:
+{% if page.previousTutorial %}
+<a href="/tutorials/{{page.previousTutorial.link}}">{{page.previousTutorial.title}}</a>
+{% else %}
+None
+{% endif %}
+|
+Next tutorial:
+{% if page.nextTutorial %}
+<a href="/tutorials/{{ page.nextTutorial.link }}">{{ page.nextTutorial.title }}</a>
+{% else %}
+None
+{% endif %}
+&#9654;
+<hr/>

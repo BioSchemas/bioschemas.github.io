@@ -59,8 +59,9 @@
     {% if page.bioschemas.version %}
     <p><strong>Version:</strong> {{ page.bioschemas.version }}</p>
     {% endif %}
-    <hr/>
+    {% include tutorialNavigation.html %}    
     {{ content }}
+    {% include tutorialNavigation.html %}
   </section>
 </div>
 </div>
