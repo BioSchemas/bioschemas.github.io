@@ -26,6 +26,14 @@
     {% endfor %}
     </ul>
     {% endif %}
+    {% if page.bioschemas.audience %}
+      <p><strong>Audience:</strong></p>
+      <ul>
+        {% for item in page.bioschemas.audience %}
+        <li>{{item.name}}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
     {% if page.bioschemas.author %}
     <p><strong>Authors:</strong> </p>
     <ul>
