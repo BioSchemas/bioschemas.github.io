@@ -11,6 +11,9 @@ previousTutorial:
 bioschemas:
   "@context": https://schema.org/
   "@type": LearningResource
+  "http://purl.org/dc/terms/conformsTo":
+  - "@type": CreativeWork
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/0.9-DRAFT-2020_12_08/"
   audience:
   - "@type": Audience
     name: WebMaster
