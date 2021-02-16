@@ -31,6 +31,7 @@ bioschemas:
     name: "Alasdair Gray"
     "@id": https://bioschemas.org/people/AlasdairGray
     url: https://bioschemas.org/people/AlasdairGray
+  dateModified: 2021-02-16
   description: "This guide will show you how to do add Schema.org markup to a GitHub Pages site."
   keywords: "schemaorg, TeSS"
   license: CC-BY 4.0

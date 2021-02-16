@@ -59,7 +59,16 @@
     {% if page.bioschemas.version %}
     <p><strong>Version:</strong> {{ page.bioschemas.version }}</p>
     {% endif %}
-    {% include tutorialNavigation.html %}    
+
+    {% if page.bioschemas.dateCreated %}
+    <p><strong>Created:</strong> {{ page.bioschemas.dateCreated | date_to_long_string }}</p>
+    {% endif %}
+
+    {% if page.bioschemas.dateModified %}
+    <p><strong>Last Modified:</strong> {{ page.bioschemas.dateModified | date_to_long_string}}</p>
+    {% endif %}
+
+    {% include tutorialNavigation.html %}
     {{ content }}
     {% include tutorialNavigation.html %}
   </section>
