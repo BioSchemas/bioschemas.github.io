@@ -3,7 +3,7 @@ layout: tutorial
 title: Check Deployed Markup
 
 previousTutorial:
-  link: howto_add_github
+  link: howto/howto_add_github
   title: Adding schema.org to a GitHub Pages site
 
 bioschemas:

@@ -58,6 +58,3 @@ collections:
   profiles:
     output: true
     permalink: /:collection/:path/
-  tutorials:
-    output: true
-    permalink: /:collection/:path/
