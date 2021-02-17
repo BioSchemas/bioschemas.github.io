@@ -24,7 +24,7 @@ bioschemas:
     "@id": https://bioschemas.org/people/AlasdairGray
     url: https://bioschemas.org/people/AlasdairGray
   description: "This guide will show you how to check your deployed markup, both locally and what is retrieved by external services."
-  keywords: "schemaorg, JSON-LD"
+  keywords: "schemaorg, JSON-LD, bioschemas"
   license: CC-BY 4.0
   version: 1.0
 ---

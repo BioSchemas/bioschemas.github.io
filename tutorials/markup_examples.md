@@ -1,16 +1,40 @@
 ---
-layout: default
-title: Bioschemas Tutorials
+layout: tutorial
+title: Schema.org markup examples
+previousTutorial:
+  link: ./what_why_schema
+  title: What and why schema.org
+nextTutorial:
+  link: ./what_why_bioschemas
+  title: What and why Bioschemas
+
+bioschemas:
+  "@context": https://schema.org/
+  "@type": LearningResource
+  "http://purl.org/dc/terms/conformsTo":
+  - "@type": CreativeWork
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/0.9-DRAFT-2020_12_08/"
+  about:
+    - "@id": https://schema.org
+    - "@id": http://edamontology.org/topic_0089
+  audience:
+  - "@type": Audience
+    name: People interested in Schema.org markup examples
+  name: "Schema.org markup examples"
+  author:
+  - "@type": Person
+    name: "Azerty Proxy"
+  contributor:
+  - "@type": Person
+    name: "Leyla Garcia"
+    "@id": https://bioschemas.org/people/LeylaGarcia
+    url: https://bioschemas.org/people/LeylaGarcia
+  dateModified: 2021-02-17
+  description: "With these examples you will get a better understanding of benefits brought by structure data, i.e., schema.org markup"
+  keywords: "schemaorg, markup, structured data, example"
+  license: CC-BY 4.0
+  version: 2.0
 ---
-
-# Schema.org markup examples
-
->With these examples you will get a better understanding of benefits brought by structure data, i.e., schema.org markup
-
-***
-&#9664; Previous tutorial: [What and why schema.org](./what_why_schema) | Next tutorial: [What and why Bioschemas](what_why_bioschemas) &#9654; 
-
-***
 
 ## Google cupcake microdata
 
@@ -61,8 +85,3 @@ As expected from the documentation on schema.org, see Figure 9.
 
 | ![Figure 9: Author property in schema.org](./images/duckduck_author.png) |
 | __Figure 9: Author property in schema.org__ |
-
-***
-&#9664; Previous tutorial: [What and why schema.org](./what_why_schema) | Next tutorial: [What and why Bioschemas](what_why_bioschemas) &#9654; 
-
-***

@@ -1,16 +1,46 @@
 ---
-layout: default
+layout: tutorial
 title: Bioschemas, what and why?
+previousTutorial:
+  link: ./markup_examples
+  title: Schema.org markup examples
+nextTutorial:
+  link: ./howto/howto_right_profile
+  title: How to select the right profile
+
+bioschemas:
+  "@context": https://schema.org/
+  "@type": LearningResource
+  "http://purl.org/dc/terms/conformsTo":
+  - "@type": CreativeWork
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/0.9-DRAFT-2020_12_08/"
+  about:
+    - "@id": https://schema.org
+    - "@id": http://edamontology.org/topic_0089
+  audience:
+  - "@type": Audience
+    name: People interested in introductory information to Bioschemas
+  name: "Bioschemas, what and why?"
+  author:
+  - "@type": Person
+    name: "Leyla Garcia"
+    "@id": https://bioschemas.org/people/LeylaGarcia
+    url: https://bioschemas.org/people/LeylaGarcia
+  contributor:
+  - "@type": Person
+    name: "Ricardo Arcila"
+    "@id": https://bioschemas.org/people/RicardoArcila
+    url: https://bioschemas.org/people/RicardoArcila
+  - "@type": Person
+    name: "Victoria Dominguez del Angel"
+    "@id": https://bioschemas.org/people/VictoriaDominguezDelAngel
+    url: https://bioschemas.org/people/VictoriaDominguezDelAngel/
+  dateModified: 2021-02-17
+  description: "In this tutorial you will learn what Bioschemas is, what the added value to schema.org.is and what the main elements in Bioschemas are"
+  keywords: "schemaorg, markup, structured data, bioschemas"
+  license: CC-BY 4.0
+  version: 2.0
 ---
-
-# Bioschemas, what and why?
-
->_In this tutorial you will learn what Bioschemas is, what the added value to schema.org.is and what the main elements in Bioschemas are._ 
-
-***
-&#9664; Previous tutorial: [Markup examples](./markup_examples) | Next tutorial: [How to select the right profile](./howto/howto_right_profile) &#9654; 
-
-***
 
 ## What is Bioschemas?
 
@@ -111,8 +141,3 @@ e.g., For the Event case, endDate should be ONE while organizer could be MANY
     </tr>
   </tbody>
 </table>
-
-***
-&#9664; Previous tutorial: [Markup examples](./markup_examples) | Next tutorial: [How to select the right profile](./howto/howto_right_profile) &#9654; 
-
-***

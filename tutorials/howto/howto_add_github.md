@@ -19,7 +19,7 @@ bioschemas:
     - "@id": http://edamontology.org/topic_0089
   audience:
   - "@type": Audience
-    name: WebMaster
+    name: WebMaster, people deploying GitHub pages
   name: "Adding Schema.org to a GitHub Pages site"
   author:
   - "@type": Person
@@ -33,7 +33,7 @@ bioschemas:
     url: https://bioschemas.org/people/AlasdairGray
   dateModified: 2021-02-16
   description: "This guide will show you how to do add Schema.org markup to a GitHub Pages site."
-  keywords: "schemaorg, TeSS"
+  keywords: "schemaorg, TeSS, GitHub pages"
   license: CC-BY 4.0
   version: 2.0
 ---

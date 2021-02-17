@@ -1,16 +1,46 @@
 ---
-layout: default
+layout: tutorial
 title: How to mark up your own resource with Bioschemas
+previousTutorial:
+  link: ./howto/howto_right_profile
+  title: How to select the right profile
+nextTutorial:
+  link: ./howto/howto_add_github
+  title: How to add markup to GitHub pages
+
+bioschemas:
+  "@context": https://schema.org/
+  "@type": LearningResource
+  "http://purl.org/dc/terms/conformsTo":
+  - "@type": CreativeWork
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/0.9-DRAFT-2020_12_08/"
+  about:
+    - "@id": https://schema.org
+    - "@id": http://edamontology.org/topic_0089
+  audience:
+  - "@type": Audience
+    name: WebMaster, people interested in adding Bioschemas markup to their website
+  name: "How to mark up your own resource with Bioschemas"
+  author:
+  - "@type": Person
+    name: "Leyla Garcia"
+    "@id": https://bioschemas.org/people/LeylaGarcia
+    url: https://bioschemas.org/people/LeylaGarcia
+  contributor:
+  - "@type": Person
+    name: "Ricardo Arcila"
+    "@id": https://bioschemas.org/people/RicardoArcila
+    url: https://bioschemas.org/people/RicardoArcila
+  - "@type": Person
+    name: "Victoria Dominguez del Angel"
+    "@id": https://bioschemas.org/people/VictoriaDominguezDelAngel
+    url: https://bioschemas.org/people/VictoriaDominguezDelAngel/
+  dateModified: 2021-02-17
+  description: "In this how-to, we will guide you through the necessary steps in order to get a JSON-LD markup describing your own resource using a Bioschemas profile"
+  keywords: "schemaorg, markup, structured data, bioschemas"
+  license: CC-BY 4.0
+  version: 2.0
 ---
-
-# How to mark up your own resource with Bioschemas
-
->In this how-to, we will guide you through the necessary steps in order to get a JSON-LD markup describing your own resource using a Bioschemas profile
-
-***
-&#9664; Previous tutorial: [How to select the right profile](./howto_right_profile) | Next tutorial: [How to add markup to GitHub pages](./howto_add_github) &#9654; 
-
-***
 
 <table>
   <tbody>
@@ -55,8 +85,3 @@ Now, focus on a particular profile, have at hand the [corresponding specificatio
 ## Getting JSON-LD with gimme-my-jsonld
 
 In progress
-
-***
-&#9664; Previous tutorial: [How to select the right profile](./howto_right_profile) | Next tutorial: [How to add markup to GitHub pages](./howto_add_github) &#9654; 
-
-***
