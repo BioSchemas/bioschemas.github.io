@@ -52,7 +52,7 @@ list:
     schema_org: Dataset
     bsc_profile: Dataset
     bsc_ver: 0.3
-    comments: 
+    comments:
     node: NL
 -
     name: EGA
@@ -1130,6 +1130,15 @@ list:
   bsc_profile: Dataset
   bsc_ver: 0.3
   comments:  
+  node: NL
+-
+  name: Paired Omics Data Platform
+  highlight:
+  example_URL: https://pairedomicsdata.bioinformatics.nl/
+  resource_URL: https://pairedomicsdata.bioinformatics.nl/
+  schema_org: DataCatalog
+  bsc_profile: DataCatalog
+  bsc_ver: 0.3
   node: NL
   comments:  
 ---
