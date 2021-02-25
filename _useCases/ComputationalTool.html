@@ -1,0 +1,50 @@
+---
+name: ComputationalTool
+group: Tool
+collection: useCases
+active: true
+redirect_from: useCases/ComputationalTool/
+---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                 <h1>Use Cases for {{page.name}}</h1>
+                 {% assign group = site.groups | where:"identifier", page.group %}
+                 {% for g in group %}
+                 <p>The following use cases were developed by the <a href="{{g.url}}">{{ g.name }}</a> group.
+                 {% endfor %}
+
+<h3>Objectives</h3>
+
+<ol>
+  <li>Develop the metadata markup to represent and find a computational tool in a registry and exchange metadata between registries (e.g. tools or workflows)</li>
+  <li>Advocate for the adoption of the markup in software registries and repositories</li>
+                 </ol>
+
+                 <h3>Use Cases</h3>
+		 <p>Computational tools are used through container, or workflows systems. There is an urgent need to find and exchange metadata between several registries/catalogues or systems.</p> 
+                 <p>Today it’s difficult to find or compare suitable tools described in multiple catalogues.</p>
+<p>Bio.Tools is a large registry of computational tools. Exposing a standard semantic markup for each of the tools increases their discoverability and reuse in computational  workflows or during training events.</p> 
+<p>Sharing a common vocabulary would be useful to select or suggest tools when composing workflows. The workflow hub registry could also more easily benefit from this knowledge to better cite tools for instance.</p>
+<p>TeSS is a training material and event registry, it could also more easily describe the target tools during trainings, or conversely, bio.tools could more easily refer to related training material.</p>
+               </section>
+            </div>
+        </div>
+    </div>
+    {% include footer.html %}
+
+    
+    
+    
+
+    </body>
+
+    </html>
