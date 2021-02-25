@@ -1,26 +1,11 @@
 ---
+layout: use-case
 name: ComputationalWorkflow
-group: Workflow
+group: workflow
 collection: useCases
 active: true
 redirect_from: useCases/ComputationalWorkflow/
 ---
-
-<!DOCTYPE HTML>
-<html>
-   {% include head.html %}
-   <body>
-      {% include header.html %}
-      {% include navbar.html %}
-      <div class="page-content">
-         <div class="wrapper">
-            <div id="main-content-wrapper" class="outer">
-               <section id="main_content" class="inner">
-                 <h1>Use Cases for {{page.name}}</h1>
-                 {% assign group = site.groups | where:"identifier", page.group %}
-                 {% for g in group %}
-                 <p>The following use cases were developed by the <a href="{{g.url}}">{{ g.name }}</a> group.
-                 {% endfor %}
 
 <h3>Objectives</h3>
 
@@ -31,20 +16,7 @@ redirect_from: useCases/ComputationalWorkflow/
 <li>Advocate for the development of tools to support the markup and its use</li>
                       </ol>
 
-                     <h3>Use Cases</h3>
-		 <p>There are a large number of computational workflow formats and systems. In the absence of common metadata, it is impossible to find or compare suitable workflow(s).</p>
-		 <p>The <a href="https://workflowhub.eu">WorkflowHub</a> allows the registration of diverse workflows, and exposes them through the agreed metadata</p>
-		 <p>The metadata has been developed by <a href="https://bioschema.org/groups/Workflow">Workflow group</a>. The group includes members from many computational workflow communities, including <a href="https://galaxyproject.org/">Galaxy</a>, <a href="https://www.nextflow.io/">Nextflow</a>, <a href="https://snakemake.readthedocs.io">Snakemake</a> and <a href="https://scipion-em.github.io/docs/">Scipion</a>.</p>
-               </section>
-            </div>
-        </div>
-    </div>
-    {% include footer.html %}
-
-    
-    
-    
-
-    </body>
-
-    </html>
+<h3>Use Cases</h3>
+<p>There are a large number of computational workflow formats and systems. In the absence of common metadata, it is impossible to find or compare suitable workflow(s).</p>
+<p>The <a href="https://workflowhub.eu">WorkflowHub</a> allows the registration of diverse workflows, and exposes them through the agreed metadata</p>
+<p>The metadata has been developed by <a href="https://bioschema.org/groups/Workflow">Workflow group</a>. The group includes members from many computational workflow communities, including <a href="https://galaxyproject.org/">Galaxy</a>, <a href="https://www.nextflow.io/">Nextflow</a>, <a href="https://snakemake.readthedocs.io">Snakemake</a> and <a href="https://scipion-em.github.io/docs/">Scipion</a>.</p>
