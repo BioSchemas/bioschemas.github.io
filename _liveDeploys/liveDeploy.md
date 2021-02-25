@@ -1128,5 +1128,8 @@ list:
   resource_URL: https://pairedomicsdata.bioinformatics.nl/
   schema_org: Dataset
   bsc_profile: Dataset
+  bsc_ver: 0.3
+  comments:  
+  node: NL
   comments:  
 ---
