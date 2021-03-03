@@ -741,6 +741,16 @@ list:
     comments:    
     node:    
 -
+    name: Global Biodiversity Information Facility
+    highlight: 3 million+ taxon pages in the GBIF Backbone taxonomy annotated
+    example_URL: https://www.gbif.org/species/5220113
+    resource_URL: https://www.gbif.org
+    schema_org: Taxon
+    bsc_profile: Taxon
+    bsc_ver: 0.7-DRAFT
+    comments:    
+    node:
+-
     name: FlyMine
     highlight:
     example_URL: https://flymine.org/

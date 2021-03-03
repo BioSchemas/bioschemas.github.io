@@ -1,7 +1,7 @@
 {% if page.status == 'release' %}
 <h1>{{page.name}} (Type)</h1>
 {% elsif site.data.type_versions[page.name].status == "deprecated"%}
-<h1>{{current_name}} <u>DEPRECATED</u> Profile</h1>
+<h1>{{page.name}} <u>DEPRECATED</u> Type</h1>
 {% else %}
 <h1>{{page.name}} <u>DRAFT</u> Type</h1>
 {% endif %}

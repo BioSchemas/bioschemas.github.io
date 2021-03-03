@@ -34,7 +34,8 @@ DataRecord:
     name: "DataRecord"
     latest_publication: "0.3-DRAFT-2019_06_20"
     latest_release:
-    status: "active"
+    status: "deprecated"
+    deprecated_date: "2021-02-22"
 
 DNA:
     name: "DNA"
