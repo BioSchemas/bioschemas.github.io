@@ -52,7 +52,7 @@ list:
     schema_org: Dataset
     bsc_profile: Dataset
     bsc_ver: 0.3
-    comments: 
+    comments:
     node: NL
 -
     name: EGA
@@ -1131,4 +1131,24 @@ list:
   comments:  
   node: CH
   type: CDR
+-
+  name: Paired Omics Data Platform
+  highlight: 71 datasets
+  example_URL: https://pairedomicsdata.bioinformatics.nl/projects/d0f1add5-5b16-4f78-9b93-0d1d9c9bcb59.1
+  resource_URL: https://pairedomicsdata.bioinformatics.nl/
+  schema_org: Dataset
+  bsc_profile: Dataset
+  bsc_ver: 0.3
+  comments:  
+  node: NL
+-
+  name: Paired Omics Data Platform
+  highlight:
+  example_URL: https://pairedomicsdata.bioinformatics.nl/
+  resource_URL: https://pairedomicsdata.bioinformatics.nl/
+  schema_org: DataCatalog
+  bsc_profile: DataCatalog
+  bsc_ver: 0.3
+  node: NL
+  comments:  
 ---
