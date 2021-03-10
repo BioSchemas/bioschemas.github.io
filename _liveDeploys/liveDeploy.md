@@ -654,7 +654,7 @@ list:
     comments:
     node: IT
 -
-    name: Global Biodiversity Information Facility
+    name: Global Biodiversity Information Facility (GBIF)
     highlight:
     example_URL: https://www.gbif.org/dataset/c0cc29de-f49f-4b66-b4ec-c83afbb7101d
     resource_URL: https://www.gbif.org/
@@ -741,7 +741,7 @@ list:
     comments:    
     node:    
 -
-    name: Global Biodiversity Information Facility
+    name: Global Biodiversity Information Facility (GBIF)
     highlight: 3 million+ taxon pages in the GBIF Backbone taxonomy annotated
     example_URL: https://www.gbif.org/species/5220113
     resource_URL: https://www.gbif.org
