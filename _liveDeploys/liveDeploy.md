@@ -1161,4 +1161,35 @@ list:
   bsc_ver: 0.3
   node: NL
   comments:  
+-
+  name: HUGO Gene Nomenclature Committee
+  highlight:
+  example_URL: https://www.genenames.org/data/gene-symbol-report/#data-set
+  resource_URL: https://www.genenames.org/
+  schema_org: Dataset
+  bsc_profile: Dataset
+  bsc_ver: 0.3
+  comments:  
+  node: UK
+-
+  name: HUGO Gene Nomenclature Committee
+  highlight:
+  example_URL: https://www.genenames.org/#data-catalog
+  resource_URL: https://www.genenames.org/
+  schema_org: DataCatalog
+  bsc_profile: DataCatalog
+  bsc_ver: 0.3
+  comments:  
+  node: UK
+-
+  name: HUGO Gene Nomenclature Committee
+  highlight: Over 44,000 genes
+  example_URL: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:37133"
+  resource_URL: https://www.genenames.org/
+  schema_org: Gene
+  bsc_profile: Gene
+  bsc_ver: 0.7
+  comments:  
+  node: UK
+
 ---
