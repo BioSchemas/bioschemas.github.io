@@ -34,10 +34,9 @@ redirect_from:
 <label for="tab1">RELEASE</label>
 <input id="tab2" type="radio" name="tabs">
 <label for="tab2">DRAFT</label>
-<!--
 <input id="tab3" type="radio" name="tabs">
 <label for="tab3">DEPRECATED</label>
- -->
+
 
 
 <!-- RELEASED TYPES -->
@@ -45,6 +44,7 @@ redirect_from:
    <h3>RELEASE</h3>
        <p><em>Released</em> types have been agreed by the community and are widely deployed.</p>
       <p>Please note that there may be a newer version in <em>draft</em> status when the community agree that a refinement is needed. Where applicable, these are linked from the release version with the label 'Latest draft'.</p>
+      <p><strong>Note:</strong> In May 2020 we adopted a new set of <a href="https://github.com/Bioschemas/governance/blob/master/governance.md">governance</a> rules which affect the numbering of our types. Since May 2020, new releases are given the next major release number, i.e. are of the form X.0-RELEASE.</p>
   <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
     <thead>
     <tr>
@@ -81,9 +81,6 @@ redirect_from:
 
       {% endif %}
       {% endif %}
-      {% else %}
-      <p>NNN{{spec.name}}NNN</p>
-
       {% endif %}
       {% endfor %}
 
@@ -134,9 +131,6 @@ redirect_from:
 
       {% endif %}
       {% endif %}
-      {% else %}
-      <p>NNN{{spec.name}}NNN</p>
-
       {% endif %}
       {% endfor %}
 
@@ -147,9 +141,14 @@ redirect_from:
 
 
 <!-- DEPRECATED TYPES -->
-<!-- WONT WORK AS TAB COMMENTSED OUT ABIOVE -->
 <section id="tab3Content" class="tabs">
    <h3>DEPRECATED</h3>
+   <p>A type can be <em>deprecated</em> because:</p>
+   <ul>
+     <li>The working group decided that the type is no longer required, e.g. the work undertaken was deemed unsatisfactory, or failed to accomplish the desired objective(s), or has been superceded by some other activity; or</li>
+     <li>The working group developing it have suspended work.</li>
+   </ul>
+  <p>If you would like to continue work on one of these types then please email the community <a href="mailto:public-bioschemas@w3.org" itemprop="email">public-bioschemas@w3.org</a> to discuss.</p>
 <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
     <thead>
     <tr>
@@ -187,9 +186,6 @@ redirect_from:
 
       {% endif %}
       {% endif %}
-      {% else %}
-      <p>NNN{{spec.name}}NNN</p>
-
       {% endif %}
       {% endfor %}
 

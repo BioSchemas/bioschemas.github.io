@@ -48,4 +48,5 @@ members:
     - RobertoPreste
     - RafaelJimenez
     - AlbanGaignard
+    - MatusKalas
 ---

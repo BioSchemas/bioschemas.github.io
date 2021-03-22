@@ -26,15 +26,16 @@ ChemicalSubstance:
 
 ComputationalWorkflow:
     name: "ComputationalWorkflow"
-    latest_publication: "0.1-DRAFT-2020_07_21"
-    latest_release:
+    latest_publication:
+    latest_release: "1.0-RELEASE"
     status: "active"
 
 DataRecord:
     name: "DataRecord"
     latest_publication: "0.3-DRAFT-2019_06_20"
     latest_release:
-    status: "active"
+    status: "deprecated"
+    deprecated_date: "2021-02-22"
 
 DNA:
     name: "DNA"
@@ -50,8 +51,8 @@ Enzyme:
 
 FormalParameter:
     name: "FormalParameter"
-    latest_publication: "0.1-DRAFT-2020_07_21"
-    latest_release:
+    latest_publication:
+    latest_release: "1.0-RELEASE"
     status: "active"
 
 Gene:

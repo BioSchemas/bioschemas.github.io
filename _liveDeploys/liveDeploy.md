@@ -52,7 +52,7 @@ list:
     schema_org: Dataset
     bsc_profile: Dataset
     bsc_ver: 0.3
-    comments: 
+    comments:
     node: NL
 -
     name: EGA
@@ -654,7 +654,7 @@ list:
     comments:
     node: IT
 -
-    name: Global Biodiversity Information Facility
+    name: Global Biodiversity Information Facility (GBIF)
     highlight:
     example_URL: https://www.gbif.org/dataset/c0cc29de-f49f-4b66-b4ec-c83afbb7101d
     resource_URL: https://www.gbif.org/
@@ -740,6 +740,26 @@ list:
     bsc_ver: 0.1-DRAFT
     comments:    
     node:    
+-
+    name: Global Biodiversity Information Facility (GBIF)
+    highlight: 3 million+ taxon pages in the GBIF Backbone taxonomy annotated
+    example_URL: https://www.gbif.org/species/5220113
+    resource_URL: https://www.gbif.org
+    schema_org: Taxon
+    bsc_profile: Taxon
+    bsc_ver: 0.7-DRAFT
+    comments:    
+    node:
+-
+    name: Global Biodiversity Information Facility (GBIF)
+    highlight: 3 million+ taxon pages in the GBIF Backbone taxonomy annotated
+    example_URL: https://www.gbif.org/species/5220113
+    resource_URL: https://www.gbif.org
+    schema_org: TaxonName
+    bsc_profile: TaxonName
+    bsc_ver: 0.1-DRAFT
+    comments:    
+    node:
 -
     name: FlyMine
     highlight:
@@ -1121,4 +1141,55 @@ list:
   comments:  
   node: CH
   type: CDR
+-
+  name: Paired Omics Data Platform
+  highlight: 71 datasets
+  example_URL: https://pairedomicsdata.bioinformatics.nl/projects/d0f1add5-5b16-4f78-9b93-0d1d9c9bcb59.1
+  resource_URL: https://pairedomicsdata.bioinformatics.nl/
+  schema_org: Dataset
+  bsc_profile: Dataset
+  bsc_ver: 0.3
+  comments:  
+  node: NL
+-
+  name: Paired Omics Data Platform
+  highlight:
+  example_URL: https://pairedomicsdata.bioinformatics.nl/
+  resource_URL: https://pairedomicsdata.bioinformatics.nl/
+  schema_org: DataCatalog
+  bsc_profile: DataCatalog
+  bsc_ver: 0.3
+  node: NL
+  comments:  
+-
+  name: HUGO Gene Nomenclature Committee
+  highlight:
+  example_URL: https://www.genenames.org/data/gene-symbol-report/#data-set
+  resource_URL: https://www.genenames.org/
+  schema_org: Dataset
+  bsc_profile: Dataset
+  bsc_ver: 0.3
+  comments:  
+  node: UK
+-
+  name: HUGO Gene Nomenclature Committee
+  highlight:
+  example_URL: https://www.genenames.org/#data-catalog
+  resource_URL: https://www.genenames.org/
+  schema_org: DataCatalog
+  bsc_profile: DataCatalog
+  bsc_ver: 0.3
+  comments:  
+  node: UK
+-
+  name: HUGO Gene Nomenclature Committee
+  highlight: Over 44,000 genes
+  example_URL: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:37133"
+  resource_URL: https://www.genenames.org/
+  schema_org: Gene
+  bsc_profile: Gene
+  bsc_ver: 0.7
+  comments:  
+  node: UK
+
 ---
