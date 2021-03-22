@@ -46,7 +46,7 @@ bioschemas:
   <tbody>
     <tr>
       <td align="center">
-        <img src="../images/exclamation_mark.png" alt="warning">
+        <img src="/tutorials/images/exclamation_mark.png" alt="warning">
       </td>
       <td>
         If have not read yet our <a href="./howto_right_profile">how to select the right profile for your resource</a>, please give it a try before this one.
@@ -57,7 +57,7 @@ bioschemas:
 
 ## A pre-markup brainstorming activity
 
-If you are eager to markup your resource, get your hands "coding" and quickly see some structured data rather that free text, you can skip this section and jump to the next one. However, if you want to go step by step and then smoothly move forward and get some JSON-LD for your resource, please stay here, you are on the right place. 
+If you are eager to markup your resource, get your hands "coding" and quickly see some structured data rather that free text, you can skip this section and jump to the next one. However, if you want to go step by step and then smoothly move forward and get some JSON-LD for your resource, please stay here, you are on the right place.
 
 ### Define your strategy
 
@@ -67,7 +67,7 @@ If your resource involves more than one profile, you first need to define the st
   <tbody>
     <tr>
       <td align="center">
-        <img src="../images/information_mark.png" alt="info">
+        <img src="/tutorials/images/information_mark.png" alt="info">
       </td>
       <td>
         Link from DataCatalog to Dataset if you have some few datasets and you introduce them all on your catalog landing page. Example: UniProt

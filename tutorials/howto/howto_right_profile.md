@@ -46,9 +46,9 @@ bioschemas:
 
 You can find the availabe Bioschemas profiles at http://bioschemas.org/specifications. There, you will be presented with a list of all the current and stable profiles. You can hover on the profile name to see a quick description. Should you need a more detailed information, just click on the profile name.
 
-As seen on Figure 1,  each profile will show you details such as current version, release date, use cases, crosswalk, tasks and issues, usage examples and live deploys. 
+As seen on Figure 1,  each profile will show you details such as current version, release date, use cases, crosswalk, tasks and issues, usage examples and live deploys.
 
-| ![Figure 1. List of some Bioschemas profiles](../images/specifications.png) |
+| ![Figure 1. List of some Bioschemas profiles](/tutorials/images/specifications.png) |
 | __Figure 1. List of some Bioschemas profiles__ |
 
 <table>

@@ -50,21 +50,21 @@ While on schema.org you can get those nice summaries, Bioschemas aims to make it
 
 Imagine an insulin summary but rather than pointing to Wikipedia, including specialized resources such as Orphanet or CATH as seen on Figure 1. In this way you would get a quick overview while also links to relevant resources all in one search.
 
-| ![Figure 1. Insulin summary on a search engine](./images/insulin.png) |
+| ![Figure 1. Insulin summary on a search engine](/tutorials/images/insulin.png) |
 | __Figure 1. Insulin summary on a search engine__ |
 
 ## What are the benefits of Bioschemas?
 
 Bioschemas inherits the benefits from schema.org, i.e., enabling machines to understand what your metadata is in advance, making it easier to find, integrate, and re-use your data. It also brings some benefits tailored to the Life Sciences community. In Figure 2, you can find a graphical summary of such benefits, which are explained in more detailed on the paragraphs below.
 
-| ![Figure 2. Insulin summary on a search engine](./images/ilustration_life_sciences_event.png) |
+| ![Figure 2. Insulin summary on a search engine](/tutorials/images/ilustration_life_sciences_event.png) |
 | __Figure 2: Event profile provided by Bioschemas for the Event type in schema.org__ |
 
 <table>
   <tbody>
     <tr>
       <td align="center">
-        <img src="./images/exclamation_mark.png" alt="warning">
+        <img src="/tutorials/images/exclamation_mark.png" alt="warning">
       </td>
       <td>
         Schema.org provides types while Bioschemas provides types and profiles. A profile is a customisation of type including guidelines on how to use it whithin the Life Sciences scope. <br/>Disclaimer: Bioschemas does provides three types (BioChemEntity, DataRecord and LabProtocol) however those will not remain in Bioschemas but will be proposed and eventually integrated into schema.org
@@ -80,7 +80,7 @@ Bioschemas inherits the benefits from schema.org, i.e., enabling machines to und
   <tbody>
     <tr>
       <td align="center">
-        <img src="./images/information_mark.png" alt="info">
+        <img src="/tutorials/images/information_mark.png" alt="info">
       </td>
       <td>
         <ul><li>Minimum properties should be provided</li><li>Recommended properties should be provided whenever possible and available</li><li>Optional properties could be omitted unless important or relevant for your resource</li></ul>
@@ -99,7 +99,7 @@ Bioschemas inherits the benefits from schema.org, i.e., enabling machines to und
   <tbody>
     <tr>
       <td align="center">
-        <img src="./images/information_mark.png" alt="info">
+        <img src="/tutorials/images/information_mark.png" alt="info">
       </td>
       <td>
         A property expects ONE or MANY elements
@@ -116,7 +116,7 @@ e.g., For the Event case, endDate should be ONE while organizer could be MANY
   <tbody>
     <tr>
       <td align="center">
-        <img src="./images/information_mark.png" alt="info">
+        <img src="/tutorials/images/information_mark.png" alt="info">
       </td>
       <td>
         Event already exists in schema.org. However, Bioschemas has added some new properties, for instance, "prerrequisite" is commonly used in Life Sciences to list a list of required skills and so to be able to attend the event.
@@ -131,7 +131,7 @@ e.g., For the Event case, endDate should be ONE while organizer could be MANY
   <tbody>
     <tr>
       <td align="center">
-        <img src="./images/information_mark.png" alt="info">
+        <img src="/tutorials/images/information_mark.png" alt="info">
       </td>
       <td>
         Tools, a SoftwareApplication profile, recommends using terms from the <a href="http://bioportal.bioontology.org/ontologies/EDAM">EDAM</a> ontology in order to specify, for instance, the input and output expected.
