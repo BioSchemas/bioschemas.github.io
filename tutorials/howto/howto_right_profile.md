@@ -55,7 +55,7 @@ As seen on Figure 1,  each profile will show you details such as current version
   <tbody>
     <tr>
       <td align="center">
-        <img src="../images/information_mark.png" alt="info">
+        <img src="/tutorials/images/information_mark.png" alt="info">
       </td>
       <td>
       <ul>
