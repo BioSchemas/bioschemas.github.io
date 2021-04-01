@@ -29,6 +29,6 @@ If what we just said is not so clear to you yet, do not worry about it; this tra
 For feedback, questions and comments, please [create an issue](https://github.com/Bioschemas/specifications/labels/topic%3ATrainingPortal) and label it `topic:Training Portal`.
 
 ***
-Next tutorial: [What and why Schema.org](what_why_schema) &#9654;
+First tutorial: [What and why Schema.org](what_why_schema) &#9654;
 
 ***
