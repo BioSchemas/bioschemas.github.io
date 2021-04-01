@@ -1,6 +1,9 @@
 ---
 layout: tutorial
 title: Schema.org, what and why?
+previousTutorial:
+  link: ./
+  title: Overview of Bioschemas Tutorials
 nextTutorial:
   link: ./markup_examples
   title: Schema.org markup examples
