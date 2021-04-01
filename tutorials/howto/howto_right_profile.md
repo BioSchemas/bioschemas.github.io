@@ -1,31 +1,61 @@
 ---
-layout: default
+layout: tutorial
 title: How to select the right profile for your resource
+previousTutorial:
+  link: ./what_why_bioschemas
+  title: What and why bioschemas
+nextTutorial:
+  link: ./howto/howto_add_markup
+  title: How to add markup to your own resource
+
+bioschemas:
+  "@context": https://schema.org/
+  "@type": LearningResource
+  "http://purl.org/dc/terms/conformsTo":
+  - "@type": CreativeWork
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/0.9-DRAFT-2020_12_08/"
+  about:
+    - "@id": https://schema.org
+    - "@id": http://edamontology.org/topic_0089
+  audience:
+  - "@type": Audience
+    name: People interested in selecting a Bioschemas profile to markup their own data
+  name: "How to select the right profile for your resource"
+  author:
+  - "@type": Person
+    name: "Leyla Garcia"
+    "@id": https://bioschemas.org/people/LeylaGarcia
+    url: https://bioschemas.org/people/LeylaGarcia
+  contributor:
+  - "@type": Person
+    name: "Ricardo Arcila"
+    "@id": https://bioschemas.org/people/RicardoArcila
+    url: https://bioschemas.org/people/RicardoArcila
+  - "@type": Person
+    name: "Victoria Dominguez del Angel"
+    "@id": https://bioschemas.org/people/VictoriaDominguezDelAngel
+    url: https://bioschemas.org/people/VictoriaDominguezDelAngel/
+  dateModified: 2021-02-17
+  description: "In this how-to, we will guide you through the necessary steps for you to select a Bioschemas profile that will be later used to add mark up to your own resources"
+  keywords: "schemaorg, markup, structured data, bioschemas profile"
+  license: CC-BY 4.0
+  version: 2.0
 ---
-
-# How to select the right profile for your resource
-
->In this how-to, we will guide you through the necessary steps for you to select a Bioschemas profile that will be later used to mark up to your own resources.
-
-***
-&#9664; Previous tutorial: [What and why bioschemas](../what_why_bioschemas) | Next tutorial: [How to add markup to your own resource](./howto_add_markup) &#9654; 
-
-***
 
 ## Your first encounter with Bioschemas profiles
 
 You can find the availabe Bioschemas profiles at http://bioschemas.org/specifications. There, you will be presented with a list of all the current and stable profiles. You can hover on the profile name to see a quick description. Should you need a more detailed information, just click on the profile name.
 
-As seen on Figure 1,  each profile will show you details such as current version, release date, use cases, crosswalk, tasks and issues, usage examples and live deploys. 
+As seen on Figure 1,  each profile will show you details such as current version, release date, use cases, crosswalk, tasks and issues, usage examples and live deploys.
 
-| ![Figure 1. List of some Bioschemas profiles](../images/specifications.png) |
+| ![Figure 1. List of some Bioschemas profiles](/tutorials/images/specifications.png) |
 | __Figure 1. List of some Bioschemas profiles__ |
 
 <table>
   <tbody>
     <tr>
       <td align="center">
-        <img src="../images/information_mark.png" alt="info">
+        <img src="/tutorials/images/information_mark.png" alt="info">
       </td>
       <td>
       <ul>
@@ -51,8 +81,3 @@ Also knows as data repository, a data catalog commonly aggregates more than one 
 ### Dataset
 
 If your resource provides data and you can easily identify a common entity type for all the data contained in it, you should probably go for a [Dataset](/specifications/Dataset) profile. Let's clarify what we mean by "common type". Let's suppose you have chemical compounds including drugs, proteins and cells. If you see them all as the same thing, chemical compound, you have one [Dataset](/specifications/Dataset), and you have found the right profile for you. However, if you actually distinguish drugs from proteins from cells and so, and (maybe even) tailor the information provided for each case, you have a data catalog and multiple datasets, you should use both, one DataCatalog and multiple [Datasets](/specifications/Dataset).
-
-***
-&#9664; Previous tutorial: [What and why bioschemas](../what_why_bioschemas) | Next tutorial: [How to add markup to your own resource](./howto_add_markup) &#9654; 
-
-***

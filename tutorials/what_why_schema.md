@@ -1,14 +1,46 @@
 ---
-layout: default
+layout: tutorial
 title: Schema.org, what and why?
+previousTutorial:
+  link: ./
+  title: Overview of Bioschemas Tutorials
+nextTutorial:
+  link: ./markup_examples
+  title: Schema.org markup examples
+
+bioschemas:
+  "@context": https://schema.org/
+  "@type": LearningResource
+  "http://purl.org/dc/terms/conformsTo":
+  - "@type": CreativeWork
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/0.9-DRAFT-2020_12_08/"
+  about:
+    - "@id": https://schema.org
+    - "@id": http://edamontology.org/topic_0089
+  audience:
+  - "@type": Audience
+    name: People interested in introductory information to Schema.org
+  name: "Schema.org, what and why?"
+  author:
+  - "@type": Person
+    name: "Ricardo Arcila"
+    "@id": https://bioschemas.org/people/RicardoArcila
+    url: https://bioschemas.org/people/RicardoArcila
+  contributor:
+  - "@type": Person
+    name: "Leyla Garcia"
+    "@id": https://bioschemas.org/people/LeylaGarcia
+    url: https://bioschemas.org/people/LeylaGarcia
+  - "@type": Person
+    name: "Victoria Dominguez del Angel"
+    "@id": https://bioschemas.org/people/VictoriaDominguezDelAngel
+    url: https://bioschemas.org/people/VictoriaDominguezDelAngel/
+  dateModified: 2021-02-17
+  description: "In this tutorial you will get an idea on what Schema.org is and how it is useful"
+  keywords: "schemaorg, markup, structured data"
+  license: CC-BY 4.0
+  version: 2.0
 ---
-
-# Schema.org, what and why?
-
-***
-&#9664; Previous tutorial: [Getting started](./index) | Next tutorial: [Markup examples](markup_examples) &#9654; 
-
-***
 
 ## What is schema.org?
 [Schema.org](https://schema.org/) is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.
@@ -88,8 +120,3 @@ You can use the schema.org vocabulary along with [Microdata](http://en.wikipedia
     <span property="roleName">Quarterback</span>
 </div>
 ```
-
-***
-&#9664; Previous tutorial: [Getting started](./index) | Next tutorial: [Markup examples](markup_examples) &#9654; 
-
-***
