@@ -47,11 +47,21 @@ Note that since Bioschemas is an evolving extension of Schema.org, not all types
 
 [https://search.google.com/structured-data/testing-tool](https://search.google.com/structured-data/testing-tool)
 
-This site gives a nice hierarchical rendering of the discovered content but doesn’t always detect markup from Single Page Application engines. The site knows about the core Schema.org vocabulary and the properties that Google use within certain types for their search results. It does not know about the Bioschemas proposals for Schema.org types and properties or our profiles. As a result, you will get warnings and errors for using Bioschemas types.
+This site gives a nice hierarchical rendering of the discovered content and it can detect markup from Single Page Application engines. The site knows about the core Schema.org vocabulary and the properties that Google use within certain types for their search results. It does not know about the Bioschemas proposals for Schema.org types and properties or our profiles. As a result, you will get warnings and errors for using Bioschemas types.
 
 The screenshot shows the tool results for the DisProt protein DP00003. Click [here](https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fdisprot.org%2FDP00003) to see the results.
 
 ![Google Structured Data Testing Tool showing DisProt:DP00003](/tutorials/images/google_struct.png)
+
+### Google Rich Results Test
+
+[https://search.google.com/test/rich-results](https://search.google.com/test/rich-results)
+
+This Google tool is promoted as a successor of Google Structured Data Testing Tool and can detect Schema.org markup interpreted as “rich results” as shown on Google Search. It is very convenient for checking Datasets types. Currently it ignores Bioschemas proposals for Schema.org so it may return warnings and errors in some Bioschemas profiles.
+
+The screenshot shows the tool results for the MobiDB database. Click [here](https://search.google.com/test/rich-results?url=https%3A%2F%2Fmobidb.org) to see the results.
+
+![Google Rich Results Test showing MobiDB](/tutorials/images/google_rich.png)
 
 ### Bioschemas Markup  Scraper and Extractor (BMUSE)
 
