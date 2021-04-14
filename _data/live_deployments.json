@@ -1,0 +1,26 @@
+{
+  "@context": [
+    "https://schema.org/",
+    {
+      "nodes": "http://example.com/bs/nodes"
+    }
+  ],
+  "resources": [
+    {
+      "name": "Identifiers.org",
+      "url": "https://identifiers.org/",
+      "nodes": [
+        "EBI"
+      ]
+    },
+    {
+      "name": "bio.tools",
+      "url": "https://bio.tools/",
+      "nodes": [
+        "DK",
+        "FR",
+        "ES"
+      ]
+    }
+  ]
+}
