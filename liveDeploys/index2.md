@@ -58,6 +58,9 @@ To view an ELIXIR only list of live deploys [click here](./elixir).
       <tr>
         <td>
           <a href="/profiles/{{ profile.profileName }}">{{ profile.profileName}}</a> (v{{profile.conformsTo}})
+          {% if profile.highlight %}
+            <p class="highlightsText">{{profile.highlight}}</p>
+          {% endif %}
         </td>
         <td class="structured-data-column hidden-row">
             {% if profile.exampleURL != nil %}
