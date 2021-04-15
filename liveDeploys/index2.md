@@ -12,7 +12,7 @@ If your Bioschemas compliant site is not listed below, please email us at [enqui
 
 To view an ELIXIR only list of live deploys [click here](./elixir).
 
-{% assign liveDeploys = site.data.live_deployments.resources %}
+{% assign liveDeploys = site.data.live_deployments.resources | sort: "name" %}
 
 ##### Services/sites implementing Bioschemas's markup
 
