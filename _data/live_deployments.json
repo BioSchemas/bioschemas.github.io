@@ -32,11 +32,26 @@
         "DK",
         "FR",
         "ES"
+      ],
+      "profiles": [
+        {
+          "profileName": "ComputationalTool",
+          "conformsTo": 0.4-DRAFT,
+          "exampleURL": "https://bio.tools/covidmine",
+          "highlight": 17090 tools
+        }
       ]
     },
     {
       "name": "Gigadb",
-      "url": "http://gigadb.org/"
+      "url": "http://gigadb.org/",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": 0.1,
+          "exampleURL": "http://gigadb.org/site/index"
+        }
+      ]
     },
     {
       "name": "DisProt",
@@ -50,6 +65,28 @@
           "conformsTo": 0.11,
           "exampleURL": "https://www.disprot.org/DP00086",
           "highlight": "1.6k proteins"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": 0.3,
+          "exampleURL": "https://www.disprot.org/"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": 0.3,
+          "exampleURL": "https://www.disprot.org/"
+        },
+        {
+          "profileName": "ProteinAnnotation",
+          "conformsTo": 0.5-DRAFT,
+          "exampleURL": "https://www.disprot.org/DP00086r026",
+          "highlight": "3.5k protein regions"
+        },
+        {
+          "profileName": "SequenceRange",
+          "conformsTo": 0.1-DRAFT,
+          "exampleURL": "https://www.disprot.org/DP00086r026",
+          "highlight": "3.5k protein regions"
         }
       ]
     }

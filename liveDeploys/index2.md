@@ -54,7 +54,8 @@ To view an ELIXIR only list of live deploys [click here](./elixir).
     </ul>
     <h4>Implemented Profiles</h4>
     <table>
-    {% for profile in resource.profiles %}
+    {% assign sortedProfiles = resource.profiles | sort: "profileName" %}
+    {% for profile in sortedProfiles %}
       <tr>
         <td>
           <a href="/profiles/{{ profile.profileName }}">{{ profile.profileName}}</a> (v{{profile.conformsTo}})
