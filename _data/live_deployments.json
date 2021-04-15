@@ -8,6 +8,7 @@
   "resources": [
     {
       "name": "Identifiers.org",
+      "keywords": ["CDR", "DDR"],
       "url": "https://identifiers.org/",
       "nodes": [
         "EBI"
@@ -28,6 +29,7 @@
     },
     {
       "name": "DisProt",
+      "description": "DisProt is a database of intrinsically disordered proteins. Disordered regions are manually curated from literature. DisProt annotations cover both structural and functional aspects of disorder detected by specific experimental methods. Annotation concepts and detection methods are encoded in the Disorder Ontology.",
       "url": "https://disprot.org",
       "nodes": "IT",
       "sitemap": "https://disprot.org/sitemap.xml"

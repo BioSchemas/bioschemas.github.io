@@ -26,6 +26,16 @@ __{{liveDeploys | size}}__ resources using Bioschemas.
     </summary>
 
     <ul>
+      {% if resource.keywords %}
+        <li><strong>Keywords:</strong>
+          {% for keyword in resource.keywords %}
+            {{ keyword }}
+          {% unless forloop.last %}
+            ,
+          {% endunless %}
+        {% endfor %}
+        </li>
+      {% endif %}
       {% if resource.description %}
         <li><strong>Description:</strong> {{ resource.description }}</li>
       {% endif %}
