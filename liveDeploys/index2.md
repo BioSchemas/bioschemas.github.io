@@ -26,11 +26,14 @@ __{{liveDeploys | size}}__ resources using Bioschemas.
     </summary>
 
     <ul>
+      {% if resource.description %}
+        <li><strong>Description:</strong> {{ resource.description }}</li>
+      {% endif %}
       {% if resource.sitemap %}
-        <li>Sitemap: <a href="{{ resource.sitemap }}">{{ resource.sitemap }}</a></li>
+        <li><strong>Sitemap:</strong> <a href="{{ resource.sitemap }}">{{ resource.sitemap }}</a></li>
       {% endif %}
       {% if resource.nodes %}
-        <li>Nodes:
+        <li><strong>Nodes:</strong>
         {% for node in resource.nodes %}
           {{ node }}
           {% unless forloop.last %}
