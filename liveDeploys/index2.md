@@ -21,7 +21,7 @@ To view an ELIXIR only list of live deploys [click here](./elixir).
 
 {% for resource in liveDeploys %}
   <details>
-    <summary><h3>{{resource.name}}<a href="{{resource.url}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a></h3>
+    <summary>{{resource.profiles | size}} <h3>{{resource.name}}<a href="{{resource.url}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a></h3><div class="plus-icon"><i class="fas fa-plus fa-lg"></i></div>
     </summary>
 
     <ul>
