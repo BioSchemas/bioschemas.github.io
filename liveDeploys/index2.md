@@ -24,15 +24,22 @@ __{{liveDeploys | size}}__ resources using Bioschemas.
   <details>
     <summary><h3>{{resource.name}}<a href="{{resource.url}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a></h3>
     </summary>
-    {% if resource.nodes %}
-      Nodes: 
-      {% for node in resource.nodes %}
-        {{ node }}
-        {% unless forloop.last %}
-          ,
-        {% endunless %}
-      {% endfor %}
-    {% endif %}
+
+    <ul>
+      {% if resource.sitemap %}
+        <li>Sitemap: <a href="{{ resource.sitemap }}">{{ resource.sitemap }}</a></li>
+      {% endif %}
+      {% if resource.nodes %}
+        <li>Nodes:
+        {% for node in resource.nodes %}
+          {{ node }}
+          {% unless forloop.last %}
+            ,
+          {% endunless %}
+        {% endfor %}
+        </li>
+      {% endif %}
+    </ul>
   </details>
 {% endfor %}
 

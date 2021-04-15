@@ -25,6 +25,12 @@
     {
       "name": "Gigadb",
       "url": "http://gigadb.org/"
+    },
+    {
+      "name": "DisProt",
+      "url": "https://disprot.org",
+      "nodes": "IT",
+      "sitemap": "https://disprot.org/sitemap.xml"
     }
   ]
 }
