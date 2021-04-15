@@ -21,6 +21,10 @@
         "FR",
         "ES"
       ]
+    },
+    {
+      "name": "Gigadb",
+      "url": "http://gigadb.org/"
     }
   ]
 }

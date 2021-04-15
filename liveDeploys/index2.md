@@ -21,7 +21,19 @@ __{{liveDeploys | size}}__ resources using Bioschemas.
 {{liveDeploys}}
 
 {% for resource in liveDeploys %}
-## [{{resource.name}}]({{resource.url}})
+  <details>
+    <summary><h3>{{resource.name}}<a href="{{resource.url}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a></h3>
+    </summary>
+    {% if resource.nodes %}
+      Nodes: 
+      {% for node in resource.nodes %}
+        {{ node }}
+        {% unless forloop.last %}
+          ,
+        {% endunless %}
+      {% endfor %}
+    {% endif %}
+  </details>
 {% endfor %}
 
 > ###### Note:
