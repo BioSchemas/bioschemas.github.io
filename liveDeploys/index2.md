@@ -20,6 +20,10 @@ __{{liveDeploys | size}}__ resources using Bioschemas.
 
 {{liveDeploys}}
 
+{% for resource in liveDeploys %}
+## [{{resource.name}}]({{resource.url}})
+{% endfor %}
+
 > ###### Note:
 > As we do not maintain the websites listed above we can not guarantee the list is up to date, the sites are live and feature appropriate content or the links work.
 >
