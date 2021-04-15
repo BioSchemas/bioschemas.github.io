@@ -11,14 +11,13 @@ Please remember that Google sets minimum requirements for [schema.org](http://sc
 If your Bioschemas compliant site is not listed below, please email us at [enquiries@bioschemas.org](mailto:enquiries@bioschemas.org).
 
 To view an ELIXIR only list of live deploys [click here](./elixir).
-
+<div class="live-deploys">
+  <section class="live-deploy-table">
 {% assign liveDeploys = site.data.live_deployments.resources | sort: "name" %}
 
-##### Services/sites implementing Bioschemas's markup
+<h5>Services/sites implementing Bioschemas's markup</h5>
 
-__{{liveDeploys | size}}__ resources using Bioschemas.
-
-{{liveDeploys}}
+<p><strong>{{liveDeploys | size}}</strong> sites with Bioschemas markup.</p>
 
 {% for resource in liveDeploys %}
   <details>
@@ -53,9 +52,45 @@ __{{liveDeploys | size}}__ resources using Bioschemas.
         </li>
       {% endif %}
     </ul>
+    <h4>Implemented Profiles</h4>
+    <table>
+    {% for profile in resource.profiles %}
+      <tr>
+        <td>
+          <a href="/profiles/{{ profile.profileName }}">{{ profile.profileName}}</a> (v{{profile.conformsTo}})
+        </td>
+        <td class="structured-data-column hidden-row">
+            {% if profile.exampleURL != nil %}
+            <div class="google-sdtt-button">
+                <span class="tooltiptext">View example page</span>
+                <a href="{{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">Page</a>
+            </div>
+            {% endif %}
+        </td>
+        <td class="structured-data-column hidden-row">
+            {% if profile.exampleURL != nil %}
+            <div class="google-sdtt-button">
+                <span class="tooltiptext">Visualise on Google's Structured Data Testing Tool</span>
+                <a href="https://search.google.com/structured-data/testing-tool?url={{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SDTT</a>
+            </div>
+            {% endif %}
+        </td>
+        <td class="structured-data-column hidden-row">
+            {% if profile.exampleURL != nil %}
+            <div class="google-sdtt-button">
+                <span class="tooltiptext">Retrieve using Bioschemas Scraping service</span>
+                <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{profile.exampleURL}}&output=jsonld" class="btn btn-bioschema btn-block" target="_blank">BMUSE</a>
+            </div>
+            {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+    </table>
   </details>
 {% endfor %}
 
+</section>
+</div>
 > ###### Note:
 > As we do not maintain the websites listed above we can not guarantee the list is up to date, the sites are live and feature appropriate content or the links work.
 >

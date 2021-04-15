@@ -2,7 +2,11 @@
   "@context": [
     "https://schema.org/",
     {
-      "nodes": "http://example.com/bs/nodes"
+      "conformsTo": "http://purl.org/dc/terms/conformsTo",
+      "nodes": "http://example.com/bs/nodes",
+      "profiles": "http://example.com/bs/profiles",
+      "profileName": "https://schema.org/name",
+      "sitemap": "http://example.com/bs/sitemap"
     }
   ],
   "resources": [
@@ -12,6 +16,13 @@
       "url": "https://identifiers.org/",
       "nodes": [
         "EBI"
+      ],
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": 0.1,
+          "exampleURL": "https://identifiers.org/"
+        }
       ]
     },
     {
