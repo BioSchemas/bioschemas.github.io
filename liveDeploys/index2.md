@@ -18,7 +18,96 @@ To view an ELIXIR only list of live deploys [click here](./elixir).
 <h5>Services/sites implementing Bioschemas's markup</h5>
 
 <p><strong>{{liveDeploys | size}}</strong> sites with Bioschemas markup.</p>
-
+<table>
+  {% for resource in liveDeploys %}
+    <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{resource.name}}" aria-expanded="false" aria-controls="collapse{{resource.name}}">
+      <td colspan="4">
+        <div class="repo-count"><strong>{{resource.profiles | size}}</strong></div>
+        {{resource.name}}<a href="{{resource.url}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a>
+        <div class="plus-icon"><i class="fas fa-plus fa-lg"></i></div>
+      </td>
+    </tr>
+    <tr>
+      <td class="deploy-name-column hidden-row" colspan="4">
+          <div class="collapse collapse{{resource.name}} ">
+            <ul>
+              {% if resource.keywords %}
+                <li><strong>Keywords:</strong>
+                  {% for keyword in resource.keywords %}
+                    {{ keyword }}
+                  {% unless forloop.last %}
+                    ,
+                  {% endunless %}
+                  {% endfor %}
+                </li>
+              {% endif %}
+              {% if resource.description %}
+                <li><strong>Description:</strong> {{ resource.description }}</li>
+              {% endif %}
+              {% if resource.sitemap %}
+                <li><strong>Sitemap:</strong> <a href="{{ resource.sitemap }}">{{ resource.sitemap }}</a></li>
+              {% endif %}
+              {% if resource.nodes %}
+                <li><strong>Nodes:</strong>
+                {% for node in resource.nodes %}
+                  {{ node }}
+                  {% unless forloop.last %}
+                    ,
+                  {% endunless %}
+                {% endfor %}
+                </li>
+              {% endif %}
+            </ul>
+            <h4>Implemented Profiles</h4>
+          </div>
+      </td>
+    </tr>
+    {% assign sortedProfiles = resource.profiles | sort: "profileName" %}
+    {% for profile in sortedProfiles %}
+    <tr>
+      <td class="deploy-name-column hidden-row">
+        <div class="collapse collapse{{resource.name}} ">
+          <a href="/profiles/{{ profile.profileName }}">{{ profile.profileName}}</a> (v{{profile.conformsTo}})
+          {% if profile.highlight %}
+            <p class="highlightsText">{{profile.highlight}}</p>
+          {% endif %}
+        </div>
+      </td>
+      <td class="structured-data-column hidden-row">
+        <div class="collapse collapse{{resource.name}} ">
+          {% if profile.exampleURL != nil %}
+          <div class="google-sdtt-button">
+              <span class="tooltiptext">View example page</span>
+              <a href="{{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">Page</a>
+          </div>
+          {% endif %}
+        </div>
+      </td>
+      <td class="structured-data-column hidden-row">
+        <div class="collapse collapse{{resource.name}} ">
+          {% if profile.exampleURL != nil %}
+          <div class="google-sdtt-button">
+              <span class="tooltiptext">Visualise on Google's Structured Data Testing Tool</span>
+              <a href="https://search.google.com/structured-data/testing-tool?url={{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SDTT</a>
+          </div>
+          {% endif %}
+        </div>
+      </td>
+      <td class="structured-data-column hidden-row">
+        <div class="collapse collapse{{resource.name}} ">
+          {% if profile.exampleURL != nil %}
+          <div class="google-sdtt-button">
+              <span class="tooltiptext">Retrieve using Bioschemas Scraping service</span>
+              <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{profile.exampleURL}}&output=jsonld" class="btn btn-bioschema btn-block" target="_blank">BMUSE</a>
+          </div>
+          {% endif %}
+        </div>
+      </td>
+    </tr>
+    {% endfor %}
+  {% endfor %}
+</table>
+<!--
 {% for resource in liveDeploys %}
   <details>
     <summary>{{resource.profiles | size}} <h3>{{resource.name}}<a href="{{resource.url}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a></h3><div class="plus-icon"><i class="fas fa-plus fa-lg"></i></div>
@@ -92,7 +181,7 @@ To view an ELIXIR only list of live deploys [click here](./elixir).
     </table>
   </details>
 {% endfor %}
-
+-->
 </section>
 </div>
 > ###### Note:
