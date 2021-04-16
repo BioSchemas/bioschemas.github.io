@@ -88,7 +88,7 @@ To view an ELIXIR only list of live deploys [click here](./elixir).
           {% if profile.exampleURL != nil %}
           <div class="google-sdtt-button">
               <span class="tooltiptext">Visualise on Google's Structured Data Testing Tool</span>
-              <a href="https://search.google.com/structured-data/testing-tool?url={{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SDTT</a>
+              <a href="https://search.google.com/structured-data/testing-tool#url={{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SDTT</a>
           </div>
           {% endif %}
         </div>
