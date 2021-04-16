@@ -18,12 +18,10 @@ title: Live Deploys
   <li><strong>{{liveDeploys | size}}</strong> sites with Bioschemas markup</li>
   {% assign numProfiles = 0 %}
   {% for resource in liveDeploys %}
-    {% assign profiles = resource.profiles %}
-    {% assign numProfiles = numProfiles | plus:profiles.size %}
+    {% assign profiles = profiles | concat: resource.profiles %}
   {% endfor %}
-  <li>{{ numProfiles }} profile deployments</li>
+  <li>{{ profiles.size }} profile deployments</li>
 </ul>
-
 
 <!-- TABS at top of page -->
 <input id="tab1" type="radio" name="tabs" checked>
@@ -205,9 +203,110 @@ title: Live Deploys
 </section>
 <section id="tab2Content" class="tabs">
   By profile content!
+  <div class="live-deploys">
+    <section class="live-deploy-table">
+      {% assign profiles = profiles | group_by: 'profileName' | sort: 'name' %}
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th class="structured-data-column">Profile Version</th>
+            <th class="structured-data-column">Page</th>
+            <th class="structured-data-column">Structured Data Testing Tool</th>
+            <th class="structured-data-column">Rich Snippet Tool</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for profile in profiles %}
+          {% assign profile_index = forloop.index %}
+          <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{profile.name}}" aria-expanded="false" aria-controls="collapse{{profile.name}}">
+              <td colspan="5">
+                  <div class="repo-count"><strong>{{profile.items | size}}</strong></div>
+                  <!--
+                    Extract from the site data the latest release version number
+                    If there has not been a release yet, use the latest draft version number
+                    The IF statement tests that the variable exists and that it is not blank or nil
+                  -->
+                  {% if site.data.profile_versions[profile.name].latest_release and site.data.profile_versions[profile.name].latest_release != "" and site.data.profile_versions[profile.name].latest_release != nil %}
+                    {% assign version = site.data.profile_versions[profile.name].latest_release %}
+                  {% else %}
+                    {% assign version = site.data.profile_versions[profile.name].latest_publication %}
+                  {% endif %}
+
+                  {% if profile.name == "BioChemEntity" or profile.name=="SequenceRange" %}
+                  {{profile.name}}<a href="/types/{{profile.name}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a><br>
+                  {% else %}
+                  {{profile.name}}<br/>({{version}})<a href="/profiles/{{profile.name}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a><br>
+                  {% endif %}
+                  <div class="plus-icon"><i class="fas fa-plus fa-lg"></i></div>
+              </td>
+          </tr>
+          {% assign live_sorted_list = profile.items | sort: 'name' %}
+          {% for live in live_sorted_list %}
+          <tr>
+              <td class="deploy-name-column hidden-row">
+                  <div class="collapse collapse{{profile.name}} ">
+                    <!-- TODO: Connect back to site information -->
+                    <!-- {% if live.resource_URL != nil %}
+                      <a href="{{live.resource_URL}}" target="_blank">{{live.name}}</a>
+                    {% else %}
+                      {{live.name}}
+                    {% endif %} -->
+                    {{live.exampleURL}}
+                    {% if live.highlight != nil %}
+                      <p class="highlightsText">{{live.highlight}}</p>
+                    {% endif %}
+                  </div>
+              </td>
+              <td class="profile-version hidden-row">
+                  <div class="collapse collapse{{profile.name}}">
+                  {{live.conformsTo}}
+                  </div>
+              </td>
+              <td class="structured-data-column hidden-row">
+                  {% if live.exampleURL != nil %}
+                  <div class="collapse collapse{{profile.name}}">
+                  <div class="google-sdtt-button">
+                      <span class="tooltiptext">View example page</span>
+                      <a href="{{live.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">Page</a>
+                  </div>
+                  </div>
+                  {% endif %}
+              </td>
+              <td class="structured-data-column hidden-row">
+                  {% if live.exampleURL != nil %}
+                  <div class="collapse collapse{{profile.name}}">
+                  <div class="google-sdtt-button">
+                      <span class="tooltiptext">Visualise on Google's Structured Data Testing Tool</span>
+                      <a href="https://search.google.com/structured-data/testing-tool#url={{live.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SDTT</a>
+                  </div>
+                  </div>
+                  {% endif %}
+              </td>
+              <td class="structured-data-column hidden-row">
+                  {% if live.exampleURL != nil %}
+                  <div class="collapse collapse{{profile.name}}">
+                    <div class="google-sdtt-button">
+                        <span class="tooltiptext">Retrieve using Bioschemas Scraping service</span>
+                        <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{live.exampleURL}}&output=jsonld" class="btn btn-bioschema btn-block" target="_blank">BMUSE</a>
+                    </div>
+                  </div>
+                  {% endif %}
+              </td>
+          </tr>
+          {% endfor %}
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+  </div>
 </section>
 <section id="tab3Content" class="tabs">
   By ELIXIR node content!
+  <div class="live-deploys">
+    <section class="live-deploy-table">
+    </section>
+  </div>
 </section>
 
 <blockquote>
