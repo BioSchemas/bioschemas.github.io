@@ -3,14 +3,14 @@ layout: default
 title: Live Deploys
 ---
 
-# {{ page.title }}
+<h1>{{ page.title }}</h1>
+<p>Below we list the sites that use <a href="http://bioschemas.org">Bioscheams</a> markup to describe what they are offering. We provide a direct link to the site, an example deployment page, a link to Google's Structured Data Testing Tool (<a href="https://search.google.com/structured-data/testing-tool">SDTT</a>) visualisation of the page's markup, and also what a link to the results of using the Bioschemas Markup Scraper and Extractor tool (<a href="https://github.com/HW-SWeL/BMUSE">BMUSE</a>). The links to Google’s SDTT and BMUSE show one example page from the site; however, many more may exist. For example, Biosamples have marked up all of their content (currently over 10 million samples).</p> 
 
-Below we list the services/sites that use [Bioschemas](http://bioschemas.org) markup to describe what they are offering. We provide a direct link to the site and also a link to Google's Structured Data Testing Tool ([SDTT](https://search.google.com/structured-data/testing-tool)) visualisation of the site's markup.
-The link to Google’s SDTT shows one example from the site; however, many more may exist. For example, Biosamples have marked up all of their content (currently over 10 million samples).
-Please remember that Google sets minimum requirements for [schema.org](http://schema.org) markup, which may differ with those of [Bioschemas](http://bioschemas.org). As such, Google's [SDTT](https://search.google.com/structured-data/testing-tool) may provide warnings or errors when the markup is perfectly compliant with both [schema.org](http://schema.org) and [Bioschemas](http://bioschemas.org).
-If your Bioschemas compliant site is not listed below, please email us at [enquiries@bioschemas.org](mailto:enquiries@bioschemas.org).
+<p>Note that SDTT is being deprecated and you will receive a warning message about this.</p>
 
-To view an ELIXIR only list of live deploys [click here](./elixir).
+<p>Please remember that Google sets minimum requirements for <a href="http://schema.org">Schema.org</a> markup, which may differ with those of <a href="http://bioschemas.org">Bioscheams</a>. As such, Google's <a href="https://search.google.com/structured-data/testing-tool">SDTT</a> may provide warnings or errors when the markup is perfectly compliant with both <a href="http://schema.org">Schema.org</a> and <a href="http://bioschemas.org">Bioscheams</a>.</p>
+
+<p>If your Bioschemas compliant site is not listed below, please email us at <a href="mailto:enquiries@bioschemas.org">enquiries@bioschemas.org</a>.</p>
 
 <h2>Sites implementing Bioschemas's markup</h2>
 <ul>
@@ -25,8 +25,17 @@ To view an ELIXIR only list of live deploys [click here](./elixir).
 </ul>
 
 
-<div class="live-deploys">
-<section class="live-deploy-table">
+<!-- TABS at top of page -->
+<input id="tab1" type="radio" name="tabs" checked>
+<label for="tab1">By Site</label>
+<input id="tab2" type="radio" name="tabs">
+<label for="tab2">By Profile</label>
+<input id="tab3" type="radio" name="tabs">
+<label for="tab3">By ELIXIR Node</label>
+
+  <section id="tab1Content" class="tabs">
+    <div class="live-deploys">
+      <section class="live-deploy-table">
 <table>
   {% for resource in liveDeploys %}
     <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{resource.name}}" aria-expanded="false" aria-controls="collapse{{resource.name}}">
@@ -193,7 +202,17 @@ To view an ELIXIR only list of live deploys [click here](./elixir).
 -->
 </section>
 </div>
-> ###### Note:
-> As we do not maintain the websites listed above we can not guarantee the list is up to date, the sites are live and feature appropriate content or the links work.
->
-> Help us keep it updated: [Join](/howtojoin/) the community and/or create a pull request on the [Bioschemas GitHub](https://github.com/Bioschemas/bioschemas.github.io) community project.
+</section>
+<section id="tab2Content" class="tabs">
+  By profile content!
+</section>
+<section id="tab3Content" class="tabs">
+  By ELIXIR node content!
+</section>
+
+<blockquote>
+  <h6>Note:</h6>
+  <p>As we do not maintain the websites listed above we can not guarantee the list is up to date, the sites are live and feature appropriate content or the links work.</p>
+
+  <p>Help us keep it updated: <a href="/howtojoin/">Join</a> the community and/or create a pull request on the <a href="https://github.com/Bioschemas/bioschemas.github.io">Bioschemas GitHub</a> community project.</p>
+</blockquote>
