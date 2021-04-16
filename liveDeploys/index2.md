@@ -11,13 +11,22 @@ Please remember that Google sets minimum requirements for [schema.org](http://sc
 If your Bioschemas compliant site is not listed below, please email us at [enquiries@bioschemas.org](mailto:enquiries@bioschemas.org).
 
 To view an ELIXIR only list of live deploys [click here](./elixir).
+
+<h2>Sites implementing Bioschemas's markup</h2>
+<ul>
+  {% assign liveDeploys = site.data.live_deployments.resources | sort: "name" %}
+  <li><strong>{{liveDeploys | size}}</strong> sites with Bioschemas markup</li>
+  {% assign numProfiles = 0 %}
+  {% for resource in liveDeploys %}
+    {% assign profiles = resource.profiles %}
+    {% assign numProfiles = numProfiles | plus:profiles.size %}
+  {% endfor %}
+  <li>{{ numProfiles }} profile deployments</li>
+</ul>
+
+
 <div class="live-deploys">
-  <section class="live-deploy-table">
-{% assign liveDeploys = site.data.live_deployments.resources | sort: "name" %}
-
-<h5>Sites implementing Bioschemas's markup</h5>
-
-<p><strong>{{liveDeploys | size}}</strong> sites with Bioschemas markup.</p>
+<section class="live-deploy-table">
 <table>
   {% for resource in liveDeploys %}
     <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{resource.name}}" aria-expanded="false" aria-controls="collapse{{resource.name}}">
