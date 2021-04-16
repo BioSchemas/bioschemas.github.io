@@ -89,6 +89,23 @@
           "highlight": "3.5k protein regions"
         }
       ]
+    },
+    {
+      "name": "FAIRsharing",
+      "url": "https://fairsharing.org/",
+      "nodes": "UK",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://fairsharing.org/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://fairsharing.org/"
+        }
+      ]
     }
   ]
 }
