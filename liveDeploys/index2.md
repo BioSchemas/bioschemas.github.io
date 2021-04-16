@@ -15,7 +15,7 @@ To view an ELIXIR only list of live deploys [click here](./elixir).
   <section class="live-deploy-table">
 {% assign liveDeploys = site.data.live_deployments.resources | sort: "name" %}
 
-<h5>Services/sites implementing Bioschemas's markup</h5>
+<h5>Sites implementing Bioschemas's markup</h5>
 
 <p><strong>{{liveDeploys | size}}</strong> sites with Bioschemas markup.</p>
 <table>
