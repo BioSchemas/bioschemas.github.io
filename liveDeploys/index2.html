@@ -14,7 +14,7 @@ title: Live Deploys
 
 <h2>Sites implementing Bioschemas's markup</h2>
 <ul>
-  {% assign liveDeploys = site.data.live_deployments.resources | sort: "name" %}
+  {% assign liveDeploys = site.data.live_deployments.resources | sort_natural: "name" %}
   <li><strong>{{liveDeploys | size}}</strong> sites with Bioschemas markup</li>
   {% assign numProfiles = 0 %}
   {% for resource in liveDeploys %}
@@ -32,6 +32,7 @@ title: Live Deploys
 <label for="tab3">By ELIXIR Node</label>
 
   <section id="tab1Content" class="tabs">
+    <!-- Live deployments by site -->
     <div class="live-deploys">
       <section class="live-deploy-table">
 <table>
@@ -202,9 +203,10 @@ title: Live Deploys
 </div>
 </section>
 <section id="tab2Content" class="tabs">
+  <!-- Live deployments by Profile -->
   <div class="live-deploys">
     <section class="live-deploy-table">
-      {% assign profiles = profiles | group_by: 'profileName' | sort: 'name' %}
+      {% assign profiles = profiles | group_by: 'profileName' | sort_natural: 'name' %}
       <table>
         <thead>
           <tr>
