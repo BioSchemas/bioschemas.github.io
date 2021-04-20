@@ -53,14 +53,14 @@ The screenshot shows the tool results for the DisProt protein DP00003. Click [he
 
 ![Google Structured Data Testing Tool showing DisProt:DP00003](/tutorials/images/google_struct.png)
 
-### Bioschemas Markup  Scraper and Extractor (BMUSE)
+### Bioschemas Markup Scraper and Extractor (BMUSE)
 
-[http://lxbisel.macs.hw.ac.uk:8080/scraper/](http://lxbisel.macs.hw.ac.uk:8080/scraper/)
+[https://swel.macs.hw.ac.uk/scraper/](https://swel.macs.hw.ac.uk/scraper/)
 
 This is a web deployment of a tool developed by the Heriot-Watt team that is a dedicated Bioschemas scraper. It is able to deal with a wider range of Single Page Application engines than the Google tool, but does not offer much in the way of a user interface. You need to parameterise your call to the `getRDF` method by supplying the `url` and the output type option; currently we support `jsonld` and `turtle`.
 
 For your example, to retrieve the content from the DisProt page for DP00003 we would use
-[`http://lxbisel.macs.hw.ac.uk:8080/scraper/getRDF?url=https://disprot.org/DP00003&output=jsonld`](http://lxbisel.macs.hw.ac.uk:8080/scraper/getRDF?url=https://disprot.org/DP00003&output=jsonld)
+[`https://swel.macs.hw.ac.uk/scraper/getRDF?url=https://disprot.org/DP00003&output=jsonld`](https://swel.macs.hw.ac.uk/scraper//getRDF?url=https://disprot.org/DP00003&output=jsonld)
 
 ### Bioschemas Validator (Experimental)
 
