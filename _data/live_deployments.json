@@ -106,6 +106,24 @@
           "exampleURL": "https://fairsharing.org/"
         }
       ]
+    },
+    {
+      "name": "Biosamples",
+      "keywords": ["DDR"],
+      "url": "https://www.ebi.ac.uk/biosamples/",
+      "nodes": "EBI",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.ebi.ac.uk/biosamples/"
+        },
+        {
+          "profileName": "Sample",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.ebi.ac.uk/biosamples/samples/SAMEA491372"
+        }
+      ]
     }
   ]
 }
