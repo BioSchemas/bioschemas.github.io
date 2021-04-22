@@ -306,11 +306,29 @@ title: Live Deploys
   <!-- Live deployments by ELIXIR node -->
   <div class="live-deploys">
     <section class="live-deploy-table">
-      {% assign nodes = liveDeploys | group_by: 'nodes' | sort_natural: 'name' %}
+      {% assign numSites = 0 %}
+      {% assign cdrCount = 0 %}
+      {% assign ddrCount = 0 %}
+      {% for site in liveDeploys %}
+        {% if site.nodes %}
+          {% assign numSites = numSites | plus:1 %}
+          {% if site.keywords contains "CDR" %}
+            {% assign cdrCount = cdrCount | plus:1 %}
+          {% endif %}
+          {% if site.keywords contains "DDR" %}
+            {% assign ddrCount = ddrCount | plus:1 %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      <p align="left"><strong>{{numSites}}</strong> ELIXIR resources have Bioschemas markup. Of which there are</p>
+
       <ul style='text-align: left;'>
-        <li>CDR: <a href="https://elixir-europe.org/platforms/data/core-data-resources">ELIXIR Core Data Resource</a></li>
-        <li>DDR: <a href="https://elixir-europe.org/platforms/data/elixir-deposition-databases">ELIXIR Deposition Database Resource</a></li>
+        <li>{{cdrCount}} ELIXIR Core Data Resource (<a href="https://elixir-europe.org/platforms/data/core-data-resources">CDR</a>)</li>
+        <li>{{ddrCount}} ELIXIR Deposition Database Resource (<a href="https://elixir-europe.org/platforms/data/elixir-deposition-databases">DDR</a>)</li>
       </ul>
+
+      {% assign nodes = liveDeploys | group_by: 'nodes' | sort_natural: 'name' %}
       <!-- {{nodes}} -->
       <table width="100%">
         {% for node in nodes %}
