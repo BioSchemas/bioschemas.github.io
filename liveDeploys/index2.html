@@ -323,102 +323,93 @@ title: Live Deploys
               </td>
             </tr>
           {% endif %}
-          <tr>
-            <td colspan="4" class="deploy-name-column hidden-row">
-              <div class="collapse collapse{{node.name}} ">
-                {{node.items}}
-              </div>
-            </td>
-          </tr>
-                  {% for resource in node.items %}
-                  <tr class="profile-row">
-                    <td colspan="4" class="deploy-name-column hidden-row">
-                      <div class="collapse collapse{{node.name}} ">
-                      <div class="repo-count"><strong>Profiles: {{resource.profiles | size}}</strong></div>
-                      {{resource.name}}<a href="{{resource.url}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a>
+          {% for resource in node.items %}
+            <tr class="profile-row">
+              <td colspan="4" class="deploy-name-column hidden-row">
+                <div class="collapse collapse{{node.name}} ">
+                  <div class="repo-count"><strong>Profiles: {{resource.profiles | size}}</strong></div>
+                  {{resource.name}}<a href="{{resource.url}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4" class="deploy-name-column hidden-row">
+                <div class="collapse collapse{{node.name}} ">
+                    <ul>
+                      {% if resource.keywords %}
+                        <li><strong>Keywords:</strong>
+                          {% for keyword in resource.keywords %}
+                            {{ keyword }}
+                          {% unless forloop.last %}
+                            ,
+                          {% endunless %}
+                          {% endfor %}
+                        </li>
+                      {% endif %}
+                      {% if resource.description %}
+                        <li><strong>Description:</strong> {{ resource.description }}</li>
+                      {% endif %}
+                      {% if resource.sitemap %}
+                        <li><strong>Sitemap:</strong> <a href="{{ resource.sitemap }}">{{ resource.sitemap }}</a></li>
+                      {% endif %}
+                      {% if resource.nodes %}
+                        <li><strong>Nodes:</strong>
+                        {% for node in resource.nodes %}
+                          {{ node }}
+                          {% unless forloop.last %}
+                            ,
+                          {% endunless %}
+                        {% endfor %}
+                        </li>
+                      {% endif %}
+                    </ul>
+                    <h4>Implemented Profiles</h4>
+                  </div>
+              </td>
+            </tr>
+            {% assign sortedProfiles = resource.profiles | sort: "profileName" %}
+            {% for profile in sortedProfiles %}
+              <tr>
+                <td class="deploy-name-column hidden-row">
+                  <div class="collapse collapse{{node.name}} ">
+                    <a href="/profiles/{{ profile.profileName }}">{{ profile.profileName}}</a> (v{{profile.conformsTo}})
+                    {% if profile.highlight %}
+                      <p class="highlightsText">{{profile.highlight}}</p>
+                    {% endif %}
+                  </div>
+                </td>
+                <td class="deploy-name-column hidden-row">
+                  <div class="collapse collapse{{node.name}} ">
+                    {% if profile.exampleURL != nil %}
+                    <div class="google-sdtt-button">
+                        <span class="tooltiptext">View example page</span>
+                        <a href="{{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">Page</a>
                     </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td colspan="4" class="deploy-name-column hidden-row">
-                      <div class="collapse collapse{{node.name}} ">
-                          <ul>
-                            {% if resource.keywords %}
-                              <li><strong>Keywords:</strong>
-                                {% for keyword in resource.keywords %}
-                                  {{ keyword }}
-                                {% unless forloop.last %}
-                                  ,
-                                {% endunless %}
-                                {% endfor %}
-                              </li>
-                            {% endif %}
-                            {% if resource.description %}
-                              <li><strong>Description:</strong> {{ resource.description }}</li>
-                            {% endif %}
-                            {% if resource.sitemap %}
-                              <li><strong>Sitemap:</strong> <a href="{{ resource.sitemap }}">{{ resource.sitemap }}</a></li>
-                            {% endif %}
-                            {% if resource.nodes %}
-                              <li><strong>Nodes:</strong>
-                              {% for node in resource.nodes %}
-                                {{ node }}
-                                {% unless forloop.last %}
-                                  ,
-                                {% endunless %}
-                              {% endfor %}
-                              </li>
-                            {% endif %}
-                          </ul>
-                          <h4>Implemented Profiles</h4>
-                        </div>
-                    </td>
-                  </tr>
-                  {% assign sortedProfiles = resource.profiles | sort: "profileName" %}
-                  {% for profile in sortedProfiles %}
-                  <tr>
-                    <td class="deploy-name-column hidden-row">
-                      <div class="collapse collapse{{node.name}} ">
-                        <a href="/profiles/{{ profile.profileName }}">{{ profile.profileName}}</a> (v{{profile.conformsTo}})
-                        {% if profile.highlight %}
-                          <p class="highlightsText">{{profile.highlight}}</p>
-                        {% endif %}
-                      </div>
-                    </td>
-                    <td class="deploy-name-column hidden-row">
-                      <div class="collapse collapse{{node.name}} ">
-                        {% if profile.exampleURL != nil %}
-                        <div class="google-sdtt-button">
-                            <span class="tooltiptext">View example page</span>
-                            <a href="{{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">Page</a>
-                        </div>
-                        {% endif %}
-                      </div>
-                    </td>
-                    <td class="deploy-name-column hidden-row">
-                      <div class="collapse collapse{{node.name}} ">
-                        {% if profile.exampleURL != nil %}
-                        <div class="google-sdtt-button">
-                            <span class="tooltiptext">Visualise on Google's Structured Data Testing Tool</span>
-                            <a href="https://search.google.com/structured-data/testing-tool#url={{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SDTT</a>
-                        </div>
-                        {% endif %}
-                      </div>
-                    </td>
-                    <td class="deploy-name-column hidden-row">
-                      <div class="collapse collapse{{node.name}} ">
-                        {% if profile.exampleURL != nil %}
-                        <div class="google-sdtt-button">
-                            <span class="tooltiptext">Retrieve using Bioschemas Scraping service</span>
-                            <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{profile.exampleURL}}&output=jsonld" class="btn btn-bioschema btn-block" target="_blank">BMUSE</a>
-                        </div>
-                        {% endif %}
-                      </div>
-                    </td>
-                  </tr>
-                  {% endfor %}
-              </div>
-            </td>
+                    {% endif %}
+                  </div>
+                </td>
+                <td class="deploy-name-column hidden-row">
+                  <div class="collapse collapse{{node.name}} ">
+                    {% if profile.exampleURL != nil %}
+                    <div class="google-sdtt-button">
+                        <span class="tooltiptext">Visualise on Google's Structured Data Testing Tool</span>
+                        <a href="https://search.google.com/structured-data/testing-tool#url={{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SDTT</a>
+                    </div>
+                    {% endif %}
+                  </div>
+                </td>
+                <td class="deploy-name-column hidden-row">
+                  <div class="collapse collapse{{node.name}} ">
+                    {% if profile.exampleURL != nil %}
+                    <div class="google-sdtt-button">
+                        <span class="tooltiptext">Retrieve using Bioschemas Scraping service</span>
+                        <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{profile.exampleURL}}&output=jsonld" class="btn btn-bioschema btn-block" target="_blank">BMUSE</a>
+                    </div>
+                    {% endif %}
+                  </div>
+                </td>
+              </tr>
+            {% endfor %}
           {% endfor %}
         {% endfor %}
       </table>
