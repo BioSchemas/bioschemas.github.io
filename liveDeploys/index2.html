@@ -309,14 +309,34 @@ title: Live Deploys
       {% assign numSites = 0 %}
       {% assign cdrCount = 0 %}
       {% assign ddrCount = 0 %}
+      <!-- create empty array -->
+      {% assign elixirDeploys = '' | split: '' %}
+
+      <!--
+        Iterate through sites and manipulate so that nodes are all single strings
+        This is to allow accurate grouping by ELIXIR node later on.
+        This loop also generates the counts for ELIXIR, CDR, and DDR (making sure
+        not to double count sites that come from multiple nodes)
+      -->
       {% for site in liveDeploys %}
         {% if site.nodes %}
+          <!-- {{site}}<br/> -->
           {% assign numSites = numSites | plus:1 %}
           {% if site.keywords contains "CDR" %}
             {% assign cdrCount = cdrCount | plus:1 %}
           {% endif %}
           {% if site.keywords contains "DDR" %}
             {% assign ddrCount = ddrCount | plus:1 %}
+          {% endif %}
+          {% if site.nodes.first %}
+            <!-- We have an array of nodes -->
+            Array of nodes: {{site.nodes}}<br/>
+            {% for node in site.nodes %}
+              {{node}}<br/>
+            {% endfor %}
+          {% else %}
+            <!-- We have the node as a string, can push straight to the array -->
+            {% assign elixirDeploys = elixirDeploys | push: site %}
           {% endif %}
         {% endif %}
       {% endfor %}
@@ -328,7 +348,7 @@ title: Live Deploys
         <li>{{ddrCount}} ELIXIR Deposition Database Resource (<a href="https://elixir-europe.org/platforms/data/elixir-deposition-databases">DDR</a>)</li>
       </ul>
 
-      {% assign nodes = liveDeploys | group_by: 'nodes' | sort_natural: 'name' %}
+      {% assign nodes = elixirDeploys | group_by: 'nodes' | sort_natural: 'name' %}
       <!-- {{nodes}} -->
       <table width="100%">
         {% for node in nodes %}
