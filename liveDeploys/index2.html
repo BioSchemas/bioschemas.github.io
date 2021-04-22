@@ -39,7 +39,7 @@ title: Live Deploys
   {% for resource in liveDeploys %}
     <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{resource.name}}" aria-expanded="false" aria-controls="collapse{{resource.name}}">
       <td colspan="4">
-        <div class="repo-count"><strong>{{resource.profiles | size}}</strong></div>
+        <div class="repo-count"><strong>Profiles: {{resource.profiles | size}}</strong></div>
         {{resource.name}}<a href="{{resource.url}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a>
         <div class="plus-icon"><i class="fas fa-plus fa-lg"></i></div>
       </td>
@@ -222,7 +222,7 @@ title: Live Deploys
           {% assign profile_index = forloop.index %}
           <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{profile.name}}" aria-expanded="false" aria-controls="collapse{{profile.name}}">
               <td colspan="5">
-                  <div class="repo-count"><strong>{{profile.items | size}}</strong></div>
+                  <div class="repo-count"><strong>Sites: {{profile.items | size}}</strong></div>
                   <!--
                     Extract from the site data the latest release version number
                     If there has not been a release yet, use the latest draft version number
