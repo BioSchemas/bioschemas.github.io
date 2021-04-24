@@ -309,8 +309,6 @@ title: Live Deploys
       {% assign numSites = 0 %}
       {% assign cdrCount = 0 %}
       {% assign ddrCount = 0 %}
-      <!-- create empty array -->
-      {% assign elixirDeploys = '' | split: '' %}
 
       <!--
         Iterate through sites and manipulate so that nodes are all single strings
@@ -320,23 +318,12 @@ title: Live Deploys
       -->
       {% for site in liveDeploys %}
         {% if site.nodes %}
-          <!-- {{site}}<br/> -->
           {% assign numSites = numSites | plus:1 %}
           {% if site.keywords contains "CDR" %}
             {% assign cdrCount = cdrCount | plus:1 %}
           {% endif %}
           {% if site.keywords contains "DDR" %}
             {% assign ddrCount = ddrCount | plus:1 %}
-          {% endif %}
-          {% if site.nodes.first %}
-            <!-- We have an array of nodes -->
-            Array of nodes: {{site.nodes}}<br/>
-            {% for node in site.nodes %}
-              {{node}}<br/>
-            {% endfor %}
-          {% else %}
-            <!-- We have the node as a string, can push straight to the array -->
-            {% assign elixirDeploys = elixirDeploys | push: site %}
           {% endif %}
         {% endif %}
       {% endfor %}
@@ -348,15 +335,17 @@ title: Live Deploys
         <li>{{ddrCount}} ELIXIR Deposition Database Resource (<a href="https://elixir-europe.org/platforms/data/elixir-deposition-databases">DDR</a>)</li>
       </ul>
 
-      {% assign nodes = elixirDeploys | group_by: 'nodes' | sort_natural: 'name' %}
-      <!-- {{nodes}} -->
+      {% assign nodes = liveDeploys | group_by: 'nodes' | sort_natural: 'name' %}
+
       <table width="100%">
         {% for node in nodes %}
           {% if node.name != '' %}
-            <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{node.name}}" aria-expanded="false" aria-controls="collapse{{node.name}}">
+            <!-- Convert array of nodes into single string to enable expansion/collapse of table rows -->
+            {% assign nodeName = node.name | remove: '[' | remove: ']' | remove: '"' | replace: ', ', '-' %}
+            <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{nodeName}}" aria-expanded="false" aria-controls="collapse{{nodeName}}">
               <td colspan="4">
                 <div class="repo-count"><strong>Sites: {{node.size}}</strong></div>
-                {{node.name}}
+                {{nodeName}}
                 <div class="plus-icon"><i class="fas fa-plus fa-lg"></i></div>
               </td>
             </tr>
@@ -364,7 +353,7 @@ title: Live Deploys
           {% for resource in node.items %}
             <tr class="profile-row">
               <td colspan="4" class="deploy-name-column hidden-row">
-                <div class="collapse collapse{{node.name}} ">
+                <div class="collapse collapse{{nodeName}} ">
                   <div class="repo-count"><strong>Profiles: {{resource.profiles | size}}</strong></div>
                   {{resource.name}}<a href="{{resource.url}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a>
                 </div>
@@ -372,7 +361,7 @@ title: Live Deploys
             </tr>
             <tr>
               <td colspan="4" class="deploy-name-column hidden-row">
-                <div class="collapse collapse{{node.name}} ">
+                <div class="collapse collapse{{nodeName}} ">
                     <ul>
                       {% if resource.keywords %}
                         <li><strong>Keywords:</strong>
@@ -409,7 +398,7 @@ title: Live Deploys
             {% for profile in sortedProfiles %}
               <tr>
                 <td class="deploy-name-column hidden-row">
-                  <div class="collapse collapse{{node.name}} ">
+                  <div class="collapse collapse{{nodeName}} ">
                     <a href="/profiles/{{ profile.profileName }}">{{ profile.profileName}}</a> (v{{profile.conformsTo}})
                     {% if profile.highlight %}
                       <p class="highlightsText">{{profile.highlight}}</p>
@@ -417,7 +406,7 @@ title: Live Deploys
                   </div>
                 </td>
                 <td class="deploy-name-column hidden-row">
-                  <div class="collapse collapse{{node.name}} ">
+                  <div class="collapse collapse{{nodeName}} ">
                     {% if profile.exampleURL != nil %}
                     <div class="google-sdtt-button">
                         <span class="tooltiptext">View example page</span>
@@ -427,7 +416,7 @@ title: Live Deploys
                   </div>
                 </td>
                 <td class="deploy-name-column hidden-row">
-                  <div class="collapse collapse{{node.name}} ">
+                  <div class="collapse collapse{{nodeName}} ">
                     {% if profile.exampleURL != nil %}
                     <div class="google-sdtt-button">
                         <span class="tooltiptext">Visualise on Google's Structured Data Testing Tool</span>
@@ -437,7 +426,7 @@ title: Live Deploys
                   </div>
                 </td>
                 <td class="deploy-name-column hidden-row">
-                  <div class="collapse collapse{{node.name}} ">
+                  <div class="collapse collapse{{nodeName}} ">
                     {% if profile.exampleURL != nil %}
                     <div class="google-sdtt-button">
                         <span class="tooltiptext">Retrieve using Bioschemas Scraping service</span>
