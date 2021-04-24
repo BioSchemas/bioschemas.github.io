@@ -54,10 +54,11 @@ title: Live Deploys
                     {% if resource.keywords %}
                       <li><strong>Keywords:</strong>
                         {% for keyword in resource.keywords %}
-                          {{ keyword }}
-                        {% unless forloop.last %}
-                          ,
-                        {% endunless %}
+                          {% if forloop.last %}
+                            {{keyword}}
+                          {% else %}
+                            {{keyword}},
+                          {% endif %}
                         {% endfor %}
                       </li>
                     {% endif %}
@@ -69,12 +70,13 @@ title: Live Deploys
                     {% endif %}
                     {% if resource.nodes %}
                       <li><strong>Nodes:</strong>
-                      {% for node in resource.nodes %}
-                        {{ node }}
-                        {% unless forloop.last %}
-                          ,
-                        {% endunless %}
-                      {% endfor %}
+                        {% for node in resource.nodes %}
+                          {% if forloop.last %}
+                            {{node}}
+                          {% else %}
+                            {{node}},
+                          {% endif %}
+                        {% endfor %}
                       </li>
                     {% endif %}
                   </ul>
@@ -294,10 +296,11 @@ title: Live Deploys
                       {% if resource.keywords %}
                         <li><strong>Keywords:</strong>
                           {% for keyword in resource.keywords %}
-                            {{ keyword }}
-                          {% unless forloop.last %}
-                            ,
-                          {% endunless %}
+                            {% if forloop.last %}
+                              {{keyword}}
+                            {% else %}
+                              {{keyword}},
+                            {% endif %}
                           {% endfor %}
                         </li>
                       {% endif %}
@@ -309,12 +312,13 @@ title: Live Deploys
                       {% endif %}
                       {% if resource.nodes %}
                         <li><strong>Nodes:</strong>
-                        {% for node in resource.nodes %}
-                          {{ node }}
-                          {% unless forloop.last %}
-                            ,
-                          {% endunless %}
-                        {% endfor %}
+                          {% for node in resource.nodes %}
+                            {% if forloop.last %}
+                              {{node}}
+                            {% else %}
+                              {{node}},
+                            {% endif %}
+                          {% endfor %}
                         </li>
                       {% endif %}
                     </ul>
