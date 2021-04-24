@@ -37,17 +37,19 @@ title: Live Deploys
     <section class="live-deploy-table">
       <table>
         {% for resource in liveDeploys %}
+          <!-- Remove characters that prevent expansion/collapse of table rows -->
+          {% assign resourceName = resource.name | replace: '.', '_' %}
 
-          <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{resource.name}}" aria-expanded="false" aria-controls="collapse{{resource.name}}">
+          <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{resourceName}}" aria-expanded="false" aria-controls="collapse{{resourceName}}">
             <td colspan="4">
               <div class="repo-count"><strong>Profiles: {{resource.profiles | size}}</strong></div>
-              {{resource.name}}<a href="{{resource.url}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a>
+              {{resourceName}}<a href="{{resource.url}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a>
               <div class="plus-icon"><i class="fas fa-plus fa-lg"></i></div>
             </td>
           </tr>
           <tr>
             <td class="deploy-name-column hidden-row" colspan="4">
-                <div class="collapse collapse{{resource.name}} ">
+                <div class="collapse collapse{{resourceName}} ">
                   <ul>
                     {% if resource.keywords %}
                       <li><strong>Keywords:</strong>
@@ -84,7 +86,7 @@ title: Live Deploys
           {% for profile in sortedProfiles %}
           <tr>
             <td class="deploy-name-column hidden-row">
-              <div class="collapse collapse{{resource.name}} ">
+              <div class="collapse collapse{{resourceName}} ">
                 <a href="/profiles/{{ profile.profileName }}">{{ profile.profileName}}</a> (v{{profile.conformsTo}})
                 {% if profile.highlight %}
                   <p class="highlightsText">{{profile.highlight}}</p>
@@ -92,7 +94,7 @@ title: Live Deploys
               </div>
             </td>
             <td class="structured-data-column hidden-row">
-              <div class="collapse collapse{{resource.name}} ">
+              <div class="collapse collapse{{resourceName}} ">
                 {% if profile.exampleURL != nil %}
                 <div class="google-sdtt-button">
                     <span class="tooltiptext">View example page</span>
@@ -102,7 +104,7 @@ title: Live Deploys
               </div>
             </td>
             <td class="structured-data-column hidden-row">
-              <div class="collapse collapse{{resource.name}} ">
+              <div class="collapse collapse{{resourceName}} ">
                 {% if profile.exampleURL != nil %}
                 <div class="google-sdtt-button">
                     <span class="tooltiptext">Visualise on Google's Structured Data Testing Tool</span>
@@ -112,7 +114,7 @@ title: Live Deploys
               </div>
             </td>
             <td class="structured-data-column hidden-row">
-              <div class="collapse collapse{{resource.name}} ">
+              <div class="collapse collapse{{resourceName}} ">
                 {% if profile.exampleURL != nil %}
                 <div class="google-sdtt-button">
                     <span class="tooltiptext">Retrieve using Bioschemas Scraping service</span>
