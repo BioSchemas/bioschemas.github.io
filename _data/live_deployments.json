@@ -14,9 +14,7 @@
       "name": "Identifiers.org",
       "keywords": ["CDR", "DDR"],
       "url": "https://identifiers.org/",
-      "nodes": [
-        "EBI"
-      ],
+      "nodes": "EBI",
       "profiles": [
         {
           "profileName": "DataCatalog",
