@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Live Deploys
+exampleHoverText: "View example page"
+sdttHoverText: "Visualise on Google's Structured Data Testing Tool"
+bmuseHoverText: "Retrieve using Bioschemas Scraping service"
 ---
 
 <h1>{{ page.title }}</h1>
@@ -99,7 +102,7 @@ title: Live Deploys
               <div class="collapse collapse{{resourceName}} ">
                 {% if profile.exampleURL != nil %}
                 <div class="google-sdtt-button">
-                    <span class="tooltiptext">View example page</span>
+                    <span class="tooltiptext">{{page.exampleHoverText}}</span>
                     <a href="{{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">Page</a>
                 </div>
                 {% endif %}
@@ -109,7 +112,7 @@ title: Live Deploys
               <div class="collapse collapse{{resourceName}} ">
                 {% if profile.exampleURL != nil %}
                 <div class="google-sdtt-button">
-                    <span class="tooltiptext">Visualise on Google's Structured Data Testing Tool</span>
+                    <span class="tooltiptext">{{page.sdttHoverText}}</span>
                     <a href="https://search.google.com/structured-data/testing-tool#url={{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SDTT</a>
                 </div>
                 {% endif %}
@@ -119,7 +122,7 @@ title: Live Deploys
               <div class="collapse collapse{{resourceName}} ">
                 {% if profile.exampleURL != nil %}
                 <div class="google-sdtt-button">
-                    <span class="tooltiptext">Retrieve using Bioschemas Scraping service</span>
+                    <span class="tooltiptext">{{page.bmuseHoverText}}</span>
                     <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{profile.exampleURL}}&output=jsonld" class="btn btn-bioschema btn-block" target="_blank">BMUSE</a>
                 </div>
                 {% endif %}
@@ -198,7 +201,7 @@ title: Live Deploys
                   {% if live.exampleURL != nil %}
                   <div class="collapse collapse{{profile.name}}">
                   <div class="google-sdtt-button">
-                      <span class="tooltiptext">View example page</span>
+                      <span class="tooltiptext">{{page.exampleHoverText}}</span>
                       <a href="{{live.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">Page</a>
                   </div>
                   </div>
@@ -208,7 +211,7 @@ title: Live Deploys
                   {% if live.exampleURL != nil %}
                   <div class="collapse collapse{{profile.name}}">
                   <div class="google-sdtt-button">
-                      <span class="tooltiptext">Visualise on Google's Structured Data Testing Tool</span>
+                      <span class="tooltiptext">{{page.sdttHoverText}}</span>
                       <a href="https://search.google.com/structured-data/testing-tool#url={{live.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SDTT</a>
                   </div>
                   </div>
@@ -218,7 +221,7 @@ title: Live Deploys
                   {% if live.exampleURL != nil %}
                   <div class="collapse collapse{{profile.name}}">
                     <div class="google-sdtt-button">
-                        <span class="tooltiptext">Retrieve using Bioschemas Scraping service</span>
+                        <span class="tooltiptext">{{page.bmuseHoverText}}</span>
                         <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{live.exampleURL}}&output=jsonld" class="btn btn-bioschema btn-block" target="_blank">BMUSE</a>
                     </div>
                   </div>
@@ -341,7 +344,7 @@ title: Live Deploys
                   <div class="collapse collapse{{nodeName}} ">
                     {% if profile.exampleURL != nil %}
                     <div class="google-sdtt-button">
-                        <span class="tooltiptext">View example page</span>
+                        <span class="tooltiptext">{{page.exampleHoverText}}</span>
                         <a href="{{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">Page</a>
                     </div>
                     {% endif %}
@@ -351,7 +354,7 @@ title: Live Deploys
                   <div class="collapse collapse{{nodeName}} ">
                     {% if profile.exampleURL != nil %}
                     <div class="google-sdtt-button">
-                        <span class="tooltiptext">Visualise on Google's Structured Data Testing Tool</span>
+                        <span class="tooltiptext">{{page.sdttHoverText}}</span>
                         <a href="https://search.google.com/structured-data/testing-tool#url={{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SDTT</a>
                     </div>
                     {% endif %}
@@ -361,7 +364,7 @@ title: Live Deploys
                   <div class="collapse collapse{{nodeName}} ">
                     {% if profile.exampleURL != nil %}
                     <div class="google-sdtt-button">
-                        <span class="tooltiptext">Retrieve using Bioschemas Scraping service</span>
+                        <span class="tooltiptext">{{page.bmuseHoverText}}</span>
                         <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{profile.exampleURL}}&output=jsonld" class="btn btn-bioschema btn-block" target="_blank">BMUSE</a>
                     </div>
                     {% endif %}
