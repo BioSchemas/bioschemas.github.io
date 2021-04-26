@@ -33,7 +33,7 @@ bioschemas:
   version: 1.0
 ---
 
-## Prepare your working environment
+## 1. Prepare your working environment
 
 To create and publish a new draft profile you need access to a couple of Bioschemas resources, here we list them all together with the main role they play in the whole process. We will explain how to use them and what to do with them in later steps.
 
@@ -46,9 +46,9 @@ If you do not have the right permissions to edit the mentioned resources, send a
 
 From now on, we will use ScholarlyArticle as an example to create and publish a new draft profile.
 
-## Create a new profile crosswalk
+## 2. Create a new profile crosswalk
 
-A profile crosswalk is a spreadsheet with the schema.org fields to be considered together with cardinality, marginality, suggested controlled vocabularies and examples. It is not a regular spreadsheet but one with a templeate and some predifined functionalities. A new profile is commonly based on the previous one so the easiest way to start is from the previous version.
+A profile crosswalk is a spreadsheet with the schema.org fields to be considered together with cardinality, marginality, suggested controlled vocabularies and examples. It is not a regular spreadsheet but one with a template and some predifined functionalities. A new profile is commonly based on the previous one so the easiest way to start is from the previous version.
 
 * Go to the GDrive and navigate to the folder Specifications
 * Locate and open the folder corresponding to the profile you want to update, in our example it is the ScholarlyArticle folder
@@ -91,7 +91,7 @@ Once you have finished with the changes on the spreadsheet, go to File/Publish t
 | __Figure 2. Publish Bioschemas fields to the web__ |
 
 
-## Get the code for the new draft profile
+## 3. Get the code for the new draft profile
 
 Now you are ready to the the machine-processable Bioshemas version of your new draft profile.
 
@@ -99,7 +99,7 @@ Now you are ready to the the machine-processable Bioshemas version of your new d
 * Run GOWeb using the CSV file you created on the previous section [Publish the Bioschemas fields to the Web](#publish-the-bioschemas-fields-to-the-web)
 * A YAML file will be created, you will use that one on the next section [Update the website](#update-the-website)
 
-## Update the website
+## 4. Update the website
 
 You are now ready to publish the new draft version on the Bioschemas website. 
 
@@ -148,13 +148,13 @@ ScholarlyArticle:
     status: "active"
 ```
 
-## Get an overview on you local copy
+## 5. Get an overview on you local copy
 
 Now you are ready to run the website locally, open a terminal and run ```jekyll serve``` (how to get Jekyll running is out of the scope of this tutorial).
 
 Open the local URL and navigate the pages corresponding to the profile that you just changed to make sure everything is working well.
 
-## Update examples
+## 6. Update examples
 
 Regardless whether it was a minor or major change, it is always a good idea to have full examples on the [Specifications repository](https://github.com/BioSchemas/specifications)
 
@@ -165,6 +165,6 @@ Regardless whether it was a minor or major change, it is always a good idea to h
 * If the examples for the previous version are fully compatible with the new version, it is ok if you add a note pointing to the previous examples rather than adding new ones
 * On the examples, always remember to add the ```dc:conformsTo``` property so it points to your profile version, for example ```"dct:conformsTo": "https://bioschemas.org/profiles/ScholarlyArticle/0.3-DRAFT",```
 
-## Create a Pull Request
+## 7. Create a Pull Request
 
 Congratulations, you have created a new draft profile and are now ready to create a Pull Request on the [Bioschemas website repository](https://github.com/BioSchemas/bioschemas.github.io). Always suggest at least one possible reviewer as your PR cannot be merged unless one reviewer has approved.
