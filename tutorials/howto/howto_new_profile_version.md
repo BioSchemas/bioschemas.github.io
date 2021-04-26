@@ -40,7 +40,7 @@ To create and publish a new draft profile you need access to a couple of Biosche
 * Bioschemas specifications GDrive folder: to create the spreadsheet corresponding to the new draft profile, you need editing rights
 * [GOweb repository](https://github.com/BioSchemas/bioschemas-goweb): to move from the spreadsheet to the website
 * [Website repository](https://github.com/BioSchemas/bioschemas.github.io): to publish the new draft profile, you need editing rights
-* [Specifications repository](https://github.com/BioSchemas/specifications): to add complaint examples regarding the new draft profile, you need editing rights
+* [Specifications repository](https://github.com/BioSchemas/specifications): to add compliant examples regarding the new draft profile, you need editing rights
 
 If you do not have the right permissions to edit the mentioned resources, send an email to the [mailing list](mailto:public-bioschemas@w3.org) explaining why you have access and what Bioschemas group you belong to. Once your case has been validated, you will get an invitation to join the GDrive and the repositories.
 
