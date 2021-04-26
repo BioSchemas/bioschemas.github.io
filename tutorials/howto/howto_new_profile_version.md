@@ -48,7 +48,7 @@ From now on, we will use ScholarlyArticle as an example to create and publish a 
 
 ## 2. Create a new profile crosswalk
 
-A profile crosswalk is a spreadsheet with the schema.org fields to be considered together with cardinality, marginality, suggested controlled vocabularies and examples. It is not a regular spreadsheet but one with a template and some predifined functionalities. A new profile is commonly based on the previous one so the easiest way to start is from the previous version.
+A profile crosswalk is a spreadsheet with the Schema.org fields to be considered together with cardinality, marginality, suggested controlled vocabularies and examples. It is not a regular spreadsheet but one with a template and some predifined functionalities. A new profile is commonly based on the previous one so the easiest way to start is from the previous version.
 
 * Go to the GDrive and navigate to the folder Specifications
 * Locate and open the folder corresponding to the profile you want to update, in our example it is the ScholarlyArticle folder
@@ -64,24 +64,24 @@ You will also need to update:
 * the "version" column with the new version
 * the "Full Example" column with the link pointing to examples for this new version, see more on the [Update examples](#update-examples) section
 
-You should update the column "Official Type" if and only if you modified the main parent type from shema.org. For instance, in previous versions the Bioschemas TrainingMaterial profile had CreativeWork as the main parent schema.org type but it was changed to LearningResource from version 0.8
+You should update the column "Official Type" if and only if you modified the main parent type from Schema.org. For instance, in previous versions the Bioschemas TrainingMaterial profile had CreativeWork as the main parent Schema.org type but it was changed to LearningResource from version 0.8
 
 ### The Schema.org mapping tab
 
 Here you will make the changes to the profile. There are a couple of possibilities here.
-* You want to update a property that already exists (e.g., there is typo, description should be updated, a new controlled vocabulary will be added, a new example is necessary, expected schema.org types have changed, etc.)
+* You want to update a property that already exists (e.g., there is typo, description should be updated, a new controlled vocabulary will be added, a new example is necessary, expected Schema.org types have changed, etc.)
   * Go to the column you want to change and update it as needed
 * You want to add a new property
   * If it is a property belonging to a parent type already recorded, see Figure 1 below. Our ScholarlyArticle example already extends ScholarlyArticle, Article, CreativeWork and Thing
     * Add a new column under the corresponding type. Let's suppose you want to add the property "wordCount" that comes from the type Article
-    * Go to the parent type in schema.org, in this case [Article](https://schema.org/Article) and copy the property name, the expected types and the description and paste them on the first three columns of the row you just created
+    * Go to the parent type in Schema.org, in this case [Article](https://schema.org/Article) and copy the property name, the expected types and the description and paste them on the first three columns of the row you just created
     * Fill in the rest of the columns as needed (remember, columns "Type" and "Type URL" should be left empty)
   * If it is a property belonging to a new parent
     * Add a new row indicating what type is being extended
     * Follow the process as described for properties belonging to a parent already recorded
 
-| ![Figure 1. From schema.org to profile spredsheet](/tutorials/images/from_schema_to_spreadsheet.png) |
-| __Figure 1. From schema.org to profile spredsheet__ |
+| ![Figure 1. From Schema.org to profile spredsheet](/tutorials/images/from_schema_to_spreadsheet.png) |
+| __Figure 1. From Schema.org to profile spredsheet__ |
 
 ### Publish the Bioschemas fields to the Web
 
