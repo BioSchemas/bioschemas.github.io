@@ -1191,5 +1191,14 @@ list:
   bsc_ver: 0.7
   comments:  
   node: UK
-
+-
+  name: Bioschemas Training Portal
+  highlight:
+  example_URL: https://bioschemas.org/tutorials/what_why_bioschemas
+  resource_URL: https://bioschemas.org/tutorials/
+  schema_org: LearningResource
+  bsc_profile: TrainingMaterial
+  bsc_ver: 0.9
+  comments:
+  node: UK
 ---

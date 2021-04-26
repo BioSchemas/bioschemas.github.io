@@ -82,6 +82,3 @@ If your resource involves more than one profile, you first need to define the st
 
 Now, focus on a particular profile, have at hand the [corresponding specification page on Bioschemas](/specifications/) as well as your resource, i.e., your web pages. Do a manual exercise mapping elements to properties. This will help you have a clearer idea on what you want to achieve once you go and use gimme-my-jsonld (see next section). You might need more than one iteration here as you can face multiple option at the beginning, choose that one that gives more benefits. Keep in mind your goal by adding this mark up to your resource.
 
-## Getting JSON-LD with gimme-my-jsonld
-
-In progress
