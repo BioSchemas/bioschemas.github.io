@@ -70,6 +70,18 @@
       ]
     },
     {
+      "name": "WikiPathways",
+      "url": "https://wikipathways.org/",
+      "nodes": "NL",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://wikipathways.org/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
