@@ -29,6 +29,7 @@
     },
     {
       "name": "FAIRsharing",
+      "keywords": ["RIR"],
       "url": "https://fairsharing.org/",
       "nodes": "UK",
       "profiles": [
