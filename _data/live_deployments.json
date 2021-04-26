@@ -28,6 +28,34 @@
       ]
     },
     {
+      "name": "FAIRsharing",
+      "url": "https://fairsharing.org/",
+      "nodes": "UK",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://fairsharing.org/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://fairsharing.org/"
+        }
+      ]
+    },
+    {
+      "name": "Gigadb",
+      "url": "http://gigadb.org/",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "http://gigadb.org/site/index"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
@@ -41,17 +69,6 @@
           "conformsTo": "0.4-DRAFT",
           "exampleURL": "https://bio.tools/covidmine",
           "highlight": "17090 tools"
-        }
-      ]
-    },
-    {
-      "name": "Gigadb",
-      "url": "http://gigadb.org/",
-      "profiles": [
-        {
-          "profileName": "DataCatalog",
-          "conformsTo": "0.1",
-          "exampleURL": "http://gigadb.org/site/index"
         }
       ]
     },
@@ -89,23 +106,6 @@
           "conformsTo": "0.1-DRAFT",
           "exampleURL": "https://www.disprot.org/DP00086r026",
           "highlight": "3.5k protein regions"
-        }
-      ]
-    },
-    {
-      "name": "FAIRsharing",
-      "url": "https://fairsharing.org/",
-      "nodes": "UK",
-      "profiles": [
-        {
-          "profileName": "DataCatalog",
-          "conformsTo": "0.1",
-          "exampleURL": "https://fairsharing.org/"
-        },
-        {
-          "profileName": "Dataset",
-          "conformsTo": "0.1",
-          "exampleURL": "https://fairsharing.org/"
         }
       ]
     },
