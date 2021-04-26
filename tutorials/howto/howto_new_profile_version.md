@@ -48,7 +48,9 @@ From now on, we will use ScholarlyArticle as an example to create and publish a 
 
 ## 2. Create a new profile crosswalk
 
-A profile crosswalk is a spreadsheet with the Schema.org fields to be considered together with cardinality, marginality, suggested controlled vocabularies and examples. It is not a regular spreadsheet but one with a template and some predifined functionalities. A new profile is commonly based on the previous one so the easiest way to start is from the previous version.
+A profile crosswalk is the cornerstone of Bioschemas profile development. It is a spreadsheet with the Schema.org fields to be considered together with cardinality, marginality, suggested controlled vocabularies and examples. It is not a regular spreadsheet but one with a template and some predifined functionalities. It is then translated into strcutured data so that the Bioschemas web site is automatically updated. 
+
+A new profile is commonly based on the previous one so the easiest way to start is from the previous version.
 
 * Go to the GDrive and navigate to the folder Specifications
 * Locate and open the folder corresponding to the profile you want to update, in our example it is the ScholarlyArticle folder
