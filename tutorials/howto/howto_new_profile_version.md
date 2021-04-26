@@ -107,7 +107,7 @@ You are now ready to publish the new draft version on the Bioschemas website.
 
 * If you have not done so yet, clone the [Bioschemas website repository](https://github.com/BioSchemas/bioschemas.github.io) so you have a local copy
 * Open your local copy in your preferred editor
-* Go to _profiles/<your profile>, in this case _profiles/ScholarlyArticle
+* Go to `_profiles/<your profile>`, in this case `_profiles/ScholarlyArticle`
 * Create a copy of the latest profile, in our case it is 0.2-DRAFT-2020_12_03.html
 * Rename the copy so it reflects the new draft version, in our case it would be 0.3-DRAFT.html (having the dates as part of the draft name is no longer needed/desired)
 * On the previous version file, in our case 0.2-DRAFT-2020_12_03.html
@@ -169,4 +169,4 @@ Regardless whether it was a minor or major change, it is always a good idea to h
 
 ## 7. Create a Pull Request
 
-Congratulations, you have created a new draft profile and are now ready to create a Pull Request on the [Bioschemas website repository](https://github.com/BioSchemas/bioschemas.github.io). Always suggest at least one possible reviewer as your PR cannot be merged unless one reviewer has approved.
+Congratulations, you have created a new draft profile and are now ready to create a Pull Request on the [Bioschemas website repository](https://github.com/BioSchemas/bioschemas.github.io). Always suggest at least one possible reviewer as your PR cannot be merged unless one reviewer has approved it.
