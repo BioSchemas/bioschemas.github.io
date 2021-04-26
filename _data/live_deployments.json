@@ -1,14 +1,18 @@
 {
-  "@context": [
-    "https://schema.org/",
-    {
-      "conformsTo": "http://purl.org/dc/terms/conformsTo",
-      "nodes": "http://example.com/bs/nodes",
-      "profiles": "http://example.com/bs/profiles",
-      "profileName": "https://schema.org/name",
-      "sitemap": "http://example.com/bs/sitemap"
-    }
-  ],
+  "@context": {
+    "conformsTo": "http://purl.org/dc/terms/conformsTo",
+    "description": "https://schema.org/description",
+    "exampleURL": "https://schema.org/url",
+    "highlight": "http://example.com/bs/highlight",
+    "keywords": "https://schema.org/keywords",
+    "name": "https://schema.org/name",
+    "nodes": "http://example.com/bs/nodes",
+    "profiles": "http://example.com/bs/profiles",
+    "profileName": "https://schema.org/name",
+    "resources": "https://schema.org/WebSite",
+    "sitemap": "http://example.com/bs/sitemap",
+    "url": "https://schema.org/url"
+  },
   "resources": [
     {
       "name": "Identifiers.org",
