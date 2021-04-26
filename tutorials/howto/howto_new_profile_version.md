@@ -150,7 +150,7 @@ ScholarlyArticle:
     status: "active"
 ```
 
-## 5. Get an overview on you local copy
+## 5. Get an overview on your local copy
 
 Now you are ready to run the website locally, open a terminal and run ```jekyll serve``` (how to get Jekyll running is out of the scope of this tutorial).
 

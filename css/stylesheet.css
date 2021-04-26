@@ -1213,3 +1213,18 @@ table.bioschemas_properties a.pending,
 table.definition-table a.ext-pending {
     color: #0000CC;
 }
+
+#toc {
+    position: fixed;
+    right: 1em;
+    top: 5em;
+    background-color:#FFF;
+    box-shadow: 0 0 1em #777777;
+    padding: 0.5em;
+  }
+  
+  #toc #full { display: none; } /* Hide the full TOC by default */
+  
+  #toc:hover #full{
+    display: block; /* Show it on hover */
+  }
