@@ -82,6 +82,32 @@
       ]
     },
     {
+      "name": "EGA",
+      "keywords": ["CDR", "DDR"],
+      "url": "https://ega-archive.org/",
+      "nodes": "EBI",
+      "sitemap": "https://ega-archive.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://ega-archive.org/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://ega-archive.org/datasets/EGAD00000000001",
+          "highlight": "Over 5,300 datasets"
+        },
+        {
+          "profileName": "Study",
+          "conformsTo": "0.1",
+          "exampleURL": "https://ega-archive.org/studies/EGAS00000000001",
+          "highlight": "Over 3,700 studies"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
