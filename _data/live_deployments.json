@@ -108,6 +108,18 @@
       ]
     },
     {
+      "name": "ISAExplorer",
+      "url": "http://scientificdata.isa-explorer.org/",
+      "nodes": "UK",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "http://scientificdata.isa-explorer.org/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
