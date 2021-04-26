@@ -28,7 +28,7 @@ bioschemas:
     url: https://bioschemas.org/people/LeylaGarcia
   dateModified: 2021-04-16
   description: "In this how-to, we will guide you through the necessary steps for you to create and publish a new draft profile, you need some knowledge on spreadsheets, GitHub, git and Jekyll."
-  keywords: "schemaorg, markup, structured data, bioschemas profile"
+  keywords: "schema.org, markup, structured data, bioschemas profile"
   license: CC-BY 4.0
   version: 1.0
 ---
