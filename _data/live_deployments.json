@@ -56,6 +56,19 @@
       ]
     },
     {
+      "name": "Human Protein Atlas",
+      "keywords": "CDR",
+      "url": "https://www.proteinatlas.org/",
+      "nodes": "SE",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "http://gigadb.org/site/index"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
