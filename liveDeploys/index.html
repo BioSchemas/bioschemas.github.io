@@ -242,11 +242,12 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
       {% assign numSites = 0 %}
       {% assign cdrCount = 0 %}
       {% assign ddrCount = 0 %}
+      {% assign rirCount = 0 %}
 
       <!--
         Iterate through sites and manipulate so that nodes are all single strings
         This is to allow accurate grouping by ELIXIR node later on.
-        This loop also generates the counts for ELIXIR, CDR, and DDR (making sure
+        This loop also generates the counts for ELIXIR, CDR, DDR, and RIR (making sure
         not to double count sites that come from multiple nodes)
       -->
       {% for site in liveDeploys %}
@@ -258,6 +259,9 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
           {% if site.keywords contains "DDR" %}
             {% assign ddrCount = ddrCount | plus:1 %}
           {% endif %}
+          {% if site.keywords contains "RIR" %}
+            {% assign rirCount = rirCount | plus:1 %}
+          {% endif %}
         {% endif %}
       {% endfor %}
 
@@ -266,6 +270,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
       <ul style='text-align: left;'>
         <li>{{cdrCount}} ELIXIR Core Data Resource (<a href="https://elixir-europe.org/platforms/data/core-data-resources">CDR</a>)</li>
         <li>{{ddrCount}} ELIXIR Deposition Database Resource (<a href="https://elixir-europe.org/platforms/data/elixir-deposition-databases">DDR</a>)</li>
+        <li>{{rirCount}} ELIXIR Recommended Interoperability Resource (<a href="https://elixir-europe.org/platforms/interoperability/rirs">RIR</a>)</li>
       </ul>
 
       {% assign nodes = liveDeploys | group_by: 'nodes' | sort_natural: 'name' %}

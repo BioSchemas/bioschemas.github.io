@@ -16,7 +16,7 @@
   "resources": [
     {
       "name": "Identifiers.org",
-      "keywords": ["CDR", "DDR"],
+      "keywords": ["RIR"],
       "url": "https://identifiers.org/",
       "nodes": "EBI",
       "profiles": [
