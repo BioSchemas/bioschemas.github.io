@@ -167,6 +167,26 @@
       ]
     },
     {
+      "name": "Biosamples",
+      "keywords": ["DDR"],
+      "url": "https://www.ebi.ac.uk/biosamples/",
+      "nodes": "EBI",
+      "sitemap": "https://www.ebi.ac.uk/biosamples/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.ebi.ac.uk/biosamples/"
+        },
+        {
+          "profileName": "Sample",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.ebi.ac.uk/biosamples/samples/SAMEA491372",
+          "highlight": "Over 16 million samples"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
@@ -217,24 +237,6 @@
           "conformsTo": "0.1-DRAFT",
           "exampleURL": "https://www.disprot.org/DP00086r026",
           "highlight": "3.5k protein regions"
-        }
-      ]
-    },
-    {
-      "name": "Biosamples",
-      "keywords": ["DDR"],
-      "url": "https://www.ebi.ac.uk/biosamples/",
-      "nodes": "EBI",
-      "profiles": [
-        {
-          "profileName": "DataCatalog",
-          "conformsTo": "0.1",
-          "exampleURL": "https://www.ebi.ac.uk/biosamples/"
-        },
-        {
-          "profileName": "Sample",
-          "conformsTo": "0.1",
-          "exampleURL": "https://www.ebi.ac.uk/biosamples/samples/SAMEA491372"
         }
       ]
     }
