@@ -149,6 +149,24 @@
       ]
     },
     {
+      "name": "MobiDB",
+      "url": "http://mobidb.bio.unipd.it/",
+      "nodes": "IT",
+      "sitemap": "https://mobidb.bio.unipd.it/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "http://mobidb.bio.unipd.it/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.2",
+          "exampleURL": "http://mobidb.bio.unipd.it/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
