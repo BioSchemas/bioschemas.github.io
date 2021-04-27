@@ -1014,9 +1014,10 @@ list:
     resource_URL: https://bridgedb.github.io/
     schema_org: Dataset
     bsc_profile: Dataset
-    bsc_ver: 0.3
+    bsc_ver: 0.4-DRAFT
     comments:
     node: NL
+    sitemap: https://bridgedb.github.io/sitemap.xml
 -
     name: NanoCommons
     example_URL: https://nanocommons.github.io/specifications/jrc/
@@ -1191,5 +1192,14 @@ list:
   bsc_ver: 0.7
   comments:  
   node: UK
-
+-
+  name: Bioschemas Training Portal
+  highlight:
+  example_URL: https://bioschemas.org/tutorials/what_why_bioschemas
+  resource_URL: https://bioschemas.org/tutorials/
+  schema_org: LearningResource
+  bsc_profile: TrainingMaterial
+  bsc_ver: 0.9
+  comments:
+  node: UK
 ---
