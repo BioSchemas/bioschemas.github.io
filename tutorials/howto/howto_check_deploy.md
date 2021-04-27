@@ -23,10 +23,15 @@ bioschemas:
     name: "Alasdair Gray"
     "@id": https://bioschemas.org/people/AlasdairGray
     url: https://bioschemas.org/people/AlasdairGray
+  contributor:
+  - "@type": Person
+    name: "Ivan Mi&ccaron;eti&cacute;"
+    "@id": https://bioschemas.org/people/IvanMicetic
+    url: https://bioschemas.org/people/IvanMicetic
   description: "This guide will show you how to check your deployed markup, both locally and what is retrieved by external services."
   keywords: "schemaorg, JSON-LD, bioschemas"
   license: CC-BY 4.0
-  version: 1.0
+  version: 1.1
 ---
 
 ## Using a browser to check your deployment
