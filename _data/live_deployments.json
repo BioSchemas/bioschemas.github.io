@@ -120,6 +120,35 @@
       ]
     },
     {
+      "name": "IUPHAR/BPS Guide to Pharmacology",
+      "url": "https://www.guidetopharmacology.org/",
+      "nodes": "UK",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://www.guidetopharmacology.org/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://www.guidetopharmacology.org/"
+        },
+        {
+          "profileName": "MolecularEntity",
+          "conformsTo": "0.2-DRAFT",
+          "exampleURL": "https://www.guidetopharmacology.org/GRAC/LigandDisplayForward?ligandId=8299",
+          "highlight": "Over 9,800 ligands"
+        },
+        {
+          "profileName": "Protein",
+          "conformsTo": "0.11",
+          "exampleURL": "https://www.guidetopharmacology.org/coronavirus.jsp",
+          "highlight": "Proteins associated with COVID-19"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
