@@ -1014,9 +1014,10 @@ list:
     resource_URL: https://bridgedb.github.io/
     schema_org: Dataset
     bsc_profile: Dataset
-    bsc_ver: 0.3
+    bsc_ver: 0.4-DRAFT
     comments:
     node: NL
+    sitemap: https://bridgedb.github.io/sitemap.xml
 -
     name: NanoCommons
     example_URL: https://nanocommons.github.io/specifications/jrc/
