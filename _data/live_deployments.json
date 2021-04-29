@@ -568,6 +568,23 @@
       ]
     },
     {
+      "name": "HAMAP",
+      "url": "https://hamap.expasy.org/",
+      "nodes": "CH",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://hamap.expasy.org/cgi-bin/unirule/unirule_browse.cgi"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://hamap.expasy.org/archaea.html"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
