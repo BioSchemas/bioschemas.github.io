@@ -489,6 +489,19 @@
       ]
     },
     {
+      "name": "Reactome",
+      "keywords": ["CDR"],
+      "nodes": "EBI",
+      "url": "https://reactome.org/",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://reactome.org/content/detail/R-HSA-449147"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
