@@ -676,6 +676,33 @@
       ]
     },
     {
+      "name": "SynBioHub",
+      "url": "https://synbiohub.org/",
+      "nodes": "UK",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://synbiohub.org/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://synbiohub.org/"
+        },
+        {
+          "profileName": "DataRecord",
+          "conformsTo": "0.2-DRAFT",
+          "exampleURL": "https://synbiohub.org/public/igem/BBa_K165005/1"
+        },
+        {
+          "profileName": "BioChemEntity",
+          "conformsTo": "0.7-RC",
+          "exampleURL": "https://synbiohub.org/public/igem/BBa_K165005/1"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
