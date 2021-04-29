@@ -198,6 +198,17 @@
       ]
     },
     {
+      "name": "Pscan",
+      "url": "http://159.149.160.88/pscan/",
+      "profiles": [
+        {
+          "profileName": "ComputationalTool",
+          "conformsTo": "0.1",
+          "exampleURL": "http://159.149.160.88/pscan/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
