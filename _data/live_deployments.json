@@ -220,6 +220,17 @@
       ]
     },
     {
+      "name": "Cscan",
+      "url": "http://159.149.160.88/cscan/",
+      "profiles": [
+        {
+          "profileName": "ComputationalTool",
+          "conformsTo": "0.1",
+          "exampleURL": "http://159.149.160.88/cscan"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
