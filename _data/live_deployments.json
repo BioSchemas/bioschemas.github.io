@@ -598,6 +598,19 @@
       ]
     },
     {
+      "name": "PROSITE - Protein domains, families and functional sites description",
+      "url": "https://prosite.expasy.org",
+      "nodes": "CH",
+      "sitemap": "https://prosite.expasy.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://prosite.expasy.org"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
