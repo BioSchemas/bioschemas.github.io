@@ -326,6 +326,18 @@
       ]
     },
     {
+      "name": "Birmingham Metabolomics Training Centre",
+      "url": "https://www.birmingham.ac.uk/",
+      "nodes": "UK",
+      "profiles": [
+        {
+          "profileName": "Event",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.birmingham.ac.uk/facilities/metabolomics-training-centre/courses/q-exactive.aspx",
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
