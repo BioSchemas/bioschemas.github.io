@@ -277,6 +277,19 @@
       ]
     },
     {
+      "name": "French Institute of Bioinformatics (IFB)",
+      "url": "https://www.france-bioinformatique.fr/",
+      "nodes": "FR",
+      "sitemap": "https://www.france-bioinformatique.fr/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Event",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.france-bioinformatique.fr/en/evenements_upcoming",
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
