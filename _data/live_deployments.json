@@ -611,6 +611,24 @@
       ]
     },
     {
+      "name": "Ensembl Genome Browser",
+      "keywords": ["CDR"],
+      "url": "https://www.ensembl.org/",
+      "nodes": "EBI",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.2",
+          "exampleURL": "https://www.ensembl.org/"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.2",
+          "exampleURL": "https://www.ensembl.org/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
