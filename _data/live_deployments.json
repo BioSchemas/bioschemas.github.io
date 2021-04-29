@@ -440,6 +440,23 @@
       ]
     },
     {
+      "name": "CHD7 Database",
+      "nodes": "NL",
+      "url": "https://molgenis51.gcc.rug.nl/",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://molgenis51.gcc.rug.nl/"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://molgenis51.gcc.rug.nl/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
