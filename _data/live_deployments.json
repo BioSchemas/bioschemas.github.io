@@ -256,6 +256,27 @@
       ]
     },
     {
+      "name": "PDBe",
+      "keywords": ["CDR", "DDR"],
+      "url": "http://www.ebi.ac.uk/pdbe/",
+      "nodes": "EBI",
+      "sitemap": "https://www.ebi.ac.uk/pdbe/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Protein",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.ebi.ac.uk/pdbe/entry/pdb/5hbi/protein/1",
+          "highlight": "Over 215,000 proteins"
+        },
+        {
+          "profileName": "ProteinStructure",
+          "conformsTo": "0.1",
+          "exampleURL": "http://www.ebi.ac.uk/pdbe/entry/pdb/4a7l",
+          "highlight": "Over 175,000 protein structures"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
