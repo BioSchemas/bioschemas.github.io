@@ -209,6 +209,17 @@
       ]
     },
     {
+      "name": "PscanChIP",
+      "url": "http://159.149.160.88/pscan_chip_dev/",
+      "profiles": [
+        {
+          "profileName": "ComputationalTool",
+          "conformsTo": "0.1",
+          "exampleURL": "http://159.149.160.88/pscan_chip_dev/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
