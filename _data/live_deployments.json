@@ -532,6 +532,30 @@
       ]
     },
     {
+      "name": "SWISS-MODEL",
+      "nodes": "CH",
+      "url": "https://swissmodel.expasy.org/",
+      "sitemap": "https://swissmodel.expasy.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://swissmodel.expasy.org/repository"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.2",
+          "exampleURL": "https://swissmodel.expasy.org/repository",
+          "highlight": "12 Datasets"
+        },
+        {
+          "profileName": "ComputationalTool",
+          "conformsTo": "0.1",
+          "exampleURL": "https://swissmodel.expasy.org/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
