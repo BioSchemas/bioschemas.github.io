@@ -457,6 +457,22 @@
       ]
     },
     {
+      "name": "International Microvillus Inclusion Disease (MVID) Patient Registry",
+      "url": "http://mvid-central.org/",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "http://mvid-central.org/"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "http://mvid-central.org/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
