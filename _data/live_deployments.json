@@ -314,6 +314,18 @@
       ]
     },
     {
+      "name": "ELIXIR",
+      "url": "https://www.elixir-europe.org/",
+      "nodes": "Hub",
+      "profiles": [
+        {
+          "profileName": "Event",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.elixir-europe.org/events/biohackathon-2018-paris",
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
