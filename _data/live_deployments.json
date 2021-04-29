@@ -231,6 +231,17 @@
       ]
     },
     {
+      "name": "BAR 3.0",
+      "url": "https://bar.biocomp.unibo.it/bar3/",
+      "profiles": [
+        {
+          "profileName": "ComputationalTool",
+          "conformsTo": "0.1",
+          "exampleURL": "https://bar.biocomp.unibo.it/bar3/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
