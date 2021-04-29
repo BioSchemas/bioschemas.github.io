@@ -302,6 +302,18 @@
       ]
     },
     {
+      "name": "SIB",
+      "url": "https://www.sib.swiss/",
+      "nodes": "CH",
+      "profiles": [
+        {
+          "profileName": "Event",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.sib.swiss/training/upcoming-training-events",
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
