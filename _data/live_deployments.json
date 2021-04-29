@@ -473,6 +473,22 @@
       ]
     },
     {
+      "name": "AIP Mutation Database",
+      "url": "https://aip.fipapatients.org/",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://aip.fipapatients.org/"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://aip.fipapatients.org/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
