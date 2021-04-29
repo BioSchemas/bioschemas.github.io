@@ -703,6 +703,25 @@
       ]
     },
     {
+      "name": "National Museum of Natural History of Paris",
+      "url": "https://inpn.mnhn.fr/",
+      "nodes": "FR",
+      "profiles": [
+        {
+          "profileName": "Taxon",
+          "conformsTo": "0.7-DRAFT",
+          "exampleURL": "https://inpn.mnhn.fr/espece/cd_nom/60878/",
+          "highlight": "180,000+ species have been annotated"
+        },
+        {
+          "profileName": "TaxonName",
+          "conformsTo": "0.1-DRAFT",
+          "exampleURL": "https://inpn.mnhn.fr/espece/cd_nom/60878/",
+          "highlight": "180,000+ species have been annotated"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
