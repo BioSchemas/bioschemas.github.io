@@ -658,6 +658,18 @@
       ]
     },
     {
+      "name": "COSMIC Gene at Sanger",
+      "url": "http://cancer.sanger.ac.uk/cosmic/",
+      "sitemap": "https://cancer.sanger.ac.uk/cosmic/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.2",
+          "exampleURL": "https://cancer.sanger.ac.uk/cosmic/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
