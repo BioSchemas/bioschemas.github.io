@@ -556,6 +556,18 @@
       ]
     },
     {
+      "name": "ModelArchive",
+      "url": "https://modelarchive.org/",
+      "nodes": "CH",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://modelarchive.org/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
