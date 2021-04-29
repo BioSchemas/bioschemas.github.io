@@ -338,6 +338,31 @@
       ]
     },
     {
+      "name": "HmmerWeb",
+      "url": "http://www.ebi.ac.uk/Tools/hmmer/",
+      "nodes": "EBI",
+      "profiles": [
+        {
+          "profileName": "Protein",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.ebi.ac.uk/Tools/hmmer/search/phmmer",
+          "highlight": "Result of searches are annotated (results last 1 week)"
+        },
+        {
+          "profileName": "ProteinStructure",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.ebi.ac.uk/Tools/hmmer/search/phmmer",
+          "highlight": "Result of searches are annotated (results last 1 week)"
+        },
+        {
+          "profileName": "ProteinAnnotation",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.ebi.ac.uk/Tools/hmmer/search/phmmer",
+          "highlight": "Result of searches are annotated (results last 1 week)"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
