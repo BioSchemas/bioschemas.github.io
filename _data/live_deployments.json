@@ -646,6 +646,18 @@
       ]
     },
     {
+      "name": "Global Biodiversity Information Facility (GBIF)",
+      "url": "https://www.gbif.org/",
+      "sitemap": "https://www.gbif.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.2",
+          "exampleURL": "https://www.gbif.org/dataset/c0cc29de-f49f-4b66-b4ec-c83afbb7101d"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
