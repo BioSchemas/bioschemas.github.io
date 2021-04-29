@@ -629,6 +629,23 @@
       ]
     },
     {
+      "name": "ITSoneDB",
+      "url": "http://itsonedb.cloud.ba.infn.it/",
+      "nodes": "IT",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.2",
+          "exampleURL": "http://itsonedb.cloud.ba.infn.it/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.2",
+          "exampleURL": "http://itsonedb.cloud.ba.infn.it/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
