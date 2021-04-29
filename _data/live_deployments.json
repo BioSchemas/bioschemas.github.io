@@ -585,6 +585,19 @@
       ]
     },
     {
+      "name": "ENZYME - The Enzyme Data Bank",
+      "url": "https://enzyme.expasy.org",
+      "nodes": "CH",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://enzyme.expasy.org/EC/1.1.3.-",
+          "highlight": "4450 datasets"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
