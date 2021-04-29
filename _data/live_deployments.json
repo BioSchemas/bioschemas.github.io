@@ -660,6 +660,18 @@
           "profileName": "Dataset",
           "conformsTo": "0.2",
           "exampleURL": "https://www.gbif.org/dataset/c0cc29de-f49f-4b66-b4ec-c83afbb7101d"
+        },
+        {
+          "profileName": "Taxon",
+          "conformsTo": "0.7-DRAFT",
+          "exampleURL": "https://www.gbif.org/species/5220113",
+          "highlight": "3 million+ taxon pages in the GBIF Backbone taxonomy annotated"
+        },
+        {
+          "profileName": "TaxonName",
+          "conformsTo": "0.1-DRAFT",
+          "exampleURL": "https://www.gbif.org/species/5220113",
+          "highlight": "3 million+ taxon pages in the GBIF Backbone taxonomy annotated"
         }
       ]
     },
