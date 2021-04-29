@@ -388,6 +388,24 @@
       ]
     },
     {
+      "name": "CATH-Gene3D",
+      "keywords": ["CDR"],
+      "url": "http://www.cathdb.info",
+      "nodes": "UK",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "http://www.cathdb.info"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "http://www.cathdb.info"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
