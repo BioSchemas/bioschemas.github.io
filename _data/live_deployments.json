@@ -406,6 +406,24 @@
       ]
     },
     {
+      "name": "The Molecular INTeraction Database (MINT)",
+      "keywords": ["CDR"],
+      "url": "https://mint.bio.uniroma2.it/",
+      "nodes": "IT",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://mint.bio.uniroma2.it/"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://mint.bio.uniroma2.it/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
