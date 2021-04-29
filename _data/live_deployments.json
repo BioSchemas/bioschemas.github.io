@@ -424,6 +424,22 @@
       ]
     },
     {
+      "name": "DEB Register",
+      "url": "https://deb-central.org/",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://deb-central.org/"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://deb-central.org/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
