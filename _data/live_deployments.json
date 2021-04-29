@@ -520,6 +520,18 @@
       ]
     },
     {
+      "name": "Alliance of Genome Resources",
+      "url": "https://www.alliancegenome.org/",
+      "sitemap": "https://www.alliancegenome.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.alliancegenome.org/gene/RGD:620474"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
