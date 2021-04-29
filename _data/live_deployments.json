@@ -290,6 +290,18 @@
       ]
     },
     {
+      "name": "ELIXIR Portugal",
+      "url": "http://elixir-portugal.org/",
+      "nodes": "PT",
+      "profiles": [
+        {
+          "profileName": "Event",
+          "conformsTo": "0.1",
+          "exampleURL": "http://elixir-portugal.org/event/embo-practical-course-tree-building-advanced-concepts-and-practice-phylogenetic-analysis",
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
