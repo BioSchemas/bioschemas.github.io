@@ -242,6 +242,20 @@
       ]
     },
     {
+      "name": "ELIXIR TeSS",
+      "url": "https://tess.elixir-europe.org/",
+      "nodes": "UK",
+      "sitemap": "https://tess.elixir-europe.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Event",
+          "conformsTo": "0.1",
+          "exampleURL": "https://tess.elixir-europe.org/events",
+          "highlight": "Over 12,000 events"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
