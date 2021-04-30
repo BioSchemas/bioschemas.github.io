@@ -867,6 +867,23 @@
       ]
     },
     {
+      "name": "PhenPath",
+      "url": "http://phenpath.biocomp.unibo.it/phenpath/",
+      "nodes": "IT",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "http://phenpath.biocomp.unibo.it/phenpath/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "http://phenpath.biocomp.unibo.it/cgi-bin/phenpath/ppDB.py"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
