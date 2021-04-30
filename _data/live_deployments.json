@@ -817,6 +817,37 @@
       ]
     },
     {
+      "name": "Scholia",
+      "description": "Scholia is a service that creates visual scholarly profiles for topic, people, organizations, species, chemicals, etc using bibliographic and other information in Wikidata.",
+      "url": "https://scholia.toolforge.org/",
+      "profiles": [
+        {
+          "profileName": "Gene",
+          "conformsTo": "0.7",
+          "exampleURL": "https://scholia.toolforge.org/gene/Q18030793",
+          "highlight": "Over 40,000 genes."
+        },
+        {
+          "profileName": "MolecularEntity",
+          "conformsTo": "0.5",
+          "exampleURL": "https://scholia.toolforge.org/chemical/Q18216",
+          "highlight": "More than 1.2M pages annotated with chemical compounds. Live statistics from https://scholia.toolforge.org/chemical/."
+        },
+        {
+          "profileName": "Protein",
+          "conformsTo": "0.11",
+          "exampleURL": "https://scholia.toolforge.org/protein/Q424728",
+          "highlight": "More than 100,000 proteins."
+        },
+        {
+          "profileName": "Taxon",
+          "conformsTo": "0.6",
+          "exampleURL": "https://scholia.toolforge.org/taxon/Q15978631",
+          "highlight": "More than 2.9M pages annotated with Taxon."
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
