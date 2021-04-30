@@ -803,6 +803,20 @@
       ]
     },
     {
+      "name": "UniProt",
+      "keywords": ["CDR"],
+      "url": "https://www.uniprot.org/",
+      "nodes": "CH",
+      "sitemap": "https://www.uniprot.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://www.uniprot.org/uniprot/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
