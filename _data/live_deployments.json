@@ -734,6 +734,19 @@
       ]
     },
     {
+      "name": "FlyMine",
+      "keywords": ["RIR"],
+      "url": "https://flymine.org/",
+      "nodes": "UK",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://flymine.org/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
