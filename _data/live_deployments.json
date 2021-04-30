@@ -884,6 +884,29 @@
       ]
     },
     {
+      "name": "eDGAR",
+      "url": "http://edgar.biocomp.unibo.it/",
+      "nodes": "IT",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "http://edgar.biocomp.unibo.it/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "http://edgar.biocomp.unibo.it/"
+        },
+        {
+          "profileName": "Gene",
+          "conformsTo": "0.7",
+          "exampleURL": "http://edgar.biocomp.unibo.it/cgi-bin/gene_disease_db/gene.py?gene=A2M",
+          "highlight": "3,658 genes"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
