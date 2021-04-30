@@ -747,6 +747,19 @@
       ]
     },
     {
+      "name": "HumanMine",
+      "keywords": ["RIR"],
+      "url": "https://humanmine.org/",
+      "nodes": "UK",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://humanmine.org/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
