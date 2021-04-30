@@ -760,29 +760,18 @@
       ]
     },
     {
-      "name": "bio.tools",
-      "url": "https://bio.tools/",
-      "nodes": [
-        "DK",
-        "FR",
-        "ES"
-      ],
-      "profiles": [
-        {
-          "profileName": "ComputationalTool",
-          "conformsTo": "0.4-DRAFT",
-          "exampleURL": "https://bio.tools/covidmine",
-          "highlight": "17090 tools"
-        }
-      ]
-    },
-    {
       "name": "DisProt",
       "description": "DisProt is a database of intrinsically disordered proteins. Disordered regions are manually curated from literature. DisProt annotations cover both structural and functional aspects of disorder detected by specific experimental methods. Annotation concepts and detection methods are encoded in the Disorder Ontology.",
       "url": "https://disprot.org",
       "nodes": "IT",
       "sitemap": "https://disprot.org/sitemap.xml",
       "profiles": [
+        {
+          "profileName": "DataRecord",
+          "conformsTo": "0.2-DRAFT",
+          "exampleURL": "https://www.disprot.org/DP00086#DR",
+          "highlight": "1.6k data records"
+        },
         {
           "profileName": "Protein",
           "conformsTo": "0.11",
@@ -810,6 +799,23 @@
           "conformsTo": "0.1-DRAFT",
           "exampleURL": "https://www.disprot.org/DP00086r026",
           "highlight": "3.5k protein regions"
+        }
+      ]
+    },
+    {
+      "name": "bio.tools",
+      "url": "https://bio.tools/",
+      "nodes": [
+        "DK",
+        "FR",
+        "ES"
+      ],
+      "profiles": [
+        {
+          "profileName": "ComputationalTool",
+          "conformsTo": "0.4-DRAFT",
+          "exampleURL": "https://bio.tools/covidmine",
+          "highlight": "17090 tools"
         }
       ]
     }
