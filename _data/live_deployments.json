@@ -907,6 +907,36 @@
       ]
     },
     {
+      "name": "WorkflowHub",
+      "url": "https://workflowhub.eu/",
+      "nodes": "UK",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://workflowhub.eu/"
+        },
+        {
+          "profileName": "ComputationalWorkflow",
+          "conformsTo": "0.5-DRAFT",
+          "exampleURL": "https://workflowhub.eu/workflows/18",
+          "highlight": "Over 100 workflows"
+        },
+        {
+          "profileName": "FormalParameter",
+          "conformsTo": "0.1-DRAFT",
+          "exampleURL": "https://workflowhub.eu/workflows/18",
+          "highlight": "Over 100 workflows"
+        },
+        {
+          "profileName": "Person",
+          "conformsTo": "0.2-DRAFT",
+          "exampleURL": "https://workflowhub.eu/people/9",
+          "highlight": "Over 100 people"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
