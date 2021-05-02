@@ -1033,7 +1033,7 @@ list:
     resource_URL: https://www.nanocommons.eu/
     schema_org: Dataset
     bsc_profile: Dataset
-    bsc_ver: 0.3
+    bsc_ver: 0.4-DRAFT
     comments: Open License datasets
     node: NL
 -
