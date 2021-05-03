@@ -1081,6 +1081,25 @@
           "highlight": "25 million+ protein networks"
         }
       ]
+    },
+    {
+      "name": "Paired Omics Data Platform",
+      "url": "https://pairedomicsdata.bioinformatics.nl/",
+      "nodes": "NL",
+      "sitemap": "https://pairedomicsdata.bioinformatics.nl/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://pairedomicsdata.bioinformatics.nl/projects/d0f1add5-5b16-4f78-9b93-0d1d9c9bcb59.1",
+          "highlight": "71 Datasets"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://pairedomicsdata.bioinformatics.nl/"
+        }
+      ]
     }
   ]
 }
