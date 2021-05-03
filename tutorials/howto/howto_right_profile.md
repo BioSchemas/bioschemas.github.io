@@ -44,9 +44,9 @@ bioschemas:
 
 ## Your first encounter with Bioschemas profiles
 
-You can find the availabe Bioschemas profiles at http://bioschemas.org/specifications. There, you will be presented with a list of all the current and stable profiles. You can hover on the profile name to see a quick description. Should you need a more detailed information, just click on the profile name.
+You can find the availabe Bioschemas profiles at [http://bioschemas.org/specifications](http://bioschemas.org/specifications). There, you will be presented with a list of all the current and stable profiles, as illustrated on Figure 1. You can hover on the profile name to see a quick description. Should you need a more detailed information, just click on the profile name.
 
-As seen on Figure 1,  each profile will show you details such as current version, release date, use cases, crosswalk, tasks and issues, usage examples and live deploys.
+As seen on Figure 1,  each profile will show you details such as current version, release date, use cases, crosswalk, tasks and issues, usage examples and current live deploys.
 
 | ![Figure 1. List of some Bioschemas profiles](/tutorials/images/specifications.png) |
 | __Figure 1. List of some Bioschemas profiles__ |
@@ -63,20 +63,27 @@ As seen on Figure 1,  each profile will show you details such as current version
         <li>Crosswalk: Documentation on the brainstorming and process followed by a group in order to come up with a profile specification</li>
         <li>Tasks & issues: Link to a GitHub space where you can report issues with a profile, see the assignees, and participate of the discussion</li>
         <li>Example: Usage examples for the profile</li>
-        <li>Live deploy: Link to live deploy for the profile</li>
+        <li>Live deploys: Link to live deploys for the profile</li>
       </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-Which profile is the right one for you will depend on your resource. In the next section, we will present some hints on those profiles that have been, so far, more broadly used, i.e., mainly customizing generic types rather corresponding to specific Life Science entities.
+## Pcik up a profile
+
+Which profile is the right one for you will depend on your resource. Go through the list above, and try to figure out which one most closely matches your use case.
+If you cannot find any relevant profile, then check out the "Drafts" tab where some new profiles or new profile releases are being discussed.
+
+If you still cannot find any profile suited for your needs, do not hesite to engage with the community by submitting an issue on [Github](https://github.com/BioSchemas/specifications/issues).
+
+In the next section, we will present some hints on those profiles that have been more broadly used so far, i.e., mainly customizing generic types rather corresponding to specific Life Science entities.
 
 ## A guided tour to some selected Bioschemas profiles
 
 ### DataCatalog
 
-Also knows as data repository, a data catalog commonly aggregates more than one dataset. If your resources supports only one dataset, you still could decide to markup your resource, in this case, as [DataCatalog](/specifications/DataCatalog) and also [Dataset](/specifications/Dataset) (this would make it easier if you are thinking on adding more datasets. However, whenever more than one dataset is provided, it totally makes sense to have your resource as a [DataCatalog](/specifications/DataCatalog).
+Also known as data repository, a data catalog commonly aggregates more than one dataset. If your resource supports only one dataset, you still could decide to markup your resource, in this case, as [DataCatalog](/specifications/DataCatalog) and also [Dataset](/specifications/Dataset) (this would make it easier if you are thinking of adding more datasets. However, whenever more than one dataset is provided, it totally makes sense to markup your resource as a [DataCatalog](/specifications/DataCatalog).
 
 ### Dataset
 
