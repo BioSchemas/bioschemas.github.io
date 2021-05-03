@@ -984,6 +984,21 @@
         }
       ]
     },
+    {
+      "name": "MassBank Europe",
+      "url": "https://massbank.eu/MassBank/",
+      "nodes": "DE",
+      "sitemap": "https://massbank.eu/MassBank/sitemapindex.xml",
+      "profiles": [
+        {
+          "profileName": "MolecularEntity",
+          "conformsTo": "0.5",
+          "exampleURL": "https://massbank.eu/MassBank/RecordDisplay?id=LQB00001&dsn=RIKEN_IMS"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://massbank.eu/MassBank/RecordDisplay?id=LQB00001&dsn=RIKEN_IMS"
         }
       ]
     },
