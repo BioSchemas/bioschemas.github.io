@@ -937,6 +937,20 @@
       ]
     },
     {
+      "name": "BridgeDb",
+      "keywords": ["RIR"],
+      "url": "https://bridgedb.github.io/",
+      "nodes": "NL",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://bridgedb.github.io/data/gene_database/",
+          "highlight": "23 identifier mapping databases for genes, proteins, complexes, metabolites, and more"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
