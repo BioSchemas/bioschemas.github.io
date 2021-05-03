@@ -1003,6 +1003,31 @@
       ]
     },
     {
+      "name": "iPPI-DB",
+      "description": "Inhibitors of Protein-Protein Interaction Database",
+      "url": "https://ippidb.pasteur.fr/",
+      "nodes": "FR",
+      "sitemap": "https://ippidb.pasteur.fr/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "MolecularEntity",
+          "conformsTo": "0.5",
+          "exampleURL": "https://ippidb.pasteur.fr/compounds/1103#compound",
+          "highlight": "2,035 compounds"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://ippidb.pasteur.fr/"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://ippidb.pasteur.fr/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
