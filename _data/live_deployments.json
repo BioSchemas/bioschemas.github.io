@@ -1028,6 +1028,25 @@
       ]
     },
     {
+      "name": "COVID-19 Data Portal",
+      "description": "Bringing together relevant datasets related to COVID-19 for sharing and analysis in an effort to accelerate coronavirus research.",
+      "url": "https://www.covid19dataportal.org/",
+      "nodes": "EBI",
+      "sitemap": "https://www.covid19dataportal.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://www.covid19dataportal.org/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://www.covid19dataportal.org/"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
