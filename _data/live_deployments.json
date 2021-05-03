@@ -1062,6 +1062,25 @@
           "highlight": "17,090 tools"
         }
       ]
+    },
+    {
+      "name": "STRING",
+      "keywords": ["CDR"],
+      "url": "https://string-db.org/",
+      "nodes": "CH",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://string-db.org/"
+        },
+        {
+          "profileName": "Protein",
+          "conformsTo": "0.9-DRAFT",
+          "exampleURL": "https://string-db.org/network/9606.ENSP00000379258",
+          "highlight": "25 million+ protein networks"
+        }
+      ]
     }
   ]
 }
