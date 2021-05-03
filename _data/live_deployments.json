@@ -968,6 +968,18 @@
       ]
     },
     {
+      "name": "opalesurfcasting.net",
+      "url": "https://www.opalesurfcasting.net/",
+      "nodes": "FR",
+      "profiles": [
+        {
+          "profileName": "Taxon",
+          "conformsTo": "0.4-DRAFT",
+          "exampleURL": "https://www.opalesurfcasting.net/connaissances/faune-et-flore/le-saumon-de-l-atlantique-salmo-salar.html"
+        }
+      ]
+    },
+    {
       "name": "bio.tools",
       "url": "https://bio.tools/",
       "nodes": [
