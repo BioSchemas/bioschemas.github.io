@@ -1100,6 +1100,29 @@
           "exampleURL": "https://pairedomicsdata.bioinformatics.nl/"
         }
       ]
+    },
+    {
+      "name": "HUGO Gene Nomenclature Committee",
+      "url": "https://www.genenames.org/",
+      "nodes": "UK",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://www.genenames.org/data/gene-symbol-report/#data-set"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://www.genenames.org/#data-catalog"
+        },
+        {
+          "profileName": "Gene",
+          "conformsTo": "0.7",
+          "exampleURL": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:37133",
+          "highlight": "Over 44,000 genes"
+        }
+      ]
     }
   ]
 }
