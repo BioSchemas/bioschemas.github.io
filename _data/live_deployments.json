@@ -963,7 +963,7 @@
         },
         {
           "profileName": "Dataset",
-          "conformsTo": "0.3",
+          "conformsTo": "0.4-DRAFT",
           "exampleURL": "https://nanocommons.github.io/datasets/"
         }
       ]
