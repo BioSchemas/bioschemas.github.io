@@ -941,10 +941,11 @@
       "keywords": ["RIR"],
       "url": "https://bridgedb.github.io/",
       "nodes": "NL",
+      "sitemap": "https://bridgedb.github.io/sitemap.xml",
       "profiles": [
         {
           "profileName": "Dataset",
-          "conformsTo": "0.3",
+          "conformsTo": "0.4-DRAFT",
           "exampleURL": "https://bridgedb.github.io/data/gene_database/",
           "highlight": "23 identifier mapping databases for genes, proteins, complexes, metabolites, and more"
         }
