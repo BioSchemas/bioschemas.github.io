@@ -1123,6 +1123,18 @@
           "highlight": "Over 44,000 genes"
         }
       ]
+    },
+    {
+      "name": "Bioschemas",
+      "url": "https://bioschemas.org/",
+      "nodes": ["UK","BE","CH","EBI","ES","FR","Hub","IT","NL","NO","PT","SE"],
+      "profiles": [
+        {
+          "profileName": "TrainingMaterial",
+          "conformsTo": "0.9",
+          "exampleURL": "https://bioschemas.org/tutorials/what_why_bioschemas"
+        }
+      ]
     }
   ]
 }
