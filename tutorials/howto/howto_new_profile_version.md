@@ -26,7 +26,12 @@ bioschemas:
     name: "Leyla Garcia"
     "@id": https://bioschemas.org/people/LeylaGarcia
     url: https://bioschemas.org/people/LeylaGarcia
-  dateModified: 2021-04-16
+  contributor:
+  - "@type": Person
+    name: "Alban Gaignard"
+    "@id": https://bioschemas.org/people/AlbanGaignard
+    url: https://bioschemas.org/people/AlbanGaignard   
+  dateModified: 2021-05-05
   description: "In this how-to, we will guide you through the necessary steps for you to create and publish a new draft profile, you need some knowledge on spreadsheets, GitHub, git and Jekyll."
   keywords: "schema.org, markup, structured data, bioschemas profile"
   license: CC-BY 4.0
