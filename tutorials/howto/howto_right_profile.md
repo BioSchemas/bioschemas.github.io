@@ -35,7 +35,11 @@ bioschemas:
     name: "Victoria Dominguez del Angel"
     "@id": https://bioschemas.org/people/VictoriaDominguezDelAngel
     url: https://bioschemas.org/people/VictoriaDominguezDelAngel/
-  dateModified: 2021-02-17
+  - "@type": Person
+    name: "Franck Michel"
+    "@id": https://bioschemas.org/people/FranckMichel
+    url: https://bioschemas.org/people/FranckMichel/    
+  dateModified: 2021-05-05
   description: "In this how-to, we will guide you through the necessary steps for you to select a Bioschemas profile that will be later used to add mark up to your own resources"
   keywords: "schemaorg, markup, structured data, bioschemas profile"
   license: CC-BY 4.0
@@ -70,7 +74,7 @@ As seen on Figure 1,  each profile will show you details such as current version
   </tbody>
 </table>
 
-## Pcik up a profile
+## Pick up a profile
 
 Which profile is the right one for you will depend on your resource. Go through the list above, and try to figure out which one most closely matches your use case.
 If you cannot find any relevant profile, then check out the "Drafts" tab where some new profiles or new profile releases are being discussed.
