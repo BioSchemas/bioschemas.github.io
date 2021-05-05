@@ -46,16 +46,16 @@ bioschemas:
 
 Bioschemas is a community project built on top of schema.org, aiming to improve interoperability in Life Sciences so resources can better communicate and work together by using a common markup on their websites.
 
-While on schema.org you can get those nice summaries, Bioschemas aims to make it possible to get similar summaries but focused on Life Science resources as Proteins, Samples, Beacons, Tools, Training, Life science events and so on.
+Using schema.org markup on web pages enables the generation of 'info box' summaries in typical web search results pages, as exemplified by google search results. Bioschemas aims to make it possible to get similar summaries, but focused on Life Science resources such as Proteins, Samples, Beacons, Tools, Training, Life science events and so on.
 
-Imagine an insulin summary but rather than pointing to Wikipedia, including specialized resources such as Orphanet or CATH as seen on Figure 1. In this way you would get a quick overview while also links to relevant resources all in one search.
+Imagine an insulin summary appearing within search results, but rather than pointing to Wikipedia, that summary would direct one to specialized resources such as Orphanet or CATH as seen in Figure 1. In this way you would get a quick overview while also being provided links to relevant resources, all in one search.
 
 | ![Figure 1. Insulin summary on a search engine](/tutorials/images/insulin.png) |
 | __Figure 1. Insulin summary on a search engine__ |
 
 ## What are the benefits of Bioschemas?
 
-Bioschemas inherits the benefits from schema.org, i.e., enabling machines to understand what your metadata is in advance, making it easier to find, integrate, and re-use your data. It also brings some benefits tailored to the Life Sciences community. In Figure 2, you can find a graphical summary of such benefits, which are explained in more detailed on the paragraphs below.
+Bioschemas inherits the benefits from schema.org, i.e., enabling machines to understand what your metadata is in advance, making it easier to find, integrate, and re-use your data. It also brings some benefits tailored to the Life Sciences community. In Figure 2, you can find a graphical summary of such benefits, which are explained in more detail in the paragraphs below.
 
 | ![Figure 2. Insulin summary on a search engine](/tutorials/images/ilustration_life_sciences_event.png) |
 | __Figure 2: Event profile provided by Bioschemas for the Event type in schema.org__ |
@@ -67,7 +67,7 @@ Bioschemas inherits the benefits from schema.org, i.e., enabling machines to und
         <img src="/tutorials/images/exclamation_mark.png" alt="warning">
       </td>
       <td>
-        Schema.org provides types while Bioschemas provides types and profiles. A profile is a customisation of type including guidelines on how to use it whithin the Life Sciences scope. <br/>Disclaimer: Bioschemas does provides three types (BioChemEntity, DataRecord and LabProtocol) however those will not remain in Bioschemas but will be proposed and eventually integrated into schema.org
+        Schema.org provides only 'types', while Bioschemas provides 'types' and 'profiles'. A profile is a customisation of type, including important guidelines on how to use it within the Life Sciences domain. A profile can be used to define the semantics of a particular property, the valid value(s) and ranges that may be attributed to that property, and the cardinality with which that property may appear. <br/>Disclaimer: Initially, Bioschemas types were developed with the aim to eventually mature those types and have them integrated for direct use in schema.org. While this remains desirable, it is not essential; community tools and resources are being developed to directly harvest this markup, and there are activities in progress to migrate Bioschemas markup from individual resources to the EOSC (European Open Science Cloud). 
       </td>
     </tr>
   </tbody>
@@ -119,13 +119,13 @@ e.g., For the Event case, endDate should be ONE while organizer could be MANY
         <img src="/tutorials/images/information_mark.png" alt="info">
       </td>
       <td>
-        Event already exists in schema.org. However, Bioschemas has added some new properties, for instance, "prerrequisite" is commonly used in Life Sciences to list a list of required skills and so to be able to attend the event.
+        Event already exists in schema.org. However, Bioschemas has added some new properties, for instance, "prerrequisite" is commonly used in Life Sciences to define a list of required skills to be able to attend an appropriate event.
       </td>
     </tr>
   </tbody>
 </table>
 
-* Bioschemas reuses terms from well-known ontologies thus avoiding reinventing the wheel
+* Bioschemas reuses terms from well-known ontologies, thus avoiding reinventing the wheel
 
 <table>
   <tbody>
