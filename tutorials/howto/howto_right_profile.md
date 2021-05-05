@@ -74,7 +74,7 @@ As seen on Figure 1,  each profile will show you details such as current version
   </tbody>
 </table>
 
-## Pick up a profile
+## 1. Pick up a profile
 
 Which profile is the right one for you will depend on your resource. Go through the list above, and try to figure out which one most closely matches your use case.
 If you cannot find any relevant profile, then check out the "Drafts" tab where some new profiles or new profile releases are being discussed.
@@ -83,12 +83,12 @@ If you still cannot find any profile suited for your needs, do not hesite to eng
 
 In the next section, we will present some hints on those profiles that have been more broadly used so far, i.e., mainly customizing generic types rather corresponding to specific Life Science entities.
 
-## A guided tour to some selected Bioschemas profiles
+## 2. A guided tour to some selected Bioschemas profiles
 
-### DataCatalog
+### 2.1. DataCatalog
 
 Also known as data repository, a data catalog commonly aggregates more than one dataset. If your resource supports only one dataset, you still could decide to markup your resource, in this case, as [DataCatalog](/specifications/DataCatalog) and also [Dataset](/specifications/Dataset) (this would make it easier if you are thinking of adding more datasets. However, whenever more than one dataset is provided, it totally makes sense to markup your resource as a [DataCatalog](/specifications/DataCatalog).
 
-### Dataset
+### 2.2. Dataset
 
 If your resource provides data and you can easily identify a common entity type for all the data contained in it, you should probably go for a [Dataset](/specifications/Dataset) profile. Let's clarify what we mean by "common type". Let's suppose you have chemical compounds including drugs, proteins and cells. If you see them all as the same thing, chemical compound, you have one [Dataset](/specifications/Dataset), and you have found the right profile for you. However, if you actually distinguish drugs from proteins from cells and so, and (maybe even) tailor the information provided for each case, you have a data catalog and multiple datasets, you should use both, one DataCatalog and multiple [Datasets](/specifications/Dataset).

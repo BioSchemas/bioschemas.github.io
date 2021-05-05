@@ -34,7 +34,7 @@ bioschemas:
   version: 1.1
 ---
 
-## Using a browser to check your deployment
+## 1. Using a browser to check your deployment
 
 There are a few different ways to check that markup is being included on your webpage; regardless of whether the markup is rendered server side or injected client-side through Javascript. One of the simplest is to use your browser to inspect the rendered page content.
 
@@ -42,13 +42,13 @@ In Firefox right click on the page and select ‘Inspect Element’, in Chrome i
 
 ![Inspecting Markup using Chrome](/tutorials/images/inspect-markup.png)
 
-## Discovering what markup external services can retrieve
+## 2. Discovering what markup external services can retrieve
 
 Once you have verified that the content is rendered on the page, you can test what external services are able to pick up. Some of these services simply retrieve the markup while others will validate it against a defined profile.
 
 Note that since Bioschemas is an evolving extension of Schema.org, not all types and properties will be known to all services. Additionally, only Bioschemas specific services will know about the Bioscheams profiles; proprietary services will validate against their own internal views of Schema.org.
 
-### Google Structured Data Testing Tool
+### 2.1. Google Structured Data Testing Tool
 
 [https://search.google.com/structured-data/testing-tool](https://search.google.com/structured-data/testing-tool)
 
@@ -58,7 +58,7 @@ The screenshot shows the tool results for the DisProt protein DP00003. Click [he
 
 ![Google Structured Data Testing Tool showing DisProt:DP00003](/tutorials/images/google_struct.png)
 
-### Google Rich Results Test
+### 2.2. Google Rich Results Test
 
 [https://search.google.com/test/rich-results](https://search.google.com/test/rich-results)
 
@@ -68,7 +68,7 @@ The screenshot shows the tool results for the MobiDB database. Click [here](http
 
 ![Google Rich Results Test showing MobiDB](/tutorials/images/google_rich.png)
 
-### Bioschemas Markup  Scraper and Extractor (BMUSE)
+### 2.3 Bioschemas Markup  Scraper and Extractor (BMUSE)
 
 [https://swel.macs.hw.ac.uk/scraper/](https://swel.macs.hw.ac.uk/scraper/)
 
@@ -77,7 +77,7 @@ This is a web deployment of a tool developed by the Heriot-Watt team that is a d
 For your example, to retrieve the content from the DisProt page for DP00003 we would use
 [`https://swel.macs.hw.ac.uk/scraper/getRDF?url=https://disprot.org/DP00003&output=jsonld`](https://swel.macs.hw.ac.uk/scraper//getRDF?url=https://disprot.org/DP00003&output=jsonld)
 
-### Bioschemas Validator (Experimental)
+### 2.4. Bioschemas Validator (Experimental)
 
 [http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/](http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/)
 

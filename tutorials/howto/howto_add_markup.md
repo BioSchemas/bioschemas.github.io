@@ -59,7 +59,7 @@ bioschemas:
 
 If you are eager to markup your resource, get your hands "coding" and quickly see some structured data rather that free text, you can skip this section and jump to the next one. However, if you want to go step by step and then smoothly move forward and get some JSON-LD for your resource, please stay here, you are on the right place.
 
-### Define your strategy
+### 1. Define your strategy
 
 If your resource involves more than one profile, you first need to define the strategy that suits best to your case. You can link a profile, let's say DataCatalog, to other related ones, let's day Dataset, via properties. Sometimes those properties are bidirectional, so you can go from DataCatalog to Dataset or the other way around. Which direction suits best to you?
 
@@ -78,7 +78,7 @@ If your resource involves more than one profile, you first need to define the st
   </tbody>
 </table>
 
-### Map elements to properties
+### 2. Map elements to properties
 
 Now, focus on a particular profile, have at hand the [corresponding specification page on Bioschemas](/specifications/) as well as your resource, i.e., your web pages. Do a manual exercise mapping elements to properties. This will help you have a clearer idea on what you want to achieve once you go and use gimme-my-jsonld (see next section). You might need more than one iteration here as you can face multiple option at the beginning, choose that one that gives more benefits. Keep in mind your goal by adding this mark up to your resource.
 

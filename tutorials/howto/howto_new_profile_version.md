@@ -42,7 +42,7 @@ bioschemas:
 
 To create and publish a new draft profile you need access to a couple of Bioschemas resources, here we list them all together with the main role they play in the whole process. We will explain how to use them and what to do with them in later steps.
 
-* Bioschemas specifications GDrive folder: to create the spreadsheet corresponding to the new draft profile, you need editing rights
+* Bioschemas specifications [GDrive folder](https://drive.google.com/drive/folders/0B8yXU9SkT3ftaWJtTGYyTTJjck0): to create the spreadsheet corresponding to the new draft profile, you need editing rights
 * [GOweb repository](https://github.com/BioSchemas/bioschemas-goweb): to move from the spreadsheet to the website
 * [Website repository](https://github.com/BioSchemas/bioschemas.github.io): to publish the new draft profile, you need editing rights
 * [Specifications repository](https://github.com/BioSchemas/specifications): to add compliant examples regarding the new draft profile, you need editing rights
@@ -57,23 +57,23 @@ A profile crosswalk is the cornerstone of Bioschemas profile development. It is 
 
 A new profile is commonly based on the previous one so the easiest way to start is from the previous version.
 
-* Go to the GDrive and navigate to the folder Specifications
-* Locate and open the folder corresponding to the profile you want to update, in our example it is the ScholarlyArticle folder
+* Go to the [GDrive](https://drive.google.com/drive/folders/0B8yXU9SkT3ftaWJtTGYyTTJjck0) and navigate to the folder [Specifications](https://drive.google.com/drive/folders/0Bw_p-HKWUjHoNThZOWNKbGhOODg)
+* Locate and open the folder corresponding to the profile you want to update, in our example it is the [ScholarlyArticle](https://drive.google.com/drive/folders/1CgEyta4d7vFfYT7r7w9HtLZ4kAidDmJI) folder
 * Create a copy of the latest ScholarlyArticle Mapping file. At the time of writing, it was the ScholarlyArticle Mapping 0.2-DRAFT
 * Rename the copy so it reflects the new draft version, in this case it would be ScholarlyArticle Mapping 0.3-DRAFT
 
-### The Specification Info tab
+### 2.1. The Specification Info tab
 
 In this tab, you need to update the "Description" column. In most cases the actual description of the profile will remain the same but the "Summary of Changes" will change
 * List all the changes in this new draft profile
 
 You will also need to update: 
 * the "version" column with the new version
-* the "Full Example" column with the link pointing to examples for this new version, see more on the [Update examples](#update-examples) section
+* the "Full Example" column with the link pointing to examples for this new version, see more on the [Update examples](#6-update-examples) section
 
 You should update the column "Official Type" if and only if you modified the main parent type from Schema.org. For instance, in previous versions the Bioschemas TrainingMaterial profile had CreativeWork as the main parent Schema.org type but it was changed to LearningResource from version 0.8
 
-### The Schema.org mapping tab
+### 2.2. The Schema.org mapping tab
 
 Here you will make the changes to the profile. There are a couple of possibilities here.
 * You want to update a property that already exists (e.g., there is typo, description should be updated, a new controlled vocabulary will be added, a new example is necessary, expected Schema.org types have changed, etc.)
@@ -90,7 +90,7 @@ Here you will make the changes to the profile. There are a couple of possibiliti
 | ![Figure 1. From Schema.org to profile spredsheet](/tutorials/images/from_schema_to_spreadsheet.png) |
 | __Figure 1. From Schema.org to profile spredsheet__ |
 
-### Publish the Bioschemas fields to the Web
+### 2.3. Publish the Bioschemas fields to the Web
 
 Once you have finished with the changes on the spreadsheet, go to File/Publish to the web/, select "Bioschemas Fields" and "CSV", publish and copy the link, see Figure 2 below.
 
@@ -103,8 +103,8 @@ Once you have finished with the changes on the spreadsheet, go to File/Publish t
 Now you are ready to the the machine-processable Bioshemas version of your new draft profile.
 
 * Go to [GOweb repository](https://github.com/BioSchemas/bioschemas-goweb) and get the executable version corresponding to your Operational System. 
-* Run GOWeb using the CSV file you created on the previous section [Publish the Bioschemas fields to the Web](#publish-the-bioschemas-fields-to-the-web)
-* A YAML file will be created, you will use that one on the next section [Update the website](#update-the-website)
+* Run GOWeb using the CSV file you created on the previous section [Publish the Bioschemas fields to the Web](#23-publish-the-bioschemas-fields-to-the-web)
+* A YAML file will be created, you will use that one on the next section [Update the website](#4-update-the-website)
 
 ## 4. Update the website
 
@@ -128,7 +128,7 @@ redirect_from:
 ```
   
 * Now on the new draft version file
-  *  Update the previous version, in our case it would be ```previous_version: 0.2-DRAFT-2020_12_03```
+  * Update the previous version, in our case it would be ```previous_version: 0.2-DRAFT-2020_12_03```
   * Update the ```cross_walk_url``` to point to the spreadsheet on the GDrive
   * If you changed the parent type (very rarely it happens), you need to update the section ```parent_type```
 
