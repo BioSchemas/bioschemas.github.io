@@ -285,7 +285,7 @@
         {
           "profileName": "Event",
           "conformsTo": "0.1",
-          "exampleURL": "https://www.france-bioinformatique.fr/en/evenements_upcoming",
+          "exampleURL": "https://www.france-bioinformatique.fr/en/evenements_upcoming"
         }
       ]
     },
@@ -297,7 +297,7 @@
         {
           "profileName": "Event",
           "conformsTo": "0.1",
-          "exampleURL": "http://elixir-portugal.org/event/embo-practical-course-tree-building-advanced-concepts-and-practice-phylogenetic-analysis",
+          "exampleURL": "http://elixir-portugal.org/event/embo-practical-course-tree-building-advanced-concepts-and-practice-phylogenetic-analysis"
         }
       ]
     },
@@ -309,7 +309,7 @@
         {
           "profileName": "Event",
           "conformsTo": "0.1",
-          "exampleURL": "https://www.sib.swiss/training/upcoming-training-events",
+          "exampleURL": "https://www.sib.swiss/training/upcoming-training-events"
         }
       ]
     },
@@ -321,7 +321,7 @@
         {
           "profileName": "Event",
           "conformsTo": "0.1",
-          "exampleURL": "https://www.elixir-europe.org/events/biohackathon-2018-paris",
+          "exampleURL": "https://www.elixir-europe.org/events/biohackathon-2018-paris"
         }
       ]
     },
@@ -333,7 +333,7 @@
         {
           "profileName": "Event",
           "conformsTo": "0.1",
-          "exampleURL": "https://www.birmingham.ac.uk/facilities/metabolomics-training-centre/courses/q-exactive.aspx",
+          "exampleURL": "https://www.birmingham.ac.uk/facilities/metabolomics-training-centre/courses/q-exactive.aspx"
         }
       ]
     },
