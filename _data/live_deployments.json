@@ -58,7 +58,7 @@
     },
     {
       "name": "Human Protein Atlas",
-      "keywords": "CDR",
+      "keywords": ["CDR"],
       "url": "https://www.proteinatlas.org/",
       "nodes": "SE",
       "profiles": [
