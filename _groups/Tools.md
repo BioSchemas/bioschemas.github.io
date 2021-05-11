@@ -47,4 +47,6 @@ members:
     - MichaelCrusoe
     - RobertoPreste
     - RafaelJimenez
+    - AlbanGaignard
+    - MatusKalas
 ---

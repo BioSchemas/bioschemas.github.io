@@ -46,6 +46,15 @@ list:
     node: SE
     type: CDR
 -
+    name: WikiPathways
+    example_URL: https://wikipathways.org/
+    resource_URL: https://wikipathways.org/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.3
+    comments:
+    node: NL
+-
     name: EGA
     highlight:
     example_URL: https://ega-archive.org/
@@ -195,7 +204,7 @@ list:
     example_URL: http://159.149.160.88/pscan/
     resource_URL: http://159.149.160.88/pscan/
     schema_org: SoftwareApplication
-    bsc_profile: Tool
+    bsc_profile: ComputationalTool
     bsc_ver: 0.1
     comments:
 -
@@ -204,7 +213,7 @@ list:
     example_URL: http://159.149.160.88/pscan_chip_dev/
     resource_URL: http://159.149.160.88/pscan_chip_dev/
     schema_org: SoftwareApplication
-    bsc_profile: Tool
+    bsc_profile: ComputationalTool
     bsc_ver: 0.1
     comments:
 -
@@ -213,7 +222,7 @@ list:
     example_URL: http://159.149.160.88/cscan/
     resource_URL: http://159.149.160.88/cscan/
     schema_org: SoftwareApplication
-    bsc_profile: Tool
+    bsc_profile: ComputationalTool
     bsc_ver: 0.1
     comments:
 -
@@ -222,7 +231,7 @@ list:
     example_URL: https://bar.biocomp.unibo.it/bar3/
     resource_URL: https://bar.biocomp.unibo.it/bar3/
     schema_org: SoftwareApplication
-    bsc_profile: Tool
+    bsc_profile: ComputationalTool
     bsc_ver: 0.1
     comments:
 -
@@ -533,7 +542,7 @@ list:
     example_URL: https://swissmodel.expasy.org
     resource_URL: https://swissmodel.expasy.org
     schema_org: SoftwareApplication
-    bsc_profile: Tool
+    bsc_profile: ComputationalTool
     bsc_ver: 0.1
     comments:  
     node: CH    
@@ -645,7 +654,7 @@ list:
     comments:
     node: IT
 -
-    name: Global Biodiversity Information Facility
+    name: Global Biodiversity Information Facility (GBIF)
     highlight:
     example_URL: https://www.gbif.org/dataset/c0cc29de-f49f-4b66-b4ec-c83afbb7101d
     resource_URL: https://www.gbif.org/
@@ -731,6 +740,26 @@ list:
     bsc_ver: 0.1-DRAFT
     comments:    
     node:    
+-
+    name: Global Biodiversity Information Facility (GBIF)
+    highlight: 3 million+ taxon pages in the GBIF Backbone taxonomy annotated
+    example_URL: https://www.gbif.org/species/5220113
+    resource_URL: https://www.gbif.org
+    schema_org: Taxon
+    bsc_profile: Taxon
+    bsc_ver: 0.7-DRAFT
+    comments:    
+    node:
+-
+    name: Global Biodiversity Information Facility (GBIF)
+    highlight: 3 million+ taxon pages in the GBIF Backbone taxonomy annotated
+    example_URL: https://www.gbif.org/species/5220113
+    resource_URL: https://www.gbif.org
+    schema_org: TaxonName
+    bsc_profile: TaxonName
+    bsc_ver: 0.1-DRAFT
+    comments:    
+    node:
 -
     name: FlyMine
     highlight:
@@ -985,9 +1014,10 @@ list:
     resource_URL: https://bridgedb.github.io/
     schema_org: Dataset
     bsc_profile: Dataset
-    bsc_ver: 0.3
+    bsc_ver: 0.4-DRAFT
     comments:
     node: NL
+    sitemap: https://bridgedb.github.io/sitemap.xml
 -
     name: NanoCommons
     example_URL: https://nanocommons.github.io/specifications/jrc/
@@ -996,6 +1026,15 @@ list:
     bsc_profile: ChemicalSubstance
     bsc_ver: 0.4
     comments:
+    node: NL
+-
+    name: NanoCommons
+    example_URL: https://nanocommons.github.io/datasets/
+    resource_URL: https://www.nanocommons.eu/
+    schema_org: Dataset
+    bsc_profile: Dataset
+    bsc_ver: 0.4-DRAFT
+    comments: Open License datasets
     node: NL
 -
     name: opalesurfcasting.net
@@ -1071,4 +1110,96 @@ list:
   bsc_ver: 0.3
   comments:
   node: EBI
+-
+  name: Bio.Tools
+  highlight: 17090 tools
+  example_URL: https://bio.tools/covidmine
+  resource_URL: https://bio.tools/
+  schema_org: SoftwareApplication
+  bsc_profile: ComputationalTool
+  bsc_ver: 0.4-DRAFT
+  comments:
+  node: DK, FR, ES
+-
+  name: STRING
+  highlight: 25 million+ protein networks
+  example_URL: https://string-db.org/
+  resource_URL: https://string-db.org/
+  schema_org: DataCatalog
+  bsc_profile: DataCatalog
+  bsc_ver: 0.3-RELEASE
+  comments:  
+  node: CH
+  type: CDR
+-
+  name: STRING
+  highlight: 25 million+ protein networks
+  example_URL: https://string-db.org/network/9606.ENSP00000379258
+  resource_URL: https://string-db.org/
+  schema_org: Protein
+  bsc_profile: Protein
+  bsc_ver: 0.9-DRAFT
+  comments:  
+  node: CH
+  type: CDR
+-
+  name: Paired Omics Data Platform
+  highlight: 71 datasets
+  example_URL: https://pairedomicsdata.bioinformatics.nl/projects/d0f1add5-5b16-4f78-9b93-0d1d9c9bcb59.1
+  resource_URL: https://pairedomicsdata.bioinformatics.nl/
+  schema_org: Dataset
+  bsc_profile: Dataset
+  bsc_ver: 0.3
+  comments:  
+  node: NL
+-
+  name: Paired Omics Data Platform
+  highlight:
+  example_URL: https://pairedomicsdata.bioinformatics.nl/
+  resource_URL: https://pairedomicsdata.bioinformatics.nl/
+  schema_org: DataCatalog
+  bsc_profile: DataCatalog
+  bsc_ver: 0.3
+  node: NL
+  comments:  
+-
+  name: HUGO Gene Nomenclature Committee
+  highlight:
+  example_URL: https://www.genenames.org/data/gene-symbol-report/#data-set
+  resource_URL: https://www.genenames.org/
+  schema_org: Dataset
+  bsc_profile: Dataset
+  bsc_ver: 0.3
+  comments:  
+  node: UK
+-
+  name: HUGO Gene Nomenclature Committee
+  highlight:
+  example_URL: https://www.genenames.org/#data-catalog
+  resource_URL: https://www.genenames.org/
+  schema_org: DataCatalog
+  bsc_profile: DataCatalog
+  bsc_ver: 0.3
+  comments:  
+  node: UK
+-
+  name: HUGO Gene Nomenclature Committee
+  highlight: Over 44,000 genes
+  example_URL: "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:37133"
+  resource_URL: https://www.genenames.org/
+  schema_org: Gene
+  bsc_profile: Gene
+  bsc_ver: 0.7
+  comments:  
+  node: UK
+-
+  name: Bioschemas Training Portal
+  highlight:
+  example_URL: https://bioschemas.org/tutorials/what_why_bioschemas
+  resource_URL: https://bioschemas.org/tutorials/
+  schema_org: LearningResource
+  bsc_profile: TrainingMaterial
+  bsc_ver: 0.9
+  comments:
+  node: UK
 ---

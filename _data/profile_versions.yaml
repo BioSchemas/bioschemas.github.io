@@ -26,13 +26,13 @@ ComputationalTool:
 
 ComputationalWorkflow:
     name: "ComputationalWorkflow"
-    latest_publication: "0.5-DRAFT-2020_07_21"
-    latest_release:
+    latest_publication:
+    latest_release: "1.0-RELEASE"
     status: "active"
 
 Course:
     name: "Course"
-    latest_publication: "0.8-DRAFT-2020_10_06"
+    latest_publication: "0.9-DRAFT-2020_12_08"
     latest_release:
     status: "active"
 
@@ -52,11 +52,12 @@ DataRecord:
     name: "DataRecord"
     latest_publication: "0.2-DRAFT-2019_06_14"
     latest_release:
-    status: "active"
+    status: "deprecated"
+    deprecated_date: "2021-02-22"
 
 Dataset:
     name: "Dataset"
-    latest_publication:
+    latest_publication: "0.4-DRAFT"
     latest_release: "0.3-RELEASE-2019_06_14"
     status: "active"
 
@@ -68,8 +69,8 @@ Event:
 
 FormalParameter:
     name: "FormalParameter"
-    latest_publication: "0.1-DRAFT-2020_07_21"
-    latest_release:
+    latest_publication:
+    latest_release: "1.0-RELEASE"
     status: "active"
 
 Gene:
@@ -80,13 +81,13 @@ Gene:
 
 Journal:
     name: "Journal"
-    latest_publication: "0.1-DRAFT-2019_11_21"
+    latest_publication: "0.2-DRAFT-2020_12_03"
     latest_release:
     status: "active"
 
 LabProtocol:
     name: "LabProtocol"
-    latest_publication: "0.5-DRAFT-2020_09_01"
+    latest_publication: "0.6-DRAFT-2020_12_08"
     latest_release:
     status: "active"
 
@@ -134,13 +135,13 @@ ProteinStructure:
 
 PublicationIssue:
     name: "PublicationIssue"
-    latest_publication: "0.1-DRAFT-2019_02_08"
+    latest_publication: "0.2-DRAFT-2020_12_03"
     latest_release:
     status: "active"
 
 PublicationVolume:
     name: "PublicationVolume"
-    latest_publication: "0.1-DRAFT-2019_02_15"
+    latest_publication: "0.2-DRAFT-2020_12_03"
     latest_release:
     status: "active"
 
@@ -158,19 +159,19 @@ Sample:
 
 ScholarlyArticle:
     name: "ScholarlyArticle"
-    latest_publication: "0.1-DRAFT-2019_03_15"
+    latest_publication: "0.2-DRAFT-2020_12_03"
     latest_release:
     status: "active"
 
-SemanticAnnotation:
-    name: "SemanticAnnotation"
-    latest_publication: "0.1-DRAFT-2019_11_19"
+SemanticTextAnnotation:
+    name: "SemanticTextAnnotation"
+    latest_publication: "0.2-DRAFT-2020_12_03"
     latest_release:
     status: "active"
 
 Study:
     name: "Study"
-    latest_publication: "0.1-DRAFT-2018_11_15"
+    latest_publication: "0.2-DRAFT"
     latest_release:
     status: "active"
 
@@ -188,7 +189,7 @@ TaxonName:
 
 TrainingMaterial:
     name: "TrainingMaterial"
-    latest_publication: "0.8-DRAFT-2020_10_06"
+    latest_publication: "0.9-DRAFT-2020_12_08"
     latest_release:
     status: "active"
 

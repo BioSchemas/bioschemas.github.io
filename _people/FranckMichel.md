@@ -5,7 +5,7 @@ first-name: Franck
 last-name: Michel
 collection: people
 affiliation: Université Côte d’Azur, CNRS, Inria
-homepage: http://modalis.i3s.unice.fr/fmichel
+homepage: https://w3id.org/people/franckmichel
 github_username: frmichel
 orcid: 0000-0001-9064-0463
 

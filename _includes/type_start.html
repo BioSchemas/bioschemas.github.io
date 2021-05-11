@@ -1,11 +1,23 @@
 {% if page.status == 'release' %}
 <h1>{{page.name}} (Type)</h1>
 {% elsif site.data.type_versions[page.name].status == "deprecated"%}
-<h1>{{current_name}} <u>DEPRECATED</u> Profile</h1>
+<h1>{{page.name}} <u>DEPRECATED</u> Type</h1>
 {% else %}
 <h1>{{page.name}} <u>DRAFT</u> Type</h1>
 {% endif %}
 <h3><strong>Version:</strong> {{page.version}} ({{page.dateModified}})</h3>
+{% if site.data.profile_versions[page.name].latest_release != nill or site.data.profile_versions[page.name].latest_publication != nill %}
+<h3><strong>Profile:</strong></h3>
+{% endif %}
+   <ul>
+    {% if site.data.profile_versions[page.name].latest_release != nill %}
+   <li>Latest Release: <a href="/profiles/{{page.name}}">{{page.name}} (version {{site.data.profile_versions[page.name].latest_release}})</a></li>
+   {% endif %}
+   {% if site.data.profile_versions[page.name].latest_publication != nill %}
+   <li>Latest Draft: <a href="/profiles/{{page.name}}/{{site.data.profile_versions[page.name].latest_publication}}">{{page.name}} (version {{site.data.profile_versions[page.name].latest_publication}})</a></li>
+   {% endif %}
+ </ul>
+
 <h2>{{page.subtitle}}</h2>
 
 <br />
@@ -48,23 +60,19 @@
 </div>
 <h6>Other team members</h6>
 <div id="peopleTable">
-  {% assign authors = site.people | where:"groups", page.group %}
-  {% for author in authors %}
-  {% assign author-id = author.id | split: '/' %}
-  {% for g in group %}
-  {% if author.homepage or author.github_username or author.orcid %}
-  {% unless g.lead contains author-id[2] %}
-  <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
-  {% endunless %}
-  {% else %}
-  {% unless g.lead contains author-id[2] %}
-  <p>{{ author.first-name }} {{ author.last-name }}</p>
-  {% endunless %}
-  {% endif %}
-  {% else %}
-  <p>No team members currently specified.</p>
-  {% endfor %}
-  {% endfor %}
+        {% for g in group %}
+        {% for member-name in g.members %}
+
+        {% unless g.lead contains member-name %}
+
+        {% assign member-id = "/people/" | append: member-name %}
+        {% assign member = site.people | where:"id", member-id | first %}
+        <p><a href="{{ member.url }}">{{ member.first-name }} {{ member.last-name }}</a></p>
+
+        {% endunless %}
+
+        {% endfor %}
+        {% endfor %}
 </div>
 </section>
 
@@ -80,9 +88,11 @@ This is a new {{page.spec_type}} that fits into the schema.org hierarchy as foll
   branch_name == "BioChemStructure" or
   branch_name == "BioSample" or
   branch_name == "ChemicalSubstance" or
+  branch_name == "ComputationalWorkflow" or
   branch_name == "DataRecord" or
   branch_name == "DNA" or
   branch_name == "Enzyme" or
+  branch_name == "FormalParameter" or
   branch_name == "Gene" or
   branch_name == "LabProtocol" or
   branch_name == "MolecularEntity" or
@@ -169,18 +179,8 @@ This is a new {{page.spec_type}} that fits into the schema.org hierarchy as foll
 
 </section>
 
-<br />
 <hr />
-<br />
-<h5>Key to specification table</h5>
-<br />
-<p>Schema.org properties where the Expected Types have been changed, or new (i.e., Bioschemas created) properties/types are <em style="color: #0B794B;"><strong>green</strong></em>.</p>
-<p>Schema.org properties/types are <em style="color: #990000;"><strong>red</strong></em>.</p>
-<p>Pending Schema.org properties/types are <em style="color: #0000CC;"><strong>blue</strong></em>.</p>
-<p>External (i.e., from 3rd party ontology) properties/types are <em style="color: #454547;"><strong>black</strong></em>.</p>
-<br />
-<p>CD = Cardinality</p>
-<br />
+{% include spec-table-key.html %}
 <!-- change number columns based on device -->
 <script type="application/x-javascript">
    if(navigator.userAgent.match(/android/i)) {

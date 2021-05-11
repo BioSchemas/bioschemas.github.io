@@ -39,10 +39,21 @@ description: |-
             <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{profile.name}}" aria-expanded="false" aria-controls="collapse{{profile.name}}">
                 <td colspan="5">
                     <div class="repo-count"><strong>{{profile.items | size}}</strong></div>
+                    <!--
+                      Extract from the site data the latest release version number
+                      If there has not been a release yet, use the latest draft version number
+                      The IF statement tests that the variable exists and that it is not blank or nil
+                    -->
+                    {% if site.data.profile_versions[profile.name].latest_release and site.data.profile_versions[profile.name].latest_release != "" and site.data.profile_versions[profile.name].latest_release != nil %}
+                      {% assign version = site.data.profile_versions[profile.name].latest_release %}
+                    {% else %}
+                      {% assign version = site.data.profile_versions[profile.name].latest_publication %}
+                    {% endif %}
+
                     {% if profile.name == "BioChemEntity" or profile.name=="SequenceRange" %}
                     {{profile.name}}<a href="/types/{{profile.name}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a><br>
                     {% else %}
-                    {{profile.name}}<a href="/profiles/{{profile.name}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a><br>
+                    {{profile.name}}<br/>({{version}})<a href="/profiles/{{profile.name}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a><br>
                     {% endif %}
                     <div class="plus-icon"><i class="fas fa-plus fa-lg"></i></div>
                 </td>

@@ -1,0 +1,259 @@
+---
+redirect_from:
+- "devSpecs/SemanticAnnotation/specification"
+- "devSpecs/SemanticAnnotation/specification/"
+- "/devSpecs/SemanticAnnotation/"
+- "/specifications/drafts/SemanticAnnotation"
+- "/profiles/SemanticAnnotation/"
+- "devSpecs/SemanticTextAnnotation/specification"
+- "devSpecs/SemanticTextAnnotation/specification/"
+- "/devSpecs/SemanticTextAnnotation/"
+- "/specifications/drafts/SemanticTextAnnotation"
+- "/profiles/SemanticTextAnnotation/"
+- "devSpecs/SemanticTextAnnotation/specification"
+- "devSpecs/SemanticTextAnnotation/specification/"
+- "/devSpecs/SemanticTextAnnotation/"
+- "/specifications/drafts/SemanticTextAnnotation"
+- "/profiles/SemanticTextAnnotation/"
+
+name: SemanticTextAnnotation
+
+previous_version: 0.1-DRAFT-2019_11_19
+previous_release:
+
+status: revision
+spec_type: Profile
+group: publications
+use_cases_url: /useCases/ScholarlyPublications/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1FSz3Wn3pgUQl-fFx-mpz_qiuhxPJGMYGXRAEaZ9aPrU/
+gh_tasks: https://github.com/BioSchemas/specifications/labels/profile%3A%20SemanticTextAnnotation
+live_deploy: ''
+
+parent_type: Collection
+hierarchy:
+- Thing
+- CreativeWork
+
+spec_info:
+  title: SemanticTextAnnotation
+  subtitle: Bioschemas profile, based on Biotea model, describing a semantic annotation
+    associated to a piece of text in a ScholarlyArticle in Life Sciences.
+  description: 'A SemanticTextAnnotation corresponds to an expression identified in
+    a ScholarlyArticle and associated to an ontology term.<h4>Summary of Changes</h4>    Changes
+    since previous draft 0.1 of the SemanticAnnotation profile:    <ul>      <li>Add
+    examples</li>      <li>Updates name to SemanticTextAnnotation as currently only
+    text-based annotations are supported, if needd a supperclass SemanticAnnotation
+    can be created and then add support to, for instance, images or so</li>      <li>Changes
+    commentCount to optional as sometimes calculation is also possible</li>      <li>Changes
+    creator and dates to optional as they can also be provided at container/dataset
+    level only</li>      <li>Adds datePublished as optional</li>      <li>Removes
+    isAccessibleForFree and license (most likely to be found at container/dataset
+    level)</li>      <li>Adds isPartOf as optional to link to the dataset or collection
+    containing this annotation</li>      <li>Double checks the property range as some
+    has been updated in schema.org</li>      <li>Changes prepared by L. Garcia</li>    </ul>'
+  version: 0.2-DRAFT-2020_12_03
+  version_date: 20201207T142101
+  official_type: schema:CreativeWork
+  full_example: https://github.com/BioSchemas/specifications/blob/master/SemanticTextAnnotation/examples/0.2-DRAFT/biotea_annotations_PMC35353.json
+mapping:
+- property: commentCount
+  expected_types:
+  - Integer
+  description: The number of comments this CreativeWork (e.g. Article, Question or
+    Answer) has received. This is most applicable to works published in Web sites
+    with commenting system; additional comments may exist elsewhere.
+  type: ""
+  type_url: ""
+  bsc_description: Number of times this annotation is found in the associated scholarly
+    article.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"commentCount": 5'
+- property: creator
+  expected_types:
+  - Organization
+  - Person
+  description: The creator/author of this CreativeWork. This is the same as the Author
+    property for CreativeWork.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    "creator": [
+      {
+        "@type": "Organization",
+        "name": Biotea project"
+      }
+    ]
+- property: dateCreated
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was created or the item was added
+    to a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"dateCreated": "2013-01-30"'
+- property: dateModified
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was most recently modified or when
+    the item's entry was modified within a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"dateModified": "2013-01-30"'
+- property: datePublished
+  expected_types:
+  - Date
+  description: Date of first broadcast/publication.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"dateCreated": "2013-03-30"'
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: If available.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: inLanguage
+  expected_types:
+  - Language
+  - Text
+  description: The language of the content or performance or used in an action. Please
+    use one of the language codes from the IETF BCP 47 standard. See also availableLanguage.
+    Supersedes language.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"inLanguage": "EN"'
+- property: isPartOf
+  expected_types:
+  - CreativeWork
+  - Trip
+  - Journal
+  - PublicationVolume
+  - PublicationIssue
+  description: |-
+    Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.
+     Inverse property: hasPart.
+  type: ""
+  type_url: ""
+  bsc_description: Dataset or collection aggregating this annotation
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    "isPartOf": [
+      {"@id": "https://doi.org/10.5281/zenodo.839715"}
+    ]
+- property: mainEntity
+  expected_types:
+  - DefinedTerm
+  description: |-
+    Indicates the primary entity described in some page or other CreativeWork.
+     Inverse property: mainEntityOfPage.
+  type: ""
+  type_url: ""
+  bsc_description: |-
+    Ontology terms associated to this annotation. On the DefinedTerm, use additionalType to link to a Unified Medical Language System (UMLS) semantic type (TUI) or group, and sameAs to link to the corresponding concept unique identifier (CUI), if available.
+    Note: Bioschemas recommends using DefinedTerm rather than Thing (as specified in schema.org)
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    "mainEntity": {
+      "@type": "DefinedTerm",
+      "inDefinedTermSet": "https://bioportal.bioontology.org/ontologies/NCIT",
+      "termCode": "ncit:C61011",
+      "name": "Resource Description Framework",
+      "url": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61011",
+    }
+- property: position
+  expected_types:
+  - Integer
+  - Text
+  description: The position of an item in a series or sequence of items.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: subjectOf
+  expected_types:
+  - CreativeWork
+  - Event
+  description: "A CreativeWork or Event about this Thing. \nInverse property: about"
+  type: ""
+  type_url: ""
+  bsc_description: |-
+    ScholarlyArticle where this annotation is located. It is also possible to link from the ScholarlyArticle to the SemanticTextAnnotation via about
+    Note: For the Bioschemas case, the preferred property range is ScholarlyArticle
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: '"subjectOf": {"@id": "https://doi.org/10.1186/2041-1480-4-s1-s5"}'
+- property: text
+  expected_types:
+  - Text
+  description: The textual content of this CreativeWork.
+  type: ""
+  type_url: ""
+  bsc_description: Expression found in the text corresponding to this annotation.
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '"text": ["RDF"]'
+
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>

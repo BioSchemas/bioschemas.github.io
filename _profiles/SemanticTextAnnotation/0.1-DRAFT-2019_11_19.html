@@ -1,0 +1,224 @@
+---
+name: SemanticTextAnnotation
+
+previous_version: 0.1-DRAFT-2019_02_08
+previous_release:
+
+status: revision
+spec_type: Profile
+group: publications
+use_cases_url: /useCases/ScholarlyPublications/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1_hsrPFM0htdoNaWF2PCg92bLf_ckOz8ird3kwJBANS0
+gh_tasks: https://github.com/BioSchemas/specifications/labels/profile%3A%20SemanticTextAnnotation
+live_deploy: ''
+
+parent_type: Collection
+hierarchy:
+- Thing
+- CreativeWork
+
+spec_info:
+  title: SemanticTextAnnotation
+  subtitle: Bioschemas profile, based on Biotea model, describing a semantic annotation
+    associated to a piece of text in a ScholarlyArticle in Life Sciences.
+  description: A SemanticTextAnnotation currently corresponds to an expression identified
+    in a ScholarlyArticle and associated to an ontology term. It could apply as well to documents
+    other than ScholarlyArticle, for instant patents and so.
+  version: 0.1-DRAFT-2019_11_19
+  version_date: 20190208T104450
+  official_type: schema:CreativeWork
+  full_example: https://github.com/Bioschemas/specifications/tree/master/ScholarlyPublications
+mapping:
+- property: subjectOf
+  expected_types:
+  - CreativeWork
+  - Event
+  - ScholarlyPublication
+  description: A CreativeWork or Event about this Thing.
+  Inverse property: about.
+  type: ""
+  type_url: ""
+  bsc_description: The ScholarlyPublication where this annotation is found.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: commentCount
+  expected_types:
+  - Integer
+  description: The number of comments this CreativeWork (e.g. Article, Question or
+    Answer) has received. This is most applicable to works published in Web sites
+    with commenting system; additional comments may exist elsewhere.
+  type: ""
+  type_url: ""
+  bsc_description: Number of times this annotation is found in the associated scholarly
+    article.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: creator
+  expected_types:
+  - Organization
+  - Person
+  - SoftwareApplication
+  description: The creator/author of this CreativeWork. This is the same as the Author
+    property for CreativeWork.
+  type: ""
+  type_url: ""
+  bsc_description: Person, organization or software application used to create this
+    annotation.
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: dateCreated
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was created or the item was added
+    to a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: dateModified
+  expected_types:
+  - Date
+  - DateTime
+  description: The date on which the CreativeWork was most recently modified or when
+    the item's entry was modified within a DataFeed.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  type: ""
+  type_url: ""
+  bsc_description: If available.
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: inLanguage
+  expected_types:
+  - Language
+  - Text
+  description: The language of the content or performance or used in an action. Please
+    use one of the language codes from the IETF BCP 47 standard. See also availableLanguage.
+    Supersedes language.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: isAccessibleForFree
+  expected_types:
+  - Boolean
+  description: A flag to signal that the item, event, or place is accessible for free.
+    Supersedes free.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: license
+  expected_types:
+  - CreativeWork
+  - URL
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: mainEntity
+  expected_types:
+  - Thing
+  - DefinedTerm
+  - DefinedTermSet
+  description: |-
+    Indicates the primary entity described in some page or other CreativeWork.
+     Inverse property: mainEntityOfPage.
+  type: ""
+  type_url: ""
+  bsc_description: DefinedTerm(s), i.e., ontology terms, associated to this annotation. Use DefinedTermSet if multiple related
+   terms should be seen as a whole, for instance MeSH descriptors accompanied by MeSH qualifiers .
+   On the DefinedTerm, use additionalType to link to a Unified Medical Language System (UMLS) semantic
+    type (TUI) or group, and sameAs to link to the corresponding concept unique identifier
+    (CUI), if available.
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: position
+  expected_types:
+  - Integer
+  - Text
+  - BreadcrumbList
+  - URL
+  description: The position of an item in a series or sequence of items.
+  type: ""
+  type_url: ""
+  bsc_description: A list of links that can help a user understand and navigate to
+    a section or paragraph in the scholarly article where this annotation is located.
+    If a text is used, different steps on the list should be separated with the character
+    '>', being the sentence where the annotation is found the last element. If a URL
+    is used, it should identify the section or paragraph where this annoation is found.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: ""
+- property: text
+  expected_types:
+  - Text
+  description: The textual content of this CreativeWork.
+  type: ""
+  type_url: ""
+  bsc_description: Expression found in the text corresponding to this annotation.
+  marginality: Minimum
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>
