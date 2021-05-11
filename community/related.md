@@ -11,4 +11,8 @@ Bioschemas is not alone in developing a strategy to generate a Life Science targ
 
 ## Learning Resources Metadata Initiative
 
-The Learning Resources Metadata Initiative [LRMI](http://www.lrmi.net/) have drafted extensions to the Schema.org vocabulary for marking up educational materials (summarised in this [blog post](https://blogs.pjjk.net/phil/learningresource-added-to-schema-org/)). These extensions are used in the Bioschemas [Course](/profiles/Course) and [TrainingMaterial](/profiles/TrainingMaterial) profiles. 
+The Learning Resources Metadata Initiative [LRMI](http://www.lrmi.net/) have drafted extensions to the Schema.org vocabulary for marking up educational materials (summarised in this [blog post](https://blogs.pjjk.net/phil/learningresource-added-to-schema-org/)). These extensions are used in the Bioschemas [Course](/profiles/Course) and [TrainingMaterial](/profiles/TrainingMaterial) profiles.
+
+## Schema.org Community Group
+
+The [W3C Schema.org Community Group](https://www.w3.org/community/schemaorg/) provide the environment for discussing extensions to the Schema.org vocabulary, and its best practice for usage. The community group is chaired by Dan Brickley (Google) with a [Steering Group](https://schema.org/docs/about.html#cgsg) drawn from representatives from Yahoo!, Yandex, Mircosoft, and Google.
