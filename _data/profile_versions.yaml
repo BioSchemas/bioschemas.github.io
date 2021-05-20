@@ -123,7 +123,7 @@ Protein:
 
 ProteinAnnotation:
     name: "ProteinAnnotation"
-    latest_publication: "0.4-DRAFT-2018_02_25"
+    latest_publication: "0.5-DRAFT"
     latest_release:
     status: "active"
 
