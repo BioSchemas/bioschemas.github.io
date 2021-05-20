@@ -1,14 +1,21 @@
 ---
+redirect_from:
+- "devSpecs/ProteinAnnotation/specification"
+- "devSpecs/ProteinAnnotation/specification/"
+- "/devSpecs/ProteinAnnotation/"
+- "/specifications/drafts/ProteinAnnotation"
+- "/profiles/ProteinAnnotation/"
+
 name: ProteinAnnotation
 
-previous_version: 0.4-DRAFT-2018_02_25
+previous_version: 0.5-DRAFT
 previous_release:
 
 status: revision
 spec_type: Profile
 group: proteins
 use_cases_url: /useCases/Protein/
-cross_walk_url: https://docs.google.com/spreadsheets/d/1FQt1LV_W8_xFVKt8C6CrTUFZd_N_yiRfx2nLH48D6GY/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1gnZePvUKpXE8gXbMLdZ3kfSgyqp-LY8cbDXO8NamyEM/
 gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20ProteinAnnotation
 live_deploy: /liveDeploys/
 
@@ -23,9 +30,9 @@ spec_info:
   title: ProteinAnnotation
   subtitle: ""
   description: This profile specification presents the BioChemEntity usage when describing
-    a Protein annotation. <h3>Summary of Changes</h3><p>Changes since the previous release of the ProtainAnnotation Profile:</p><ul><li>Examples added to many properties</li><li>additionalType demoted to Recommended level</li><li>rdf:type removed as part of the standard markup template</li><li>image promoted to Recommended level</li><li>hasCategoryCode added as an Optional level property</li></ul>
-  version: 0.5-DRAFT
-  version_date: 20181113T144349
+    a Protein annotation. <h3>Summary of Changes</h3><p>Changes since the previous release of the ProtainAnnotation Profile:</p><ul><li>alternateName demoted to Optional level</li><li>contains replaced by hasBioChemEntityPart</li><li>isContainedIn replaced by isPartOfBioChemEntity</li><li>subcellularLocalization added as an Optional level property</li></ul>
+  version: 0.6-DRAFT
+  version_date: 20181114T173216
   official_type: ""
   full_example: https://github.com/BioSchemas/specifications/tree/master/ProteinAnnotation/examples
 mapping:
@@ -42,7 +49,7 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: As much a possible, do not use it! Alternatively, consider reusing
-    properties/relations already coined in controlled vocabularies. We recommed to
+    properties/relations already coined in controlled vocabularies. We recommend to
     look at the [OBO Relations Ontology (RO)](http://obofoundry.org/ontology/ro.html)
     or the [Semanticscience Integrated Ontology (SIO)](http://sio.semanticscience.org/)
     as starting points.
@@ -91,7 +98,7 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: ""
-  marginality: Recommended
+  marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
   example: |-
@@ -99,19 +106,6 @@ mapping:
     "@type": ["BioChemEntity", "ProteinAnnotation"],
     "alternateName": [" BRCA2_hlx"]
     }
-- property: contains
-  expected_types:
-  - BioChemEntity
-  - URL
-  description: ""
-  type: bioschemas
-  type_url: ""
-  bsc_description: 'Indicates a BioChemEntity that is (in some sense) a part of this
-    BioChemEntity. Inverse property: isContainedIn.'
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: ""
-  example: ""
 - property: creationMethod
   expected_types:
   - PropertyValue
@@ -153,6 +147,19 @@ mapping:
     "@type": ["BioChemEntity", "ProteinAnnotation"],
     "description": "This entry represents a domain found in BRCA2 proteins. This domain adopts a helical..."
     }
+- property: hasBioChemEntityPart
+  expected_types:
+  - BioChemEntity
+  - URL
+  description: 'Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
+    Inverse property: isPartOfBioChemEntity'
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
 - property: hasCategoryCode
   expected_types:
   - CategoryCode
@@ -216,15 +223,15 @@ mapping:
   cardinality: MANY
   controlled_vocab: ""
   example: ""
-- property: isContainedIn
+- property: isPartOfBioChemEntity
   expected_types:
   - BioChemEntity
   - URL
-  description: ""
+  description: 'Indicates a BioChemEntity that this BioChemEntity is (in some sense)
+    a part of. Inverse property: contains.'
   type: bioschemas
   type_url: ""
-  bsc_description: 'Indicates a BioChemEntity that this BioChemEntity is (in some
-    sense) a part of. Inverse property: contains.'
+  bsc_description: ""
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -232,7 +239,7 @@ mapping:
     //A protein variant is contained in the proteine sequence:
     {
       "@type": ["BioChemEntity", "ProteinAnnotation"],
-      "isContainedIn": {"@id": "http://purl.uniprot.org/uniprot/P05067"}
+      "isPartOfBioChemEntity": {"@id": "http://purl.uniprot.org/uniprot/P05067"}
     }
 - property: location
   expected_types:
@@ -325,6 +332,19 @@ mapping:
   cardinality: MANY
   controlled_vocab: ""
   example: ""
+- property: subcellularLocalization
+  expected_types:
+  - URL
+  description: Location of the protein annotation within cellular compartment.
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Any URL to a GO cellular_component
+  example: "{\n  \"@type\": [\"BioChemEntity\", \"ProteinAnnotation\"],\n  \"subcellularLocalization\":
+    [\n    \"http://identifiers.org/GO:0012505\",\n    \"http://identifiers.org/GO:0009707\"
+    \n  ]\n}"
 - property: url
   expected_types:
   - URL
@@ -340,6 +360,7 @@ mapping:
       "@type": ["BioChemEntity", "ProteinAnnotation"],
       "url": "https://www.ebi.ac.uk/interpro/entry/IPR015252"
     }
+
 ---
 
 <!DOCTYPE HTML>
