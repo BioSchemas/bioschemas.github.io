@@ -442,17 +442,17 @@
     {
       "name": "CHD7 Database",
       "nodes": "NL",
-      "url": "https://molgenis51.gcc.rug.nl/",
+      "url": "https://www.chd7.org/",
       "profiles": [
         {
           "profileName": "Dataset",
           "conformsTo": "0.1",
-          "exampleURL": "https://molgenis51.gcc.rug.nl/"
+          "exampleURL": "https://www.chd7.org/"
         },
         {
           "profileName": "DataCatalog",
           "conformsTo": "0.1",
-          "exampleURL": "https://molgenis51.gcc.rug.nl/"
+          "exampleURL": "https://www.chd7.org/"
         }
       ]
     },
