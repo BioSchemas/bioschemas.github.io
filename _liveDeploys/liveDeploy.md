@@ -54,6 +54,7 @@ list:
     bsc_ver: 0.3
     comments:
     node: NL
+    sitemap: https://www.wikipathways.org/sitemap.xml
 -
     name: EGA
     highlight:
