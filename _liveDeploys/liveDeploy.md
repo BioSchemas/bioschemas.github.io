@@ -51,7 +51,7 @@ list:
     resource_URL: https://wikipathways.org/
     schema_org: Dataset
     bsc_profile: Dataset
-    bsc_ver: 0.3
+    bsc_ver: 0.4-DRAFT
     comments:
     node: NL
     sitemap: https://www.wikipathways.org/sitemap.xml
