@@ -89,4 +89,4 @@ The error report is minimal but it will give you a green or red bar to indicate 
 
 The screenshot below shows the page for validating the DisProt protein DP00003 against the Gene profile at the minimal level. Click [here](http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/?url=https://disprot.org/DP00003) to try it yourself.
 
-![BioschemasValidator showing DisProt:DP00003](/tutorials/images/BioschemasValidator.png)
+![BioschemasValidator showing DisProt:DP00003](/tutorials/images/bioschemasValidator.png)
