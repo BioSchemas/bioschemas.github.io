@@ -1,14 +1,14 @@
 ---
 name: ProteinAnnotation
 
-previous_version:
+previous_version: 0.4-DRAFT-2018_02_25
 previous_release:
 
 status: revision
 spec_type: Profile
 group: proteins
 use_cases_url: /useCases/Protein/
-cross_walk_url: https://docs.google.com/spreadsheets/d/1KNVv3xedOpckk3ZcILnPmlys2DTzpk8KnkRwVFR2SL0
+cross_walk_url: https://docs.google.com/spreadsheets/d/1FQt1LV_W8_xFVKt8C6CrTUFZd_N_yiRfx2nLH48D6GY/
 gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20ProteinAnnotation
 live_deploy: /liveDeploys/
 
@@ -21,12 +21,13 @@ hierarchy:
 # DO NOT MANUALLY EDIT THE CONTENT
 spec_info:
   title: ProteinAnnotation
-  subtitle: 'Bioschemas specification describing a Protein annotation (BioChemEntity profile) in Life Sciences.'
-  description: 'This profile specification presents the BioChemEntity usage when describing a Protein annotation.'
-  version: 0.4-DRAFT-2018_02_25
-  version_date: 20180225T144349
+  subtitle: ""
+  description: This profile specification presents the BioChemEntity usage when describing
+    a Protein annotation. <h3>Summary of Changes</h3><p>Changes since the previous release of the ProtainAnnotation Profile:</p><ul><li>Examples added to many properties</li><li>additionalType demoted to Recommended level</li><li>rdf:type removed as part of the standard markup template</li><li>image promoted to Recommended level</li><li>hasCategoryCode added as an Optional level property</li></ul>
+  version: 0.5-DRAFT
+  version_date: 20181113T144349
   official_type: ""
-  full_example: "https://gist.github.com/kcmcleod/474f3a25d5b4b3a902552a88301d747b"
+  full_example: https://github.com/BioSchemas/specifications/tree/master/ProteinAnnotation/examples
 mapping:
 - property: additionalProperty
   expected_types:
@@ -48,7 +49,14 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: "//Short direct alternative to express, for instance, a relation between
+    a protein annotation and a protein clan.\n{\n  \"@type\": [\"BioChemEntity\",
+    \"ProteinAnnotation\"],\n  \"http://semanticscience.org/resource/SIO_000095\":\"http://pfam.xfam.org/clan/CL0001\"\n}\n
+    \               \n//If no ontology term expressing the desired relation exists,
+    then and only then use additionaProperty\n{\n  \"@type\": [\"BioChemEntity\",
+    \"ProteinAnnotation\"],\n  \"additionalProperty\": {\n    \"name\": \"my new property\",\n
+    \   \"value\": {\n      \"@type\": \"PropertyValue\",\n      \"value\": \"the
+    object in this relation, more properties can be used as needed\"\n    }\n  }\n}"
 - property: additionalType
   expected_types:
   - URL
@@ -60,16 +68,22 @@ mapping:
     externally.
   type: ""
   type_url: ""
-  bsc_description: Should be set to any of the values listed in the Controlled Vocabulary.
-  marginality: Minimum
+  bsc_description: Should be used to specified the nature of the annotation, e.g.,
+    domain, active site, variant, GO annoation, etc. Please see the values listed
+    in the Controlled Vocabulary for some examples
+  marginality: Recommended
   cardinality: MANY
   controlled_vocab: |-
-    [SIO:active_site](http://semanticscience.org/resource/SIO_010041.rdf)
-    [SIO:binding_site](http://semanticscience.org/resource/SIO_010040.rdf)
-    [SIO:molecular_site](http://semanticscience.org/resource/SIO_010049.rdf)
-    [SIO:protein_domain](http://semanticscience.org/resource/SIO_001379.rdf)
-    [SIO:protein_family](http://semanticscience.org/resource/SIO_001380.rdf)
-  example: ""
+    [SIO:active_site](http://semanticscience.org/resource/SIO_010041)
+    [SIO:binding_site](http://semanticscience.org/resource/SIO_010040)
+    [SIO:molecular_site](http://semanticscience.org/resource/SIO_010049)
+    [SIO:protein_domain](http://semanticscience.org/resource/SIO_001379)
+    [SIO:protein_family](http://semanticscience.org/resource/SIO_001380)
+  example: |-
+    {
+    "@type": ["BioChemEntity", "ProteinAnnotation"],
+    "additionalType": "http://semanticscience.org/resource/SIO_010041"
+    }
 - property: alternateName
   expected_types:
   - Text
@@ -78,9 +92,13 @@ mapping:
   type_url: ""
   bsc_description: ""
   marginality: Recommended
-  cardinality: "MANY"
+  cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    {
+    "@type": ["BioChemEntity", "ProteinAnnotation"],
+    "alternateName": [" BRCA2_hlx"]
+    }
 - property: contains
   expected_types:
   - BioChemEntity
@@ -104,7 +122,22 @@ mapping:
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: |
+    {
+      "@type": ["BioChemEntity", "ProteinAnnotation"],
+      "creationMethod": {
+        "@type": "PropertyValue",
+        "value": "imported manually asserted information used in automatic assertion",
+        "valueReference": {
+          "@type": "CategoryCode",
+          "codeValue": "ECO:0000322",
+          "inCategorySet": {
+            "@type": "CategoryCodeSet",
+            "name": "ECO Evidence Code Ontology"
+          }
+        }
+      }
+    }
 - property: description
   expected_types:
   - Text
@@ -115,10 +148,30 @@ mapping:
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
+  example: |-
+    {
+    "@type": ["BioChemEntity", "ProteinAnnotation"],
+    "description": "This entry represents a domain found in BRCA2 proteins. This domain adopts a helical..."
+    }
+- property: hasCategoryCode
+  expected_types:
+  - CategoryCode
+  description: A Category code contained in this code set.
+  type: ""
+  type_url: ""
+  bsc_description: A controlled vocabulary term equivalent to this entity. For instance,
+    an organism coined in NCBI taxonomy can be represented as a BioChemEntity. As
+    it also exists as a term in an ontology, it would be nice to capture that information
+    via categoryCode.
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: Any suitable controlled vocabulary
   example: ""
 - property: hasRepresentation
   expected_types:
-  - PropertyValue orText orURL
+  - PropertyValue
+  - Text
+  - URL
   description: A representation for this entity other than, for instance, an image
     (use image property for that) or the main web page/record (use mainEntityOfPage
     for that), and see background notes, for sameAs and url).
@@ -146,7 +199,11 @@ mapping:
   marginality: Minimum
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: |-
+    {
+      "@type": ["BioChemEntity", "ProteinAnnotation"],
+      "identifier": "interpro:IPR015252"
+    }
 - property: image
   expected_types:
   - ImageObject
@@ -155,13 +212,14 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: ""
-  marginality: Optional
+  marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
   example: ""
 - property: isContainedIn
   expected_types:
-  - BioChemEntity orURL
+  - BioChemEntity
+  - URL
   description: ""
   type: bioschemas
   type_url: ""
@@ -170,16 +228,25 @@ mapping:
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
-  example: ""
+  example: |-
+    //A protein variant is contained in the proteine sequence:
+    {
+      "@type": ["BioChemEntity", "ProteinAnnotation"],
+      "isContainedIn": {"@id": "http://purl.uniprot.org/uniprot/P05067"}
+    }
 - property: location
   expected_types:
-  - Place orPostalAddress orPropertyValue orText orURL
+  - Place
+  - PostalAddress
+  - PropertyValue
+  - Text
+  - URL
   description: The location of for example where the event is happening, an organization
     is located, or where an action takes place.
   type: bioschemas
   type_url: ""
   bsc_description: |-
-    The location can refer to a position in the chromosome or sequence or to a physical place where, for instance, a sample is stored. Using [additionalType](http://bioschemas.org/devSpecs/ProteinAnnotation/#additionalType) is advised to make this distinction. For instance, [FALDO](https://github.com/OBF/FALDO) can be used for sequence co-ordinates.
+    The location can refer to a position in the chromosome or sequence or to a physical place where, for instance, a sample is stored. Using [additionalType](http://bioschemas.org/devSpecs/ProteinAnnotation/specification/#additionalType) is advised to make this distinction. For instance, [FALDO](https://github.com/OBF/FALDO) can be used for sequence co-ordinates.
     **Note:** The list of Expected Types has been extended as schema.org/location only has Place, PostalAddress and Text.
   marginality: Optional
   cardinality: MANY
@@ -187,7 +254,37 @@ mapping:
   example: ""
 - property: mainEntityOfPage
   expected_types:
-  - DataRecord orURL
+  - CreativeWork
+  - URL
+  description: |-
+    Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details.
+    Inverse property: mainEntity.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    //Preferred way from DataRecord
+    {
+      "@type": "DataRecord",
+      "@id": "https://www.ebi.ac.uk/interpro/entry/IPR015252",
+      "mainEntity": {
+        "@type": ["BioChemEntity", "ProteinAnnotation"]
+        #Any other property for this ProteinAnnotation entity
+      }
+    }
+
+    //Also possible from ProteinAnnotation
+    {
+      "@type": ["BioChemEntity", "ProteinAnnotation"],
+      "mainEntityOfPage": { "@id": "https://www.ebi.ac.uk/interpro/entry/IPR015252" }
+    }
+- property: mainEntityOfPage
+  expected_types:
+  - DataRecord
+  - URL
   description: Indicates a page (or other CreativeWork) for which this thing is the
     main entity being described. See background notes for details.
   type: bioschemas
@@ -209,19 +306,11 @@ mapping:
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
-- property: rdf:type
-  expected_types:
-  - URL
-  description: ""
-  type: external
-  type_url: https://www.w3.org/1999/02/22-rdf-syntax-ns#type
-  bsc_description: This is used by validation tools to indentify the profile used.
-    You must use the value specified in the Controlled Vocabulary column.
-  marginality: Minimum
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
+  example: |-
+    {
+      "@type": ["BioChemEntity", "ProteinAnnotation"],
+      "name": "Breast cancer type 2 susceptibility protein, helical domain"
+    }
 - property: sameAs
   expected_types:
   - URL
@@ -246,7 +335,11 @@ mapping:
   marginality: Recommended
   cardinality: ONE
   controlled_vocab: ""
-  example: ""
+  example: |-
+    {
+      "@type": ["BioChemEntity", "ProteinAnnotation"],
+      "url": "https://www.ebi.ac.uk/interpro/entry/IPR015252"
+    }
 ---
 
 <!DOCTYPE HTML>
