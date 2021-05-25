@@ -1025,8 +1025,9 @@ list:
     schema_org: ChemicalSubstance
     bsc_profile: ChemicalSubstance
     bsc_ver: 0.4
-    comments:
+    comments: Ontology IRIs for the JRC representative industrial nanomaterials
     node: NL
+    sitemap: https://nanocommons.github.io/sitemap.xml
 -
     name: NanoCommons
     example_URL: https://nanocommons.github.io/datasets/
@@ -1034,8 +1035,9 @@ list:
     schema_org: Dataset
     bsc_profile: Dataset
     bsc_ver: 0.4-DRAFT
-    comments: Open License datasets
+    comments: Open License datasets by the NanoSafety Cluster
     node: NL
+    sitemap: https://nanocommons.github.io/sitemap.xml
 -
     name: opalesurfcasting.net
     highlight: Datasets attaching french leisure sea fishing legislation to taxons
