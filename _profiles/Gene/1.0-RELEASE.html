@@ -1,15 +1,22 @@
 ---
+redirect_from:
+- "devSpecs/Gene/specification"
+- "devSpecs/Gene/specification/"
+- "/devSpecs/Gene/"
+- "/specifications/Gene"
+- "/specifications/drafts/Gene"
+- "/profiles/Gene/"
 
 name: Gene
 
-previous_version: '0.6-DRAFT-2020_04_02'
-previous_release: '0.4-RELEASE-2019_11_10'
+previous_version: '0.7-RELEASE'
+previous_release: '0.7-RELEASE'
 
 status: release # Change to revision if you are working on an update
 spec_type: Profile
 group: genes
 use_cases_url: /useCases/Gene/
-cross_walk_url: https://docs.google.com/spreadsheets/d/1fNmcZp636iTywG7EK7EK-LmQtHBN6cbKGa_K84MFujU/edit#gid=1483018794
+cross_walk_url: https://docs.google.com/spreadsheets/d/1iCMknj6yWbkJsMiQ46_nSa82lZ4jNFOk-ZKx2ZApFq8/edit#gid=1483018794
 gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Gene
 live_deploy: /liveDeploys/
 
@@ -27,24 +34,15 @@ spec_info:
   title: Gene
   subtitle: Bioschemas profile describing a Gene in Life Sciences
   description: 'This Gene profile specification presents the markup for describing
-    a Gene.
-    <h4>Summary of Changes</h4>
-    Changes since previous release of the Gene Profile:
-    <ul>
-      <li>No changes at Minimum level</li>
-      <li>Various changes to properties at the Recommended level
-        <ul>
-          <li>encodes renamed to encodesBioChemEntity and types changed</li>
-          <li>hasRepresentation and image demoted to optional</li>
-        </ul>
-      </li>
-      <li>Various changes at Optional level, several properties renamed. Removed additionalProperty and additionalType properties.</li>
-    </ul>
-    '
-  version: 0.7-RELEASE
-  version_date: 20200407T115832
+    a Gene.<h4>Summary of Changes</h4>Changes introduced on Gene profile 0.7-RELEASE
+    in response to <a href="https://github.com/BioSchemas/specifications/issues/492">issue
+    492</a><ul><li>add cardinality for associatedDisease and taxonomicRange following
+    the one in Protein</li><li>add suggestion on controlled vocabularies for taxonomicRange
+    following the one in Protein</li></ul>'
+  version: 1.0-RELEASE
+  version_date: 20210407T225132
   official_type: http://bioschemas.org/Gene
-  full_example: https://github.com/Bioschemas/Specifications/tree/master/Gene/examples
+  full_example: https://github.com/BioSchemas/Specifications/tree/master/Gene/examples
 mapping:
 - property: alternateName
   expected_types:
@@ -83,7 +81,7 @@ mapping:
   type_url: http://bioschemas.org/associatedDisease
   bsc_description: ""
   marginality: Optional
-  cardinality: ""
+  cardinality: MANY
   controlled_vocab: ""
   example: ""
 - property: description
@@ -393,8 +391,8 @@ mapping:
   type_url: http://bioschemas.org/taxonomicRange
   bsc_description: ""
   marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
+  cardinality: MANY
+  controlled_vocab: Taxonomies or any suitable controlled vocabulary
   example: "{\n  \"@type\": \"Gene\",\n  \"taxonomicRange\": {\n    \"@type\": \"DefinedTerm\",\n
     \   \"termCode\": \"9606\",\n    \"url\": \"http://purl.bioontology.org/ontology/NCBITAXON/9606\",\n
     \   \"sameAs\": \"http://purl.uniprot.org/taxonomy/9606\",\n    \"inDefinedTermSet\":

@@ -76,7 +76,7 @@ FormalParameter:
 Gene:
     name: "Gene"
     latest_publication:
-    latest_release: "0.7-RELEASE"
+    latest_release: "1.0-RELEASE"
     status: "active"
 
 Journal:
