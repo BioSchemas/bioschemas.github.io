@@ -1,4 +1,7 @@
 ---
+#This file is now redundant
+#It is here to stop a merge conflict
+#It will be removed in a separate PR
 layout: default
 id: deploys
 active: true
