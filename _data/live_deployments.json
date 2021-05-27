@@ -73,10 +73,11 @@
       "name": "WikiPathways",
       "url": "https://wikipathways.org/",
       "nodes": "NL",
+      "sitemap": "https://www.wikipathways.org/sitemap.xml",
       "profiles": [
         {
           "profileName": "Dataset",
-          "conformsTo": "0.3",
+          "conformsTo": "0.4-DRAFT",
           "exampleURL": "https://wikipathways.org/"
         }
       ]
@@ -941,8 +942,10 @@
     },
     {
       "name": "NanoCommons",
+      "description": "Open License datasets by the NanoSafety Cluster. Ontology IRIs for the JRC representative industrial nanomaterials.",
       "url": "https://www.nanocommons.eu/",
       "nodes": "NL",
+      "sitemap": "https://nanocommons.github.io/sitemap.xml",
       "profiles": [
         {
           "profileName": "ChemicalSubstance",
