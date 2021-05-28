@@ -1,0 +1,202 @@
+---
+redirect_from:
+- '/profiles/Disease/'
+
+name: Disease
+
+previous_version:
+previous_release:
+
+status: revision
+spec_type: Profile
+group: disease
+use_cases_url: /useCases/Disease/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1hGKPatus04Oz1OmM6KrNFobFQ2TGOZ8oQlUbTRn4obM/
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20Disease
+live_deploy: ''
+
+parent_type: MedicalCondition
+hierarchy:
+- Thing
+- MedicalEntity
+- MedicalCondition
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: Disease
+  subtitle: Bioschema profile describing a Disease in Life Sciences
+  description: This is the first draft of the Disease profie, using MedicalCondition
+    type from schema.org as template for inheriting some properites
+  version: 0.1-DRAFT
+  version_date: 20210528T161836
+  official_type: https://schema.org/MedicalCondition
+  full_example: https://github.com/BioSchemas/specifications/tree/master/Disease
+mapping:
+- property: alternateName
+  expected_types:
+  - Text
+  description: An alias for the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: '{ "@type": "Disease", "alternateName": "neoplasm of the meninges" }'
+- property: description
+  expected_types:
+  - Text
+  description: A description of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+        "@type": "Disease",
+        "description": "A central nervous system cancer"
+    }
+- property: disambiguatingDescription
+  expected_types:
+  - Text
+  description: A sub property of description. A short description of the item used
+    to disambiguate from other, similar items. Information from other properties (in
+    particular, name) may be necessary for the description to be useful for disambiguation.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
+- property: drug
+  expected_types:
+  - Drug
+  description: Specifying a drug or medicine used in a medication procedure
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ' { "@type": "Disease", "drug": "https://www.drugbank.ca/drugs/DB00295"
+    }'
+- property: identifier
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  description: The identifier property represents any kind of identifier for any kind
+    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See background notes for more details.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    //Using text
+    {
+            "@type": "Disease",
+        "identifier": "DOID:3565"
+    }
+    //Using a URL directly (looks like a text)
+    {
+            "@type": "Disease",
+        "identifier": "https://www.ebi.ac.uk/ols/ontologies/doid/terms?iri=http://purl.obolibrary.org/obo/DOID_3565"
+    }
+    //Using a URL modeled as schema:URL (equivalent to the previous one but more verbose)
+    {
+            "@type": "Disease",
+        "identifier": {
+          "@type": "URL",
+          "url": "https://www.ebi.ac.uk/ols/ontologies/doid/terms?iri=http://purl.obolibrary.org/obo/DOID_3565"
+        }
+    }
+- property: image
+  expected_types:
+  - ImageObject
+  - URL
+  description: An image of the item. This can be a URL or a fully described ImageObject.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |
+    //Using a URL directly (looks like a text)
+- property: name
+  expected_types:
+  - Text
+  description: The name of the item.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": "Disease",
+      "name": "Meningioma"
+    }
+- property: sameAs
+  expected_types:
+  - URL
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  type: ""
+  type_url: ""
+  bsc_description: ""
+  marginality: Optional
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": "Disease",
+      "sameAs": "https://www.ebi.ac.uk/ols/ontologies/doid/terms?iri=http://purl.obolibrary.org/obo/DOID_3565"
+    }
+- property: url
+  expected_types:
+  - URL
+  description: URL of the item.
+  type: ""
+  type_url: ""
+  bsc_description: Link to the official webpage associated to this entity.
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+      "@type": "Disease",
+      "url": "https://www.ebi.ac.uk/ols/ontologies/doid/terms?iri=http://purl.obolibrary.org/obo/DOID_3565"
+    }
+
+
+---
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  {% include specification_table.html %}
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>
