@@ -61,6 +61,12 @@ Dataset:
     latest_release: "0.3-RELEASE-2019_06_14"
     status: "active"
 
+Disease:
+    name: "Disease"
+    latest_publication: "0.1-DRAFT"
+    latest_release:
+    status: "active"
+
 Event:
     name: "Event"
     latest_publication: "0.2-DRAFT-2019_06_14"
