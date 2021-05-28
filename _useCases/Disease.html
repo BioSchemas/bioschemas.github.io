@@ -1,0 +1,26 @@
+---
+layout: use-case
+name: Disease
+group: disease
+collection: useCases
+active: true
+redirect_from: useCases/Disease/
+---
+<p>This use cases apply to the following biological types: “disease”.</p>
+
+<p>There are many disease classifications available and many efforts have been recently done to organize systematically diseases in ontology (like the Human Disease Ontology at EMBL-EBI). On the other hand, medical doctors and the World Health Organization still use different catalogues, like the ICD (International Classification of Diseases). Moreover, medical records not always follow either bioinformatics ontologies or international standards, making this data very difficult to be collected and analysed properly. </p>
+
+<p>Facing this situation, it is important to make disease records more findable, improving the quality of web searches also for not-experts, developing guidelines for disease markup. Recently schema.org released the types MedicalCondition, and its most specific type InfectiousDisease, that could be good starting point for the profile Disease.</p>
+
+<p>In order to achieve this, a Disease profile should fulfil the following requirements:</p>
+<ul>
+  <li>It must have name, id and description(minimum);</li>
+  <li>It should explicit the relations among Disease and one or more Genes, or Disease and one or more Proteins (recommended);</li>
+  <li>It should have aliases, both in ontologies as well as free text (recommended);</li>
+  <li>It may specify the mode of inheritance;</li>
+  <li>It may specify the related phenotypes;</li>
+  <li>It may specify the related biological process;</li>
+  <li>It may specify the related drugs;</li>
+  <li>It may contain references to specific alleles;</li>
+  <li>It may contain references to the anatomical district of interest;</li>
+</ul>
