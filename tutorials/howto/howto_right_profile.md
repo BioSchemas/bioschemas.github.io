@@ -5,8 +5,8 @@ previousTutorial:
   link: ./what_why_bioschemas
   title: What and why bioschemas
 nextTutorial:
-  link: ./howto/howto_add_markup
-  title: How to add markup to your own resource
+  link: ./howto/howto_create_new_profile
+  title: How to create a new draft profile
 
 bioschemas:
   "@context": https://schema.org/

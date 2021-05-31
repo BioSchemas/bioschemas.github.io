@@ -1,13 +1,12 @@
 ---
 layout: tutorial
 title: How to create a new draft profile
-#TODO: Update links to tutorials
 previousTutorial:
-  link: ../
-  title: Overview
+  link: ./howto/howto_right_profile
+  title: How to select the right profile for your resource
 nextTutorial:
-  link: ../
-  title: Overview
+  link: ./howto/howto_add_markup
+  title: How to add markup to your own resource
 
 bioschemas:
   "@context": https://schema.org/
