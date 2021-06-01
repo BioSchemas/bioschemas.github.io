@@ -44,8 +44,8 @@ To update a profile you need access to a couple of Bioschemas resources, here we
 
 * Bioschemas specifications [GDrive folder](https://drive.google.com/drive/folders/0B8yXU9SkT3ftaWJtTGYyTTJjck0): to create the spreadsheet corresponding to the new draft profile, you need editing rights
   * Note 1: a specification in Bioschemas defines either a type (existing in schema.org or created by Bioschemas) or a profile (set of rules on how to use a type). A type specification corresponds to a set of relations, aka properties, between the described type and other types (for instance, the specification for the [type Protein](https://bioschemas.org/types/Protein) includes a property ```associatedDisease``` describing how a relation between a protein and a disease). A profile specification selects the most useful properties for a given type and provides additional information on cardinality, marginality and controlled vocabularies (for instance, the specification for the [Protein profile](https://bioschemas.org/profiles/Protein/) indicates that the property ```associatedDisease``` is recommended and has cardinality MANY)
-  * Note 2: a GDrive, short for Google Drive, is a file storage and synchronization service developed by Google. Bioschemas uses a GDrrive folder to host information related to, for instance, specifications
-* [GOweb repository](https://github.com/BioSchemas/bioschemas-goweb): to move from the spreadsheet to the website
+  * Note 2: a GDrive, short for Google Drive, is a file storage and synchronization service developed by Google. Bioschemas uses a GDrive folder to host information related to, for instance, specifications
+* [GOWeb repository](https://github.com/BioSchemas/bioschemas-goweb): to move from the spreadsheet to the website
 * [Website repository](https://github.com/BioSchemas/bioschemas.github.io): to publish the new draft profile, you need editing rights
 * [Specifications repository](https://github.com/BioSchemas/specifications): to add compliant examples regarding the new draft profile, you need editing rights
 
@@ -55,14 +55,14 @@ From now on, we will use [ScholarlyArticle](/profiles/ScholarlyArticle) as an ex
 
 ## 2. Create a new profile crosswalk
 
-A profile crosswalk is the cornerstone of Bioschemas profile development. It is a spreadsheet with the Schema.org fields to be considered together with cardinality, marginality, suggested controlled vocabularies and examples. It is not a regular spreadsheet but one with a template and some predifined functionalities. It is then translated into strcutured data so that the Bioschemas web site is automatically updated.
+A profile crosswalk is the cornerstone of Bioschemas profile development. It is a spreadsheet with the Schema.org fields to be considered together with cardinality, marginality, suggested controlled vocabularies and examples. It is not a regular spreadsheet but one with a template and some predefined functionalities. It is then translated into structured data so that the Bioschemas web site is automatically updated.
 
 A new profile is commonly based on the previous one so the easiest way to start is from the previous version.
 
 * Go to the [GDrive](https://drive.google.com/drive/folders/0B8yXU9SkT3ftaWJtTGYyTTJjck0) and navigate to the folder [Specifications](https://drive.google.com/drive/folders/0Bw_p-HKWUjHoNThZOWNKbGhOODg)
 * Locate and open the folder corresponding to the profile you want to update, in our example it is the [ScholarlyArticle folder](https://drive.google.com/drive/folders/1CgEyta4d7vFfYT7r7w9HtLZ4kAidDmJI)
 * Create a copy of the latest ScholarlyArticle Mapping file. At the time of writing, it was the ScholarlyArticle Mapping 0.2-DRAFT
-  * Note: a mapping file corresponds to a Google spreadsheet and it is the way that Bioschemas uses to do a crosswalk on a type or profile before adding it to the website. Bioschemas groups will work first on this crosswalk (mapping file, spreadsheet) and when it is ready to go (i.e., the involved people is happy with the content, it has been reviewed and approved), it can be published to the website
+  * Note: a mapping file corresponds to a Google spreadsheet and it is the way that Bioschemas uses to do a crosswalk on a profile before adding it to the website. Bioschemas groups will work first on this crosswalk (mapping file, spreadsheet) and when it is ready to go (i.e., the involved people is happy with the content, it has been reviewed and approved), it can be published to the website
 * Rename the copy so it reflects the new draft version, in this case it would be ScholarlyArticle Mapping 0.3-DRAFT
 
 We will now discuss the different tabs in the spreadsheet and how they are used in updating a profile.
@@ -107,15 +107,15 @@ Here you will make the changes to the profile. There are a couple of possibiliti
     * Add a new row indicating what type is being extended
     * Follow the process as described for properties belonging to a parent already recorded
 
-| ![Figure 1. From Schema.org to profile spredsheet](/tutorials/images/from_schema_to_spreadsheet.png) |
-| __Figure 1. From Schema.org to profile spredsheet__ |
+| ![Figure 1. From Schema.org to profile spreadsheet](/tutorials/images/from_schema_to_spreadsheet.png) |
+| __Figure 1. From Schema.org to profile spreadsheet__ |
 
 
 ## 3. Get the code for the new draft profile
 
 Now you are ready to generate the machine-processable Bioschemas version of your new draft profile.
 
-* Go to [GOweb repository](https://github.com/BioSchemas/bioschemas-goweb) and get the executable version corresponding to your Operating System. If you need assitance with Goweb send an email to the [mailing list](mailto:public-bioschemas@w3.org).
+* Go to [GOWeb repository](https://github.com/BioSchemas/bioschemas-goweb) and get the executable version corresponding to your Operating System. If you need assistance with GOWeb send an email to the [mailing list](mailto:public-bioschemas@w3.org).
 * Run GOWeb using the CSV file you created on the previous section [Publish the Bioschemas fields to the Web](#23-publish-the-bioschemas-fields-to-the-web)
 * A YAML file will be created that is then used in the webpage for the new draft version
 
