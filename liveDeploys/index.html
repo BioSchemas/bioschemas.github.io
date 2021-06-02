@@ -2,7 +2,7 @@
 layout: default
 title: Live Deploys
 exampleHoverText: "View example page"
-sdttHoverText: "Visualise on Google's Structured Data Testing Tool"
+schemaHoverText: "Visualise on Schema.org's Markup Validation Tool (SMV)"
 bmuseHoverText: "Retrieve using Bioschemas Scraping service"
 ---
 
@@ -112,8 +112,8 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
               <div class="collapse collapse{{resourceName}} ">
                 {% if profile.exampleURL != nil %}
                 <div class="google-sdtt-button">
-                    <span class="tooltiptext">{{page.sdttHoverText}}</span>
-                    <a href="https://search.google.com/structured-data/testing-tool#url={{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SDTT</a>
+                    <span class="tooltiptext">{{page.schemaHoverText}}</span>
+                    <a href="https://validator.schema.org/?url={{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SMV</a>
                 </div>
                 {% endif %}
               </div>
@@ -211,8 +211,8 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                   {% if live.exampleURL != nil %}
                   <div class="collapse collapse{{profile.name}}">
                   <div class="google-sdtt-button">
-                      <span class="tooltiptext">{{page.sdttHoverText}}</span>
-                      <a href="https://search.google.com/structured-data/testing-tool#url={{live.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SDTT</a>
+                      <span class="tooltiptext">{{page.schemaHoverText}}</span>
+                      <a href="https://validator.schema.org/?url={{live.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SMV</a>
                   </div>
                   </div>
                   {% endif %}
@@ -359,8 +359,8 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                   <div class="collapse collapse{{nodeName}} ">
                     {% if profile.exampleURL != nil %}
                     <div class="google-sdtt-button">
-                        <span class="tooltiptext">{{page.sdttHoverText}}</span>
-                        <a href="https://search.google.com/structured-data/testing-tool#url={{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SDTT</a>
+                        <span class="tooltiptext">{{page.schemaHoverText}}</span>
+                        <a href="https://validator.schema.org/?url={{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SMV</a>
                     </div>
                     {% endif %}
                   </div>
