@@ -41,7 +41,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
       <table>
         {% for resource in liveDeploys %}
           <!-- Remove characters that prevent expansion/collapse of table rows -->
-          {% assign resourceName = resource.name | replace: '.', '_' | replace: ' ', '_' | replace: '/', '_' | remove: '(' | remove: ')' | replace: ',', '_' %}
+          {% assign resourceName = resource.name | replace: '.', '_' | replace: ' ', '_' | replace: '/', '_' | remove: '(' | remove: ')' | replace: ',', '_' | replace: ':', '_' %}
 
           <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{resourceName}}" aria-expanded="false" aria-controls="collapse{{resourceName}}">
             <td colspan="4">
