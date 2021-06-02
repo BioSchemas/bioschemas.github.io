@@ -2,8 +2,8 @@
 layout: tutorial
 title: How to update a profile
 previousTutorial:
-  link: ./howto/howto_right_profile
-  title: How to select the right profile
+  link: ./howto/howto_create_new_profile
+  title: How to create a new draft profile
 nextTutorial:
   link: ./howto/howto_add_markup
   title: How to add markup to your own resource
@@ -97,7 +97,10 @@ You should update the column "Official Type" if and only if you modified the mai
 
 Here you will make the changes to the profile. There are a couple of possibilities here.
 * You want to update a property that already exists (e.g., there is typo, description should be updated, a new controlled vocabulary will be added, a new example is necessary, expected Schema.org types have changed, etc.)
-  * Go to the column you want to change and update it as needed
+  * Go to the column you want to change and update it as needed, some examples include
+    * changing the marginaly (coumn 'Marginality') or cardinality (column 'Cardinality') by selecting the new desired one from the provided drop-box list
+    * adding or modifying a tailor Bioschemas definition by directly entering the text in the corresponding column 'BSC Description'
+    * adding or modifying the mini example for a particular propperty by entering the text in the corresponding column 'Example', remember to use JSON-LD syntax for this
 * You want to add a new property
   * If it is a property belonging to a parent type already recorded, see Figure 1 below. Our ScholarlyArticle example already extends ScholarlyArticle, Article, CreativeWork and Thing
     * Add a new column under the corresponding type. Let's suppose you want to add the property "wordCount" that comes from the type Article
@@ -130,14 +133,19 @@ Once you have finished with the changes on the spreadsheet, see previous section
 
 You are now ready to publish the new draft version on the Bioschemas website.
 
+### 4.1. Create a new version page
+
 * If you have not done so yet, clone the [Bioschemas website repository](https://github.com/BioSchemas/bioschemas.github.io) so you have a local copy
 * Open your local copy in your preferred editor
 * Go to `_profiles/<your profile>`, in this case `_profiles/ScholarlyArticle`
 * Create a copy of the latest profile, in our case it is 0.2-DRAFT-2020_12_03.html
 * Rename the copy so it reflects the new draft version, in our case it would be 0.3-DRAFT.html (having the dates as part of the draft name is no longer needed/desired)
-* Updating the redirects depends on the status of the previous version
-  * If the previous version is a draft profile then remove the `redirect_from` property
-  * If the previous version is a release then the `redirect_from` property should be updated to
+
+### 4.2. Update the redirects
+
+Updating the redirects depends on the status of the previous version
+* If the previous version is a draft profile then remove the `redirect_from` property
+* If the previous version is a release then the `redirect_from` property should be updated to
 
 ```yaml
 redirect_from:
@@ -154,12 +162,14 @@ redirect_from:
 - "/specifications/drafts/ScholarlyArticle"
 ```
 
-* Now on the new draft version file
-  * Update the previous version, in our case it would be ```previous_version: 0.2-DRAFT-2020_12_03```
-  * Update the ```cross_walk_url``` to point to the spreadsheet on the GDrive
-  * If you changed the parent type (very rarely it happens), you need to update the section ```parent_type```
+### 4.3. Update the content
 
-  Now you are ready to update the part corresponding to the spreadsheet, go to the ```spec_info``` section, it start with the lines
+Now on the new draft version file
+* Update the previous version, in our case it would be ```previous_version: 0.2-DRAFT-2020_12_03```
+* Update the ```cross_walk_url``` to point to the spreadsheet on the GDrive
+* If you changed the parent type (very rarely it happens), you need to update the section ```parent_type```
+
+Now you are ready to update the part corresponding to the spreadsheet, go to the ```spec_info``` section, it start with the lines
 
 ```yaml
   # spec_info content generated using GOWeb
@@ -169,6 +179,8 @@ redirect_from:
 * Keep the two first lines only, i.e., remove from the line ```spec_info``` all the way to a line with three dashes ```---```, which is right before the line ```<!DOCTYPE HTML>```
 * Add all the lines coming from the YAML file that you got from GO Web
 * Save the file!
+
+### 4.4. Update the profile version
 
 You are now ready to update the profile version
 * Go to the folder `_data` and locate the file ```profile_versions.yaml```

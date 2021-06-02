@@ -5,8 +5,8 @@ previousTutorial:
   link: ./howto/howto_right_profile
   title: How to select the right profile for your resource
 nextTutorial:
-  link: ./howto/howto_add_markup
-  title: How to add markup to your own resource
+  link: ./howto/howto_new_profile_version
+  title: How to update a profile
 
 bioschemas:
   "@context": https://schema.org/
