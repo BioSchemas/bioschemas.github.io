@@ -2,8 +2,8 @@
 layout: tutorial
 title: How to mark up your own resource with Bioschemas
 previousTutorial:
-  link: ./howto/howto_right_profile
-  title: How to select the right profile
+  link: ./howto/howto_create_new_profile
+  title: How to create a new draft profile
 nextTutorial:
   link: ./howto/howto_add_github
   title: How to add markup to GitHub pages

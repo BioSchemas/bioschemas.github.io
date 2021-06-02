@@ -5,8 +5,8 @@ previousTutorial:
   link: ./what_why_bioschemas
   title: What and why bioschemas
 nextTutorial:
-  link: ./howto/howto_new_profile_version
-  title: How to create and publish a new draft profile
+  link: ./howto/howto_create_new_profile
+  title: How to create a new draft profile
 
 bioschemas:
   "@context": https://schema.org/
