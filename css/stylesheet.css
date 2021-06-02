@@ -159,14 +159,17 @@ h1 {
 h2 {
     font-size: 1.875em;
     margin-bottom: 0.3125em;
-    margin-top: 0.625em;
+    margin-top: -3em;
     font-weight: normal;
+    padding-top: 3.6em;
+    display: inline-block;
 }
 
 h3 {
     font-size: 1.3125em;
     margin-bottom: 0.3125em;
-    margin-top: 0.8125em;
+    margin-top: -3em;
+    padding-top: 3.6em; 
 }
 
 h4 {
@@ -323,13 +326,9 @@ table {
     margin-bottom: 1.625em;
     margin-top: 1.25em;
     text-align: left;
-    -webkit-box-shadow: 0.625em 0.625em 1.25em rgba(217, 217, 217, .7);
-    -moz-box-shadow: 0.625em 0.625em 1.25em rgba(217, 217, 217, .7);
-    box-shadow: 0.625em 0.625em 1.25em rgba(217, 217, 217, .7);
-}
-
-table+h2 {
-    margin-top: 1.25em;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 th {
@@ -428,9 +427,9 @@ GitHub Button
     font-weight: 700;
     border-bottom-left-radius: 0.625em;
     border-bottom-right-radius: 0.625em;
-    -webkit-box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
-    -moz-box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
-    box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #forkme_banner:hover {
@@ -458,9 +457,9 @@ Twitter Button
     background: url('../images/Twitter_logo_white.png') #28a9e2 no-repeat 95% 50%;
     background-size: 35% 65%;
     font-weight: 700;
-    -webkit-box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
-    -moz-box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
-    box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-bottom-left-radius: 0.625em;
     border-bottom-right-radius: 0.625em;
 }
@@ -539,9 +538,9 @@ Back to Top Button
     background-color: rgb(43, 182, 115);
     background-color: rgba(43, 182, 115, .7);
     color: #222;
-    -webkit-box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
-    -moz-box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
-    box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 /*******************************************************************************
@@ -567,9 +566,9 @@ Back to Groups Button
     background-color: rgb(43, 182, 115);
     background-color: rgba(43, 182, 115, .7);
     color: #222;
-    -webkit-box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
-    -moz-box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
-    box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 /*******************************************************************************
@@ -707,9 +706,9 @@ About Us Organizations Links
     background-color: rgba(242, 242, 242, .7);
     border: 2px solid #0B794B;
     border-radius: 0.625em;
-    -webkit-box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
-    -moz-box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
-    box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .organs_inv p {
@@ -813,9 +812,9 @@ Small Device Styles
         font-weight: 700;
         border-bottom-left-radius: 0.625em;
         border-bottom-right-radius: 0.625em;
-        -webkit-box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
-        -moz-box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
-        box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
     #forkme_banner:hover {
         background-color: rgb(29, 95, 226);
@@ -832,9 +831,9 @@ Small Device Styles
         background: url('../images/Twitter_logo_white.png') #28a9e2 no-repeat 95% 50%;
         background-size: 35% 65%;
         font-weight: 700;
-        -webkit-box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
-        -moz-box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
-        box-shadow: 0 0 0.625em rgba(0, 0, 0, .7);
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         border-bottom-left-radius: 0.625em;
         border-bottom-right-radius: 0.625em;
     }
@@ -907,7 +906,7 @@ Small Device Styles
     table {
         padding-left: 0;
         margin-left: 0;
-        box-shadow: none;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
     #twit_git_p {
         display: block;
@@ -1005,9 +1004,9 @@ Specification Properties
 table.bioschemas_properties,
 table.bioschemas_spec_list,
 table.definition-table {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 1em 0 0 0;
     border: 1px solid #98A0A6;
     border-spacing: 3px;
@@ -1194,6 +1193,35 @@ input:checked+label {
 #tab3:checked~#tab3Content {
     display: block;
 }
+
+/*******************************************************************************
+Table of contents
+*******************************************************************************/
+
+/* TOC base styling */
+
+#toc {
+    padding: 7px 15px 15px 15px;
+    background-color: #eaf2ee;
+    margin: 1.75em 0 2em;
+    border-radius: 4px;
+    max-width: 400px;
+    line-height: 1.4;
+}
+
+/* Indent the lists and reset any other padding */
+
+#toc ul {
+    padding: 0 0 0 20px;
+}
+
+/* Consistent vertical space between list items */
+
+#toc li, #toc ul ul li {
+    margin: 8px 0 0 0;
+}
+
+
 
 /*******************************************************************************
 Style experiment
