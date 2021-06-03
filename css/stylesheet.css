@@ -1201,7 +1201,7 @@ Table of contents
 /* TOC base styling */
 
 #toc {
-    padding: 7px 15px 15px 15px;
+    padding: 15px;
     background-color: #eaf2ee;
     margin: 1.75em 0 2em;
     border-radius: 4px;
