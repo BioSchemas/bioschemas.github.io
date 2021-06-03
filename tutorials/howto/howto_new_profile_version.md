@@ -98,9 +98,9 @@ You should update the column "Official Type" if and only if you modified the mai
 Here you will make the changes to the profile. There are a couple of possibilities here.
 * You want to update a property that already exists (e.g., there is typo, description should be updated, a new controlled vocabulary will be added, a new example is necessary, expected Schema.org types have changed, etc.)
   * Go to the column you want to change and update it as needed, some examples include
-    * changing the marginaly (coumn 'Marginality') or cardinality (column 'Cardinality') by selecting the new desired one from the provided drop-box list
-    * adding or modifying a tailor Bioschemas definition by directly entering the text in the corresponding column 'BSC Description'
-    * adding or modifying the mini example for a particular propperty by entering the text in the corresponding column 'Example', remember to use JSON-LD syntax for this
+    * Changing the marginality (column 'Marginality') or cardinality (column 'Cardinality') by selecting the new desired one from the provided drop-box list
+    * Adding or modifying a tailor Bioschemas definition by directly entering the text in the corresponding column 'BSC Description'
+    * Adding or modifying the mini example for a particular property by entering the text in the corresponding column 'Example', remember to use JSON-LD syntax for this
 * You want to add a new property
   * If it is a property belonging to a parent type already recorded, see Figure 1 below. Our ScholarlyArticle example already extends ScholarlyArticle, Article, CreativeWork and Thing
     * Add a new column under the corresponding type. Let's suppose you want to add the property "wordCount" that comes from the type Article
