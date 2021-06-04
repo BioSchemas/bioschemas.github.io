@@ -6,6 +6,6 @@ last-name: Roos
 collection: people
 affiliation: Leiden University Medical Center, Leiden, NL
 homepage:
-github_username:
+github_username: mroos
 orcid: 0000-0002-8691-772X
 ---
