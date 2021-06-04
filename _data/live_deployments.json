@@ -1145,6 +1145,40 @@
           "exampleURL": "https://datacatalog.elixir-luxembourg.org/"
         }
       ]
+    },
+    {
+      "name": "PIPPA: PSB Interface for Plant Phenotype Analysis",
+      "url": "https://pippa.psb.ugent.be/",
+      "nodes": "BE",
+      "profiles": [
+        {
+          "profileName": "Study",
+          "conformsTo": "0.2-DRAFT",
+          "exampleURL": "https://pippa.psb.ugent.be/pippa_experiments/consult_experiment_basic_info/55"
+        },
+        {
+          "profileName": "Taxon",
+          "conformsTo": "0.6",
+          "exampleURL": "https://pippa.psb.ugent.be/pippa_experiments/consult_experiment_basic_info/55"
+        }
+      ]
+    },
+    {
+      "name": "CorkOakDB",
+      "url": "https://corkoakdb.org/",
+      "nodes": "PT",
+      "profiles": [
+        {
+          "profileName": "Gene",
+          "conformsTo": "0.7",
+          "exampleURL": "https://corkoakdb.org/gene/13014"
+        },
+        {
+          "profileName": "Taxon",
+          "conformsTo": "0.6",
+          "exampleURL": "https://corkoakdb.org/gene/13014"
+        }
+      ]
     }
   ]
 }
