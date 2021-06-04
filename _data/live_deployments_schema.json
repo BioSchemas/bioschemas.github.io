@@ -45,6 +45,7 @@
         "DataCatalog",
         "DataRecord",
         "Dataset",
+        "Disease",
         "Event",
         "FormalParameter",
         "Gene",

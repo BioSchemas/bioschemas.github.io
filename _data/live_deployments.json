@@ -1179,6 +1179,22 @@
           "exampleURL": "https://corkoakdb.org/gene/13014"
         }
       ]
+    },
+    {
+      "name": "Orphanet",
+      "description": "The portal for rare diseases and orphan drugs",
+      "keywords": ["CDR"],
+      "url": "https://www.orpha.net/",
+      "nodes": "FR",
+      "sitemap": "https://www.orpha.net/consor/cgi-bin/html/orphanet-googlemap.xml",
+      "profiles": [
+        {
+          "profileName": "Disease",
+          "conformsTo": "0.1-DRAFT",
+          "exampleURL": "https://www.orpha.net/consor/cgi-bin/OC_Exp.php?Expert=141189&lng=en",
+          "highlight": "Over 6,000 diseases"
+        }
+      ]
     }
   ]
 }
