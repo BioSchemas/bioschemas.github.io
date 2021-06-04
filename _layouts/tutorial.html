@@ -13,6 +13,12 @@
     <blockquote>
       {{ page.bioschemas.description }}
     </blockquote>
+    <script>
+      $(document).ready(function () {
+        $('#toc').toc({ minimumHeaders: 2, listType: 'ul', showSpeed: 0, headers: 'h2, h3' , title: 'Table of Contents' });
+      });
+    </script>
+    <div id="toc"></div>
     {% if page.bioschemas.keywords %}
     <p><strong>Keywords:</strong> {{page.bioschemas.keywords}}</p>
     {% endif %}

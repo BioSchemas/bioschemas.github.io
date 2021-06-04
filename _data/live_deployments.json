@@ -1129,6 +1129,24 @@
       ]
     },
     {
+      "name": "IMI Data Catalog",
+      "url": "https://datacatalog.elixir-luxembourg.org/",
+      "nodes": "LU",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.4-DRAFT",
+          "exampleURL": "https://datacatalog.elixir-luxembourg.org/e/dataset/924dfe7a-71e8-11eb-bafe-3e22fbb3883f",
+          "highlight": "Over 200 datasets"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://datacatalog.elixir-luxembourg.org/"
+        }
+      ]
+    },
+    {
       "name": "PIPPA: PSB Interface for Plant Phenotype Analysis",
       "url": "https://pippa.psb.ugent.be/",
       "nodes": "BE",

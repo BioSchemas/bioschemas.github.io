@@ -2,18 +2,16 @@
 layout: default
 title: Live Deploys
 exampleHoverText: "View example page"
-sdttHoverText: "Visualise on Google's Structured Data Testing Tool"
+schemaHoverText: "Visualise on the Schema.org Markup Validation Tool (SMV)"
 bmuseHoverText: "Retrieve using Bioschemas Scraping service"
 ---
 
 <h1>{{ page.title }}</h1>
-<p>Below we list the sites that use <a href="http://bioschemas.org">Bioscheams</a> markup to describe what they are offering. We provide a direct link to the site, an example deployment page, a link to Google's Structured Data Testing Tool (<a href="https://search.google.com/structured-data/testing-tool">SDTT</a>) visualisation of the page's markup, and also what a link to the results of using the Bioschemas Markup Scraper and Extractor tool (<a href="https://github.com/HW-SWeL/BMUSE">BMUSE</a>). The links to Google’s SDTT and BMUSE show one example page from the site; however, many more may exist. For example, Biosamples have marked up all of their content (currently over 10 million samples).</p>
+<p>Below we list the sites that use <a href="http://bioschemas.org">Bioscheams</a> markup to describe what they are offering. We provide a direct link to the site, an example deployment page, a link to test the markup syntax using the Schema.org Markup Validation tool (<a href="https://validator.schema.org/">SMV</a>), and also a link to the results of using the Bioschemas Markup Scraper and Extractor tool (<a href="https://github.com/HW-SWeL/BMUSE">BMUSE</a>). The links to the Schema.org Markup Validation tool and BMUSE show one example page from the site; however, many more may exist.</p>
 
-<p>Note that SDTT is being deprecated and you will receive a warning message about this.</p>
+<p>Note that when using the Schema.org Markup Validator, you may encounter some error warnings for types and properties. These should correspond to the types and properties that are being proposed by Bioschemas as extensions to the Schema.org vocabulary.</p>
 
-<p>Please remember that Google sets minimum requirements for <a href="http://schema.org">Schema.org</a> markup, which may differ with those of <a href="http://bioschemas.org">Bioscheams</a>. As such, Google's <a href="https://search.google.com/structured-data/testing-tool">SDTT</a> may provide warnings or errors when the markup is perfectly compliant with both <a href="http://schema.org">Schema.org</a> and <a href="http://bioschemas.org">Bioscheams</a>.</p>
-
-<p>If your Bioschemas compliant site is not listed below, please email us at <a href="mailto:enquiries@bioschemas.org">enquiries@bioschemas.org</a>.</p>
+<p>If your Bioschemas compliant site is not listed below, please add it to our <a href="https://github.com/BioSchemas/bioschemas.github.io/blob/master/_data/live_deployments.json">list of live deploys</a> and create a pull request to have your site added. Alternatively, email us with details of your site at <a href="mailto:enquiries@bioschemas.org">enquiries@bioschemas.org</a>.</p>
 
 <h2>Sites Implementing Bioschemas's Markup</h2>
 <ul>
@@ -112,8 +110,8 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
               <div class="collapse collapse{{resourceName}} ">
                 {% if profile.exampleURL != nil %}
                 <div class="google-sdtt-button">
-                    <span class="tooltiptext">{{page.sdttHoverText}}</span>
-                    <a href="https://search.google.com/structured-data/testing-tool#url={{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SDTT</a>
+                    <span class="tooltiptext">{{page.schemaHoverText}}</span>
+                    <a href="https://validator.schema.org/?url={{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SMV</a>
                 </div>
                 {% endif %}
               </div>
@@ -211,8 +209,8 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                   {% if live.exampleURL != nil %}
                   <div class="collapse collapse{{profile.name}}">
                   <div class="google-sdtt-button">
-                      <span class="tooltiptext">{{page.sdttHoverText}}</span>
-                      <a href="https://search.google.com/structured-data/testing-tool#url={{live.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SDTT</a>
+                      <span class="tooltiptext">{{page.schemaHoverText}}</span>
+                      <a href="https://validator.schema.org/?url={{live.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SMV</a>
                   </div>
                   </div>
                   {% endif %}
@@ -359,8 +357,8 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                   <div class="collapse collapse{{nodeName}} ">
                     {% if profile.exampleURL != nil %}
                     <div class="google-sdtt-button">
-                        <span class="tooltiptext">{{page.sdttHoverText}}</span>
-                        <a href="https://search.google.com/structured-data/testing-tool#url={{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SDTT</a>
+                        <span class="tooltiptext">{{page.schemaHoverText}}</span>
+                        <a href="https://validator.schema.org/?url={{profile.exampleURL}}" class="btn btn-bioschema btn-block" target="_blank">SMV</a>
                     </div>
                     {% endif %}
                   </div>
