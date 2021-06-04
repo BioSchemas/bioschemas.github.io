@@ -18,7 +18,8 @@
   <link rel="stylesheet" href="{{ "/css/stylesheet.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>  
   <!-- Font Awesome -->
   <script defer src="/js/fontawesome-all.js"></script>
   {% if page.bioschemas %}
@@ -26,4 +27,5 @@
      {{ page.bioschemas | jsonify }}
   </script>
   {% endif %}
+  <script src="{{ 'js/toc.js' | relative_url }}"></script>
 </head>
