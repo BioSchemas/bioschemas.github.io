@@ -1,6 +1,15 @@
 <tr class="supertype">
   <th class="supertype-name" colspan="3">
-    Properties from <a href="http://schema.org/{{type}}">{{type}}</a>
+    Properties from
+    {% for property in properties %}
+      {% if property.id == {{type}} %}
+        {% if property.isPartOf %}
+          <a class="ext ext-pending" href="http://pending.schema.org/{{property.id}}">{{property.id}}</a>
+        {% else %}
+          <a href="http://schema.org/{{property.id}}">{{property.id}}</a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
   </th>
 </tr>
 {% for property in properties %}
