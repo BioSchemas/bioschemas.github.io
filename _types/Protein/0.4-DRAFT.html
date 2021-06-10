@@ -33,7 +33,7 @@ external: #454547;
     <th>Description</th>
   </tr>
 </thead>
-{% assign properties = site.data.types.Protein %}
+{% assign properties = site.data.types.Protein | sort_natural: "id" %}
 
 {% assign type = "Protein" %}
 {% include type_rows.html %}
