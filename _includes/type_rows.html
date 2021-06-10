@@ -8,7 +8,11 @@
     {% if domain.id == {{type}} %}
     <tr>
       <td>
-        <a href="http://schema.org/{{property.id}}">{{property.id}}</a>
+        {% if property.isPartOf %}
+          <a class="ext ext-pending" href="http://pending.schema.org/{{property.id}}">{{property.id}}</a>
+        {% else %}
+          <a href="http://schema.org/{{property.id}}">{{property.id}}</a>
+        {% endif %}
       </td>
       <td>
         {% assign ex_types = property.rangeIncludes | sort_natural: "id" %}
