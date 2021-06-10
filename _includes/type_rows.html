@@ -26,7 +26,15 @@
       <td>
         {% assign ex_types = property.rangeIncludes | sort_natural: "id" %}
         {% for ex_type in ex_types %}
-          <a href="http://schema.org/{{ex_type.id}}">{{ex_type.id}}</a>
+          {% if ex_type.id == "BioChemEntity" or
+                ex_type.id == "DefinedTerm" or
+                ex_type.id == "Gene" or
+                ex_type.id == "Protein" or
+                ex_type.id == "Taxon" %}
+            <a class="ext ext-pending" href="http://pending.schema.org/{{ex_type.id}}">{{ex_type.id}}</a>
+          {% else %}
+            <a href="http://schema.org/{{ex_type.id}}">{{ex_type.id}}</a>
+          {% endif %}
           {% if forloop.last != true %}
             or <br/>
           {% endif %}
