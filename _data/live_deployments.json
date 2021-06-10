@@ -778,8 +778,8 @@
           "exampleURL": "https://www.disprot.org/"
         },
         {
-          "profileName": "ProteinAnnotation",
-          "conformsTo": "0.5-DRAFT",
+          "profileName": "SequenceAnnotation",
+          "conformsTo": "0.7-DRAFT",
           "exampleURL": "https://www.disprot.org/DP00086r026",
           "highlight": "3.5k protein regions"
         },
