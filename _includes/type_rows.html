@@ -27,11 +27,30 @@
         {% assign ex_types = property.rangeIncludes | sort_natural: "id" %}
         {% for ex_type in ex_types %}
           {% if ex_type.id == "BioChemEntity" or
+                ex_type.id == "ChemicalSubstance" or
                 ex_type.id == "DefinedTerm" or
                 ex_type.id == "Gene" or
+                ex_type.id == "MolecularEntity" or
                 ex_type.id == "Protein" or
                 ex_type.id == "Taxon" %}
             <a class="ext ext-pending" href="http://pending.schema.org/{{ex_type.id}}">{{ex_type.id}}</a>
+          {% elsif ex_type.id == "BioChemStructure" or
+                   ex_type.id == "BioSample" or
+                   ex_type.id == "ComputationalWorflow" or
+                   ex_type.id == "DataRecord" or
+                   ex_type.id == "DNA" or
+                   ex_type.id == "Enzyme" or
+                   ex_type.id == "FormalParameter" or
+                   ex_type.id == "LabProtocol" or
+                   ex_type.id == "Phenotype" or
+                   ex_type.id == "RNA" or
+                   ex_type.id == "Sample" or
+                   ex_type.id == "SequenceAnnotation" or
+                   ex_type.id == "SequenceMatchingModel" or
+                   ex_type.id == "SequenceRange" or
+                   ex_type.id == "Study" or
+                   ex_type.id == "TaxonName" %}
+            <a class="ext ext-bio" href="http://bioschemas.org/{{ex_type.id}}">{{ex_type.id}}</a>
           {% else %}
             <a href="http://schema.org/{{ex_type.id}}">{{ex_type.id}}</a>
           {% endif %}
