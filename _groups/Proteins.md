@@ -21,12 +21,12 @@ objectives:
   ]
 specifications:
   [
-    'Protein', 'ProteinAnnotation', 'ProteinStructure'
+    'Protein', 'ProteinAnnotation', 'ProteinStructure', 'SequenceAnnotation', 'SequenceRange'
   ]
 
 types:
   [
-    'Protein'
+    'Protein', 'SequenceAnnotation', 'SequenceRange'
   ]
 
 members:
