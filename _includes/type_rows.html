@@ -50,7 +50,7 @@
                    ex_type.id == "SequenceRange" or
                    ex_type.id == "Study" or
                    ex_type.id == "TaxonName" %}
-            <a class="ext ext-bio" href="http://bioschemas.org/{{ex_type.id}}">{{ex_type.id}}</a>
+            <a class="ext ext-bio" href="/{{ex_type.id}}">{{ex_type.id}}</a>
           {% else %}
             <a href="http://schema.org/{{ex_type.id}}">{{ex_type.id}}</a>
           {% endif %}
