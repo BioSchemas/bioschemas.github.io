@@ -175,6 +175,12 @@ SequenceAnnotation:
     latest_release:
     status: "active"
 
+SequenceRange:
+    name: "SequenceRange"
+    latest_publication: "0.1-DRAFT"
+    latest_release:
+    status: "active"
+
 Study:
     name: "Study"
     latest_publication: "0.2-DRAFT"
