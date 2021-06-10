@@ -127,12 +127,6 @@ Protein:
     latest_release: "0.11-RELEASE"
     status: "active"
 
-ProteinAnnotation:
-    name: "ProteinAnnotation"
-    latest_publication: "0.6-DRAFT"
-    latest_release:
-    status: "active"
-
 ProteinStructure:
     name: "ProteinStructure"
     latest_publication: "0.5-DRAFT-2018_08_15"
@@ -172,6 +166,12 @@ ScholarlyArticle:
 SemanticTextAnnotation:
     name: "SemanticTextAnnotation"
     latest_publication: "0.2-DRAFT-2020_12_03"
+    latest_release:
+    status: "active"
+
+SequenceAnnotation:
+    name: "SequenceAnnotation"
+    latest_publication: "0.7-DRAFT"
     latest_release:
     status: "active"
 
