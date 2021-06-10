@@ -3,9 +3,13 @@
           <th><a href="/profiles/{{spec.name}}/{{spec.spec_info.version}}" title="{{ spec.spec_info.subtitle }}">{{ spec.spec_info.title }}</a><br />(v{{spec.spec_info.version}})<br />{{ date_time | date_to_long_string }}
 
           	{% if site.data.profile_versions[spec.name].status == "deprecated" %}
-          	<p>deprecated on: {{site.data.profile_versions[spec.name].deprecated_date }}<p>
+          	  <br/>
+              Deprecated on: {{site.data.profile_versions[spec.name].deprecated_date }}<br/>
+                {% if site.data.profile_versions[spec.name].superceded_by %}
+                  Superceded by: <a href="/profiles/{{site.data.profile_versions[spec.name].superceded_by}}">{{site.data.profile_versions[spec.name].superceded_by}}</a>
+                {% endif %}
           	{% endif %}
-          
+
           </th>
           <td>
             {% assign group = site.groups | where:"identifier", spec.group %}

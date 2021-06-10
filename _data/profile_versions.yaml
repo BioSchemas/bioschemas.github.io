@@ -133,6 +133,7 @@ ProteinAnnotation:
     latest_release:
     status: "deprecated"
     deprecated_date: "2021-06-10"
+    superceded_by: "SequenceAnnotation"
 
 ProteinStructure:
     name: "ProteinStructure"
