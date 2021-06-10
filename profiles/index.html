@@ -134,15 +134,15 @@ redirect_from:
 	  <tbody>
       {% assign prof_specs = site.profiles | where: 'spec_type', 'Profile'%}
       {% for spec in prof_specs %}
-      {% if dep_profile_names contains spec.name %}
-      {% if site.data.profile_versions[spec.name].latest_publication != nill %}
-	  {% if spec.spec_info.version == site.data.profile_versions[spec.name].latest_publication %}
+        {% if dep_profile_names contains spec.name %}
+          {% if site.data.profile_versions[spec.name].latest_publication != nill %}
+	          {% if spec.spec_info.version == site.data.profile_versions[spec.name].latest_publication %}
 
-	  {% include profile_table_rows.html %}
+	            {% include profile_table_rows.html %}
 
-      {% endif %}
-      {% endif %}
-      {% endif %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
       {% endfor %}
       </tbody>
   </table>
