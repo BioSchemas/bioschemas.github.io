@@ -978,5 +978,44 @@
         "id": "MedicalCondition"
       }
     ]
+  },
+  {
+    "id": "hasSequenceAnnotation",
+    "@type": [
+      "Property"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "id": "http://www.bioschemas.org/BioChemEntity"
+      }
+    ],
+    "comment": [
+      {
+        "value": "An annotation on the BioPolymerSequence associated with this BioChemEntity."
+      }
+    ],
+    "label": [
+      {
+        "value": "hasSequenceAnnotation"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "BioChemEntity"
+      }
+    ],
+    "isPartOf": [
+      {
+        "id": "https://bio.schema.org"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "URL"
+      },
+      {
+        "id": "SequenceAnnotation"
+      }
+    ]
   }
 ]
