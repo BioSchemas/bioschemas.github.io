@@ -81,7 +81,7 @@ Phenotype:
 
 Protein:
     name: "Protein"
-    latest_publication:
+    latest_publication: "0.4-DRAFT"
     latest_release: "0.3-RELEASE-2019_09_02"
     status: "active"
 

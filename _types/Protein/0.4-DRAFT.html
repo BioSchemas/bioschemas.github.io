@@ -1,0 +1,66 @@
+---
+layout: default
+redirect_from:
+- "/types/drafts/Protein/"
+
+previous_version: '0.3-RELEASE-2019_09_02'
+previous_release: '0.3-RELEASE-2019_09_02'
+
+dateModified: 2021-06-10
+description: "Protein is here used in its widest possible definition, as classes of amino acid based molecules. Amyloid-beta Protein in human (UniProt P05067), eukaryota (e.g. an OrthoDB group) or even a single molecule that one can point to are all of type schema:Protein. A protein can thus be a subclass of another protein, e.g. schema:Protein as a UniProt record can have multiple isoforms inside it which would also be schema:Protein. They can be imagined, synthetic, hypothetical or naturally occurring."
+hierarchy:
+- Thing
+- BioChemEntity
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20Protein
+group: proteins
+name: Protein
+parent_type: BioChemEntity
+spec_type: Type
+status: revision #[release | revision]
+version: '0.4-DRAFT'
+
+bsc: #0B794B;
+pending: #0000CC;
+external: #454547;
+
+---
+{% include type_start.html %}
+<table class="definition-table bsc_type">
+<thead>
+  <tr>
+    <th>Property</th>
+    <th>Expected Type</th>
+    <th>Description</th>
+  </tr>
+</thead>
+{% assign properties = site.data.types.Protein %}
+<tr class="supertype">
+  <th class="supertype-name" colspan="3">
+    Properties from <a href="http://schema.org/Protein">Protein</a>
+  </th>
+</tr>
+{% for property in properties %}
+  {% for domain in property.domainIncludes %}
+    {% if domain.id == "Protein" %}
+    <tr>
+      <td>
+        <a href="http://schema.org/{{property.id}}">{{property.id}}</a>
+      </td>
+      <td>
+        {% for ex_type in property.rangeIncludes %}
+          <a href="http://schema.org/{{ex_type.id}}">{{ex_type.id}}</a>
+          {% if forloop.last != true %}
+            or <br/>
+          {% endif %}
+        {% endfor %}
+      </td>
+      <td>
+        {% for value in property.comment %}
+          {{value.value}}
+        {% endfor %}
+      </td>
+    </tr>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+</table>

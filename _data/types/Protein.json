@@ -1,0 +1,982 @@
+[
+  {
+    "id": "image",
+    "@type": [
+      "Property"
+    ],
+    "comment": [
+      {
+        "value": "An image of the item. This can be a [[URL]] or a fully described [[ImageObject]]."
+      }
+    ],
+    "label": [
+      {
+        "value": "image"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "Thing"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "ImageObject"
+      },
+      {
+        "id": "URL"
+      }
+    ]
+  },
+  {
+    "id": "identifier",
+    "@type": [
+      "Property"
+    ],
+    "equivalentProperty": [
+      {
+        "id": "http://purl.org/dc/terms/identifier"
+      }
+    ],
+    "comment": [
+      {
+        "value": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.\n        "
+      }
+    ],
+    "label": [
+      {
+        "value": "identifier"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "Thing"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "URL"
+      },
+      {
+        "id": "Text"
+      },
+      {
+        "id": "PropertyValue"
+      }
+    ]
+  },
+  {
+    "id": "disambiguatingDescription",
+    "@type": [
+      "Property"
+    ],
+    "comment": [
+      {
+        "value": "A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation."
+      }
+    ],
+    "label": [
+      {
+        "value": "disambiguatingDescription"
+      }
+    ],
+    "subPropertyOf": [
+      {
+        "id": "description"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "Thing"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "Text"
+      }
+    ]
+  },
+  {
+    "id": "potentialAction",
+    "@type": [
+      "Property"
+    ],
+    "comment": [
+      {
+        "value": "Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role."
+      }
+    ],
+    "label": [
+      {
+        "value": "potentialAction"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "Thing"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "Action"
+      }
+    ]
+  },
+  {
+    "id": "bioChemInteraction",
+    "@type": [
+      "Property"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "id": "http://www.bioschemas.org"
+      }
+    ],
+    "comment": [
+      {
+        "value": "A BioChemEntity that is known to interact with this item."
+      }
+    ],
+    "label": [
+      {
+        "value": "bioChemInteraction"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "BioChemEntity"
+      }
+    ],
+    "isPartOf": [
+      {
+        "id": "https://pending.schema.org"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "BioChemEntity"
+      }
+    ]
+  },
+  {
+    "id": "Thing",
+    "@type": [
+      "Class"
+    ],
+    "comment": [
+      {
+        "value": "The most generic type of item."
+      }
+    ],
+    "label": [
+      {
+        "value": "Thing"
+      }
+    ]
+  },
+  {
+    "id": "Protein",
+    "@type": [
+      "Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "id": "http://bioschemas.org"
+      }
+    ],
+    "comment": [
+      {
+        "value": "Protein is here used in its widest possible definition, as classes of amino acid based molecules. Amyloid-beta Protein in human (UniProt P05067), eukaryota (e.g. an OrthoDB group) or even a single molecule that one can point to are all of type schema:Protein. A protein can thus be a subclass of another protein, e.g. schema:Protein as a UniProt record can have multiple isoforms inside it which would also be schema:Protein. They can be imagined, synthetic, hypothetical or naturally occurring."
+      }
+    ],
+    "label": [
+      {
+        "value": "Protein"
+      }
+    ],
+    "subClassOf": [
+      {
+        "id": "BioChemEntity"
+      }
+    ],
+    "isPartOf": [
+      {
+        "id": "https://pending.schema.org"
+      }
+    ]
+  },
+  {
+    "id": "taxonomicRange",
+    "@type": [
+      "Property"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "id": "http://www.bioschemas.org"
+      }
+    ],
+    "comment": [
+      {
+        "value": "The taxonomic grouping of the organism that expresses, encodes, or in someway related to the BioChemEntity."
+      }
+    ],
+    "label": [
+      {
+        "value": "taxonomicRange"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "BioChemEntity"
+      }
+    ],
+    "isPartOf": [
+      {
+        "id": "https://pending.schema.org"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "Taxon"
+      },
+      {
+        "id": "URL"
+      },
+      {
+        "id": "DefinedTerm"
+      },
+      {
+        "id": "Text"
+      }
+    ]
+  },
+  {
+    "id": "additionalType",
+    "@type": [
+      "Property"
+    ],
+    "comment": [
+      {
+        "value": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally."
+      }
+    ],
+    "label": [
+      {
+        "value": "additionalType"
+      }
+    ],
+    "subPropertyOf": [
+      {
+        "id": "type"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "Thing"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "URL"
+      }
+    ]
+  },
+  {
+    "id": "isEncodedByBioChemEntity",
+    "@type": [
+      "Property"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "id": "http://www.bioschemas.org/Gene"
+      }
+    ],
+    "comment": [
+      {
+        "value": "Another BioChemEntity encoding by this one."
+      }
+    ],
+    "label": [
+      {
+        "value": "isEncodedByBioChemEntity"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "BioChemEntity"
+      }
+    ],
+    "inverseOf": [
+      {
+        "id": "encodesBioChemEntity"
+      }
+    ],
+    "isPartOf": [
+      {
+        "id": "https://pending.schema.org"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "Gene"
+      }
+    ]
+  },
+  {
+    "id": "description",
+    "@type": [
+      "Property"
+    ],
+    "equivalentProperty": [
+      {
+        "id": "http://purl.org/dc/terms/description"
+      }
+    ],
+    "comment": [
+      {
+        "value": "A description of the item."
+      }
+    ],
+    "label": [
+      {
+        "value": "description"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "Thing"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "Text"
+      }
+    ]
+  },
+  {
+    "id": "BioChemEntity",
+    "@type": [
+      "Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "id": "http://bioschemas.org"
+      }
+    ],
+    "comment": [
+      {
+        "value": "Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical."
+      }
+    ],
+    "label": [
+      {
+        "value": "BioChemEntity"
+      }
+    ],
+    "subClassOf": [
+      {
+        "id": "Thing"
+      }
+    ],
+    "isPartOf": [
+      {
+        "id": "https://pending.schema.org"
+      }
+    ]
+  },
+  {
+    "id": "isInvolvedInBiologicalProcess",
+    "@type": [
+      "Property"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "id": "http://www.bioschemas.org/BioChemEntity"
+      }
+    ],
+    "comment": [
+      {
+        "value": "Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence."
+      }
+    ],
+    "label": [
+      {
+        "value": "isInvolvedInBiologicalProcess"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "BioChemEntity"
+      }
+    ],
+    "isPartOf": [
+      {
+        "id": "https://pending.schema.org"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "URL"
+      },
+      {
+        "id": "DefinedTerm"
+      },
+      {
+        "id": "PropertyValue"
+      }
+    ]
+  },
+  {
+    "id": "isLocatedInSubcellularLocation",
+    "@type": [
+      "Property"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "id": "http://www.bioschemas.org/BioChemEntity"
+      }
+    ],
+    "comment": [
+      {
+        "value": "Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence."
+      }
+    ],
+    "label": [
+      {
+        "value": "isLocatedInSubcellularLocation"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "BioChemEntity"
+      }
+    ],
+    "isPartOf": [
+      {
+        "id": "https://pending.schema.org"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "URL"
+      },
+      {
+        "id": "PropertyValue"
+      },
+      {
+        "id": "DefinedTerm"
+      }
+    ]
+  },
+  {
+    "id": "hasMolecularFunction",
+    "@type": [
+      "Property"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "id": "http://www.bioschemas.org/BioChemEntity"
+      }
+    ],
+    "comment": [
+      {
+        "value": "Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence."
+      }
+    ],
+    "label": [
+      {
+        "value": "hasMolecularFunction"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "BioChemEntity"
+      }
+    ],
+    "isPartOf": [
+      {
+        "id": "https://pending.schema.org"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "PropertyValue"
+      },
+      {
+        "id": "DefinedTerm"
+      },
+      {
+        "id": "URL"
+      }
+    ]
+  },
+  {
+    "id": "url",
+    "@type": [
+      "Property"
+    ],
+    "comment": [
+      {
+        "value": "URL of the item."
+      }
+    ],
+    "label": [
+      {
+        "value": "url"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "Thing"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "URL"
+      }
+    ]
+  },
+  {
+    "id": "isPartOfBioChemEntity",
+    "@type": [
+      "Property"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "id": "http://www.bioschemas.org"
+      }
+    ],
+    "comment": [
+      {
+        "value": "Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. "
+      }
+    ],
+    "label": [
+      {
+        "value": "isPartOfBioChemEntity"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "BioChemEntity"
+      }
+    ],
+    "inverseOf": [
+      {
+        "id": "hasBioChemEntityPart"
+      }
+    ],
+    "isPartOf": [
+      {
+        "id": "https://pending.schema.org"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "BioChemEntity"
+      }
+    ]
+  },
+  {
+    "id": "hasBioPolymerSequence",
+    "@type": [
+      "Property"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "id": "http://www.bioschemas.org/Gene"
+      }
+    ],
+    "comment": [
+      {
+        "value": "A symbolic representation of a BioChemEnity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a Protein."
+      }
+    ],
+    "label": [
+      {
+        "value": "hasBioPolymerSequence"
+      }
+    ],
+    "subPropertyOf": [
+      {
+        "id": "hasRepresentation"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "Protein"
+      },
+      {
+        "id": "Gene"
+      }
+    ],
+    "isPartOf": [
+      {
+        "id": "https://pending.schema.org"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "Text"
+      }
+    ]
+  },
+  {
+    "id": "sameAs",
+    "@type": [
+      "Property"
+    ],
+    "comment": [
+      {
+        "value": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website."
+      }
+    ],
+    "label": [
+      {
+        "value": "sameAs"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "Thing"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "URL"
+      }
+    ]
+  },
+  {
+    "id": "alternateName",
+    "@type": [
+      "Property"
+    ],
+    "comment": [
+      {
+        "value": "An alias for the item."
+      }
+    ],
+    "label": [
+      {
+        "value": "alternateName"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "Thing"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "Text"
+      }
+    ]
+  },
+  {
+    "id": "name",
+    "@type": [
+      "Property"
+    ],
+    "equivalentProperty": [
+      {
+        "id": "http://purl.org/dc/terms/title"
+      }
+    ],
+    "comment": [
+      {
+        "value": "The name of the item."
+      }
+    ],
+    "label": [
+      {
+        "value": "name"
+      }
+    ],
+    "subPropertyOf": [
+      {
+        "id": "label"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "Thing"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "Text"
+      }
+    ]
+  },
+  {
+    "id": "biologicalRole",
+    "@type": [
+      "Property"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "id": "http://www.bioschemas.org"
+      }
+    ],
+    "comment": [
+      {
+        "value": "A role played by the BioChemEntity within a biological context."
+      }
+    ],
+    "label": [
+      {
+        "value": "biologicalRole"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "BioChemEntity"
+      }
+    ],
+    "isPartOf": [
+      {
+        "id": "https://pending.schema.org"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "DefinedTerm"
+      }
+    ]
+  },
+  {
+    "id": "subjectOf",
+    "@type": [
+      "Property"
+    ],
+    "comment": [
+      {
+        "value": "A CreativeWork or Event about this Thing."
+      }
+    ],
+    "label": [
+      {
+        "value": "subjectOf"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "Thing"
+      }
+    ],
+    "inverseOf": [
+      {
+        "id": "about"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "CreativeWork"
+      },
+      {
+        "id": "Event"
+      }
+    ],
+    "source": [
+      {
+        "id": "https://github.com/schemaorg/schemaorg/issues/1670"
+      }
+    ]
+  },
+  {
+    "id": "hasRepresentation",
+    "@type": [
+      "Property"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "id": "http://www.bioschemas.org"
+      }
+    ],
+    "comment": [
+      {
+        "value": "A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image."
+      }
+    ],
+    "label": [
+      {
+        "value": "hasRepresentation"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "BioChemEntity"
+      }
+    ],
+    "isPartOf": [
+      {
+        "id": "https://pending.schema.org"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "URL"
+      },
+      {
+        "id": "PropertyValue"
+      },
+      {
+        "id": "Text"
+      }
+    ]
+  },
+  {
+    "id": "mainEntityOfPage",
+    "@type": [
+      "Property"
+    ],
+    "comment": [
+      {
+        "value": "Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](/docs/datamodel.html#mainEntityBackground) for details."
+      }
+    ],
+    "label": [
+      {
+        "value": "mainEntityOfPage"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "Thing"
+      }
+    ],
+    "inverseOf": [
+      {
+        "id": "mainEntity"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "URL"
+      },
+      {
+        "id": "CreativeWork"
+      }
+    ]
+  },
+  {
+    "id": "hasBioChemEntityPart",
+    "@type": [
+      "Property"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "id": "http://www.bioschemas.org"
+      }
+    ],
+    "comment": [
+      {
+        "value": "Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part. "
+      }
+    ],
+    "label": [
+      {
+        "value": "hasBioChemEntityPart"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "BioChemEntity"
+      }
+    ],
+    "inverseOf": [
+      {
+        "id": "isPartOfBioChemEntity"
+      }
+    ],
+    "isPartOf": [
+      {
+        "id": "https://pending.schema.org"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "BioChemEntity"
+      }
+    ]
+  },
+  {
+    "id": "bioChemSimilarity",
+    "@type": [
+      "Property"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "id": "http://www.bioschemas.org"
+      }
+    ],
+    "comment": [
+      {
+        "value": "A similar BioChemEntity, e.g., obtained by fingerprint similarity algorithms."
+      }
+    ],
+    "label": [
+      {
+        "value": "bioChemSimilarity"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "BioChemEntity"
+      }
+    ],
+    "isPartOf": [
+      {
+        "id": "https://pending.schema.org"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "BioChemEntity"
+      }
+    ]
+  },
+  {
+    "id": "associatedDisease",
+    "@type": [
+      "Property"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "id": "http://www.bioschemas.org/BioChemEntity"
+      }
+    ],
+    "comment": [
+      {
+        "value": "Disease associated to this BioChemEntity. Such disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue."
+      }
+    ],
+    "label": [
+      {
+        "value": "associatedDisease"
+      }
+    ],
+    "domainIncludes": [
+      {
+        "id": "BioChemEntity"
+      }
+    ],
+    "isPartOf": [
+      {
+        "id": "https://pending.schema.org"
+      }
+    ],
+    "rangeIncludes": [
+      {
+        "id": "URL"
+      },
+      {
+        "id": "PropertyValue"
+      },
+      {
+        "id": "MedicalCondition"
+      }
+    ]
+  }
+]
