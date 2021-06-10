@@ -18,11 +18,11 @@
    {% endif %}
  </ul>
 
+{% if page.subtitle %}
 <h2>{{page.subtitle}}</h2>
+{% endif %}
 
-<br />
 <p>If you spot any errors or omissions with this type, please file an issue in our <a href="{{page.gh_tasks}}" target="_blank">GitHub</a>.</p>
-<br />
 
 <input id="tab1" type="radio" name="tabs" checked>
 <label for="tab1">Description</label>
