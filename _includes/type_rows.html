@@ -1,0 +1,29 @@
+<tr class="supertype">
+  <th class="supertype-name" colspan="3">
+    Properties from <a href="http://schema.org/{{type}}">{{type}}</a>
+  </th>
+</tr>
+{% for property in properties %}
+  {% for domain in property.domainIncludes %}
+    {% if domain.id == {{type}} %}
+    <tr>
+      <td>
+        <a href="http://schema.org/{{property.id}}">{{property.id}}</a>
+      </td>
+      <td>
+        {% for ex_type in property.rangeIncludes %}
+          <a href="http://schema.org/{{ex_type.id}}">{{ex_type.id}}</a>
+          {% if forloop.last != true %}
+            or <br/>
+          {% endif %}
+        {% endfor %}
+      </td>
+      <td>
+        {% for value in property.comment %}
+          {{value.value}}
+        {% endfor %}
+      </td>
+    </tr>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
