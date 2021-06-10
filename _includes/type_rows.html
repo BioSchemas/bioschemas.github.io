@@ -11,7 +11,8 @@
         <a href="http://schema.org/{{property.id}}">{{property.id}}</a>
       </td>
       <td>
-        {% for ex_type in property.rangeIncludes %}
+        {% assign ex_types = property.rangeIncludes | sort_natural: "id" %}
+        {% for ex_type in ex_types %}
           <a href="http://schema.org/{{ex_type.id}}">{{ex_type.id}}</a>
           {% if forloop.last != true %}
             or <br/>
