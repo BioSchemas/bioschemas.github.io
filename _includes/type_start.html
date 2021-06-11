@@ -119,7 +119,11 @@ This is a new {{page.spec_type}} that fits into the schema.org hierarchy as foll
 <a href="/{{page.name}}">{{page.name}}</a>
 {%endif%}
 <h3>Description</h3>
+{% if description %}
+<p>{{description}}</p>
+{% else %}
 <p>{{page.description}}</p>
+{% endif %}
 
    <h3>Latest types</h3>
    {% assign profile_versions = site.data.type_versions[page.name] %}

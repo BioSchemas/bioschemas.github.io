@@ -7,7 +7,6 @@ previous_version: '0.3-RELEASE-2019_09_02'
 previous_release: '0.3-RELEASE-2019_09_02'
 
 dateModified: 2021-06-10
-description: "Protein is here used in its widest possible definition, as classes of amino acid based molecules. Amyloid-beta Protein in human (UniProt P05067), eukaryota (e.g. an OrthoDB group) or even a single molecule that one can point to are all of type schema:Protein. A protein can thus be a subclass of another protein, e.g. schema:Protein as a UniProt record can have multiple isoforms inside it which would also be schema:Protein. They can be imagined, synthetic, hypothetical or naturally occurring."
 hierarchy:
 - Thing
 - BioChemEntity
@@ -24,6 +23,14 @@ pending: #0000CC;
 external: #454547;
 
 ---
+{% assign properties = site.data.types.Protein | sort_natural: "id" %}
+{% for property in properties %}
+  {% if property.id == "Protein" %}
+    {% for value in property.comment %}
+      {% assign description = value.value %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
 {% include type_start.html %}
 <table class="definition-table bsc_type">
 <thead>
@@ -33,7 +40,6 @@ external: #454547;
     <th>Description</th>
   </tr>
 </thead>
-{% assign properties = site.data.types.Protein | sort_natural: "id" %}
 
 {% assign type = "Protein" %}
 {% include type_rows.html %}
