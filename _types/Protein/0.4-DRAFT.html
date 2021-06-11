@@ -25,7 +25,7 @@ external: #454547;
 ---
 {% assign properties = site.data.types.Protein | sort_natural: "id" %}
 {% for property in properties %}
-  {% if property.id == "Protein" %}
+  {% if property.id == page.name %}
     {% for value in property.comment %}
       {% assign description = value.value %}
     {% endfor %}
