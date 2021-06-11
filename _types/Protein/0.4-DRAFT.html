@@ -24,25 +24,11 @@ external: #454547;
 
 ---
 {% assign properties = site.data.types.Protein | sort_natural: "id" %}
-{% for property in properties %}
-  {% if property.id == page.name %}
-    {% for value in property.comment %}
-      {% assign description = value.value %}
-    {% endfor %}
-  {% endif %}
-{% endfor %}
-{% include type_start.html %}
-<table class="definition-table bsc_type">
-<thead>
-  <tr>
-    <th>Property</th>
-    <th>Expected Type</th>
-    <th>Description</th>
-  </tr>
-</thead>
 
-{% include type_rows.html type="Protein" %}
+{% include type_start.html %}
+
+{% include type_rows.html type = "Protein" %}
 {% include type_rows.html type = "BioChemEntity" %}
 {% include type_rows.html type = "Thing" %}
 
-</table>
+{% include type_end.html %}
