@@ -27,11 +27,23 @@
         {% assign ex_types = property.rangeIncludes | sort_natural: "id" %}
         {% for ex_type in ex_types %}
           {% if ex_type.id == "BioChemEntity" or
+                ex_type.id == "CategoryCode" or
+                ex_type.id == "CategoryCodeSet" or
                 ex_type.id == "ChemicalSubstance" or
                 ex_type.id == "DefinedTerm" or
+                ex_type.id == "DefinedTermSet" or
+                ex_type.id == "EventAttendanceModeEnumeration" or
+                ex_type.id == "FundingAgency" or
+                ex_type.id == "FundingScheme" or
+                ex_type.id == "Grant" or
                 ex_type.id == "Gene" or
+                ex_type.id == "LearningResource" or
                 ex_type.id == "MolecularEntity" or
+                ex_type.id == "MonetaryGrant" or
+                ex_type.id == "PronounceableText" or
+                ex_type.id == "Project" or
                 ex_type.id == "Protein" or
+                ex_type.id == "ResearchProject" or
                 ex_type.id == "Taxon" %}
             <a class="ext ext-pending" href="http://pending.schema.org/{{ex_type.id}}">{{ex_type.id}}</a>
           {% elsif ex_type.id == "BioChemStructure" or
