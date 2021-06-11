@@ -2,7 +2,7 @@
   <th class="supertype-name" colspan="3">
     Properties from
     {% for property in properties %}
-      {% if property.id == {{type}} %}
+      {% if property.id == include.type %}
         {% if property.isPartOf %}
           <a class="ext ext-pending" href="http://pending.schema.org/{{property.id}}">{{property.id}}</a>
         {% else %}
@@ -14,7 +14,7 @@
 </tr>
 {% for property in properties %}
   {% for domain in property.domainIncludes %}
-    {% if domain.id == {{type}} %}
+    {% if domain.id == include.type %}
     <tr>
       <td>
         {% if property.isPartOf %}

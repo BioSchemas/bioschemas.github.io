@@ -41,13 +41,8 @@ external: #454547;
   </tr>
 </thead>
 
-{% assign type = "Protein" %}
-{% include type_rows.html %}
-
-{% assign type = "BioChemEntity" %}
-{% include type_rows.html %}
-
-{% assign type = "Thing" %}
-{% include type_rows.html %}
+{% include type_rows.html type="Protein" %}
+{% include type_rows.html type = "BioChemEntity" %}
+{% include type_rows.html type = "Thing" %}
 
 </table>
