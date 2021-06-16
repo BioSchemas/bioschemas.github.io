@@ -1202,6 +1202,7 @@
       "keywords": ["CDR"],
       "url": "https://www.ebi.ac.uk/interpro/",
       "nodes": "EBI",
+      "sitemap": "https://www.ebi.ac.uk/interpro/sitemap/interpro.sitemap.txt",
       "profiles": [
         {
           "profileName": "Dataset",
