@@ -18,7 +18,13 @@
     <tr>
       <td>
         {% if property.isPartOf %}
-          <a class="ext ext-pending" href="http://pending.schema.org/{{property.id}}">{{property.id}}</a>
+          {% for partOf in property.isPartOf %}
+            {% if partOf.id contains "pending" %}
+              <a class="ext ext-pending" href="http://pending.schema.org/{{property.id}}">{{property.id}}</a>
+            {% elsif partOf.id contains "bio" %}
+              <a class="ext ext-bio">{{property.id}}</a>
+            {% endif %}
+          {% endfor %}
         {% else %}
           <a href="http://schema.org/{{property.id}}">{{property.id}}</a>
         {% endif %}
