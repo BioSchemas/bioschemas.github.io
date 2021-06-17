@@ -119,18 +119,7 @@ This is a new {{page.spec_type}} that fits into the schema.org hierarchy as foll
 <a href="/{{page.name}}">{{page.name}}</a>
 {%endif%}
 <h3>Description</h3>
-{% for property in properties %}
-  {% if property.id == page.name %}
-    {% for value in property.comment %}
-      {% assign description = value.value %}
-    {% endfor %}
-  {% endif %}
-{% endfor %}
-{% if description %}
-<p>{{description}}</p>
-{% else %}
 <p>{{page.description}}</p>
-{% endif %}
 
    <h3>Latest types</h3>
    {% assign profile_versions = site.data.type_versions[page.name] %}
@@ -192,17 +181,6 @@ This is a new {{page.spec_type}} that fits into the schema.org hierarchy as foll
 
 <hr />
 {% include spec-table-key.html %}
-{% if properties %}
-  <table class="definition-table bsc_type">
-    <thead>
-      <tr>
-        <th>Property</th>
-        <th>Expected Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-{% endif %}
-
 <!-- change number columns based on device -->
 <script type="application/x-javascript">
    if(navigator.userAgent.match(/android/i)) {
