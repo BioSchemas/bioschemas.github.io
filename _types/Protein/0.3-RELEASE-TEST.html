@@ -15,22 +15,23 @@ group: proteins
 name: Protein
 parent_type: BioChemEntity
 spec_type: Type
-status: revision #[release | revision]
-version: '0.4-DRAFT'
+status: release #[release | revision]
+version: '0.3-RELEASE'
 
 bsc: #0B794B;
 pending: #0000CC;
 external: #454547;
 
 ---
-{% assign properties = site.data.types.Protein-0_4-DRAFT | sort_natural: "id" %}
+{% assign properties = site.data.types.Protein-0_3-RELEASE | sort_natural: "id" %}
 
 {% include type_start.html %}
 
 {% include type_rows.html type = "Protein" type-version = page.version %}
 
-{% assign properties = site.data.types.BioChemEntity-0_8-DRAFT | sort_natural: "id" %}
-{% include type_rows.html type = "BioChemEntity" type-version = "0.8-DRAFT" %}
+{% assign properties = site.data.types.BioChemEntity-0_7-RELEASE | sort_natural: "id" %}
+{% include type_rows.html type = "BioChemEntity" type-version = "0.7-RELEASE" %}
+
 {% include type_rows.html type = "Thing" %}
 
 {% include type_end.html %}

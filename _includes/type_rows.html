@@ -4,9 +4,9 @@
     {% for property in properties %}
       {% if property.id == include.type %}
         {% if property.isPartOf %}
-          <a class="ext ext-pending" href="http://pending.schema.org/{{property.id}}">{{property.id}}</a>
+          <a class="ext ext-pending" href="http://pending.schema.org/{{property.id}}">{{property.id}} {{include.type-version}}</a>
         {% else %}
-          <a href="http://schema.org/{{property.id}}">{{property.id}}</a>
+          <a href="http://schema.org/{{property.id}}">{{property.id}} {{include.type-version}}</a>
         {% endif %}
       {% endif %}
     {% endfor %}
