@@ -19,3 +19,7 @@ attendees:
     - GingerTsueng
     - AlanWilliams
 ---
+The goals for this meeting are to identify:
+- Capabilities of existing validation tools;
+- Requirements for validation tools within the Bioschemas community
+- Future activities needed
