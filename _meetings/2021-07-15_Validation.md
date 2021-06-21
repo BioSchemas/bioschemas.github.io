@@ -19,6 +19,9 @@ attendees:
     - GingerTsueng
     - AlanWilliams
 ---
+
+We plan to bring together members of the community with an interest in validating markup deployments. Validation can take many forms from verifying the correctness of the syntax, as supported by the Schema.org Markup Validator ([SMV](https://validator.schema.org/)), to validating a page or a site against Bioschemas profiles.
+
 The goals for this meeting are to identify:
 - Capabilities of existing validation tools;
 - Requirements for validation tools within the Bioschemas community
