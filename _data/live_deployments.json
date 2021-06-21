@@ -1200,6 +1200,20 @@
           "highlight": "Over 6,000 diseases"
         }
       ]
+    },
+    {
+      "name": "Human Pluripotent Stem Cell Registry (hPSCreg)",
+      "description": "hPSCreg offers the research community, legislators, regulators and the general public at large an in-depth overview on the current status of human pluripotent stem cell (hPSC) research.",
+      "url": "https://hpscreg.eu/",
+      "sitemap": "https://hpscreg.eu/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "BioSample",
+          "conformsTo": "0.1-DRAFT",
+          "exampleURL": "https://hpscreg.eu/cell-line/BCRTi001-A",
+          "highlight": "Over 2,700 cell lines"
+        }
+      ]
     }
   ]
 }
