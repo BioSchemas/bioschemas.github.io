@@ -953,6 +953,11 @@
           "exampleURL": "https://nanocommons.github.io/specifications/jrc/"
         },
         {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://nanocommons.github.io/datasets/"
+        },
+        {
           "profileName": "Dataset",
           "conformsTo": "0.4-DRAFT",
           "exampleURL": "https://nanocommons.github.io/datasets/"
