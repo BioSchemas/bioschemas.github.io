@@ -26,3 +26,5 @@ The goals for this meeting are to identify:
 - Capabilities of existing validation tools;
 - Requirements for validation tools within the Bioschemas community
 - Future activities needed
+
+[Register](https://zoom.us/meeting/register/tJAvcOytqjkiHd3nOmBeJQ7dM83RQUWdBRIx) in advance for this meeting. After registering, you will receive a confirmation email containing information about joining the meeting.
