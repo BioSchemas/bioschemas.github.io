@@ -1200,6 +1200,18 @@
           "highlight": "Over 6,000 diseases"
         }
       ]
+    },
+    {
+      "name": "Biological Magnetic Resonance Data Bank (BMRB)",
+      "description": "A Repository for Data from NMR Spectroscopy on Proteins, Peptides, Nucleic Acids, and other Biomolecules",
+      "url": "https://bmrb.io/",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3-RELEASE",
+          "exampleURL": "https://bmrb.io/data_library/summary/index.php?bmrbId=30309"
+        }
+      ]
     }
   ]
 }
