@@ -1201,7 +1201,7 @@ Table of contents
 /* TOC base styling */
 
 #toc {
-    padding: 7px 15px 15px 15px;
+    padding: 1em;
     background-color: #eaf2ee;
     margin: 1.75em 0 2em;
     border-radius: 4px;
@@ -1209,19 +1209,15 @@ Table of contents
     line-height: 1.4;
 }
 
-/* Indent the lists and reset any other padding */
-
-#toc ul {
-    padding: 0 0 0 20px;
+/* Reset any other padding on the first level */
+#toc>ul {
+    padding: 0;
 }
 
 /* Consistent vertical space between list items */
-
 #toc li, #toc ul ul li {
     margin: 8px 0 0 0;
 }
-
-
 
 /*******************************************************************************
 Style experiment
