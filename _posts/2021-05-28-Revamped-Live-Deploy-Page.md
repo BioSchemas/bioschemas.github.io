@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Revamped Live Deploy Page"
+tags:
+- Deployment
 ---
 Check out our revamped [live deploy page](/liveDeploys).
 
