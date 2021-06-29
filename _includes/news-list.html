@@ -1,46 +1,18 @@
 <section class="upcoming-events">
     <h3><a href="/news/">News</a></h3>
-    <!-- Block for displaying next 3 news items -->
+    <!-- Block for displaying 3 news items -->
+    {% assign count = 0 %}
     <ul>
       {% for post in site.posts %}
-        <li>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
+        <div class="event">
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </li>
+        </div class="event">
+        {% assign count = count | plus: 1 %}
+        {% if count == 3 %}
+          {% break %}
+        {% endif %}
       {% endfor %}
     </ul>
-    {% assign sorted_meetings = site.meetings | sort: 'start_date' %}
-    {% assign count = 0 %}
-    {% for meeting in sorted_meetings %}
-    {% assign currentDate = site.time | date: '%F' %}
-    {% assign meetingDate = meeting.start_date | date: '%F' %}
-    {% assign endDate = meeting.end_date | date: '%F' %}
-    {% if currentDate <= meetingDate %}
-    <div class="event" itemscope itemtype="http://schema.org/Event">
-        <strong><a href="{{ meeting.url }}"><span class="title" itemprop="name">{{ meeting.name}}</span></a></strong>{% if meeting.tbc %} <span class="badge badge-warning">TBC</span>{% endif %}
-        <p> <strong>{{ meeting.dates }}</strong> </p>
-        <p>
-            <span itemprop="location">{{ meeting.venue }}</span>
-        </p>
-        <meta itemprop="startDate" content="{{meeting.start_date}}"/>
-        <meta itemprop="endDate" content="{{ meeting.end_date }}"/>
-    </div class="event">
-    {% assign count = count | plus: 1 %}
-    {% elsif meetingDate <= currentDate and currentDate <= endDate %}
-    <div class="event" itemscope itemtype="http://schema.org/Event">
-        <strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong>{% if meeting.tbc %} <span class="badge badge-warning">TBC</span>{% endif %}
-        <p> <strong>{{ meeting.dates }}</strong> </p>
-        <p>
-            <span itemprop="location">{{ meeting.venue }}</span>
-        </p>
-        <meta itemprop="startDate" content="{{meeting.start_date}}"/>
-        <meta itemprop="endDate" content="{{ meeting.end_date }}"/>
-    </div class="event">
-    {% assign count = count | plus: 1 %}
-    {% endif %}
-
-    {% if count == 3 %}
-    {% break %}
-    {% endif %}
-    {% endfor %}
-    <!-- End of block for showing next 3 meetings -->
 </section>
