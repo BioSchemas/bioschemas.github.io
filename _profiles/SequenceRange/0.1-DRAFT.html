@@ -1,0 +1,128 @@
+---
+redirect_from:
+- "/profiles/SequenceRange/"
+
+
+name: SequenceRange
+
+previous_version:
+previous_release:
+
+status: revision
+spec_type: Profile
+group: proteins
+use_cases_url: /useCases/Protein/
+cross_walk_url: https://docs.google.com/spreadsheets/d/1G7YcTaM5jjpF0SGoPkrPmirflfb9DAyFPfiW1iN0FcU/
+go_web_url: https://docs.google.com/spreadsheets/d/e/2PACX-1vQXnekgqqUIaG553RtdDKeDqOjm6gNBmce1HaufWEz6faagfBs06ZWj2Ksf3q1heARouLUooaeDmbTp/pub?gid=292464567&single=true&output=csv
+gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20SequenceRange
+live_deploy: /liveDeploys/
+
+parent_type: SequenceRange
+hierarchy:
+- Thing
+- BioChemEntity
+- SequenceRange
+
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+spec_info:
+  title: SequenceRange
+  subtitle: ""
+  description: Used to define the range of a subsequence, typically used in conjunction
+    with SequenceAnnotation to define the range of the annotation on the protein or
+    gene sequence.
+  version: 0.1-DRAFT
+  version_date: 20210630T153939
+  official_type: SequenceRange
+  full_example: ""
+mapping:
+- property: endUncertainty
+  expected_types:
+  - Text
+  description: If the initial position is not known with reasonable certainty, specify
+    here the uncertainty type as one of '<' (any position before than rangeEnd), '>'
+    (any position after rangeEnd), '~' (around rangeEnd), '[#-#] (to indicate a range
+    where rangeEnd could be located)'.
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: "Use one of the following values \n'<' (any position before than
+    rangeEnd), \n'>' (any position after rangeEnd), \n'~' (around rangeEnd),\n '[#-#]
+    (to indicate a range where rangeEnd could be located)'."
+  example: |-
+    {
+      "endUncertainty": "~"
+    }
+- property: rangeEnd
+  expected_types:
+  - Integer
+  description: Final position of the range
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+      "rangeEnd": 20
+    }
+- property: rangeStart
+  expected_types:
+  - Integer
+  description: Initial position of the range.
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Minimum
+  cardinality: ONE
+  controlled_vocab: ""
+  example: |-
+    {
+      "rangeStart": 7
+    }
+- property: startUncertainty
+  expected_types:
+  - Text
+  description: If the initial position is not known with reasonable certainty, specify
+    here the uncertainty type as one of '<' (any position before than rangeStart),
+    '>' (any position after rangeStart), '~' (around the rangeStart), '[#-#] (to indicate
+    a range where rangeStart could be located)'.
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: ONE
+  controlled_vocab: "Use one of the following values \n'<' (any position before than
+    rangeEnd), \n'>' (any position after rangeEnd), \n'~' (around rangeEnd),\n '[#-#]
+    (to indicate a range where rangeEnd could be located)'."
+  example: |-
+    {
+      "startUncertainty": "<"
+    }
+
+---
+
+<!DOCTYPE HTML>
+<html>
+   {% include head.html %}
+   <body>
+      {% include header.html %}
+      {% include navbar.html %}
+      <div class="page-content">
+         <div class="wrapper">
+            <div id="main-content-wrapper" class="outer">
+               <section id="main_content" class="inner">
+                  {% include profile_start.html %}
+                  <div class="spec-table-wrapper">
+                    {% include specification_table.html %}
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+      {% include footer.html %}
+   </body>
+</html>
