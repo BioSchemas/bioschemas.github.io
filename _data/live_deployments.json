@@ -1202,6 +1202,18 @@
       ]
     },
     {
+      "name": "Biological Magnetic Resonance Data Bank (BMRB)",
+      "description": "A Repository for Data from NMR Spectroscopy on Proteins, Peptides, Nucleic Acids, and other Biomolecules",
+      "url": "https://bmrb.io/",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3-RELEASE",
+          "exampleURL": "https://bmrb.io/data_library/summary/index.php?bmrbId=30309"
+        }
+      ]
+    },
+    {
       "name": "Human Pluripotent Stem Cell Registry (hPSCreg)",
       "description": "hPSCreg offers the research community, legislators, regulators and the general public at large an in-depth overview on the current status of human pluripotent stem cell (hPSC) research.",
       "url": "https://hpscreg.eu/",
