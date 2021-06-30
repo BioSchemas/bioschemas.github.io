@@ -36,7 +36,7 @@ bioschemas:
   version: 2.0
 ---
 
-## Google cupcake microdata
+## 1. Google cupcake microdata
 
 By performing a simple search of cupcake recipes on Google, see Figure 1, we will have as a result a preview of the information shown on the website even before going to the actual website; information such as the recipe name, rating, cooking time, calories and a description.
 
@@ -59,7 +59,7 @@ The type used on the markup `itemprop="aggregateRating"` is referencing the prop
 | __Figure 4: Cupcake recipe HTML__ |
 
 
-## DuckDuckGo cupcake jsonld
+## 2. DuckDuckGo cupcake jsonld
 
 DuckDuckGo take advantage of schema.org in a similar way Google does, see a search on Figure 5.
 

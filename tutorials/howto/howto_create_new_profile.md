@@ -42,11 +42,11 @@ bioschemas:
   version: 1.0
 ---
 
-## Before you start
+## 1. Before you start
 
 Profiles are developed within working groups. Before starting on a new profile, the Working Group Leads should create a new issue on the [GitHub issue tracker](https://github.com/BioSchemas/specifications/issues) to discuss with the Steering Council the need for the new profile. This will require providing use cases that the profile is aimed to satisfy. For full details, please see the [Bioschemas Governance document](https://github.com/Bioschemas/governance/blob/master/governance.md#proposing-a-new-profile).
 
-## Profile Development Process
+## 2. Profile Development Process
 
 The development steps for a profile are:
 1. Identify the base Schema.org type for the profile, or develop a new Bioschemas type;  
@@ -72,7 +72,7 @@ The development steps for a profile are:
 
 6. Deploy markup conforming to the latest draft on at least two resources.
 
-## Starting a New Profile
+## 3. Starting a New Profile
 
 Bioschemas profiles are developed in GSheets, using a standard template. These are all stored in the [Specification folder](https://drive.google.com/drive/u/0/folders/0Bw_p-HKWUjHoNThZOWNKbGhOODg) in the Bioschemas GDrive.
 
@@ -80,11 +80,11 @@ First you will need to create a new folder in the Specifications folder for your
 
 You then need to copy the [template GSheet](https://docs.google.com/spreadsheets/d/1kl92O05-_3kjYd37YK8q2eb4A1fpYvn3Mkk6HhtUBEs/edit?usp=sharing) from the [`_templates_`](https://drive.google.com/drive/folders/0Bw_p-HKWUjHoQ2RkUUthWVd3RG8?usp=sharing) folder into your profile folder. Rename the GSheet so that it reflects your profile name and the version, e.g. `Disease 0.1-DRAFT`.
 
-## Populate the Profile content
+## 4. Populate the Profile content
 
 We will now go through the different tabs in the GSheet and what needs to be done to populate the first version of your Bioschemas profile. Once completed you should have something like the following screenshot.
 
-### Profile Information
+### 4.1. Profile Information
 
 The first task is to populate the profile metadata in the `Profile Info` tab. You should populate the table with the values for your profile.
 
@@ -123,11 +123,11 @@ Examples should be stored in a subfolder indicating which version of the profile
 
 ```
 
-### Profile Properties
+### 4.2. Profile Properties
 
 The second task is to populate the profile with the properties from your chosen Schema.org or Bioschemas type. These should be included in the `Schema.org mapping` tab. This tab includes the following fields which are split into a `schema.org` section and a `bioschemas` section.
 
-#### schema.org Columns
+#### 4.2.1. schema.org Columns
 These columns are copy-pasted from a schema.org type definition page, or filled with types of external ontologies.
 - __Property:__ Name of the property from the selected schema.org type or external ontology type, i.e., SIO:is transcribe into. When an external ontology is used the __Type__ you must select "external" from the dropdown on the __Type__ column.
 - __Expected Type:__ Expected type for the property. This could be a schema.org property, a bioschemas property or an external ontology one, e.g., URL, BioChemEntity, Thing. These values can be separated by " or " or ",".
@@ -141,7 +141,7 @@ Note that all the expected types need to appear on a separate line within their 
 
 ![MedicalCondition properties after they have been pasted into the Schema.org tab](images_create_new_profile/propertiesInitial.png "Disease Profile Initial Properties")
 
-#### bioschemas Columns
+#### 4.2.2. bioschemas Columns
 These columns control which of the properties in the GSheet will appear in the Bioschemas profile.
 - __BSC Description:__ Additional text describing the usage of the property within a Bioschemas context. This field accepts __Markdown__ formatting.
 - __Marginality:__ Specifies the marginality level for the property with the options of `Minimum`, `Recommended`, or `Optional`. If left blank, then the property will not appear in the profile.
@@ -154,17 +154,17 @@ You should now go through the properties for you profile and state their margina
 
 ![Editing the Disease profile properties in the Schema.org mapping tab](images_create_new_profile/propertiesMarginality.png "Editing the Disease Profile Properties")
 
-## Authors
+## 5. Authors
 
 While there is an `Authors` tab in the GSheet, this is not copied across to the website. You are free to declare authorship here, but the website version of the profile will be populated by the members of the working group.
 
-## Reviewing the Profile
+## 6. Reviewing the Profile
 
 The `Bioschemas fields` tab provides a view over the properties that matches the profile; it only includes the properties from the `Schema.org mapping` tab that have a marginality level declared. This is useful for checking your progress and for reviewing your work.
 
 ![Reviewing the Disease profile properties in the Bioschemas fields tab](images_create_new_profile/bioschemasFields.png "Reviewing the Disease Profile Properties")
 
-## Next Steps
+## 7. Next Steps
 
 Once you have completed a first draft of the profile, you are ready to get it published onto the Bioschemas website in the draft profiles page. The steps for this process are given in the [how to publish a profile to the web tutorial].  
 *__TODO:__ add link to tutorial*

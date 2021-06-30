@@ -119,7 +119,7 @@ Here you will make the changes to the profile. There are a couple of possibiliti
 Now you are ready to generate the machine-processable Bioschemas version of your new draft profile.
 
 * Go to [GOWeb repository](https://github.com/BioSchemas/bioschemas-goweb) and get the executable version corresponding to your Operating System. If you need assistance with GOWeb send an email to the [mailing list](mailto:public-bioschemas@w3.org).
-* Run GOWeb using the CSV file you created on the previous section [Publish the Bioschemas fields to the Web](#23-publish-the-bioschemas-fields-to-the-web)
+* Run GOWeb using the CSV file you created on the previous section [Publish the Bioschemas fields to the Web](#31-publish-the-bioschemas-fields-to-the-web)
 * A YAML file will be created that is then used in the webpage for the new draft version
 
 ### 3.1 Publish the Bioschemas fields to the Web
