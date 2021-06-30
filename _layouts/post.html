@@ -9,7 +9,11 @@ layout: default
       {% if page.tags %}
         <p><strong>Tags:</strong>
         {% for tag in page.tags %}
-          {{tag}}
+          {% if forloop.last %}
+            <a href="/news/tags.html#{{tag|slugify}}">{{tag}}</a>
+          {% else %}
+            <a href="/news/tags.html#{{tag|slugify}}">{{tag}}</a>,
+          {% endif %}
         {% endfor %}
       {% endif %}
 
