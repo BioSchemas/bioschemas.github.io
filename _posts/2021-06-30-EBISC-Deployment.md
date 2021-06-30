@@ -3,6 +3,7 @@ layout: post
 title: "Deployment of BioSample Profile by EBISC"
 tags:
 - Deployment
+- BioSample
 ---
 The Human Pluripotent Stem Cell Registry ([hPSCreg](https://hpscreg.eu/)) have made the first deployment of the [BioSample profile](/profiles/BioSample).
 
