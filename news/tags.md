@@ -54,4 +54,5 @@ List all posts with a certain tag.
 {% include post-snippet.html %}
     {% endif %}
   {% endfor %}
+_[Back to top](#top)_
 {% endfor %}
