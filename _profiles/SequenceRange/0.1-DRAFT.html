@@ -32,7 +32,7 @@ spec_info:
     with SequenceAnnotation to define the range of the annotation on the protein or
     gene sequence.
   version: 0.1-DRAFT
-  version_date: 20210610T110141
+  version_date: 20210630T153939
   official_type: SequenceRange
   full_example: ""
 mapping:
@@ -48,8 +48,13 @@ mapping:
   bsc_description: ""
   marginality: Recommended
   cardinality: ONE
-  controlled_vocab: ""
-  example: ""
+  controlled_vocab: "Use one of the following values \n'<' (any position before than
+    rangeEnd), \n'>' (any position after rangeEnd), \n'~' (around rangeEnd),\n '[#-#]
+    (to indicate a range where rangeEnd could be located)'."
+  example: |-
+    {
+      "endUncertainty": "~"
+    }
 - property: rangeEnd
   expected_types:
   - Integer
@@ -62,7 +67,7 @@ mapping:
   controlled_vocab: ""
   example: |-
     {
-      "rangeStart": 20
+      "rangeEnd": 20
     }
 - property: rangeStart
   expected_types:
@@ -76,7 +81,7 @@ mapping:
   controlled_vocab: ""
   example: |-
     {
-      "rangeEnd": 73
+      "rangeStart": 7
     }
 - property: startUncertainty
   expected_types:
@@ -90,8 +95,13 @@ mapping:
   bsc_description: ""
   marginality: Recommended
   cardinality: ONE
-  controlled_vocab: ""
-  example: ""
+  controlled_vocab: "Use one of the following values \n'<' (any position before than
+    rangeEnd), \n'>' (any position after rangeEnd), \n'~' (around rangeEnd),\n '[#-#]
+    (to indicate a range where rangeEnd could be located)'."
+  example: |-
+    {
+      "startUncertainty": "<"
+    }
 
 ---
 
