@@ -2,7 +2,7 @@
 layout: default
 title: News Tags
 ---
-# Bioschemas News by Tag
+<h1>Bioschemas News by Tag</h1>
 
 {% comment %}
 =======================
@@ -38,21 +38,22 @@ Remove dulpicated tags and invalid tags like blank tag.
 List all the tags you have in your site.
 =======================
 {% endcomment %}
+<h2>Tags</h2>
+<p>
 {% for tag in tags %}
-[{{tag}}](#{{ tag | slugify }})
+	<a href="#{{ tag | slugify }}">{{ tag }}</a>
 {% endfor %}
-
+</p>
 {% comment %}
 =======================
 List all posts with a certain tag.
 =======================
 {% endcomment %}
 {% for tag in tags %}
-## {{tag}}
+	<h2 id="{{tag|slugify}}">{{tag}}</h2>
   {% for post in site.posts %}
     {% if post.tags contains tag %}
-{% include post-snippet.html %}
+			{% include post-snippet.html %}
     {% endif %}
   {% endfor %}
-_[Back to top](#top)_
 {% endfor %}
