@@ -59,17 +59,6 @@ external: #454547;
  <td class="prop-ect">
 <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Gene"><link property="domainIncludes" href="http://schema.org/Protein"></td><td class="prop-desc" property="rdfs:comment">A symbolic representation of a BioChemEnity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a Protein.</td>
 </tr>
-<tr typeof="rdfs:Property" resource="http://schema.org/hasSequenceAnnotation">
-
-    <th class="prop-nam" scope="row">
-
-<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasSequenceAnnotation">hasSequenceAnnotation</a></code>
-  </th>
-<td class="prop-ect">
-<link  property="rangeIncludes" href="/SequenceAnnotation" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/SequenceAnnotation">SequenceAnnotation</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Gene"><link property="domainIncludes" href="http://schema.org/Protein"> or
-<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Gene"><link property="domainIncludes" href="http://schema.org/Protein">
-</td><td class="prop-desc" property="rdfs:comment">An annotation on the BioPolymerSequence associated with this BioChemEntity.</td>
-</tr>
 <tr class="supertype">
      <th class="supertype-name" colspan="3">Properties from <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioChemEntity">BioChemEntity</a></th>
 
@@ -125,7 +114,19 @@ external: #454547;
 <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasRepresentation">hasRepresentation</a></code>
     </th>
  <td class="prop-ect">
-<link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="http://schema.orgPropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.orgText">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.orgURL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isEncodedByBioChemEntity">
+<link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="http://schema.orgPropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.orgText">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.orgURL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.</td></tr>
+<tr typeof="rdfs:Property" resource="http://schema.org/hasSequenceAnnotation">
+
+    <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasSequenceAnnotation">hasSequenceAnnotation</a></code>
+  </th>
+<td class="prop-ect">
+<link  property="rangeIncludes" href="/SequenceAnnotation" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/SequenceAnnotation">SequenceAnnotation</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Gene"><link property="domainIncludes" href="http://schema.org/Protein"> or
+<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Gene"><link property="domainIncludes" href="http://schema.org/Protein">
+</td><td class="prop-desc" property="rdfs:comment">An annotation on the BioPolymerSequence associated with this BioChemEntity.</td>
+</tr>
+<tr typeof="rdfs:Property" resource="http://schema.org/isEncodedByBioChemEntity">
 
       <th class="prop-nam" scope="row">
 
