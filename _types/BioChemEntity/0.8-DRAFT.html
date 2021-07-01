@@ -2,6 +2,7 @@
 redirect_from:
 - "/types/drafts/BioChemEntity/"
 - "/types/drafts/BioChemEntity"
+layout: type
 
 previous_version: '0.7-RELEASE-2019_06_19'
 previous_release: '0.7-RELEASE-2019_06_19'
@@ -18,45 +19,6 @@ spec_type: Type
 status: revision #Revert to revision when working on the next version
 version: '0.8-DRAFT' #Change to 0.8-DRAFT when working on the next version
 
-bsc: #0B794B;
-pending: #0000CC;
-external: #454547;
-
 ---
 
-
-<!DOCTYPE HTML>
-<html>
-   {% include head.html %}
-
-   <body>
-      {% include header.html %}
-      {% include navbar.html %}
-      <div class="page-content">
-        <div class="wrapper">
-           <div id="main-content-wrapper" class="outer">
-              <section id="main_content" class="inner">
-                {% include type_start.html %}
-
-                <table class="definition-table bsc_type">
-                   <thead>
-                      <tr>
-                         <th>Property</th>
-                         <th>Expected Type</th>
-                         <th>Description</th>
-                      </tr>
-                   </thead>
-                   <tbody>
-                     {% include types/BioChemEntity-0.8-DRAFT-Definition.html %}
-                   </tbody>
-                 </table>
-               </section>
-             </div>
-           </div>
-      </div>
-      {% include footer.html %}
-
-
-
-   </body>
-</html>
+{% include types/BioChemEntity-0.8-DRAFT-Definition.html %}
