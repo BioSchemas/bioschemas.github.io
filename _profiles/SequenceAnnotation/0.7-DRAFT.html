@@ -225,7 +225,14 @@ mapping:
   marginality: Minimum
   cardinality: MANY
   controlled_vocab: FALDO may be used
-  example: ""
+  example: |-
+    {
+      "sequenceLocation": {
+        "@type":"SequenceRange",
+        "rangeStart":20,
+        "rangeEnd":73
+      }
+    }
 - property: sequenceOrientation
   expected_types:
   - Integer
