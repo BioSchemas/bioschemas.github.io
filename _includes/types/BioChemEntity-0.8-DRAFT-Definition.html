@@ -1,0 +1,105 @@
+<tr class="supertype">
+     <th class="supertype-name" colspan="3">Properties from <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioChemEntity">BioChemEntity</a></th>
+
+</tr>
+
+<tbody class="supertype">
+  <tr typeof="rdfs:Property" resource="http://schema.org/associatedDisease">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#associatedDisease">associatedDisease</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/MedicalCondition" /><a   href="http://schema.orgMedicalCondition">MedicalCondition</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="http://schema.orgPropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.orgURL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">Disease associated to this BioChemEntity. Such disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/bioChemInteraction">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#bioChemInteraction">bioChemInteraction</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/BioChemEntity" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioChemEntity">BioChemEntity</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">A BioChemEntity that is known to interact with this item.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/bioChemSimilarity">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#bioChemSimilarity">bioChemSimilarity</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/BioChemEntity" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioChemEntity">BioChemEntity</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">A similar BioChemEntity, e.g., obtained by fingerprint similarity algorithms.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/biologicalRole">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#biologicalRole">biologicalRole</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a title="Defined in extension: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.orgDefinedTerm">DefinedTerm</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">A role played by the BioChemEntity within a biological context.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasBioChemEntityPart">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasBioChemEntityPart">hasBioChemEntityPart</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/BioChemEntity" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioChemEntity">BioChemEntity</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.<br/> Inverse property: <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#isPartOfBioChemEntity">isPartOfBioChemEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasMolecularFunction">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasMolecularFunction">hasMolecularFunction</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a title="Defined in extension: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.orgDefinedTerm">DefinedTerm</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="http://schema.orgPropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.orgURL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasRepresentation">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasRepresentation">hasRepresentation</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="http://schema.orgPropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.orgText">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.orgURL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.</td></tr>
+<tr typeof="rdfs:Property" resource="http://schema.org/hasSequenceAnnotation">
+
+    <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasSequenceAnnotation">hasSequenceAnnotation</a></code>
+  </th>
+<td class="prop-ect">
+<link  property="rangeIncludes" href="/SequenceAnnotation" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/SequenceAnnotation">SequenceAnnotation</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Gene"><link property="domainIncludes" href="http://schema.org/Protein"> or
+<link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Gene"><link property="domainIncludes" href="http://schema.org/Protein">
+</td><td class="prop-desc" property="rdfs:comment">An annotation on the BioPolymerSequence associated with this BioChemEntity.</td>
+</tr>
+<tr typeof="rdfs:Property" resource="http://schema.org/isEncodedByBioChemEntity">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#isEncodedByBioChemEntity">isEncodedByBioChemEntity</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Gene" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/Gene">Gene</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">Another BioChemEntity encoding by this one.<br/> Inverse property: <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#encodesBioChemEntity">encodesBioChemEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isInvolvedInBiologicalProcess">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#isInvolvedInBiologicalProcess">isInvolvedInBiologicalProcess</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a title="Defined in extension: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.orgDefinedTerm">DefinedTerm</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="http://schema.orgPropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.orgURL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isLocatedInSubcellularLocation">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#isLocatedInSubcellularLocation">isLocatedInSubcellularLocation</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a title="Defined in extension: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.orgDefinedTerm">DefinedTerm</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/PropertyValue" /><a   href="http://schema.orgPropertyValue">PropertyValue</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.orgURL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/isPartOfBioChemEntity">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#isPartOfBioChemEntity">isPartOfBioChemEntity</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/BioChemEntity" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioChemEntity">BioChemEntity</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.<br/> Inverse property: <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasBioChemEntityPart">hasBioChemEntityPart</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/taxonomicRange">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#taxonomicRange">taxonomicRange</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a title="Defined in extension: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.orgDefinedTerm">DefinedTerm</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Taxon" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/Taxon">Taxon</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.orgText">Text</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.orgURL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/BioChemEntity"></td><td class="prop-desc" property="rdfs:comment">The taxonomic grouping of the organism that expresses, encodes, or in someway related to the BioChemEntity.</td></tr>
+
+{% include types/Thing-sdo10.0-Definition.html %}
