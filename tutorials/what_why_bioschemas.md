@@ -42,7 +42,7 @@ bioschemas:
   version: 2.0
 ---
 
-## What is Bioschemas?
+## 1. What is Bioschemas?
 
 Bioschemas is a community project built on top of schema.org, aiming to improve interoperability in Life Sciences so resources can better communicate and work together by using a common markup on their websites.
 
@@ -53,7 +53,7 @@ Imagine an insulin summary appearing within search results, but rather than poin
 | ![Figure 1. Insulin summary on a search engine](/tutorials/images/insulin.png) |
 | __Figure 1. Insulin summary on a search engine__ |
 
-## What are the benefits of Bioschemas?
+## 2. What are the benefits of Bioschemas?
 
 Bioschemas inherits the benefits from schema.org, i.e., enabling machines to understand what your metadata is in advance, making it easier to find, integrate, and re-use your data. It also brings some benefits tailored to the Life Sciences community. In Figure 2, you can find a graphical summary of such benefits, which are explained in more detail in the paragraphs below.
 
