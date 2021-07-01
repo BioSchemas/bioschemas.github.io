@@ -620,6 +620,16 @@
           "profileName": "DataCatalog",
           "conformsTo": "0.2",
           "exampleURL": "https://www.ensembl.org/"
+        },
+        {
+          "profileName": "DataRecord",
+          "conformsTo": "0.2",
+          "exampleURL": "https://www.ensembl.org/id/ENSG00000139618"
+        },
+        {
+          "profileName": "Gene",
+          "conformsTo": "0.7",
+          "exampleURL": "https://www.ensembl.org/id/ENSG00000139618"
         }
       ]
     },
