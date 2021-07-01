@@ -1,0 +1,47 @@
+<tr class="supertype">
+     <th class="supertype-name" colspan="3">Properties from <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/Gene">Gene</a></th>
+
+</tr>
+
+<tbody class="supertype">
+  <tr typeof="rdfs:Property" resource="http://schema.org/alternativeOf">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#alternativeOf">alternativeOf</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Gene" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/Gene">Gene</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Gene"></td><td class="prop-desc" property="rdfs:comment">Another gene which is a variation of this one.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/encodesBioChemEntity">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#encodesBioChemEntity">encodesBioChemEntity</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/BioChemEntity" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioChemEntity">BioChemEntity</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Gene"></td><td class="prop-desc" property="rdfs:comment">Another BioChemEntity encoded by this one.<br/> Inverse property: <a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#isEncodedByBioChemEntity">isEncodedByBioChemEntity</a>.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/expressedIn">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#expressedIn">expressedIn</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/AnatomicalStructure" /><a   href="http://schema.org/AnatomicalStructure">AnatomicalStructure</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/AnatomicalSystem" /><a   href="http://schema.org/AnatomicalSystem">AnatomicalSystem</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/BioChemEntity" /><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="/BioChemEntity">BioChemEntity</a>&nbsp; or <br/> <link  property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a title="Defined in extension: pending.schema.org"  class="ext ext-pending"  href="http://pending.schema.org/DefinedTerm">DefinedTerm</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Gene"></td><td class="prop-desc" property="rdfs:comment">Tissue, organ, biological sample, etc in which activity of this gene has been observed experimentally. For example brain, digestive system.</td></tr><tr typeof="rdfs:Property" resource="http://schema.org/hasBioPolymerSequence">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasBioPolymerSequence">hasBioPolymerSequence</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Gene"><link property="domainIncludes" href="http://schema.org/Protein"></td><td class="prop-desc" property="rdfs:comment">A symbolic representation of a BioChemEnity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a Protein.</td></tr>
+<!--
+<tr typeof="rdfs:Property" resource="http://schema.org/hasStatus">
+
+      <th class="prop-nam" scope="row">
+
+<code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#hasStatus">hasStatus</a></code>
+    </th>
+ <td class="prop-ect">
+<link  property="rangeIncludes" href="http://schema.org/Text" /><a   href="http://schema.org/Text">Text</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Gene"></td><td class="prop-desc" property="rdfs:comment">One of pseudogene, dead, killed, live, predicted, suppressed.</td>
+</tr>
+-->
+{% include /types/BioChemEntity-0.8-DRAFT-Definition.html %}
