@@ -37,15 +37,15 @@ hierarchy:
 spec_info:
   title: SequenceAnnotation
   subtitle: ""
-  description: Used to provide metadata about Sequence Annotations. The sequence
-    can be an amino acid (protein) or nucleic acid (Gene, DNA, RNA).<h3>Summary of
-    Changes</h3><p>This version supercedes the ProteinAnnotation 0.6-DRAFT.</p><ul><li>Change
-    base type to SequenceAnnotation</li><li>location is replaced with sequenceLocation;
-    promoted to minimal</li><li>sequenceOrientation added as a minimal property</li><li>sequenceValue
+  description: Used to provide metadata about Sequence Annotations. The sequence can
+    be an amino acid (protein) or nucleic acid (Gene, DNA, RNA).<h3>Summary of Changes</h3><p>This
+    version supercedes the ProteinAnnotation 0.6-DRAFT.</p><ul><li>Change base type
+    to SequenceAnnotation</li><li>location is replaced with sequenceLocation; promoted
+    to minimal</li><li>sequenceOrientation added as a minimal property</li><li>sequenceValue
     added as a recommended property</li><li>valueReference added as an optional property</li><li>sameAs
     promoted to a recommended property</li></ul>
   version: 0.7-DRAFT
-  version_date: 20210701T163816
+  version_date: 20210705T114151
   official_type: SequenceAnnotation
   full_example: https://github.com/BioSchemas/specifications/tree/master/SequenceAnnotation/examples/0.7-DRAFT
 mapping:
@@ -111,7 +111,7 @@ mapping:
   description: |-
     Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.
      Inverse property: isPartOfBioChemEntity.
-  type: "pending"
+  type: pending
   type_url: ""
   bsc_description: ""
   marginality: Optional
@@ -125,7 +125,7 @@ mapping:
   - URL
   description: A common representation such as a protein sequence or chemical structure
     for this entity. For images use schema.org/image.
-  type: "pending"
+  type: pending
   type_url: ""
   bsc_description: ""
   marginality: Optional
@@ -156,7 +156,7 @@ mapping:
   - URL
   description: Subcellular location where this BioChemEntity is located; please use
     PropertyValue if you want to include any evidence.
-  type: "pending"
+  type: pending
   type_url: ""
   bsc_description: ""
   marginality: Optional
@@ -171,7 +171,7 @@ mapping:
   description: |-
     Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
      Inverse property: hasBioChemEntityPart.
-  type: "pending"
+  type: pending
   type_url: ""
   bsc_description: ""
   marginality: Optional
@@ -243,7 +243,10 @@ mapping:
   marginality: Recommended
   cardinality: ""
   controlled_vocab: ""
-  example: ""
+  example: |-
+    {
+      "sequenceOrientation": 0
+    }
 - property: sequenceValue
   expected_types:
   - Text
@@ -255,7 +258,10 @@ mapping:
   marginality: Recommended
   cardinality: ""
   controlled_vocab: ""
-  example: ""
+  example: |-
+    {
+      "sequenceValue": "AMSQSLLKTTQEPLARDPVKLP"
+    }
 - property: url
   expected_types:
   - URL
