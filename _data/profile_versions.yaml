@@ -57,8 +57,14 @@ DataRecord:
 
 Dataset:
     name: "Dataset"
-    latest_publication:
+    latest_publication: "0.4-DRAFT"
     latest_release: "0.3-RELEASE-2019_06_14"
+    status: "active"
+
+Disease:
+    name: "Disease"
+    latest_publication: "0.1-DRAFT"
+    latest_release:
     status: "active"
 
 Event:
@@ -76,7 +82,7 @@ FormalParameter:
 Gene:
     name: "Gene"
     latest_publication:
-    latest_release: "0.7-RELEASE"
+    latest_release: "1.0-RELEASE"
     status: "active"
 
 Journal:
@@ -123,7 +129,7 @@ Protein:
 
 ProteinAnnotation:
     name: "ProteinAnnotation"
-    latest_publication: "0.4-DRAFT-2018_02_25"
+    latest_publication: "0.6-DRAFT"
     latest_release:
     status: "active"
 

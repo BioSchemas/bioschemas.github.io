@@ -1,0 +1,208 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+
+  "definitions": {
+    "elixirNodes": {
+      "type": "string",
+      "enum": [
+        "EBI",
+        "Hub",
+        "UK",
+        "SE",
+        "CH",
+        "CZ",
+        "EE",
+        "NO",
+        "NL",
+        "DK",
+        "IL",
+        "PT",
+        "FI",
+        "FR",
+        "BE",
+        "IT",
+        "SI",
+        "LU",
+        "IE",
+        "DE",
+        "HU",
+        "ES",
+        "GR",
+        "CY"
+      ]
+    },
+    "profileNames": {
+      "type": "string",
+      "enum": [
+        "Beacon",
+        "BioChemEntity",
+        "BioSample",
+        "ChemicalSubstance",
+        "ComputationalTool",
+        "ComputationalWorkflow",
+        "Course",
+        "CourseInstance",
+        "DataCatalog",
+        "DataRecord",
+        "Dataset",
+        "Disease",
+        "Event",
+        "FormalParameter",
+        "Gene",
+        "Journal",
+        "LabProtocol",
+        "MolecularEntity",
+        "Organization",
+        "Person",
+        "Phenotype",
+        "Protein",
+        "ProteinAnnotation",
+        "ProteinStructure",
+        "PublicationIssue",
+        "PublicationVolume",
+        "RNA",
+        "Sample",
+        "ScholarlyArticle",
+        "SemanticTextAnnotation",
+        "SequenceRange",
+        "Study",
+        "Taxon",
+        "TaxonName",
+        "TrainingMaterial"
+      ]
+    }
+  },
+
+  "type": "object",
+
+  "properties": {
+    "@context": {
+      "type": "object",
+      "properties": {
+        "conformsTo": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "exampleURL": {
+          "type": "string"
+        },
+        "highlight": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "nodes": {
+          "type": "string"
+        },
+        "profiles": {
+          "type": "string"
+        },
+        "profileName": {
+          "type": "string"
+        },
+        "resources": {
+          "type": "string"
+        },
+        "sitemap": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "conformsTo",
+        "description",
+        "exampleURL",
+        "highlight",
+        "keywords",
+        "name",
+        "nodes",
+        "profiles",
+        "profileName",
+        "resources",
+        "sitemap",
+        "url"
+      ]
+    },
+    "resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["CDR","DDR","RIR"]
+            }
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "nodes": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": { "$ref": "#/definitions/elixirNodes" },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              {  "$ref": "#/definitions/elixirNodes" }
+            ]
+          },
+          "sitemap": {
+            "type": "string",
+            "format": "uri"
+          },
+          "profiles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "profileName": {  "$ref": "#/definitions/profileNames" },
+                "conformsTo": {
+                  "type": "string"
+                },
+                "exampleURL": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "highlight": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "profileName",
+                "conformsTo",
+                "exampleURL"
+              ]
+            }
+          }
+        },
+        "required": [
+          "name",
+          "url",
+          "profiles"
+        ]
+      }
+    }
+  },
+  "required": [
+    "@context",
+    "resources"
+  ]
+}

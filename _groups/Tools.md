@@ -49,4 +49,5 @@ members:
     - RafaelJimenez
     - AlbanGaignard
     - MatusKalas
+    - StianSoiland-Reyes
 ---
