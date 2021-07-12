@@ -8,7 +8,7 @@ start_date: 2021-07-15
 end_date: 2021-07-15
 venue: Virtual
 meeting-name: Bioschemas Validation Meeting
-agenda-doc:
+agenda-doc: https://docs.google.com/document/d/1IcamofWXzeJO87QE_XoGwIdLOKKcAGV3Mp7RplwshfQ/edit#
 contact-people:
     - AlbanGaignard
     - AlasdairGray
