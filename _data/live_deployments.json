@@ -907,13 +907,13 @@
         },
         {
           "profileName": "ComputationalWorkflow",
-          "conformsTo": "0.5-DRAFT",
+          "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://workflowhub.eu/workflows/18",
           "highlight": "Over 100 workflows"
         },
         {
           "profileName": "FormalParameter",
-          "conformsTo": "0.1-DRAFT",
+          "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://workflowhub.eu/workflows/18",
           "highlight": "Over 100 workflows"
         },
