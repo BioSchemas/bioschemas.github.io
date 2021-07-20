@@ -20,7 +20,7 @@ ChemicalSubstance:
 
 ComputationalTool:
     name: "ComputationalTool"
-    latest_publication: "0.5-DRAFT"
+    latest_publication: "0.6-DRAFT"
     latest_release:
     status: "active"
 
