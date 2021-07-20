@@ -1,9 +1,7 @@
-# website
-Files for the Bioschemas website.
+# Bioschemas Website
+This repo contains the files for the Bioschemas website. The website is deployed on [GitHub](https://github.com/) using [Jekyll](https://jekyllrb.com/).
 
-The website is deployed using [Jekyll](https://jekyllrb.com/).
-
-## Geting Started
+## Getting Started
 
 If you already have Ruby installed on your machine, then the following files will allow you to get started by installing the relevant dependencies:
 
