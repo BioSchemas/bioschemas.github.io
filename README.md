@@ -11,7 +11,7 @@ If you already have Ruby installed on your machine, then the following files wil
 
 If you need more help with installing Jekyll, then see their [installation instructions](https://jekyllrb.com/docs/installation/) for full details.
 
-Note, if you use the GitHub pages documentation, then you will need a `Gemfile` with the following contents
+Note, if you use the GitHub pages documentation, then you will need a `Gemfile` with the following contents ([Gemfile](https://github.com/BioSchemas/bioschemas.github.io/blob/f4b66c8761841994f0b4e02b3d8ffa06b342af78/Gemfile)):
 
 ```ruby
 source 'https://rubygems.org'
