@@ -17,3 +17,14 @@ Note, if you use the GitHub pages documentation, then you will need a `Gemfile` 
 source 'https://rubygems.org'
 gem 'github-pages', group: :jekyll_plugins
 ```
+
+## Collections
+
+The website uses a series of [collections](https://jekyllrb.com/docs/collections/) that are configures in the `_config.yml` file. There are collections for:
+
+- Groups: `_groups`
+- Meetings: `_meetings`
+- People: `_people`
+- Profiles: `_profiles`
+- Types: `_types`
+- Use Cases: `_useCases`
