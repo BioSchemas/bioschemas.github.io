@@ -28,3 +28,24 @@ The website uses a series of [collections](https://jekyllrb.com/docs/collections
 - Profiles: `_profiles`
 - Types: `_types`
 - Use Cases: `_useCases`
+
+## Site Data
+
+### Live Deployments
+
+The list of live deployments is maintained in the JSON-LD file `_data/live_deployments.json`. The file conforms to the JSON-Schema defined in `_data/live_deployments_schema.json`. Upon pushing to GitHub, an action checks the live deployments data file conforms to the schema file.
+
+A resource listing in the live deployments file consists of the following JSON keys (optional properties denoted with a `?`, `+` indicates one or more required:
+
+- `name`
+- `description?`
+- `keywords?`: ["CDR", "DDR", "RIR"]
+- `url`
+- `nodes?`: ELIXIR node two letter code
+- `sitemap?`
+- `profiles+`:
+  - `profileName`: Valid profile name
+  - `conformsTo`
+  - `exampleURL`
+  - `highlight?`
+
