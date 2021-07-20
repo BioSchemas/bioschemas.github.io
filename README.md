@@ -1,7 +1,7 @@
 # website
 Files for the Bioschemas website.
 
-The website is deployed using [Jekyll](https://jekyllrb.com/). 
+The website is deployed using [Jekyll](https://jekyllrb.com/).
 
 ## Geting Started
 
@@ -10,17 +10,3 @@ See [installation instructions](https://jekyllrb.com/docs/installation/) for ful
 - Install Jekyll and Dependencies: ```gem install jekyll bundler jekyll-redirect-from``` and ```gem install jekyll-sitemap```
 - Clone the repository: ```git clone https://github.com/Bioschemas/bioschemas.github.io.git```
 - Run the website: ```jekyll serve```
-
-## Specifications subtree update
-1. ```git subtree pull --prefix=_bsc_specs/ --squash subtree_specs master -m "[commit message]"```
-2. ```git push origin master```
-
-
-## Specifications subtree creation
-
-1. Reference to specifications repository using as local alias **subtree_specs** ```git remote add subtree_specs https://github.com/Bioschemas/specifications.git```
-2. Subtree creation, the subtree is stored in the dir **_bsc_specs**, represented in the subtree command by the prefix value. ```subtree add --prefix=_bsc_specs/ subtree_specs master```
-3. ```git push origin master```
-
-
-
