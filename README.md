@@ -49,3 +49,15 @@ A resource listing in the live deployments file consists of the following JSON k
   - `exampleURL`
   - `highlight?`
 
+### Profile and Type Status
+
+The status of specification files, i.e. latest draft, release, or deprecated, is controlled by the following data files:
+
+- Profiles: `_data/profile_version.yaml`
+- Types: `_data/type_version.yaml`
+
+There should be an entry in each file for each profile/type respectively.
+
+The values of the `latest_publication` and `latest_release` keys should be the corresponding filename (without extension) in the `_profile` or `_type` folder. The `latest_publication` field captures the latest publication (draft or release) of a specification, while the `latest_release` key captures the most recent release. The `latest_release` key may be empty if there has not been a release.
+
+The `status` value is used to distinguish between 'active' specifications, and those that have been 'deprecated'. Deprecated specifications must have a `deprecated_date` value.
