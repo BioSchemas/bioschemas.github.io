@@ -2,17 +2,16 @@
 layout: default
 ---
 <div class="container-flow">
+  <h1>{{ page.bioschemas.name }}</h1>
+  <blockquote>
+    {{ page.bioschemas.description }}
+  </blockquote>
+  {% include tutorialNavigation.html %}
   <div class="row">
     <div class="col-md-8">
-      {% include tutorialNavigation.html %}
       {{ content }}
-      {% include tutorialNavigation.html %}
     </div>
     <div class="col-md-4 right-column">
-      <h1>{{ page.bioschemas.name }}</h1>
-      <blockquote>
-        {{ page.bioschemas.description }}
-      </blockquote>
       <script>
         $(document).ready(function () {
           $('#toc').toc({ minimumHeaders: 2, listType: 'ul', showSpeed: 0, headers: 'h2, h3' , title: 'Table of Contents' });
@@ -75,4 +74,5 @@ layout: default
       {% endif %}
     </div>
   </div>
+  {% include tutorialNavigation.html %}
 </div>
