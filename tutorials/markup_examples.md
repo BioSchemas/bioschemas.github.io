@@ -19,7 +19,7 @@ bioschemas:
     - "@id": http://edamontology.org/topic_0089
   audience:
   - "@type": Audience
-    name: People interested in Schema.org markup examples
+    name: (General interest, Markup provider, Markup consumer) People interested in Schema.org markup examples
   name: "Schema.org markup examples"
   author:
   - "@type": Person

@@ -2,8 +2,8 @@
 layout: tutorial
 title: How to create a new draft profile
 previousTutorial:
-  link: ./howto/howto_right_profile
-  title: How to select the right profile for your resource
+  link: howto/howto_check_deploy
+  title: How to check your deployed markup
 nextTutorial:
   link: ./howto/howto_new_profile_version
   title: How to update a profile
@@ -19,7 +19,7 @@ bioschemas:
     - "@id": http://edamontology.org/topic_0089
   audience:
   - "@type": Audience
-    name: People interested in creating a new Bioschemas profile
+    name: (Specification developer) People interested in creating a new Bioschemas profile
   name: "How to create a new Bioschemas profile"
   author:
   - "@type": Person
@@ -35,7 +35,7 @@ bioschemas:
     name: "Kenneth McLeod"
     "@id": https://bioschemas.org/people/KennethMcLeod
     url: https://bioschemas.org/people/KennethMcLeod
-  dateModified: 2021-05-28
+  dateModified: 2021-07-22
   description: "In this how-to, we will guide you through the necessary steps to create a new Bioschemas profile."
   keywords: "schema.org, markup, structured data, bioschemas profile"
   license: CC-BY 4.0

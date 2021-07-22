@@ -2,8 +2,8 @@
 layout: tutorial
 title: How to mark up your own resource with Bioschemas
 previousTutorial:
-  link: ./howto/howto_new_profile_version
-  title: How to update a profile
+  link: ./howto/howto_right_profile
+  title: How to select the right profile
 nextTutorial:
   link: ./howto/howto_add_github
   title: How to add markup to GitHub pages
@@ -19,7 +19,7 @@ bioschemas:
     - "@id": http://edamontology.org/topic_0089
   audience:
   - "@type": Audience
-    name: WebMaster, people interested in adding Bioschemas markup to their website
+    name: (Markup provider, Markup consumer) WebMaster, people interested in adding Bioschemas markup to their website
   name: "How to mark up your own resource with Bioschemas"
   author:
   - "@type": Person
@@ -35,7 +35,7 @@ bioschemas:
     name: "Victoria Dominguez del Angel"
     "@id": https://bioschemas.org/people/VictoriaDominguezDelAngel
     url: https://bioschemas.org/people/VictoriaDominguezDelAngel/
-  dateModified: 2021-02-17
+  dateModified: 2021-07-22
   description: "In this how-to, we will guide you through the necessary steps in order to get a JSON-LD markup describing your own resource using a Bioschemas profile"
   keywords: "schemaorg, markup, structured data, bioschemas"
   license: CC-BY 4.0
