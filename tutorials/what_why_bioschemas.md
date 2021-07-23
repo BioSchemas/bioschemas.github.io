@@ -50,15 +50,14 @@ Using schema.org markup on web pages enables the generation of 'info box' summar
 
 Imagine an insulin summary appearing within search results, but rather than pointing to Wikipedia, that summary would direct one to specialized resources such as Orphanet or CATH as seen in Figure 1. In this way you would get a quick overview while also being provided links to relevant resources, all in one search.
 
-| ![Figure 1. Insulin summary on a search engine](/tutorials/images/insulin.png) |
-| __Figure 1. Insulin summary on a search engine__ |
+{% include image.html file="/tutorials/images/ilustration_life_sciences_event.png" caption="Figure 1. Insulin summary on a search engine" alt="Insulin summary on a search engine" %}
+
 
 ## 2. What are the benefits of Bioschemas?
 
 Bioschemas inherits the benefits from schema.org, i.e., enabling machines to understand what your metadata is in advance, making it easier to find, integrate, and re-use your data. It also brings some benefits tailored to the Life Sciences community. In Figure 2, you can find a graphical summary of such benefits, which are explained in more detail in the paragraphs below.
 
-| ![Figure 2. Insulin summary on a search engine](/tutorials/images/ilustration_life_sciences_event.png) |
-| __Figure 2: Event profile provided by Bioschemas for the Event type in schema.org__ |
+{% include image.html file="/tutorials/images/ilustration_life_sciences_event.png" caption="Figure 2: Event profile provided by Bioschemas for the Event type in schema.org" alt="Event profile provided by Bioschemas for the Event type in schema.org" %}
 
 <table>
   <tbody>

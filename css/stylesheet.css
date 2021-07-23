@@ -234,12 +234,6 @@ strong {
     font-weight: bold;
 }
 
-img {
-    position: relative;
-    margin: 0 auto;
-    max-width: 739px;
-    padding: 5px;
-}
 
 p img {
     display: inline;
@@ -317,7 +311,6 @@ dl p {
 hr {
     height: 0.0625em;
     width: 100%;
-    margin-bottom: 0.3125em;
     border: none;
     background: url('../images/bg_hr.png') repeat-x center;
 }
@@ -1200,7 +1193,7 @@ Table of contents
 
 /* TOC base styling */
 
-#toc {
+.toc {
     padding: 1em;
     background-color: #eaf2ee;
     margin: 1.75em 0 2em;
@@ -1210,12 +1203,12 @@ Table of contents
 }
 
 /* Reset any other padding on the first level */
-#toc>ul {
+.toc>ul {
     padding: 0;
 }
 
 /* Consistent vertical space between list items */
-#toc li, #toc ul ul li {
+.toc li, #toc ul ul li {
     margin: 8px 0 0 0;
 }
 
@@ -1236,4 +1229,24 @@ table.definition-table a.ext-bio  {
 table.bioschemas_properties a.pending,
 table.definition-table a.ext-pending {
     color: #0000CC;
+}
+
+/*******************************************************************************
+Syntax highlighting
+*******************************************************************************/
+
+.highlighter-rouge {
+    border: #eaf2ee 1px solid;
+    border-radius: 4px;
+    padding: 1em;
+}
+
+/*******************************************************************************
+Shadow
+*******************************************************************************/
+
+.shadow {
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
