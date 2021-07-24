@@ -1,5 +1,5 @@
 <section class="upcoming-events">
-    <h3><a href="/news/">News</a></h3>
+    <h3>News</h3>
     <!-- Block for displaying 3 news items -->
     {% assign count = 0 %}
     {% for post in site.posts %}
@@ -20,4 +20,5 @@
         {% break %}
       {% endif %}
     {% endfor %}
+    <small>Read more news on our <a href="/news/">news page</a>.</small>
 </section>
