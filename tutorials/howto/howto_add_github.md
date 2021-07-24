@@ -152,13 +152,12 @@ On your tutorial page, right click and view the page source.
 
 If all is well, you should see your markup data as a JSON-LD block inside the HTML head tag. To test whether this is formatted correctly, you can then go to [Google structured data testing tool](https://search.google.com/structured-data/testing-tool) and copy the HTML in.
 
-| ![Figure 1. Google Structured Data Testing Tool](/tutorials/images/StructData.png) |
-| __Figure 1. Google Structured Data Testing Tool__ |
+{% include image.html file="/tutorials/images/StructData.png" caption="Figure 1. Google Structured Data Testing Tool" alt="Google Structured Data Testing Tool" %}
+
 
 Once you have created a website that is publicly available online and is correctly formatted with JSON-LD, you can go to the [Google Search Console](https://www.google.com/webmasters/tools/home?hl=en) and see more statistics about what and how Google has indexed the metadata on your site.
 
-| ![Figure 2. Google Search Console displaying indexed Structured Data](/tutorials/images/SearchConsole.png) |
-| __Figure 2. Google Search Console displaying indexed Structured Data__ |
+{% include image.html file="/tutorials/images/SearchConsole.png" caption="Figure 2. Google Search Console displaying indexed Structured Data" alt="Google Search Console displaying indexed Structured Data" %}
 
 In the Search Console you can request re-indexing when your Schema.org is setup, view the error rates, and see how people are finding and using your site.
 

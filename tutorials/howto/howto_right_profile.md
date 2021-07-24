@@ -52,8 +52,7 @@ You can find the availabe Bioschemas profiles at [http://bioschemas.org/specific
 
 As seen on Figure 1,  each profile will show you details such as current version, release date, use cases, crosswalk, tasks and issues, usage examples and current live deploys.
 
-| ![Figure 1. List of some Bioschemas profiles](/tutorials/images/specifications.png) |
-| __Figure 1. List of some Bioschemas profiles__ |
+{% include image.html file="/tutorials/images/specifications.png" caption="Figure 1. List of some Bioschemas profiles" alt="List of some Bioschemas profiles" %}
 
 <table>
   <tbody>
