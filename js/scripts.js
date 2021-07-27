@@ -68,3 +68,22 @@ $(document).ready(function () {
         $(this).prev().find(".plus-icon").html('<i class="fas fa-plus fa-lg"></i>');
     });
 });
+
+var toggleHeight = $(window).outerHeight();
+
+$(window).scroll(function() {
+	if ($(window).scrollTop() > toggleHeight) {
+		//Adds active class to make button visible
+		$(".m-backtotop").addClass("active");
+		
+	} else {
+		//Removes active class to make button visible
+		$(".m-backtotop").removeClass("active");
+	}
+});
+
+//Scrolls the user to the top of the page again
+$(".m-backtotop").click(function() {
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+	return false;
+});
