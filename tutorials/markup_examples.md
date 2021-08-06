@@ -38,7 +38,7 @@ bioschemas:
   version: 3.0
 ---
 
-## 1. Google event microdata
+## 1. Searching for a biology event in Google
 
 By performing a simple search of biology events on Google, see Figure 1, we will have as a result a preview of the information about events even before going to the actual websites; information such as the date, title and description
 
@@ -49,6 +49,8 @@ Displayed on the website you can find the same (and more) information for the ev
 
 | ![Figure 2: Event detail](/tutorials/images/google-event-detail.png) |
 | __Figure 2: Biology event detail__ |
+
+## 2. Schema.org behind the scenes
 
 Behind the scenes metadata is used by Google to understand search resultts. In particular, it uses schema.org markup, see Figure 3.
 
