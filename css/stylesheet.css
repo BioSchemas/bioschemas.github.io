@@ -397,31 +397,6 @@ Navigation Bar
 }
 
 
-/*******************************************************************************
-Back to Top Button
-*******************************************************************************/
-
-#top_link {
-    border: 2px solid #0B794B;
-    /*border-top-left-radius: 0.625em;
-    border-top-right-radius: 0.625em;*/
-    float: right;
-    text-align: center;
-    width: 15%;
-    font-size: 1.1em;
-    background-color: rgb(11, 121, 75);
-    background-color: rgba(11, 121, 75, .7);
-    color: #fff;
-}
-
-#top_link:hover {
-    background-color: rgb(43, 182, 115);
-    background-color: rgba(43, 182, 115, .7);
-    color: #222;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
 
 /*******************************************************************************
 Back to Groups Button
@@ -862,9 +837,6 @@ Small Device Styles
         width: 25%;
         margin: 0;
     }
-    #top_link {
-        display: none;
-    }
     #footer_wrap p {
         text-align: center;
     }
@@ -1103,7 +1075,7 @@ Table of contents
 Back to top button
 *******************************************************************************/
 
-.m-backtotop {
+.top_link {
     transition: 0.3s ease-in-out;
     position: fixed;
     bottom: -50px;
@@ -1116,12 +1088,12 @@ Back to top button
     z-index: 1;
 }
 
-.m-backtotop.active {
+.top_link.active {
     bottom: 15px;
     opacity: 1;
 }
 
-.m-backtotop:hover {
+.top_link:hover {
     transform: scale(1.1);
 	bottom: 15px;
     cursor: pointer;

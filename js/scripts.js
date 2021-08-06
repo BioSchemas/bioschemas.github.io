@@ -74,16 +74,16 @@ var toggleHeight = $(window).outerHeight();
 $(window).scroll(function() {
 	if ($(window).scrollTop() > toggleHeight) {
 		//Adds active class to make button visible
-		$(".m-backtotop").addClass("active");
+		$(".top_link").addClass("active");
 		
 	} else {
 		//Removes active class to make button visible
-		$(".m-backtotop").removeClass("active");
+		$(".top_link").removeClass("active");
 	}
 });
 
 //Scrolls the user to the top of the page again
-$(".m-backtotop").click(function() {
+$(".top_link").click(function() {
 	$("html, body").animate({ scrollTop: 0 }, "slow");
 	return false;
 });
