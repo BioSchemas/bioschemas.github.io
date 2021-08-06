@@ -1099,8 +1099,12 @@ Table of contents
     margin: 8px 0 0 0;
 }
 
+/*******************************************************************************
+Back to top button
+*******************************************************************************/
 
 .m-backtotop {
+    transition: 0.3s ease-in-out;
     position: fixed;
     bottom: -50px;
     right: 15px;
