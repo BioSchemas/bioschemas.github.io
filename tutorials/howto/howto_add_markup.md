@@ -44,14 +44,10 @@ bioschemas:
 
 
 <div class="jumbotron-fluid rounded p-4 mb-4 mt-3 shadow">
-  <div class="container">
-    <div class="row">
-      <div class="col-2 text-center">
-          <img src="/tutorials/images/exclamation_mark.png" alt="warning">
-      </div>
-      <div class="col-10">
-        If have not read yet our <a href="./howto_right_profile">how to select the right profile for your resource</a>, please give it a try before this one.
-      </div>
+  <div class="media">
+    <img class="align-self-center mr-3" src="/tutorials/images/exclamation_mark.png" alt="warning">
+    <div class="media-body">
+      If have not read yet our <a href="./howto_right_profile">how to select the right profile for your resource</a>, please give it a try before this one.
     </div>
   </div>
 </div>
@@ -65,16 +61,12 @@ If you are eager to markup your resource, get your hands "coding" and quickly se
 If your resource involves more than one profile, you first need to define the strategy that suits best to your case. You can link a profile, let's say DataCatalog, to other related ones, let's day Dataset, via properties. Sometimes those properties are bidirectional, so you can go from DataCatalog to Dataset or the other way around. Which direction suits best to you?
 
 <div class="jumbotron-fluid rounded p-4 mb-4 mt-3 shadow">
-  <div class="container">
-    <div class="row">
-      <div class="col-2 text-center">
-          <img src="/tutorials/images/information_mark.png" alt="warning">
-      </div>
-      <div class="col-10">
-        Link from DataCatalog to Dataset if you have some few datasets and you introduce them all on your catalog landing page. Example: UniProt
-        <br/>
-        Link from Dataset to DataCatalog if you have that many datasets than rather than list them all, you provide a search and retrieval mechanism to find them. Example: identifiers.org
-      </div>
+  <div class="media">
+    <img class="align-self-center mr-3" src="/tutorials/images/information_mark.png" alt="information">
+    <div class="media-body">
+      Link from DataCatalog to Dataset if you have some few datasets and you introduce them all on your catalog landing page. Example: UniProt
+      <br/>
+      Link from Dataset to DataCatalog if you have that many datasets than rather than list them all, you provide a search and retrieval mechanism to find them. Example: identifiers.org
     </div>
   </div>
 </div>
