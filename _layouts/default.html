@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
 
   {% include head.html %}
@@ -8,14 +9,10 @@
     {% include header.html %}
     {% include navbar.html %}
 
-    <div class="page-content container">
-      <div class="wrapper">
-          <div class="outer">
-              <section id="main_content" class="inner">
-              {{ content }}
-              </section>
-          </div>
-      </div>
+    <div class="container min-vh-100">
+      <main class="my-4">
+        {{ content }}
+      </main>
     </div>
 
     {% include footer.html %}
