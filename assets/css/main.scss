@@ -1,127 +1,32 @@
-/*******************************************************************************
-Slate Theme for GitHub Pages
-by Jason Costello, @jsncostello
-*******************************************************************************/
+---
+---
 
-/*@import url(github-light.css);*/
 
-/*******************************************************************************
-MeyerWeb Reset
-*******************************************************************************/
+// Bioschemas base colors
+$bioschemas-base-color: #0B794B;
+$bioschemas-medium-sea-color: #2BB673;
+$bioschemas-steel-teal-color: #55828B;
+$bioschemas-dark-sea-green-color: #87BBA2;
+$bioschemas-tea-green-color: #C9E4CA;
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    vertical-align: baseline;
-}
+$primary: #005ce6;
+$secondary:$bioschemas-base-color;
+$link-decoration: none;
 
-/* HTML5 display-role reset for older browsers */
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
-
-ol,
-ul {
-    list-style: none;
-}
-
-table {
-    border-collapse: separate;
-    border-spacing: 0;
-}
+@import
+    "bootstrap/bootstrap",
+    "base",
+    "mixins",
+    "header",
+    "spec-tables",
+    "responsive",
+    "code-highlight",
+    "live-deploys",
+    "community",
+    "footer",
+    "acknowledgments",
+    "landing"
+;
 
 /*******************************************************************************
 Theme Styles
@@ -199,39 +104,9 @@ footer p:last-child {
     margin-bottom: -0.625em;
 }
 
-a {
-    text-decoration: none;
-    color: #005ce6;
-    text-shadow: none;
-
-    transition: color 0.5s ease;
-    transition: text-shadow 0.5s ease;
-    -webkit-transition: color 0.5s ease;
-    -webkit-transition: text-shadow 0.5s ease;
-    -moz-transition: color 0.5s ease;
-    -moz-transition: text-shadow 0.5s ease;
-    -o-transition: color 0.5s ease;
-    -o-transition: text-shadow 0.5s ease;
-    -ms-transition: color 0.5s ease;
-    -ms-transition: text-shadow 0.5s ease;
-}
-
-a:hover,
-a:focus {
+#main_content a:hover,
+#main_content a:focus {
     text-decoration: underline;
-}
-
-footer a {
-    color: #F2F2F2;
-    text-decoration: none;
-}
-
-em {
-    font-style: italic;
-}
-
-strong {
-    font-weight: bold;
 }
 
 img {
@@ -263,7 +138,7 @@ ul {
     padding-left: 1em;
 }
 
-ul li::before {
+#main_content ul li::before {
     content: "•";
     padding-right: 0.4em;
     color: #0B794B;
@@ -272,46 +147,12 @@ ul li::before {
     vertical-align: text-bottom;
 }
 
-ul li:first-child {
+#main_content ul li:first-child {
     margin-top: 0.625em;
 }
 
-ul li:last-child {
+#main_content ul li:last-child {
     margin-bottom: 0.625em;
-}
-
-ol {
-    list-style-position: inside;
-    list-style: decimal;
-    padding-left: 2em;
-    padding-bottom: 0.3125em;
-}
-
-ol li {
-    margin-bottom: 0.3125em;
-    padding-left: 0.5em;
-}
-
-ol li:first-child {
-    margin-top: 0.625em;
-}
-
-ol li:last-child {
-    margin-bottom: 0.5em;
-}
-
-dl dt {
-    font-weight: bold;
-}
-
-dl dd {
-    padding-left: 1.25em;
-    font-style: italic;
-}
-
-dl p {
-    padding-left: 1.25em;
-    font-style: italic;
 }
 
 hr {
@@ -319,7 +160,7 @@ hr {
     width: 100%;
     margin-bottom: 0.3125em;
     border: none;
-    background: url('../images/bg_hr.png') repeat-x center;
+    background: url("{{'images/bg_hr.png' | relative_url}}") repeat-x center;
 }
 
 table {
@@ -423,7 +264,7 @@ GitHub Button
     z-index: 10;
     padding: 0.625em 3.125em 0.625em 0.625em;
     color: #fff;
-    background: url('../images/blacktocat.png') #4c7fe8 no-repeat 95% 50%;
+    background: url("{{'/images/blacktocat.png' | relative_link}}") #4c7fe8 no-repeat 95% 50%;
     font-weight: 700;
     border-bottom-left-radius: 0.625em;
     border-bottom-right-radius: 0.625em;
@@ -454,7 +295,7 @@ Twitter Button
     z-index: 10;
     padding: 0.625em 3.125em 0.625em 0.625em;
     color: #fff;
-    background: url('../images/Twitter_logo_white.png') #28a9e2 no-repeat 95% 50%;
+    background: url("{{'images/Twitter_logo_white.png'|relative_url }}") #28a9e2 no-repeat 95% 50%;
     background-size: 35% 65%;
     font-weight: 700;
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -746,7 +587,7 @@ Others (Not Used)
     bottom: -2.5em;
     right: 0;
     height: 4.375em;
-    background: url('../images/icon_download.png') no-repeat 0 90%;
+    background: url("{{'/images/icon_download.png' | relative_url }}") no-repeat 0 90%;
 }
 
 .zip_download_link {
@@ -756,7 +597,7 @@ Others (Not Used)
     height: 4.375em;
     text-indent: -312.5em;
     overflow: hidden;
-    background: url(../images/sprite_download.png) no-repeat bottom left;
+    background: url("{{'images/sprite_download.png' | relative_url }}") no-repeat bottom left;
 }
 
 .tar_download_link {
@@ -766,232 +607,19 @@ Others (Not Used)
     height: 4.375em;
     text-indent: -312.5em;
     overflow: hidden;
-    background: url(../images/sprite_download.png) no-repeat bottom right;
+    background: url("{{'images/sprite_download.png' | relative_url }}") no-repeat bottom right;
     margin-left: 0.625em;
 }
 
 .zip_download_link:hover {
-    background: url(../images/sprite_download.png) no-repeat top left;
+    background: url("{{'images/sprite_download.png' | relative_url }}") no-repeat top left;
 }
 
 .tar_download_link:hover {
-    background: url(../images/sprite_download.png) no-repeat top right;
+    background: url("{{'images/sprite_download.png' | relative_url }}") no-repeat top right;
 }
 
-/*******************************************************************************
-Small Device Styles
-*******************************************************************************/
 
-@media screen and (max-width: 700px) {
-     #mobile_links {
-        display: none;
-        margin-left: 1em;
-        margin-bottom: 0.625em;
-        text-align: center;
-    }
-    .mobile_buttons {
-        display: inline;
-        padding-right: 0.625em;
-        padding-left: 0.625em;
-    }
-    .link-navbar {
-        padding-bottom: 1em;
-    }
-    .mobile_buttons:last-of-type {
-        margin-right: 0;
-    }
-    #forkme_banner {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 3.625em;
-        z-index: 10;
-        padding: 0.625em 3.125em 0.625em 0.625em;
-        color: #fff;
-        background: url('../images/blacktocat.png') #4c7fe8 no-repeat 95% 50%;
-        font-weight: 700;
-        border-bottom-left-radius: 0.625em;
-        border-bottom-right-radius: 0.625em;
-        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    }
-    #forkme_banner:hover {
-        background-color: rgb(29, 95, 226);
-        text-decoration: none;
-    }
-    #twitter_banner {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 11.375em;
-        z-index: 10;
-        padding: 0.625em 3.125em 0.625em 0.625em;
-        color: #fff;
-        background: url('../images/Twitter_logo_white.png') #28a9e2 no-repeat 95% 50%;
-        background-size: 35% 65%;
-        font-weight: 700;
-        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        border-bottom-left-radius: 0.625em;
-        border-bottom-right-radius: 0.625em;
-    }
-    #twitter_banner:hover {
-        background-color: rgb(28, 150, 202);
-        background-size: 35% 65%;
-        text-decoration: none;
-    }
-    #twit_git_p {
-        display: none;
-    }
-    .img_bottom {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-    #downloads {
-        display: none;
-    }
-    .inner {
-        min-width: 320px;
-        max-width: 480px;
-        margin-right: 0;
-        padding-right: 0.3125em;
-        margin-left: 0;
-        padding-left: 0.3125em;
-    }
-    #project_title {
-        font-size: 32px;
-    }
-    h1 {
-        font-size: 28px;
-    }
-    h2 {
-        font-size: 24px;
-    }
-    h3 {
-        font-size: 21px;
-    }
-    h4 {
-        font-size: 18px;
-    }
-    h5 {
-        font-size: 14px;
-    }
-    h6 {
-        font-size: 12px;
-    }
-    p {
-        width: 95%;
-        text-align: justify;
-    }
-    ul li {
-        margin-bottom: 0.625em;
-    }
-    ul li ul li::before {
-        content: '';
-    }
-    ol {
-        padding-left: 1em;
-    }
-    ol li {
-        padding-left: 0;
-        text-align: justify;
-    }
-    table {
-        padding-left: 0;
-        margin-left: 0;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    }
-    #twit_git_p {
-        display: block;
-    }
-    #twitter_banner {
-        display: none;
-    }
-    #forkme_banner {
-        display: none;
-    }
-    .trigger {
-        z-index: 500;
-        top: 0;
-        right: 0;
-        position: fixed;
-        display: flex;
-        align-items: center;
-    }
-    .trigger-mobile {
-        height: auto;
-    }
-    .trigger_links {
-        display: none;
-    }
-    #mobile_links {
-        display: none;
-        margin-left: 1em;
-        margin-bottom: 0.625em;
-        text-align: center;
-        font-size: 0.9em;
-    }
-    .mobile_buttons {
-        display: inline;
-        padding-right: 0.625em;
-        padding-left: 0.625em;
-    }
-    .link-navbar {
-        padding-bottom: 1em;
-    }
-    .mobile_buttons:last-of-type {
-        margin-right: 0;
-    }
-    #groups_table {
-        display: none;
-    }
-    #mobile_list {
-        display: block;
-    }
-    #meetings_table {
-        display: none;
-    }
-    .mobile_list {
-        display: block;
-        margin-top: 1.625em;
-    }
-    .organs_inv {
-        display: inline-block;
-    }
-    .organs_inv img {
-        display: inline-block;
-        margin: 1em auto;
-    }
-    .organs_inv img:hover {
-        border: none;
-    }
-    .organs_inv p {
-        display: inline-block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #back_groups {
-        float: left;
-        width: 25%;
-        margin: 0;
-    }
-    #top_link {
-        display: none;
-    }
-    #footer_wrap p {
-        text-align: center;
-    }
-    .img_bottom {
-        display: none;
-    }
-}
 
 /*******************************************************************************
 Specification Properties
