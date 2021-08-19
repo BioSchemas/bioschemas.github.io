@@ -22,6 +22,9 @@ markdown: kramdown
 plugins:
  - jekyll-redirect-from
  - jekyll-sitemap
+ - jekyll-gist
+ - jekyll-github-metadata
+ - jekyll-relative-links
 
 sass:
   sass_dir: assets/css
