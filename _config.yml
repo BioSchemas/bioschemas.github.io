@@ -24,6 +24,10 @@ plugins:
  - jekyll-redirect-from
  - jekyll-sitemap
 
+sass:
+  sass_dir: assets/css
+  style: compressed
+
 # Collections
 collections:
   specifications:
