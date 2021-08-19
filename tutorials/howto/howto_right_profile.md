@@ -52,16 +52,12 @@ You can find the availabe Bioschemas profiles at [http://bioschemas.org/specific
 
 As seen on Figure 1,  each profile will show you details such as current version, release date, use cases, crosswalk, tasks and issues, usage examples and current live deploys.
 
-| ![Figure 1. List of some Bioschemas profiles](/tutorials/images/specifications.png) |
-| __Figure 1. List of some Bioschemas profiles__ |
+{% include image.html file="/tutorials/images/specifications.png" caption="Figure 1. List of some Bioschemas profiles" alt="List of some Bioschemas profiles" %}
 
-<table>
-  <tbody>
-    <tr>
-      <td align="center">
-        <img src="/tutorials/images/information_mark.png" alt="info">
-      </td>
-      <td>
+<div class="jumbotron-fluid rounded p-4 mb-4 mt-3 shadow">
+  <div class="media">
+    <img class="align-self-center mr-3" src="/tutorials/images/information_mark.png" alt="information">
+    <div class="media-body">
       <ul>
         <li>Use cases: Used as a basis for the profile</li>
         <li>Crosswalk: Documentation on the brainstorming and process followed by a group in order to come up with a profile specification</li>
@@ -69,10 +65,10 @@ As seen on Figure 1,  each profile will show you details such as current version
         <li>Example: Usage examples for the profile</li>
         <li>Live deploys: Link to live deploys for the profile</li>
       </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+    </div>
+  </div>
+</div>
+
 
 ## 2. Pick up a profile
 

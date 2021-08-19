@@ -50,94 +50,75 @@ Using schema.org markup on web pages enables the generation of 'info box' summar
 
 Imagine an insulin summary appearing within search results, but rather than pointing to Wikipedia, that summary would direct one to specialized resources such as Orphanet or CATH as seen in Figure 1. In this way you would get a quick overview while also being provided links to relevant resources, all in one search.
 
-| ![Figure 1. Insulin summary on a search engine](/tutorials/images/insulin.png) |
-| __Figure 1. Insulin summary on a search engine__ |
+{% include image.html file="/tutorials/images/ilustration_life_sciences_event.png" caption="Figure 1. Insulin summary on a search engine" alt="Insulin summary on a search engine" %}
+
 
 ## 2. What are the benefits of Bioschemas?
 
 Bioschemas inherits the benefits from schema.org, i.e., enabling machines to understand what your metadata is in advance, making it easier to find, integrate, and re-use your data. It also brings some benefits tailored to the Life Sciences community. In Figure 2, you can find a graphical summary of such benefits, which are explained in more detail in the paragraphs below.
 
-| ![Figure 2. Insulin summary on a search engine](/tutorials/images/ilustration_life_sciences_event.png) |
-| __Figure 2: Event profile provided by Bioschemas for the Event type in schema.org__ |
+{% include image.html file="/tutorials/images/ilustration_life_sciences_event.png" caption="Figure 2: Event profile provided by Bioschemas for the Event type in schema.org" alt="Event profile provided by Bioschemas for the Event type in schema.org" %}
 
-<table>
-  <tbody>
-    <tr>
-      <td align="center">
-        <img src="/tutorials/images/exclamation_mark.png" alt="warning">
-      </td>
-      <td>
-        Schema.org provides only 'types', while Bioschemas provides 'types' and 'profiles'. A profile is a customisation of type, including important guidelines on how to use it within the Life Sciences domain. A profile can be used to define the semantics of a particular property, the valid value(s) and ranges that may be attributed to that property, and the cardinality with which that property may appear. <br/>Disclaimer: Initially, Bioschemas types were developed with the aim to eventually mature those types and have them integrated for direct use in schema.org. While this remains desirable, it is not essential; community tools and resources are being developed to directly harvest this markup, and there are activities in progress to migrate Bioschemas markup from individual resources to the EOSC (European Open Science Cloud). 
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+<div class="jumbotron-fluid rounded p-4 mb-4 mt-3 shadow">
+  <div class="media">
+    <img class="align-self-center mr-3" src="/tutorials/images/exclamation_mark.png" alt="warning">
+    <div class="media-body">
+      Schema.org provides only 'types', while Bioschemas provides 'types' and 'profiles'. A profile is a customisation of type, including important guidelines on how to use it within the Life Sciences domain. A profile can be used to define the semantics of a particular property, the valid value(s) and ranges that may be attributed to that property, and the cardinality with which that property may appear. <br/>Disclaimer: Initially, Bioschemas types were developed with the aim to eventually mature those types and have them integrated for direct use in schema.org. While this remains desirable, it is not essential; community tools and resources are being developed to directly harvest this markup, and there are activities in progress to migrate Bioschemas markup from individual resources to the EOSC (European Open Science Cloud).
+    </div>
+  </div>
+</div>
 
 
 * Bioschemas focuses on key properties prioritised as Minimum, Recommended and Optional  based on community agreements and common practices
 
-<table>
-  <tbody>
-    <tr>
-      <td align="center">
-        <img src="/tutorials/images/information_mark.png" alt="info">
-      </td>
-      <td>
-        <ul><li>Minimum properties should be provided</li><li>Recommended properties should be provided whenever possible and available</li><li>Optional properties could be omitted unless important or relevant for your resource</li></ul>
-        <br/>
-        e.g., For the Event case shown on Figure 2, endDate and location are minimum while organizer is recommended.
-        <br/>
-        Reminder: a property helps you describe your resource
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="jumbotron-fluid rounded p-4 mb-4 mt-3 shadow">
+  <div class="media">
+    <img class="align-self-center mr-3" src="/tutorials/images/information_mark.png" alt="information">
+    <div class="media-body">
+      <ul><li>Minimum properties should be provided</li><li>Recommended properties should be provided whenever possible and available</li><li>Optional properties could be omitted unless important or relevant for your resource</li></ul>
+      <br/>
+      e.g., For the Event case shown on Figure 2, endDate and location are minimum while organizer is recommended.
+      <br/>
+      Reminder: a property helps you describe your resource
+    </div>
+  </div>
+</div>
 
 * Bioschemas provides additional recommendations regarding properties cardinality
 
-<table>
-  <tbody>
-    <tr>
-      <td align="center">
-        <img src="/tutorials/images/information_mark.png" alt="info">
-      </td>
-      <td>
-        A property expects ONE or MANY elements
-        <br/>
-e.g., For the Event case, endDate should be ONE while organizer could be MANY
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="jumbotron-fluid rounded p-4 mb-4 mt-3 shadow">
+  <div class="media">
+    <img class="align-self-center mr-3" src="/tutorials/images/information_mark.png" alt="information">
+    <div class="media-body">
+      A property expects ONE or MANY elements
+      <br/>
+      e.g., For the Event case, endDate should be ONE while organizer could be MANY
+    </div>
+  </div>
+</div>
 
 * Bioschemas customises schema.org types (see previous tutorial) to better supports needs on the life sciences community
 
-<table>
-  <tbody>
-    <tr>
-      <td align="center">
-        <img src="/tutorials/images/information_mark.png" alt="info">
-      </td>
-      <td>
-        Event already exists in schema.org. However, Bioschemas has added some new properties, for instance, "prerrequisite" is commonly used in Life Sciences to define a list of required skills to be able to attend an appropriate event.
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+<div class="jumbotron-fluid rounded p-4 mb-4 mt-3 shadow">
+  <div class="media">
+    <img class="align-self-center mr-3" src="/tutorials/images/information_mark.png" alt="information">
+    <div class="media-body">
+      Event already exists in schema.org. However, Bioschemas has added some new properties, for instance, "prerrequisite" is commonly used in Life Sciences to define a list of required skills to be able to attend an appropriate event.
+    </div>
+  </div>
+</div>
 
 * Bioschemas reuses terms from well-known ontologies, thus avoiding reinventing the wheel
 
-<table>
-  <tbody>
-    <tr>
-      <td align="center">
-        <img src="/tutorials/images/information_mark.png" alt="info">
-      </td>
-      <td>
-        Tools, a SoftwareApplication profile, recommends using terms from the <a href="http://bioportal.bioontology.org/ontologies/EDAM">EDAM</a> ontology in order to specify, for instance, the input and output expected.
-        <br/>
-        Protein, a BioChemEntity profile, includes some properties that come from well-known ontologies. For instance associatedWith comes from from the <a href="https://www.ebi.ac.uk/ols/ontologies/so">Sequence Ontology</a>. By reusing terms, Bioschemas aims to avoid reinventing the wheel.
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="jumbotron-fluid rounded p-4 mb-4 mt-3 shadow">
+  <div class="media">
+    <img class="align-self-center mr-3" src="/tutorials/images/information_mark.png" alt="information">
+    <div class="media-body">
+      Tools, a SoftwareApplication profile, recommends using terms from the <a href="http://bioportal.bioontology.org/ontologies/EDAM">EDAM</a> ontology in order to specify, for instance, the input and output expected.
+      <br/>
+      Protein, a BioChemEntity profile, includes some properties that come from well-known ontologies. For instance associatedWith comes from from the <a href="https://www.ebi.ac.uk/ols/ontologies/so">Sequence Ontology</a>. By reusing terms, Bioschemas aims to avoid reinventing the wheel.
+    </div>
+  </div>
+</div>
