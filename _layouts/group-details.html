@@ -25,11 +25,11 @@
                            <td class="spec_links">
                               {% if page.folder %}
                               <a href="{{page.folder}}" target="_blank">
-                                <img src="/images/Google_Drive_logo.png" alt="View Bioschemas {{ page.name }} Folder">
+                                <img src="{{ '/images/Google_Drive_logo.png' | relative_url }}" alt="View Bioschemas {{ page.name }} Folder">
                               </a>
                               {%else%}
                               <a>
-                                <img src="/images/Google_Drive_logo.png" alt="View Bioschemas {{ page.name }} Folder"  style="filter: grayscale(100%);">
+                                <img src="{{ '/images/Google_Drive_logo.png' | relative_url }}" alt="View Bioschemas {{ page.name }} Folder"  style="filter: grayscale(100%);">
                               </a>
                               {%endif%}
                            </td>
@@ -37,11 +37,11 @@
                            <td class="spec_links">
                               {% if page.gh_tasks == '' %}
                               <a>
-                              <img src="/images/specs_tasks.png" alt="Bioschemas {{ page.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
+                              <img src="{{ '/images/specs_tasks.png' | relative_url }}" alt="Bioschemas {{ page.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
                               </a>
                               {% else %}
                               <a href="{{page.issues}}" target="_blank">
-                              <img src="/images/specs_tasks.png" alt="Bioschemas {{ page.name }} Github Tasks or Issues">
+                              <img src="{{ '/images/specs_tasks.png' | relative_url }}" alt="Bioschemas {{ page.name }} Github Tasks or Issues">
                               </a>
                               {% endif %}
                            </td>
