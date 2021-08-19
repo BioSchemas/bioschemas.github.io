@@ -69,7 +69,7 @@ $(document).ready(function () {
     });
 });
 
-var toggleHeight = $(window).outerHeight();
+var toggleHeight = $(window).outerHeight() / 3;
 
 $(window).scroll(function() {
 	if ($(window).scrollTop() > toggleHeight) {
