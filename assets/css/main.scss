@@ -10,8 +10,9 @@ $bioschemas-dark-sea-green-color: #87BBA2;
 $bioschemas-tea-green-color: #C9E4CA;
 
 $primary: #005ce6;
-$secondary:$bioschemas-base-color;
+$secondary: $bioschemas-base-color;
 $link-decoration: none;
+$component-active-bg: $secondary;
 
 @import
     "bootstrap/bootstrap",
