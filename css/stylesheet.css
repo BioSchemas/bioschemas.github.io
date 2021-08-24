@@ -902,17 +902,6 @@ Small Device Styles
     #forkme_banner {
         display: none;
     }
-    .trigger {
-        z-index: 500;
-        top: 0;
-        right: 0;
-        position: fixed;
-        display: flex;
-        align-items: center;
-    }
-    .trigger-mobile {
-        height: auto;
-    }
     .trigger_links {
         display: none;
     }
