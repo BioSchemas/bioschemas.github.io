@@ -25,18 +25,4 @@
         bottom: 0.5em; 
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
-    
-    &.stuck {
-        .hexagon {
-            padding:0.2em;
-            width: 38px;
-            position: fixed;
-            top: 0.2em;
-            left: 0.2em;
-            z-index: 300;
-            background: #fff;
-            border-radius: 50%;
-            min-width: initial;
-        }
-    }
 }

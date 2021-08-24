@@ -154,17 +154,14 @@ h1 {
 h2 {
     font-size: 1.875em;
     margin-bottom: 0.3125em;
-    margin-top: -3em;
+    padding-top: 0.6em; 
     font-weight: normal;
-    padding-top: 3.6em;
-    display: inline-block;
 }
 
 h3 {
     font-size: 1.3125em;
     margin-bottom: 0.3125em;
-    margin-top: -3em;
-    padding-top: 3.6em; 
+    padding-top: 0.6em; 
 }
 
 h4 {
@@ -904,17 +901,6 @@ Small Device Styles
     }
     #forkme_banner {
         display: none;
-    }
-    .trigger {
-        z-index: 500;
-        top: 0;
-        right: 0;
-        position: fixed;
-        display: flex;
-        align-items: center;
-    }
-    .trigger-mobile {
-        height: auto;
     }
     .trigger_links {
         display: none;
