@@ -1,12 +1,12 @@
 ---
 layout: tutorial
 title: Adding Schema.org to a GitHub Pages site
-nextTutorial:
-  link: howto/howto_check_deploy
-  title: How to check your deployed markup
 previousTutorial:
   link: howto/howto_add_markup
   title: How to add markup to your own resource
+nextTutorial:
+  link: howto/howto_check_deploy
+  title: How to check your deployed markup
 
 bioschemas:
   "@context": https://schema.org/
@@ -19,7 +19,7 @@ bioschemas:
     - "@id": http://edamontology.org/topic_0089
   audience:
   - "@type": Audience
-    name: WebMaster, people deploying GitHub pages
+    name: (Markup provider, Markup consumer) WebMaster, people deploying GitHub pages
   name: "Adding Schema.org to a GitHub Pages site"
   author:
   - "@type": Person
@@ -31,7 +31,7 @@ bioschemas:
     name: "Alasdair Gray"
     "@id": https://bioschemas.org/people/AlasdairGray
     url: https://bioschemas.org/people/AlasdairGray
-  dateModified: 2021-02-16
+  dateModified: 2021-07-22
   description: "This guide will show you how to do add Schema.org markup to a GitHub Pages site."
   keywords: "schemaorg, TeSS, GitHub pages"
   license: CC-BY 4.0
@@ -84,7 +84,7 @@ bioschemas:
   - "@id": http://edamontology.org/topic_0089
   audience:
     - "@type": Audience
-      name: WebMaster
+      name: (Markup provider, Markup consumer) WebMaster
   name: "Adding Schema.org to your website"
   author: ["Fred Dibnah", "Niall Beard"]
   contributor:

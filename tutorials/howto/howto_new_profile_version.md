@@ -4,9 +4,7 @@ title: How to update a profile
 previousTutorial:
   link: ./howto/howto_create_new_profile
   title: How to create a new draft profile
-nextTutorial:
-  link: ./howto/howto_add_markup
-  title: How to add markup to your own resource
+
 
 bioschemas:
   "@context": https://schema.org/
@@ -19,7 +17,7 @@ bioschemas:
     - "@id": http://edamontology.org/topic_0089
   audience:
   - "@type": Audience
-    name: People interested in creating and publishing a new draft profile
+    name: (Specification developer) People interested in creating and publishing a new draft profile
   name: "How to update a profile"
   author:
   - "@type": Person
@@ -31,7 +29,7 @@ bioschemas:
     name: "Alban Gaignard"
     "@id": https://bioschemas.org/people/AlbanGaignard
     url: https://bioschemas.org/people/AlbanGaignard   
-  dateModified: 2021-05-05
+  dateModified: 2021-07-22
   description: "In this how-to, we will guide you through the necessary steps for you to update a profile, i.e.,create and publish a new draft profile, you need some knowledge on spreadsheets, GitHub, git and Jekyll."
   keywords: "schema.org, markup, structured data, bioschemas profile"
   license: CC-BY 4.0

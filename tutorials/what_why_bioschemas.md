@@ -19,7 +19,7 @@ bioschemas:
     - "@id": http://edamontology.org/topic_0089
   audience:
   - "@type": Audience
-    name: People interested in introductory information to Bioschemas
+    name: (General interest) People interested in introductory information to Bioschemas
   name: "Bioschemas, what and why?"
   author:
   - "@type": Person

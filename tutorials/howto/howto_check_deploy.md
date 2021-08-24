@@ -5,6 +5,9 @@ title: Check Deployed Markup
 previousTutorial:
   link: howto/howto_add_github
   title: Adding schema.org to a GitHub Pages site
+nextTutorial:
+  link: ./howto/howto_create_new_profile
+  title: How to create a new draft profile
 
 bioschemas:
   "@context": https://schema.org/
@@ -16,7 +19,7 @@ bioschemas:
   - "@id": http://edamontology.org/topic_0089
   audience:
   - "@type": Audience
-    name: WebMaster
+    name: (Markup provider, Markup consumer) WebMaster
   name: "How to check your Bioschemas deployment"
   author:
   - "@type": Person
@@ -28,6 +31,7 @@ bioschemas:
     name: "Ivan Mi&ccaron;eti&cacute;"
     "@id": https://bioschemas.org/people/IvanMicetic
     url: https://bioschemas.org/people/IvanMicetic
+  dateModified: 2021-07-22    
   description: "This guide will show you how to check your deployed markup, both locally and what is retrieved by external services."
   keywords: "schemaorg, JSON-LD, bioschemas"
   license: CC-BY 4.0

@@ -5,8 +5,8 @@ previousTutorial:
   link: ./what_why_bioschemas
   title: What and why bioschemas
 nextTutorial:
-  link: ./howto/howto_create_new_profile
-  title: How to create a new draft profile
+  link: howto/howto_add_markup
+  title: How to add markup to your own resource
 
 bioschemas:
   "@context": https://schema.org/
@@ -19,7 +19,7 @@ bioschemas:
     - "@id": http://edamontology.org/topic_0089
   audience:
   - "@type": Audience
-    name: People interested in selecting a Bioschemas profile to markup their own data
+    name: (Markup provider, Markup consumer) People interested in selecting a Bioschemas profile to markup their own data
   name: "How to select the right profile for your resource"
   author:
   - "@type": Person
@@ -39,7 +39,7 @@ bioschemas:
     name: "Franck Michel"
     "@id": https://bioschemas.org/people/FranckMichel
     url: https://bioschemas.org/people/FranckMichel/    
-  dateModified: 2021-05-05
+  dateModified: 2021-07-22
   description: "In this how-to, we will guide you through the necessary steps for you to select a Bioschemas profile that will be later used to add mark up to your own resources"
   keywords: "schemaorg, markup, structured data, bioschemas profile"
   license: CC-BY 4.0
