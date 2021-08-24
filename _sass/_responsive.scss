@@ -19,13 +19,6 @@
             text-align: center;
         }
     }
-    .trigger.stuck {
-        position: fixed;
-        z-index: 100;
-        top: 0;
-        background-color: rgb(11, 121, 75);
-        width: 100%;
-    }
 }
 
 @media screen and (max-width: 700px) {

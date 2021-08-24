@@ -1,19 +1,5 @@
 new ClipboardJS('.btn-copy');
 
-$(window).scroll(function () {
-    var topOfDiv = $('#header_wrap').offset().top;
-    var height = $('#header_wrap').outerHeight();
-    if ($(window).width() > 700) {
-        if ($(window).scrollTop() > (topOfDiv + height)) {
-            $(".trigger").addClass("stuck");
-            $("#header_wrap").addClass("stuck");
-        } else {
-            $(".trigger").removeClass("stuck");
-            $("#header_wrap").removeClass("stuck");
-        }
-    }
-});
-
 function synchTab(frameName) {
     var elList, i;
 
