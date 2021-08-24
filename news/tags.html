@@ -2,6 +2,10 @@
 layout: default
 title: News Tags
 ---
+<div id="landing">
+  <div class="container-flow">
+    <div class="row">
+      <div class="col-md-8">
 <h1>Bioschemas News by Tag</h1>
 
 {% comment %}
@@ -57,3 +61,11 @@ List all posts with a certain tag.
     {% endif %}
   {% endfor %}
 {% endfor %}
+		</div>
+
+			<div class="col-md-4 right-column">
+				{% include news-list.html %}
+			</div>
+		</div>
+	</div>
+</div>
