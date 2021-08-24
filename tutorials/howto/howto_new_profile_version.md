@@ -108,9 +108,7 @@ Here you will make the changes to the profile. There are a couple of possibiliti
     * Add a new row indicating what type is being extended
     * Follow the process as described for properties belonging to a parent already recorded
 
-| ![Figure 1. From Schema.org to profile spreadsheet](/tutorials/images/from_schema_to_spreadsheet.png) |
-| __Figure 1. From Schema.org to profile spreadsheet__ |
-
+{% include image.html file="/tutorials/images/from_schema_to_spreadsheet.png" caption="Figure 1. From Schema.org to profile spreadsheet" alt="From Schema.org to profile spreadsheet" %}
 
 ## 3. Get the code for the new draft profile
 
@@ -124,8 +122,7 @@ Now you are ready to generate the machine-processable Bioschemas version of your
 
 Once you have finished with the changes on the spreadsheet, see previous section [Create a new profile crosswalk](#2-create-a-new-profile-crosswalk), go to the menu File/Publish to the web/, select "Bioschemas Fields" and "CSV", publish and copy the link, see Figure 2 below.
 
-| ![Figure 2. Publish Bioschemas fields to the web](/tutorials/images/publish-to-web.png) |
-| __Figure 2. Publish Bioschemas fields to the web__ |
+{% include image.html file="/tutorials/images/publish-to-web.png" caption="Figure 2. Publish Bioschemas fields to the web" alt="Publish Bioschemas fields to the web" %}
 
 ## 4. Update the website
 

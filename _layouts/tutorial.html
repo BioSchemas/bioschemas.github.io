@@ -1,87 +1,80 @@
-<!DOCTYPE html>
-<html>
-  {% include head.html %}
-  <body>
-    {% include header.html %}
-    {% include navbar.html %}
-    <div class="page-content container">
-      <div class="wrapper">
-          <div class="outer">
-              <section id="main_content" class="inner">
+---
+layout: default
+---
+<div class="container-flow">
+  <h1>{{ page.bioschemas.name }}</h1>
+  <blockquote>
+    {{ page.bioschemas.description }}
+  </blockquote>
+  {% include tutorialNavigation.html %}
+  <div class="row">
+    <div class="col-md-8">
+      {{ content }}
+    </div>
+    <div class="col-md-4 right-column">
+      <script>
+        $(document).ready(function () {
+          $('#toc').toc({ minimumHeaders: 2, listType: 'ul', showSpeed: 0, headers: 'h2, h3' , title: 'Table of Contents' });
+        });
+      </script>
+      <div id="toc" class="toc"></div>
+        <div  class="toc">
+        {% if page.bioschemas.keywords %}
+          <p><strong>Keywords:</strong> {{page.bioschemas.keywords}}</p>
+        {% endif %}
+        {% if page.bioschemas.about %}
+          <p><strong>Topics:</strong></p>
+          <ul>
+          {% for topic in page.bioschemas.about %}
+            {% for item in topic %}
+            <li><a href="{{item[1]}}">{{item[1]}}</a></li>
+            {% endfor %}
+          {% endfor %}
+          </ul>
+        {% endif %}
+        {% if page.bioschemas.audience %}
+          <p><strong>Audience:</strong></p>
+          <ul>
+            {% for item in page.bioschemas.audience %}
+            <li>{{item.name}}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+        {% if page.bioschemas.author %}
+          <p><strong>Authors:</strong> </p>
+          <ul>
+            {% for author in page.bioschemas.author %}
+              <li><a href="{{author.url}}">{{author.name}}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
 
-    <h1>{{ page.bioschemas.name }}</h1>
-    <blockquote>
-      {{ page.bioschemas.description }}
-    </blockquote>
-    <script>
-      $(document).ready(function () {
-        $('#toc').toc({ minimumHeaders: 2, listType: 'ul', showSpeed: 0, headers: 'h2, h3' , title: 'Table of Contents' });
-      });
-    </script>
-    <div id="toc"></div>
-    {% if page.bioschemas.keywords %}
-    <p><strong>Keywords:</strong> {{page.bioschemas.keywords}}</p>
-    {% endif %}
-    {% if page.bioschemas.about %}
-    <p><strong>Topics:</strong></p>
-    <ul>
-    {% for topic in page.bioschemas.about %}
-      {% for item in topic %}
-      <li><a href="{{item[1]}}">{{item[1]}}</a></li>
-      {% endfor %}
-    {% endfor %}
-    </ul>
-    {% endif %}
-    {% if page.bioschemas.audience %}
-      <p><strong>Audience:</strong></p>
-      <ul>
-        {% for item in page.bioschemas.audience %}
-        <li>{{item.name}}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-    {% if page.bioschemas.author %}
-    <p><strong>Authors:</strong> </p>
-    <ul>
-      {% for author in page.bioschemas.author %}
-        <li><a href="{{author.url}}">{{author.name}}</a></li>
-      {% endfor %}
-    </ul>
-    {% endif %}
+        {% if page.bioschemas.contributor %}
+          <p><strong>Contributors:</strong> </p>
+          <ul>
+            {% for contributor in page.bioschemas.contributor %}
+              <li><a href="{{contributor.url}}">{{contributor.name}}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
 
-    {% if page.bioschemas.contributor %}
-    <p><strong>Contributors:</strong> </p>
-    <ul>
-      {% for contributor in page.bioschemas.contributor %}
-        <li><a href="{{contributor.url}}">{{contributor.name}}</a></li>
-      {% endfor %}
-    </ul>
-    {% endif %}
+        {% if page.bioschemas.license %}
+          <p><strong>License:</strong> {{page.bioschemas.license}}</p>
+        {% endif %}
 
-    {% if page.bioschemas.license %}
-    <p><strong>License:</strong> {{page.bioschemas.license}}</p>
-    {% endif %}
+        {% if page.bioschemas.version %}
+          <p><strong>Version:</strong> {{ page.bioschemas.version }}</p>
+        {% endif %}
 
-    {% if page.bioschemas.version %}
-    <p><strong>Version:</strong> {{ page.bioschemas.version }}</p>
-    {% endif %}
+        {% if page.bioschemas.dateCreated %}
+          <p><strong>Created:</strong> {{ page.bioschemas.dateCreated | date_to_long_string }}</p>
+        {% endif %}
 
-    {% if page.bioschemas.dateCreated %}
-    <p><strong>Created:</strong> {{ page.bioschemas.dateCreated | date_to_long_string }}</p>
-    {% endif %}
-
-    {% if page.bioschemas.dateModified %}
-    <p><strong>Last Modified:</strong> {{ page.bioschemas.dateModified | date_to_long_string}}</p>
-    {% endif %}
-
-    {% include tutorialNavigation.html %}
-    {{ content }}
-    {% include tutorialNavigation.html %}
-  </section>
+        {% if page.bioschemas.dateModified %}
+          <p><strong>Last Modified:</strong> {{ page.bioschemas.dateModified | date_to_long_string}}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% include tutorialNavigation.html %}
 </div>
-</div>
-</div>
-
-{% include footer.html %}
-  </body>
-</html>
