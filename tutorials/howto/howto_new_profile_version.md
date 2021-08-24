@@ -69,7 +69,6 @@ We will now discuss the different tabs in the spreadsheet and how they are used 
 
 In this tab, you need to update the "Description" column. In most cases the actual description of the profile will remain the same but the "Summary of Changes" will change. List all the changes in this new draft profile, use a HTML list markup for that, below there is an example:
 
------
 ```
 
 <h4>Summary of Changes</h4>
@@ -82,8 +81,6 @@ In this tab, you need to update the "Description" column. In most cases the actu
     </ul>
 
 ```
------
-
 
 You will also need to update:
 * the "version" column with the new version
