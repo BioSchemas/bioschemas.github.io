@@ -1,9 +1,10 @@
 <hr/>
 {%- if page.previousTutorial %}
+{%- assign previousTutorial = '/tutorials/' | append: page.previousTutorial.link %}
 <div class="text-center">
 &#9664;
 Previous tutorial:
-<a href="/tutorials/{{page.previousTutorial.link}}">{{page.previousTutorial.title}}</a>
+<a href="{{ previousTutorial | relative_url}}">{{page.previousTutorial.title}}</a>
 {%- endif %}
 {%- if page.previousTutorial and page.nextTutorial %}
 |
@@ -15,7 +16,8 @@ Previous tutorial:
 <div class="text-center">
 {%- endunless %}
 Next tutorial:
-<a href="/tutorials/{{ page.nextTutorial.link }}">{{ page.nextTutorial.title }}</a>
+{%- assign nextTutorial = '/tutorials/' | append: page.nextTutorial.link %}
+<a href="{{ nextTutorial | relative_url}}">{{ page.nextTutorial.title }}</a>
 &#9654;
 </div>
 {%- endif %}
