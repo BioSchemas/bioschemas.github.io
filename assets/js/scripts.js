@@ -47,12 +47,6 @@ function removeName(el, name) {
     el.className = newList.join(" ");
 }
 
-$('.navbar-toggle').on('click', function () {
-    $('.trigger').toggleClass('trigger-mobile');
-    $('#mobile_links').fadeToggle(200);
-    $('#mobile_links').css("display", "inline");
-});
-
 $('.live-deploy-table').on('show.bs.collapse', function () {
     $(".collapse.show")
         .not(this)
@@ -68,3 +62,81 @@ $(document).ready(function () {
         $(this).prev().find(".plus-icon").html('<i class="fas fa-plus fa-lg"></i>');
     });
 });
+
+
+(function(document, history, location) {
+    var HISTORY_SUPPORT = !!(history && history.pushState);
+  
+    var anchorScrolls = {
+      ANCHOR_REGEX: /^#[^ ]+$/,
+      OFFSET_HEIGHT_PX: 54,
+  
+      /**
+       * Establish events, and fix initial scroll position if a hash is provided.
+       */
+      init: function() {
+        this.scrollToCurrent();
+        $(window).on('hashchange', $.proxy(this, 'scrollToCurrent'));
+        $('body').on('click', 'a', $.proxy(this, 'delegateAnchors'));
+      },
+  
+      /**
+       * Return the offset amount to deduct from the normal scroll position.
+       * Modify as appropriate to allow for dynamic calculations
+       */
+      getFixedOffset: function() {
+        return this.OFFSET_HEIGHT_PX;
+      },
+  
+      /**
+       * If the provided href is an anchor which resolves to an element on the
+       * page, scroll to it.
+       * @param  {String} href
+       * @return {Boolean} - Was the href an anchor.
+       */
+      scrollIfAnchor: function(href, pushToHistory) {
+        var match, anchorOffset;
+  
+        if(!this.ANCHOR_REGEX.test(href)) {
+          return false;
+        }
+  
+        match = document.getElementById(href.slice(1));
+  
+        if(match) {
+          anchorOffset = $(match).offset().top - this.getFixedOffset();
+          $('html, body').animate({ scrollTop: anchorOffset});
+  
+          // Add the state to history as-per normal anchor links
+          if(HISTORY_SUPPORT && pushToHistory) {
+            history.pushState({}, document.title, location.pathname + href);
+          }
+        }
+  
+        return !!match;
+      },
+      
+      /**
+       * Attempt to scroll to the current location's hash.
+       */
+      scrollToCurrent: function(e) { 
+        if(this.scrollIfAnchor(window.location.hash) && e) {
+            e.preventDefault();
+        }
+      },
+  
+      /**
+       * If the click event's target was an anchor, fix the scroll position.
+       */
+      delegateAnchors: function(e) {
+        var elem = e.target;
+  
+        if(this.scrollIfAnchor(elem.getAttribute('href'), true)) {
+          e.preventDefault();
+        }
+      }
+    };
+  
+      $(document).ready($.proxy(anchorScrolls, 'init'));
+  })(window.document, window.history, window.location);
+  
