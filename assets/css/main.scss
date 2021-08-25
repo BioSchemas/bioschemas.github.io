@@ -16,7 +16,6 @@ $component-active-bg: $secondary;
 
 @import
     "bootstrap/bootstrap",
-    "base",
     "mixins",
     "header",
     "spec-tables",
@@ -48,7 +47,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 700;
+    font-weight: normal;
     color: #0B794B;
     letter-spacing: -1px;
 }
@@ -65,7 +64,6 @@ h2 {
     font-size: 1.875em;
     margin-bottom: 0.3125em;
     padding-top: 0.6em;
-    font-weight: normal;
 }
 
 
@@ -98,10 +96,6 @@ footer p:last-child {
     margin-bottom: -0.625em;
 }
 
-#main_content a:hover,
-#main_content a:focus {
-    text-decoration: underline;
-}
 
 p img {
     display: inline;
@@ -142,12 +136,6 @@ ul {
     margin-bottom: 0.625em;
 }
 
-hr {
-    height: 0.0625em;
-    width: 100%;
-    border: none;
-    background: url("{{'images/bg_hr.png' | relative_url}}") repeat-x center;
-}
 
 table {
     margin-bottom: 1.625em;
@@ -201,11 +189,6 @@ Full-Width Styles
 .inner ul {
     list-style: none;
     margin-left: 0;
-}
-
-.inner a:hover {
-    color: #0b794b;
-    text-decoration: none;
 }
 
 #main_content {
