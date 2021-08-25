@@ -65,6 +65,7 @@ h2 {
     font-size: 1.875em;
     margin-bottom: 0.3125em;
     padding-top: 0.6em;
+    font-weight: normal;
 }
 
 
@@ -249,7 +250,7 @@ GitHub Button
     z-index: 10;
     padding: 0.625em 3.125em 0.625em 0.625em;
     color: #fff;
-    background: url("{{'images/blacktocat.png' | relative_link}}") #4c7fe8 no-repeat 95% 50%;
+    background: url("{{'images/blacktocat.png' | relative_url }}") #4c7fe8 no-repeat 95% 50%;
     font-weight: 700;
     border-bottom-left-radius: 0.625em;
     border-bottom-right-radius: 0.625em;
