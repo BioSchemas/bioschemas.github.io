@@ -9,6 +9,9 @@ $bioschemas-steel-teal-color: #55828B;
 $bioschemas-dark-sea-green-color: #87BBA2;
 $bioschemas-tea-green-color: #C9E4CA;
 
+
+$font-family-sans-serif: 'Noto Sans', Arial, sans-serif;;
+$font-size-root: 16px;
 $primary: #005ce6;
 $secondary: $bioschemas-base-color;
 $link-decoration: none;
@@ -29,17 +32,6 @@ $component-active-bg: $secondary;
 /*******************************************************************************
 Theme Styles
 *******************************************************************************/
-
-body {
-    box-sizing: border-box;
-    color: #373737;
-    background: rgb(254, 254, 254);
-    font-size: 16px;
-    font-family: 'Noto Sans', Arial, sans-serif;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-}
-
 h1,
 h2,
 h3,
