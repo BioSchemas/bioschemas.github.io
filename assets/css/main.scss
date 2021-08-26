@@ -194,15 +194,6 @@ Full-Width Styles
     padding-top: 1.875em;
 }
 
-#header_wrap {
-    /* background-image: url("/images/subtle_white_feathers.png"); */
-    background-color: #FCFAF9;
-}
-
-#header_wrap .inner {
-    padding: 1.5em 0.625em 1.875em 0.625em;
-}
-
 .mobile_list {
     display: none;
 }
@@ -219,112 +210,6 @@ Full-Width Styles
 #twit_git_p {
     display: none;
 }
-
-/*******************************************************************************
-GitHub Button
-*******************************************************************************/
-
-#forkme_banner {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0.625em;
-    z-index: 10;
-    padding: 0.625em 3.125em 0.625em 0.625em;
-    color: #fff;
-    background: url("{{'images/blacktocat.png' | relative_url }}") #4c7fe8 no-repeat 95% 50%;
-    font-weight: 700;
-    border-bottom-left-radius: 0.625em;
-    border-bottom-right-radius: 0.625em;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-#forkme_banner:hover {
-    background-color: rgb(29, 95, 226);
-    text-decoration: none;
-}
-
-#forkme_banner:active {
-    background-color: rgb(29, 95, 226);
-    text-decoration: none;
-}
-
-/*******************************************************************************
-Twitter Button
-*******************************************************************************/
-
-#twitter_banner {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 8.875em;
-    z-index: 10;
-    padding: 0.625em 3.125em 0.625em 0.625em;
-    color: #fff;
-    background: url("{{'images/Twitter_logo_white.png'|relative_url }}") #28a9e2 no-repeat 95% 50%;
-    background-size: 35% 65%;
-    font-weight: 700;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-bottom-left-radius: 0.625em;
-    border-bottom-right-radius: 0.625em;
-}
-
-#twitter_banner:hover {
-    background-color: rgb(28, 150, 202);
-    background-size: 35% 65%;
-    text-decoration: none;
-}
-
-#twitter_banner:active {
-    background-color: rgb(28, 150, 202);
-    background-size: 35% 65%;
-    text-decoration: none;
-}
-
-/*******************************************************************************
-Navigation Bar
-*******************************************************************************/
-
-
-/* Strange things happen when you set font-size to 1.2em, which equals 19.2px */
-
-.navbar_button {
-    display: inline-block;
-    height: 2.0833333333333335em;
-    margin-top: -0.5208333333333334em;
-    padding-top: 0.5208333333333334em;
-    padding-left: 0.5208333333333334em;
-    padding-right: 0.5208333333333334em;
-}
-
-.navbar_button:hover {
-    color: #333333;
-    background-color: #2bb673;
-    height: 2.03125em;
-    padding-top: 0.46875em;
-    padding-right: 0.46875em;
-    padding-left: 0.46875em;
-    border-bottom-left-radius: 0.5208333333333334em;
-    border-bottom-right-radius: 0.5208333333333334em;
-    border: 1px solid #2bb673;
-}
-
-#nav_active {
-    color: #333333;
-    background-color: #2bb673;
-    height: 2.03125em;
-    padding-top: 0.46875em;
-    padding-right: 0.46875em;
-    padding-left: 0.46875em;
-    border-bottom-left-radius: 0.5208333333333334em;
-    border-bottom-right-radius: 0.5208333333333334em;
-    border: 1px solid #2bb673;
-}
-
 
 /*******************************************************************************
 Back to Top Button

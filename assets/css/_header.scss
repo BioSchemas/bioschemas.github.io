@@ -17,13 +17,6 @@
             width: 30%;
         }
     }
-
-    .git-edit {
-        position: absolute;
-        right: 0.5em;
-        bottom: 0.5em; 
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    }
     
     &.stuck {
         .hexagon {
@@ -38,4 +31,19 @@
             min-width: initial;
         }
     }
+
+    .btn-github {
+        background-color: #4c7fe8;
+        position: absolute;
+        top: 0;
+        right: 1.625em;
+    }
+
+    .btn-twitter {
+        background-color: #28a9e2;
+        position: absolute;
+        top: 0;
+        right: 8.875em;
+    }
+
 }
