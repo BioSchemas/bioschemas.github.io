@@ -76,20 +76,6 @@ h6 {
     font-size: 1em;
 }
 
-footer p:last-child {
-    margin-bottom: -0.625em;
-}
-
-
-p img {
-    display: inline;
-    /*margin: 0;*/
-    padding: 0;
-    vertical-align: middle;
-    text-align: center;
-    border: none;
-}
-
 blockquote {
     color: #666;
     margin-bottom: 1.25em;
@@ -238,73 +224,11 @@ Specifications
 Examples
 *******************************************************************************/
 
-.prop_type_scope {
-    color: #006238;
-}
-
-.prop_value {
-    color: #008080;
-}
-
-.elem_html {
-    font-weight: bold;
-}
-
-.ex_anchor h2 {
-    margin-top: 1em;
-    margin-bottom: 0.625em;
-}
-
-.ex_anchor:hover {
-    text-decoration: none;
-}
-
-.tabExample {
-    display: inline-block;
-    border-right: 2px solid #0B794B;
-    border-left: 2px solid #0B794B;
-    border-top: 2px solid #0B794B;
-    border-top-left-radius: 0.625em;
-    border-top-right-radius: 0.625em;
-    padding: 0.5em;
-    color: #000;
-}
-
-a.tabExample:hover {
-    color: #fff;
-    background-color: #0B794B;
-    border: 2px solid #0B794B;
-}
-
 .activeTab {
     color: #fff;
     font-weight: bold;
     background-color: #0B794B;
     border: 2px solid #0B794B;
-}
-
-.tabMain {
-    width: auto;
-    border: 2px solid #0B794B;
-    padding: 0.3125em;
-    border-bottom-left-radius: 0.625em;
-    border-bottom-right-radius: 0.625em;
-    margin-bottom: 1.5em;
-    background-color: #F2F2F2;
-}
-
-.tabContent {
-    width: 100%;
-    background-color: #F2F2F2;
-}
-
-.frameWrapper {
-    width: 100%;
-}
-
-.nomark {
-    background-color: #F2F2F2;
-    font-weight: bold;
 }
 
 /*******************************************************************************
