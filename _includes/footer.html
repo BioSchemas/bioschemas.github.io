@@ -1,20 +1,28 @@
-
 <div class="inner">
     <p><a href="#top" id="top_link">Top &#9650;</a></p>
 </div>
-<div id="footer_wrap" class="outer">
-    <footer class="inner">
-        <div class="acknowledge">
-
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-5 d-flex align-items-center">
+            <a href="{{ '/index.html' | relative_url }}"
+                class="col-md-3 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <img class="w-50" src="{{ '/images/square_logo2.png' | relative_url }}" alt="Bioschemas">
+            </a>
+            <span class="text-muted">{{ site.time | date: '%Y' }} | This page is available under the <a target="_blank"
+                    href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike
+                    License</a></span>
         </div>
-        <img class="img_bottom rotation" src="{{ '/images/square_logo2.png' | relative_url }}" alt="Bioschemas">
-
-        <p class="p_bottom"><a href="/funders/">Funding</a> | <a href="mailto:enquiries@bioschemas.org" itemprop="email">Hugs &amp; bugs</a> | <a href="/howtojoin">Join</a></p>
-        <div class="license">
-            <p class="p_bottom">&copy; {{ site.time | date: '%Y' }} | This page is available under the <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike License</a></p>
-        </div>
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="{{ '/index.html' | relative_url }}" class="nav-link px-2 text-muted">Home</a>
+            </li>
+            <li class="nav-item"><a href="{{ '/funders/' | relative_url }}" class="nav-link px-2 text-muted">Funding</a>
+            </li>
+            <li class="nav-item"><a href="mailto:enquiries@bioschemas.org" itemprop="email"
+                    class="nav-link px-2 text-muted">Hugs &amp; bugs</a></li>
+            <li class="nav-item"><a href="{{ '/howtojoin/' | relative_url }}" class="nav-link px-2 text-muted">Join</a>
+            </li>
+        </ul>
     </footer>
 </div>
 <script src="{{'assets/js/clipboard.min.js' | relative_url }}"></script>
 <script src="{{'assets/js/scripts.js' | relative_url }}"></script>
-
