@@ -1,24 +1,13 @@
 <a name="top"></a>
-
-<div id="header_wrap" class="outer">
-    <header class="inner">
-
-        <a id="forkme_banner" href="https://github.com/Bioschemas">GitHub</a>
-        <a id="twitter_banner" href="https://twitter.com/bioschemas">Twitter</a>
-
-        <div class="biohex-logo">
-            <a href="{{ '/index.html' | relative_url}}">
-                <img class="hexagon" src="{{ 'assets/img/square_logo2.png' | relative_url }}" alt="Bioschemas">
-            </a>
-            <a href="{{ '/index.html' | relative_url}}">
-                <img class="bio-title" src="{{ 'assets/img/name_lower.png' | relative_url }}" alt="Bioschemas">
-            </a>
-        </div>
-        {%- if page.spec_type != "Profile" and page.spec_type != "Type"%}
-        <a target="_blank" href="https://github.com/Bioschemas/bioschemas.github.io/tree/master/{{page.path}}" class="btn btn-secondary git-edit" role="button">
-            <b>Edit me&nbsp;</b>
-            <i class="fas fa-pencil-alt"></i>
-        </a>        
-        {%- endif %}
-    </header>
-</div>
+<header id="header_wrap" class="p-3">
+    <a class="btn btn-github rounded-0 rounded-bottom shadow text-white fs-5" href="https://github.com/Bioschemas">GitHub<i class="fab fa-twitter ms-2"></i></a>
+    <a class="btn btn-twitter rounded-0 rounded-bottom shadow text-white fs-5" href="https://twitter.com/bioschemas">Twitter<i class="fab fa-github ms-2"></i></a>
+    <div class="biohex-logo">
+        <a href="{{ '/index.html' | relative_url}}">
+            <img class="hexagon" src="{{ 'images/square_logo2.png' | relative_url }}" alt="Bioschemas">
+        </a>
+        <a href="{{ '/index.html' | relative_url}}">
+            <img class="bio-title" src="{{ 'images/name_lower.png' | relative_url }}" alt="Bioschemas">
+        </a>
+    </div>
+</header>

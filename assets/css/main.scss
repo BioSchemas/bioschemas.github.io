@@ -9,6 +9,9 @@ $bioschemas-steel-teal-color: #55828B;
 $bioschemas-dark-sea-green-color: #87BBA2;
 $bioschemas-tea-green-color: #C9E4CA;
 
+
+$font-family-sans-serif: 'Noto Sans', Arial, sans-serif;;
+$font-size-root: 16px;
 $primary: #005ce6;
 $secondary: $bioschemas-base-color;
 $link-decoration: none;
@@ -22,7 +25,6 @@ $component-active-bg: $secondary;
     "code-highlight",
     "live-deploys",
     "community",
-    "footer",
     "acknowledgments",
     "landing"
 ;
@@ -30,17 +32,6 @@ $component-active-bg: $secondary;
 /*******************************************************************************
 Theme Styles
 *******************************************************************************/
-
-body {
-    box-sizing: border-box;
-    color: #373737;
-    background: rgb(254, 254, 254);
-    font-size: 16px;
-    font-family: 'Noto Sans', Arial, sans-serif;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-}
-
 h1,
 h2,
 h3,
@@ -83,27 +74,6 @@ h5 {
 
 h6 {
     font-size: 1em;
-}
-
-footer p {
-    color: #f2f2f2;
-    display: block;
-    margin-top: -0.8125em;
-    margin-bottom: 0.625em;
-}
-
-footer p:last-child {
-    margin-bottom: -0.625em;
-}
-
-
-p img {
-    display: inline;
-    /*margin: 0;*/
-    padding: 0;
-    vertical-align: middle;
-    text-align: center;
-    border: none;
 }
 
 blockquote {
@@ -195,137 +165,6 @@ Full-Width Styles
     padding-top: 1.875em;
 }
 
-#header_wrap {
-    /* background-image: url("/images/subtle_white_feathers.png"); */
-    background-color: #FCFAF9;
-}
-
-#header_wrap .inner {
-    padding: 1.5em 0.625em 1.875em 0.625em;
-}
-
-.mobile_list {
-    display: none;
-}
-
-.gitlink {
-    text-align: center;
-}
-
-.gitlink img {
-    width: 1.25em;
-    height: 1.25em;
-}
-
-#twit_git_p {
-    display: none;
-}
-
-/*******************************************************************************
-GitHub Button
-*******************************************************************************/
-
-#forkme_banner {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0.625em;
-    z-index: 10;
-    padding: 0.625em 3.125em 0.625em 0.625em;
-    color: #fff;
-    background: url("{{'images/blacktocat.png' | relative_url }}") #4c7fe8 no-repeat 95% 50%;
-    font-weight: 700;
-    border-bottom-left-radius: 0.625em;
-    border-bottom-right-radius: 0.625em;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-#forkme_banner:hover {
-    background-color: rgb(29, 95, 226);
-    text-decoration: none;
-}
-
-#forkme_banner:active {
-    background-color: rgb(29, 95, 226);
-    text-decoration: none;
-}
-
-/*******************************************************************************
-Twitter Button
-*******************************************************************************/
-
-#twitter_banner {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 8.875em;
-    z-index: 10;
-    padding: 0.625em 3.125em 0.625em 0.625em;
-    color: #fff;
-    background: url("{{'images/Twitter_logo_white.png'|relative_url }}") #28a9e2 no-repeat 95% 50%;
-    background-size: 35% 65%;
-    font-weight: 700;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-bottom-left-radius: 0.625em;
-    border-bottom-right-radius: 0.625em;
-}
-
-#twitter_banner:hover {
-    background-color: rgb(28, 150, 202);
-    background-size: 35% 65%;
-    text-decoration: none;
-}
-
-#twitter_banner:active {
-    background-color: rgb(28, 150, 202);
-    background-size: 35% 65%;
-    text-decoration: none;
-}
-
-/*******************************************************************************
-Navigation Bar
-*******************************************************************************/
-
-
-/* Strange things happen when you set font-size to 1.2em, which equals 19.2px */
-
-.navbar_button {
-    display: inline-block;
-    height: 2.0833333333333335em;
-    margin-top: -0.5208333333333334em;
-    padding-top: 0.5208333333333334em;
-    padding-left: 0.5208333333333334em;
-    padding-right: 0.5208333333333334em;
-}
-
-.navbar_button:hover {
-    color: #333333;
-    background-color: #2bb673;
-    height: 2.03125em;
-    padding-top: 0.46875em;
-    padding-right: 0.46875em;
-    padding-left: 0.46875em;
-    border-bottom-left-radius: 0.5208333333333334em;
-    border-bottom-right-radius: 0.5208333333333334em;
-    border: 1px solid #2bb673;
-}
-
-#nav_active {
-    color: #333333;
-    background-color: #2bb673;
-    height: 2.03125em;
-    padding-top: 0.46875em;
-    padding-right: 0.46875em;
-    padding-left: 0.46875em;
-    border-bottom-left-radius: 0.5208333333333334em;
-    border-bottom-right-radius: 0.5208333333333334em;
-    border: 1px solid #2bb673;
-}
-
 
 /*******************************************************************************
 Back to Top Button
@@ -353,33 +192,6 @@ Back to Top Button
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-/*******************************************************************************
-Back to Groups Button
-*******************************************************************************/
-
-#back_groups {
-    border: 2px solid #0B794B;
-    /*border-top-left-radius: 0.625em;
-    border-top-right-radius: 0.625em;*/
-    float: right;
-    margin-right: 0.625em;
-    margin-left: 0.625em;
-    text-align: center;
-    width: 15%;
-    font-size: 1.1em;
-    background-color: rgb(11, 121, 75);
-    background-color: rgba(11, 121, 75, .7);
-    color: #fff;
-}
-
-#back_groups:hover {
-    background-color: rgb(43, 182, 115);
-    background-color: rgba(43, 182, 115, .7);
-    color: #222;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
 
 /*******************************************************************************
 Specifications
@@ -412,73 +224,11 @@ Specifications
 Examples
 *******************************************************************************/
 
-.prop_type_scope {
-    color: #006238;
-}
-
-.prop_value {
-    color: #008080;
-}
-
-.elem_html {
-    font-weight: bold;
-}
-
-.ex_anchor h2 {
-    margin-top: 1em;
-    margin-bottom: 0.625em;
-}
-
-.ex_anchor:hover {
-    text-decoration: none;
-}
-
-.tabExample {
-    display: inline-block;
-    border-right: 2px solid #0B794B;
-    border-left: 2px solid #0B794B;
-    border-top: 2px solid #0B794B;
-    border-top-left-radius: 0.625em;
-    border-top-right-radius: 0.625em;
-    padding: 0.5em;
-    color: #000;
-}
-
-a.tabExample:hover {
-    color: #fff;
-    background-color: #0B794B;
-    border: 2px solid #0B794B;
-}
-
 .activeTab {
     color: #fff;
     font-weight: bold;
     background-color: #0B794B;
     border: 2px solid #0B794B;
-}
-
-.tabMain {
-    width: auto;
-    border: 2px solid #0B794B;
-    padding: 0.3125em;
-    border-bottom-left-radius: 0.625em;
-    border-bottom-right-radius: 0.625em;
-    margin-bottom: 1.5em;
-    background-color: #F2F2F2;
-}
-
-.tabContent {
-    width: 100%;
-    background-color: #F2F2F2;
-}
-
-.frameWrapper {
-    width: 100%;
-}
-
-.nomark {
-    background-color: #F2F2F2;
-    font-weight: bold;
 }
 
 /*******************************************************************************

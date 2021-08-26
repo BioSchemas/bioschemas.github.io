@@ -12,7 +12,7 @@
     {% unless mapping_examples.size < 1 %}
     <div class="example-button">
         <span class="tooltiptext">View all examples</span>
-        <button type="button" class="btn btn-bioschema" data-toggle="modal" data-target="#all-examples-modal">Examples  <i class="fas fa-file-code"></i></button>
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#all-examples-modal">Examples  <i class="fas fa-file-code"></i></button>
     </div>
     <div id="all-examples-modal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-large">
@@ -122,7 +122,7 @@
                     {% unless prop.example == "" %}
                     <div class="example-button">
                         <span class="tooltiptext">View <strong>&#8810{{prop.property}}&#8811</strong> example</span>
-                        <button type="button" class="btn btn-bioschema" data-toggle="modal" data-target="#myModal{{prop.property}}"><i class="fas fa-file-code"></i></button>
+                        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal{{prop.property}}"><i class="fas fa-file-code"></i></button>
                     </div>
                     <!-- Modal -->
                     <div id="myModal{{prop.property}}" class="modal fade" role="dialog">
