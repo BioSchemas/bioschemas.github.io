@@ -1,7 +1,6 @@
-<hr/>
 {%- if page.previousTutorial %}
 {%- assign previousTutorial = '/tutorials/' | append: page.previousTutorial.link %}
-<div class="text-center">
+<div class="text-center py-3 border-top border-bottom">
 <i class="fas fa-angle-left fa-lg me-2"></i>
 Previous tutorial:
 <a href="{{ previousTutorial | relative_url}}">{{page.previousTutorial.title}}</a>
@@ -13,7 +12,7 @@ Previous tutorial:
 {%- endif %}
 {%- if page.nextTutorial %}
 {%- unless page.previousTutorial %}
-<div class="text-center">
+<div class="text-center py-3 border-top border-bottom">
 {%- endunless %}
 Next tutorial:
 {%- assign nextTutorial = '/tutorials/' | append: page.nextTutorial.link %}
@@ -21,4 +20,3 @@ Next tutorial:
 <i class="fas fa-angle-right fa-lg ms-2"></i>
 </div>
 {%- endif %}
-<hr/>
