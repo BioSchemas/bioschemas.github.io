@@ -8,7 +8,6 @@ layout: default
 
 # Community Call details
 call-minutes: https://docs.google.com/document/d/1kd5F97ogdiPNhLTnkei-RVR8TC8Ohpc5QSPX3KsfDrk
-call-link: https://elixir-europe-org.zoom.us/j/82625294307?pwd=MWx4SG5QYlg5dnhZNXNkaWZxMkprQT09
 call-date: 2021-09-27T15:00UTC
 ---
 <div id="landing" itemscope itemtype="http://schema.org/Organization">
@@ -78,13 +77,12 @@ call-date: 2021-09-27T15:00UTC
                     <!-- Block for monthly community call -->
                     <div class="event" itemscope itemtype="http://schema.org/Event">
                         <strong><span class="title" itemprop="name">Monthly Community Call</span></strong>
-                        <p>The Bioschemas Community Call takes place on the 4th Monday of each month at 16:00 UK time.</p>
+                        <p>The Bioschemas Community Call takes place on the 4th Monday of each month at 16:00 UK time. Call in details available in the <a href="{{ page.call-minutes }}">agenda</a>.</p>
                         <ul>
                             <li><strong>Next call: {{ page.call-date | date: "%e %B, %Y %H:%M %Z" }}</strong>
                               <meta itemprop="startDate" content="{{ page.call-date}}"/>
                               <meta itemprop="endDate" content="{{ page.call-date }}"/></li>
                             <li><a href="{{ page.call-minutes }}">Agenda</a></li>
-                            <li><a href="{{ page.call-link }}"><span itemprop="location">GoToMeeting</span></a></li>
                         </ul>
                     </div class="event">
                     <!-- End of block for monthly community call -->

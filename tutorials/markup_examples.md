@@ -42,17 +42,15 @@ bioschemas:
 
 By performing a simple search of biology events on Google, see Figure 1, we will have as a result a preview of the information about events even before going to the actual websites; information such as the date, title and description
 
-| ![Figure 1: Biology event search in Google](/tutorials/images/google-biology-event-search.png) |
-| __Figure 1: Biology event search in Google__ |
+{% include image.html file="/tutorials/images/google-biology-event-search.png" caption="Figure 1: Biology event search in Google" alt="Biology event search in Google" %}
 
 Displayed on the website you can find the same (and more) information for the event, see Figure 2.
 
-| ![Figure 2: Event detail](/tutorials/images/google-event-detail.png) |
-| __Figure 2: Biology event detail__ |
+{% include image.html file="/tutorials/images/google-event-detail.png" caption="Figure 2: Event detail" alt="Biology event detail" %}
 
 ## 2. Schema.org behind the scenes
 
-Behind the scenes metadata is used by Google to understand search resultts. In particular, it uses schema.org markup, see Figure 3.
+Behind the scenes metadata is used by Google to understand search results. In particular, it uses schema.org markup, see below.
 
 	 {
 	    "@context":"http://schema.org",
@@ -91,13 +89,11 @@ Behind the scenes metadata is used by Google to understand search resultts. In p
 	    "description":"The Synthetic Biology Congress brings together over 600 senior-level delegates representing internationally renowned research &amp; academic institutions, clinical research institutions and pharmaceutical companies and it features over 20 case studies and presentations demonstrating the latest synthetic biology tools and their therapeutic applications."
 	 }
 
-| __Figure 3: Biology event HTML__ |
+The markup `"eventStatus":"EventScheduled"` is referencing the property described on https://schema.org/Event and 'EventScheduled' is one of the options for an EventStatusType - https://schema.org/EventStatusType, see Figures 3 and 4.
 
-The markup `"eventStatus":"EventScheduled"` is referencing the property described on https://schema.org/Event and 'EventScheduled' is one of the options for an EventStatusType - https://schema.org/EventStatusType, see Figures 4 and 5.
+{% include image.html file="/tutorials/images/event-type.png" caption="Figure 3: Event markup definition" alt="Event markup definition" %}
 
-| ![Figure 4: Event markup definition](/tutorials/images/event-type.png) |
-| __Figure 4: Event markup definition__ |
 
-| ![Figure 5: Event status definition](/tutorials/images/event-status-type.png) |
-| __Figure 5: Event status definition__ |
+{% include image.html file="/tutorials/images/event-status-type.png" caption="Figure 4: Event status definition" alt="Event status definition" %}
+
 
