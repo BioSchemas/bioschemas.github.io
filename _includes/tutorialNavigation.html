@@ -2,7 +2,7 @@
 {%- if page.previousTutorial %}
 {%- assign previousTutorial = '/tutorials/' | append: page.previousTutorial.link %}
 <div class="text-center">
-&#9664;
+<i class="fas fa-angle-left fa-lg mr-2"></i>
 Previous tutorial:
 <a href="{{ previousTutorial | relative_url}}">{{page.previousTutorial.title}}</a>
 {%- endif %}
@@ -18,7 +18,7 @@ Previous tutorial:
 Next tutorial:
 {%- assign nextTutorial = '/tutorials/' | append: page.nextTutorial.link %}
 <a href="{{ nextTutorial | relative_url}}">{{ page.nextTutorial.title }}</a>
-&#9654;
+<i class="fas fa-angle-right fa-lg ml-2"></i>
 </div>
 {%- endif %}
 <hr/>
