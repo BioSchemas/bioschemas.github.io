@@ -16,6 +16,8 @@ $primary: #005ce6;
 $secondary: $bioschemas-base-color;
 $link-decoration: none;
 $component-active-bg: $secondary;
+$link-hover-color: $secondary;
+$link-hover-decoration: underline;
 
 @import
     "bootstrap/bootstrap",
