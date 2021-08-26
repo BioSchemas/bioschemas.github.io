@@ -65,7 +65,7 @@ redirect_from:
       {% if active_profile_names contains spec.name %}
       {% if site.data.profile_versions[spec.name].latest_release != nill %}
 	  {% if spec.spec_info.version == site.data.profile_versions[spec.name].latest_release %}
-	  {% include profile_table_rows.html %}
+	  {% include profile-table-rows.html %}
 
       {% endif %}
       {% endif %}
@@ -99,7 +99,7 @@ redirect_from:
       {% if site.data.profile_versions[spec.name].latest_publication != nill %}
 	  {% if spec.spec_info.version == site.data.profile_versions[spec.name].latest_publication %}
 
-	  {% include profile_table_rows.html %}
+	  {% include profile-table-rows.html %}
 
       {% endif %}
       {% endif %}
@@ -137,7 +137,7 @@ redirect_from:
       {% if site.data.profile_versions[spec.name].latest_publication != nill %}
 	  {% if spec.spec_info.version == site.data.profile_versions[spec.name].latest_publication %}
 
-	  {% include profile_table_rows.html %}
+	  {% include profile-table-rows.html %}
 
       {% endif %}
       {% endif %}
