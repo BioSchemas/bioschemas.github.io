@@ -23,7 +23,6 @@ plugins:
  - jekyll-redirect-from
  - jekyll-sitemap
  - jekyll-gist
- - jekyll-github-metadata
  - jekyll-relative-links
 
 sass:
@@ -31,36 +30,34 @@ sass:
   style: compressed
 
 # Collections
+collections_dir: pages
 collections:
-  specifications:
-    output: true
-    permalink: /:collection/:path/
-#  devSpecs:
-#    output: true
-#    permalink: /specifications/drafts/:path/
   types:
     output: true
-    permalink: /:collection/:path/
-#  devTypes:
-#    output: true
-#    permalink: /types/drafts/:path/
+    permalink: /:collection/:path
   meetings:
     output: true
-    permalink: /:collection/:path/ #Note, trailing / needed to avoid .html
+    permalink: /:collection/:path
+  tutorials:
+    output: true
+    permalink: /:collection/:path
   people:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:path
   groups:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:path
   useCases:
     output: true
-    permalink: /:collection/:path/
-  liveDeploys:
-    output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:path
   stories:
     output: true
   profiles:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:path
+  community:
+    output: true
+    permalink: /:collection/:path
+  publications:
+    output: true
+    permalink: /:collection/:path
