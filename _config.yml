@@ -52,6 +52,7 @@ collections:
     permalink: /:collection/:path
   stories:
     output: true
+    permalink: /:collection/:path
   profiles:
     output: true
     permalink: /:collection/:path
@@ -61,3 +62,10 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path
+
+defaults:
+  - scope:
+      path: ""
+      type: "profiles"
+    values:
+      layout: "profiles"
