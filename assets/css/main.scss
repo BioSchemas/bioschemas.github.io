@@ -8,6 +8,10 @@ $bioschemas-medium-sea-color: #2BB673;
 $bioschemas-steel-teal-color: #55828B;
 $bioschemas-dark-sea-green-color: #87BBA2;
 $bioschemas-tea-green-color: #C9E4CA;
+$bioschema-property-color: #0B794B;
+$schemaorg-property-color: #660000;
+$pending-property-color: #0000CC;
+$external-property-color: #454547;
 
 
 $font-family-sans-serif: 'Noto Sans', Arial, sans-serif;;
@@ -20,7 +24,6 @@ $link-hover-color: $secondary;
 
 @import
     "bootstrap/bootstrap",
-    "mixins",
     "header",
     "spec-tables",
     "code-highlight",
