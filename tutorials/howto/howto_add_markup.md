@@ -58,7 +58,7 @@ If you are eager to markup your resource, get your hands "coding" and quickly se
 
 ### 1.1. Define your strategy
 
-If your resource involves more than one profile, you first need to define the strategy that suits best to your case. You can link a profile, let's say DataCatalog, to other related ones, let's day Dataset, via properties. Sometimes those properties are bidirectional, so you can go from DataCatalog to Dataset or the other way around. Which direction suits best to you?
+If your resource involves more than one profile, you first need to define the strategy that suits best to your case. You can link a profile, let's say DataCatalog, to other related ones, let's say Dataset, via properties. Sometimes those properties are bidirectional, so you can go from DataCatalog to Dataset or the other way around. Which direction suits best to you?
 
 <div class="jumbotron-fluid rounded p-4 mb-4 mt-3 shadow">
   <div class="media">
