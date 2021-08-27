@@ -17,7 +17,6 @@ $secondary: $bioschemas-base-color;
 $link-decoration: none;
 $component-active-bg: $secondary;
 $link-hover-color: $secondary;
-$link-hover-decoration: underline;
 
 @import
     "bootstrap/bootstrap",
@@ -27,7 +26,6 @@ $link-hover-decoration: underline;
     "code-highlight",
     "live-deploys",
     "community",
-    "acknowledgments",
     "landing"
 ;
 
@@ -85,29 +83,18 @@ blockquote {
     border-left: 3px solid #bbb;
 }
 
-ul {
-    list-style-position: inside;
-    list-style: none;
-    padding-left: 1em;
+/* End - Selection color */
+
+main ol li,
+main ul li {
+    margin: 10px 0px;
 }
 
-#main_content ul li::before {
-    content: "•";
-    padding-right: 0.4em;
-    color: #0B794B;
-    line-height: 1em;
-    font-size: 1.5em;
-    vertical-align: text-bottom;
-}
+/* list circles colored */
 
-#main_content ul li:first-child {
-    margin-top: 0.625em;
+main ul li::marker {
+    color: $secondary;
 }
-
-#main_content ul li:last-child {
-    margin-bottom: 0.625em;
-}
-
 
 table {
     margin-bottom: 1.625em;
@@ -142,31 +129,6 @@ form {
     background: #f2f2f2;
     padding: 1.25em;
 }
-
-/*******************************************************************************
-Full-Width Styles
-*******************************************************************************/
-
-.outer {
-    width: 100%;
-}
-
-.inner {
-    position: relative;
-    /*max-width: 62.5em;*/
-    padding: 1.25em 0.625em;
-    margin: 0 auto;
-}
-
-.inner ul {
-    list-style: none;
-    margin-left: 0;
-}
-
-#main_content {
-    padding-top: 1.875em;
-}
-
 
 /*******************************************************************************
 Back to Top Button

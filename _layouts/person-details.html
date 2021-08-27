@@ -4,17 +4,17 @@ layout: default
 
 <h1>{{ page.first-name }} {{ page.last-name }}</h1>
 {% if page.affiliation %}
-  <p>{{ page.affiliation }}</p>
+<p>{{ page.affiliation }}</p>
 {% endif %}
 <ul>
   {% if page.homepage %}
-    <li>Home page: <a href="{{ page.homepage }}">{{ page.homepage }}</a></li>
+  <li>Home page: <a href="{{ page.homepage }}">{{ page.homepage }}</a></li>
   {% endif %}
   {% if page.orcid %}
-    <li>ORCID: <a href="{{ 'http://orcid.org/' | append: page.orcid }}">{{ page.orcid }}</a></li>
+  <li>ORCID: <a href="{{ 'http://orcid.org/' | append: page.orcid }}">{{ page.orcid }}</a></li>
   {% endif %}
   {% if page.github_username %}
-    <li>GitHub: <a href="{{ 'http://github.com/' | append: page.github_username }}">{{ page.github_username }}</a></li>
+  <li>GitHub: <a href="{{ 'http://github.com/' | append: page.github_username }}">{{ page.github_username }}</a></li>
   {% endif %}
 </ul>
 
@@ -24,16 +24,16 @@ layout: default
 
 <ul>
   {% for group in site.groups %}
-    {% if group.lead contains person-id %}
-    <li>
-      <a href="{{group.url}}">{{group.name}}</p>
-    </li>  
-    {% endif %}
-    {% if group.members contains person-id %}
-    <li>
-      <a href="{{group.url}}">{{group.name}}</p>
-    </li>
-    {% endif %}
+  {% if group.lead contains person-id %}
+  <li>
+    <a href="{{group.url}}">{{group.name}}</p>
+  </li>
+  {% endif %}
+  {% if group.members contains person-id %}
+  <li>
+    <a href="{{group.url}}">{{group.name}}</p>
+  </li>
+  {% endif %}
   {% endfor %}
 </ul>
 
@@ -42,10 +42,10 @@ layout: default
 <ul>
   {% assign meetings = site.meetings | sort: 'end_date' | reverse %}
   {% for meeting in meetings %}
-    {% if meeting.attendees contains person-id %}
-    <li>
-      <a href="{{meeting.url}}">{{meeting.name}}</p>
-    </li>
-    {% endif %}
+  {% if meeting.attendees contains person-id %}
+  <li>
+    <a href="{{meeting.url}}">{{meeting.name}}</p>
+  </li>
+  {% endif %}
   {% endfor %}
 </ul>
