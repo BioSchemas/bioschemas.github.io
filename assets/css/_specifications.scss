@@ -121,9 +121,9 @@ table.bioschemas_spec_list td {
 .bioschemas_properties a,
 .definition-table a,
 table.bioschemas_spec_list a {
-    color: #660000;
+    color: $schemaorg-property-color;
     text-decoration: none;
-    border-bottom: dotted 1px #660000;
+    border-bottom: dotted 1px $schemaorg-property-color;
 }
 
 table.bioschemas_spec_list .spec_links a:link,
