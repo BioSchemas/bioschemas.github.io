@@ -42,15 +42,13 @@ bioschemas:
   version: 2.0
 ---
 
-
-<div class="jumbotron-fluid rounded p-4 mb-4 mt-3 shadow">
-  <div class="media">
-    <img class="align-self-center mr-3" src="/tutorials/images/exclamation_mark.png" alt="warning">
-    <div class="media-body">
+<div class="col d-flex align-items-start rounded p-4 mb-4 mt-3 shadow">
+  <img class="align-self-center me-3" src="/tutorials/images/exclamation_mark.png" alt="warning">
+  <div>
       If have not read yet our <a href="./howto_right_profile">how to select the right profile for your resource</a>, please give it a try before this one.
-    </div>
   </div>
 </div>
+
 
 ## 1. A pre-markup brainstorming activity
 
@@ -60,14 +58,13 @@ If you are eager to markup your resource, get your hands "coding" and quickly se
 
 If your resource involves more than one profile, you first need to define the strategy that suits best to your case. You can link a profile, let's say DataCatalog, to other related ones, let's day Dataset, via properties. Sometimes those properties are bidirectional, so you can go from DataCatalog to Dataset or the other way around. Which direction suits best to you?
 
-<div class="jumbotron-fluid rounded p-4 mb-4 mt-3 shadow">
-  <div class="media">
-    <img class="align-self-center mr-3" src="/tutorials/images/information_mark.png" alt="information">
-    <div class="media-body">
+
+<div class="col d-flex align-items-start rounded p-4 mb-4 mt-3 shadow">
+  <img class="align-self-center me-3" src="/tutorials/images/information_mark.png" alt="information">
+  <div>
       Link from DataCatalog to Dataset if you have some few datasets and you introduce them all on your catalog landing page. Example: UniProt
       <br/>
       Link from Dataset to DataCatalog if you have that many datasets than rather than list them all, you provide a search and retrieval mechanism to find them. Example: identifiers.org
-    </div>
   </div>
 </div>
 
