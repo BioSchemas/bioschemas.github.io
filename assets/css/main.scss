@@ -8,19 +8,19 @@ $bioschemas-medium-sea-color: #2BB673;
 $bioschemas-steel-teal-color: #55828B;
 $bioschemas-dark-sea-green-color: #87BBA2;
 $bioschemas-tea-green-color: #C9E4CA;
-$bioschema-property-color: #0B794B;
 $schemaorg-property-color: #660000;
 $pending-property-color: #0000CC;
 $external-property-color: #454547;
 
-
-$font-family-sans-serif: 'Noto Sans', Arial, sans-serif;;
+// Bootstrap 5 variables
+$font-family-sans-serif: 'Noto Sans', Arial, sans-serif;
+$light: #eaf2ee;
 $font-size-root: 16px;
 $primary: #005ce6;
 $secondary: $bioschemas-base-color;
 $link-decoration: none;
-$component-active-bg: $secondary;
-$link-hover-color: $secondary;
+$component-active-bg: $bioschemas-base-color;
+$link-hover-color: $bioschemas-base-color;
 
 @import
     "bootstrap/bootstrap",
@@ -42,7 +42,7 @@ h4,
 h5,
 h6 {
     font-weight: normal;
-    color: #0B794B;
+    color: $bioschemas-base-color;;
     letter-spacing: -1px;
 }
 
@@ -96,7 +96,7 @@ main ul li {
 /* list circles colored */
 
 main ul li::marker {
-    color: $secondary;
+    color: $bioschemas-base-color;
 }
 
 table {
@@ -138,7 +138,7 @@ Back to Top Button
 *******************************************************************************/
 
 #top_link {
-    border: 2px solid #0B794B;
+    border: 2px solid $bioschemas-base-color;;
     /*border-top-left-radius: 0.625em;
     border-top-right-radius: 0.625em;*/
     float: right;
@@ -194,8 +194,8 @@ Examples
 .activeTab {
     color: #fff;
     font-weight: bold;
-    background-color: #0B794B;
-    border: 2px solid #0B794B;
+    background-color: $bioschemas-base-color;;
+    border: 2px solid $bioschemas-base-color;;
 }
 
 /*******************************************************************************
@@ -231,7 +231,7 @@ About Us Organizations Links
     vertical-align: middle;
     background-color: rgb(242, 242, 242);
     background-color: rgba(242, 242, 242, .7);
-    border: 2px solid #0B794B;
+    border: 2px solid $bioschemas-base-color;;
     border-radius: 0.625em;
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -411,11 +411,11 @@ table.bioschemas_spec_list td {
 .bioschemas_properties .new_props_sdo td a,
 .bioschemas_properties .new_props_sdo td a:link
  {
-    color: #0B794B;
+    color: $bioschemas-base-color;;
 }
 
 .cardinality td b.Minimum {
-    color: #0B794B;
+    color: $bioschemas-base-color;;
 }
 
 .cardinality td b.Recommended {
@@ -498,7 +498,7 @@ label:hover {
 input:checked+label {
     color: #2b2b2b;
     border: 1px solid #ddd;
-    border-top: 2px solid green;
+    border-top: 2px solid $bioschemas-base-color;
     border-bottom: 1px solid #fff;
 }
 
@@ -512,26 +512,19 @@ input:checked+label {
 Table of contents
 *******************************************************************************/
 
-/* TOC base styling */
+/* Indent the lists and reset any other padding */
 
-.toc {
-    padding: 1em;
-    background-color: #eaf2ee;
-    margin: 1.75em 0 2em;
-    border-radius: 4px;
-    max-width: 400px;
-    line-height: 1.4;
-}
-
-/* Reset any other padding on the first level */
-.toc>ul {
-    padding: 0;
+#toc ul {
+    padding: 0 0 0 20px;
 }
 
 /* Consistent vertical space between list items */
-.toc li, #toc ul ul li {
+
+#toc li,
+#toc ul ul li {
     margin: 8px 0 0 0;
 }
+
 
 /*******************************************************************************
 Style experiment
@@ -544,7 +537,7 @@ table.definition-table a.externalProp {
 
 table.bioschemas_properties a.newBsc,
 table.definition-table a.ext-bio  {
-    color: #0B794B;
+    color: $bioschemas-base-color;;
 }
 
 table.bioschemas_properties a.pending,
@@ -575,4 +568,12 @@ Shadow
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*******************************************************************************
+Media sizing
+*******************************************************************************/
+
+.mw-13 {
+    max-width: 13em;
 }

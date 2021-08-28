@@ -47,9 +47,9 @@
         text-decoration: none;
         border-bottom: dotted 1px $schemaorg-property-color;
         &.bioschema {
-            color: $bioschema-property-color;
+            color: $bioschemas-base-color;
             text-decoration: none;
-            border-bottom: dotted 1px $bioschema-property-color;
+            border-bottom: dotted 1px $bioschemas-base-color;
         }
         &.pending {
             color: $pending-property-color;
@@ -84,93 +84,40 @@
     }
 }
 
-.spec-table-wrapper {
-    overflow-x: auto;
-
-    .example-code {
-        text-align: initial;
-        font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-        width:100%;
-        pre {
-            width:auto;
-            padding:5px;
-            border-radius: initial;
-            box-shadow: none;
-            background-color: #eff0f1;
-            color: #242729;
-            font-size: 13px;
+.example-code {
+    text-align: initial;
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    width:100%;
+    pre {
+        width:auto;
+        padding:5px;
+        border-radius: initial;
+        box-shadow: none;
+        background-color: #eff0f1;
+        color: #242729;
+        font-size: 13px;
+        font-family: inherit;
+        word-break: keep-all;
+        white-space: pre;
+        /* Since CSS 2.1 */
+        white-space: -moz-pre-wrap;
+        /* Mozilla, since 1999 */
+        white-space: -pre-wrap;
+        /* Opera 4-6 */
+        white-space: -o-pre-wrap;
+        /* Opera 7 */
+        word-wrap: break-word;
+        /* Internet Explorer 5.5+ */
+        code {
             font-family: inherit;
-            word-break: keep-all;
-            white-space: pre;
-            /* Since CSS 2.1 */
-            white-space: -moz-pre-wrap;
-            /* Mozilla, since 1999 */
-            white-space: -pre-wrap;
-            /* Opera 4-6 */
-            white-space: -o-pre-wrap;
-            /* Opera 7 */
-            word-wrap: break-word;
-            /* Internet Explorer 5.5+ */
-            code {
-                font-family: inherit;
-                background-color: initial;
-                border-radius: initial;
-            }
+            background-color: initial;
+            border-radius: initial;
         }
     }
+}
 
-    .modal-large {
-        margin: 2.5rem;
-        max-width: initial;        
-    }
-
-    .btn-copy {
-        position: absolute;
-        right: 20px;
-        top: 20px;
-    }
-
-    .example-button {
-        position: relative;
-        display: inline-block;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        border-radius: 6px;
-        border: none;        
-        a {
-            color: $bioschemas-steel-teal-color;
-            border-bottom: initial;
-            color: #fff;
-        }
-        .tooltiptext {
-            visibility: hidden;
-            background-color: black;
-            color: #fff;
-            opacity: 0.8;
-            text-align: center;
-            padding: 5px 0;
-            border-radius: 6px;
-            width: 140px;
-            bottom: 115%;
-            left: 50%;
-            margin-left: -70px;
-
-            position: absolute;
-            z-index: 1;
-        }
-        &:hover .tooltiptext {
-            visibility: visible;
-        }
-        .tooltiptext::after {
-            content: " ";
-            position: absolute;
-            top: 100%;
-            /* At the bottom of the tooltip */
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: black transparent transparent transparent;
-        }
-
-    }    
+.btn-copy {
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }
