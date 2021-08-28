@@ -1,0 +1,172 @@
+
+/*******************************************************************************
+Specification Properties
+*******************************************************************************/
+
+.bioschemas-spec-list-wrapper {
+    overflow-x: auto;
+}
+
+table.bioschemas_properties,
+table.bioschemas_spec_list,
+table.definition-table {
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 1em 0 0 0;
+    border: 1px solid #98A0A6;
+    border-spacing: 3px;
+    display: table;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Tahoma, Arial, sans-serif;
+    line-height: 160%;
+    font-size: 100%;
+}
+
+table.bioschemas_spec_list {
+    margin-left: -2em;
+}
+
+.bioschemas_properties tr,
+.definition-table tr,
+table.bioschemas_spec_list tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    font-size: 100%;
+}
+
+.bioschemas_properties th,
+.definition-table th,
+table.bioschemas_spec_list th {
+    padding-left: 5px;
+    background: #C7CBCE;
+    color: #3A4956;
+    font-weight: bold;
+    display: table-cell;
+    text-align: center;
+    border: none;
+    vertical-align: middle;
+    font-size: 100%;
+}
+
+.bioschemas_properties tbody th,
+.definition-table tbody th,
+table.bioschemas_spec_list th {
+    text-align: left;
+    vertical-align: top;
+}
+
+.bioschemas_properties th:first-child,
+.definition-table th:first-child,
+table.bioschemas_spec_list th:first-child {
+    border-top-left-radius: 0;
+}
+
+.bioschemas_properties th:last-child,
+.definition-table th:last-child,
+table.bioschemas_spec_list th:last-child {
+    border-top-right-radius: 0;
+}
+
+.bioschemas_properties td,
+.definition-table td,
+table.bioschemas_spec_list td {
+    border: 0;
+    padding: 0.625em;
+    min-height: 1.25em;
+    max-height: 2.5em;
+    vertical-align: top;
+    font-size: 100%;
+    display: table-cell;
+    max-width: 20em;
+}
+
+.definition-table.bsc_type td
+{
+  max-width: 40em;
+}
+
+.bioschemas_properties.bsc_type td,
+.definition-table.bsc_type th
+{
+    max-width: none;
+}
+
+.reu_props_sdo td,
+.new_props_sdo td,
+.cardinality td {
+    font-weight: bold;
+    background: #C7CBCE;
+    font-size: 100%;
+}
+
+.bioschemas_properties .new_props_sdo td a,
+.bioschemas_properties .new_props_sdo td a:link
+ {
+    color: $bioschemas-base-color;;
+}
+
+.cardinality td b.Minimum {
+    color: $bioschemas-base-color;;
+}
+
+.cardinality td b.Recommended {
+    color: #98771a;
+}
+
+.cardinality td b.Optional {
+    color: #555daf;
+}
+
+.bioschemas_properties a,
+.definition-table a,
+table.bioschemas_spec_list a {
+    color: #660000;
+    text-decoration: none;
+    border-bottom: dotted 1px #660000;
+}
+
+table.bioschemas_spec_list .spec_links a:link,
+table.bioschemas_spec_list .spec_links a {
+    display: inline-block;
+    border-bottom: none;
+}
+
+table.bioschemas_spec_list td a img {
+    width: 3.7em;
+}
+
+.bioschemas_properties a:link,
+.definition-table a:link
+{
+    color: #990000;
+    text-decoration: none;
+    border-bottom: dotted 1px #990000;
+}
+
+/*******************************************************************************
+Specifications
+*******************************************************************************/
+
+.ex_min {
+    background-color: rgb(11, 121, 75);
+    background-color: rgba(11, 121, 75, .5);
+}
+
+.ex_rec {
+    background-color: rgb(144, 238, 144);
+    background-color: rgba(144, 238, 144, .5);
+}
+
+.ex_opt {
+    background-color: rgb(224, 255, 255);
+    background-color: rgba(224, 255, 255, .5);
+}
+
+.groups_h:first-of-type {
+    margin-top: 1em;
+}
+
+.groups_h {
+    margin-top: 1.625em;
+}
