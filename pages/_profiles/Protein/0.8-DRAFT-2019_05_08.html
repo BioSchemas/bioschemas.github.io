@@ -394,24 +394,9 @@ mapping:
     }
 
 ---
-<!DOCTYPE HTML>
-<html>
-   {% include head.html %}
-   <body>
-      {% include header.html %}
-      {% include navbar.html %}
-      <div class="page-content">
-         <div class="wrapper">
-            <div id="main-content-wrapper" class="outer">
-               <section id="main_content" class="inner">
-                  {% include profile-start.html %}
-                  <div class="spec-table-wrapper">
-                    {% include specification-table.html %}
-                  </div>
-               </section>
-            </div>
-         </div>
-      </div>
-      {% include footer.html %}
-   </body>
-</html>
+
+{% include profile-start.html %}
+<div class="spec-table-wrapper">
+  {% include specification-table.html %}
+</div>
+

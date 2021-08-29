@@ -30,20 +30,9 @@ external: #454547;
 ---
 
 
-<!DOCTYPE HTML>
-<html>
-   {% include head.html %}
+{% include type-start.html %}
 
-   <body>
-      {% include header.html %}
-      {% include navbar.html %}
-      <div class="page-content">
-        <div class="wrapper">
-           <div id="main-content-wrapper" class="outer">
-              <section id="main_content" class="inner">
-                {% include type-start.html %}
-
-                <table class="definition-table bsc_type">
+<table class="definition-table bsc_type">
         <thead>
   <tr><th>Property</th><th>Expected Type</th><th>Description</th>
   </tr>
@@ -273,13 +262,4 @@ external: #454547;
 <link  property="rangeIncludes" href="http://schema.org/URL" /><a   href="http://schema.org/URL">URL</a>&nbsp;<link property="domainIncludes" href="http://schema.org/Thing"></td><td class="prop-desc" property="rdfs:comment">URL of the item.</td></tr>
 
 </table>
-               </section>
-             </div>
-           </div>
-      </div>
-      {% include footer.html %}
 
-
-
-   </body>
-</html>

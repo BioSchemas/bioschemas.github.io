@@ -16,18 +16,7 @@ status: revision
 version: '0.1-DRAFT-2020_07_21'
 ---
 
-<!DOCTYPE HTML>
-<html>
-   {% include head.html %}
-
-   <body>
-      {% include header.html %}
-      {% include navbar.html %}
-      <div class="page-content">
-        <div class="wrapper">
-           <div id="main-content-wrapper" class="outer">
-              <section id="main_content" class="inner">
-                {% include type-start.html %}
+{% include type-start.html %}
 
 <table class="definition-table bsc_type">
         <thead>
@@ -160,13 +149,4 @@ Unregistered or niche encoding and file formats can be indicated instead via the
 
 </table>
 
-               </section>
-             </div>
-           </div>
-      </div>
-      {% include footer.html %}
 
-
-
-   </body>
-</html>
