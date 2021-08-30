@@ -62,6 +62,12 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path
+  posts:
+    output: true
+    permalink: /:collection/:path
+  news:
+    output: true
+    permalink: /:collection/:path
 
 defaults:
   - scope:
