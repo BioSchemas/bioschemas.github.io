@@ -3,7 +3,7 @@
         .hexagon {
             width: 8%;
             margin: 1px;
-            @include transition(1s, ease-in-out)
+            transition: all 1s;
         }
         .hexagon:hover {
             -webkit-transform: rotate(180deg);
@@ -13,7 +13,6 @@
             transform: rotate(180deg);
         }
         .bio-title {
-            padding: 0px;
             width: 30%;
         }
     }
