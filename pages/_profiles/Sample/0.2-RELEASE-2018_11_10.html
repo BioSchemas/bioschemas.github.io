@@ -150,176 +150,161 @@ mapping:
   example: ""
 ---
 
-<!DOCTYPE HTML>
-<html>
-   {% include head.html %}
-   <body>
-      {% include header.html %}
-      {% include navbar.html %}
-      <div class="page-content">
-         <div class="wrapper">
-            <div id="main-content-wrapper" class="outer">
-               <section id="main_content" class="inner">
-                  {% include profile-start.html %}
-                  <div class="spec-table-wrapper">
-                     {% include specification-table.html %}
-                     <br />
-                     <hr />
-                     <br />
-                     <h4 id="PropertyValueTable">PropertyValue</h4>
-                     <table class="bioschemas_properties bsc_type bsc_type">
-                        <thead>
-                           <tr>
-                              <th>Property</th>
-                              <th>Expected Type</th>
-                              <th>Description</th>
-                              <th>CD</th>
-                              <th>Controlled Vocabulary</th>
-                           </tr>
-                        </thead>
-                        <tbody>
-                           <tr class="cardinality">
-                              <td colspan="5">
-                                 Marginality: <b>Minimum</b>
-                              </td>
-                           </tr>
-                           <tr>
-                              <th><a href="http://schema.org/name">name</a></th>
-                              <td>
-                                 <a href="http://schema.org/Text">Text</a>
-                              </td>
-                              <td>
-                                 <strong>Schema</strong>: The name of the item.<br />
-                                 <strong>Bioschemas</strong>: The name of the additional property. Otherwise known as a key or attribute.
-                              <td>ONE</td>
-                              <td></td>
-                           </tr>
-                           <tr>
-                              <th><a href="http://schema.org/value">value</a></th>
-                              <td>
-                                 <a href="http://schema.org/Boolean">Boolean</a><br />
-                                 <a href="http://schema.org/Number">Number</a><br /><a href="http://schema.org/Text">Text</a>
-                              </td>
-                              <td>
-                                 <strong>Schema</strong>: The value of the quantitative value or property value node.
-                                 <ul>
-                                 <li>For QuantitativeValue and MonetaryAmount, the recommended type for values is 'Number'.</li>
-                                 <li>For PropertyValue, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.</li>
-                                 <br />
-                                 <strong>Bioschemas</strong>: Attribute value.<br />
-                                 <u><strong>Note</strong></u>: Bioschemas have removed <a href="http://schema.org/StructuredValue">StructuredValue</a> from the Expected Types.
-                              <td>ONE</td>
-                              <td></td>
-                           </tr>
-                           <tr class="cardinality">
-                              <td colspan="5">
-                                 Marginality: <b>Recommended</b>
-                              </td>
-                           </tr>
-                           <tr>
-                              <th><a class="newBsc" href="http://schema.org/valueReference">valueReference</a></th>
-                              <td>
-                                 <a class="newBsc" href="#CategoryCodeTable">CategoryCode</a>
-                              </td>
-                              <td>
-                                 <strong>Schema</strong>: A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.<br />
-                                 <strong>Bioschemas</strong>: Catagory code to enhance the value this could be a link to an ontology term in the Ontology Lookup Service.<br />
-                                 <u><strong>Note</strong></u>: Bioschemas has added CategoryCode to the ExpectedTypes (of <a href="http://schema.org/valueReference">valueReference</a>) and removed
-                                 <a href="http:schema.org/Enumeration">Enumeration</a>, <a href="http:schema.org/PropertyValue">PropertyValue</a>, <a href="http:schema.org/QualitativeValue">QualitativeValue</a>
-                                 <a href="http:schema.org/QuantitativeValue">QuantitativeValue</a>, and <a href="http:schema.org/StructuredValue">StructuredValue</a>.
-                              </td>
-                              <td>MANY</td>
-                              <td></td>
-                           </tr>
-                           <tr class="cardinality">
-                              <td colspan="5">
-                                 Marginality: <b>Optional</b>
-                              </td>
-                           </tr>
-                           <tr>
-                              <th><a href="http://schema.org/unitCode">unitCode</a></th>
-                              <td>
-                                 <a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
-                              </td>
-                              <td>
-                                 <strong>Schema</strong>: The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.
-                              </td>
-                              <td>ONE</td>
-                              <td></td>
-                           </tr>
-                           <tr>
-                              <th><a href="http://schema.org/unitText">unitText</a></th>
-                              <td>
-                                 <a href="http://schema.org/Text">Text</a>
-                              </td>
-                              <td>
-                                 <strong>Schema</strong>: A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for unitCode.
-                              </td>
-                              <td>ONE</td>
-                              <td></td>
-                           </tr>
-                        </tbody>
-                     </table>
-                     <br />
-                     <hr />
-                     <br />
-                     <h4 id="CategoryCodeTable">CategoryCode</h4>
-                     <table class="bioschemas_properties bsc_type">
-                        <thead>
-                           <tr>
-                              <th>Property</th>
-                              <th>Expected Type</th>
-                              <th>Description</th>
-                              <th>CD</th>
-                              <th>Controlled Vocabulary</th>
-                           </tr>
-                        </thead>
-                        <tbody>
-                           <tr class="cardinality">
-                              <td colspan="5">
-                                 Marginality: <b>Minimum</b>
-                              </td>
-                           </tr>
-                           <tr>
-                              <th><a href="http://schema.org/name">name</a></th>
-                              <td>
-                                 <a href="http://schema.org/Text">Text</a>
-                              </td>
-                              <td>
-                                 <strong>Schema</strong>: The name of the item.<br />
-                                 <strong>Bioschemas</strong>: A human readable label.
-                              <td>MANY</td>
-                              <td></td>
-                           </tr>
-                           <tr>
-                              <th><a class="pending" href="http://pending.schema.org/codeValue">codeValue</a></th>
-                              <td>
-                                 <a href="http://schema.org/Text">Text</a>
-                              </td>
-                              <td>
-                                 <strong>Schema</strong>: A short textual code that uniquely identifies the value.
-                              <td>MANY</td>
-                              <td></td>
-                           </tr>
-                           <tr>
-                              <th><a href="http://schema.org/url">url</a></th>
-                              <td>
-                                 <a href="http://schema.org/URL">URL</a>
-                              </td>
-                              <td>
-                                 <strong>Schema</strong>: URL of the item.<br />
-                                 <strong>Bioschemas</strong>: The URI for the vocabulary code.
-                              </td>
-                              <td>MANY</td>
-                              <td></td>
-                           </tr>
-                        </tbody>
-                     </table>
-                  </div>
-               </section>
-            </div>
-         </div>
-      </div>
-      {% include footer.html %}
-   </body>
-</html>
+
+{% include profile-start.html %}
+<div class="spec-table-wrapper">
+   {% include specification-table.html %}
+   <br />
+   <hr />
+   <br />
+   <h4 id="PropertyValueTable">PropertyValue</h4>
+   <table class="bioschemas_properties bsc_type bsc_type">
+      <thead>
+         <tr>
+            <th>Property</th>
+            <th>Expected Type</th>
+            <th>Description</th>
+            <th>CD</th>
+            <th>Controlled Vocabulary</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr class="cardinality">
+            <td colspan="5">
+               Marginality: <b>Minimum</b>
+            </td>
+         </tr>
+         <tr>
+            <th><a href="http://schema.org/name">name</a></th>
+            <td>
+               <a href="http://schema.org/Text">Text</a>
+            </td>
+            <td>
+               <strong>Schema</strong>: The name of the item.<br />
+               <strong>Bioschemas</strong>: The name of the additional property. Otherwise known as a key or attribute.
+            <td>ONE</td>
+            <td></td>
+         </tr>
+         <tr>
+            <th><a href="http://schema.org/value">value</a></th>
+            <td>
+               <a href="http://schema.org/Boolean">Boolean</a><br />
+               <a href="http://schema.org/Number">Number</a><br /><a href="http://schema.org/Text">Text</a>
+            </td>
+            <td>
+               <strong>Schema</strong>: The value of the quantitative value or property value node.
+               <ul>
+               <li>For QuantitativeValue and MonetaryAmount, the recommended type for values is 'Number'.</li>
+               <li>For PropertyValue, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.</li>
+               <br />
+               <strong>Bioschemas</strong>: Attribute value.<br />
+               <u><strong>Note</strong></u>: Bioschemas have removed <a href="http://schema.org/StructuredValue">StructuredValue</a> from the Expected Types.
+            <td>ONE</td>
+            <td></td>
+         </tr>
+         <tr class="cardinality">
+            <td colspan="5">
+               Marginality: <b>Recommended</b>
+            </td>
+         </tr>
+         <tr>
+            <th><a class="newBsc" href="http://schema.org/valueReference">valueReference</a></th>
+            <td>
+               <a class="newBsc" href="#CategoryCodeTable">CategoryCode</a>
+            </td>
+            <td>
+               <strong>Schema</strong>: A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.<br />
+               <strong>Bioschemas</strong>: Catagory code to enhance the value this could be a link to an ontology term in the Ontology Lookup Service.<br />
+               <u><strong>Note</strong></u>: Bioschemas has added CategoryCode to the ExpectedTypes (of <a href="http://schema.org/valueReference">valueReference</a>) and removed
+               <a href="http:schema.org/Enumeration">Enumeration</a>, <a href="http:schema.org/PropertyValue">PropertyValue</a>, <a href="http:schema.org/QualitativeValue">QualitativeValue</a>
+               <a href="http:schema.org/QuantitativeValue">QuantitativeValue</a>, and <a href="http:schema.org/StructuredValue">StructuredValue</a>.
+            </td>
+            <td>MANY</td>
+            <td></td>
+         </tr>
+         <tr class="cardinality">
+            <td colspan="5">
+               Marginality: <b>Optional</b>
+            </td>
+         </tr>
+         <tr>
+            <th><a href="http://schema.org/unitCode">unitCode</a></th>
+            <td>
+               <a href="http://schema.org/Text">Text</a><br /><a href="http://schema.org/URL">URL</a>
+            </td>
+            <td>
+               <strong>Schema</strong>: The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.
+            </td>
+            <td>ONE</td>
+            <td></td>
+         </tr>
+         <tr>
+            <th><a href="http://schema.org/unitText">unitText</a></th>
+            <td>
+               <a href="http://schema.org/Text">Text</a>
+            </td>
+            <td>
+               <strong>Schema</strong>: A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for unitCode.
+            </td>
+            <td>ONE</td>
+            <td></td>
+         </tr>
+      </tbody>
+   </table>
+   <br />
+   <hr />
+   <br />
+   <h4 id="CategoryCodeTable">CategoryCode</h4>
+   <table class="bioschemas_properties bsc_type">
+      <thead>
+         <tr>
+            <th>Property</th>
+            <th>Expected Type</th>
+            <th>Description</th>
+            <th>CD</th>
+            <th>Controlled Vocabulary</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr class="cardinality">
+            <td colspan="5">
+               Marginality: <b>Minimum</b>
+            </td>
+         </tr>
+         <tr>
+            <th><a href="http://schema.org/name">name</a></th>
+            <td>
+               <a href="http://schema.org/Text">Text</a>
+            </td>
+            <td>
+               <strong>Schema</strong>: The name of the item.<br />
+               <strong>Bioschemas</strong>: A human readable label.
+            <td>MANY</td>
+            <td></td>
+         </tr>
+         <tr>
+            <th><a class="pending" href="http://pending.schema.org/codeValue">codeValue</a></th>
+            <td>
+               <a href="http://schema.org/Text">Text</a>
+            </td>
+            <td>
+               <strong>Schema</strong>: A short textual code that uniquely identifies the value.
+            <td>MANY</td>
+            <td></td>
+         </tr>
+         <tr>
+            <th><a href="http://schema.org/url">url</a></th>
+            <td>
+               <a href="http://schema.org/URL">URL</a>
+            </td>
+            <td>
+               <strong>Schema</strong>: URL of the item.<br />
+               <strong>Bioschemas</strong>: The URI for the vocabulary code.
+            </td>
+            <td>MANY</td>
+            <td></td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
