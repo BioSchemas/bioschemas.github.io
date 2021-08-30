@@ -21,6 +21,7 @@ $secondary: $bioschemas-base-color;
 $link-decoration: none;
 $component-active-bg: $bioschemas-base-color;
 $link-hover-color: $bioschemas-base-color;
+$accordion-button-active-color: #000000;
 
 @import
     "bootstrap/bootstrap",
@@ -169,8 +170,6 @@ Tabs
     color: #2b2b2b;
     border-top: 2px solid $bioschemas-base-color;
 }
-
-
 
 /*******************************************************************************
 Examples
