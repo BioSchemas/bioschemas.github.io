@@ -19,17 +19,17 @@
         </div>
         <div class="modal-body">
             <div id="bundle-property-examples" class="example-code">
-                {% highlight javascript %}{% for prop in mapping_examples %}
-
-                //Property: {{prop.property}}
-                {{prop.example}}
-                {% endfor %}{% endhighlight %}
+{% highlight javascript %}
+{% for prop in mapping_examples %}
+//Property: {{prop.property}}
+{{prop.example}}
+{% endfor %}{% endhighlight %}
                 <button type="button" class="btn btn-primary btn-copy"
                     data-clipboard-target="#bundle-property-examples"><i class="fas fa-copy"></i></button>
             </div>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
         </div>
     </div>

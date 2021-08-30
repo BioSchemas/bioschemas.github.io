@@ -170,3 +170,23 @@ Specifications
 .groups_h {
     margin-top: 1.625em;
 }
+
+
+/*******************************************************************************
+Style experiment
+*******************************************************************************/
+
+table.bioschemas_properties a.externalProp,
+table.definition-table a.externalProp {
+    color: #454547;
+}
+
+table.bioschemas_properties a.newBsc,
+table.definition-table a.ext-bio  {
+    color: $bioschemas-base-color;;
+}
+
+table.bioschemas_properties a.pending,
+table.definition-table a.ext-pending {
+    color: $pending-property-color;
+}
