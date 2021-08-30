@@ -5,11 +5,12 @@
 {%- assign mapping_examples = mapping_examples | push: prop %}
 {%- endif %}
 {%- endfor %}
-{%- unless mapping_examples.size < 1 %} 
-<span class="tooltiptext">View all examples</span>
-<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Examples
-</button>
+{%- unless mapping_examples.size < 1 %}
+<div class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="View all examples">
+    <button type="button" class="btn btn-secondary" data-bs-target="#exampleModal" data-bs-toggle="modal">
+        Examples
+    </button>
+</div>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
@@ -119,21 +120,20 @@
             <td class="example-column">
                 <!-- Example modal starts here -->
                 {%- unless prop.example == "" %}
-                <div class="example-button">
-                    <span class="tooltiptext">View <strong>&#8810{{prop.property}}&#8811</strong> example</span>
-                    <button type="button" class="btn btn-secondary" data-toggle="modal"
-                        data-target="#myModal{{prop.property}}"><i class="fas fa-file-code"></i></button>
+                <div class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" title="View <strong>&#8810{{prop.property}}&#8811</strong> example">
+                    <button type="button" class="btn btn-secondary" data-bs-target="#myModal{{prop.property}}" data-bs-toggle="modal">
+                        <i class="fas fa-file-code"></i>
+                    </button>
                 </div>
                 <!-- Modal -->
-                <div id="myModal{{prop.property}}" class="modal fade" role="dialog">
-                    <div class="modal-dialog modal-large">
-
+                </div>
+                <div class="modal fade" id="myModal{{prop.property}}" tabindex="-1" aria-labelledby="myModal{{prop.property}}" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
-                                <span class="modal-title">Property <strong>&#8810{{prop.property}}&#8811</strong>
-                                    example</span>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h5 class="modal-title" id="exampleModalLabel">Property <strong>&#8810{{prop.property}}&#8811</strong> example</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <div id="{{current_mg}}-example-num-{{forloop.index}}" class="example-code">
@@ -144,7 +144,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>

@@ -1,4 +1,12 @@
+/**
+ * Enabling CLipboard
+ */
+
 new ClipboardJS('.btn-copy');
+
+/**
+ * Heading animation
+ */
 
 $(window).scroll(function () {
   var topOfDiv = $('#header_wrap').offset().top;
@@ -59,7 +67,9 @@ $(document).ready(function () {
 });
 
 
-// Better TOC links
+/**
+ * Topnav over headings fix
+ */
 
 (function (document, history, location) {
   var HISTORY_SUPPORT = !!(history && history.pushState);
@@ -105,6 +115,10 @@ $(document).ready(function () {
   $(document).ready($.proxy(anchorScrolls, 'init'));
 })(window.document, window.history, window.location);
 
+/**
+ * Scroll to top
+ */
+
 var toggleHeight = $(window).outerHeight() / 3;
 
 $(window).scroll(function () {
@@ -123,4 +137,17 @@ $(".top_link").click(function () {
   $("html, body").animate({ scrollTop: 0 }, "slow");
   return false;
 });
+
+/**
+ * Activate tooltips
+ */
+
+ $(function () {
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl, {
+      animation: false
+    })
+  })
+})
 
