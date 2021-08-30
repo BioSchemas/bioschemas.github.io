@@ -16,134 +16,132 @@ redirect_from:
 
 <br />
 
-{% assign dep_profiles = site.data.profile_versions | where: 'status', 'deprecated' %}
-{% assign dep_profile_names = "" | split: ',' %}
-{% for item in dep_profiles %}
-	{% assign dep_profile_names = dep_profile_names | push: item.name %}
-{% endfor %}
+{%- assign dep_profiles = site.data.profile_versions | where: 'status', 'deprecated' %}
+{%- assign dep_profile_names = "" | split: ',' %}
+{%- for item in dep_profiles %}
+	{%- assign dep_profile_names = dep_profile_names | push: item.name %}
+{%- endfor %}
 
-{% assign active_profiles = site.data.profile_versions | where: 'status', 'active' %}
-{% assign active_profile_names = "" | split: ',' %}
-{% for item in active_profiles %}
-	{% assign active_profile_names = active_profile_names | push: item.name %}
-{% endfor %}
+{%- assign active_profiles = site.data.profile_versions | where: 'status', 'active' %}
+{%- assign active_profile_names = "" | split: ',' %}
+{%- for item in active_profiles %}
+	{%- assign active_profile_names = active_profile_names | push: item.name %}
+{%- endfor %}
 
-
-<!-- Tab layout for different profile release status -->
 <div class="bioschemas-spec-list-wrapper">
+    <!-- Tab layout for different profile release status -->
+    <nav class="mt-3">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-release-tab" data-bs-toggle="tab" data-bs-target="#nav-release" type="button" role="tab" aria-controls="nav-release" aria-selected="true">RELEASE</button>
+          <button class="nav-link" id="nav-draft-tab" data-bs-toggle="tab" data-bs-target="#nav-draft" type="button" role="tab" aria-controls="nav-draft" aria-selected="false">DRAFT</button>
+          <button class="nav-link" id="nav-deprecated-tab" data-bs-toggle="tab" data-bs-target="#nav-deprecated" type="button" role="tab" aria-controls="nav-deprecated" aria-selected="false">DEPRECATED</button>
+        </div>
+    </nav>
+    <div class="tab-content py-3 mb-3" id="nav-tabContent">
+        <!-- RELEASED PROFILES -->
+        <div class="tab-pane fade show active" id="nav-release" role="tabpanel" aria-labelledby="nav-release-tab">
+            <h3>RELEASE</h3>
+            <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
+                <p><em>Released</em> profiles have been agreed by the community and are widely deployed.</p>
+                <p>Please note that there may be a newer version in <em>draft</em> status when the community agree that a refinement is needed. Where applicable, these are linked from the release version with the label 'Latest draft'.</p>
+                <p><strong>Note:</strong> In May 2020 we adopted a new set of <a href="https://github.com/Bioschemas/governance/blob/master/governance.md">governance</a> rules which affect the numbering of our profiles. Since May 2020, new releases are given the next major release number, i.e. are of the form X.0-RELEASE.</p>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th style="text-align: center;">Group</th>
+                    <th style="text-align: center;">Use Cases</th>
+                    <th style="text-align: center;">Cross Walk</th>
+                    <th style="text-align: center;">Task &amp; Issues</th>
+                    <th style="text-align: center;">Examples</th>
+                    <th style="text-align: center;">Live Deploys</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% assign prof_specs = site.profiles | where: 'spec_type', 'Profile'%}
+                {% for spec in prof_specs %}
+                {% if active_profile_names contains spec.name %}
+                {% if site.data.profile_versions[spec.name].latest_release != nill %}
+                {% if spec.spec_info.version == site.data.profile_versions[spec.name].latest_release %}
+                {% include profile-table-rows.html %}
 
-<input id="tab1" type="radio" name="tabs" checked>
-<label for="tab1">RELEASE</label>
-<input id="tab2" type="radio" name="tabs">
-<label for="tab2">DRAFT</label>
-<input id="tab3" type="radio" name="tabs">
-<label for="tab3">DEPRECATED</label>
+                {% endif %}
+                {% endif %}
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- DRAFT PROFILES -->
+        <div class="tab-pane fade" id="nav-draft" role="tabpanel" aria-labelledby="nav-draft-tab">
+            <h3>DRAFT</h3>
+            <p><em>Draft</em> profiles are actively being worked on and are likely to change. Disucssions take place on the <a href="https://lists.w3.org/Archives/Public/public-bioschemas/" itemprop="email">mailing list</a> and the <a href="https://github.com/Bioschemas/specifications/issues">GitHub issue tracker</a>.</p>
+            <p>Draft profiles are either working towards their first release or are refinements of a previously <em>released</em> version.</p>
+            <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th style="text-align: center;">Group</th>
+                    <th style="text-align: center;">Use Cases</th>
+                    <th style="text-align: center;">Cross Walk</th>
+                    <th style="text-align: center;">Task &amp; Issues</th>
+                    <th style="text-align: center;">Examples</th>
+                    <th style="text-align: center;">Live Deploys</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% assign prof_specs = site.profiles | where: 'spec_type', 'Profile'%}
+                {% for spec in prof_specs %}
+                {% if active_profile_names contains spec.name %}
+                {% if site.data.profile_versions[spec.name].latest_publication != nill %}
+                {% if spec.spec_info.version == site.data.profile_versions[spec.name].latest_publication %}
 
-<!-- RELEASED PROFILES -->
-<section id="tab1Content" class="tabs">
-   <h3>RELEASE</h3>
-   <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
-      <p><em>Released</em> profiles have been agreed by the community and are widely deployed.</p>
-      <p>Please note that there may be a newer version in <em>draft</em> status when the community agree that a refinement is needed. Where applicable, these are linked from the release version with the label 'Latest draft'.</p>
-      <p><strong>Note:</strong> In May 2020 we adopted a new set of <a href="https://github.com/Bioschemas/governance/blob/master/governance.md">governance</a> rules which affect the numbering of our profiles. Since May 2020, new releases are given the next major release number, i.e. are of the form X.0-RELEASE.</p>
-      <thead>
-      <tr>
-          <th>Name</th>
-          <th style="text-align: center;">Group</th>
-          <th style="text-align: center;">Use Cases</th>
-          <th style="text-align: center;">Cross Walk</th>
-          <th style="text-align: center;">Task &amp; Issues</th>
-          <th style="text-align: center;">Examples</th>
-          <th style="text-align: center;">Live Deploys</th>
-      </tr>
-      </thead>
-	  <tbody>
-      {% assign prof_specs = site.profiles | where: 'spec_type', 'Profile'%}
-      {% for spec in prof_specs %}
-      {% if active_profile_names contains spec.name %}
-      {% if site.data.profile_versions[spec.name].latest_release != nill %}
-	  {% if spec.spec_info.version == site.data.profile_versions[spec.name].latest_release %}
-	  {% include profile-table-rows.html %}
+                {% include profile-table-rows.html %}
 
-      {% endif %}
-      {% endif %}
-      {% endif %}
-      {% endfor %}
-      </tbody>
-  </table>
-</section>
+                {% endif %}
+                {% endif %}
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- DEPRECATED PROFILES -->
+        <div class="tab-pane fade" id="nav-deprecated" role="tabpanel" aria-labelledby="nav-deprecated-tab">
+            <h3>DEPRECATED</h3>
+            <p>A profile can be <em>deprecated</em> because:</p>
+            <ul>
+                <li>The working group decided that the profile is no longer required, e.g. the work undertaken was deemed unsatisfactory, or failed to accomplish the desired objective(s), or has been superceded by some other activity; or</li>
+                <li>The working group developing it have suspended work.</li>
+            </ul>
+            <p>If you would like to continue work on one of these profiles then please email the community <a href="mailto:public-bioschemas@w3.org" itemprop="email">public-bioschemas@w3.org</a> to discuss.</p>
+            <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th style="text-align: center;">Group</th>
+                    <th style="text-align: center;">Use Cases</th>
+                    <th style="text-align: center;">Cross Walk</th>
+                    <th style="text-align: center;">Task &amp; Issues</th>
+                    <th style="text-align: center;">Examples</th>
+                    <th style="text-align: center;">Live Deploys</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% assign prof_specs = site.profiles | where: 'spec_type', 'Profile'%}
+                {% for spec in prof_specs %}
+                {% if dep_profile_names contains spec.name %}
+                {% if site.data.profile_versions[spec.name].latest_publication != nill %}
+                {% if spec.spec_info.version == site.data.profile_versions[spec.name].latest_publication %}
 
-<!-- DRAFT PROFILES -->
-<section id="tab2Content" class="tabs">
-   <h3>DRAFT</h3>
-   <p><em>Draft</em> profiles are actively being worked on and are likely to change. Disucssions take place on the <a href="https://lists.w3.org/Archives/Public/public-bioschemas/" itemprop="email">mailing list</a> and the <a href="https://github.com/Bioschemas/specifications/issues">GitHub issue tracker</a>.</p>
-   <p>Draft profiles are either working towards their first release or are refinements of a previously <em>released</em> version.</p>
-   <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
-      <thead>
-      <tr>
-          <th>Name</th>
-          <th style="text-align: center;">Group</th>
-          <th style="text-align: center;">Use Cases</th>
-          <th style="text-align: center;">Cross Walk</th>
-          <th style="text-align: center;">Task &amp; Issues</th>
-          <th style="text-align: center;">Examples</th>
-          <th style="text-align: center;">Live Deploys</th>
-      </tr>
-      </thead>
-	  <tbody>
-      {% assign prof_specs = site.profiles | where: 'spec_type', 'Profile'%}
-      {% for spec in prof_specs %}
-      {% if active_profile_names contains spec.name %}
-      {% if site.data.profile_versions[spec.name].latest_publication != nill %}
-	  {% if spec.spec_info.version == site.data.profile_versions[spec.name].latest_publication %}
+                {% include profile-table-rows.html %}
 
-	  {% include profile-table-rows.html %}
-
-      {% endif %}
-      {% endif %}
-      {% endif %}
-      {% endfor %}
-      </tbody>
-  </table>
-</section>
-
-
-<section id="tab3Content" class="tabs">
-   <h3>DEPRECATED</h3>
-   <p>A profile can be <em>deprecated</em> because:</p>
-   <ul>
-     <li>The working group decided that the profile is no longer required, e.g. the work undertaken was deemed unsatisfactory, or failed to accomplish the desired objective(s), or has been superceded by some other activity; or</li>
-     <li>The working group developing it have suspended work.</li>
-   </ul>
-  <p>If you would like to continue work on one of these profiles then please email the community <a href="mailto:public-bioschemas@w3.org" itemprop="email">public-bioschemas@w3.org</a> to discuss.</p>
-   <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center;">
-      <thead>
-      <tr>
-          <th>Name</th>
-          <th style="text-align: center;">Group</th>
-          <th style="text-align: center;">Use Cases</th>
-          <th style="text-align: center;">Cross Walk</th>
-          <th style="text-align: center;">Task &amp; Issues</th>
-          <th style="text-align: center;">Examples</th>
-          <th style="text-align: center;">Live Deploys</th>
-      </tr>
-      </thead>
-	  <tbody>
-      {% assign prof_specs = site.profiles | where: 'spec_type', 'Profile'%}
-      {% for spec in prof_specs %}
-      {% if dep_profile_names contains spec.name %}
-      {% if site.data.profile_versions[spec.name].latest_publication != nill %}
-	  {% if spec.spec_info.version == site.data.profile_versions[spec.name].latest_publication %}
-
-	  {% include profile-table-rows.html %}
-
-      {% endif %}
-      {% endif %}
-      {% endif %}
-      {% endfor %}
-      </tbody>
-  </table>
-</section>
+                {% endif %}
+                {% endif %}
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 
 <!-- change number columns based on device -->

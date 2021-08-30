@@ -30,7 +30,6 @@ $link-hover-color: $bioschemas-base-color;
     "live-deploys",
     "community",
     "landing",
-    "profiles",
     "specifications"
 ;
 
@@ -149,19 +148,29 @@ Back to top button
     z-index: 1;
 }
 
-.top_link.active {
+.top_link.visible {
     bottom: 15px;
     opacity: 1;
 }
 
-.top_link:hover {
-    transform: scale(1.1);
-	bottom: 15px;
-    cursor: pointer;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+/*******************************************************************************
+Tabs
+*******************************************************************************/
+
+.nav-tabs .nav-link {
+    color: #555;
 }
+
+.nav-tabs .nav-link:hover {
+    color: #888;
+}
+
+.nav-tabs .nav-link.active {
+    color: #2b2b2b;
+    border-top: 2px solid $bioschemas-base-color;
+}
+
 
 
 /*******************************************************************************
@@ -171,8 +180,8 @@ Examples
 .activeTab {
     color: #fff;
     font-weight: bold;
-    background-color: $bioschemas-base-color;;
-    border: 2px solid $bioschemas-base-color;;
+    background-color: $bioschemas-base-color;
+    border: 2px solid $bioschemas-base-color;
 }
 
 /*******************************************************************************

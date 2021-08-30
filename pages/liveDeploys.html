@@ -25,280 +25,35 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
   <li>{{ profiles.size }} profile deployments</li>
 </ul>
 
+
 <!-- TABS at top of page -->
-<input id="tab1" type="radio" name="tabs" checked>
-<label for="tab1">By Site</label>
-<input id="tab2" type="radio" name="tabs">
-<label for="tab2">By Profile</label>
-<input id="tab3" type="radio" name="tabs">
-<label for="tab3">By ELIXIR Node</label>
-
-<section id="tab1Content" class="tabs">
+<nav class="mt-3">
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-site-tab" data-bs-toggle="tab" data-bs-target="#nav-site" type="button" role="tab" aria-controls="nav-site" aria-selected="true">By Site</button>
+    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">By Profile</button>
+    <button class="nav-link" id="nav-elixir-tab" data-bs-toggle="tab" data-bs-target="#nav-elixir" type="button" role="tab" aria-controls="nav-elixir" aria-selected="false">By ELIXIR Node</button>
+  </div>
+</nav>
+<div class="tab-content py-3 mb-3" id="nav-tabContent">
   <!-- Live deployments by site -->
-  <div class="live-deploys">
-    <section class="live-deploy-table">
-      <table>
-        {% for resource in liveDeploys %}
-          <!-- Remove characters that prevent expansion/collapse of table rows -->
-          {% assign resourceName = resource.name | replace: '.', '_' | replace: ' ', '_' | replace: '/', '_' | remove: '(' | remove: ')' | replace: ',', '_' | replace: ':', '_' %}
+  <div class="tab-pane fade show active" id="nav-site" role="tabpanel" aria-labelledby="nav-site-tab">
+    <div class="live-deploys">
+      <section class="live-deploy-table">
+        <table>
+          {% for resource in liveDeploys %}
+            <!-- Remove characters that prevent expansion/collapse of table rows -->
+            {% assign resourceName = resource.name | replace: '.', '_' | replace: ' ', '_' | replace: '/', '_' | remove: '(' | remove: ')' | replace: ',', '_' | replace: ':', '_' %}
 
-          <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{resourceName}}" aria-expanded="false" aria-controls="collapse{{resourceName}}">
-            <td colspan="4">
-              <div class="repo-count"><strong>Profiles: {{resource.profiles | size}}</strong></div>
-              {{resource.name}}<a href="{{resource.url}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a>
-              <div class="plus-icon"><i class="fas fa-plus fa-lg"></i></div>
-            </td>
-          </tr>
-          <tr>
-            <td class="deploy-name-column hidden-row" colspan="4">
-                <div class="collapse collapse{{resourceName}} ">
-                  <ul>
-                    {% if resource.keywords %}
-                      <li><strong>Keywords:</strong>
-                        {% for keyword in resource.keywords %}
-                          {% if forloop.last %}
-                            {{keyword}}
-                          {% else %}
-                            {{keyword}},
-                          {% endif %}
-                        {% endfor %}
-                      </li>
-                    {% endif %}
-                    {% if resource.description %}
-                      <li><strong>Description:</strong> {{ resource.description }}</li>
-                    {% endif %}
-                    {% if resource.sitemap %}
-                      <li><strong>Sitemap:</strong> <a href="{{ resource.sitemap }}">{{ resource.sitemap }}</a></li>
-                    {% endif %}
-                    {% if resource.nodes %}
-                      <li><strong>Nodes:</strong>
-                        {% for node in resource.nodes %}
-                          {% if forloop.last %}
-                            {{node}}
-                          {% else %}
-                            {{node}},
-                          {% endif %}
-                        {% endfor %}
-                      </li>
-                    {% endif %}
-                  </ul>
-                  <h4>Implemented Profiles</h4>
-                </div>
-            </td>
-          </tr>
-          {% assign sortedProfiles = resource.profiles | sort: "profileName" %}
-          {% for profile in sortedProfiles %}
-          <tr>
-            <td class="deploy-name-column hidden-row">
-              <div class="collapse collapse{{resourceName}} ">
-                <a href="/profiles/{{ profile.profileName }}">{{ profile.profileName}}</a> (v{{profile.conformsTo}})
-                {% if profile.highlight %}
-                  <p class="highlightsText">{{profile.highlight}}</p>
-                {% endif %}
-              </div>
-            </td>
-            <td class="structured-data-column hidden-row">
-              <div class="collapse collapse{{resourceName}} ">
-                {% if profile.exampleURL != nil %}
-                <div class="google-sdtt-button">
-                    <span class="tooltiptext">{{page.exampleHoverText}}</span>
-                    <a href="{{profile.exampleURL}}" class="btn btn-secondary btn-block" target="_blank">Page</a>
-                </div>
-                {% endif %}
-              </div>
-            </td>
-            <td class="structured-data-column hidden-row">
-              <div class="collapse collapse{{resourceName}} ">
-                {% if profile.exampleURL != nil %}
-                <div class="google-sdtt-button">
-                    <span class="tooltiptext">{{page.schemaHoverText}}</span>
-                    <a href="https://validator.schema.org/#url={{profile.exampleURL}}" class="btn btn-secondary btn-block" target="_blank">SMV</a>
-                </div>
-                {% endif %}
-              </div>
-            </td>
-            <td class="structured-data-column hidden-row">
-              <div class="collapse collapse{{resourceName}} ">
-                {% if profile.exampleURL != nil %}
-                <div class="google-sdtt-button">
-                    <span class="tooltiptext">{{page.bmuseHoverText}}</span>
-                    <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{profile.exampleURL}}&output=jsonld" class="btn btn-secondary btn-block" target="_blank">BMUSE</a>
-                </div>
-                {% endif %}
-              </div>
-            </td>
-          </tr>
-          {% endfor %}
-        {% endfor %}
-      </table>
-    </section>
-  </div>
-</section>
-<section id="tab2Content" class="tabs">
-  <!-- Live deployments by Profile -->
-  <div class="live-deploys">
-    <section class="live-deploy-table">
-      {% assign profiles = profiles | group_by: 'profileName' | sort_natural: 'name' %}
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th class="structured-data-column">Profile Version</th>
-            <th class="structured-data-column">Page</th>
-            <th class="structured-data-column">Structured Data Testing Tool</th>
-            <th class="structured-data-column">Rich Snippet Tool</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for profile in profiles %}
-          {% assign profile_index = forloop.index %}
-          <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{profile.name}}" aria-expanded="false" aria-controls="collapse{{profile.name}}">
-              <td colspan="5">
-                  <div class="repo-count"><strong>Sites: {{profile.items | size}}</strong></div>
-                  <!--
-                    Extract from the site data the latest release version number
-                    If there has not been a release yet, use the latest draft version number
-                    The IF statement tests that the variable exists and that it is not blank or nil
-                  -->
-                  {% if site.data.profile_versions[profile.name].latest_release and site.data.profile_versions[profile.name].latest_release != "" and site.data.profile_versions[profile.name].latest_release != nil %}
-                    {% assign version = site.data.profile_versions[profile.name].latest_release %}
-                  {% else %}
-                    {% assign version = site.data.profile_versions[profile.name].latest_publication %}
-                  {% endif %}
-
-                  {% if profile.name == "BioChemEntity" or profile.name=="SequenceRange" %}
-                  {{profile.name}}<a href="/types/{{profile.name}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a><br>
-                  {% else %}
-                  {{profile.name}}<br/>({{version}})<a href="/profiles/{{profile.name}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a><br>
-                  {% endif %}
-                  <div class="plus-icon"><i class="fas fa-plus fa-lg"></i></div>
-              </td>
-          </tr>
-          {% assign live_sorted_list = profile.items | sort: 'name' %}
-          {% for live in live_sorted_list %}
-          <tr>
-              <td class="deploy-name-column hidden-row">
-                  <div class="collapse collapse{{profile.name}} ">
-                    <!-- TODO: Connect back to site information -->
-                    <!-- {% if live.resource_URL != nil %}
-                      <a href="{{live.resource_URL}}" target="_blank">{{live.name}}</a>
-                    {% else %}
-                      {{live.name}}
-                    {% endif %} -->
-                    {{live.exampleURL}}
-                    {% if live.highlight != nil %}
-                      <p class="highlightsText">{{live.highlight}}</p>
-                    {% endif %}
-                  </div>
-              </td>
-              <td class="profile-version hidden-row">
-                  <div class="collapse collapse{{profile.name}}">
-                  {{live.conformsTo}}
-                  </div>
-              </td>
-              <td class="structured-data-column hidden-row">
-                  {% if live.exampleURL != nil %}
-                  <div class="collapse collapse{{profile.name}}">
-                  <div class="google-sdtt-button">
-                      <span class="tooltiptext">{{page.exampleHoverText}}</span>
-                      <a href="{{live.exampleURL}}" class="btn btn-secondary btn-block" target="_blank">Page</a>
-                  </div>
-                  </div>
-                  {% endif %}
-              </td>
-              <td class="structured-data-column hidden-row">
-                  {% if live.exampleURL != nil %}
-                  <div class="collapse collapse{{profile.name}}">
-                  <div class="google-sdtt-button">
-                      <span class="tooltiptext">{{page.schemaHoverText}}</span>
-                      <a href="https://validator.schema.org/#url={{live.exampleURL}}" class="btn btn-secondary btn-block" target="_blank">SMV</a>
-                  </div>
-                  </div>
-                  {% endif %}
-              </td>
-              <td class="structured-data-column hidden-row">
-                  {% if live.exampleURL != nil %}
-                  <div class="collapse collapse{{profile.name}}">
-                    <div class="google-sdtt-button">
-                        <span class="tooltiptext">{{page.bmuseHoverText}}</span>
-                        <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{live.exampleURL}}&output=jsonld" class="btn btn-secondary btn-block" target="_blank">BMUSE</a>
-                    </div>
-                  </div>
-                  {% endif %}
-              </td>
-          </tr>
-          {% endfor %}
-          {% endfor %}
-        </tbody>
-      </table>
-    </section>
-  </div>
-</section>
-<section id="tab3Content" class="tabs">
-  <!-- Live deployments by ELIXIR node -->
-  <div class="live-deploys">
-    <section class="live-deploy-table">
-      {% assign numSites = 0 %}
-      {% assign cdrCount = 0 %}
-      {% assign ddrCount = 0 %}
-      {% assign rirCount = 0 %}
-
-      <!--
-        Iterate through sites and manipulate so that nodes are all single strings
-        This is to allow accurate grouping by ELIXIR node later on.
-        This loop also generates the counts for ELIXIR, CDR, DDR, and RIR (making sure
-        not to double count sites that come from multiple nodes)
-      -->
-      {% for site in liveDeploys %}
-        {% if site.nodes %}
-          {% assign numSites = numSites | plus:1 %}
-          {% if site.keywords contains "CDR" %}
-            {% assign cdrCount = cdrCount | plus:1 %}
-          {% endif %}
-          {% if site.keywords contains "DDR" %}
-            {% assign ddrCount = ddrCount | plus:1 %}
-          {% endif %}
-          {% if site.keywords contains "RIR" %}
-            {% assign rirCount = rirCount | plus:1 %}
-          {% endif %}
-        {% endif %}
-      {% endfor %}
-
-      <p align="left"><strong>{{numSites}}</strong> ELIXIR resources have Bioschemas markup. Of which there are</p>
-
-      <ul style='text-align: left;'>
-        <li>{{cdrCount}} ELIXIR Core Data Resource (<a href="https://elixir-europe.org/platforms/data/core-data-resources">CDR</a>)</li>
-        <li>{{ddrCount}} ELIXIR Deposition Database Resource (<a href="https://elixir-europe.org/platforms/data/elixir-deposition-databases">DDR</a>)</li>
-        <li>{{rirCount}} ELIXIR Recommended Interoperability Resource (<a href="https://elixir-europe.org/platforms/interoperability/rirs">RIR</a>)</li>
-      </ul>
-
-      {% assign nodes = liveDeploys | group_by: 'nodes' | sort_natural: 'name' %}
-
-      <table width="100%">
-        {% for node in nodes %}
-          {% if node.name != '' %}
-            <!-- Convert array of nodes into single string to enable expansion/collapse of table rows -->
-            {% assign nodeName = node.name | remove: '[' | remove: ']' | remove: '"' | replace: ', ', '-' %}
-            <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{nodeName}}" aria-expanded="false" aria-controls="collapse{{nodeName}}">
+            <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{resourceName}}" aria-expanded="false" aria-controls="collapse{{resourceName}}">
               <td colspan="4">
-                <div class="repo-count"><strong>Sites: {{node.size}}</strong></div>
-                {{nodeName}}
+                <div class="repo-count"><strong>Profiles: {{resource.profiles | size}}</strong></div>
+                {{resource.name}}<a href="{{resource.url}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a>
                 <div class="plus-icon"><i class="fas fa-plus fa-lg"></i></div>
               </td>
             </tr>
-          {% endif %}
-          {% for resource in node.items %}
-            <tr class="profile-row">
-              <td colspan="4" class="deploy-name-column hidden-row">
-                <div class="collapse collapse{{nodeName}} ">
-                  <div class="repo-count"><strong>Profiles: {{resource.profiles | size}}</strong></div>
-                  {{resource.name}}<a href="{{resource.url}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a>
-                </div>
-              </td>
-            </tr>
             <tr>
-              <td colspan="4" class="deploy-name-column hidden-row">
-                <div class="collapse collapse{{nodeName}} ">
+              <td class="deploy-name-column hidden-row" colspan="4">
+                  <div class="collapse collapse{{resourceName}} ">
                     <ul>
                       {% if resource.keywords %}
                         <li><strong>Keywords:</strong>
@@ -335,54 +90,301 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
             </tr>
             {% assign sortedProfiles = resource.profiles | sort: "profileName" %}
             {% for profile in sortedProfiles %}
-              <tr>
-                <td class="deploy-name-column hidden-row">
-                  <div class="collapse collapse{{nodeName}} ">
-                    <a href="/profiles/{{ profile.profileName }}">{{ profile.profileName}}</a> (v{{profile.conformsTo}})
-                    {% if profile.highlight %}
-                      <p class="highlightsText">{{profile.highlight}}</p>
-                    {% endif %}
+            <tr>
+              <td class="deploy-name-column hidden-row">
+                <div class="collapse collapse{{resourceName}} ">
+                  <a href="/profiles/{{ profile.profileName }}">{{ profile.profileName}}</a> (v{{profile.conformsTo}})
+                  {% if profile.highlight %}
+                    <p class="highlightsText">{{profile.highlight}}</p>
+                  {% endif %}
+                </div>
+              </td>
+              <td class="structured-data-column hidden-row">
+                <div class="collapse collapse{{resourceName}} ">
+                  {% if profile.exampleURL != nil %}
+                  <div class="google-sdtt-button">
+                      <span class="tooltiptext">{{page.exampleHoverText}}</span>
+                      <a href="{{profile.exampleURL}}" class="btn btn-secondary btn-block" target="_blank">Page</a>
                   </div>
+                  {% endif %}
+                </div>
+              </td>
+              <td class="structured-data-column hidden-row">
+                <div class="collapse collapse{{resourceName}} ">
+                  {% if profile.exampleURL != nil %}
+                  <div class="google-sdtt-button">
+                      <span class="tooltiptext">{{page.schemaHoverText}}</span>
+                      <a href="https://validator.schema.org/#url={{profile.exampleURL}}" class="btn btn-secondary btn-block" target="_blank">SMV</a>
+                  </div>
+                  {% endif %}
+                </div>
+              </td>
+              <td class="structured-data-column hidden-row">
+                <div class="collapse collapse{{resourceName}} ">
+                  {% if profile.exampleURL != nil %}
+                  <div class="google-sdtt-button">
+                      <span class="tooltiptext">{{page.bmuseHoverText}}</span>
+                      <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{profile.exampleURL}}&output=jsonld" class="btn btn-secondary btn-block" target="_blank">BMUSE</a>
+                  </div>
+                  {% endif %}
+                </div>
+              </td>
+            </tr>
+            {% endfor %}
+          {% endfor %}
+        </table>
+      </section>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <!-- Live deployments by Profile -->
+    <div class="live-deploys">
+      <section class="live-deploy-table">
+        {% assign profiles = profiles | group_by: 'profileName' | sort_natural: 'name' %}
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th class="structured-data-column">Profile Version</th>
+              <th class="structured-data-column">Page</th>
+              <th class="structured-data-column">Structured Data Testing Tool</th>
+              <th class="structured-data-column">Rich Snippet Tool</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for profile in profiles %}
+            {% assign profile_index = forloop.index %}
+            <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{profile.name}}" aria-expanded="false" aria-controls="collapse{{profile.name}}">
+                <td colspan="5">
+                    <div class="repo-count"><strong>Sites: {{profile.items | size}}</strong></div>
+                    <!--
+                      Extract from the site data the latest release version number
+                      If there has not been a release yet, use the latest draft version number
+                      The IF statement tests that the variable exists and that it is not blank or nil
+                    -->
+                    {% if site.data.profile_versions[profile.name].latest_release and site.data.profile_versions[profile.name].latest_release != "" and site.data.profile_versions[profile.name].latest_release != nil %}
+                      {% assign version = site.data.profile_versions[profile.name].latest_release %}
+                    {% else %}
+                      {% assign version = site.data.profile_versions[profile.name].latest_publication %}
+                    {% endif %}
+
+                    {% if profile.name == "BioChemEntity" or profile.name=="SequenceRange" %}
+                    {{profile.name}}<a href="/types/{{profile.name}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a><br>
+                    {% else %}
+                    {{profile.name}}<br/>({{version}})<a href="/profiles/{{profile.name}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a><br>
+                    {% endif %}
+                    <div class="plus-icon"><i class="fas fa-plus fa-lg"></i></div>
                 </td>
+            </tr>
+            {% assign live_sorted_list = profile.items | sort: 'name' %}
+            {% for live in live_sorted_list %}
+            <tr>
                 <td class="deploy-name-column hidden-row">
-                  <div class="collapse collapse{{nodeName}} ">
-                    {% if profile.exampleURL != nil %}
+                    <div class="collapse collapse{{profile.name}} ">
+                      <!-- TODO: Connect back to site information -->
+                      <!-- {% if live.resource_URL != nil %}
+                        <a href="{{live.resource_URL}}" target="_blank">{{live.name}}</a>
+                      {% else %}
+                        {{live.name}}
+                      {% endif %} -->
+                      {{live.exampleURL}}
+                      {% if live.highlight != nil %}
+                        <p class="highlightsText">{{live.highlight}}</p>
+                      {% endif %}
+                    </div>
+                </td>
+                <td class="profile-version hidden-row">
+                    <div class="collapse collapse{{profile.name}}">
+                    {{live.conformsTo}}
+                    </div>
+                </td>
+                <td class="structured-data-column hidden-row">
+                    {% if live.exampleURL != nil %}
+                    <div class="collapse collapse{{profile.name}}">
                     <div class="google-sdtt-button">
                         <span class="tooltiptext">{{page.exampleHoverText}}</span>
-                        <a href="{{profile.exampleURL}}" class="btn btn-secondary btn-block" target="_blank">Page</a>
+                        <a href="{{live.exampleURL}}" class="btn btn-secondary btn-block" target="_blank">Page</a>
+                    </div>
                     </div>
                     {% endif %}
-                  </div>
                 </td>
-                <td class="deploy-name-column hidden-row">
-                  <div class="collapse collapse{{nodeName}} ">
-                    {% if profile.exampleURL != nil %}
+                <td class="structured-data-column hidden-row">
+                    {% if live.exampleURL != nil %}
+                    <div class="collapse collapse{{profile.name}}">
                     <div class="google-sdtt-button">
                         <span class="tooltiptext">{{page.schemaHoverText}}</span>
-                        <a href="https://validator.schema.org/#url={{profile.exampleURL}}" class="btn btn-secondary btn-block" target="_blank">SMV</a>
+                        <a href="https://validator.schema.org/#url={{live.exampleURL}}" class="btn btn-secondary btn-block" target="_blank">SMV</a>
+                    </div>
                     </div>
                     {% endif %}
-                  </div>
                 </td>
-                <td class="deploy-name-column hidden-row">
-                  <div class="collapse collapse{{nodeName}} ">
-                    {% if profile.exampleURL != nil %}
-                    <div class="google-sdtt-button">
-                        <span class="tooltiptext">{{page.bmuseHoverText}}</span>
-                        <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{profile.exampleURL}}&output=jsonld" class="btn btn-secondary btn-block" target="_blank">BMUSE</a>
+                <td class="structured-data-column hidden-row">
+                    {% if live.exampleURL != nil %}
+                    <div class="collapse collapse{{profile.name}}">
+                      <div class="google-sdtt-button">
+                          <span class="tooltiptext">{{page.bmuseHoverText}}</span>
+                          <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{live.exampleURL}}&output=jsonld" class="btn btn-secondary btn-block" target="_blank">BMUSE</a>
+                      </div>
                     </div>
                     {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+            {% endfor %}
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="nav-elixir" role="tabpanel" aria-labelledby="nav-elixir-tab">
+    <!-- Live deployments by ELIXIR node -->
+    <div class="live-deploys">
+      <section class="live-deploy-table">
+        {% assign numSites = 0 %}
+        {% assign cdrCount = 0 %}
+        {% assign ddrCount = 0 %}
+        {% assign rirCount = 0 %}
+
+        <!--
+          Iterate through sites and manipulate so that nodes are all single strings
+          This is to allow accurate grouping by ELIXIR node later on.
+          This loop also generates the counts for ELIXIR, CDR, DDR, and RIR (making sure
+          not to double count sites that come from multiple nodes)
+        -->
+        {% for site in liveDeploys %}
+          {% if site.nodes %}
+            {% assign numSites = numSites | plus:1 %}
+            {% if site.keywords contains "CDR" %}
+              {% assign cdrCount = cdrCount | plus:1 %}
+            {% endif %}
+            {% if site.keywords contains "DDR" %}
+              {% assign ddrCount = ddrCount | plus:1 %}
+            {% endif %}
+            {% if site.keywords contains "RIR" %}
+              {% assign rirCount = rirCount | plus:1 %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+
+        <p align="left"><strong>{{numSites}}</strong> ELIXIR resources have Bioschemas markup. Of which there are</p>
+
+        <ul style='text-align: left;'>
+          <li>{{cdrCount}} ELIXIR Core Data Resource (<a href="https://elixir-europe.org/platforms/data/core-data-resources">CDR</a>)</li>
+          <li>{{ddrCount}} ELIXIR Deposition Database Resource (<a href="https://elixir-europe.org/platforms/data/elixir-deposition-databases">DDR</a>)</li>
+          <li>{{rirCount}} ELIXIR Recommended Interoperability Resource (<a href="https://elixir-europe.org/platforms/interoperability/rirs">RIR</a>)</li>
+        </ul>
+
+        {% assign nodes = liveDeploys | group_by: 'nodes' | sort_natural: 'name' %}
+
+        <table width="100%">
+          {% for node in nodes %}
+            {% if node.name != '' %}
+              <!-- Convert array of nodes into single string to enable expansion/collapse of table rows -->
+              {% assign nodeName = node.name | remove: '[' | remove: ']' | remove: '"' | replace: ', ', '-' %}
+              <tr class="profile-row collapsed" style="cursor: pointer;" data-toggle="collapse" data-target=".collapse{{nodeName}}" aria-expanded="false" aria-controls="collapse{{nodeName}}">
+                <td colspan="4">
+                  <div class="repo-count"><strong>Sites: {{node.size}}</strong></div>
+                  {{nodeName}}
+                  <div class="plus-icon"><i class="fas fa-plus fa-lg"></i></div>
+                </td>
+              </tr>
+            {% endif %}
+            {% for resource in node.items %}
+              <tr class="profile-row">
+                <td colspan="4" class="deploy-name-column hidden-row">
+                  <div class="collapse collapse{{nodeName}} ">
+                    <div class="repo-count"><strong>Profiles: {{resource.profiles | size}}</strong></div>
+                    {{resource.name}}<a href="{{resource.url}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a>
                   </div>
                 </td>
               </tr>
+              <tr>
+                <td colspan="4" class="deploy-name-column hidden-row">
+                  <div class="collapse collapse{{nodeName}} ">
+                      <ul>
+                        {% if resource.keywords %}
+                          <li><strong>Keywords:</strong>
+                            {% for keyword in resource.keywords %}
+                              {% if forloop.last %}
+                                {{keyword}}
+                              {% else %}
+                                {{keyword}},
+                              {% endif %}
+                            {% endfor %}
+                          </li>
+                        {% endif %}
+                        {% if resource.description %}
+                          <li><strong>Description:</strong> {{ resource.description }}</li>
+                        {% endif %}
+                        {% if resource.sitemap %}
+                          <li><strong>Sitemap:</strong> <a href="{{ resource.sitemap }}">{{ resource.sitemap }}</a></li>
+                        {% endif %}
+                        {% if resource.nodes %}
+                          <li><strong>Nodes:</strong>
+                            {% for node in resource.nodes %}
+                              {% if forloop.last %}
+                                {{node}}
+                              {% else %}
+                                {{node}},
+                              {% endif %}
+                            {% endfor %}
+                          </li>
+                        {% endif %}
+                      </ul>
+                      <h4>Implemented Profiles</h4>
+                    </div>
+                </td>
+              </tr>
+              {% assign sortedProfiles = resource.profiles | sort: "profileName" %}
+              {% for profile in sortedProfiles %}
+                <tr>
+                  <td class="deploy-name-column hidden-row">
+                    <div class="collapse collapse{{nodeName}} ">
+                      <a href="/profiles/{{ profile.profileName }}">{{ profile.profileName}}</a> (v{{profile.conformsTo}})
+                      {% if profile.highlight %}
+                        <p class="highlightsText">{{profile.highlight}}</p>
+                      {% endif %}
+                    </div>
+                  </td>
+                  <td class="deploy-name-column hidden-row">
+                    <div class="collapse collapse{{nodeName}} ">
+                      {% if profile.exampleURL != nil %}
+                      <div class="google-sdtt-button">
+                          <span class="tooltiptext">{{page.exampleHoverText}}</span>
+                          <a href="{{profile.exampleURL}}" class="btn btn-secondary btn-block" target="_blank">Page</a>
+                      </div>
+                      {% endif %}
+                    </div>
+                  </td>
+                  <td class="deploy-name-column hidden-row">
+                    <div class="collapse collapse{{nodeName}} ">
+                      {% if profile.exampleURL != nil %}
+                      <div class="google-sdtt-button">
+                          <span class="tooltiptext">{{page.schemaHoverText}}</span>
+                          <a href="https://validator.schema.org/#url={{profile.exampleURL}}" class="btn btn-secondary btn-block" target="_blank">SMV</a>
+                      </div>
+                      {% endif %}
+                    </div>
+                  </td>
+                  <td class="deploy-name-column hidden-row">
+                    <div class="collapse collapse{{nodeName}} ">
+                      {% if profile.exampleURL != nil %}
+                      <div class="google-sdtt-button">
+                          <span class="tooltiptext">{{page.bmuseHoverText}}</span>
+                          <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{profile.exampleURL}}&output=jsonld" class="btn btn-secondary btn-block" target="_blank">BMUSE</a>
+                      </div>
+                      {% endif %}
+                    </div>
+                  </td>
+                </tr>
+              {% endfor %}
             {% endfor %}
           {% endfor %}
-        {% endfor %}
-      </table>
-    </section>
+        </table>
+      </section>
+    </div>
   </div>
-</section>
-
+</div>
 <blockquote>
   <h6>Note:</h6>
   <p>As we do not maintain the websites listed above we can not guarantee the list is up to date, the sites are live and feature appropriate content or the links work.</p>
