@@ -56,17 +56,6 @@ function removeName(el, name) {
 }
 
 
-$(document).ready(function () {
-  $('.live-deploy-table tr').on('shown.bs.collapse', function () {
-    $(this).prev().find(".plus-icon").html('<i class="fas fa-minus fa-lg"></i>');
-  });
-
-  $('.live-deploy-table tr').on('hidden.bs.collapse', function () {
-    $(this).prev().find(".plus-icon").html('<i class="fas fa-plus fa-lg"></i>');
-  });
-});
-
-
 /**
  * Topnav over headings fix
  */
