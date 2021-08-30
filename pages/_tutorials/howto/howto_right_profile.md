@@ -75,7 +75,7 @@ As seen on Figure 1,  each profile will show you details such as current version
 Which profile is the right one for you will depend on your resource. Go through the list above, and try to figure out which one most closely matches your use case.
 If you cannot find any relevant profile, then check out the "Drafts" tab where some new profiles or new profile releases are being discussed.
 
-If you still cannot find any profile suited for your needs, do not hesite to engage with the community by submitting an issue on [Github](https://github.com/BioSchemas/specifications/issues).
+If you still cannot find any profile suited for your needs, do not hesitate to engage with the community by submitting an issue on [Github](https://github.com/BioSchemas/specifications/issues).
 
 In the next section, we will present some hints on those profiles that have been more broadly used so far, i.e., mainly customizing generic types rather corresponding to specific Life Science entities.
 
