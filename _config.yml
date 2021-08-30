@@ -14,7 +14,7 @@ description: > # this means to ignore newlines until "baseurl:"
 url: "http://bioschemas.org" # the base hostname & protocol for your site
 twitter_username: Bioschemas
 github_username:  Bioschemas
-permalink: /404.html
+permalink: /news/:year/:month/:day/:title:output_ext
 
 # Build settings
 markdown: kramdown
