@@ -22,39 +22,6 @@ $(window).scroll(function () {
   }
 });
 
-function synchTab(frameName) {
-  var elList, i;
-
-  if (frameName == null) {
-    return;
-  }
-
-  elList = document.getElementsByTagName("a");
-  for (i = 0; i < elList.length; i++) {
-    if (elList[i].target == frameName) {
-      if (elList[i].href == window.frames[frameName].location.href) {
-        elList[i].className += " activeTab";
-        elList[i].blur();
-      } else {
-        removeName(elList[i], "activeTab");
-      }
-    }
-  }
-}
-
-function removeName(el, name) {
-  var i, curList, newList;
-
-  newList = [];
-  curList = el.className.split(" ");
-  for (i = 0; i < curList.length; i++) {
-    if (curList[i] != name) {
-      newList.push(curList[i]);
-    }
-  }
-  el.className = newList.join(" ");
-}
-
 
 /**
  * Topnav over headings fix
