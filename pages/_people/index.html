@@ -6,10 +6,12 @@ title: People
 <h1>People</h1>
 <div id="peopleTable">
 <ul>
-    {% assign sorted_people = site.people | sort: 'last-name' %}
-    {% for person in sorted_people %}
+    {%- assign sorted_people = site.people | sort: 'last-name' %}
+    {%- for person in sorted_people %}
+    {%- if person.first-name %}
     <li><a href="{{ person.url }}">{{ person.first-name }} {{ person.last-name }}</a></li>
-    {% endfor %}
+    {%- endif %}
+    {%- endfor %}
 </ul>
 </div>
 
@@ -38,14 +40,16 @@ title: People
     "logo": "http://bioschemas.org/assets/img/square_logo2.png",
     "email": "enquiries@bioschemas.org",
     "member": [
-        {% for person in sorted_people %}
+        {%- for person in sorted_people %}
+        {%- if person.first-name %}
         {
              "@context": "http://schema.org/",
              "@type": "Person",
              "givenName": "{{ person.first-name }}",
              "familyName": "{{ person.last-name }}"                                    
-        {% if forloop.last == false %} }, {% else %} } {% endif %}
-        {% endfor %}
+        {%- if forloop.last == false %} }, {% else %} } {% endif %}
+        {%- endif %}
+        {%- endfor %}
     ]
 }
 </script>

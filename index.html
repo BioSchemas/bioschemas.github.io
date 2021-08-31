@@ -15,128 +15,123 @@ call-date: 2021-09-27T15:00UTC
    <meta itemprop="url" content="http://bioschemas.org"/>
    <meta itemprop="email" content="enquiries@bioschemas.org"/>
    <meta itemprop="name" content="Bioschemas Community"/>
+    <div class="alert alert-success" role="alert">
+        <h3>Bioschemas Types Included into Schema.org!</h3>
+        <p>As part of the <a href="https://schema.org/docs/releases.html#v13.0">version 13.0</a> release of the Schema.org vocabulary, the following Bioschemas types have been included into the pending area: <a href="https://schema.org/BioChemEntity">BioChemEntity</a>, <a href="https://schema.org/ChemicalSubstance">ChemicalSubstance</a>, <a href="https://schema.org/Gene">Gene</a>, <a href="https://schema.org/MolecularEntity">MolecularEntity</a>, <a href="https://schema.org/Protein">Protein</a>, <a href="https://schema.org/Taxon">Taxon</a>.
+        </p>
+    </div>
 
-
-    <div class="container-flow">
-
-        <div class="alert alert-success" role="alert">
-            <h3>Bioschemas Types Included into Schema.org!</h3>
-            <p>As part of the <a href="https://schema.org/docs/releases.html#v13.0">version 13.0</a> release of the Schema.org vocabulary, the following Bioschemas types have been included into the pending area: <a href="https://schema.org/BioChemEntity">BioChemEntity</a>, <a href="https://schema.org/ChemicalSubstance">ChemicalSubstance</a>, <a href="https://schema.org/Gene">Gene</a>, <a href="https://schema.org/MolecularEntity">MolecularEntity</a>, <a href="https://schema.org/Protein">Protein</a>, <a href="https://schema.org/Taxon">Taxon</a>.
+    <div class="row">
+        <div class="col-md-8">
+            <h1>What is Bioschemas?</h1>
+            <p>Bioschemas aims to improve the Findability on the Web of life sciences resources such as datasets, software, and training materials. It does this by encouraging people in the life sciences to use Schema.org markup in their websites so that they are indexable by search engines and other services. Bioschemas encourages the consistent use of markup to ease the consumption of the contained markup across many sites. This structured information then makes it easier to discover, collate, and analyse distributed resources.
             </p>
+            <p>Bioschemas is making two main contributions:</p>
+            <ol>
+                <li>Proposing <a href="/types">new types and properties</a> to Schema.org to allow for the description of life science resources.</li>
+                <li>Defining usage <a href="/profiles">profiles</a> over the Schema.org types that identify the essential properties to use in describing a resource.</li>
+            </ol>
+            <h3>Endorsement of Bioschemas</h3>
+            <p>Including Bioschemas markup within a web resource is a simple first step to making your data Findable, c.f. the <a href="https://en.wikipedia.org/wiki/FAIR_data#Findable">FAIR Principles</a>. In particular, search engines index markup from webpages to populate their registries, e.g. <a href="https://datasetsearch.research.google.com/">Google Dataset Search</a>.</p>
+            <p>Use of Bioschemas to make resources more discoverable has been endorsed by the European Research Council in their <a href="https://erc.europa.eu/sites/default/files/document/file/ERC_info_document-Open_Research_Data_and_Data_Management_Plans.pdf">Open Research Data and Data Management Plans</a> policy ('metadata' section, page 11). Including Bioschemas markup in a resource's metadata means that you meet some of the Findability criteria of the FAIR Data Principles.</p>
+            <p>Bioscheams is a flagship policy of <a href="https://elixir-europe.org/">ELIXIR</a> (the European life-sciences Infrastructure for biological Information), and a key component of their <a href="https://elixir-europe.org/about-us/what-we-do/elixir-programme">2019-2023 Scientific Programme</a>.</p>
+            <p>The use of Bioschemas markup is also recommended by the <a href="https://www.biocuration.org/curate-now/">International Society for Biocuration</a> in order to help make resources more discoverable.</p>
+            <h3>Bioschemas Community</h3>
+            <p>
+            Bioschemas started as a community effort in November 2015. It operates as an open community initiative with <a href="/people/">representatives</a> from a wide variety of institutions. You are welcome to <a href="/howtojoin/">join the community</a>.</p>
+            <p>For details about related community efforts, please see our <a href="/community/related">related communities page</a>.</p>
+
+            <h2>Schema.org</h2>
+            <p>
+                <a href="https://schema.org">Schema.org</a> is a community effort supported by the main search engines, and is already widely implemented across the web.
+            </p>
+            <p>
+            Schema.org provides a way to add semantic markup to web pages. It describes ‘types’ of information, which then have ‘properties’. The types are things that we can talk about and the properties are the things that we can say about the type.
+            For example, <a href="https://schema.org/Event">Event</a> is a type that has properties like <a href="https://schema.org/startDate">startDate</a>, <a href="https://schema.org/endDate">endDate</a>, and <a href="https://schema.org/description">description</a>.</p>
+            <p>If types or properties needed in the life sciences are missing, then Bioschemas is developing proposals for <a href="/types">new types and properties</a> to be included into Schema.org.
+            </p>
+
+            <h2>Bioschema Profiles</h2>
+            <p>To simplify the marking up of web resources, and to provide consistency of markup within the life sciences community, Bioschemas are defining <a href="/profiles">profiles</a> over types that state which properties must be used (minimum), should be used (recommended), and could be used (optional). The profiles also state the cardinality of usage of a property, and identify domain ontologies to use for the value of properties.</p>
+
+            <p>For example, if we look at the <a href="https://schema.org/Dataset">schema.org/Dataset</a> type there are over 100 properties available to use. The <a href="/profiles/Dataset/"> Bioschemas profile over Dataset</a> brings this down to a more manageable number, with 5 mandatory properties and 8 recommended properties. Many of the other properties have little relevance for a Dataset. The dataset markup properties that Bioschemas specifies as mandatory will also make them findable by <a href="/software/index.html#googleDatasetSearch">Google's Dataset Search tool</a>.</p>
+
+            <p>The Bioschemas community are defining profiles over relevant existing Schema.org types, e.g. <a href="/profiles/DataCatalog/">DataCatalog</a>, <a href="/profiles/Course/">Course</a>, and <a href="/profiles/Tool/">SoftwareApplication</a>, and over the new types being defined for the life sciences, e.g. <a href="/profiles/Gene/">Gene</a>, <a href="/profiles/Protein/">Protein</a>, and <a href="/profiles/Taxon/">Taxon</a>.</p>
+
+            <h2>Funding</h2>
+            <p>
+                The Bioschemas Community have received funding through the ELIXIR-EXCELERATE grant and ELIXIR Implementation Studies. Full details of funding can be on our <a href="/funders/">funding page</a>.
+            </p>
+            <img style="max-width: 60%;" src="{{ '/images/excelerate_whitebackground.png' | relative_url }}"/>
+            <img style="max-width: 30%; float: right;" src="{{ '/images/Elixir-logo.png' | relative_url }}"/>
         </div>
 
-        <div class="row">
-            <div class="col-md-8">
-                <h1>What is Bioschemas?</h1>
-                <p>Bioschemas aims to improve the Findability on the Web of life sciences resources such as datasets, software, and training materials. It does this by encouraging people in the life sciences to use Schema.org markup in their websites so that they are indexable by search engines and other services. Bioschemas encourages the consistent use of markup to ease the consumption of the contained markup across many sites. This structured information then makes it easier to discover, collate, and analyse distributed resources.
-                </p>
-                <p>Bioschemas is making two main contributions:</p>
-                <ol>
-                  <li>Proposing <a href="/types">new types and properties</a> to Schema.org to allow for the description of life science resources.</li>
-                  <li>Defining usage <a href="/profiles">profiles</a> over the Schema.org types that identify the essential properties to use in describing a resource.</li>
-                </ol>
-                <h3>Endorsement of Bioschemas</h3>
-                <p>Including Bioschemas markup within a web resource is a simple first step to making your data Findable, c.f. the <a href="https://en.wikipedia.org/wiki/FAIR_data#Findable">FAIR Principles</a>. In particular, search engines index markup from webpages to populate their registries, e.g. <a href="https://datasetsearch.research.google.com/">Google Dataset Search</a>.</p>
-                <p>Use of Bioschemas to make resources more discoverable has been endorsed by the European Research Council in their <a href="https://erc.europa.eu/sites/default/files/document/file/ERC_info_document-Open_Research_Data_and_Data_Management_Plans.pdf">Open Research Data and Data Management Plans</a> policy ('metadata' section, page 11). Including Bioschemas markup in a resource's metadata means that you meet some of the Findability criteria of the FAIR Data Principles.</p>
-                <p>Bioscheams is a flagship policy of <a href="https://elixir-europe.org/">ELIXIR</a> (the European life-sciences Infrastructure for biological Information), and a key component of their <a href="https://elixir-europe.org/about-us/what-we-do/elixir-programme">2019-2023 Scientific Programme</a>.</p>
-                <p>The use of Bioschemas markup is also recommended by the <a href="https://www.biocuration.org/curate-now/">International Society for Biocuration</a> in order to help make resources more discoverable.</p>
-                <h3>Bioschemas Community</h3>
-                <p>
-                Bioschemas started as a community effort in November 2015. It operates as an open community initiative with <a href="/people/">representatives</a> from a wide variety of institutions. You are welcome to <a href="/howtojoin/">join the community</a>.</p>
-                <p>For details about related community efforts, please see our <a href="/community/related">related communities page</a>.</p>
+        <div class="col-md-4 right-column">
 
-                <h2>Schema.org</h2>
-                <p>
-                  <a href="https://schema.org">Schema.org</a> is a community effort supported by the main search engines, and is already widely implemented across the web.
-                </p>
-                <p>
-                Schema.org provides a way to add semantic markup to web pages. It describes ‘types’ of information, which then have ‘properties’. The types are things that we can talk about and the properties are the things that we can say about the type.
-                For example, <a href="https://schema.org/Event">Event</a> is a type that has properties like <a href="https://schema.org/startDate">startDate</a>, <a href="https://schema.org/endDate">endDate</a>, and <a href="https://schema.org/description">description</a>.</p>
-                <p>If types or properties needed in the life sciences are missing, then Bioschemas is developing proposals for <a href="/types">new types and properties</a> to be included into Schema.org.
-                </p>
+            {% include news-list.html %}
+            <hr>
+            <section class="upcoming-events">
+                <h3>Upcoming Meetings</h3>
+                <!-- Block for monthly community call -->
+                <div class="event" itemscope itemtype="http://schema.org/Event">
+                    <strong><span class="title" itemprop="name">Monthly Community Call</span></strong>
+                    <p>The Bioschemas Community Call takes place on the 4th Monday of each month at 16:00 UK time. Call in details available in the <a href="{{ page.call-minutes }}">agenda</a>.</p>
+                    <ul>
+                        <li><strong>Next call: {{ page.call-date | date: "%e %B, %Y %H:%M %Z" }}</strong>
+                            <meta itemprop="startDate" content="{{ page.call-date}}"/>
+                            <meta itemprop="endDate" content="{{ page.call-date }}"/></li>
+                        <li><a href="{{ page.call-minutes }}">Agenda</a></li>
+                    </ul>
+                </div class="event">
+                <!-- End of block for monthly community call -->
+                <!-- Block for displaying next 3 meetings -->
+                {%- assign sorted_meetings = site.meetings | sort: 'start_date' %}
+                {%- assign count = 0 %}
+                {%- for meeting in sorted_meetings %}
+                {%- assign currentDate = site.time | date: '%F' %}
+                {%- assign meetingDate = meeting.start_date | date: '%F' %}
+                {%- assign endDate = meeting.end_date | date: '%F' %}
+                {%- if currentDate <= meetingDate %}
+                <div class="event" itemscope itemtype="http://schema.org/Event">
+                    <strong><a href="{{ meeting.url }}"><span class="title" itemprop="name">{{ meeting.name}}</span></a></strong>{% if meeting.tbc %} <span class="badge badge-warning">TBC</span>{% endif %}
+                    <p> <strong>{{ meeting.dates }}</strong> </p>
+                    <p>
+                        <span itemprop="location">{{ meeting.venue }}</span>
+                    </p>
+                    <meta itemprop="startDate" content="{{meeting.start_date}}"/>
+                    <meta itemprop="endDate" content="{{ meeting.end_date }}"/>
+                </div class="event">
+                {%- assign count = count | plus: 1 %}
+                {%- elsif meetingDate <= currentDate and currentDate <= endDate %}
+                <div class="event" itemscope itemtype="http://schema.org/Event">
+                    <strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong>{% if meeting.tbc %} <span class="badge badge-warning">TBC</span>{% endif %}
+                    <p> <strong>{{ meeting.dates }}</strong> </p>
+                    <p>
+                        <span itemprop="location">{{ meeting.venue }}</span>
+                    </p>
+                    <meta itemprop="startDate" content="{{meeting.start_date}}"/>
+                    <meta itemprop="endDate" content="{{ meeting.end_date }}"/>
+                </div class="event">
+                {%- assign count = count | plus: 1 %}
+                {%- endif %}
 
-                <h2>Bioschema Profiles</h2>
-                <p>To simplify the marking up of web resources, and to provide consistency of markup within the life sciences community, Bioschemas are defining <a href="/profiles">profiles</a> over types that state which properties must be used (minimum), should be used (recommended), and could be used (optional). The profiles also state the cardinality of usage of a property, and identify domain ontologies to use for the value of properties.</p>
-
-                <p>For example, if we look at the <a href="https://schema.org/Dataset">schema.org/Dataset</a> type there are over 100 properties available to use. The <a href="/profiles/Dataset/"> Bioschemas profile over Dataset</a> brings this down to a more manageable number, with 5 mandatory properties and 8 recommended properties. Many of the other properties have little relevance for a Dataset. The dataset markup properties that Bioschemas specifies as mandatory will also make them findable by <a href="/software/index.html#googleDatasetSearch">Google's Dataset Search tool</a>.</p>
-
-                <p>The Bioschemas community are defining profiles over relevant existing Schema.org types, e.g. <a href="/profiles/DataCatalog/">DataCatalog</a>, <a href="/profiles/Course/">Course</a>, and <a href="/profiles/Tool/">SoftwareApplication</a>, and over the new types being defined for the life sciences, e.g. <a href="/profiles/Gene/">Gene</a>, <a href="/profiles/Protein/">Protein</a>, and <a href="/profiles/Taxon/">Taxon</a>.</p>
-
-                <h2>Funding</h2>
-                <p>
-                  The Bioschemas Community have received funding through the ELIXIR-EXCELERATE grant and ELIXIR Implementation Studies. Full details of funding can be on our <a href="/funders/">funding page</a>.
-                </p>
-                <img style="max-width: 60%;" src="{{ '/images/excelerate_whitebackground.png' | relative_url }}"/>
-                <img style="max-width: 30%; float: right;" src="{{ '/images/Elixir-logo.png' | relative_url }}"/>
-            </div>
-
-            <div class="col-md-4 right-column">
-
-              {% include news-list.html %}
-              <hr>
-                <section class="upcoming-events">
-                    <h3>Upcoming Meetings</h3>
-                    <!-- Block for monthly community call -->
-                    <div class="event" itemscope itemtype="http://schema.org/Event">
-                        <strong><span class="title" itemprop="name">Monthly Community Call</span></strong>
-                        <p>The Bioschemas Community Call takes place on the 4th Monday of each month at 16:00 UK time. Call in details available in the <a href="{{ page.call-minutes }}">agenda</a>.</p>
-                        <ul>
-                            <li><strong>Next call: {{ page.call-date | date: "%e %B, %Y %H:%M %Z" }}</strong>
-                              <meta itemprop="startDate" content="{{ page.call-date}}"/>
-                              <meta itemprop="endDate" content="{{ page.call-date }}"/></li>
-                            <li><a href="{{ page.call-minutes }}">Agenda</a></li>
-                        </ul>
-                    </div class="event">
-                    <!-- End of block for monthly community call -->
-                    <!-- Block for displaying next 3 meetings -->
-                    {%- assign sorted_meetings = site.meetings | sort: 'start_date' %}
-                    {%- assign count = 0 %}
-                    {%- for meeting in sorted_meetings %}
-                    {%- assign currentDate = site.time | date: '%F' %}
-                    {%- assign meetingDate = meeting.start_date | date: '%F' %}
-                    {%- assign endDate = meeting.end_date | date: '%F' %}
-                    {%- if currentDate <= meetingDate %}
-                    <div class="event" itemscope itemtype="http://schema.org/Event">
-                        <strong><a href="{{ meeting.url }}"><span class="title" itemprop="name">{{ meeting.name}}</span></a></strong>{% if meeting.tbc %} <span class="badge badge-warning">TBC</span>{% endif %}
-                        <p> <strong>{{ meeting.dates }}</strong> </p>
-                        <p>
-                            <span itemprop="location">{{ meeting.venue }}</span>
-                        </p>
-                        <meta itemprop="startDate" content="{{meeting.start_date}}"/>
-                        <meta itemprop="endDate" content="{{ meeting.end_date }}"/>
-                    </div class="event">
-                    {%- assign count = count | plus: 1 %}
-                    {%- elsif meetingDate <= currentDate and currentDate <= endDate %}
-                    <div class="event" itemscope itemtype="http://schema.org/Event">
-                        <strong><a href="{{ meeting.url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong>{% if meeting.tbc %} <span class="badge badge-warning">TBC</span>{% endif %}
-                        <p> <strong>{{ meeting.dates }}</strong> </p>
-                        <p>
-                            <span itemprop="location">{{ meeting.venue }}</span>
-                        </p>
-                        <meta itemprop="startDate" content="{{meeting.start_date}}"/>
-                        <meta itemprop="endDate" content="{{ meeting.end_date }}"/>
-                    </div class="event">
-                    {%- assign count = count | plus: 1 %}
-                    {%- endif %}
-
-                    {%- if count == 3 %}
-                    {%- break %}
-                    {%- endif %}
-                    {%- endfor %}
-                    <!-- End of block for showing next 3 meetings -->
-                </section>
-                <hr>
-                <section>
-                    <h3>Latest Presentation</h3>
-                    <p>Click <a href='https://elixir-europe.org/events/webinar-bioschemas'>here</a> to watch a webinar about Bioschemas.</a></p>
-                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRXjKhJ4hNX39P6re1CsM2r2LkFBCywO1fkJfukWSHHOx7ceoPEXMo08oVmf7xqFTiLr1_mTH8QzIo1/embed?start=true&loop=true&delayms=3000" frameborder="0" width="350" height="225" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-                </section>
-                <hr>
-                <section>
-                	<a class="twitter-timeline" data-height="450" data-theme="light" data-link-color="#2BB673" href="https://twitter.com/Bioschemas?ref_src=twsrc%5Etfw">Tweets by Bioschemas</a>
-                	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </section>
-            </div>
+                {%- if count == 3 %}
+                {%- break %}
+                {%- endif %}
+                {%- endfor %}
+                <!-- End of block for showing next 3 meetings -->
+            </section>
+            <hr>
+            <section>
+                <h3>Latest Presentation</h3>
+                <p>Click <a href='https://elixir-europe.org/events/webinar-bioschemas'>here</a> to watch a webinar about Bioschemas.</a></p>
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRXjKhJ4hNX39P6re1CsM2r2LkFBCywO1fkJfukWSHHOx7ceoPEXMo08oVmf7xqFTiLr1_mTH8QzIo1/embed?start=true&loop=true&delayms=3000" frameborder="0" width="350" height="225" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            </section>
+            <hr>
+            <section>
+                <a class="twitter-timeline" data-height="450" data-theme="light" data-link-color="#2BB673" href="https://twitter.com/Bioschemas?ref_src=twsrc%5Etfw">Tweets by Bioschemas</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </section>
         </div>
     </div>
 </div>
