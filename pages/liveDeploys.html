@@ -88,7 +88,8 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                         {%- for profile in sortedProfiles %}
                         <div class="d-flex p-1 align-content-center list-group-item-action rounded">
                             <div class="w-100 py-2">
-                                <a href="/profiles/{{ profile.profileName }}">{{profile.profileName}}</a> <span class="badge bg-dark text-light">v{{profile.conformsTo}}</span>
+                                {%- assign profileName = '/profiles/' | append: profile.profileName %}
+                                <a href="{{ profileName | relative_url }}">{{profile.profileName}}</a> <span class="badge bg-dark text-light">v{{profile.conformsTo}}</span>
                                 {%- if profile.highlight %}
                                 <small class="text-muted">{{profile.highlight}}</small>
                                 {%- endif %}
