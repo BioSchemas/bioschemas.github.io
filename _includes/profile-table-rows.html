@@ -11,7 +11,7 @@
           <td>
             {% assign group = site.groups | where:"identifier", spec.group %}
             {% for g in group %}
-            <a href="{{g.url}}">{{g.name}}</a>
+            <a href="{{g.url | relative_url}}">{{g.name}}</a>
             {% endfor %}
           </td>
           <td class="spec_links">
