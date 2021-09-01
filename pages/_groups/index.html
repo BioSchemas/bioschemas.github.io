@@ -12,7 +12,7 @@ title: Bioschemas Groups
 {%- assign sorted_groups = site.groups | sort: 'name' %}
 {%- for group in sorted_groups %}
 {%- if group.name %}
-    <li><a href="{{group.url}}">{{group.name}}</a> - {{group.abstract}}</li>
+    <li><a href="{{group.url | relative_url}}">{{group.name}}</a> - {{group.abstract}}</li>
 {%- endif %}
 {%- endfor %}
 </ul>
