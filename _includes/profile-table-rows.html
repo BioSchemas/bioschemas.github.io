@@ -1,6 +1,7 @@
       <tr>
           {% assign date_time = spec.spec_info.version_date %}
-          <th><a href="/profiles/{{spec.name}}/{{spec.spec_info.version}}" title="{{ spec.spec_info.subtitle }}">{{ spec.spec_info.title }}</a><br />(v{{spec.spec_info.version}})<br />{{ date_time | date_to_long_string }}
+          {%- assign profileName = '/profiles/' | append: spec.name | append:'/' | append: spec.spec_info.version %}
+          <th><a href="{{ profileName | relative_url }}" title="{{ spec.spec_info.subtitle }}">{{ spec.spec_info.title }}</a><br />(v{{spec.spec_info.version}})<br />{{ date_time | date_to_long_string }}
 
           	{% if site.data.profile_versions[spec.name].status == "deprecated" %}
           	<p>deprecated on: {{site.data.profile_versions[spec.name].deprecated_date }}<p>

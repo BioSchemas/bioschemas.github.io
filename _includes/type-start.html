@@ -9,18 +9,20 @@
 {% if site.data.profile_versions[page.name].latest_release != nill or site.data.profile_versions[page.name].latest_publication != nill %}
 <h3><strong>Profile:</strong></h3>
 {% endif %}
-   <ul>
-    {% if site.data.profile_versions[page.name].latest_release != nill %}
-   <li>Latest Release: <a href="/profiles/{{page.name}}">{{page.name}} (version {{site.data.profile_versions[page.name].latest_release}})</a></li>
-   {% endif %}
-   {% if site.data.profile_versions[page.name].latest_publication != nill %}
-   <li>Latest Draft: <a href="/profiles/{{page.name}}/{{site.data.profile_versions[page.name].latest_publication}}">{{page.name}} (version {{site.data.profile_versions[page.name].latest_publication}})</a></li>
-   {% endif %}
- </ul>
+<ul>
+  {% if site.data.profile_versions[page.name].latest_release != nill %}
+  {%- assign profileName = '/profiles/' | append: page.name %}
+  <li>Latest Release: <a href="{{ profileName | relative_url }}">{{page.name}} (version {{site.data.profile_versions[page.name].latest_release}})</a></li>
+  {% endif %}
+  {% if site.data.profile_versions[page.name].latest_publication != nill %}
+  {%- assign profileName = '/profiles/' | append: page.name | append:'/' | append: site.data.profile_versions[page.name].latest_publication %}
+  <li>Latest Draft: <a href="{{ profileName | relative_url }}">{{page.name}} (version {{site.data.profile_versions[page.name].latest_publication}})</a></li>
+  {% endif %}
+</ul>
 {%- if page.subtitle %}
 <h2>{{page.subtitle}}</h2>
 {%- endif %}
-<br/>
+<br />
 <p>If you spot any errors or omissions with this type, please file an issue in our <a href="{{page.gh_tasks}}" target="_blank">GitHub</a>.</p>
 <nav class="mt-3">
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -44,7 +46,7 @@
       {% assign lead-id = "/people/" | append: leader %}
       {% assign author = site.people | where:"id", lead-id | first %}
       {% if author.homepage or author.github_username or author.orcid %}
-      <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
+      <p><a href="{{ author.url | relative_url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
       {% else %}
       <p>{{ author.first-name }} {{ author.last-name }}</p>
       {% endif %}
@@ -55,31 +57,31 @@
     </div>
     <h6>Other team members</h6>
     <div id="peopleTable">
-            {% for g in group %}
-            {% for member-name in g.members %}
+      {% for g in group %}
+      {% for member-name in g.members %}
 
-            {% unless g.lead contains member-name %}
+      {% unless g.lead contains member-name %}
 
-            {% assign member-id = "/people/" | append: member-name %}
-            {% assign member = site.people | where:"id", member-id | first %}
-            <p><a href="{{ member.url }}">{{ member.first-name }} {{ member.last-name }}</a></p>
+      {% assign member-id = "/people/" | append: member-name %}
+      {% assign member = site.people | where:"id", member-id | first %}
+      <p><a href="{{ member.url | relative_url }}">{{ member.first-name }} {{ member.last-name }}</a></p>
 
-            {% endunless %}
+      {% endunless %}
 
-            {% endfor %}
-            {% endfor %}
+      {% endfor %}
+      {% endfor %}
     </div>
   </div>
 
   <div class="tab-pane fade" id="nav-contributors" role="tabpanel" aria-labelledby="nav-contributors-tab">
-  <!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
-  <h3>Canonical URL</h3>
-  <a href="/{{page.name}}">https://bioschemas.org/{{page.name}}</a>
-  <h3>Schema.org hierarchy</h3>
-  This is a new {{page.spec_type}} that fits into the schema.org hierarchy as follows:
-  <br/>
-  {%for branch_name in page.hierarchy %}
-  {% if branch_name == "BioChemEntity" or
+    <!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
+    <h3>Canonical URL</h3>
+    <a href="{{page.name | relative_url }}">https://bioschemas.org/{{page.name}}</a>
+    <h3>Schema.org hierarchy</h3>
+    This is a new {{page.spec_type}} that fits into the schema.org hierarchy as follows:
+    <br />
+    {%for branch_name in page.hierarchy %}
+    {% if branch_name == "BioChemEntity" or
     branch_name == "BioChemStructure" or
     branch_name == "BioSample" or
     branch_name == "ChemicalSubstance" or
@@ -101,43 +103,41 @@
     branch_name == "Study" or
     branch_name == "Taxon" or
     branch_name == "TaxonName" %}
-  <a href="/{{branch_name}}">{{branch_name}}</a>
-  {% else %}
-  <a href="http://schema.org/{{branch_name}}">{{branch_name}}</a>
-  {% endif %}
-  {%if forloop.index < page.hierarchy.size%}
-  &gt;
-  {%endif%}
-  {%endfor%}
-  {%if page.spec_type == 'Type'%}
-  &gt;
-  <a href="/{{page.name}}">{{page.name}}</a>
-  {%endif%}
-  <h3>Description</h3>
-  <p>{{page.description}}</p>
-  <h3>Latest types</h3>
-  {% assign profile_versions = site.data.type_versions[page.name] %}
-  {% if profile_versions.latest_release != null %}
-  <p>Latest release: <a href="/types/{{page.name}}/{{profile_versions.latest_release}}/">{{profile_versions.latest_release}}</a></p>
-  {% else %}
-  <p>Latest release: none</p>
-  {% endif %}
-  {% if profile_versions.latest_publication != null %}
-  <p>Latest draft: <a href="/types/{{page.name}}/{{profile_versions.latest_publication}}">{{profile_versions.latest_publication}}</a></p>
-  {% endif %}
+    <a href="{{branch_name | relative_url }}">{{branch_name}}</a>
+    {% else %}
+    <a href="http://schema.org/{{branch_name}}">{{branch_name}}</a>
+    {% endif %}
+    {%if forloop.index < page.hierarchy.size%} &gt; {%endif%} {%endfor%} {%if page.spec_type=='Type' %} &gt; <a href="{{page.name | relative_url }}">{{page.name}}</a>
+      {%endif%}
+      <h3>Description</h3>
+      <p>{{page.description}}</p>
+      <h3>Latest types</h3>
+      {% assign profile_versions = site.data.type_versions[page.name] %}
+      {% if profile_versions.latest_release != null %}
+      {%- assign typesName = '/types/' | append: page.name | append:'/' | append: profile_versions.latest_release %}
+      <p>Latest release: <a href="{{ typesName | relative_url }}">{{profile_versions.latest_release}}</a></p>
+      {% else %}
+      <p>Latest release: none</p>
+      {% endif %}
+      {% if profile_versions.latest_publication != null %}
+      {%- assign typesName = '/types/' | append: page.name | append:'/' | append: profile_versions.latest_publication %}
+      <p>Latest draft: <a href="{{ typesName | relative_url }}">{{profile_versions.latest_publication}}</a></p>
+      {% endif %}
 
 
-  <h3>Previous types</h3>
-  {% assign prev_version = page.previous_version %}
-  {% if prev_version != null %}
-  <p>Previous version: <a href="/types/{{page.name}}/{{page.previous_version}}">{{page.previous_version}}</a></p>
-  {% else %}
-  <p>Previous version: none</p>
-  {% endif %}
-  {% assign prev_release = page.previous_release %}
-  {% if prev_release != null %}
-  <p>Previous release: <a href="/types/{{page.name}}/{{page.previous_release}}">{{page.previous_release}}</a></p>
-  {% endif %}
+      <h3>Previous types</h3>
+      {% assign prev_version = page.previous_version %}
+      {% if prev_version != null %}
+      {%- assign typesName = '/types/' | append: page.name | append:'/' | append: page.previous_version %}
+      <p>Previous version: <a href="{{ typesName | relative_url }}">{{page.previous_version}}</a></p>
+      {% else %}
+      <p>Previous version: none</p>
+      {% endif %}
+      {% assign prev_release = page.previous_release %}
+      {% if prev_release != null %}
+      {%- assign typesName = '/types/' | append: page.name | append:'/' | append: page.previous_release %}
+      <p>Previous release: <a href="{{ typesName | relative_url }}">{{page.previous_release}}</a></p>
+      {% endif %}
 
   </div>
 
@@ -153,7 +153,7 @@
         <tr>
           <td>
             {% for g in group %}
-            <a href="{{g.url}}">{{g.name}}</a>
+            <a href="{{g.url | relative_url }}">{{g.name}}</a>
             {% endfor %}
           </td>
           <td class="spec_links">

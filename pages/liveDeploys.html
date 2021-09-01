@@ -141,9 +141,11 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                             {%- assign version = site.data.profile_versions[profile.name].latest_publication %}
                             {%- endif %}
                             {%- if profile.name == "BioChemEntity" or profile.name=="SequenceRange" %}
-                            <div class="w-100 text-center">{{profile.name}}<a href="/types/{{profile.name}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a></div>
+                            {%- assign typeName = '/types/' | append: profile.profileName %}
+                            <div class="w-100 text-center">{{profile.name}}<a href="{{ typeName | relative_url }}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a></div>
                             {%- else %}
-                            <div class="w-100 text-center">{{profile.name}} ({{version}})<a href="/profiles/{{profile.name}}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a></div>
+                            {%- assign profileName = '/profiles/' | append: profile.profileName %}
+                            <div class="w-100 text-center">{{profile.name}} ({{version}})<a href="{{ profileName | relative_url }}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a></div>
                             {%- endif %}
                         </div>
                     </button>
@@ -294,7 +296,8 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                                         {%- for profile in sortedProfiles %}
                                         <div class="d-flex p-1 align-content-center list-group-item-action rounded">
                                             <div class="w-100 py-2">
-                                                <a href="/profiles/{{ profile.profileName }}">{{ profile.profileName}}</a> <span class="badge bg-dark text-light">v{{profile.conformsTo}}</span>
+                                                {%- assign profileName = '/profiles/' | append: profile.profileName %}
+                                                <a href="{{ profileName | relative_url }}">{{ profile.profileName}}</a> <span class="badge bg-dark text-light">v{{profile.conformsTo}}</span>
                                                 {%- if profile.highlight %}
                                                 <small class="text-muted">{{profile.highlight}}</small>
                                                 {%- endif %}
