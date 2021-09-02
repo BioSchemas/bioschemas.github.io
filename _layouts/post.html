@@ -7,20 +7,13 @@ layout: default
       <h1>{{page.title}}</h1>
       <p><strong>Published:</strong> <em>{{page.date | date_to_long_string }}</em></p>
       {% if page.tags %}
-        <p><strong>Tags:</strong>
+      <p><strong>Tags:</strong>
         {% for tag in page.tags %}
-          {% if forloop.last %}
-            <a href="/news/tags.html#{{tag|slugify}}">{{tag}}</a>
-          {% else %}
-            <a href="/news/tags.html#{{tag|slugify}}">{{tag}}</a>,
-          {% endif %}
+        <a href="/news/tags.html#{{tag|slugify}}"><span class="badge bg-light text-dark">{{tag}}</span></a>
         {% endfor %}
-      {% endif %}
-
-      {{content}}
-
+        {% endif %}
+        {{content}}
     </div>
-
     <div class="col-md-4 right-column">
       {% include news-list.html %}
     </div>

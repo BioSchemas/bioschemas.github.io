@@ -6,7 +6,7 @@
 {%- endif %}
 {%- endfor %}
 {%- unless mapping_examples.size < 1 %} <div class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="View all examples">
-<button type="button" class="btn btn-secondary" data-bs-target="#exampleModal" data-bs-toggle="modal">
+<button type="button" class="btn btn-primary" data-bs-target="#exampleModal" data-bs-toggle="modal">
     Examples
 </button>
 </div>
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
@@ -114,7 +114,7 @@
                 <!-- Example modal starts here -->
                 {%- unless prop.example == "" %}
                 <div class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" title="View <strong>&#8810{{prop.property}}&#8811</strong> example">
-                    <button type="button" class="btn btn-secondary" data-bs-target="#myModal{{prop.property}}" data-bs-toggle="modal">
+                    <button type="button" class="btn btn-primary" data-bs-target="#myModal{{prop.property}}" data-bs-toggle="modal">
                         <i class="fas fa-file-code"></i>
                     </button>
                 </div>
@@ -135,7 +135,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
