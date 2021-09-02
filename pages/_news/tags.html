@@ -44,7 +44,7 @@ List all the tags you have in your site.
 <h2>Tags</h2>
 <p>
 {% for tag in tags %}
-	<a href="#{{ tag | slugify }}">{{ tag }}</a>
+	<span class="badge bg-light text-dark">{{tag}}</span>
 {% endfor %}
 </p>
 {% comment %}
