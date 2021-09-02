@@ -37,7 +37,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
 <div class="tab-content py-3 mb-3" id="nav-tabContent">
     <!-- Live deployments by site -->
     <div class="tab-pane fade show active" id="nav-site" role="tabpanel" aria-labelledby="nav-site-tab">
-        <div class="accordion" id="accordionExample">
+        <div class="accordion">
             {%- assign count = 0 %}
             {%- for resource in liveDeploys %}
             <div class="accordion-item">
@@ -49,7 +49,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                         </div>
                     </button>
                 </h2>
-                <div id="collapse{{count}}" class="accordion-collapse collapse" aria-labelledby="heading{{count}}" data-bs-parent="#accordionExample">
+                <div id="collapse{{count}}" class="accordion-collapse collapse" aria-labelledby="heading{{count}}">
                     <div class="accordion-body">
                         {%- if resource.keywords or resource.description or resource.sitemap or resource.nodes %}
                         <ul>
@@ -120,7 +120,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
     </div>
     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
         <!-- Live deployments by Profile -->
-        <div class="accordion" id="profiles_accordion">
+        <div class="accordion">
             {%- assign profiles = profiles | group_by: 'profileName' | sort_natural: 'name' %}
             {%- assign profiles_count = 0 %}
             {%- for profile in profiles %}
@@ -150,7 +150,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                         </div>
                     </button>
                 </h2>
-                <div id="profiles_collapse{{profiles_count}}" class="accordion-collapse collapse" aria-labelledby="profiles_heading{{profiles_count}}" data-bs-parent="#profiles_accordion">
+                <div id="profiles_collapse{{profiles_count}}" class="accordion-collapse collapse" aria-labelledby="profiles_heading{{profiles_count}}">
                     <div class="accordion-body">
                         {%- assign live_sorted_list = profile.items | sort: 'name' %}
                         {%- for live in live_sorted_list %}
@@ -229,7 +229,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
             <li>{{rirCount}} ELIXIR Recommended Interoperability Resource (<a href="https://elixir-europe.org/platforms/interoperability/rirs">RIR</a>)</li>
         </ul>
 
-        <div class="accordion" id="node_accordion">
+        <div class="accordion">
             {%- assign node_count = 0 %}
             {%- assign nodes = liveDeploys | group_by: 'nodes' | sort_natural: 'name' %}
             {%- for node in nodes %}
@@ -243,9 +243,9 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                         </div>
                     </button>
                 </h2>
-                <div id="node_collapse{{node_count}}" class="accordion-collapse collapse" aria-labelledby="node_heading{{node_count}}" data-bs-parent="#node_accordion">
+                <div id="node_collapse{{node_count}}" class="accordion-collapse collapse" aria-labelledby="node_heading{{node_count}}">
                     <div class="accordion-body">
-                        <div class="accordion" id="node_resource_accordion">
+                        <div class="accordion">
                             {%- assign node_resource_count = 0 %}
                             {%- for resource in node.items %}
                             <div class="accordion-item">
@@ -257,7 +257,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                                         </div>
                                     </button>
                                 </h2>
-                                <div id="node_resource_collapse{{node_count}}_{{node_resource_count}}" class="accordion-collapse collapse" aria-labelledby="node_resource_heading{{node_count}}_{{node_resource_count}}" data-bs-parent="#node_resource_accordion">
+                                <div id="node_resource_collapse{{node_count}}_{{node_resource_count}}" class="accordion-collapse collapse" aria-labelledby="node_resource_heading{{node_count}}_{{node_resource_count}}">
                                     <div class="accordion-body">
                                         {%- if resource.keywords or resource.description or resource.sitemap or resource.nodes %}
                                         <ul>
