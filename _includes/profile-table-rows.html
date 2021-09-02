@@ -20,7 +20,7 @@
             <img src="{{ '/images/use_case_spec.png' | relative_url }}" alt="View Bioschemas {{ spec.spec_info.title }} Use Cases"  style="filter: grayscale(100%);">
             </a>
             {%else%}
-            <a href="{{spec.use_cases_url}}">
+            <a href="{{spec.use_cases_url | relative_url }}">
             <img src="{{ '/images/use_case_spec.png' | relative_url }}" alt="View Bioschemas {{ spec.spec_info.title }} Use Cases">
             </a>
             {%endif%}
