@@ -1,8 +1,18 @@
 /**
- * Enabling CLipboard
+ * Enabling Clipboard
  */
 
-new ClipboardJS('.btn-copy');
+var clipboard = new ClipboardJS('.btn-copy')
+
+clipboard.on('success', function (e) {
+  var tooltipBtn = bootstrap.Tooltip.getInstance(e.trigger)
+
+  e.trigger.setAttribute('data-bs-original-title', 'Copied!')
+  tooltipBtn.show()
+
+  e.trigger.setAttribute('data-bs-original-title', 'Copy to clipboard')
+})
+
 
 /**
  * Heading animation

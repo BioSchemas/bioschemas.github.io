@@ -24,7 +24,7 @@
                         //Property: {{prop.property}}
                         {{prop.example}}
                         {% endfor %}{% endhighlight %}
-                        <button type="button" class="btn btn-primary btn-copy" data-clipboard-target="#bundle-property-examples"><i class="fas fa-copy"></i></button>
+                        <button type="button" data-bs-placement="top" data-bs-toggle="tooltip" title="Copy to clipboard" class="btn btn-primary btn-copy" data-clipboard-target="#bundle-property-examples"><i class="fas fa-copy"></i></button>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -131,7 +131,7 @@
                                 <div class="modal-body">
                                     <div id="{{current_mg}}-example-num-{{forloop.index}}" class="example-code">
                                         {% highlight javascript %}{{prop.example}}{% endhighlight %}
-                                        <button type="button" class="btn btn-primary btn-copy" data-clipboard-target="#{{current_mg}}-example-num-{{forloop.index}}"><i class="fas fa-copy"></i></button>
+                                        <button type="button" data-bs-placement="top" data-bs-toggle="tooltip" title="Copy to clipboard" class="btn btn-primary btn-copy" data-clipboard-target="#{{current_mg}}-example-num-{{forloop.index}}"><i class="fas fa-copy"></i></button> 
                                     </div>
                                 </div>
                                 <div class="modal-footer">
