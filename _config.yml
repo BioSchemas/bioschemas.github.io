@@ -59,7 +59,7 @@ collections:
   community:
     output: true
     permalink: /:collection/:path
-  publications:
+  about:
     output: true
     permalink: /:collection/:path
   posts:

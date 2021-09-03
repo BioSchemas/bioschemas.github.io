@@ -17,11 +17,11 @@
         <ul class="nav col-md-4 justify-content-end">
             <li class="nav-item"><a href="{{ '/index.html' | relative_url }}" class="nav-link px-2 text-muted">Home</a>
             </li>
-            <li class="nav-item"><a href="{{ '/funders/' | relative_url }}" class="nav-link px-2 text-muted">Funding</a>
+            <li class="nav-item"><a href="{{ '/about/funders' | relative_url }}" class="nav-link px-2 text-muted">Funding</a>
             </li>
             <li class="nav-item"><a href="mailto:enquiries@bioschemas.org" itemprop="email"
                     class="nav-link px-2 text-muted">Hugs &amp; bugs</a></li>
-            <li class="nav-item"><a href="{{ '/howtojoin/' | relative_url }}" class="nav-link px-2 text-muted">Join</a>
+            <li class="nav-item"><a href="{{ '/community/howtojoin' | relative_url }}" class="nav-link px-2 text-muted">Join</a>
             </li>
             {%- if page.spec_type != "Profile" and page.spec_type != "Type"%}
             <li class="nav-item"><a target="_blank" class="nav-link px-2 text-muted" href="https://github.com/Bioschemas/bioschemas.github.io/tree/master/{{page.path}}">
