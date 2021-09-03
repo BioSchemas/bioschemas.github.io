@@ -37,46 +37,7 @@
    </div>
 </nav>
 <div class="tab-content py-3 mb-3 border-bottom" id="nav-tabContent">
-   <div class="tab-pane fade show active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
-      <h3>Contributors</h3>
-      {% assign group = site.groups | where:"identifier", page.group %}
-      {% for g in group %}
-      <p>The following people have been involved in the creation of this specification document. They are all members of the <a href="{{g.url}}">{{g.name}}</a> group.</p>
-      {% endfor %}
-      <h6>Group Leader(s)</h6>
-      <div id="leadTable">
-         {% for g in group %}
-         {% for leader in g.lead %}
-         {% assign lead-id = "/people/" | append: leader %}
-         {% assign author = site.people | where:"id", lead-id | first %}
-         {% if author.homepage or author.github_username or author.orcid %}
-         <p><a href="{{ author.url | relative_url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
-         {% else %}
-         <p>{{ author.first-name }} {{ author.last-name }}</p>
-         {% endif %}
-         {% else %}
-         <p>No team leaders currently specified.</p>
-         {% endfor %}
-         {% endfor %}
-      </div>
-      <h6>Other team members</h6>
-      <div id="peopleTable">
-         {% for g in group %}
-         {% for member-name in g.members %}
-
-         {% unless g.lead contains member-name %}
-
-         {% assign member-id = "/people/" | append: member-name %}
-         {% assign member = site.people | where:"id", member-id | first %}
-         <p><a href="{{ member.url | relative_url }}">{{ member.first-name }} {{ member.last-name }}</a></p>
-
-         {% endunless %}
-
-         {% endfor %}
-         {% endfor %}
-      </div>
-   </div>
-   <div class="tab-pane fade" id="nav-contributors" role="tabpanel" aria-labelledby="nav-contributors-tab">
+   <div class="tab-pane fade" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
       <!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
       <h3>Schema.org hierarchy</h3>
       This {{page.spec_type}} fits into the schema.org hierarchy as follows:
@@ -155,6 +116,45 @@
       {%- assign profileName = '/profiles/' | append: page.name | append:'/' | append: page.previous_release %}
       <p>Previous release: <a href="{{ profileName | relative_url }}">{{page.previous_release}}</a></p>
       {% endif %}
+   </div>
+   <div class="tab-pane fade show active" id="nav-contributors" role="tabpanel" aria-labelledby="nav-contributors-tab">
+      <h3>Contributors</h3>
+      {% assign group = site.groups | where:"identifier", page.group %}
+      {% for g in group %}
+      <p>The following people have been involved in the creation of this specification document. They are all members of the <a href="{{g.url}}">{{g.name}}</a> group.</p>
+      {% endfor %}
+      <h6>Group Leader(s)</h6>
+      <div id="leadTable">
+         {% for g in group %}
+         {% for leader in g.lead %}
+         {% assign lead-id = "/people/" | append: leader %}
+         {% assign author = site.people | where:"id", lead-id | first %}
+         {% if author.homepage or author.github_username or author.orcid %}
+         <p><a href="{{ author.url | relative_url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
+         {% else %}
+         <p>{{ author.first-name }} {{ author.last-name }}</p>
+         {% endif %}
+         {% else %}
+         <p>No team leaders currently specified.</p>
+         {% endfor %}
+         {% endfor %}
+      </div>
+      <h6>Other team members</h6>
+      <div id="peopleTable">
+         {% for g in group %}
+         {% for member-name in g.members %}
+
+         {% unless g.lead contains member-name %}
+
+         {% assign member-id = "/people/" | append: member-name %}
+         {% assign member = site.people | where:"id", member-id | first %}
+         <p><a href="{{ member.url | relative_url }}">{{ member.first-name }} {{ member.last-name }}</a></p>
+
+         {% endunless %}
+
+         {% endfor %}
+         {% endfor %}
+      </div>
    </div>
    <div class="tab-pane fade" id="nav-links" role="tabpanel" aria-labelledby="nav-links-tab">
       <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto;">
