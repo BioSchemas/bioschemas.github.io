@@ -141,10 +141,10 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                             {%- assign version = site.data.profile_versions[profile.name].latest_publication %}
                             {%- endif %}
                             {%- if profile.name == "BioChemEntity" or profile.name=="SequenceRange" %}
-                            {%- assign typeName = '/types/' | append: profile.profileName %}
+                            {%- assign typeName = '/types/' | append: profile.name %}
                             <div class="w-100 text-center">{{profile.name}}<a href="{{ typeName | relative_url }}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a></div>
                             {%- else %}
-                            {%- assign profileName = '/profiles/' | append: profile.profileName %}
+                            {%- assign profileName = '/profiles/' | append: profile.name %}
                             <div class="w-100 text-center">{{profile.name}} ({{version}})<a href="{{ profileName | relative_url }}" target="_blank" style="border-bottom: none"> <i class="fas fa-external-link-alt"></i></a></div>
                             {%- endif %}
                         </div>
@@ -338,5 +338,5 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
     <h6>Note:</h6>
     <p>As we do not maintain the websites listed above we can not guarantee the list is up to date, the sites are live and feature appropriate content or the links work.</p>
 
-    <p>Help us keep it updated: <a href="({ '/howtojoin' | relative_url }}">Join</a> the community and/or create a pull request on the <a href="https://github.com/Bioschemas/bioschemas.github.io">Bioschemas GitHub</a> community project.</p>
+    <p>Help us keep it updated: <a href="{{ '/community/howtojoin' | relative_url }}">Join</a> the community and/or create a pull request on the <a href="https://github.com/Bioschemas/bioschemas.github.io">Bioschemas GitHub</a> community project.</p>
 </blockquote>
