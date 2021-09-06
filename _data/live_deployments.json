@@ -1214,6 +1214,27 @@
       ]
     },
     {
+      "name": "InterPro",
+      "description": "Classification of protein families",
+      "keywords": ["CDR"],
+      "url": "https://www.ebi.ac.uk/interpro/",
+      "nodes": "EBI",
+      "sitemap": "https://www.ebi.ac.uk/interpro/sitemap/interpro.sitemap.txt",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3-RELEASE",
+          "exampleURL": "https://www.ebi.ac.uk/interpro/"
+        },
+        {
+          "profileName": "ProteinAnnotation",
+          "conformsTo": "0.6-DRAFT",
+          "exampleURL": "https://www.ebi.ac.uk/interpro/entry/InterPro/IPR015252/",
+          "highlight": "Over 38,000 protein entries"
+        }
+      ]
+    },
+    {
       "name": "Biological Magnetic Resonance Data Bank (BMRB)",
       "description": "A Repository for Data from NMR Spectroscopy on Proteins, Peptides, Nucleic Acids, and other Biomolecules",
       "url": "https://bmrb.io/",
@@ -1222,20 +1243,6 @@
           "profileName": "Dataset",
           "conformsTo": "0.3-RELEASE",
           "exampleURL": "https://bmrb.io/data_library/summary/index.php?bmrbId=30309"
-        }
-      ]
-    },
-    {
-      "name": "Human Pluripotent Stem Cell Registry (hPSCreg)",
-      "description": "hPSCreg offers the research community, legislators, regulators and the general public at large an in-depth overview on the current status of human pluripotent stem cell (hPSC) research.",
-      "url": "https://hpscreg.eu/",
-      "sitemap": "https://hpscreg.eu/sitemap.xml",
-      "profiles": [
-        {
-          "profileName": "BioSample",
-          "conformsTo": "0.1-DRAFT",
-          "exampleURL": "https://hpscreg.eu/cell-line/BCRTi001-A",
-          "highlight": "Over 3,500 cell lines"
         }
       ]
     }
