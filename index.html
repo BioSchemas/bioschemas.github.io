@@ -8,8 +8,7 @@ layout: default
 
 # Community Call details
 call-minutes: https://docs.google.com/document/d/1kd5F97ogdiPNhLTnkei-RVR8TC8Ohpc5QSPX3KsfDrk
-call-link: https://global.gotomeeting.com/join/415277165
-call-date: 2021-06-28T15:00UTC
+call-date: 2021-09-27T15:00UTC
 ---
 <div id="landing" itemscope itemtype="http://schema.org/Organization">
    <meta itemprop="logo" content="http://bioschemas.org/images/square_logo2.png"/>
@@ -19,16 +18,17 @@ call-date: 2021-06-28T15:00UTC
 
 
     <div class="container-flow">
-      <!--
+
         <div class="alert alert-success" role="alert">
-            <h3>Join the Bioschemas Steering Council</h3>
-            <p>We are actively seeking applications to join the Bioscheams Steering Council. For details about the role of the Steering Council please see our <a href='https://github.com/Bioschemas/governance/blob/master/governance.md'>governance document</a>.</p><p>To apply, please complete the <a href='https://docs.google.com/forms/d/1LYS75YTb7jQydMNpWUXFoVcWJZU_FWsknBw3Pmojr3M/'>application form</a> by <del>31 October 2020</del> 16 November 2020.</p>
+            <h3>Bioschemas Types Included into Schema.org!</h3>
+            <p>As part of the <a href="https://schema.org/docs/releases.html#v13.0">version 13.0</a> release of the Schema.org vocabulary, the following Bioschemas types have been included into the pending area: <a href="https://schema.org/BioChemEntity">BioChemEntity</a>, <a href="https://schema.org/ChemicalSubstance">ChemicalSubstance</a>, <a href="https://schema.org/Gene">Gene</a>, <a href="https://schema.org/MolecularEntity">MolecularEntity</a>, <a href="https://schema.org/Protein">Protein</a>, <a href="https://schema.org/Taxon">Taxon</a>.
+            </p>
         </div>
-      -->
+
         <div class="row">
             <div class="col-md-8">
                 <h1>What is Bioschemas?</h1>
-                <p>Bioschemas aims to improve the Findability on the Web of life sciences resouces such as datasets, software, and training materials. It does this by encouraging people in the life sciences to use Schema.org markup in their websites so that they are indexable by search engines and other services. Bioschemas encourages the consistent use of markup to ease the consumption of the contained markup across many sites. This structured information then makes it easier to discover, collate, and analyse distributed resources.
+                <p>Bioschemas aims to improve the Findability on the Web of life sciences resources such as datasets, software, and training materials. It does this by encouraging people in the life sciences to use Schema.org markup in their websites so that they are indexable by search engines and other services. Bioschemas encourages the consistent use of markup to ease the consumption of the contained markup across many sites. This structured information then makes it easier to discover, collate, and analyse distributed resources.
                 </p>
                 <p>Bioschemas is making two main contributions:</p>
                 <ol>
@@ -36,14 +36,14 @@ call-date: 2021-06-28T15:00UTC
                   <li>Defining usage <a href="/profiles">profiles</a> over the Schema.org types that identify the essential properties to use in describing a resource.</li>
                 </ol>
                 <h3>Endorsement of Bioschemas</h3>
-                <p>Including Bioschemas markup within a web resource is a simple first step to making your data Findable, c.f. the <a href="https://en.wikipedia.org/wiki/FAIR_data#Findable">FAIR Principles</a>. In particular, search engines index markup from webpages to populate their registries, e.g. <a href="https://datasetsearch.research.google.com/">Google Dataset Search</a>.</p> 
+                <p>Including Bioschemas markup within a web resource is a simple first step to making your data Findable, c.f. the <a href="https://en.wikipedia.org/wiki/FAIR_data#Findable">FAIR Principles</a>. In particular, search engines index markup from webpages to populate their registries, e.g. <a href="https://datasetsearch.research.google.com/">Google Dataset Search</a>.</p>
                 <p>Use of Bioschemas to make resources more discoverable has been endorsed by the European Research Council in their <a href="https://erc.europa.eu/sites/default/files/document/file/ERC_info_document-Open_Research_Data_and_Data_Management_Plans.pdf">Open Research Data and Data Management Plans</a> policy ('metadata' section, page 11). Including Bioschemas markup in a resource's metadata means that you meet some of the Findability criteria of the FAIR Data Principles.</p>
                 <p>Bioscheams is a flagship policy of <a href="https://elixir-europe.org/">ELIXIR</a> (the European life-sciences Infrastructure for biological Information), and a key component of their <a href="https://elixir-europe.org/about-us/what-we-do/elixir-programme">2019-2023 Scientific Programme</a>.</p>
                 <p>The use of Bioschemas markup is also recommended by the <a href="https://www.biocuration.org/curate-now/">International Society for Biocuration</a> in order to help make resources more discoverable.</p>
                 <h3>Bioschemas Community</h3>
                 <p>
                 Bioschemas started as a community effort in November 2015. It operates as an open community initiative with <a href="/people/">representatives</a> from a wide variety of institutions. You are welcome to <a href="/howtojoin/">join the community</a>.</p>
-                <p>For details about related community efforts, please see our <a href="/community/related/">related communities page</a>.</p>
+                <p>For details about related community efforts, please see our <a href="/community/related">related communities page</a>.</p>
 
                 <h2>Schema.org</h2>
                 <p>
@@ -72,18 +72,19 @@ call-date: 2021-06-28T15:00UTC
 
             <div class="col-md-4 right-column">
 
+              {% include news-list.html %}
+              <hr>
                 <section class="upcoming-events">
-                    <h3>Upcoming events</h3>
+                    <h3>Upcoming Meetings</h3>
                     <!-- Block for monthly community call -->
                     <div class="event" itemscope itemtype="http://schema.org/Event">
                         <strong><span class="title" itemprop="name">Monthly Community Call</span></strong>
-                        <p>The Bioschemas Community Call takes place on the 4th Monday of each month at 16:00 UK time.</p>
+                        <p>The Bioschemas Community Call takes place on the 4th Monday of each month at 16:00 UK time. Call in details available in the <a href="{{ page.call-minutes }}">agenda</a>.</p>
                         <ul>
                             <li><strong>Next call: {{ page.call-date | date: "%e %B, %Y %H:%M %Z" }}</strong>
                               <meta itemprop="startDate" content="{{ page.call-date}}"/>
                               <meta itemprop="endDate" content="{{ page.call-date }}"/></li>
                             <li><a href="{{ page.call-minutes }}">Agenda</a></li>
-                            <li><a href="{{ page.call-link }}"><span itemprop="location">GoToMeeting</span></a></li>
                         </ul>
                     </div class="event">
                     <!-- End of block for monthly community call -->
@@ -126,7 +127,7 @@ call-date: 2021-06-28T15:00UTC
                 </section>
                 <hr>
                 <section>
-                    <h3>Latest presentation</h3>
+                    <h3>Latest Presentation</h3>
                     <p>Click <a href='https://elixir-europe.org/events/webinar-bioschemas'>here</a> to watch a webinar about Bioschemas.</a></p>
                     <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRXjKhJ4hNX39P6re1CsM2r2LkFBCywO1fkJfukWSHHOx7ceoPEXMo08oVmf7xqFTiLr1_mTH8QzIo1/embed?start=true&loop=true&delayms=3000" frameborder="0" width="350" height="225" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
                 </section>

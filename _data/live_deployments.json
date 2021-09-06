@@ -32,6 +32,7 @@
       "keywords": ["RIR"],
       "url": "https://fairsharing.org/",
       "nodes": "UK",
+      "sitemap": "https://fairsharing.org/sitemap.xml",
       "profiles": [
         {
           "profileName": "DataCatalog",
@@ -41,7 +42,8 @@
         {
           "profileName": "Dataset",
           "conformsTo": "0.1",
-          "exampleURL": "https://fairsharing.org/"
+          "exampleURL": "https://fairsharing.org/",
+          "highlight": "Over 3,000 datasets"
         }
       ]
     },
@@ -620,6 +622,16 @@
           "profileName": "DataCatalog",
           "conformsTo": "0.2",
           "exampleURL": "https://www.ensembl.org/"
+        },
+        {
+          "profileName": "DataRecord",
+          "conformsTo": "0.2",
+          "exampleURL": "https://www.ensembl.org/id/ENSG00000139618"
+        },
+        {
+          "profileName": "Gene",
+          "conformsTo": "0.7",
+          "exampleURL": "https://www.ensembl.org/id/ENSG00000139618"
         }
       ]
     },
@@ -907,13 +919,13 @@
         },
         {
           "profileName": "ComputationalWorkflow",
-          "conformsTo": "0.5-DRAFT",
+          "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://workflowhub.eu/workflows/18",
           "highlight": "Over 100 workflows"
         },
         {
           "profileName": "FormalParameter",
-          "conformsTo": "0.1-DRAFT",
+          "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://workflowhub.eu/workflows/18",
           "highlight": "Over 100 workflows"
         },
@@ -951,6 +963,11 @@
           "profileName": "ChemicalSubstance",
           "conformsTo": "0.4",
           "exampleURL": "https://nanocommons.github.io/specifications/jrc/"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://nanocommons.github.io/datasets/"
         },
         {
           "profileName": "Dataset",
@@ -1216,6 +1233,18 @@
           "highlight": "Over 38,000 protein entries"
         }
       ]
-    }
+    },
+    {
+      "name": "Biological Magnetic Resonance Data Bank (BMRB)",
+      "description": "A Repository for Data from NMR Spectroscopy on Proteins, Peptides, Nucleic Acids, and other Biomolecules",
+      "url": "https://bmrb.io/",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3-RELEASE",
+          "exampleURL": "https://bmrb.io/data_library/summary/index.php?bmrbId=30309"
+        }
+      ]
+    },
   ]
 }

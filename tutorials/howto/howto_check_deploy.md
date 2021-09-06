@@ -5,6 +5,9 @@ title: Check Deployed Markup
 previousTutorial:
   link: howto/howto_add_github
   title: Adding schema.org to a GitHub Pages site
+nextTutorial:
+  link: ./howto/howto_create_new_profile
+  title: How to create a new draft profile
 
 bioschemas:
   "@context": https://schema.org/
@@ -16,7 +19,7 @@ bioschemas:
   - "@id": http://edamontology.org/topic_0089
   audience:
   - "@type": Audience
-    name: WebMaster
+    name: (Markup provider, Markup consumer) WebMaster
   name: "How to check your Bioschemas deployment"
   author:
   - "@type": Person
@@ -28,6 +31,7 @@ bioschemas:
     name: "Ivan Mi&ccaron;eti&cacute;"
     "@id": https://bioschemas.org/people/IvanMicetic
     url: https://bioschemas.org/people/IvanMicetic
+  dateModified: 2021-07-22    
   description: "This guide will show you how to check your deployed markup, both locally and what is retrieved by external services."
   keywords: "schemaorg, JSON-LD, bioschemas"
   license: CC-BY 4.0
@@ -40,7 +44,7 @@ There are a few different ways to check that markup is being included on your we
 
 In Firefox right click on the page and select ‘Inspect Element’, in Chrome it is the ‘Inspect’ option. You can then search within the generated HTML to look for ‘schema.org’. This is depicted in the screenshot below for the DisProt protein DP00003.
 
-![Inspecting Markup using Chrome](/tutorials/images/inspect-markup.png)
+{% include image.html file="/tutorials/images/inspect-markup.png" alt="Inspecting Markup using Chrome" %}
 
 ## 2. Discovering what markup external services can retrieve
 
@@ -56,7 +60,7 @@ This site gives a nice hierarchical rendering of the discovered content and it c
 
 The screenshot shows the tool results for the DisProt protein DP00003. Click [here](https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fdisprot.org%2FDP00003) to see the results.
 
-![Google Structured Data Testing Tool showing DisProt:DP00003](/tutorials/images/google_struct.png)
+{% include image.html file="/tutorials/images/google_struct.png" alt="Google Structured Data Testing Tool showing DisProt:DP00003" %}
 
 ### 2.2. Google Rich Results Test
 
@@ -66,7 +70,7 @@ This Google tool is promoted as a successor of Google Structured Data Testing To
 
 The screenshot shows the tool results for the MobiDB database. Click [here](https://search.google.com/test/rich-results?url=https%3A%2F%2Fmobidb.org) to see the results.
 
-![Google Rich Results Test showing MobiDB](/tutorials/images/google_rich.png)
+{% include image.html file="/tutorials/images/google_rich.png" alt="Google Rich Results Test showing MobiDB" %}
 
 ### 2.3 Bioschemas Markup  Scraper and Extractor (BMUSE)
 
@@ -89,4 +93,4 @@ The error report is minimal but it will give you a green or red bar to indicate 
 
 The screenshot below shows the page for validating the DisProt protein DP00003 against the Gene profile at the minimal level. Click [here](http://www.macs.hw.ac.uk/SWeL/BioschemasValidator/?url=https://disprot.org/DP00003) to try it yourself.
 
-![BioschemasValidator showing DisProt:DP00003](/tutorials/images/bioschemasValidator.png)
+{% include image.html file="/tutorials/images/bioschemasValidator.png" alt="BioschemasValidator showing DisProt:DP00003" %}

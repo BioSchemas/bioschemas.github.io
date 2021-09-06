@@ -1,15 +1,22 @@
 <hr/>
-{% if page.previousTutorial %}
-&#9664;
+{%- if page.previousTutorial %}
+<div class="text-center">
+<i class="fas fa-angle-left fa-lg mr-2"></i>
 Previous tutorial:
 <a href="/tutorials/{{page.previousTutorial.link}}">{{page.previousTutorial.title}}</a>
-{% endif %}
-{% if page.previousTutorial and page.nextTutorial %}
+{%- endif %}
+{%- if page.previousTutorial and page.nextTutorial %}
 |
-{% endif %}
-{% if page.nextTutorial %}
+{%- else %}
+</div>
+{%- endif %}
+{%- if page.nextTutorial %}
+{%- unless page.previousTutorial %}
+<div class="text-center">
+{%- endunless %}
 Next tutorial:
 <a href="/tutorials/{{ page.nextTutorial.link }}">{{ page.nextTutorial.title }}</a>
-&#9654;
-{% endif %}
+<i class="fas fa-angle-right fa-lg ml-2"></i>
+</div>
+{%- endif %}
 <hr/>
