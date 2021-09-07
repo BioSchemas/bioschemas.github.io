@@ -89,9 +89,9 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                         <div class="d-flex p-1 align-content-center list-group-item-action rounded">
                             <div class="w-100 py-2">
                                 {%- assign profileName = '/profiles/' | append: profile.profileName %}
-                                <a href="{{ profileName | relative_url }}">{{profile.profileName}}</a> <span class="badge bg-dark text-light">v{{profile.conformsTo}}</span>
+                                <a class="me-2" href="{{ profileName | relative_url }}">{{profile.profileName}}</a> <span class="badge bg-dark text-light me-2">v{{profile.conformsTo}}</span>
                                 {%- if profile.highlight %}
-                                <small class="text-muted">{{profile.highlight}}</small>
+                                <small class="text-muted me-2">{{profile.highlight}}</small>
                                 {%- endif %}
                             </div>
                             {%- if profile.exampleURL != nil %}
@@ -162,10 +162,10 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                                 {% else %}
                                 {{live.name}}
                                 {% endif %} -->
-                                {{live.exampleURL}}
-                                <span class="badge bg-dark text-light">v{{live.conformsTo}}</span>
+                                <a class="me-2" href="{{live.exampleURL}}">{{live.exampleURL}}</a>
+                                <span class="badge bg-dark text-light me-2">v{{live.conformsTo}}</span>
                                 {%- if live.highlight != nil %}
-                                <small class="text-muted">{{live.highlight}}</small>
+                                <small class="text-muted me-2">{{live.highlight}}</small>
                                 {%- endif %}
                             </div>
                             {%- if live.exampleURL != nil %}
@@ -297,9 +297,9 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                                         <div class="d-flex p-1 align-content-center list-group-item-action rounded">
                                             <div class="w-100 py-2">
                                                 {%- assign profileName = '/profiles/' | append: profile.profileName %}
-                                                <a href="{{ profileName | relative_url }}">{{ profile.profileName}}</a> <span class="badge bg-dark text-light">v{{profile.conformsTo}}</span>
+                                                <a class="me-2" href="{{ profileName | relative_url }}">{{ profile.profileName}}</a> <span class="badge bg-dark text-light me-2">v{{profile.conformsTo}}</span>
                                                 {%- if profile.highlight %}
-                                                <small class="text-muted">{{profile.highlight}}</small>
+                                                <small class="text-muted me-2">{{profile.highlight}}</small>
                                                 {%- endif %}
                                             </div>
                                             {%- if profile.exampleURL != nil %}
