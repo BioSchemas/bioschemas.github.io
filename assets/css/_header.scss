@@ -45,4 +45,9 @@
         right: 8.875em;
     }
 
+    @media (max-width: 576px) {
+        .btn-twitter {
+            right: 4.875em;
+        }
+    }
 }
