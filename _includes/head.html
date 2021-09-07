@@ -2,6 +2,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:image" content="//bioschemas.org/assets/img/apple-touch-icon.png" />
   <title>{% if page.title %}
   			{{ page.title | prepend:'Bioschemas - ' | escape }}
   		{% else %}
@@ -9,9 +12,15 @@
   		{% endif %}
   </title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <!-- Icons  -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/img/apple-touch-icon.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/img/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/img/favicon-16x16.png' | relative_url }}">
+  <link rel="manifest" href="{{ 'assets/img/site.webmanifest' | relative_url }}">
+  <link rel="mask-icon" href="{{ 'assets/img/safari-pinned-tab.svg' | relative_url }}" color="#0b794b">
+  <link rel="shortcut icon" href="{{ 'assets/img/favicon.ico | relative_url }}">
   <!-- Styling  -->
   <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
-  <link rel="icon" type="icon/png" href="{{'assets/img/favicon.png' | relative_url }}">
   <link rel="stylesheet" href="{{ 'assets/css/main.css' | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
