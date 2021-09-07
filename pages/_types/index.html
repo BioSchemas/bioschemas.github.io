@@ -58,7 +58,7 @@ redirect_from:
                     {% if site.data.type_versions[spec.name].latest_release != nill %}
                     {% if spec.version == site.data.type_versions[spec.name].latest_release %}
                     <tr>
-                        {%- assign typesName = '/types/' | append: spec.name %}
+                        {%- assign typesName = '/types/' | append: spec.name | append:'/' | append: spec.version %}
                         <th><a href="{{ typesName | relative_url }}" title="{{spec.subtitle}}">{{ spec.name }}</a><br />(v{{spec.version}})<br />{{spec.dateModified}}</th>
                         <td>
                             {% assign group = site.groups | where:"identifier", spec.group | first %}
@@ -156,7 +156,7 @@ redirect_from:
                     {% if site.data.type_versions[spec.name].latest_publication != nill %}
                     {% if spec.version == site.data.type_versions[spec.name].latest_publication %}
                     <tr>
-                        {%- assign typesName = '/types/' | append: spec.name %}
+                        {%- assign typesName = '/types/' | append: spec.name | append:'/' | append: spec.version %}
                         <th><a href="{{ typesName | relative_url }}" title="{{spec.subtitle}}">{{ spec.name }}</a><br />(v{{spec.version}})<br />{{spec.dateModified}}</th>
                         <td>
                             {% assign group = site.groups | where:"identifier", spec.group | first %}
