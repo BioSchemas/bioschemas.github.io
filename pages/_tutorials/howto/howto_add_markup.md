@@ -43,7 +43,7 @@ bioschemas:
 ---
 
 <div class="col d-flex align-items-start rounded p-4 mb-4 mt-3 shadow">
-  <img class="align-self-center me-3" src="/tutorials/images/exclamation_mark.png" alt="warning">
+  <img class="align-self-center me-3" src="{{ '/tutorials/images/exclamation_mark.png' | relative_url }}" alt="warning">
   <div>
       If have not read yet our <a href="./howto_right_profile">how to select the right profile for your resource</a>, please give it a try before this one.
   </div>
@@ -60,7 +60,7 @@ If your resource involves more than one profile, you first need to define the st
 
 
 <div class="col d-flex align-items-start rounded p-4 mb-4 mt-3 shadow">
-  <img class="align-self-center me-3" src="/tutorials/images/information_mark.png" alt="information">
+  <img class="align-self-center me-3" src="{{ '/tutorials/images/information_mark.png' | relative_url }}" alt="information">
   <div>
       Link from DataCatalog to Dataset if you have some few datasets and you introduce them all on your catalog landing page. Example: UniProt
       <br/>

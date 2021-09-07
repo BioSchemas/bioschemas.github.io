@@ -56,7 +56,7 @@ As seen on Figure 1,  each profile will show you details such as current version
 
 
 <div class="col d-flex align-items-start rounded p-4 mb-4 mt-3 shadow">
-  <img class="align-self-center me-3" src="/tutorials/images/information_mark.png" alt="information">
+  <img class="align-self-center me-3" src="{{ '/tutorials/images/information_mark.png' | relative_url }}" alt="information">
   <div>
     <ul>
       <li>Use cases: Used as a basis for the profile</li>

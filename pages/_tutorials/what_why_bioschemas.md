@@ -60,7 +60,7 @@ Bioschemas inherits the benefits from schema.org, i.e., enabling machines to und
 {% include image.html file="/tutorials/images/ilustration_life_sciences_event.png" caption="Figure 2: Event profile provided by Bioschemas for the Event type in schema.org" alt="Event profile provided by Bioschemas for the Event type in schema.org" %}
 
 <div class="col d-flex align-items-start rounded p-4 mb-4 mt-3 shadow">
-  <img class="align-self-center me-3" src="/tutorials/images/exclamation_mark.png" alt="warning">
+  <img class="align-self-center me-3" src="{{ '/tutorials/images/exclamation_mark.png' | relative_url }}" alt="warning">
   <div>
     Schema.org provides only 'types', while Bioschemas provides 'types' and 'profiles'. A profile is a customisation of type, including important guidelines on how to use it within the Life Sciences domain. A profile can be used to define the semantics of a particular property, the valid value(s) and ranges that may be attributed to that property, and the cardinality with which that property may appear. <br/>Disclaimer: Initially, Bioschemas types were developed with the aim to eventually mature those types and have them integrated for direct use in schema.org. While this remains desirable, it is not essential; community tools and resources are being developed to directly harvest this markup, and there are activities in progress to migrate Bioschemas markup from individual resources to the EOSC (European Open Science Cloud).
   </div>
@@ -71,7 +71,7 @@ Bioschemas inherits the benefits from schema.org, i.e., enabling machines to und
 
 
 <div class="col d-flex align-items-start rounded p-4 mb-4 mt-3 shadow">
-<img class="align-self-center me-3" src="/tutorials/images/information_mark.png" alt="information">
+<img class="align-self-center me-3" src="{{ '/tutorials/images/information_mark.png' | relative_url }}" alt="information">
 <div>
     <ul><li>Minimum properties should be provided</li><li>Recommended properties should be provided whenever possible and available</li><li>Optional properties could be omitted unless important or relevant for your resource</li></ul>
     <br/>
@@ -85,7 +85,7 @@ Bioschemas inherits the benefits from schema.org, i.e., enabling machines to und
 
 
 <div class="col d-flex align-items-start rounded p-4 mb-4 mt-3 shadow">
-  <img class="align-self-center me-3" src="/tutorials/images/information_mark.png" alt="information">
+  <img class="align-self-center me-3" src="{{ '/tutorials/images/information_mark.png' | relative_url }}" alt="information">
   <div>
       A property expects ONE or MANY elements
       <br/>
@@ -98,7 +98,7 @@ Bioschemas inherits the benefits from schema.org, i.e., enabling machines to und
 
 
 <div class="col d-flex align-items-start rounded p-4 mb-4 mt-3 shadow">
-  <img class="align-self-center me-3" src="/tutorials/images/information_mark.png" alt="information">
+  <img class="align-self-center me-3" src="{{ '/tutorials/images/information_mark.png' | relative_url }}" alt="information">
   <div>
     Event already exists in schema.org. However, Bioschemas has added some new properties, for instance, "prerrequisite" is commonly used in Life Sciences to define a list of required skills to be able to attend an appropriate event.
   </div>
@@ -108,7 +108,7 @@ Bioschemas inherits the benefits from schema.org, i.e., enabling machines to und
 
 
 <div class="col d-flex align-items-start rounded p-4 mb-4 mt-3 shadow">
-  <img class="align-self-center me-3" src="/tutorials/images/information_mark.png" alt="information">
+  <img class="align-self-center me-3" src="{{ '/tutorials/images/information_mark.png' | relative_url }}" alt="information">
   <div>
     Tools, a SoftwareApplication profile, recommends using terms from the <a href="http://bioportal.bioontology.org/ontologies/EDAM">EDAM</a> ontology in order to specify, for instance, the input and output expected.
     <br/>
