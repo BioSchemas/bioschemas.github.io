@@ -19,11 +19,11 @@
             </div>
             <div class="modal-body">
                 <div id="bundle-property-examples" class="example-code">
-                    {% highlight javascript %}
-                    {% for prop in mapping_examples %}
-                    //Property: {{prop.property}}
-                    {{prop.example}}
-                    {% endfor %}{% endhighlight %}
+{% highlight javascript %}
+{% for prop in mapping_examples %}
+//Property: {{prop.property}}
+{{prop.example}}
+{% endfor %}{% endhighlight %}
                     <button type="button" data-bs-placement="top" data-bs-toggle="tooltip" title="Copy to clipboard" class="btn btn-primary btn-copy" data-clipboard-target="#bundle-property-examples"><i class="fas fa-copy"></i></button>
                 </div>
             </div>
