@@ -37,7 +37,7 @@
    </div>
 </nav>
 <div class="tab-content py-3 mb-3 border-bottom" id="nav-tabContent">
-   <div class="tab-pane fade" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
+   <div class="tab-pane fade show active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
       <!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
       <h3>Schema.org hierarchy</h3>
       This {{page.spec_type}} fits into the schema.org hierarchy as follows:
@@ -117,7 +117,7 @@
       <p>Previous release: <a href="{{ profileName | relative_url }}">{{page.previous_release}}</a></p>
       {% endif %}
    </div>
-   <div class="tab-pane fade show active" id="nav-contributors" role="tabpanel" aria-labelledby="nav-contributors-tab">
+   <div class="tab-pane fade" id="nav-contributors" role="tabpanel" aria-labelledby="nav-contributors-tab">
       <h3>Contributors</h3>
       {% assign group = site.groups | where:"identifier", page.group %}
       {% for g in group %}

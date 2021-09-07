@@ -32,7 +32,7 @@
   </div>
 </nav>
 <div class="tab-content py-3 mb-3 border-bottom" id="nav-tabContent">
-  <div class="tab-pane fade" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
+  <div class="tab-pane fade show active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
     <!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
     <h3>Canonical URL</h3>
     <a href="{{page.name | relative_url }}">https://bioschemas.org/{{page.name}}</a>
@@ -98,7 +98,7 @@
       <p>Previous release: <a href="{{ typesName | relative_url }}">{{page.previous_release}}</a></p>
       {% endif %}
   </div>
-  <div class="tab-pane fade show active" id="nav-contributors" role="tabpanel" aria-labelledby="nav-contributors-tab">
+  <div class="tab-pane fade" id="nav-contributors" role="tabpanel" aria-labelledby="nav-contributors-tab">
     <h3>Contributors</h3>
     {% assign group = site.groups | where:"identifier", page.group %}
     {% for g in group %}
