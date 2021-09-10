@@ -25,7 +25,7 @@ __Aim:__
 The Bioschemas activities will centre around the projects detailed below. Notes from these projects can be found [here](https://docs.google.com/document/d/1BUmzzu5W1HUkMj8QsnIzZRfDIqchWHSf3FwShX6wiVM/edit#heading=h.qz4i2asiirvb).
 
 ### Bioschemas Live Deployments
-__Project details:__ The Bioschemas [live deploys page](https://bioschemas.org/liveDeploys/) lists the deployments known to the Bioschemas community. Currently the data for the page is represented in YAML and is page type oriented rather than resource oriented. This means that there is a lot of repeated information, e.g. resource name, URL, node, and also that the count of the number of marked up resources is inaccurate.
+__Project details:__ The Bioschemas [live deploys page](/liveDeploys/) lists the deployments known to the Bioschemas community. Currently the data for the page is represented in YAML and is page type oriented rather than resource oriented. This means that there is a lot of repeated information, e.g. resource name, URL, node, and also that the count of the number of marked up resources is inaccurate.
 
 This project would migrate the data to a JSON representation and update the webpages that display the content of the data. The data fields should be extended to include the resource sitemap, and possibly hints about the deployment technology (e.g. Single page application) that can make consuming the content easier. It should also provide a mechanism to allow for new deployments to be more easily registered.
 The outcome should enable easier consumption of the list of live deploys by aggregators such as FAIRsharing.
