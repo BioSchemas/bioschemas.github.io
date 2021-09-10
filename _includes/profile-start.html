@@ -66,7 +66,7 @@
       branch_name == "Study" or
       branch_name == "Taxon" or
       branch_name == "TaxonName"%}
-      <a href="/{{branch_name}}/">{{branch_name}}</a>
+      <a href="{{branch_name | relative_url }}">{{branch_name}}</a>
       {% else %}
       <a href="http://schema.org/{{branch_name}}">{{branch_name}}</a>
       {% endif %}
