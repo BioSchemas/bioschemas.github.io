@@ -178,22 +178,22 @@
                <td class="spec_links">
                   {% if page.use_cases_url == '' or page.use_cases_url == nil %}
                   <a>
-                  <img src="{{ '/images/use_case_spec.png' | relative_url }}" alt="View Bioschemas {{ page.name }} Use Cases"  style="filter: grayscale(100%);">
+                  <img src="{{ '/images/use_case_spec.svg' | relative_url }}" alt="View Bioschemas {{ page.name }} Use Cases"  style="filter: grayscale(100%);">
                   </a>
                   {%else%}
                   <a href="{{page.use_cases_url}}">
-                  <img src="{{ '/images/use_case_spec.png' | relative_url }}" alt="View Bioschemas {{ page.name }} Use Cases">
+                  <img src="{{ '/images/use_case_spec.svg' | relative_url }}" alt="View Bioschemas {{ page.name }} Use Cases">
                   </a>
                   {%endif%}
                </td>
                <td class="spec_links">
                   {% if page.cross_walk_url == '' %}
                   <a>
-                  <img src="{{ '/images/cross_walk.png' | relative_url }}" alt="View Bioschemas {{ page.name }} Cross Walk"  style="filter: grayscale(100%);">
+                  <img src="{{ '/images/cross_walk.svg' | relative_url }}" alt="View Bioschemas {{ page.name }} Cross Walk"  style="filter: grayscale(100%);">
                   </a>
                   {%else%}
                   <a href="{{page.cross_walk_url}}" target="_blank">
-                  <img src="{{ '/images/cross_walk.png' | relative_url }}" alt="View Bioschemas {{ page.name }} Cross Walk">
+                  <img src="{{ '/images/cross_walk.svg' | relative_url }}" alt="View Bioschemas {{ page.name }} Cross Walk">
                   </a>
                   {%endif%}
                </td>
@@ -222,11 +222,11 @@
                <td class="spec_links">
                   {% if page.live_deploy == '' %}
                   <a>
-                  <img src="{{ '/images/live_deploy.png' | relative_url }}" alt="View Bioschemas {{ page.name }} Examples" style="filter: grayscale(100%);">
+                  <img src="{{ '/images/live_deploy.svg' | relative_url }}" alt="View Bioschemas {{ page.name }} Examples" style="filter: grayscale(100%);">
                   </a>
                   {% else %}
                   <a href="{{page.live_deploy}}">
-                  <img src="{{ '/images/live_deploy.png' | relative_url }}" alt="View Bioschemas {{ page.name }} Examples">
+                  <img src="{{ '/images/live_deploy.svg' | relative_url }}" alt="View Bioschemas {{ page.name }} Examples">
                   </a>
                   {% endif %}
                </td>
