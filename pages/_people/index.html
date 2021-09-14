@@ -9,7 +9,7 @@ title: People
     {%- assign sorted_people = site.people | sort: 'last-name' %}
     {%- for person in sorted_people %}
     {%- if person.first-name %}
-    <li><a href="{{ person.url }}">{{ person.first-name }} {{ person.last-name }}</a></li>
+    <li><a href="{{ person.url | relative_url  }}">{{ person.first-name }} {{ person.last-name }}</a></li>
     {%- endif %}
     {%- endfor %}
 </ul>

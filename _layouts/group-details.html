@@ -92,51 +92,65 @@ layout: default
 
 <h5>Group Leaders</h5>
 <div id="leadTable">
+   <ul>
    {% if page.lead %}
    {% for leader in page.lead %}
    {% assign lead-id = "/people/" | append: leader %}
    {% assign author = site.people | where:"id", lead-id | first %}
-   <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
+      <li><a href="{{ author.url | relative_url }}">{{ author.first-name }} {{ author.last-name }}</a></li>
    {% endfor %}
    {% else %}
    {% for leader in page.current-leads %}
    {% assign lead-id = "/people/" | append: leader.person %}
    {% assign author = site.people | where:"id", lead-id | first %}
-   <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a><br />
-      (since {{leader.start-date | date_to_long_string}})</p>
+      <li><a href="{{ author.url | relative_url }}">{{ author.first-name }} {{ author.last-name }}</a><br/>
+      (since {{leader.start-date | date_to_long_string}})</li>
    {% endfor %}
    {% endif %}
+   </ul>
 </div>
 <br />
 <h5>Group Members</h5>
 <div id="peopleTable">
+   <ul>
    {% for member-name in page.members %}
    {% assign member-id = "/people/" | append: member-name %}
    {% assign member = site.people | where:"id", member-id | first %}
-   <p><a href="{{ member.url }}">{{ member.first-name }} {{ member.last-name }}</a></p>
+   {% if member.first-name %}
+      <li><a href="{{ member.url | relative_url }}">{{ member.first-name }} {{ member.last-name }}</a></li>
+   {% endif %}
    {% endfor %}
+   </ul>
 </div>
 {% if page.former-leads %}
 <br />
 <h5>Former Group Leads</h5>
 <div id="formerLeadTable">
+   <ul>
    {% for leader in page.former-leads %}
    {% assign lead-id = "/people/" | append: leader.person %}
    {% assign author = site.people | where:"id", lead-id | first %}
-   <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a><br />
-      ({{leader.start-date | date: "%d-%b-%Y"}} – {{leader.end-date | date: "%d-%b-%Y"}})</p>
+   {% if author.first-name %}
+      <li><a href="{{ author.url | relative_url }}">{{ author.first-name }} {{ author.last-name }}</a><br/>
+      ({{leader.start-date | date: "%d-%b-%Y"}} – {{leader.end-date | date: "%d-%b-%Y"}})</li>
+   {% endif %}
    {% endfor %}
+   </ul>
 </div>
 {% endif %}
 {% if page.Former-Members %}
 <br />
 <h5>Former Group Members</h5>
 <div id="formerPeopleTable">
+   <ul>
    {% for member-name in page.Former-Members %}
    {% assign member-id = "/people/" | append: member-name %}
    {% assign member = site.people | where:"id", member-id | first %}
-   <p><a href="{{ member.url }}">{{ member.first-name }} {{ member.last-name }}</a></p>
+   {% if member.first-name %}
+      <li><a href="{{ member.url | relative_url }}">{{ member.first-name }} {{ member.last-name }}</a></li>
+   {% endif %}
    {% endfor %}
+   </ul>
 </div>
 {% endif %}
 {{ content }}
