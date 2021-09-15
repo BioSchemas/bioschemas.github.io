@@ -504,6 +504,11 @@
           "exampleURL": "https://www.ebi.ac.uk/chembl/"
         },
         {
+          "profileName": "DataCatalog",
+          "conformsTo": "",
+          "exampleURL": "https://www.ebi.ac.uk/chembl/"
+        },
+        {
           "profileName": "MolecularEntity",
           "conformsTo": "0.2-DRAFT",
           "exampleURL": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL59/"
