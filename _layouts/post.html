@@ -9,7 +9,7 @@ layout: default
       {% if page.tags %}
       <p><strong>Tags:</strong>
         {% for tag in page.tags %}
-        <a href="/news/tags.html#{{tag|slugify}}"><span class="badge bg-light text-dark">{{tag}}</span></a>
+        <a href="/news/tags.html#{{tag|slugify}}"><span class="badge bg-light text-secondary"><i class="fas fa-tag me-1"></i>{{tag}}</span></a>
         {% endfor %}
         {% endif %}
         {{content}}

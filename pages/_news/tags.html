@@ -44,7 +44,7 @@ title: News Tags
 			<h2>Tags</h2>
 			<p>
 				{% for tag in tags %}
-				<a href="#{{ tag | slugify }}"><span class="badge bg-light text-dark">{{tag}}</span></a>
+				<a href="#{{ tag | slugify }}"><span class="badge bg-light text-secondary"><i class="fas fa-tag me-1"></i>{{tag}}</span></a>
 				{% endfor %}
 			</p>
 			{%- comment %}
