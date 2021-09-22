@@ -23,8 +23,13 @@
                     class="nav-link px-2 text-muted">Hugs &amp; bugs</a></li>
             <li class="nav-item"><a href="{{ '/community/howtojoin' | relative_url }}" class="nav-link px-2 text-muted">Join</a>
             </li>
-            {%- if page.spec_type != "Profile" and page.spec_type != "Type"%}
-            <li class="nav-item"><a target="_blank" class="nav-link px-2 text-muted" href="https://github.com/Bioschemas/bioschemas.github.io/tree/master/pages/{{page.path}}">
+            {%- if page.spec_type != "Profile" and page.spec_type != "Type" %}
+            {%- if page.title != "Bioschemas" %}
+            {%- assign github_url = "https://github.com/Bioschemas/bioschemas.github.io/tree/master/pages/" | append: page.path %}
+            {%- else %}
+            {%- assign github_url = "https://github.com/Bioschemas/bioschemas.github.io/tree/master/" | append: page.path %}
+            {%- endif %}
+            <li class="nav-item"><a target="_blank" class="nav-link px-2 text-muted" href="{{github_url}}">
                 <i class="fas fa-pencil-alt me-1"></i>Edit me
             </a></li>
             {%- endif %}
