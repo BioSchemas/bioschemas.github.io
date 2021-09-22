@@ -1248,14 +1248,14 @@
     },
     {
       "name": "Bioversions",
-      "keywords": ["versioning", "biomedical databases"],
       "url": "https://biopragmatics.github.io/bioversions/",
       "sitemap": "https://biopragmatics.github.io/bioversions/sitemap.xml",
       "profiles": [
         {
           "profileName": "Dataset",
-          "conformsTo": "0.4-DRAFT",
+          "conformsTo": "-",
           "exampleURL": "https://biopragmatics.github.io/bioversions/",
+          "highlight": "Aggregation site about 279 datasets. Due to the aggregation not all properties can be retrieved to comply with the Bioschemas profile."
         }
       ]
     }
