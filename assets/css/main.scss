@@ -1,0 +1,254 @@
+---
+---
+
+
+// Bioschemas base colors
+$bioschemas-base-color: #0B794B;
+$bioschemas-medium-sea-color: #2BB673;
+$bioschemas-steel-teal-color: #55828B;
+$bioschemas-dark-sea-green-color: #87BBA2;
+$bioschemas-tea-green-color: #C9E4CA;
+$schemaorg-property-color: #660000;
+$pending-property-color: #0000CC;
+$external-property-color: #454547;
+
+// Bootstrap 5 variables
+$font-family-sans-serif: 'Noto Sans', Arial, sans-serif;
+$light: #eaf2ee;
+$link-color: #005ce6;
+$font-size-root: 16px;
+$primary: $bioschemas-base-color;
+$link-decoration: none;
+$component-active-bg: $bioschemas-base-color;
+$link-hover-color: $bioschemas-base-color;
+$accordion-button-active-color: #000000;
+
+@import
+    "bootstrap/bootstrap",
+    "header",
+    "spec-tables",
+    "code-highlight",
+    "community",
+    "landing",
+    "specifications"
+;
+
+/*******************************************************************************
+Theme Styles
+*******************************************************************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: $bioschemas-base-color;;
+    letter-spacing: -1px;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: 0.005em;
+    margin-bottom: 0.5em;
+    color: #444;
+}
+
+h2 {
+    font-size: 1.875em;
+    margin-bottom: 0.3125em;
+    padding-top: 0.6em;
+}
+
+
+h3 {
+    font-size: 1.3125em;
+    margin-bottom: 0.3125em;
+    padding-top: 0.6em; 
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+h5 {
+    font-size: 1.125em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+blockquote {
+    color: #666;
+    margin-bottom: 1.25em;
+    padding: 0 0 0 1.25em;
+    border-left: 3px solid #bbb;
+}
+
+/* End - Selection color */
+
+main ol li,
+main ul li {
+    margin: 10px 0px;
+}
+
+/* list circles colored */
+
+main ul li::marker {
+    color: $bioschemas-base-color;
+}
+
+table {
+    margin-bottom: 1.625em;
+    margin-top: 1.25em;
+    text-align: left;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+th {
+    padding: 0.625em;
+    background: #888;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    border: 1px solid #555;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+td {
+    border: 1px solid #666;
+    padding: 0.625em;
+    min-height: 1.25em;
+    max-height: 2.5em;
+    vertical-align: middle;
+}
+
+form {
+    background: #f2f2f2;
+    padding: 1.25em;
+}
+
+/*******************************************************************************
+Back to top button
+*******************************************************************************/
+
+.top_link {
+    transition: 0.3s ease-in-out;
+    position: fixed;
+    bottom: -50px;
+    right: 15px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.top_link.visible {
+    bottom: 15px;
+    opacity: 1;
+}
+
+
+/*******************************************************************************
+Tabs
+*******************************************************************************/
+
+.nav-tabs .nav-link {
+    color: #555;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #888;
+}
+
+.nav-tabs .nav-link.active {
+    color: #2b2b2b;
+    border-top: 2px solid $bioschemas-base-color;
+}
+
+
+/*******************************************************************************
+About Us Organizations Links
+*******************************************************************************/
+
+.organs_inv {
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.organs_inv a {
+    min-width: 240px;
+    max-width: 260px;
+    float: left;
+    display: flex;
+}
+
+.organs_inv img {
+    /*float: left;*/
+    width: 140px;
+    height: 100px;
+    /**margin-right: 0.625em;
+    margin-left: 1.25em;*/
+    clear: both;
+    vertical-align: middle;
+}
+
+.organs_inv img:hover {
+    /**margin-right: 0.525em;
+    margin-left: 1.1em;*/
+    vertical-align: middle;
+    background-color: rgb(242, 242, 242);
+    background-color: rgba(242, 242, 242, .7);
+    border: 2px solid $bioschemas-base-color;;
+    border-radius: 0.625em;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.organs_inv p {
+    text-align: justify;
+}
+
+
+/*******************************************************************************
+Table of contents
+*******************************************************************************/
+
+/* Indent the lists and reset any other padding */
+
+#toc ul {
+    padding: 0 0 0 20px;
+}
+
+/* Consistent vertical space between list items */
+
+#toc li,
+#toc ul ul li {
+    margin: 8px 0 0 0;
+}
+
+
+/*******************************************************************************
+Shadow
+*******************************************************************************/
+
+.shadow {
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*******************************************************************************
+Media sizing
+*******************************************************************************/
+
+.mw-13 {
+    max-width: 13em;
+}

@@ -1,0 +1,55 @@
+---
+layout: default
+title: People
+---
+
+<h1>People</h1>
+<div id="peopleTable">
+<ul>
+    {%- assign sorted_people = site.people | sort: 'last-name' %}
+    {%- for person in sorted_people %}
+    {%- if person.first-name %}
+    <li><a href="{{ person.url | relative_url  }}">{{ person.first-name }} {{ person.last-name }}</a></li>
+    {%- endif %}
+    {%- endfor %}
+</ul>
+</div>
+
+<!-- change number columns based on device -->
+<script type="application/x-javascript">
+    if(navigator.userAgent.match(/android/i)) {
+        document.getElementById('peopleTable').style.columnCount = 1;
+    } else if(navigator.userAgent.match(/phone/i)) {
+        document.getElementById('peopleTable').style.columnCount = 1;    
+    } else if(navigator.userAgent.match(/tablet/i)) {
+        document.getElementById('peopleTable').style.columnCount = 1;        
+    } else if(navigator.userAgent.match(/ipad/i)) {
+        document.getElementById('peopleTable').style.columnCount = 1;                      
+    } else {
+        document.getElementById('peopleTable').style.columnCount = 4;
+    }
+</script>
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org/",
+    "@type": "Organization",
+    "name": "Bioschemas Community",
+    "url": "http://bioschemas.org/",
+    "logo": "http://bioschemas.org/assets/img/square_logo2.png",
+    "email": "enquiries@bioschemas.org",
+    "member": [
+        {%- for person in sorted_people %}
+        {%- if person.first-name %}
+        {
+             "@context": "http://schema.org/",
+             "@type": "Person",
+             "givenName": "{{ person.first-name }}",
+             "familyName": "{{ person.last-name }}"                                    
+        {%- if forloop.last == false %} }, {% else %} } {% endif %}
+        {%- endif %}
+        {%- endfor %}
+    ]
+}
+</script>

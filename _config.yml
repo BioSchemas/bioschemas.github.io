@@ -11,7 +11,6 @@ email: contact@bioschemas.org
 description: > # this means to ignore newlines until "baseurl:"
   Bioschemas relies and extends from schema.org and aims to reuse existing
   standards and reach consensus among a wide number of life sciences organizations and communities.
-baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://bioschemas.org" # the base hostname & protocol for your site
 twitter_username: Bioschemas
 github_username:  Bioschemas
@@ -23,38 +22,61 @@ markdown: kramdown
 plugins:
  - jekyll-redirect-from
  - jekyll-sitemap
+ - jekyll-gist
+ - jekyll-relative-links
+
+sass:
+  sass_dir: assets/css
+  style: compressed
 
 # Collections
+collections_dir: pages
 collections:
-  specifications:
-    output: true
-    permalink: /:collection/:path/
-#  devSpecs:
-#    output: true
-#    permalink: /specifications/drafts/:path/
   types:
     output: true
-    permalink: /:collection/:path/
-#  devTypes:
-#    output: true
-#    permalink: /types/drafts/:path/
+    permalink: /:collection/:path
   meetings:
     output: true
-    permalink: /:collection/:path/ #Note, trailing / needed to avoid .html
+    permalink: /:collection/:path
+  tutorials:
+    output: true
+    permalink: /:collection/:path
   people:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:path
   groups:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:path
   useCases:
-    output: true
-    permalink: /:collection/:path/
-  liveDeploys:
     output: true
     permalink: /:collection/:path/
   stories:
     output: true
+    permalink: /:collection/:path
   profiles:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:path
+  community:
+    output: true
+    permalink: /:collection/:path
+  about:
+    output: true
+    permalink: /:collection/:path
+  posts:
+    output: true
+    permalink: /:collection/:path
+  news:
+    output: true
+    permalink: /:collection/:path
+
+defaults:
+  - scope:
+      path: ""
+      type: "profiles"
+    values:
+      layout: "profiles"
+  - scope:
+      path: ""
+      type: "types"
+    values:
+      layout: "default"

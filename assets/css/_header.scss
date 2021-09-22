@@ -1,0 +1,53 @@
+#header_wrap {
+    .biohex-logo {
+        .hexagon {
+            width: 8%;
+            margin: 1px;
+            transition: all 1s;
+        }
+        .hexagon:hover {
+            -webkit-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+        .bio-title {
+            width: 30%;
+        }
+    }
+    
+    &.stuck {
+        .hexagon {
+            padding:0.2em;
+            width: 46px;
+            position: fixed;
+            top: 0.2em;
+            left: 0.2em;
+            z-index: 1200;
+            background: #fff;
+            border-radius: 50%;
+            min-width: initial;
+        }
+    }
+
+    .btn-github {
+        background-color: #4c7fe8;
+        position: absolute;
+        top: 0;
+        right: 1.625em;
+    }
+
+    .btn-twitter {
+        background-color: #28a9e2;
+        position: absolute;
+        top: 0;
+        right: 8.875em;
+    }
+
+    @media (max-width: 576px) {
+        .btn-twitter {
+            right: 4.875em;
+        }
+    }
+}

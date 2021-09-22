@@ -1,0 +1,21 @@
+---
+layout: default
+title: Bioschemas Groups
+---
+
+<h1>Bioschemas Groups 
+<a target="_blank" href="mailto:enquiries@bioschemas.org?subject=[Bioschemas] request to create a new group" class="btn btn-primary float-end" role="button">
+<b>Propose a new group</b></a>
+</h1>
+<p>The following groups, responsible for creating specifications within the project, are active within the Bioschemas community:</p>
+<ul>
+{%- assign sorted_groups = site.groups | sort: 'name' %}
+{%- for group in sorted_groups %}
+{%- if group.name %}
+    <li><a href="{{group.url | relative_url}}">{{group.name}}</a> - {{group.abstract}}</li>
+{%- endif %}
+{%- endfor %}
+</ul>
+<a target="_blank" href="mailto:enquiries@bioschemas.org?subject=[Bioschemas] request to create a new group" class="btn btn-primary float-end" role="button">
+<b>Propose a new group</b></a>
+<br/>

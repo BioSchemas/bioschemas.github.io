@@ -1,0 +1,69 @@
+---
+layout: default
+title: News Tags
+---
+<div id="landing">
+	<div class="row">
+		<div class="col-md-8">
+			<h1>Bioschemas News by Tag</h1>
+
+			{%- comment %}
+			=======================
+			Extracts all the tags from your posts and sort tags, so that you do not need to manually collect your tags to a place.
+			=======================
+			{%- endcomment %}
+			{%- assign rawtags = "" %}
+			{%- for post in site.posts %}
+			{%- assign ttags = post.tags | join:'|' | append:'|' %}
+			{%- assign rawtags = rawtags | append:ttags %}
+			{%- endfor %}
+			{%- assign rawtags = rawtags | split:'|' | sort %}
+
+			{%- comment %}
+			=======================
+			Remove dulpicated tags and invalid tags like blank tag.
+			=======================
+			{%- endcomment %}
+			{%- assign tags = "" %}
+			{%- for tag in rawtags %}
+			{%- if tag != "" %}
+			{%- if tags == "" %}
+			{%- assign tags = tag | split:'|' %}
+			{%- endif %}
+			{%- unless tags contains tag %}
+			{%- assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+			{%- endunless %}
+			{%- endif %}
+			{%- endfor %}
+
+			{%- comment %}
+			=======================
+			List all the tags you have in your site.
+			=======================
+			{%- endcomment %}
+			<h2>Tags</h2>
+			<p>
+				{% for tag in tags %}
+				<a href="#{{ tag | slugify }}"><span class="badge bg-light text-dark">{{tag}}</span></a>
+				{% endfor %}
+			</p>
+			{%- comment %}
+			=======================
+			List all posts with a certain tag.
+			=======================
+			{%- endcomment %}
+			{%- for tag in tags %}
+			<h2 id="{{tag|slugify}}">{{tag}}</h2>
+			{%- for post in site.posts %}
+			{%- if post.tags contains tag %}
+			{% include post-snippet.html %}
+			{%- endif %}
+			{%- endfor %}
+			{%- endfor %}
+		</div>
+
+		<div class="col-md-4 right-column">
+			{% include news-list.html %}
+		</div>
+	</div>
+</div>
