@@ -1,14 +1,7 @@
 .spec-prof-table {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    margin: 1em 0 0 0;
-    border: 1px solid #98A0A6;
-    border-spacing: 3px;
-    display: table;
-    font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Tahoma, Arial, sans-serif;
-    line-height: 160%;
-    font-size: 85%;
+    line-height: 150%;
+    font-size: 90%;
+    border: 0;
     tbody th {
         text-align: left;
         vertical-align: top;
@@ -16,30 +9,25 @@
     tr {
         display: table-row;
         vertical-align: inherit;
-        border-color: inherit;
         font-size: 100%;
     }
     th {
         padding-left: 5px;
-        background: #C7CBCE;
+        background: $gray-200;
         color: #3A4956;
         font-weight: bold;
-        display: table-cell;
         text-align: center;
-        border: none;
+        border: 0;
         vertical-align: middle;
         font-size: 100%;
     }
     td {
-        position: relative;
         border: 0;
         padding: 0.625em;
         min-height: 1.25em;
         max-height: 2.5em;
         vertical-align: top;
         font-size: 100%;
-        display: table-cell;
-        // max-width: 30em;
         word-break: keep-all;
     }
     a {
@@ -63,7 +51,7 @@
         }
     }
     .property-column {
-        background: #C7CBCE;
+        background: $gray-200;
         font-weight: bold;
     }
     .expected-type-column {
@@ -72,13 +60,11 @@
     }    
     .description-column {
         word-wrap: break-word;
-        max-width: 35em;
     }
     .control-vocabulary-column {
         max-width: 10em;
     }
     .example-column {
-        position: relative;
         min-width: 4em;
         text-align: center;
     }
