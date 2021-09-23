@@ -1245,6 +1245,19 @@
           "exampleURL": "https://bmrb.io/data_library/summary/index.php?bmrbId=30309"
         }
       ]
+    },
+    {
+      "name": "Bioversions",
+      "url": "https://biopragmatics.github.io/bioversions/",
+      "sitemap": "https://biopragmatics.github.io/bioversions/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "-",
+          "exampleURL": "https://biopragmatics.github.io/bioversions/",
+          "highlight": "Aggregation site about 279 datasets. Due to the aggregation not all properties can be retrieved to comply with the Bioschemas profile."
+        }
+      ]
     }
   ]
 }
