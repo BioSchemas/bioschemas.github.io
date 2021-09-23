@@ -22,7 +22,7 @@ table.bioschemas_spec_list tr {
 .bioschemas_properties th,
 .definition-table th,
 table.bioschemas_spec_list th {
-    background: $gray-200;
+    background: $gray-100;
     color: #3A4956;
     font-weight: bold;
     text-align: center;
@@ -53,7 +53,7 @@ table.bioschemas_spec_list td {
 .new_props_sdo td,
 .cardinality td {
     font-weight: bold;
-    background: $gray-300;
+    background: $gray-200;
     font-size: 100%;
 }
 
