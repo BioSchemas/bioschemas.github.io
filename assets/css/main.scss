@@ -14,7 +14,7 @@ $external-property-color: #454547;
 
 // Bootstrap 5 variables
 $font-family-sans-serif: 'Noto Sans', Arial, sans-serif;
-$light: #eaf2ee;
+$light: #ecf5f1;
 $link-color: #005ce6;
 $font-size-root: 16px;
 $primary: $bioschemas-base-color;
@@ -23,6 +23,8 @@ $component-active-bg: $bioschemas-base-color;
 $link-hover-color: $bioschemas-base-color;
 $accordion-button-active-color: #000000;
 $table-cell-padding-y: .7rem;
+$table-hover-bg-factor: .075;
+$table-hover-bg: rgba($bioschemas-base-color, $table-hover-bg-factor);
 
 @import
     "bootstrap/bootstrap",
