@@ -157,32 +157,3 @@ layout: default
 {% endif %}
 {{ content }}
 
-<!-- change number columns based on device -->
-<script type="application/x-javascript">
-   if(navigator.userAgent.match(/android/i)) {
-         document.getElementById('peopleTable').style.columnCount = 1;
-         document.getElementById('formerPeopleTable').style.columnCount = 1;
-         document.getElementById('leadTable').style.columnCount = 1;
-         document.getElementById('formerLeadTable').style.columnCount = 1;
-   } else if(navigator.userAgent.match(/phone/i)) {
-         document.getElementById('peopleTable').style.columnCount = 1;
-         document.getElementById('formerPeopleTable').style.columnCount = 1;
-         document.getElementById('leadTable').style.columnCount = 1;
-         document.getElementById('formerLeadTable').style.columnCount = 1;
-   } else if(navigator.userAgent.match(/tablet/i)) {
-         document.getElementById('peopleTable').style.columnCount = 1;
-         document.getElementById('formerPeopleTable').style.columnCount = 1;
-         document.getElementById('leadTable').style.columnCount = 1;
-         document.getElementById('formerLeadTable').style.columnCount = 1;
-   } else if(navigator.userAgent.match(/ipad/i)) {
-         document.getElementById('peopleTable').style.columnCount = 1;
-         document.getElementById('formerPeopleTable').style.columnCount = 1;
-         document.getElementById('leadTable').style.columnCount = 1;
-         document.getElementById('formerLeadTable').style.columnCount = 1;
-   } else {
-         document.getElementById('peopleTable').style.columnCount = 4;
-         document.getElementById('formerPeopleTable').style.columnCount = 4;
-         document.getElementById('leadTable').style.columnCount = 4;
-         document.getElementById('formerLeadTable').style.columnCount = 4;
-   }
-</script>
