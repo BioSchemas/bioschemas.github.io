@@ -1,23 +1,41 @@
 
-<div class="inner">
-    <p><a href="#top" id="top_link">Top &#9650;</a></p>
-</div>
-<div id="footer_wrap" class="outer">
-    <footer class="inner">
-        <div class="acknowledge">
 
+<button class="btn btn-primary top_link" type="button" aria-hidden="true">
+	<i class="fa fa-arrow-up"></i> Back to top
+</button>
+<footer class="py-4 mt-3 border-top">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+        <div class="col-md-5 d-flex align-items-center">
+            <a href="{{ '/index.html' | relative_url }}"
+                class="col-md-3 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <img class="w-50" src="{{ 'assets/img/square_logo2.svg' | relative_url }}" alt="Bioschemas">
+            </a>
+            <span class="text-muted">{{ site.time | date: '%Y' }} | This page is available under the <a target="_blank"
+                    href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike
+                    License</a></span>
         </div>
-        <img class="img_bottom rotation" src="/images/square_logo2.png" alt="Bioschemas">
+        <ul class="nav mb-3 mb-lg-4 align-items-center">
+            <li class="nav-item"><a href="{{ '/index.html' | relative_url }}" class="nav-link px-2 text-muted">Home</a>
+            </li>
+            <li class="nav-item"><a href="{{ '/about/funders' | relative_url }}" class="nav-link px-2 text-muted">Funding</a>
+            </li>
+            <li class="nav-item"><a href="mailto:enquiries@bioschemas.org" itemprop="email"
+                    class="nav-link px-2 text-muted">Hugs &amp; bugs</a></li>
+            <li class="nav-item"><a href="{{ '/community/howtojoin' | relative_url }}" class="nav-link px-2 text-muted">Join</a>
+            </li>
+            {%- if page.spec_type != "Profile" and page.spec_type != "Type" %}
+            {%- if page.title == "Bioschemas" %}
+            {%- assign github_url = "https://github.com/Bioschemas/bioschemas.github.io/tree/master/" | append: page.path %}
+            {%- else %}
+            {%- assign github_url = "https://github.com/Bioschemas/bioschemas.github.io/tree/master/pages/" | append: page.path %}
+            {%- endif %}
+            <li class="nav-item"><a target="_blank" class="nav-link px-2 text-muted" href="{{github_url}}">
+                <i class="fas fa-pencil-alt me-1"></i>Edit me
+            </a></li>
+            {%- endif %}
+        </ul>
+    </div>
+</footer>
 
-        <p class="p_bottom"><a href="/funders/">Funding</a> | <a href="mailto:enquiries@bioschemas.org" itemprop="email">Hugs &amp; bugs</a> | <a href="/howtojoin">Join</a></p>
-        <div class="license">
-            <p class="p_bottom">&copy; {{ site.time | date: '%Y' }} | This page is available under the <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike License</a></p>
-        </div>
-    </footer>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-<script src="/js/clipboard.min.js"></script>
-<script src="/js/scripts.js"></script>
+<script src="{{'assets/js/clipboard.min.js' | relative_url }}"></script>
+<script src="{{'assets/js/scripts.js' | relative_url }}"></script>

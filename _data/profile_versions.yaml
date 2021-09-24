@@ -14,19 +14,31 @@ BioSample:
 
 ChemicalSubstance:
     name: "ChemicalSubstance"
-    latest_publication: "0.3-DRAFT-2019_11_11"
+    latest_publication:
+    latest_release: "0.4-RELEASE"
+    status: "active"
+
+ComputationalTool:
+    name: "ComputationalTool"
+    latest_publication: "0.6-DRAFT"
     latest_release:
+    status: "active"
+
+ComputationalWorkflow:
+    name: "ComputationalWorkflow"
+    latest_publication:
+    latest_release: "1.0-RELEASE"
     status: "active"
 
 Course:
     name: "Course"
-    latest_publication: "0.7-DRAFT-2019_11_08"
+    latest_publication: "0.9-DRAFT-2020_12_08"
     latest_release:
     status: "active"
 
 CourseInstance:
     name: "CourseInstance"
-    latest_publication: "0.7-DRAFT-2019_11_08"
+    latest_publication: "0.8-DRAFT-2020_10_06"
     latest_release:
     status: "active"
 
@@ -40,12 +52,19 @@ DataRecord:
     name: "DataRecord"
     latest_publication: "0.2-DRAFT-2019_06_14"
     latest_release:
-    status: "active"
+    status: "deprecated"
+    deprecated_date: "2021-02-22"
 
 Dataset:
     name: "Dataset"
-    latest_publication:
+    latest_publication: "0.4-DRAFT"
     latest_release: "0.3-RELEASE-2019_06_14"
+    status: "active"
+
+Disease:
+    name: "Disease"
+    latest_publication: "0.1-DRAFT"
+    latest_release:
     status: "active"
 
 Event:
@@ -54,28 +73,34 @@ Event:
     latest_release:
     status: "active"
 
+FormalParameter:
+    name: "FormalParameter"
+    latest_publication:
+    latest_release: "1.0-RELEASE"
+    status: "active"
+
 Gene:
     name: "Gene"
-    latest_publication: "0.5-DRAFT-2019_06_14"
-    latest_release: "0.4-RELEASE-2019_11_10"
+    latest_publication:
+    latest_release: "1.0-RELEASE"
     status: "active"
 
 Journal:
     name: "Journal"
-    latest_publication: "0.1-DRAFT-2019_11_21"
+    latest_publication: "0.2-DRAFT-2020_12_03"
     latest_release:
     status: "active"
 
 LabProtocol:
     name: "LabProtocol"
-    latest_publication: "0.3-DRAFT-2019_06_14"
+    latest_publication: "0.6-DRAFT-2020_12_08"
     latest_release:
     status: "active"
 
 MolecularEntity:
     name: "MolecularEntity"
-    latest_publication: "0.4-DRAFT-2019_11_11"
-    latest_release:
+    latest_publication:
+    latest_release: "0.5-RELEASE"
     status: "active"
 
 Organization:
@@ -92,19 +117,19 @@ Person:
 
 Phenotype:
     name: "Phenotype"
-    latest_publication: "0.1-DRAFT-2018_11_15"
+    latest_publication: "0.2-DRAFT"
     latest_release:
     status: "active"
 
 Protein:
     name: "Protein"
-    latest_publication: "0.9-DRAFT-2019_08_20"
-    latest_release: "0.6-RELEASE-2018_11_10"
+    latest_publication:
+    latest_release: "0.11-RELEASE"
     status: "active"
 
 ProteinAnnotation:
     name: "ProteinAnnotation"
-    latest_publication: "0.4-DRAFT-2018_02_25"
+    latest_publication: "0.6-DRAFT"
     latest_release:
     status: "active"
 
@@ -116,13 +141,13 @@ ProteinStructure:
 
 PublicationIssue:
     name: "PublicationIssue"
-    latest_publication: "0.1-DRAFT-2019_02_08"
+    latest_publication: "0.2-DRAFT-2020_12_03"
     latest_release:
     status: "active"
 
 PublicationVolume:
     name: "PublicationVolume"
-    latest_publication: "0.1-DRAFT-2019_02_15"
+    latest_publication: "0.2-DRAFT-2020_12_03"
     latest_release:
     status: "active"
 
@@ -140,43 +165,37 @@ Sample:
 
 ScholarlyArticle:
     name: "ScholarlyArticle"
-    latest_publication: "0.1-DRAFT-2019_03_15"
+    latest_publication: "0.2-DRAFT-2020_12_03"
     latest_release:
     status: "active"
 
-SemanticAnnotation:
-    name: "SemanticAnnotation"
-    latest_publication: "0.1-DRAFT-2019_11_19"
+SemanticTextAnnotation:
+    name: "SemanticTextAnnotation"
+    latest_publication: "0.2-DRAFT-2020_12_03"
     latest_release:
     status: "active"
 
 Study:
     name: "Study"
-    latest_publication: "0.1-DRAFT-2018_11_15"
+    latest_publication: "0.2-DRAFT"
     latest_release:
     status: "active"
 
 Taxon:
     name: "Taxon"
-    latest_publication: "0.4-DRAFT-2019_06_24"
-    latest_release: "0.3-RELEASE-2018_11_10"
+    latest_publication: "0.7-DRAFT"
+    latest_release: "0.6-RELEASE"
     status: "active"
 
-Tool:
-    name: "Tool"
-    latest_publication: "0.4-DRAFT-2019_07_19"
+TaxonName:
+    name: "TaxonName"
+    latest_publication: "0.1-DRAFT"
     latest_release:
     status: "active"
 
 TrainingMaterial:
     name: "TrainingMaterial"
-    latest_publication: "0.7-DRAFT-2019_11_08"
-    latest_release:
-    status: "active"
-
-Workflow:
-    name: "Workflow"
-    latest_publication: "0.2-DRAFT-2019_11_29"
+    latest_publication: "0.9-DRAFT-2020_12_08"
     latest_release:
     status: "active"
 

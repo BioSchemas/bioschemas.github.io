@@ -24,11 +24,18 @@ ChemicalSubstance:
     latest_release: "0.3-RELEASE-2019_09_02"
     status: "active"
 
+ComputationalWorkflow:
+    name: "ComputationalWorkflow"
+    latest_publication:
+    latest_release: "1.0-RELEASE"
+    status: "active"
+
 DataRecord:
     name: "DataRecord"
     latest_publication: "0.3-DRAFT-2019_06_20"
     latest_release:
-    status: "active"
+    status: "deprecated"
+    deprecated_date: "2021-02-22"
 
 DNA:
     name: "DNA"
@@ -40,6 +47,12 @@ Enzyme:
     name: "Enzyme"
     latest_publication: "0.1-DRAFT-2019_06_20"
     latest_release:
+    status: "active"
+
+FormalParameter:
+    name: "FormalParameter"
+    latest_publication:
+    latest_release: "1.0-RELEASE"
     status: "active"
 
 Gene:
@@ -62,7 +75,7 @@ MolecularEntity:
 
 Phenotype:
     name: "Phenotype"
-    latest_publication: "0.2-DRAFT-2019_06_21"
+    latest_publication: "0.3-DRAFT-2020_06_07"
     latest_release:
     status: "active"
 
@@ -104,15 +117,20 @@ SequenceRange:
 
 Study:
     name: "Study"
-    latest_publication: "0.2-DRAFT-2019_06_21"
+    latest_publication: "0.3-DRAFT"
     latest_release:
     status: "active"
 
 Taxon:
     name: "Taxon"
-    latest_publication:
+    latest_publication: "0.4-DRAFT"
     latest_release: "0.3-RELEASE-2019_11_18"
     status: "active"
 
+TaxonName:
+    name: "TaxonName"
+    latest_publication: "0.1-DRAFT"
+    latest_release:
+    status: "active"
 
 ---

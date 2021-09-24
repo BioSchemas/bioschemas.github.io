@@ -1,27 +1,19 @@
-<a name="top"></a>
-
-<div id="header_wrap" class="outer">
-    <header class="inner">
-
-        <a id="forkme_banner" href="https://github.com/BioSchemas">GitHub</a>
-        <a id="twitter_banner" href="https://twitter.com/bioschemas">Twitter</a>
-
-        <div class="biohex-logo">
-            <a href="/">
-                <img class="hexagon" src="/images/square_logo2.png" alt="Bioschemas">
-            </a>
-            <a href="/">
-                <img class="bio-title" src="/images/name_lower.png" alt="Bioschemas">
-            </a>
-        </div>
-
-        {% if page.spec_type != "Profile" and page.spec_type != "Type"%}
-        <div class="git-edit">
-            <a target="_blank" href="https://github.com/BioSchemas/bioschemas.github.io/tree/master/{{page.path}}" class="btn btn-bioschema btn-sm" role="button">
-                <b>Edit me&nbsp;</b>
-                <i class="fas fa-pencil-alt"></i>
-            </a>        
-        </div>
-        {% endif %}
-    </header>
-</div>
+<a class="visually-hidden-focusable" href='#main'>Skip to content</a>
+<header id="header_wrap" class="p-3">
+    <a class="btn btn-github rounded-0 rounded-bottom shadow text-white fs-5 d-flex align-items-center" href="https://github.com/Bioschemas">
+        <div class="flex-grow-1 me-sm-2 d-none d-sm-block">GitHub</div>
+        <div class="flex-shrink-0"></div><i class="fab fa-twitter"></div></i>
+    </a>
+    <a class="btn btn-twitter rounded-0 rounded-bottom shadow text-white fs-5 d-flex align-items-center" href="https://twitter.com/bioschemas">
+        <div class="flex-grow-1 me-sm-2 d-none d-sm-block">Twitter</div>
+        <div class="flex-shrink-0"></div><i class="fab fa-github"></i></div>
+    </a>
+    <div class="biohex-logo">
+        <a href="{{ '/index.html' | relative_url}}">
+            <img class="hexagon" src="{{ 'assets/img/square_logo2.svg' | relative_url }}" alt="Bioschemas">
+        </a>
+        <a href="{{ '/index.html' | relative_url}}">
+            <img class="bio-title" src="{{ 'assets/img/name_lower.svg' | relative_url }}" alt="Bioschemas">
+        </a>
+    </div>
+</header>

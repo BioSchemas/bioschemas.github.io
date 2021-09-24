@@ -1,0 +1,268 @@
+<!--
+    ToDo: Remove this validation after all the specs
+        are updated to the new specification-table template.
+-->
+{% assign version_prev = page.version %}
+{% if version_prev != null%}
+{% assign current_name = page.name %}
+{% assign current_version = page.version %}
+{% assign current_subtitle = page.subtitle %}
+{% assign current_pubDate = page.dateModified %}
+{% else %}
+{% assign current_name = page.spec_info.title %}
+{% assign current_version = page.spec_info.version %}
+{% assign current_subtitle = page.spec_info.subtitle %}
+{% assign current_pubDate = page.spec_info.version_date %}
+{% endif %}
+
+{% if page.status == 'release' %}
+<h1>{{current_name}} Profile</h1>
+{% elsif site.data.profile_versions[page.name].status == "deprecated"%}
+<h1>{{current_name}} <u>DEPRECATED</u> Profile</h1>
+{% else %}
+<h1>{{current_name}} <u>DRAFT</u> Profile</h1>
+{% endif %}
+<h3><strong>Version:</strong> {{current_version}} ({{current_pubDate | date_to_long_string }})
+{%- if current_subtitle %}
+<h2>{{current_subtitle}}</h2>
+{%- endif %}
+<br />
+<p>If you spot any errors or omissions with this type, please file an issue in our <a href="{{page.gh_tasks}}" target="_blank">GitHub</a>.</p>
+<br />
+<nav class="mt-3">
+   <div class="nav nav-tabs" id="nav-tab" role="tablist">
+     <button class="nav-link active" id="nav-description-tab" data-bs-toggle="tab" data-bs-target="#nav-description" type="button" role="tab" aria-controls="nav-description" aria-selected="true">Description</button>
+     <button class="nav-link" id="nav-contributors-tab" data-bs-toggle="tab" data-bs-target="#nav-contributors" type="button" role="tab" aria-controls="nav-contributors" aria-selected="false">Contributors</button>
+     <button class="nav-link" id="nav-links-tab" data-bs-toggle="tab" data-bs-target="#nav-links" type="button" role="tab" aria-controls="nav-links" aria-selected="false">Links</button>
+   </div>
+</nav>
+<div class="tab-content py-3 mb-3 border-bottom" id="nav-tabContent">
+   <div class="tab-pane fade show active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
+      <!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
+      <h3>Schema.org hierarchy</h3>
+      This {{page.spec_type}} fits into the schema.org hierarchy as follows:
+      <br/>
+      <br/>
+      {% for branch_name in page.hierarchy %}
+      {% if branch_name == "BioChemEntity" or
+      branch_name == "BioChemStructure" or
+      branch_name == "BioSample" or
+      branch_name == "ChemicalSubstance" or
+      branch_name == "ComputationalWorkflow" or
+      branch_name == "DataRecord" or
+      branch_name == "DNA" or
+      branch_name == "Enzyme" or
+      branch_name == "FormalParameter" or
+      branch_name == "Gene" or
+      branch_name == "LabProtocol" or
+      branch_name == "MolecularEntity" or
+      branch_name == "Phenotype" or
+      branch_name == "Protein" or
+      branch_name == "RNA" or
+      branch_name == "Sample" or
+      branch_name == "SequenceAnnotation" or
+      branch_name == "SequenceMatchingModel" or
+      branch_name == "SequenceRange" or
+      branch_name == "Study" or
+      branch_name == "Taxon" or
+      branch_name == "TaxonName"%}
+      <a href="{{branch_name | relative_url }}">{{branch_name}}</a>
+      {% else %}
+      <a href="http://schema.org/{{branch_name}}">{{branch_name}}</a>
+      {% endif %}
+      {%if forloop.index < page.hierarchy.size%}
+      &gt;
+      {%endif%}
+      {%endfor%}
+      {%if page.spec_type == 'Type'%}
+      &gt;
+      <a href="#">{{page.name}}</a>
+      {%endif%}
+      <h3>Description</h3>
+      <!--
+         ToDo: Remove this validation after all the specs
+               are updated to the new specification-table template.
+      -->
+      {% assign description_prev = page.description %}
+      {% if description_prev != null %}
+      <p>{{page.description}}</p>
+      {% else %}
+      <p>{{page.spec_info.description}}</p>
+      {% endif %}
+
+      <h3>Latest profiles</h3>
+      {% assign profile_versions = site.data.profile_versions[page.name] %}
+      {% if profile_versions.latest_release != null %}
+      {%- assign profileName = '/profiles/' | append: page.name | append:'/' | append: profile_versions.latest_release %}
+      <p>Latest release: <a href="{{ profileName | relative_url }}">{{profile_versions.latest_release}}</a></p>
+      {% else %}
+      <p>Latest release: none</p>
+      {% endif %}
+      {% if profile_versions.latest_publication != null %}
+      {%- assign profileName = '/profiles/' | append: page.name | append:'/' | append: profile_versions.latest_publication %}
+      <p>Latest draft: <a href="{{ profileName | relative_url }}">{{profile_versions.latest_publication}}</a></p>
+      {% endif %}
+
+      <h3>Previous profiles</h3>
+      {% assign prev_version = page.previous_version %}
+      {% if prev_version != null %}
+      {%- assign profileName = '/profiles/' | append: page.name | append:'/' | append: page.previous_version %}
+      <p>Previous version: <a href="{{ profileName | relative_url }}">{{page.previous_version}}</a></p>
+      {% else %}
+      <p>Previous version: none</p>
+      {% endif %}
+      {% assign prev_release = page.previous_release %}
+      {% if prev_release != null %}
+      {%- assign profileName = '/profiles/' | append: page.name | append:'/' | append: page.previous_release %}
+      <p>Previous release: <a href="{{ profileName | relative_url }}">{{page.previous_release}}</a></p>
+      {% endif %}
+   </div>
+   <div class="tab-pane fade" id="nav-contributors" role="tabpanel" aria-labelledby="nav-contributors-tab">
+      <h3>Contributors</h3>
+      {% assign group = site.groups | where:"identifier", page.group %}
+      {% for g in group %}
+      <p>The following people have been involved in the creation of this specification document. They are all members of the <a href="{{g.url}}">{{g.name}}</a> group.</p>
+      {% endfor %}
+      <h6>Group Leader(s)</h6>
+      <div id="leadTable">
+         {% for g in group %}
+         {% for leader in g.lead %}
+         {% assign lead-id = "/people/" | append: leader %}
+         {% assign author = site.people | where:"id", lead-id | first %}
+         {% if author.homepage or author.github_username or author.orcid %}
+         <p><a href="{{ author.url | relative_url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
+         {% else %}
+         <p>{{ author.first-name }} {{ author.last-name }}</p>
+         {% endif %}
+         {% else %}
+         <p>No team leaders currently specified.</p>
+         {% endfor %}
+         {% endfor %}
+      </div>
+      <h6>Other team members</h6>
+      <div id="peopleTable">
+         {% for g in group %}
+         {% for member-name in g.members %}
+
+         {% unless g.lead contains member-name %}
+
+         {% assign member-id = "/people/" | append: member-name %}
+         {% assign member = site.people | where:"id", member-id | first %}
+         <p><a href="{{ member.url | relative_url }}">{{ member.first-name }} {{ member.last-name }}</a></p>
+
+         {% endunless %}
+
+         {% endfor %}
+         {% endfor %}
+      </div>
+   </div>
+   <div class="tab-pane fade" id="nav-links" role="tabpanel" aria-labelledby="nav-links-tab">
+      <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto;">
+         <thead>
+            <tr>
+               <th>Group</th>
+               <th>Use Cases</th>
+               <th>Cross Walk</th>
+               <th>Task &amp; Issues</th>
+               <th>Examples</th>
+               <th>Live Deploys</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  {% for g in group %}
+                  <a href="{{g.url | relative_url}}">{{g.name}}</a>
+                  {% endfor %}
+               </td>
+               <td class="spec_links">
+                  {% if page.use_cases_url == '' or page.use_cases_url == nil %}
+                  <a>
+                  <img src="{{ '/images/use_case_spec.svg' | relative_url }}" alt="View Bioschemas {{ page.name }} Use Cases"  style="filter: grayscale(100%);">
+                  </a>
+                  {%else%}
+                  <a href="{{page.use_cases_url}}">
+                  <img src="{{ '/images/use_case_spec.svg' | relative_url }}" alt="View Bioschemas {{ page.name }} Use Cases">
+                  </a>
+                  {%endif%}
+               </td>
+               <td class="spec_links">
+                  {% if page.cross_walk_url == '' %}
+                  <a>
+                  <img src="{{ '/images/cross_walk.svg' | relative_url }}" alt="View Bioschemas {{ page.name }} Cross Walk"  style="filter: grayscale(100%);">
+                  </a>
+                  {%else%}
+                  <a href="{{page.cross_walk_url}}" target="_blank">
+                  <img src="{{ '/images/cross_walk.svg' | relative_url }}" alt="View Bioschemas {{ page.name }} Cross Walk">
+                  </a>
+                  {%endif%}
+               </td>
+               <td class="spec_links">
+                  {% if page.gh_tasks == '' %}
+                  <a>
+                  <img src="{{ '/images/specs_tasks.png' | relative_url }}" alt="Bioschemas {{ page.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
+                  </a>
+                  {% else %}
+                  <a href="{{page.gh_tasks}}" target="_blank">
+                  <img src="{{ '/images/specs_tasks.png' | relative_url }}" alt="Bioschemas {{ page.name }} Github Tasks or Issues">
+                  </a>
+                  {% endif %}
+               </td>
+               <td class="spec_links" target="_blank">
+                  {% if page.spec_info.full_example == '' %}
+                  <a>
+                  <img src="{{ '/images/spec_examples.png' | relative_url }}" alt="View Bioschemas {{ page.name }} Examples" style="filter: grayscale(100%);">
+                  </a>
+                  {% else %}
+                  <a href="{{page.spec_info.full_example}}" target="_blank">
+                  <img src="{{ '/images/spec_examples.png' | relative_url }}" alt="View Bioschemas {{ page.name }} Examples">
+                  </a>
+                  {% endif %}
+               </td>
+               <td class="spec_links">
+                  {% if page.live_deploy == '' %}
+                  <a>
+                  <img src="{{ '/images/live_deploy.svg' | relative_url }}" alt="View Bioschemas {{ page.name }} Examples" style="filter: grayscale(100%);">
+                  </a>
+                  {% else %}
+                  <a href="{{page.live_deploy}}">
+                  <img src="{{ '/images/live_deploy.svg' | relative_url }}" alt="View Bioschemas {{ page.name }} Examples">
+                  </a>
+                  {% endif %}
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <br />
+      {% if page.name != 'Organization' and page.name != 'Person' and page.name != 'Chemical' and page.name != 'ChemicalStructure' and page.name != 'Course' and page.name != 'Standard' %}
+      {% if page.status == 'release' %}
+      {%- assign specificationName = /specifications/drafts/' | append: page.name %}
+      <p>You can read the <a href="{{ specificationName | relative_url }}">draft version of this specification here</a>.</p>
+      {% elsif page.status == 'revision' %}
+      {%- assign specificationName = /specifications/' | append: page.name %}
+      <p>You can read the <a href="{{ specificationName | relative_url }}">release version of this specification here</a>.</p>
+      {% endif %}
+      {% endif %}
+   </div>
+</div>
+
+{% include spec-table-key.html %}
+<!-- change number columns based on device -->
+<script type="application/x-javascript">
+   if(navigator.userAgent.match(/android/i)) {
+       document.getElementById('peopleTable').style.columnCount = 1;
+       document.getElementById('leadTable').style.columnCount = 1;
+   } else if(navigator.userAgent.match(/phone/i)) {
+       document.getElementById('peopleTable').style.columnCount = 1;
+       document.getElementById('leadTable').style.columnCount = 1;
+   } else if(navigator.userAgent.match(/tablet/i)) {
+       document.getElementById('peopleTable').style.columnCount = 1;
+       document.getElementById('leadTable').style.columnCount = 1;
+   } else if(navigator.userAgent.match(/ipad/i)) {
+       document.getElementById('peopleTable').style.columnCount = 1;
+       document.getElementById('leadTable').style.columnCount = 1;
+   } else {
+       document.getElementById('peopleTable').style.columnCount = 4;
+       document.getElementById('leadTable').style.columnCount = 4;
+   }
+</script>
