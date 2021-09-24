@@ -34,7 +34,7 @@ members:
     - QuentinGroom
     - RicardoArcila
     - ylebras
-        - RomanBaum
+    - RomanBaum
     - CarlBoettiger
     - MattYoder
 ---
