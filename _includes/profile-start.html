@@ -157,7 +157,8 @@
       </div>
    </div>
    <div class="tab-pane fade" id="nav-links" role="tabpanel" aria-labelledby="nav-links-tab">
-      <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto;">
+      <div class="table-responsive shadow rounded mt-4 mb-5">
+      <table class="table table-hover mb-0 bioschemas_spec_list">
          <thead>
             <tr>
                <th>Group</th>
@@ -233,6 +234,7 @@
             </tr>
          </tbody>
       </table>
+      </div>
       <br />
       {% if page.name != 'Organization' and page.name != 'Person' and page.name != 'Chemical' and page.name != 'ChemicalStructure' and page.name != 'Course' and page.name != 'Standard' %}
       {% if page.status == 'release' %}
@@ -247,22 +249,3 @@
 </div>
 
 {% include spec-table-key.html %}
-<!-- change number columns based on device -->
-<script type="application/x-javascript">
-   if(navigator.userAgent.match(/android/i)) {
-       document.getElementById('peopleTable').style.columnCount = 1;
-       document.getElementById('leadTable').style.columnCount = 1;
-   } else if(navigator.userAgent.match(/phone/i)) {
-       document.getElementById('peopleTable').style.columnCount = 1;
-       document.getElementById('leadTable').style.columnCount = 1;
-   } else if(navigator.userAgent.match(/tablet/i)) {
-       document.getElementById('peopleTable').style.columnCount = 1;
-       document.getElementById('leadTable').style.columnCount = 1;
-   } else if(navigator.userAgent.match(/ipad/i)) {
-       document.getElementById('peopleTable').style.columnCount = 1;
-       document.getElementById('leadTable').style.columnCount = 1;
-   } else {
-       document.getElementById('peopleTable').style.columnCount = 4;
-       document.getElementById('leadTable').style.columnCount = 4;
-   }
-</script>

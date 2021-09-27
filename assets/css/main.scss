@@ -14,7 +14,7 @@ $external-property-color: #454547;
 
 // Bootstrap 5 variables
 $font-family-sans-serif: 'Noto Sans', Arial, sans-serif;
-$light: #eaf2ee;
+$light: #ecf5f1;
 $link-color: #005ce6;
 $font-size-root: 16px;
 $primary: $bioschemas-base-color;
@@ -22,6 +22,9 @@ $link-decoration: none;
 $component-active-bg: $bioschemas-base-color;
 $link-hover-color: $bioschemas-base-color;
 $accordion-button-active-color: #000000;
+$table-cell-padding-y: .7rem;
+$table-hover-bg-factor: .075;
+$table-hover-bg: rgba($bioschemas-base-color, $table-hover-bg-factor);
 
 @import
     "bootstrap/bootstrap",
@@ -98,35 +101,6 @@ main ul li {
 
 main ul li::marker {
     color: $bioschemas-base-color;
-}
-
-table {
-    margin-bottom: 1.625em;
-    margin-top: 1.25em;
-    text-align: left;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-th {
-    padding: 0.625em;
-    background: #888;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.1em;
-    border: 1px solid #555;
-    text-align: center;
-    vertical-align: middle;
-}
-
-
-td {
-    border: 1px solid #666;
-    padding: 0.625em;
-    min-height: 1.25em;
-    max-height: 2.5em;
-    vertical-align: middle;
 }
 
 form {
@@ -217,6 +191,17 @@ About Us Organizations Links
 }
 
 
+#peopleTable, #formerPeopleTable, #leadTable, #formerLeadTable {
+    column-count: 4;
+}
+
+@media (max-width: 768px) { 
+    #peopleTable, #formerPeopleTable, #leadTable, #formerLeadTable {
+        column-count: 2;
+    }
+ }
+
+
 /*******************************************************************************
 Table of contents
 *******************************************************************************/
@@ -252,3 +237,5 @@ Media sizing
 .mw-13 {
     max-width: 13em;
 }
+
+
