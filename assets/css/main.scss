@@ -1,19 +1,18 @@
 ---
 ---
 
-
 // Bioschemas base colors
-$bioschemas-base-color: #0B794B;
-$bioschemas-medium-sea-color: #2BB673;
-$bioschemas-steel-teal-color: #55828B;
-$bioschemas-dark-sea-green-color: #87BBA2;
-$bioschemas-tea-green-color: #C9E4CA;
+$bioschemas-base-color: #0b794b;
+$bioschemas-medium-sea-color: #2bb673;
+$bioschemas-steel-teal-color: #55828b;
+$bioschemas-dark-sea-green-color: #87bba2;
+$bioschemas-tea-green-color: #c9e4ca;
 $schemaorg-property-color: #660000;
-$pending-property-color: #0000CC;
+$pending-property-color: #0000cc;
 $external-property-color: #454547;
 
 // Bootstrap 5 variables
-$font-family-sans-serif: 'Noto Sans', Arial, sans-serif;
+$font-family-sans-serif: "Noto Sans", Arial, sans-serif;
 $light: #ecf5f1;
 $link-color: #005ce6;
 $font-size-root: 16px;
@@ -22,19 +21,12 @@ $link-decoration: none;
 $component-active-bg: $bioschemas-base-color;
 $link-hover-color: $bioschemas-base-color;
 $accordion-button-active-color: #000000;
-$table-cell-padding-y: .7rem;
-$table-hover-bg-factor: .075;
+$table-cell-padding-y: 0.7rem;
+$table-hover-bg-factor: 0.075;
 $table-hover-bg: rgba($bioschemas-base-color, $table-hover-bg-factor);
+$box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
-@import
-    "bootstrap/bootstrap",
-    "header",
-    "spec-tables",
-    "code-highlight",
-    "community",
-    "landing",
-    "specifications"
-;
+@import "bootstrap/bootstrap", "header", "spec-tables", "code-highlight", "community", "landing", "specifications";
 
 /*******************************************************************************
 Theme Styles
@@ -46,7 +38,7 @@ h4,
 h5,
 h6 {
     font-weight: normal;
-    color: $bioschemas-base-color;;
+    color: $bioschemas-base-color;
     letter-spacing: -1px;
 }
 
@@ -64,11 +56,10 @@ h2 {
     padding-top: 0.6em;
 }
 
-
 h3 {
     font-size: 1.3125em;
     margin-bottom: 0.3125em;
-    padding-top: 0.6em; 
+    padding-top: 0.6em;
 }
 
 h4 {
@@ -90,7 +81,7 @@ blockquote {
     border-left: 3px solid #bbb;
 }
 
-/* End - Selection color */
+/* list indentation */
 
 main ol li,
 main ul li {
@@ -127,7 +118,6 @@ Back to top button
     opacity: 1;
 }
 
-
 /*******************************************************************************
 Tabs
 *******************************************************************************/
@@ -144,7 +134,6 @@ Tabs
     color: #2b2b2b;
     border-top: 2px solid $bioschemas-base-color;
 }
-
 
 /*******************************************************************************
 About Us Organizations Links
@@ -164,7 +153,6 @@ About Us Organizations Links
 }
 
 .organs_inv img {
-    /*float: left;*/
     width: 140px;
     height: 100px;
     /**margin-right: 0.625em;
@@ -174,33 +162,32 @@ About Us Organizations Links
 }
 
 .organs_inv img:hover {
-    /**margin-right: 0.525em;
-    margin-left: 1.1em;*/
-    vertical-align: middle;
-    background-color: rgb(242, 242, 242);
-    background-color: rgba(242, 242, 242, .7);
-    border: 2px solid $bioschemas-base-color;;
-    border-radius: 0.625em;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .organs_inv p {
     text-align: justify;
 }
 
+/*******************************************************************************
+Variable amount of columns in some tables
+*******************************************************************************/
 
-#peopleTable, #formerPeopleTable, #leadTable, #formerLeadTable {
+#peopleTable,
+#formerPeopleTable,
+#leadTable,
+#formerLeadTable {
     column-count: 4;
 }
 
-@media (max-width: 768px) { 
-    #peopleTable, #formerPeopleTable, #leadTable, #formerLeadTable {
+@media (max-width: 768px) {
+    #peopleTable,
+    #formerPeopleTable,
+    #leadTable,
+    #formerLeadTable {
         column-count: 2;
     }
- }
-
+}
 
 /*******************************************************************************
 Table of contents
@@ -219,17 +206,6 @@ Table of contents
     margin: 8px 0 0 0;
 }
 
-
-/*******************************************************************************
-Shadow
-*******************************************************************************/
-
-.shadow {
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
 /*******************************************************************************
 Media sizing
 *******************************************************************************/
@@ -237,5 +213,3 @@ Media sizing
 .mw-13 {
     max-width: 13em;
 }
-
-

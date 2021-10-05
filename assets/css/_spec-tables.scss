@@ -76,8 +76,10 @@
     pre {
         width:auto;
         padding:5px;
-        border-radius: initial;
-        box-shadow: none;
+        min-height: 47px;
+        align-items: center;
+        display: flex;
+        border-radius: 0.25rem;
         background-color: #eff0f1;
         color: #242729;
         font-size: 13px;

@@ -73,7 +73,7 @@ call-date: 2021-10-25T15:00UTC
             <section class="upcoming-events">
                 <h3>Upcoming Meetings</h3>
                 <!-- Block for monthly community call -->
-                <div class="event" itemscope itemtype="http://schema.org/Event">
+                <div class="event shadow rounded" itemscope itemtype="http://schema.org/Event">
                     <strong><span class="title" itemprop="name">Monthly Community Call</span></strong>
                     <p>The Bioschemas Community Call takes place on the 4th Monday of each month at 16:00 UK time. Call in details available in the <a href="{{ page.call-minutes }}">agenda</a>.</p>
                     <ul>
@@ -82,7 +82,7 @@ call-date: 2021-10-25T15:00UTC
                             <meta itemprop="endDate" content="{{ page.call-date }}"/></li>
                         <li><a href="{{ page.call-minutes }}">Agenda</a></li>
                     </ul>
-                </div class="event">
+                </div>
                 <!-- End of block for monthly community call -->
                 <!-- Block for displaying next 3 meetings -->
                 {%- assign sorted_meetings = site.meetings | sort: 'start_date' %}
@@ -92,7 +92,7 @@ call-date: 2021-10-25T15:00UTC
                 {%- assign meetingDate = meeting.start_date | date: '%F' %}
                 {%- assign endDate = meeting.end_date | date: '%F' %}
                 {%- if currentDate <= meetingDate %}
-                <div class="event" itemscope itemtype="http://schema.org/Event">
+                <div class="event shadow rounded" itemscope itemtype="http://schema.org/Event">
                     <strong><a href="{{ meeting.url | relative_url }}"><span class="title" itemprop="name">{{ meeting.name}}</span></a></strong>{% if meeting.tbc %} <span class="badge badge-warning">TBC</span>{% endif %}
                     <p> <strong>{{ meeting.dates }}</strong> </p>
                     <p>
@@ -100,10 +100,10 @@ call-date: 2021-10-25T15:00UTC
                     </p>
                     <meta itemprop="startDate" content="{{meeting.start_date}}"/>
                     <meta itemprop="endDate" content="{{ meeting.end_date }}"/>
-                </div class="event">
+                </div>
                 {%- assign count = count | plus: 1 %}
                 {%- elsif meetingDate <= currentDate and currentDate <= endDate %}
-                <div class="event" itemscope itemtype="http://schema.org/Event">
+                <div class="event shadow rounded" itemscope itemtype="http://schema.org/Event">
                     <strong><a href="{{ meeting.url | relative_url }}"><span itemprop="name">{{ meeting.name}}</span></a></strong>{% if meeting.tbc %} <span class="badge badge-warning">TBC</span>{% endif %}
                     <p> <strong>{{ meeting.dates }}</strong> </p>
                     <p>
@@ -111,7 +111,7 @@ call-date: 2021-10-25T15:00UTC
                     </p>
                     <meta itemprop="startDate" content="{{meeting.start_date}}"/>
                     <meta itemprop="endDate" content="{{ meeting.end_date }}"/>
-                </div class="event">
+                </div>
                 {%- assign count = count | plus: 1 %}
                 {%- endif %}
 
