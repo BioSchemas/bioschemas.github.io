@@ -28,39 +28,63 @@ collections:
   types:
     output: true
     permalink: /:collection/:path
+    redirect_from:
+      - "/:collection/:path/"
   meetings:
     output: true
     permalink: /:collection/:path
+    redirect_from:
+      - "/:collection/:path/"
   tutorials:
     output: true
     permalink: /:collection/:path
+    redirect_from:
+      - "/:collection/:path/"
   people:
     output: true
     permalink: /:collection/:path
+    redirect_from:
+      - "/:collection/:path/"
   groups:
     output: true
     permalink: /:collection/:path
+    redirect_from:
+      - "/:collection/:path/"
   useCases:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:path
+    redirect_from:
+      - "/:collection/:path/"
   stories:
     output: true
     permalink: /:collection/:path
+    redirect_from:
+      - "/:collection/:path/"
   profiles:
     output: true
     permalink: /:collection/:path
+    redirect_from:
+      - "/:collection/:path/"
   community:
     output: true
     permalink: /:collection/:path
+    redirect_from:
+      - "/:collection/:path/"
   about:
     output: true
     permalink: /:collection/:path
+    redirect_from:
+      - "/:collection/:path/"
   posts:
     output: true
     permalink: /:collection/:path
+    redirect_from:
+      - "/:collection/:path/"
   news:
     output: true
     permalink: /:collection/:path
+    redirect_from:
+      - "/:collection/:path/"
 
 # Defaults
 defaults:
