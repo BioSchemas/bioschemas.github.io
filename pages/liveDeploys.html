@@ -2,6 +2,8 @@
 layout: default
 title: Live Deploys
 permalink: "/:basename:output_ext"
+redirect_from:
+  - "/:basename:output_ext/"
 exampleHoverText: "View example page"
 schemaHoverText: "Visualise on the Schema.org Markup Validation Tool (SMV)"
 bmuseHoverText: "Retrieve using Bioschemas Scraping service"
@@ -122,12 +124,11 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
         <!-- Live deployments by Profile -->
         <div class="accordion">
             {%- assign profiles = profiles | group_by: 'profileName' | sort_natural: 'name' %}
-            {%- assign profiles_count = 0 %}
             {%- for profile in profiles %}
             {% assign profile_index = forloop.index %}
             <div class="accordion-item">
-                <h2 class="accordion-header pt-0" id="profiles_heading{{profiles_count}}">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#profiles_collapse{{profiles_count}}" aria-controls="profiles_collapse{{profiles_count}}">
+                <h2 class="accordion-header pt-0" id="profiles_heading{{profile.name | json }}">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{profile.name | json }}" aria-controls="{{profile.name | json }}">
                         <div class="d-flex w-100 ">
                             <div class="text-nowrap"><strong>Sites: {{profile.items | size}}</strong></div>
                             <!--
@@ -150,7 +151,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                         </div>
                     </button>
                 </h2>
-                <div id="profiles_collapse{{profiles_count}}" class="accordion-collapse collapse" aria-labelledby="profiles_heading{{profiles_count}}">
+                <div id="{{profile.name | json }}" class="accordion-collapse collapse" aria-labelledby="profiles_heading{{profile.name | json }}">
                     <div class="accordion-body">
                         {%- assign live_sorted_list = profile.items | sort: 'name' %}
                         {%- for live in live_sorted_list %}
@@ -188,7 +189,6 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                     </div>
                 </div>
             </div>
-            {%- assign profiles_count = profiles_count | plus: 1 %}
             {%- endfor %}
         </div>
     </div>
