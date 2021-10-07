@@ -2,21 +2,22 @@
 redirect_from:
 - "devSpecs/Gene/specification"
 - "devSpecs/Gene/specification/"
-- "/devSpecs/Gene/"
-- "/specifications/Gene"
+- "/specifications/drafts/Gene/"
 - "/specifications/drafts/Gene"
-- "/profiles/Gene/"
+- "/devSpecs/Gene/"
+- "/devSpecs/Gene"
 
 name: Gene
 
-previous_version: '0.7-RELEASE'
-previous_release: '0.7-RELEASE'
+previous_version: '1.0-RELEASE'
+previous_release: '1.0-RELEASE'
 
-status: release # Change to revision if you are working on an update
+status: revision # Change to revision if you are working on an update
 spec_type: Profile
 group: genes
 use_cases_url: /useCases/Gene/
-cross_walk_url: https://docs.google.com/spreadsheets/d/1iCMknj6yWbkJsMiQ46_nSa82lZ4jNFOk-ZKx2ZApFq8/edit#gid=1483018794
+cross_walk_url: https://docs.google.com/spreadsheets/d/1Zc9I7H9pQZAI5TwgUEjRGuf4QBVlybUmMhRZJW8Fp-8
+go_web_url: https://docs.google.com/spreadsheets/d/e/2PACX-1vRKGO83PxnZ1c34Wejd0XmAWEnJtC1YS2Ngs6fXgRHso-zQ-0VyzfLNxtbvs-f3xqfMzh938nTgYKhb/pub?gid=292464567&single=true&output=csv
 gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Gene
 live_deploy: /liveDeploys/
 
@@ -33,15 +34,13 @@ hierarchy:
 spec_info:
   title: Gene
   subtitle: Bioschemas profile describing a Gene in Life Sciences
-  description: 'This Gene profile specification presents the markup for describing
-    a Gene.<h4>Summary of Changes</h4>Changes introduced on Gene profile 0.7-RELEASE
-    in response to <a href="https://github.com/BioSchemas/specifications/issues/492">issue
-    492</a><ul><li>add cardinality for associatedDisease and taxonomicRange following
-    the one in Protein</li><li>add suggestion on controlled vocabularies for taxonomicRange
-    following the one in Protein</li></ul>'
-  version: 1.0-RELEASE
-  version_date: 20210407T225132
-  official_type: http://bioschemas.org/Gene
+  description: This Gene profile specification presents the markup for describing
+    a Gene.<h4>Summary of Changes</h4><ul><li>Updated type properties to Schema.org
+    pending release</li><li>Addition of hasSequenceAnnotation property at Recommended
+    level</li> <li>Remove use of mainEntityOfPage; DataRecord has been deprecated</li></ul>
+  version: 1.1-DRAFT
+  version_date: 20210624T170545
+  official_type: http://schema.org/Gene
   full_example: https://github.com/BioSchemas/Specifications/tree/master/Gene/examples
 mapping:
 - property: alternateName
@@ -62,9 +61,9 @@ mapping:
 - property: alternativeOf
   expected_types:
   - Gene
-  description: ""
-  type: bioschemas
-  type_url: http://bioschemas.org/alternativeOf
+  description: Another gene which is a variation of this one.
+  type: pending
+  type_url: ""
   bsc_description: Is variant of. Use this property to express when a gene is a variant
     of any other gene.
   marginality: Optional
@@ -77,8 +76,8 @@ mapping:
   - PropertyValue
   - URL
   description: Disease associated to this BioChemEntity
-  type: bioschemas
-  type_url: http://bioschemas.org/associatedDisease
+  type: pending
+  type_url: ""
   bsc_description: ""
   marginality: Optional
   cardinality: MANY
@@ -102,12 +101,13 @@ mapping:
 - property: encodesBioChemEntity
   expected_types:
   - BioChemEntity
-  description: This property is used to link to gene products encoded (even indirectly)
-    from this gene such as RNA or proteins.
-  type: bioschemas
-  type_url: http://bioschemas.org/encodesBioChemEntity
+  description: |-
+    Another BioChemEntity encoded by this one.
+    Inverse property: isEncodedByBioChemEntity
+  type: pending
+  type_url: ""
   bsc_description: For genes, this property is used to express in a generic way gene
-    products encoded by this gene, for instance RNA or Protein
+    products encoded by this gene, for instance RNA or Protein.
   marginality: Recommended
   cardinality: MANY
   controlled_vocab: ""
@@ -123,8 +123,8 @@ mapping:
   description: |-
     Tissue, organ, biological sample, etc in which activity of this gene has
      been observed experimentally. For example brain, digestive system.
-  type: bioschemas
-  type_url: http://bioschemas.org/expressedIn
+  type: pending
+  type_url: ""
   bsc_description: ""
   marginality: Optional
   cardinality: MANY
@@ -136,11 +136,9 @@ mapping:
   description: |-
     Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.
     Inverse property: isPartOfBioChemEntity
-  type: bioschemas
-  type_url: http://bioschemas.org/hasBioChemEntityPart
-  bsc_description: |+
-    For genes, it can be used to link to gene sequence annotations such as variants or so.
-
+  type: pending
+  type_url: ""
+  bsc_description: ""
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -153,8 +151,8 @@ mapping:
   - Text
   description: "A symbolic representation of a BioChemEnity. For example, a nucleotide
     \nsequence of a Gene or an amino acid sequence of a Protein."
-  type: bioschemas
-  type_url: http://bioschema.org/hasBioPolymerSequence
+  type: pending
+  type_url: ""
   bsc_description: ""
   marginality: Optional
   cardinality: ONE
@@ -166,8 +164,8 @@ mapping:
   - PropertyValue
   - URL
   description: ""
-  type: bioschemas
-  type_url: http://bioschemas.org/hasMolecularFunction
+  type: pending
+  type_url: ""
   bsc_description: "GO molecular function enabled by the gene/protein. \n"
   marginality: Optional
   cardinality: MANY
@@ -184,8 +182,8 @@ mapping:
   - URL
   description: A common representation such as a protein sequence or chemical structure
     for this entity. For images use schema.org/image.
-  type: bioschemas
-  type_url: http://bioschemas.org/hasRepresentation
+  type: pending
+  type_url: ""
   bsc_description: For genes it can be used to link to a page with the corresponding
     sequence. If you want to better define the nature of the representation, use a
     PropertyValue as described in additionalProperty or a third-party ontology predicate.
@@ -197,12 +195,26 @@ mapping:
       "@type": "Gene",
       "hasRepresentation": "https://www.ncbi.nlm.nih.gov/nuccore/NC_000021.9?report=fasta&from=25880550&to=26171128&strand=true"
     }
+- property: hasSequenceAnnotation
+  expected_types:
+  - SequenceAnnotation
+  - URL
+  description: An annotation on the BioPolymerSequence associated with this BioChemEntity
+  type: bioschemas
+  type_url: ""
+  bsc_description: |+
+    For genes, it can be used to link to gene sequence annotations such as variants or so.
+
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: ""
 - property: hasStatus
   expected_types:
   - Text
   description: One of pseudogene, dead, killed, live, predicted, suppressed.
-  type: bioschemas
-  type_url: http://bioschemas.org/hasStatus
+  type: pending
+  type_url: ""
   bsc_description: ""
   marginality: Optional
   cardinality: ONE
@@ -266,8 +278,8 @@ mapping:
   - PropertyValue
   - URL
   description: ""
-  type: bioschemas
-  type_url: http://bioschemas.org/isInvolvedinBiologicalProcess
+  type: pending
+  type_url: ""
   bsc_description: |
     GO biological process this gene/protein is involved in.
   marginality: Optional
@@ -285,8 +297,8 @@ mapping:
   - PropertyValue
   - URL
   description: ""
-  type: bioschemas
-  type_url: http://bioschemas.org/isLocatedInSubcellularLocation
+  type: pending
+  type_url: ""
   bsc_description: |
     GO subcellular location this gene/protein is located in.
   marginality: Optional
@@ -299,8 +311,8 @@ mapping:
   description: |-
     Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
     Inverse property: hasBioChemEntity
-  type: bioschemas
-  type_url: http://bioschemas.org/isPartOfBioChemEntity
+  type: pending
+  type_url: ""
   bsc_description: For genes, it is recommended to at least specify the DNA/chromosome
     containing this gene
   marginality: Recommended
@@ -314,38 +326,6 @@ mapping:
         "@type": "BioChemEntity",
         "name": "Chromosome 21",
       }
-    }
-- property: mainEntityOfPage
-  expected_types:
-  - CreativeWork
-  - URL
-  description: |-
-    Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](http://schema.org/docs/datamodel.html#mainEntityBackground) for details.
-    Inverse property: mainEntity.
-  type: ""
-  type_url: ""
-  bsc_description: Link via DataRecord to the main DataRecord representing this entity
-    in a dataset. It is usually preferred to use mainEntity from a DataRecord to point
-    to its corresponding entity.
-  marginality: Optional
-  cardinality: ONE
-  controlled_vocab: ""
-  example: |-
-    //From DataRecord
-    {
-
-      "@type": "DataRecord",
-      "@id": "http://rdf.ebi.ac.uk/resource/ensembl/ENSG00000142192",
-      "mainEntity": {
-        "@type": "Gene",
-        "name": "Name and any other property for this Gene entity"
-      }
-    }
-
-    //Also possible from Gene
-    {
-      "@type": "Gene",
-      "mainEntityOfPage": { "@id": "http://rdf.ebi.ac.uk/resource/ensembl/ENSG00000142192" }
     }
 - property: name
   expected_types:
@@ -387,8 +367,8 @@ mapping:
   - URL
   description: The taxonomic grouping of the organism that expresses, encodes, or
     in someway related to the BioChemEntity.
-  type: bioschemas
-  type_url: http://bioschemas.org/taxonomicRange
+  type: pending
+  type_url: ""
   bsc_description: ""
   marginality: Optional
   cardinality: MANY
