@@ -53,8 +53,9 @@ $(document).ready(() => {
   let url = location.href.replace(/\/$/, "");
 
   if (location.hash) {
-    const hash = url.split("#");
-    $('button[data-bs-target="#' + hash[1] + '"]').tab("show");
+    const hash = url.split("#")
+    newhash = hash[1].split("?row=");
+    $('button[data-bs-target="#' + newhash[0] + '"]').tab("show");
     url = location.href.replace(/\/#/, "#");
     history.replaceState(null, null, url);
     setTimeout(() => {
@@ -66,9 +67,20 @@ $(document).ready(() => {
     let newUrl;
     const hash = $(this).attr("data-bs-target");
     newUrl = url.split("#")[0] + hash;
-    newUrl += "/";
     history.replaceState(null, null, newUrl);
   });
+});
+
+/**
+ * Enabling deep linking towards rows in accordion
+ */
+
+ $(document).ready(() => {
+  let url = location.href.replace(/\/$/, "");
+  if (location.hash) {
+    const hash = url.split("?row=");
+    $('button[data-bs-target="#' + hash[1] + '"]').trigger('click');
+  }
 });
 
 /**

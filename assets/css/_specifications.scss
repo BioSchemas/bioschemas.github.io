@@ -1,4 +1,3 @@
-
 /*******************************************************************************
 Specification Properties
 *******************************************************************************/
@@ -22,7 +21,7 @@ table.bioschemas_spec_list tr {
 .definition-table th,
 table.bioschemas_spec_list th {
     background: $gray-200;
-    color: #3A4956;
+    color: #3a4956;
     font-weight: bold;
     text-align: center;
     border: none;
@@ -47,9 +46,8 @@ table.bioschemas_spec_list td {
     font-size: 100%;
 }
 
-
 .reu_props_sdo td,
-.new_props_sdo td, 
+.new_props_sdo td,
 .supertype th.supertype-name,
 .cardinality td {
     font-weight: bold;
@@ -58,8 +56,7 @@ table.bioschemas_spec_list td {
 }
 
 .bioschemas_properties .new_props_sdo td a,
-.bioschemas_properties .new_props_sdo td a:link
- {
+.bioschemas_properties .new_props_sdo td a:link {
     color: $bioschemas-base-color;
 }
 
@@ -97,8 +94,7 @@ table.bioschemas_spec_list td a img {
 }
 
 .bioschemas_properties a:link,
-.definition-table a:link
-{
+.definition-table a:link {
     color: #990000;
     text-decoration: none;
     border-bottom: dotted 1px #990000;
@@ -110,17 +106,17 @@ Specifications
 
 .ex_min {
     background-color: rgb(11, 121, 75);
-    background-color: rgba(11, 121, 75, .5);
+    background-color: rgba(11, 121, 75, 0.5);
 }
 
 .ex_rec {
     background-color: rgb(144, 238, 144);
-    background-color: rgba(144, 238, 144, .5);
+    background-color: rgba(144, 238, 144, 0.5);
 }
 
 .ex_opt {
     background-color: rgb(224, 255, 255);
-    background-color: rgba(224, 255, 255, .5);
+    background-color: rgba(224, 255, 255, 0.5);
 }
 
 .groups_h:first-of-type {
@@ -130,7 +126,6 @@ Specifications
 .groups_h {
     margin-top: 1.625em;
 }
-
 
 /*******************************************************************************
 Style experiment
@@ -142,8 +137,8 @@ table.definition-table a.externalProp {
 }
 
 table.bioschemas_properties a.newBsc,
-table.definition-table a.ext-bio  {
-    color: $bioschemas-base-color;;
+table.definition-table a.ext-bio {
+    color: $bioschemas-base-color;
 }
 
 table.bioschemas_properties a.pending,

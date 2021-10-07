@@ -2,7 +2,7 @@
     /*
     * GitHub style for Pygments
     * Courtesy of GitHub.com
-    */    
+    */
     .hll {
         background-color: #f8f8f8;
         border: 1px solid #ccc;
@@ -210,11 +210,11 @@
     }
     .gc {
         color: #999;
-        background-color: #EAF2F5;
+        background-color: #eaf2f5;
     }
 }
 
-.highlighter-rouge :not(.language-plaintext)>.highlight {
+.highlighter-rouge :not(.language-plaintext) > .highlight {
     border: #eaf2ee 1px solid;
     border-radius: 4px;
     padding: 1em;
@@ -223,4 +223,3 @@
 .highlighter-rouge {
     margin: 2em 0;
 }
-
