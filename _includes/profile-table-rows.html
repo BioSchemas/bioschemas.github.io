@@ -3,10 +3,15 @@
           {%- assign profileName = '/profiles/' | append: spec.name | append:'/' | append: spec.spec_info.version %}
           <th><a href="{{ profileName | relative_url }}" title="{{ spec.spec_info.subtitle }}">{{ spec.spec_info.title }}</a><br />(v{{spec.spec_info.version}})<br />{{ date_time | date_to_long_string }}
 
-          	{% if site.data.profile_versions[spec.name].status == "deprecated" %}
-          	<p>deprecated on: {{site.data.profile_versions[spec.name].deprecated_date }}<p>
+            {% if site.data.profile_versions[spec.name].status == "deprecated" %}
+          	  <br/>
+              Deprecated on: {{site.data.profile_versions[spec.name].deprecated_date }}<br/>
+                {% if site.data.profile_versions[spec.name].superceded_by %}
+                  {%- assign supercededProfile = '/profiles/' | append: site.data.profile_versions[spec.name].superceded_by | append:'/'  %}
+                  Superceded by: <a href="{{ supercededProfile | relative_url}}" title="{{site.data.profile_versions[spec.name].superceded_by}}">{{site.data.profile_versions[spec.name].superceded_by}}</a>
+                {% endif %}
           	{% endif %}
-          
+
           </th>
           <td>
             {% assign group = site.groups | where:"identifier", spec.group %}
