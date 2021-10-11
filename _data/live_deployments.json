@@ -756,16 +756,10 @@
       "sitemap": "https://disprot.org/sitemap.xml",
       "profiles": [
         {
-          "profileName": "DataRecord",
-          "conformsTo": "0.2-DRAFT",
-          "exampleURL": "https://www.disprot.org/DP00086#DR",
-          "highlight": "1.6k data records"
-        },
-        {
           "profileName": "Protein",
           "conformsTo": "0.11",
           "exampleURL": "https://www.disprot.org/DP00086",
-          "highlight": "1.6k proteins"
+          "highlight": "~2k proteins"
         },
         {
           "profileName": "Dataset",
@@ -778,8 +772,8 @@
           "exampleURL": "https://www.disprot.org/"
         },
         {
-          "profileName": "ProteinAnnotation",
-          "conformsTo": "0.5-DRAFT",
+          "profileName": "SequenceAnnotation",
+          "conformsTo": "0.6-DRAFT",
           "exampleURL": "https://www.disprot.org/DP00086r026",
           "highlight": "3.5k protein regions"
         },
