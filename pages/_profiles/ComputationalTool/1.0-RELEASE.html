@@ -37,21 +37,17 @@ spec_info:
     such tools in Web pages and applications. The goal of the specification is to
     make it easier to discover, exchange and integrate information about life science
     tools across the Internet.<h3>Summary of Changes</h3>    <p>No changes since the
-    0.6-DRAFT of the ComputationalTools profile.</p>
+    0.6-DRAFT.</p>
   version: 1.0-RELEASE
-  version_date: 20211005T174824
+  version_date: 20211011T105723
   official_type: http://schema.org/SoftwareApplication
   full_example: 'https://github.com/BioSchemas/specifications/tree/master/Tool/examples '
 mapping:
-- property: additionalType
+- property: applicationCategory
   expected_types:
+  - Text
   - URL
-  description: An additional type for the item, typically used for adding more specific
-    types from external vocabularies in microdata syntax. This is a relationship between
-    something and a class that the thing is in. In RDFa syntax, it is better to use
-    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
-    tools may have only weaker understanding of extra types, in particular those defined
-    externally.
+  description: Type of software application, e.g. 'Game, Multimedia'.
   type: ""
   type_url: ""
   bsc_description: |-
@@ -61,26 +57,8 @@ mapping:
   cardinality: MANY
   controlled_vocab: Please use terms from the 'Tool type' table in the [biotools documentation](https://biotools.readthedocs.io/en/latest/curators_guide.html#tool-type)
   example: "{\n  \"@context\": \"http://schema.org\",\n  \"@id\": \"https://example.com/tool\",\n
-    \ \"@type\": \"SoftwareApplication\",\n  \"additionalType\": [\n    \"Command-line
+    \ \"@type\": \"SoftwareApplication\",\n  \"applicationCategory\": [\n    \"Command-line
     tool\",\n    \"Web application\",\n    \"Web API\"\n  ]\n}\n  "
-- property: applicationCategory
-  expected_types:
-  - Text
-  - URL
-  description: Type of software application, e.g. 'Game, Multimedia'.
-  type: ""
-  type_url: ""
-  bsc_description: The high-level category in the global context, **please always
-    use "Computational science tool"**.
-  marginality: Recommended
-  cardinality: ONE
-  controlled_vocab: ""
-  example: |-
-    {
-      "@context": "http://schema.org",
-      "@type": "SoftwareApplication",
-      "applicationCategory": "Computational science tool"
-    }
 - property: applicationSubCategory
   expected_types:
   - Text
@@ -542,5 +520,6 @@ mapping:
        "@context": "http://schema.org",  "@type": "SoftwareApplication",
       "url": "http://compomics.github.io/projects/peptide-shaker.html"
     }
+
 
 ---
