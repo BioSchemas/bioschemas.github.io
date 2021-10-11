@@ -36,7 +36,12 @@ spec_info:
     built on top of existing technologies and standards, that can be used to represent
     such tools in Web pages and applications. The goal of the specification is to
     make it easier to discover, exchange and integrate information about life science
-    tools across the Internet.<h3>Summary of Changes</h3>   <p>Changes since the 0.6-DRAFT</p> <ul> <li> additionalType property deprecated and replaced by applicationCategory. </li> </ul> 
+    tools across the Internet.<h3>Summary of Changes</h3>
+    <p>Changes since the 0.6-DRAFT</p>
+    <ul>
+      <li> additionalType property deprecated and replaced by applicationCategory. </li> 
+      <li>example added for the name property</li>
+    </ul>
   version: 1.0-RELEASE
   version_date: 20211011T105723
   official_type: http://schema.org/SoftwareApplication
@@ -372,7 +377,12 @@ mapping:
   marginality: Minimum
   cardinality: ""
   controlled_vocab: ""
-  example: ""
+  example: |-
+    {
+      "@context": "http://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PeptideShaker"
+    }
 - property: operatingSystem
   expected_types:
   - Text
