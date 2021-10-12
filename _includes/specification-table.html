@@ -50,13 +50,16 @@
         {%- assign marginality_list = "Minimum,Recommended,Optional" | split: ',' %}
         {%- for current_mg in marginality_list %}
         {%- assign props_list = page.mapping | where: 'marginality', current_mg | sort: 'property' %}
-        {%- if props_list.size > 0%}
+        {%- if props_list.size > 0 or current_mg == 'Minimum' %}
         <tr class="cardinality">
             <td colspan="6">
                 Marginality: <b>{{current_mg}}.</b>
             </td>
         </tr>
         {%- endif%}
+        {% if current_mg == "Minimum" %}
+          {% include standard-properties.html %}
+        {% endif %}
         {%- for prop in props_list %}
         <tr>
             {%- if prop.type == "bioschemas" %}
@@ -132,7 +135,7 @@
                             <div class="modal-body">
                                 <div id="{{current_mg}}-example-num-{{forloop.index}}" class="example-code">
                                     {% highlight javascript %}{{prop.example}}{% endhighlight %}
-                                    <button type="button" data-bs-placement="top" data-bs-toggle="tooltip" title="Copy to clipboard" class="btn btn-primary btn-copy" data-clipboard-target="#{{current_mg}}-example-num-{{forloop.index}}"><i class="fas fa-copy"></i></button> 
+                                    <button type="button" data-bs-placement="top" data-bs-toggle="tooltip" title="Copy to clipboard" class="btn btn-primary btn-copy" data-clipboard-target="#{{current_mg}}-example-num-{{forloop.index}}"><i class="fas fa-copy"></i></button>
                                 </div>
                             </div>
                             <div class="modal-footer">
