@@ -135,7 +135,7 @@ You are now ready to publish the new draft version on the Bioschemas website.
 
 * If you have not done so yet, clone the [Bioschemas website repository](https://github.com/BioSchemas/bioschemas.github.io) so you have a local copy
 * Open your local copy in your preferred editor
-* Go to `_profiles/<your profile>`, in this case `_profiles/ScholarlyArticle`
+* Go to `pages/_profiles/<your profile>`, in this case `pages/_profiles/ScholarlyArticle`
 * Create a copy of the latest profile, in our case it is 0.2-DRAFT-2020_12_03.html
 * Rename the copy so it reflects the new draft version, in our case it would be 0.3-DRAFT.html (having the dates as part of the draft name is no longer needed/desired)
 
@@ -174,7 +174,7 @@ Now you are ready to update the part corresponding to the spreadsheet, go to the
   # DO NOT MANUALLY EDIT THE CONTENT
 ```
 
-* Keep the two first lines only, i.e., remove from the line ```spec_info``` all the way to a line with three dashes ```---```, which is right before the line ```<!DOCTYPE HTML>```
+* Keep the two first lines only, i.e., remove from the line ```spec_info``` all the way to a line with three dashes ```---```, which is at the end of the file
 * Add all the lines coming from the YAML file that you got from GO Web
 * Save the file!
 
@@ -207,10 +207,13 @@ Regardless whether it was a minor or major change, it is always a good idea to h
 * Create a new folder corresponding to your new draft, 0.3-DRAFT in this case
 * Add there the new examples in JSON-LD format using the extension file ```json```
 * If the examples for the previous version are fully compatible with the new version, it is ok if you add a note pointing to the previous examples rather than adding new ones
-* On the examples, always remember to add the ```dct:conformsTo``` property so it points to your profile version, for example
-
+* On the examples, always remember to add the ```dct:conformsTo``` property so it points to your profile version, for example  
+_Note that you should use the full IRI for the DCTerms property_
 ```json
-"http://purl.org/dc/terms/conformsTo": "https://bioschemas.org/profiles/ScholarlyArticle/0.3-DRAFT",
+"http://purl.org/dc/terms/conformsTo": {
+  "@id": "https://bioschemas.org/profiles/ScholarlyArticle/0.3-DRAFT",
+  "@type": "CreativeWork"
+}
 ```
 
 ## 7. Create a Pull Request
