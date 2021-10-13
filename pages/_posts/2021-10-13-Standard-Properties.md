@@ -7,7 +7,7 @@ tags:
 ---
 A standard set of properties have been added to all Bioschemas [profiles](/profiles/). These properties allow consumers of markup to more easily understand the markup, and to validate it against the relevant profile. Essentially the properties form a boilerplate for any markup, see following code snippet for an example protein taken from [DisProt](https://disprot.org/).
 
-```JSON
+```json
 {
   "@context": "https://schema.org/",
   "@type": "Protein",
