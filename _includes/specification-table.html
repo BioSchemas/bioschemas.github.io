@@ -5,11 +5,12 @@
 {%- assign mapping_examples = mapping_examples | push: prop %}
 {%- endif %}
 {%- endfor %}
-{%- unless mapping_examples.size < 1 %} <div class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="View all examples">
-<button type="button" class="btn btn-primary" data-bs-target="#exampleModal" data-bs-toggle="modal">
-    Examples
-</button>
-</div>
+{%- unless mapping_examples.size < 1 %} 
+<span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="View all examples">
+    <button type="button" class="btn btn-primary" data-bs-target="#exampleModal" data-bs-toggle="modal">
+        Examples
+    </button>
+</span>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
@@ -24,7 +25,7 @@
 //Property: {{prop.property}}
 {{prop.example}}
 {% endfor %}{% endhighlight %}
-                    <button type="button" data-bs-placement="top" data-bs-toggle="tooltip" title="Copy to clipboard" class="btn btn-primary btn-copy" data-clipboard-target="#bundle-property-examples"><i class="fas fa-copy"></i></button>
+                    <button type="button" data-bs-toggle="tooltip" title="Copy to clipboard" class="btn btn-primary btn-copy" data-clipboard-target="#bundle-property-examples"><i class="fas fa-copy"></i></button>
                 </div>
             </div>
             <div class="modal-footer">
@@ -117,11 +118,11 @@
             <td class="example-column">
                 <!-- Example modal starts here -->
                 {%- unless prop.example == "" %}
-                <div class="d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" title="View <strong>&#8810{{prop.property}}&#8811</strong> example">
+                <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-html="true" title="View <strong>&#8810{{prop.property}}&#8811</strong> example">
                     <button type="button" class="btn btn-primary" data-bs-target="#myModal{{prop.property}}" data-bs-toggle="modal">
                         <i class="fas fa-file-code"></i>
                     </button>
-                </div>
+                </span>
                 <!-- Modal -->
                 </div>
                 <div class="modal fade" id="myModal{{prop.property}}" tabindex="-1" aria-labelledby="myModal{{prop.property}}" aria-hidden="true">
@@ -135,7 +136,7 @@
                             <div class="modal-body">
                                 <div id="{{current_mg}}-example-num-{{forloop.index}}" class="example-code">
                                     {% highlight javascript %}{{prop.example}}{% endhighlight %}
-                                    <button type="button" data-bs-placement="top" data-bs-toggle="tooltip" title="Copy to clipboard" class="btn btn-primary btn-copy" data-clipboard-target="#{{current_mg}}-example-num-{{forloop.index}}"><i class="fas fa-copy"></i></button>
+                                    <button type="button" data-bs-toggle="tooltip" title="Copy to clipboard" class="btn btn-primary btn-copy" data-clipboard-target="#{{current_mg}}-example-num-{{forloop.index}}"><i class="fas fa-copy"></i></button>
                                 </div>
                             </div>
                             <div class="modal-footer">
