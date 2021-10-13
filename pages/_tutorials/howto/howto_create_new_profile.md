@@ -35,11 +35,11 @@ bioschemas:
     name: "Kenneth McLeod"
     "@id": https://bioschemas.org/people/KennethMcLeod
     url: https://bioschemas.org/people/KennethMcLeod
-  dateModified: 2021-07-22
+  dateModified: 2021-10-13
   description: "In this how-to, we will guide you through the necessary steps to create a new Bioschemas profile."
   keywords: "schema.org, markup, structured data, bioschemas profile"
   license: CC-BY 4.0
-  version: 1.0
+  version: 1.1
 ---
 
 ## 1. Before you start
@@ -52,8 +52,8 @@ The development steps for a profile are:
 1. Identify the base Schema.org type for the profile, or develop a new Bioschemas type;  
 *__TODO:__ Add link to tutorial for creating a new type*
 
-2. For each property defined for the type
-
+2. For each property defined for the type  
+   _Note that the properties `@id`, `@type`, `@context`, and `dct:conformsTo` are automatically added as minimal properties to all profiles._
     1. Decide its cardinality recommendation (minimal, recommended, or optional) based on the defined use cases, with a goal of having no more than 6 minimal properties;
 
     2. Identify, where appropriate, controlled vocabulary terms from existing domain vocabularies to use as values for the property;
@@ -125,12 +125,12 @@ Examples should be stored in a subfolder indicating which version of the profile
 
 ### 4.2. Profile Properties
 
-The second task is to populate the profile with the properties from your chosen Schema.org or Bioschemas type. These should be included in the `Schema.org mapping` tab. This tab includes the following fields which are split into a `schema.org` section and a `bioschemas` section.
+The second task is to populate the profile with the properties from your chosen Schema.org or Bioschemas type. These should be included in the `Schema.org mapping` tab. This tab includes the following fields which are split into a `schema.org` section and a `bioschemas` section. There is no need to include the automatically added minimal properties to the GSheet.
 
-#### 4.2.1. schema.org Columns
-These columns are copy-pasted from a schema.org type definition page, or filled with types of external ontologies.
-- __Property:__ Name of the property from the selected schema.org type or external ontology type, i.e., SIO:is transcribe into. When an external ontology is used the __Type__ you must select "external" from the dropdown on the __Type__ column.
-- __Expected Type:__ Expected type for the property. This could be a schema.org property, a bioschemas property or an external ontology one, e.g., URL, BioChemEntity, Thing. These values can be separated by " or " or ",".
+#### 4.2.1. Schema.org Columns
+These columns are copy-pasted from a Schema.org type definition page, or filled with types of external ontologies.
+- __Property:__ Name of the property from the selected Schema.org type or external ontology type, e.g., `SIO:is transcribe into`. When an external ontology is used the __Type__ you must select "external" from the dropdown on the __Type__ column.
+- __Expected Type:__ Expected type for the property. This could be a Schema.org property, a bioschemas property or an external ontology one, e.g., URL, BioChemEntity, Thing. These values can be separated by " or " or ",".
 - __Description:__ Description of the property. This field accepts __Markdown__ formatting.
 - __Type:__ Type for the property, possible types are: _schema.org, pending, external or bioschemas_. Leaving this field blank has the same effect as selecting schema.org. For _external_ and _bioschemas_ type please fill the _Type URL_ column.
 - __Type URL:__ URL for the property type; it should be filled when using _bioschemas_ or _external_ as type in order to link the property on the website.
@@ -142,7 +142,7 @@ Note that all the expected types need to appear on a separate line within their 
 {% include image.html file="tutorials/howto/images_create_new_profile/propertiesInitial.png" alt="MedicalCondition properties after they have been pasted into the Schema.org tab" %}
 
 
-#### 4.2.2. bioschemas Columns
+#### 4.2.2. Bioschemas Columns
 These columns control which of the properties in the GSheet will appear in the Bioschemas profile.
 - __BSC Description:__ Additional text describing the usage of the property within a Bioschemas context. This field accepts __Markdown__ formatting.
 - __Marginality:__ Specifies the marginality level for the property with the options of `Minimum`, `Recommended`, or `Optional`. If left blank, then the property will not appear in the profile.
