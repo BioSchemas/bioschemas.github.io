@@ -29,11 +29,15 @@ bioschemas:
     name: "Alban Gaignard"
     "@id": https://bioschemas.org/people/AlbanGaignard
     url: https://bioschemas.org/people/AlbanGaignard   
-  dateModified: 2021-07-22
+  - "@type": Person
+    name: "Alasdair Gray"
+    "@id": https://bioschemas.org/people/AlasdairGray
+    url: https://bioschemas.org/people/AlasdairGray
+  dateModified: 2021-10-13
   description: "In this how-to, we will guide you through the necessary steps for you to update a profile, i.e.,create and publish a new draft profile, you need some knowledge on spreadsheets, GitHub, git and Jekyll."
   keywords: "schema.org, markup, structured data, bioschemas profile"
   license: CC-BY 4.0
-  version: 1.0
+  version: 1.1
 ---
 
 ## 1. Prepare your working environment
@@ -41,7 +45,7 @@ bioschemas:
 To update a profile you need access to a couple of Bioschemas resources, here we list them all together with the main role they play in the whole process. We will explain how to use them and what to do with them in later steps.
 
 * Bioschemas specifications [GDrive folder](https://drive.google.com/drive/folders/0B8yXU9SkT3ftaWJtTGYyTTJjck0): to create the spreadsheet corresponding to the new draft profile, you need editing rights
-  * Note 1: a specification in Bioschemas defines either a type (existing in schema.org or created by Bioschemas) or a profile (set of rules on how to use a type). A type specification corresponds to a set of relations, aka properties, between the described type and other types (for instance, the specification for the [type Protein](/types/Protein) includes a property ```associatedDisease``` describing how a relation between a protein and a disease). A profile specification selects the most useful properties for a given type and provides additional information on cardinality, marginality and controlled vocabularies (for instance, the specification for the [Protein profile](/profiles/Protein/) indicates that the property ```associatedDisease``` is recommended and has cardinality MANY)
+  * Note 1: a specification in Bioschemas defines either a type (existing in Schema.org or created by Bioschemas) or a profile (set of rules on how to use a type). A type specification corresponds to a set of relations, aka properties, between the described type and other types (for instance, the specification for the [type Protein](/types/Protein) includes a property ```associatedDisease``` describing how a relation between a protein and a disease). A profile specification selects the most useful properties for a given type and provides additional information on cardinality, marginality and controlled vocabularies (for instance, the specification for the [Protein profile](/profiles/Protein/) indicates that the property ```associatedDisease``` is recommended and has cardinality MANY)
   * Note 2: a GDrive, short for Google Drive, is a file storage and synchronization service developed by Google. Bioschemas uses a GDrive folder to host information related to, for instance, specifications
 * [GOWeb repository](https://github.com/BioSchemas/bioschemas-goweb): to move from the spreadsheet to the website
 * [Website repository](https://github.com/BioSchemas/bioschemas.github.io): to publish the new draft profile, you need editing rights
@@ -63,6 +67,8 @@ A new profile is commonly based on the previous one so the easiest way to start 
   * Note: a mapping file corresponds to a Google spreadsheet and it is the way that Bioschemas uses to do a crosswalk on a profile before adding it to the website. Bioschemas groups will work first on this crosswalk (mapping file, spreadsheet) and when it is ready to go (i.e., the involved people is happy with the content, it has been reviewed and approved), it can be published to the website
 * Rename the copy so it reflects the new draft version, in this case it would be ScholarlyArticle Mapping 0.3-DRAFT
 
+_Note that the properties `@id`, `@type`, `@context`, and `dct:conformsTo` are automatically added as minimal properties to all profiles and are not present in the GSheet._
+
 We will now discuss the different tabs in the spreadsheet and how they are used in updating a profile.
 
 ### 2.1. The Specification Info tab
@@ -76,8 +82,8 @@ In this tab, you need to update the "Description" column. In most cases the actu
     <ul>
       <li>Add examples</li>
       <li>Updates identifier property to MANY so multiple identifiers can be included</li>
-      <li>Uses name for the title (as per schema.org examples) and keeps headline (optional) for compatibility purposes</li>
-      <li>Update ranges as per latest version of schema.org</li>   
+      <li>Uses name for the title (as per Schema.org examples) and keeps headline (optional) for compatibility purposes</li>
+      <li>Update ranges as per latest version of Schema.org</li>   
     </ul>
 
 ```
