@@ -140,22 +140,42 @@
       ]
     },
     {
-      "name": "MobiDB",
-      "url": "http://mobidb.bio.unipd.it/",
-      "nodes": "IT",
-      "sitemap": "https://mobidb.bio.unipd.it/sitemap.xml",
-      "profiles": [
+    "name": "MobiDB",
+    "description": "MobiDB is a database of protein disorder and mobility annotations.",
+    "url": "https://mobidb.org/",
+    "nodes": "IT",
+    "sitemap": "https://mobidb.org/sitemap.xml",
+    "profiles":
+    [
         {
-          "profileName": "DataCatalog",
-          "conformsTo": "0.1",
-          "exampleURL": "http://mobidb.bio.unipd.it/"
+            "profileName": "Protein",
+            "conformsTo": "0.11",
+            "exampleURL": "https://mobidb.org/P04637",
+            "highlight": "~2k proteins"
         },
         {
-          "profileName": "Dataset",
-          "conformsTo": "0.2",
-          "exampleURL": "http://mobidb.bio.unipd.it/"
+            "profileName": "Dataset",
+            "conformsTo": "0.3",
+            "exampleURL": "https://mobidb.org/"
+        },
+        {
+            "profileName": "DataCatalog",
+            "conformsTo": "0.3",
+            "exampleURL": "https://mobidb.org/"
+        },
+        {
+            "profileName": "SequenceAnnotation",
+            "conformsTo": "0.6-DRAFT",
+            "exampleURL": "https://mobidb.org/P04637",
+            "highlight": "3.1k protein regions"
+        },
+        {
+            "profileName": "SequenceRange",
+            "conformsTo": "0.1-DRAFT",
+            "exampleURL": "https://mobidb.org/P04637",
+            "highlight": "3.1k protein regions"
         }
-      ]
+    ]
     },
     {
       "name": "Biosamples",
@@ -749,41 +769,42 @@
       ]
     },
     {
-      "name": "DisProt",
-      "description": "DisProt is a database of intrinsically disordered proteins. Disordered regions are manually curated from literature. DisProt annotations cover both structural and functional aspects of disorder detected by specific experimental methods. Annotation concepts and detection methods are encoded in the Disorder Ontology.",
-      "url": "https://disprot.org",
-      "nodes": "IT",
-      "sitemap": "https://disprot.org/sitemap.xml",
-      "profiles": [
+    "name": "DisProt",
+    "description": "DisProt is a database of intrinsically disordered proteins. Disordered regions are manually curated from literature. DisProt annotations cover both structural and functional aspects of disorder detected by specific experimental methods. Annotation concepts and detection methods are encoded in the Disorder Ontology.",
+    "url": "https://disprot.org",
+    "nodes": "IT",
+    "sitemap": "https://disprot.org/sitemap.xml",
+    "profiles":
+    [
         {
-          "profileName": "Protein",
-          "conformsTo": "0.11",
-          "exampleURL": "https://www.disprot.org/DP00086",
-          "highlight": "~2k proteins"
+            "profileName": "Protein",
+            "conformsTo": "0.11",
+            "exampleURL": "https://disprot.org/DP00086",
+            "highlight": "~2k proteins"
         },
         {
-          "profileName": "Dataset",
-          "conformsTo": "0.3",
-          "exampleURL": "https://www.disprot.org/"
+            "profileName": "Dataset",
+            "conformsTo": "0.3",
+            "exampleURL": "https://disprot.org/"
         },
         {
-          "profileName": "DataCatalog",
-          "conformsTo": "0.3",
-          "exampleURL": "https://www.disprot.org/"
+            "profileName": "DataCatalog",
+            "conformsTo": "0.3",
+            "exampleURL": "https://disprot.org/"
         },
         {
-          "profileName": "SequenceAnnotation",
-          "conformsTo": "0.6-DRAFT",
-          "exampleURL": "https://www.disprot.org/DP00086r026",
-          "highlight": "3.5k protein regions"
+            "profileName": "SequenceAnnotation",
+            "conformsTo": "0.6-DRAFT",
+            "exampleURL": "https://disprot.org/DP00086r026",
+            "highlight": "3.5k protein regions"
         },
         {
-          "profileName": "SequenceRange",
-          "conformsTo": "0.1-DRAFT",
-          "exampleURL": "https://www.disprot.org/DP00086r026",
-          "highlight": "3.5k protein regions"
+            "profileName": "SequenceRange",
+            "conformsTo": "0.1-DRAFT",
+            "exampleURL": "https://disprot.org/DP00086r026",
+            "highlight": "3.5k protein regions"
         }
-      ]
+    ]
     },
     {
       "name": "UniProt",
