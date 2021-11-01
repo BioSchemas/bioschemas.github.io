@@ -1054,9 +1054,14 @@
       "profiles": [
         {
           "profileName": "ComputationalTool",
-          "conformsTo": "0.4-DRAFT",
+          "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://bio.tools/covidmine",
-          "highlight": "17,090 tools"
+          "highlight": "22,687 tools"
+        },
+        {
+          "profileName": "FormalParameter",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bio.tools/blast"
         }
       ]
     },
