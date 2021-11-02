@@ -1,19 +1,24 @@
 ---
 redirect_from:
-- "/profiles/Protein/"
-- "/profiles/Protein"
+- "devSpecs/Protein/specification"
+- "devSpecs/Protein/specification/"
+- "/devSpecs/Protein/"
+- "/devSpecs/Protein"
+- "/specifications/drafts/Protein"
+- "/specifications/drafts/Protein/"
 
 name: Protein
 
-previous_version: 0.10-DRAFT-2020_04_02
-previous_release: 0.6-RELEASE-2018_11_10
+previous_version: 0.11-RELEASE
+previous_release: 0.11-RELEASE
 
 
 status: release # Change to revision if you are working on an update
 spec_type: Profile
 group: proteins
 use_cases_url: /useCases/Protein/
-cross_walk_url: https://docs.google.com/spreadsheets/d/1FgZIcvUqPNSjAivMOopEPP1cD8TJ8ofG7A51MdHhw8s/edit#gid=1483018794
+cross_walk_url: https://docs.google.com/spreadsheets/d/1jew6b3-9tx27gydLHmCFMzTkPWkEOv8QlBX2N02euY0/
+go_web_url: https://docs.google.com/spreadsheets/d/e/2PACX-1vSLmo9Dw6ZXUyaYgwF-lW6mIrWf0jX7737LL3ljU7kAwqi0yw_UHIxWspsRyiTcpuFMLKxcTSdVWe5b/pub?gid=292464567&single=true&output=csv
 gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Protein
 live_deploy: /liveDeploys/
 
@@ -29,25 +34,14 @@ spec_info:
   title: Protein
   subtitle: Bioschemas profile describing a Protein in Life Sciences.
   description: 'This Protein profile specification presents the most common properties
-    used for a Protein plus examples on how to use them.
-    <h4>Summary of Changes</h4>
-    Changes since previous release of the Protein Profile:
-    <ul>
-      <li>No changes at Minimum level</li>
-      <li>Various changes to properties at the Recommended level
-        <ul>
-          <li>some changes to the expected types</li>
-          <li>isEncodedBy renamed to isEncodedByBioChemEntity and types changed</li>
-          <li>image and isPartOfBioChemEntity demoted to optional</li>
-        </ul>
-      </li>
-      <li>Various changes at Optional level, several properties renamed. Removed additionalProperty and additionalType properties.</li>
-    </ul>
-    No Changes introduced since draft 0.10-DRAFT-2020_04_02'
-  version: 0.11-RELEASE
-  version_date: 20200407T140256
+    used for a Protein plus examples on how to use them.<h4>Summary of Changes</h4>    Changes
+    since previous release of the Protein Profile:    <ul>      <li>Updated type properties
+    to Schema.org pending release</li>      <li>Addition of hasSequenceAnnotation
+    property at Recommended level</li>    </ul>'
+  version: 0.12-DRAFT
+  version_date: 20210610T141040
   official_type: https://bioschemas.org/schema/Protein.html
-  full_example: ""
+  full_example: https://github.com/BioSchemas/specifications/tree/master/Protein/examples/0.12-DRAFT
 mapping:
 - property: alternateName
   expected_types:
@@ -72,7 +66,7 @@ mapping:
   description: Disease associated to this BioChemEntity. Such disease can be a MedicalCondition
     or a URL. If you want to add an evidence supporting the association, please use
     PropertyValue.
-  type: bioschemas
+  type: pending
   type_url: ""
   bsc_description: Disease associated to this protein, if any.
   marginality: Recommended
@@ -96,7 +90,7 @@ mapping:
   expected_types:
   - BioChemEntity
   description: A BioChemEntity that is known to interact with this item.
-  type: bioschemas
+  type: pending
   type_url: ""
   bsc_description: ""
   marginality: Optional
@@ -108,9 +102,8 @@ mapping:
 - property: bioChemSimilarity
   expected_types:
   - BioChemEntity
-  description: A similar molecular entity, e.g., obtained by fingerprint similarity
-    algorithms.
-  type: bioschemas
+  description: A similar BioChemEntity, e.g., obtained by fingerprint similarity algorithms.
+  type: pending
   type_url: ""
   bsc_description: ""
   marginality: Optional
@@ -138,10 +131,9 @@ mapping:
 - property: hasBioChemEntityPart
   expected_types:
   - BioChemEntity
-  - URL
   description: 'Indicates a BioChemEntity that (in some sense) has this BioChemEntity
     as a part. Inverse property: isPartOfBioChemEntity.'
-  type: bioschemas
+  type: pending
   type_url: ""
   bsc_description: ""
   marginality: Optional
@@ -153,7 +145,7 @@ mapping:
   - Text
   description: "A symbolic representation of a BioChemEnity. For example, a nucleotide
     \nsequence of a Gene or an amino acid sequence of a Protein."
-  type: bioschemas
+  type: pending
   type_url: ""
   bsc_description: ""
   marginality: Optional
@@ -169,8 +161,9 @@ mapping:
   - DefinedTerm
   - PropertyValue
   - URL
-  description: Molecular function performed by this BioChemEntity
-  type: bioschemas
+  description: Molecular function performed by this BioChemEntity; please use PropertyValue
+    if you want to include any evidence.
+  type: pending
   type_url: ""
   bsc_description: GO term corresponding to the Molecular Function branch of the GO
     ontology.
@@ -189,7 +182,7 @@ mapping:
   - URL
   description: A common representation such as a protein sequence or chemical structure
     for this entity. For images use schema.org/image.
-  type: bioschemas
+  type: pending
   type_url: ""
   bsc_description: '**Bioschemas Protein**: This property could be used, for instance,
     to link to a page containing the corresponding sequence protein. If you want to
@@ -199,6 +192,70 @@ mapping:
   cardinality: MANY
   controlled_vocab: ""
   example: ""
+- property: hasSequenceAnnotation
+  expected_types:
+  - SequenceAnnotation
+  - URL
+  description: An annotation on the BioPolymerSequence associated with this BioChemEntity
+  type: bioschemas
+  type_url: ""
+  bsc_description: ""
+  marginality: Recommended
+  cardinality: MANY
+  controlled_vocab: ""
+  example: |-
+    "hasSequenceAnnotation": [
+        {
+          "@type": "SequenceAnnotation",
+          "@id": "https://disprot.org/DP00086r026",
+          "http://purl.org/dc/terms/conformsTo": {"@id": "https://bioschemas.org/specifications/SequenceAnnotation/0.7-DRAFT"},
+          "creationMethod": {
+            "@type": "DefinedTerm",
+            "@id": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00120",
+            "inDefinedTermSet": {
+              "@type": "DefinedTermSet",
+              "@id": "https://www.disprot.org/assets/data/idpontology_disprot_8_v0.1.0.owl",
+              "name": "IDP Ontology"
+            },
+            "termCode": "DO:00120",
+            "name": "Nuclear magnetic resonance",
+            "url": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00120"
+          },
+          "editor": {
+            "@id": "https://disprot.org/curator#bhajdu"
+          },
+          "citation": {
+            "@id": "https://www.ncbi.nlm.nih.gov/pubmed/16793543"
+          },
+          "isPartOfBioChemEntity": {
+            "@id": "http://disprot.org/DP00086"
+          },
+          "sequenceLocation": {
+            "@type": "SequenceRange",
+            "http://purl.org/dc/terms/conformsTo": {"@id": "https://bioschemas.org/specifications/SequenceRange/0.1-DRAFT"},
+            "rangeStart": 20,
+            "rangeEnd": 73
+          },
+          "additionalProperty": {
+            "@type": "PropertyValue",
+            "name": "Term",
+            "value": {
+              "@type": "DefinedTerm",
+              "@id": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00076",
+              "inDefinedTermSet": {
+                "@type": "DefinedTermSet",
+                "@id": "https://www.disprot.org/assets/data/idpontology_disprot_8_v0.1.0.owl",
+                "name": "IDP Ontology"
+              },
+              "termCode": "DO:00076",
+              "name": "Disorder",
+              "url": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00076"
+            }
+          },
+          "description": [
+            "Chemical shift analysis and the NOE pattern demonstrated that p53 in complex with Tfb1 adopts an\na-helical fold that extends from Pro47 to Thr55. Outside this region, p53 is flexible, as also supported by the 15N-1H heteronuclear NOE data."
+          ]
+        }
 - property: identifier
   expected_types:
   - PropertyValue
@@ -235,13 +292,11 @@ mapping:
     \"http://rdf.wwpdb.org/pdb/2WJD\"\n}"
 - property: isEncodedByBioChemEntity
   expected_types:
-  - DNA
   - Gene
-  - RNA
   description: |-
     Another BioChemEntity encoding by this one. Inverse property: encodesBioChemEntity.
      Inverse property: encodesBioChemEntity.
-  type: bioschemas
+  type: pending
   type_url: ""
   bsc_description: ""
   marginality: Recommended
@@ -259,7 +314,7 @@ mapping:
   - URL
   description: Biological process this BioChemEntity is involved in; please use PropertyValue
     if you want to include any evidence.
-  type: bioschemas
+  type: pending
   type_url: ""
   bsc_description: Functional term corresponding to the biological process (typically
     the Biological Process branch of the GO ontology).
@@ -278,7 +333,7 @@ mapping:
   - URL
   description: Subcellular location where this BioChemEntity is located; please use
     PropertyValue if you want to include any evidence.
-  type: bioschemas
+  type: pending
   type_url: ""
   bsc_description: Functional term corresponding to the subcellular location (typically
     the Subcellular Location branch of the GO ontology).
@@ -296,7 +351,7 @@ mapping:
   description: |-
     Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: hasBioChemEntityPart.
      Inverse property: hasBioChemEntityPart.
-  type: bioschemas
+  type: pending
   type_url: ""
   bsc_description: '**Bioschemas Protein**: For proteins, it can be used to link to
     protein sequence annotations such as domains, sites, regions, etc.'
@@ -371,7 +426,7 @@ mapping:
   - URL
   description: The taxonomic grouping of the organism that expresses, encodes, or
     in someway related to the BioChemEntity.
-  type: bioschemas
+  type: pending
   type_url: ""
   bsc_description: '**Bioschemas Protein**: For proteins, it is recommended to use
     this property to specify the taxon/organism corresponding to a genome including
