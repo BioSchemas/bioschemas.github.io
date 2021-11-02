@@ -6,9 +6,9 @@
             {% if site.data.profile_versions[spec.name].status == "deprecated" %}
           	  <br/>
               Deprecated on: {{site.data.profile_versions[spec.name].deprecated_date }}<br/>
-                {% if site.data.profile_versions[spec.name].superceded_by %}
-                  {%- assign supercededProfile = '/profiles/' | append: site.data.profile_versions[spec.name].superceded_by | append:'/'  %}
-                  Superceded by: <a href="{{ supercededProfile | relative_url}}" title="{{site.data.profile_versions[spec.name].superceded_by}}">{{site.data.profile_versions[spec.name].superceded_by}}</a>
+                {% if site.data.profile_versions[spec.name].superseded_by %}
+                  {%- assign supersededProfile = '/profiles/' | append: site.data.profile_versions[spec.name].superseded_by | append:'/'  %}
+                  superseded by: <a href="{{ supersededProfile | relative_url}}" title="{{site.data.profile_versions[spec.name].superseded_by}}">{{site.data.profile_versions[spec.name].superseded_by}}</a>
                 {% endif %}
           	{% endif %}
 

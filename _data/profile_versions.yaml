@@ -132,7 +132,7 @@ ProteinAnnotation:
     latest_publication: "0.6-DRAFT"
     latest_release:
     status: "deprecated"
-    superceded_by: "SequenceAnnotation"
+    superseded_by: "SequenceAnnotation"
 
 ProteinStructure:
     name: "ProteinStructure"
