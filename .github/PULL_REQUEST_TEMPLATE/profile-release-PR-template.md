@@ -14,3 +14,5 @@ Checklist for community approval:
 - [ ] 2 week consultation with community
 - [ ] Community issues adequately addressed
 - [ ] News item about the release
+
+_Checklist based on requirements from [Bioschemas Governance](https://github.com/Bioschemas/governance/blob/master/governance.md#releasing-a-profile)._
