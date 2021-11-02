@@ -957,6 +957,11 @@
           "conformsTo": "0.4-DRAFT",
           "exampleURL": "https://bridgedb.github.io/data/gene_database/",
           "highlight": "23 identifier mapping databases for genes, proteins, complexes, metabolites, and more"
+        },
+        {
+          "profileName": "ComputationalTool",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bridgedb.github.io/"
         }
       ]
     },
@@ -1074,9 +1079,14 @@
       "profiles": [
         {
           "profileName": "ComputationalTool",
-          "conformsTo": "0.4-DRAFT",
+          "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://bio.tools/covidmine",
-          "highlight": "17,090 tools"
+          "highlight": "22,687 tools"
+        },
+        {
+          "profileName": "FormalParameter",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bio.tools/blast"
         }
       ]
     },
