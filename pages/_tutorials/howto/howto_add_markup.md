@@ -120,9 +120,9 @@ If you choose to have multiple ```<script type="application/ld+json">``` element
 
 {% include image.html file="/tutorials/images/brca_gene_summary.png" caption="Figure 1: BRCA2 gene summary" alt="BRCA2 gene summary" %}
 
-This summary corresponds to a two-colum ```<div>``` used to show the name, CCDS, UniProtKB and so on. In Figure 2, we show the respective HTML code where the two-column ```<div>``` is highlithed in blue and the row corresponding to the Ensembl version has been expanded. Below this ```<div>``` appears the JSON-LD with the corresponding markup.
+This summary corresponds to a two-colum ```<div>``` used to show the name, CCDS, UniProtKB and so on. In Figure 2, we show the respective HTML code where the two-column ```<div>``` is highlighted in blue and the row corresponding to the Ensembl version has been expanded. Below this ```<div>``` appears the JSON-LD with the corresponding markup.
 
-{% include image.html file="/tutorials/images/brca_gene_html.png" caption="Figure 2: Code corresonding to the BRCA2 gene summary" alt="Code corresonding to the BRCA2 gene summary" %}
+{% include image.html file="/tutorials/images/brca_gene_html.png" caption="Figure 2: Code corresponding to the BRCA2 gene summary" alt="Code corresponding to the BRCA2 gene summary" %}
 
 If you want to include only one ```<script type="application/ld+json">``` with all the markup relevant to your page, a common option is adding the JSON-LD at the end of the HTML code so it will not interfere with the rendering of the page.
 
