@@ -81,7 +81,30 @@ Now that you have identified those elements on your web page that you want to ma
 
 As discussed on the introduction to Schema.org, there are [multiple formats](/tutorials/what_why_schema#3-schemaorg-formats) that can be used to add structured markup to web pages. Bioschemas (and Schema.org) recommends JSON-LD so we will use that in the following examples.
 
-### 3.2. How add the markup
+### 3.2. Include standard properties
+
+There are three properties that should always be included, these are:
+* @context --so it is clear what schema you are using
+* @type --so it is clear what the type of thing you are describing
+* @id --so it is clear what the identifier of the thing you are describing is
+* dct:conformsTo --so it is clear what Bioschemas profile version you adhere to
+
+For instance, if you are describing a `DataCatalog`, you should include the standards properties at the beginning of the markup as follows:
+
+```
+{
+  "@context": "https://schema.org/",
+  "@type": "DataCatalog",
+  "@id" : "https://www.guidetopharmacology.org",
+  "http://purl.org/dc/terms/conformsTo": {
+      "@type": "CreativeWork",
+      "@id": "https://bioschemas.org/profiles/DataCatalog/0.3-RELEASE-2019_07_01/"
+  },
+  ...
+}
+```
+
+### 3.3. How add the markup
 
 Here we have two possibilities: manually or automatically adding the markup.
 
@@ -89,7 +112,7 @@ Depending on how the data is rendered on your website, there might be a producti
 
 For websites without a production pipeline behind, those where you manually edit the HTML yourself, you will have to add the markup by hand. For instance, if you organize a half-day workshop with less than 10 accepted papers, you could add the corresponding markup by hand. This is the case for the [Research Objects Management for Linked Open Science Workshop](https://zbmed.github.io/damalos) which includes bibliographic markup for the [submissions on 2020](https://zbmed.github.io/damalos/docs/2020.html). The workshop web page is based on GitHub pages and the markup for the publications was manually added at the end of the corresponding [MarkDown document](https://github.com/zbmed/damalos/blob/master/docs/2020.md).
 
-### 3.3. Where to add the markup
+### 3.4. Where to add the markup
 
 You can put the JSON-LD corresponding to your markup anywhere within the HTML where a ```<script>``` element is allowed. You can choose between having multiple ```<script type="application/ld+json">``` elements or only one. If you really need to you can even mix JSON-LD and RDFa, although we don't recommend this as many tools will not be able to extract all your markup.
 
@@ -111,7 +134,7 @@ If your page is not too big, you can also choose to have the JSON-LD at the begi
 
 {% include image.html file="/tutorials/images/code_on_head.png" caption="Figure 3: JSON-LD as part of the head" alt="JSON-LD as part of the head" %}
 
-### 4. Some additional considerations
+### 4. JSON-LD special characters
 
 JSON-LD, as any other computational format, has some special characters. For example, property keys as well as property String values can be enclosed with either single or double quotations; quotation marks are therefore seen as special characters (i.e., they have a special meaning as part of the format specification and will be parsed by tools accordingly). Here you can see a key (name) - value (Bioschemas) pair, notice how the key and the value are surrounded by double quotes: `"name": "Bioschemas"`. 
 
