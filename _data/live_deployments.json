@@ -32,6 +32,7 @@
       "keywords": ["RIR"],
       "url": "https://fairsharing.org/",
       "nodes": "UK",
+      "sitemap": "https://fairsharing.org/sitemap.xml",
       "profiles": [
         {
           "profileName": "DataCatalog",
@@ -41,7 +42,8 @@
         {
           "profileName": "Dataset",
           "conformsTo": "0.1",
-          "exampleURL": "https://fairsharing.org/"
+          "exampleURL": "https://fairsharing.org/",
+          "highlight": "Over 3,000 datasets"
         }
       ]
     },
@@ -138,22 +140,42 @@
       ]
     },
     {
-      "name": "MobiDB",
-      "url": "http://mobidb.bio.unipd.it/",
-      "nodes": "IT",
-      "sitemap": "https://mobidb.bio.unipd.it/sitemap.xml",
-      "profiles": [
+    "name": "MobiDB",
+    "description": "MobiDB is a database of protein disorder and mobility annotations.",
+    "url": "https://mobidb.org/",
+    "nodes": "IT",
+    "sitemap": "https://mobidb.org/sitemap.xml",
+    "profiles":
+    [
         {
-          "profileName": "DataCatalog",
-          "conformsTo": "0.1",
-          "exampleURL": "http://mobidb.bio.unipd.it/"
+            "profileName": "Protein",
+            "conformsTo": "0.11",
+            "exampleURL": "https://mobidb.org/P04637",
+            "highlight": "~2k proteins"
         },
         {
-          "profileName": "Dataset",
-          "conformsTo": "0.2",
-          "exampleURL": "http://mobidb.bio.unipd.it/"
+            "profileName": "Dataset",
+            "conformsTo": "0.3",
+            "exampleURL": "https://mobidb.org/"
+        },
+        {
+            "profileName": "DataCatalog",
+            "conformsTo": "0.3",
+            "exampleURL": "https://mobidb.org/"
+        },
+        {
+            "profileName": "SequenceAnnotation",
+            "conformsTo": "0.6-DRAFT",
+            "exampleURL": "https://mobidb.org/P04637",
+            "highlight": "3.1k protein regions"
+        },
+        {
+            "profileName": "SequenceRange",
+            "conformsTo": "0.1-DRAFT",
+            "exampleURL": "https://mobidb.org/P04637",
+            "highlight": "3.1k protein regions"
         }
-      ]
+    ]
     },
     {
       "name": "Biosamples",
@@ -275,18 +297,6 @@
           "profileName": "Event",
           "conformsTo": "0.1",
           "exampleURL": "https://www.france-bioinformatique.fr/en/evenements_upcoming"
-        }
-      ]
-    },
-    {
-      "name": "ELIXIR Portugal",
-      "url": "http://elixir-portugal.org/",
-      "nodes": "PT",
-      "profiles": [
-        {
-          "profileName": "Event",
-          "conformsTo": "0.1",
-          "exampleURL": "http://elixir-portugal.org/event/embo-practical-course-tree-building-advanced-concepts-and-practice-phylogenetic-analysis"
         }
       ]
     },
@@ -499,6 +509,11 @@
         {
           "profileName": "Dataset",
           "conformsTo": "0.2",
+          "exampleURL": "https://www.ebi.ac.uk/chembl/"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "",
           "exampleURL": "https://www.ebi.ac.uk/chembl/"
         },
         {
@@ -759,47 +774,42 @@
       ]
     },
     {
-      "name": "DisProt",
-      "description": "DisProt is a database of intrinsically disordered proteins. Disordered regions are manually curated from literature. DisProt annotations cover both structural and functional aspects of disorder detected by specific experimental methods. Annotation concepts and detection methods are encoded in the Disorder Ontology.",
-      "url": "https://disprot.org",
-      "nodes": "IT",
-      "sitemap": "https://disprot.org/sitemap.xml",
-      "profiles": [
+    "name": "DisProt",
+    "description": "DisProt is a database of intrinsically disordered proteins. Disordered regions are manually curated from literature. DisProt annotations cover both structural and functional aspects of disorder detected by specific experimental methods. Annotation concepts and detection methods are encoded in the Disorder Ontology.",
+    "url": "https://disprot.org",
+    "nodes": "IT",
+    "sitemap": "https://disprot.org/sitemap.xml",
+    "profiles":
+    [
         {
-          "profileName": "DataRecord",
-          "conformsTo": "0.2-DRAFT",
-          "exampleURL": "https://www.disprot.org/DP00086#DR",
-          "highlight": "1.6k data records"
+            "profileName": "Protein",
+            "conformsTo": "0.11",
+            "exampleURL": "https://disprot.org/DP00086",
+            "highlight": "~2k proteins"
         },
         {
-          "profileName": "Protein",
-          "conformsTo": "0.11",
-          "exampleURL": "https://www.disprot.org/DP00086",
-          "highlight": "1.6k proteins"
+            "profileName": "Dataset",
+            "conformsTo": "0.3",
+            "exampleURL": "https://disprot.org/"
         },
         {
-          "profileName": "Dataset",
-          "conformsTo": "0.3",
-          "exampleURL": "https://www.disprot.org/"
+            "profileName": "DataCatalog",
+            "conformsTo": "0.3",
+            "exampleURL": "https://disprot.org/"
         },
         {
-          "profileName": "DataCatalog",
-          "conformsTo": "0.3",
-          "exampleURL": "https://www.disprot.org/"
+            "profileName": "SequenceAnnotation",
+            "conformsTo": "0.6-DRAFT",
+            "exampleURL": "https://disprot.org/DP00086r026",
+            "highlight": "3.5k protein regions"
         },
         {
-          "profileName": "ProteinAnnotation",
-          "conformsTo": "0.5-DRAFT",
-          "exampleURL": "https://www.disprot.org/DP00086r026",
-          "highlight": "3.5k protein regions"
-        },
-        {
-          "profileName": "SequenceRange",
-          "conformsTo": "0.1-DRAFT",
-          "exampleURL": "https://www.disprot.org/DP00086r026",
-          "highlight": "3.5k protein regions"
+            "profileName": "SequenceRange",
+            "conformsTo": "0.1-DRAFT",
+            "exampleURL": "https://disprot.org/DP00086r026",
+            "highlight": "3.5k protein regions"
         }
-      ]
+    ]
     },
     {
       "name": "UniProt",
@@ -947,6 +957,11 @@
           "conformsTo": "0.4-DRAFT",
           "exampleURL": "https://bridgedb.github.io/data/gene_database/",
           "highlight": "23 identifier mapping databases for genes, proteins, complexes, metabolites, and more"
+        },
+        {
+          "profileName": "ComputationalTool",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bridgedb.github.io/"
         }
       ]
     },
@@ -1064,9 +1079,14 @@
       "profiles": [
         {
           "profileName": "ComputationalTool",
-          "conformsTo": "0.4-DRAFT",
+          "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://bio.tools/covidmine",
-          "highlight": "17,090 tools"
+          "highlight": "22,687 tools"
+        },
+        {
+          "profileName": "FormalParameter",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bio.tools/blast"
         }
       ]
     },
@@ -1212,6 +1232,27 @@
       ]
     },
     {
+      "name": "InterPro",
+      "description": "Classification of protein families",
+      "keywords": ["CDR"],
+      "url": "https://www.ebi.ac.uk/interpro/",
+      "nodes": "EBI",
+      "sitemap": "https://www.ebi.ac.uk/interpro/sitemap/interpro.sitemap.txt",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3-RELEASE",
+          "exampleURL": "https://www.ebi.ac.uk/interpro/"
+        },
+        {
+          "profileName": "ProteinAnnotation",
+          "conformsTo": "0.6-DRAFT",
+          "exampleURL": "https://www.ebi.ac.uk/interpro/entry/InterPro/IPR015252/",
+          "highlight": "Over 38,000 protein entries"
+        }
+      ]
+    },
+    {
       "name": "Biological Magnetic Resonance Data Bank (BMRB)",
       "description": "A Repository for Data from NMR Spectroscopy on Proteins, Peptides, Nucleic Acids, and other Biomolecules",
       "url": "https://bmrb.io/",
@@ -1224,16 +1265,15 @@
       ]
     },
     {
-      "name": "Human Pluripotent Stem Cell Registry (hPSCreg)",
-      "description": "hPSCreg offers the research community, legislators, regulators and the general public at large an in-depth overview on the current status of human pluripotent stem cell (hPSC) research.",
-      "url": "https://hpscreg.eu/",
-      "sitemap": "https://hpscreg.eu/sitemap.xml",
+      "name": "Bioversions",
+      "url": "https://biopragmatics.github.io/bioversions/",
+      "sitemap": "https://biopragmatics.github.io/bioversions/sitemap.xml",
       "profiles": [
         {
-          "profileName": "BioSample",
-          "conformsTo": "0.1-DRAFT",
-          "exampleURL": "https://hpscreg.eu/cell-line/BCRTi001-A",
-          "highlight": "Over 3,500 cell lines"
+          "profileName": "Dataset",
+          "conformsTo": "-",
+          "exampleURL": "https://biopragmatics.github.io/bioversions/",
+          "highlight": "Aggregation site about 279 datasets. Due to the aggregation not all properties can be retrieved to comply with the Bioschemas profile."
         }
       ]
     }

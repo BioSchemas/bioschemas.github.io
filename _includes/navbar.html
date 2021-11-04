@@ -1,73 +1,68 @@
-<!-- If you edit this file, remember to edit the mobile_navbar.html file as well -->
-<div class="trigger">
-
-    <div class="trigger_links">
-        <a href="/" role="button" class="btn btn-bioschema btn-lg"><i class="fas fa-home"></i> Home</a>
-        <div class="btn-group" role="group">
-          <button class="btn btn-bioschema dropdown-toggle btn-lg" type="button" id="btnCommunity" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Getting Started
-          </button>
-          <div class="dropdown-menu" aria-labelledby="btnCommunity">
-            <a class="dropdown-item" href="/tutorials/">Overview</a>
-            <a class="dropdown-item" href="/tutorials/what_why_schema">Introduction to Schema.org</a>
-            <a class="dropdown-item" href="/tutorials/markup_examples">Schema.org markup examples</a>
-            <a class="dropdown-item" href="/tutorials/what_why_bioschemas">Introduction to Bioschemas</a>
-            <a class="dropdown-item" href="/tutorials/howto/howto_right_profile">Choosing a profile</a>
-            <a class="dropdown-item" href="/tutorials/howto/howto_add_markup">Adding markup</a>
-            <a class="dropdown-item" href="/tutorials/howto/howto_add_github">Adding markup to GitHub pages</a>
-            <a class="dropdown-item" href="/tutorials/howto/howto_check_deploy">Validating markup</a>
-            <a class="dropdown-item" href="/tutorials/howto/howto_create_new_profile">Creating a new profile</a>
-            <a class="dropdown-item" href="/tutorials/howto/howto_new_profile_version">Updating a profile</a>
-          </div>
-        </div>
-        <div class="btn-group" role="group">
-          <button class="btn btn-bioschema dropdown-toggle btn-lg" type="button" id="btnCommunity" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Specifications
-          </button>
-          <div class="dropdown-menu" aria-labelledby="btnCommunity">
-            <a class="dropdown-item" href="/profiles/">Profiles</a>
-            <a class="dropdown-item" href="/types/">Types</a>
-          </div>
-        </div>
-        <div class="btn-group" role="group">
-          <button class="btn btn-bioschema dropdown-toggle btn-lg" type="button" id="btnCommunity" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Deploy &amp; Develop
-          </button>
-          <div class="dropdown-menu" aria-labelledby="btnCommunity">
-            <a class="dropdown-item" href="http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/">Markup Generator</a>
-            <a class="dropdown-item" href="/software/">Tools</a>
-            <a class="dropdown-item" href="https://github.com/Bioschemas/specifications/wiki/Technical">Technical Wiki</a>
-            <a class="dropdown-item" href="/liveDeploys/">Live deploys</a>
-          </div>
-        </div>
-        <div class="btn-group" role="group">
-            <button class="btn btn-bioschema dropdown-toggle btn-lg" type="button" id="btnCommunity" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Community
-            </button>
-            <div class="dropdown-menu" aria-labelledby="btnCommunity">
-                <a class="dropdown-item" href="/community/">Overview</a>
-                <a class="dropdown-item" href="/howtojoin/">Join</a>
-                <a class="dropdown-item" href="/meetings/">Meetings</a>
-                <a class="dropdown-item" href="/people/">People</a>
-                <a class="dropdown-item" href="/groups/">Groups</a>
-                <a class="dropdown-item" href="/community/champions.html">Champions</a>
-                <a class="dropdown-item" href="/community/related">Related Communities</a>
-            </div>
-        </div>
-        <div class="btn-group" role="group">
-            <button class="btn btn-bioschema dropdown-toggle btn-lg" type="button" id="btnCommunity" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            About
-            </button>
-            <div class="dropdown-menu" aria-labelledby="btnCommunity">
-                <a class="dropdown-item" href="https://github.com/Bioschemas/governance/blob/master/governance.md">Governance</a>
-                <a class="dropdown-item" href="https://github.com/Bioschemas/governance/blob/master/codeOfConduct.md">Code of Conduct</a>
-                <a class="dropdown-item" href="/publications/">Publications</a>
-                <a class="dropdown-item" href="/funders">Funders</a>
-                <a class="dropdown-item" href="/community/logos">Logos</a>
-            </div>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top py-xl-1" aria-label="navbar">
+  <div class="container-fluid justify-content-end">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bioschemasNavbar" aria-controls="bioschemasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-md-center fs-5" id="bioschemasNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active mx-2" aria-current="page" href="{{ '/index.html' | relative_url}}"><i class="fas fa-home me-2"></i>Home</a></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active mx-2" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Getting Started</a>
+          <ul class="dropdown-menu" aria-labelledby="btnCommunity">
+              <li><a class="dropdown-item" href="{{ '/tutorials/' | relative_url }}">Overview</a></li>
+              <li><a class="dropdown-item" href="{{ '/tutorials/what_why_schema' | relative_url }}">Introduction to Schema.org</a></li>
+              <li><a class="dropdown-item" href="{{ '/tutorials/markup_examples' | relative_url }}">Schema.org markup examples</a></li>
+              <li><a class="dropdown-item" href="{{ '/tutorials/what_why_bioschemas' | relative_url }}">Introduction to Bioschemas</a></li>
+              <li><a class="dropdown-item" href="{{ '/tutorials/howto/howto_right_profile' | relative_url }}">Choosing a profile</a></li>
+              <li><a class="dropdown-item" href="{{ '/tutorials/howto/howto_add_markup' | relative_url }}">Adding markup</a></li>
+              <li><a class="dropdown-item" href="{{ '/tutorials/howto/howto_add_github' | relative_url }}">Adding markup to GitHub pages</a></li>
+              <li><a class="dropdown-item" href="{{ '/tutorials/howto/howto_check_deploy' | relative_url }}">Validating markup</a></li>
+              <li><a class="dropdown-item" href="{{ '/tutorials/howto/howto_create_new_profile' | relative_url }}">Creating a new profile</a></li>
+              <li><a class="dropdown-item" href="{{ '/tutorials/howto/howto_new_profile_version' | relative_url }}">Updating a profile</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active mx-2" href="#" id="dropdown02" data-bs-toggle="dropdown" aria-expanded="false">Specifications</a>
+          <ul class="dropdown-menu" aria-labelledby="btnCommunity">
+              <li><a class="dropdown-item" href="{{ '/profiles/' | relative_url }}">Profiles</a></li>
+              <li><a class="dropdown-item" href="{{ '/types/' | relative_url }}">Types</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active mx-2" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Deploy &amp; Develop</a>
+          <ul class="dropdown-menu" aria-labelledby="btnCommunity">
+              <li><a class="dropdown-item" href="http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/">Markup Generator</a></li>
+              <li><a class="dropdown-item" href="{{ '/software' | relative_url }}">Software</a></li>
+              <li><a class="dropdown-item" href="https://github.com/Bioschemas/specifications/wiki/Technical">Technical Wiki</a></li>
+              <li><a class="dropdown-item" href="{{ '/liveDeploys' | relative_url }}">Live deploys</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active mx-2" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">Community</a>
+          <ul class="dropdown-menu" aria-labelledby="btnCommunity">
+              <li><a class="dropdown-item" href="{{ '/community/' | relative_url }}">Overview</a></li>
+              <li><a class="dropdown-item" href="{{ '/community/howtojoin' | relative_url }}">Join</a></li>
+              <li><a class="dropdown-item" href="{{ '/news/' | relative_url }}">News</a></li>
+              <li><a class="dropdown-item" href="{{ '/meetings/' | relative_url }}">Meetings</a></li>
+              <li><a class="dropdown-item" href="{{ '/people/' | relative_url }}">People</a></li>
+              <li><a class="dropdown-item" href="{{ '/groups/' | relative_url }}">Groups</a></li>
+              <li><a class="dropdown-item" href="{{ '/community/champions.html' | relative_url }}">Champions</a></li>
+              <li><a class="dropdown-item" href="{{ '/community/related' | relative_url }}">Related Communities</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active mx-2" href="#" id="dropdown05" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+          <ul class="dropdown-menu" aria-labelledby="btnCommunity">
+              <li><a class="dropdown-item" href="https://github.com/Bioschemas/governance/blob/master/governance.md">Governance</a></li>
+              <li><a class="dropdown-item" href="https://github.com/Bioschemas/governance/blob/master/codeOfConduct.md">Code of Conduct</a></li>
+              <li><a class="dropdown-item" href="{{ '/about/publications' | relative_url }}">Publications</a></li>
+              <li><a class="dropdown-item" href="{{ '/about/funders' | relative_url }}">Funding</a></li>
+              <li><a class="dropdown-item" href="{{ '/about/logos' | relative_url }}">Logos</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
-
-    {% include mobile_navbar.html %}
-
-</div>
+  </div>
+</nav>

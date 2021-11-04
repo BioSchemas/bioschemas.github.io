@@ -1,0 +1,167 @@
+<tr>
+    <td class="property-column"><a href="https://www.w3.org/TR/json-ld/#dfn-context" target="_blank" class="external" rel="noopener">@context</a></td>
+    <td><a href="http://schema.org/URL" target="_blank" rel="noopener">URL</a></td>
+    <td class="description-column">Used to provide the context (namespaces) for the JSON-LD file. <br />Not needed in other serialisations.</td>
+    <td>ONE</td>
+    <td class="control-vocabulary-column"></td>
+    <td class="example-column">
+        <!-- Example modal starts here -->
+        <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-html="true" title="View <strong>&#8810@context&#8811</strong> example">
+            <button type="button" class="btn btn-primary" data-bs-target="#myModalContext" data-bs-toggle="modal">
+                <i class="fas fa-file-code"></i>
+            </button>
+        </span>
+        <!-- Modal -->
+        </div>
+        <div class="modal fade" id="myModalContext" tabindex="-1" aria-labelledby="myModalContext" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Property <strong>&#8810@context&#8811</strong> example</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="{{current_mg}}-example-num-{{forloop.index}}" class="example-code">
+{%- highlight javascript %}
+{
+    "@context": "https://schema.org/"
+}
+{%- endhighlight %}
+                            <button type="button" data-bs-toggle="tooltip" title="Copy to clipboard" class="btn btn-primary btn-copy" data-clipboard-target="#{{current_mg}}-example-num-{{forloop.index}}"><i class="fas fa-copy"></i></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td class="property-column"><a href="https://www.w3.org/TR/json-ld/#specifying-the-type" target="_blank" class="external" rel="noopener">@type</a></td>
+    <td><a href="http://schema.org/Text" target="_blank" rel="noopener">Text</a></td>
+    <td class="description-column">Schema.org/Bioschemas class for the resource declared using JSON-LD syntax. For other serialisations please use the appropriate mechanism.<br />While it is permissible to provide multiple types, it is preferred to use a single type.</td>
+    <td>MANY</td>
+    <td class="control-vocabulary-column">Schema.org, Bioschemas</td>
+    <td class="example-column">
+        <!-- Example modal starts here -->
+        <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-html="true" title="View <strong>&#8810@type&#8811</strong> example">
+            <button type="button" class="btn btn-primary" data-bs-target="#myModalType" data-bs-toggle="modal">
+                <i class="fas fa-file-code"></i>
+            </button>
+        </span>
+        <!-- Modal -->
+        </div>
+        <div class="modal fade" id="myModalType" tabindex="-1" aria-labelledby="myModalType" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Property <strong>&#8810@type&#8811</strong> example</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="{{current_mg}}-example-num-{{forloop.index}}" class="example-code">
+{%- highlight javascript %}
+{
+    "@type": "{{page.parent_type}}"
+}
+{%- endhighlight %}
+                            <button type="button" data-bs-toggle="tooltip" title="Copy to clipboard" class="btn btn-primary btn-copy" data-clipboard-target="#{{current_mg}}-example-num-{{forloop.index}}"><i class="fas fa-copy"></i></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td class="property-column"><a href="https://www.w3.org/TR/json-ld/#node-identifiers" target="_blank" class="external" rel="noopener">@id</a></td>
+    <td><a href="https://datatracker.ietf.org/doc/html/rfc3987#section-2" target="_blank" class="external" rel="noopener">IRI</a></td>
+    <td class="description-column">Used to distinguish the resource being described in JSON-LD. For other serialisations use the appropriate approach.</td>
+    <td>ONE</td>
+    <td class="control-vocabulary-column"></td>
+    <td class="example-column">
+        <!-- Example modal starts here -->
+        <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-html="true" title="View <strong>&#8810@id&#8811</strong> example">
+            <button type="button" class="btn btn-primary" data-bs-target="#myModalid" data-bs-toggle="modal">
+                <i class="fas fa-file-code"></i>
+            </button>
+        </span>
+        <!-- Modal -->
+        </div>
+        <div class="modal fade" id="myModalid" tabindex="-1" aria-labelledby="myModalid" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Property <strong>&#8810@id&#8811</strong> example</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="{{current_mg}}-example-num-{{forloop.index}}" class="example-code">
+{%- highlight javascript %}
+{
+    "@id": "http://example.com/entity/A12345"
+}
+{%- endhighlight %}
+                            <button type="button" data-bs-toggle="tooltip" title="Copy to clipboard" class="btn btn-primary btn-copy" data-clipboard-target="#{{current_mg}}-example-num-{{forloop.index}}"><i class="fas fa-copy"></i></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td class="property-column"><a href="http://purl.org/dc/terms/conformsTo" target="_blank" class="external" rel="noopener">dct:conformsTo</a></td>
+    <td><a href="https://datatracker.ietf.org/doc/html/rfc3987#section-2" target="_blank" class="external" rel="noopener">IRI</a></td>
+    <td class="description-column">Used to state the Bioschemas profile that the markup relates to. The versioned URL of the profile must be used.<br />Note that we use a CURIE in the table here but the full URL for Dublin Core terms must be used in the markup (http://purl.org/dc/terms/conformsTo), see example.</td>
+    <td>ONE</td>
+    <td class="control-vocabulary-column">Bioschemas profile versioned URL</td>
+    <td class="example-column">
+        <!-- Example modal starts here -->
+        <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-html="true" title="View <strong>&#8810dct:conformsTo&#8811</strong> example">
+            <button type="button" class="btn btn-primary" data-bs-target="#myModalconformsTo" data-bs-toggle="modal">
+                <i class="fas fa-file-code"></i>
+            </button>
+        </span>
+        <!-- Modal -->
+        </div>
+        <div class="modal fade" id="myModalconformsTo" tabindex="-1" aria-labelledby="myModalconformsTo" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Property <strong>&#8810dct:conformsTo&#8811</strong> example</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="{{current_mg}}-example-num-{{forloop.index}}" class="example-code">
+{%- highlight javascript %}
+{
+    "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org{{page.url}}",
+        "@type": "CreativeWork"
+    }
+}
+{%- endhighlight %}
+                            <button type="button" data-bs-toggle="tooltip" title="Copy to clipboard" class="btn btn-primary btn-copy" data-clipboard-target="#{{current_mg}}-example-num-{{forloop.index}}"><i class="fas fa-copy"></i></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </td>
+</tr>

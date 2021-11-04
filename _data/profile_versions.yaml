@@ -20,8 +20,8 @@ ChemicalSubstance:
 
 ComputationalTool:
     name: "ComputationalTool"
-    latest_publication: "0.6-DRAFT"
-    latest_release:
+    latest_publication:
+    latest_release: "1.0-RELEASE"
     status: "active"
 
 ComputationalWorkflow:
@@ -81,7 +81,7 @@ FormalParameter:
 
 Gene:
     name: "Gene"
-    latest_publication:
+    latest_publication: "1.1-DRAFT"
     latest_release: "1.0-RELEASE"
     status: "active"
 
@@ -123,7 +123,7 @@ Phenotype:
 
 Protein:
     name: "Protein"
-    latest_publication:
+    latest_publication: "0.12-DRAFT"
     latest_release: "0.11-RELEASE"
     status: "active"
 
@@ -131,7 +131,8 @@ ProteinAnnotation:
     name: "ProteinAnnotation"
     latest_publication: "0.6-DRAFT"
     latest_release:
-    status: "active"
+    status: "deprecated"
+    superseded_by: "SequenceAnnotation"
 
 ProteinStructure:
     name: "ProteinStructure"
@@ -172,6 +173,18 @@ ScholarlyArticle:
 SemanticTextAnnotation:
     name: "SemanticTextAnnotation"
     latest_publication: "0.2-DRAFT-2020_12_03"
+    latest_release:
+    status: "active"
+
+SequenceAnnotation:
+    name: "SequenceAnnotation"
+    latest_publication: "0.7-DRAFT"
+    latest_release:
+    status: "active"
+
+SequenceRange:
+    name: "SequenceRange"
+    latest_publication: "0.1-DRAFT"
     latest_release:
     status: "active"
 

@@ -1,0 +1,145 @@
+/*******************************************************************************
+Specification Properties
+*******************************************************************************/
+
+table.bioschemas_properties,
+table.bioschemas_spec_list,
+table.definition-table {
+    font-size: 90%;
+}
+
+.bioschemas_properties tr,
+.definition-table tr,
+table.bioschemas_spec_list tr {
+    vertical-align: inherit;
+    border-color: inherit;
+    font-size: 100%;
+}
+
+.bioschemas_properties th,
+.definition-table th,
+table.bioschemas_spec_list th {
+    background: $gray-200;
+    color: #3a4956;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    vertical-align: middle;
+    font-size: 100%;
+}
+
+.bioschemas_properties tbody th,
+.definition-table tbody th,
+table.bioschemas_spec_list th {
+    text-align: left;
+    vertical-align: top;
+}
+
+.bioschemas_properties td,
+.definition-table td,
+table.bioschemas_spec_list td {
+    min-height: 1.25em;
+    max-height: 2.5em;
+    vertical-align: top;
+    font-size: 100%;
+}
+
+.reu_props_sdo td,
+.new_props_sdo td,
+.supertype th.supertype-name,
+.cardinality td {
+    font-weight: bold;
+    background: $gray-300;
+    font-size: 100%;
+}
+
+.bioschemas_properties .new_props_sdo td a,
+.bioschemas_properties .new_props_sdo td a:link {
+    color: $bioschemas-base-color;
+}
+
+.cardinality td b.Minimum {
+    color: $bioschemas-base-color;
+}
+
+.cardinality td b.Recommended {
+    color: #98771a;
+}
+
+.cardinality td b.Optional {
+    color: #555daf;
+}
+
+.bioschemas_properties a,
+.definition-table a,
+table.bioschemas_spec_list a {
+    color: $schemaorg-property-color;
+    text-decoration: none;
+    border-bottom: dotted 1px $schemaorg-property-color;
+}
+
+table.bioschemas_spec_list .spec_links a:link,
+table.bioschemas_spec_list .spec_links a {
+    border-bottom: none;
+}
+
+table.bioschemas_spec_list .spec_links {
+    text-align-last: center;
+}
+
+table.bioschemas_spec_list td a img {
+    width: 3.7em;
+}
+
+.bioschemas_properties a:link,
+.definition-table a:link {
+    color: #990000;
+    text-decoration: none;
+    border-bottom: dotted 1px #990000;
+}
+
+/*******************************************************************************
+Specifications
+*******************************************************************************/
+
+.ex_min {
+    background-color: rgb(11, 121, 75);
+    background-color: rgba(11, 121, 75, 0.5);
+}
+
+.ex_rec {
+    background-color: rgb(144, 238, 144);
+    background-color: rgba(144, 238, 144, 0.5);
+}
+
+.ex_opt {
+    background-color: rgb(224, 255, 255);
+    background-color: rgba(224, 255, 255, 0.5);
+}
+
+.groups_h:first-of-type {
+    margin-top: 1em;
+}
+
+.groups_h {
+    margin-top: 1.625em;
+}
+
+/*******************************************************************************
+Style experiment
+*******************************************************************************/
+
+table.bioschemas_properties a.externalProp,
+table.definition-table a.externalProp {
+    color: #454547;
+}
+
+table.bioschemas_properties a.newBsc,
+table.definition-table a.ext-bio {
+    color: $bioschemas-base-color;
+}
+
+table.bioschemas_properties a.pending,
+table.definition-table a.ext-pending {
+    color: $pending-property-color;
+}

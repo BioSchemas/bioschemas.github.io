@@ -1,178 +1,159 @@
-<!DOCTYPE html>
-<html>
-   {% include head.html %}
-   <body>
-      {% include header.html %}
-      {% include navbar.html %}
-      <div class="page-content container">
-         <div class="wrapper">
-            <div class="outer">
-               <section id="main_content" class="inner">
-                  <h1>{{page.name}}
-       <!-- join group button -->
-        <div class="git-edit" style="float: right;">
-            <a target="_blank" href="mailto:{{page.email}}?subject=[Bioschemas] request to join the {{page.name}} group&body=Please add me to the {{page.name}} group!" class="btn btn-bioschema btn-sm" role="button">
-                <b>Join the group</b>
+---
+layout: default
+---
+<h1>{{page.name}}
+   <!-- join group button -->
+   <a target="_blank"
+      href="mailto:{{page.email}}?subject=[Bioschemas] request to join the {{page.name}} group&body=Please add me to the {{page.name}} group!"
+      class="btn btn-primary float-end" role="button">
+      <b>Join the group</b>
+   </a>
+</h1>
+
+<p>{{page.abstract}}</p>
+<div class="table-responsive shadow rounded mt-4 mb-5">
+<table class="table table-hover table-borderless mb-0 bioschemas_spec_list">
+   <thead>
+      <tr>
+         <th>Folder:</th>
+         <td class="spec_links">
+            {% if page.folder %}
+            <a href="{{page.folder}}" target="_blank">
+               <img src="{{ '/images/Google_Drive_logo.png' | relative_url }}"
+                  alt="View Bioschemas {{ page.name }} Folder">
             </a>
-        </div>
-                  </h1>
+            {%else%}
+            <a>
+               <img src="{{ '/images/Google_Drive_logo.png' | relative_url }}"
+                  alt="View Bioschemas {{ page.name }} Folder" style="filter: grayscale(100%);">
+            </a>
+            {%endif%}
+         </td>
+         <th>Task &amp; Issues:</th>
+         <td class="spec_links">
+            {% if page.gh_tasks == '' %}
+            <a>
+               <img src="{{ '/images/specs_tasks.png' | relative_url }}"
+                  alt="Bioschemas {{ page.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
+            </a>
+            {% else %}
+            <a href="{{page.issues}}" target="_blank">
+               <img src="{{ '/images/specs_tasks.png' | relative_url }}"
+                  alt="Bioschemas {{ page.name }} Github Tasks or Issues">
+            </a>
+            {% endif %}
+         </td>
+      </tr>
+   </thead>
+</table>
+</div>
+<br />
+<h5>Objectives</h5>
+<ol>
+   {% for obj in page.objectives %}
+   <li>{{obj}}</li>
+   {% endfor %}
+</ol>
+<br />
+{% if page.specifications %}
+<h5>Profiles</h5>
 
-                  <p>{{page.abstract}}</p>
-                  <table class="bioschemas_spec_list" style="width: 100%; margin-left: auto; margin-right: auto;">
-                     <thead>
-                        <tr>
-                           <th>Folder:</th>
-                           <td class="spec_links">
-                              {% if page.folder %}
-                              <a href="{{page.folder}}" target="_blank">
-                                <img src="/images/Google_Drive_logo.png" alt="View Bioschemas {{ page.name }} Folder">
-                              </a>
-                              {%else%}
-                              <a>
-                                <img src="/images/Google_Drive_logo.png" alt="View Bioschemas {{ page.name }} Folder"  style="filter: grayscale(100%);">
-                              </a>
-                              {%endif%}
-                           </td>
-                           <th>Task &amp; Issues:</th>
-                           <td class="spec_links">
-                              {% if page.gh_tasks == '' %}
-                              <a>
-                              <img src="/images/specs_tasks.png" alt="Bioschemas {{ page.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
-                              </a>
-                              {% else %}
-                              <a href="{{page.issues}}" target="_blank">
-                              <img src="/images/specs_tasks.png" alt="Bioschemas {{ page.name }} Github Tasks or Issues">
-                              </a>
-                              {% endif %}
-                           </td>
-                        </tr>
-                     </thead>
-                  </table>
-                  <br/>
-                  <h5>Objectives</h5>
-                  <ol>
-                     {% for obj in page.objectives %}
-                     <li>{{obj}}</li>
-                     {% endfor %}
-                  </ol>
-                  <br />
-                  {% if page.specifications %}
-                  <h5>Profiles</h5>
+{% for spec in page.specifications %}
+<p>{{spec}}</p>
+<ul>
+   {% if site.data.profile_versions[spec].latest_release != nill %}
+   <li>Latest Release: <a href="/profiles/{{spec}}">(version
+         {{site.data.profile_versions[spec].latest_release}})</a></li>
+   {% endif %}
+   {% if site.data.profile_versions[spec].latest_publication != nill %}
+   <li>Latest Draft: <a href="/profiles/{{spec}}/{{site.data.profile_versions[spec].latest_publication}}">(version
+         {{site.data.profile_versions[spec].latest_publication}})</a></li>
+   {% endif %}
+</ul>
+{% endfor %}
+<br />
+{% endif %}
 
-                     {% for spec in page.specifications %}
-                      <p>{{spec}}</p>
-                        <ul>
-				                 {% if site.data.profile_versions[spec].latest_release != nill %}
-                        <li>Latest Release: <a href="/profiles/{{spec}}">(version {{site.data.profile_versions[spec].latest_release}})</a></li>
-                        {% endif %}
-                        {% if site.data.profile_versions[spec].latest_publication != nill %}
-                        <li>Latest Draft: <a href="/profiles/{{spec}}/{{site.data.profile_versions[spec].latest_publication}}">(version {{site.data.profile_versions[spec].latest_publication}})</a></li>
-                        {% endif %}
-                      </ul>
-                     {% endfor %}
-                  <br/>
-                  {% endif %}
+{% if page.types %}
+<h5>Types</h5>
+{% for type in page.types %}
+<p>{{type}}</p>
+<ul>
+   {% if site.data.type_versions[type].latest_release != nill %}
+   <li>Latest Release: <a href="/types/{{type}}"> (version
+         {{site.data.type_versions[type].latest_release}})</a></li>
+   {% endif %}
+   {% if site.data.type_versions[type].latest_publication != nill %}
+   <li>Latest Draft: <a href="/types/{{type}}/{{site.data.type_versions[type].latest_publication}}">(version
+         {{site.data.type_versions[type].latest_publication}})</a></li>
+   {% endif %}
+</ul>
+{% endfor %}
+<br />
+{% endif %}
 
-                  {% if page.types %}
-                  <h5>Types</h5>
-                     {% for type in page.types %}
-                     <p>{{type}}</p>
-                     <ul>
-                       {% if site.data.type_versions[type].latest_release != nill %}
-                       <li>Latest Release: <a href="/types/{{type}}"> (version {{site.data.type_versions[type].latest_release}})</a></li>
-                       {% endif %}
-                       {% if site.data.type_versions[type].latest_publication != nill %}
-                       <li>Latest Draft: <a href="/types/{{type}}/{{site.data.type_versions[type].latest_publication}}">(version {{site.data.type_versions[type].latest_publication}})</a></li>
-                       {% endif %}
-                     </ul>
-                     {% endfor %}
-                  <br/>
-                  {% endif %}
+<h5>Group Leaders</h5>
+<div id="leadTable">
+   <ul>
+   {% if page.lead %}
+   {% for leader in page.lead %}
+   {% assign lead-id = "/people/" | append: leader %}
+   {% assign author = site.people | where:"id", lead-id | first %}
+      <li><a href="{{ author.url | relative_url }}">{{ author.first-name }} {{ author.last-name }}</a></li>
+   {% endfor %}
+   {% else %}
+   {% for leader in page.current-leads %}
+   {% assign lead-id = "/people/" | append: leader.person %}
+   {% assign author = site.people | where:"id", lead-id | first %}
+      <li><a href="{{ author.url | relative_url }}">{{ author.first-name }} {{ author.last-name }}</a><br/>
+      (since {{leader.start-date | date_to_long_string}})</li>
+   {% endfor %}
+   {% endif %}
+   </ul>
+</div>
+<br />
+<h5>Group Members</h5>
+<div id="peopleTable">
+   <ul>
+   {% for member-name in page.members %}
+   {% assign member-id = "/people/" | append: member-name %}
+   {% assign member = site.people | where:"id", member-id | first %}
+   {% if member.first-name %}
+      <li><a href="{{ member.url | relative_url }}">{{ member.first-name }} {{ member.last-name }}</a></li>
+   {% endif %}
+   {% endfor %}
+   </ul>
+</div>
+{% if page.former-leads %}
+<br />
+<h5>Former Group Leads</h5>
+<div id="formerLeadTable">
+   <ul>
+   {% for leader in page.former-leads %}
+   {% assign lead-id = "/people/" | append: leader.person %}
+   {% assign author = site.people | where:"id", lead-id | first %}
+   {% if author.first-name %}
+      <li><a href="{{ author.url | relative_url }}">{{ author.first-name }} {{ author.last-name }}</a><br/>
+      ({{leader.start-date | date: "%d-%b-%Y"}} – {{leader.end-date | date: "%d-%b-%Y"}})</li>
+   {% endif %}
+   {% endfor %}
+   </ul>
+</div>
+{% endif %}
+{% if page.Former-Members %}
+<br />
+<h5>Former Group Members</h5>
+<div id="formerPeopleTable">
+   <ul>
+   {% for member-name in page.Former-Members %}
+   {% assign member-id = "/people/" | append: member-name %}
+   {% assign member = site.people | where:"id", member-id | first %}
+   {% if member.first-name %}
+      <li><a href="{{ member.url | relative_url }}">{{ member.first-name }} {{ member.last-name }}</a></li>
+   {% endif %}
+   {% endfor %}
+   </ul>
+</div>
+{% endif %}
+{{ content }}
 
-                  <h5>Group Leaders</h5>
-                  <div id="leadTable">
-                    {% if page.lead %}
-                     {% for leader in page.lead %}
-                     {% assign lead-id = "/people/" | append: leader %}
-                     {% assign author = site.people | where:"id", lead-id | first %}
-                     <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
-                     {% endfor %}
-                    {% else %}
-                      {% for leader in page.current-leads %}
-                      {% assign lead-id = "/people/" | append: leader.person %}
-                      {% assign author = site.people | where:"id", lead-id | first %}
-                      <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a><br/>
-                         (since {{leader.start-date | date_to_long_string}})</p>
-                      {% endfor %}
-                    {% endif %}
-                  </div>
-                  <br />
-                  <h5>Group Members</h5>
-                  <div id="peopleTable">
-                    {% for member-name in page.members %}
-                    {% assign member-id = "/people/" | append: member-name %}
-                    {% assign member = site.people | where:"id", member-id | first %}
-                    <p><a href="{{ member.url }}">{{ member.first-name }} {{ member.last-name }}</a></p>
-                    {% endfor %}
-                  </div>
-                  {% if page.former-leads %}
-                    <br/>
-                    <h5>Former Group Leads</h5>
-                    <div id="formerLeadTable">
-                    {% for leader in page.former-leads %}
-                    {% assign lead-id = "/people/" | append: leader.person %}
-                    {% assign author = site.people | where:"id", lead-id | first %}
-                    <p><a href="{{ author.url }}">{{ author.first-name }} {{ author.last-name }}</a><br/>
-                       ({{leader.start-date | date: "%d-%b-%Y"}} – {{leader.end-date | date: "%d-%b-%Y"}})</p>
-                    {% endfor %}
-                    </div>
-                  {% endif %}
-                  {% if page.Former-Members %}
-                  <br/>
-                  <h5>Former Group Members</h5>
-                  <div id="formerPeopleTable">
-                    {% for member-name in page.Former-Members %}
-                    {% assign member-id = "/people/" | append: member-name %}
-                    {% assign member = site.people | where:"id", member-id | first %}
-                    <p><a href="{{ member.url }}">{{ member.first-name }} {{ member.last-name }}</a></p>
-                    {% endfor %}
-                  </div>
-                  {% endif %}
-                  {{ content }}
-               </section>
-            </div>
-         </div>
-      </div>
-      <!-- change number columns based on device -->
-      <script type="application/x-javascript">
-         if(navigator.userAgent.match(/android/i)) {
-             document.getElementById('peopleTable').style.columnCount = 1;
-             document.getElementById('formerPeopleTable').style.columnCount = 1;
-             document.getElementById('leadTable').style.columnCount = 1;
-             document.getElementById('formerLeadTable').style.columnCount = 1;
-         } else if(navigator.userAgent.match(/phone/i)) {
-             document.getElementById('peopleTable').style.columnCount = 1;
-             document.getElementById('formerPeopleTable').style.columnCount = 1;
-             document.getElementById('leadTable').style.columnCount = 1;
-             document.getElementById('formerLeadTable').style.columnCount = 1;
-         } else if(navigator.userAgent.match(/tablet/i)) {
-             document.getElementById('peopleTable').style.columnCount = 1;
-             document.getElementById('formerPeopleTable').style.columnCount = 1;
-             document.getElementById('leadTable').style.columnCount = 1;
-             document.getElementById('formerLeadTable').style.columnCount = 1;
-         } else if(navigator.userAgent.match(/ipad/i)) {
-             document.getElementById('peopleTable').style.columnCount = 1;
-             document.getElementById('formerPeopleTable').style.columnCount = 1;
-             document.getElementById('leadTable').style.columnCount = 1;
-             document.getElementById('formerLeadTable').style.columnCount = 1;
-         } else {
-             document.getElementById('peopleTable').style.columnCount = 4;
-             document.getElementById('formerPeopleTable').style.columnCount = 4;
-             document.getElementById('leadTable').style.columnCount = 4;
-             document.getElementById('formerLeadTable').style.columnCount = 4;
-         }
-      </script>
-      {% include footer.html %}
-
-   </body>
-</html>
