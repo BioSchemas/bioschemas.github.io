@@ -18,6 +18,12 @@ $link-color: #005ce6;
 $font-size-root: 16px;
 $primary: $bioschemas-base-color;
 $link-decoration: none;
+$h1-font-size: 1rem * 2.5 !default;
+$h2-font-size: 1rem * 1.875 !default;
+$h3-font-size: 1rem * 1.3125 !default;
+$h4-font-size: 1rem * 1.25 !default;
+$h5-font-size: 1rem * 1.125 !default;
+$h6-font-size: 1rem !default;
 $component-active-bg: $bioschemas-base-color;
 $link-hover-color: $bioschemas-base-color;
 $accordion-button-active-color: #000000;
@@ -43,36 +49,22 @@ h6 {
 }
 
 h1 {
-    font-size: 2.5em;
     font-family: Helvetica, Arial, sans-serif;
     letter-spacing: 0.005em;
-    margin-bottom: 0.5em;
+    margin-bottom: $spacer;
     color: #444;
 }
 
 h2 {
-    font-size: 1.875em;
     margin-bottom: 0.3125em;
     padding-top: 0.6em;
 }
 
 h3 {
-    font-size: 1.3125em;
     margin-bottom: 0.3125em;
     padding-top: 0.6em;
 }
 
-h4 {
-    font-size: 1.25em;
-}
-
-h5 {
-    font-size: 1.125em;
-}
-
-h6 {
-    font-size: 1em;
-}
 
 blockquote {
     color: #666;
