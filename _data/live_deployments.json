@@ -1276,6 +1276,32 @@
           "highlight": "Aggregation site about 279 datasets. Due to the aggregation not all properties can be retrieved to comply with the Bioschemas profile."
         }
       ]
+    },
+    {
+      "name": "Bgee",
+      "description": "Bgee is a database for retrieval and comparison of gene expression patterns across multiple animal species. It provides an intuitive answer to the question \"where is a gene expressed?\" and supports research in cancer and agriculture as well as evolutionary biology.",
+      "url": "https://bgee.org/",
+      "nodes": "CZ",
+      "sitemap": "https://bgee.org/sitemap.xml",
+      "profiles": [
+                {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3-RELEASE",
+          "exampleURL": "https://bgee.org/",
+          "highlight": "Contains 29 species specific datasets"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.4-DRAFT",
+          "exampleURL": "https://bgee.org/?page=species&amp;species_id=9606#expr-calls"
+        },
+        {
+          "profileName": "Gene",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bgee.org/?page=gene&gene_id=ENSG00000274928",
+          "highlight": "Over 750k pages"
+        }
+      ]
     }
   ]
 }
