@@ -1,0 +1,26 @@
+---
+layout: default
+title: Live Deploys
+permalink: "/:basename:output_ext"
+redirect_from:
+  - "/:basename:output_ext/"
+
+---
+
+{%- assign schema =
+    site.data.schemas.ComputationalTool_v1-0-RELEASE %}
+{%- assign metadata = schema.jsonld-graph | first %}
+<h1>{{metadata.rdfs-label}} Profile</h1>
+<blockquote>{{metadata.rdfs-comment}}</blockquote>
+<p>Type: {{metadata.rdfs-subClassOf.jsonld-id}}</p>
+
+<h3>Validation Rules</h3>
+{{metadata.jsonld-validation}}
+
+<hr/>
+<h3>Context</h3>
+{{schema.jsonld-context}}
+
+<hr/>
+<h3>Graph</h3>
+{{schema.jsonld-graph}}
