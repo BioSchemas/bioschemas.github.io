@@ -89,7 +89,7 @@ There are three properties that should always be included, these are:
 * @id --so it is clear what the identifier of the thing you are describing is
 * dct:conformsTo --so it is clear what Bioschemas profile version you adhere to
 
-For instance, if you are describing a `DataCatalog`, you should include the standards properties at the beginning of the markup as follows:
+For instance, if you are describing a [`DataCatalog`](https://schema.org/DataCatalog), you should include the standards properties at the beginning of the markup as follows:
 
 ```
 {
