@@ -61,9 +61,9 @@ If your resource involves more than one profile, you first need to define the st
 <div class="col d-flex align-items-start rounded p-4 mb-4 mt-3 shadow">
   <img class="align-self-center me-3" src="{{ '/tutorials/images/information_mark.png' | relative_url }}" alt="information">
   <div>
-      Link from DataCatalog to Dataset if you only have a few datasets and you introduce them all on your catalog landing page. Example: UniProt
-      <br/>
-      Link from Dataset to DataCatalog if you have that many datasets;  rather than list them all, you provide a search and retrieval mechanism to find them. Example: Identifiers.org
+      <p>Link from <a href="https://schema.org/DataCatalog" target="_blank">DataCatalog</a> to <a href="https://schema.org/Dataset" target="_blank">Dataset</a> if you only have a few datasets and you introduce them all on your catalog landing page. Example: <a href="https://fairsharing.org/" target="_blank">FAIRsharing</a> (<a href="https://validator.schema.org/#url=https%3A%2F%2Ffairsharing.org%2F" target="_blank">SMV</a>)</p>
+
+      <p>Link from <a href="https://schema.org/Dataset" target="_blank">Dataset</a> to <a href="https://schema.org/DataCatalog" target="_blank">DataCatalog</a> if you have that many datasets;  rather than list them all, you provide a search and retrieval mechanism to find them. Example: <a href="https://ega-archive.org/" target="_blank">EGA</a> (<a href="https://validator.schema.org/#url=https%3A%2F%2Fega-archive.org%2F" target="_blank">SMV</a>), <a href="https://ega-archive.org/datasets/EGAD00000000001" target="_blank">EGA Dataset WTCCC1 1958BC control dataset</a> (<a href="https://validator.schema.org/#url=https%3A%2F%2Fega-archive.org%2Fdatasets%2FEGAD00000000001" target="_blank">SMV</a>)</p>
   </div>
 </div>
 
