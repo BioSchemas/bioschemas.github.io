@@ -56,7 +56,7 @@ bioschemas:
 
 ## 1. Define your strategy
 
-If your resource involves more than one profile, you first need to define the strategy that best suits your case. You can link a resource of one type, let's say `DataCatalog`, to other related ones, let's say `Dataset`, via properties, e.g. `schema:dataset` for this case. Sometimes those properties are bidirectional, so you can go from `DataCatalog` to `Dataset` or the other way around. Which direction suits you best?
+If your resource involves more than one profile, you first need to define the strategy that best suits your case. You can link a resource of one type, let's say `DataCatalog`, to other related ones, let's say `Dataset`, via properties, e.g. `dataset` for this case. Sometimes those properties are bidirectional, so you can go from `DataCatalog` to `Dataset` or the other way around. Which direction suits you best?
 
 <div class="col d-flex align-items-start rounded p-4 mb-4 mt-3 shadow">
   <img class="align-self-center me-3" src="{{ '/tutorials/images/information_mark.png' | relative_url }}" alt="information">
@@ -132,7 +132,6 @@ If your page is not too big, you can also choose to have the JSON-LD at the begi
 
 ### 4. JSON-LD special characters
 
-JSON-LD, as any other computational format, has some special characters. For example, property keys as well as property String values can be enclosed with either single or double quotations; quotation marks are therefore seen as special characters (i.e., they have a special meaning as part of the format specification and will be parsed by tools accordingly). Here you can see a key (name) - value (Bioschemas) pair, notice how the key and the value are surrounded by double quotes: `"name": "Bioschemas"`. 
+JSON-LD, as any other computational format, has some special characters. For example, property keys as well as property String values can be enclosed with either single or double quotations; quotation marks are therefore seen as special characters (i.e., they have a special meaning as part of the format specification and will be parsed by tools accordingly). Here you can see a key (name) - value (Bioschemas) pair, notice how the key and the value are surrounded by double quotes: `"name": "Bioschemas"`.
 
-If you want to include any of those special characters in either a key or a value, you will need to escape them by adding a `\` before the character; for instance: `"name": "\"Bioschemas\", schemas for Life Sciences"` will result in the key _name_ having the value _"Bioschemas", schemas for Life Sciences_ (we use here italics to make it easier to read). A special case is the `\` itself; if you need to use it, you should escape it as `\\` 
-
+If you want to include any of those special characters in either a key or a value, you will need to escape them by adding a `\` before the character; for instance: `"name": "\"Bioschemas\", schemas for Life Sciences"` will result in the key _name_ having the value _"Bioschemas", schemas for Life Sciences_ (we use here italics to make it easier to read). A special case is the `\` itself; if you need to use it, you should escape it as `\\`
