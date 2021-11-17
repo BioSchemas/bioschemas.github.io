@@ -56,7 +56,7 @@ bioschemas:
 
 ## 1. Define your strategy
 
-If your resource involves more than one profile, you first need to define the strategy that best suits your case. You can link a resource of one type, let's say `DataCatalog`, to other related ones, let's say `Dataset`, via properties, e.g. `dataset` for this case. Sometimes those properties are bidirectional, so you can go from `DataCatalog` to `Dataset` or the other way around. Which direction suits you best?
+If your resource involves more than one profile, you first need to define the strategy that best suits your case. You can link a resource of one type, let's say [`DataCatalog`](https://schema.org/DataCatalog), to other related ones, let's say [`Dataset`](https://schema.org/Dataset), via properties, e.g. [`dataset`](https://schema.org/dataset) for this case. Some properties have inverses, e.g. [`includedInDataCatalog`](https://schema.org/includedInDataCatalog), so you can go from [`DataCatalog`](https://schema.org/DataCatalog) to [`Dataset`](https://schema.org/Dataset). You can choose which direction suits you best.
 
 <div class="col d-flex align-items-start rounded p-4 mb-4 mt-3 shadow">
   <img class="align-self-center me-3" src="{{ '/tutorials/images/information_mark.png' | relative_url }}" alt="information">
