@@ -79,19 +79,19 @@ Now that you have identified those elements on your web page that you want to ma
 
 ### 3.1. Formats
 
-As discussed on the introduction to Schema.org, there are [multiple formats](/tutorials/what_why_schema#3-schemaorg-formats) that can be used to add structured markup to web pages. Bioschemas (and Schema.org) recommends JSON-LD so we will use that in the following examples.
+As discussed on the [introduction to Schema.org](/tutorials/what_why_schema), there are [multiple formats](/tutorials/what_why_schema#3-schemaorg-formats) that can be used to add structured markup to web pages. Bioschemas (and Schema.org) recommends JSON-LD so we will use that in the following examples.
 
 ### 3.2. Include standard properties
 
-There are three properties that should always be included, these are:
-* @context --so it is clear what schema you are using
-* @type --so it is clear what the type of thing you are describing
-* @id --so it is clear what the identifier of the thing you are describing is
-* dct:conformsTo --so it is clear what Bioschemas profile version you adhere to
+There are four properties that should always be included, these are:
+* `@context` --so it is clear what schema you are using
+* `@type` --so it is clear what the type of thing you are describing
+* `@id` --so it is clear what the identifier of the thing you are describing is
+* `dct:conformsTo` --so it is clear what Bioschemas profile version you adhere to (note that you need to use the full IRI of the property, i.e. `http://purl.org/dc/terms/conformsTo`)
 
-For instance, if you are describing a [`DataCatalog`](https://schema.org/DataCatalog), you should include the standards properties at the beginning of the markup as follows:
+For instance, if you are describing a [`DataCatalog`](https://schema.org/DataCatalog), the beginning of your markup would look something like:
 
-```
+```json
 {
   "@context": "https://schema.org/",
   "@type": "DataCatalog",
@@ -104,13 +104,13 @@ For instance, if you are describing a [`DataCatalog`](https://schema.org/DataCat
 }
 ```
 
-### 3.3. How add the markup
+### 3.3. Markup the properties of your page
 
 Here we have two possibilities: manually or automatically adding the markup.
 
-Depending on how the data is rendered on your website, there might be a production pipeline behind your web pages. If this is the case, web developers will decide the best way to programmatically add the Bioschemas markup. This is commonly the case for registries/repositories or data/knowledge bases. For instance, the [Ensembl Genome Browser](https://www.ensembl.org) provides information on genomes and has integrated the Bioschemas markup to their production pipeline. Thus, whenever you visit an Ensembl gene page you get not only the HTML but also the JSON-LD embedded within it.
+Depending on how the data is rendered on your website, there might be a production pipeline behind your web pages. If this is the case, web developers will decide the best way to programmatically add the Bioschemas markup. This is commonly the case for registries/repositories or data/knowledge bases. For instance, the [Ensembl Genome Browser](https://www.ensembl.org) provides information on genomes and has integrated the Bioschemas markup to their production pipeline. Thus, whenever you visit an Ensembl gene page you get not only the HTML but also the JSON-LD embedded within it, e.g. [ensembl:ENSG00000139618](https://www.ensembl.org/id/ENSG00000139618) ([SMV](https://validator.schema.org/#url=https%3A%2F%2Fwww.ensembl.org%2Fid%2FENSG00000139618)).
 
-For websites without a production pipeline behind, those where you manually edit the HTML yourself, you will have to add the markup by hand. For instance, if you organize a half-day workshop with less than 10 accepted papers, you could add the corresponding markup by hand. This is the case for the [Research Objects Management for Linked Open Science Workshop](https://zbmed.github.io/damalos) which includes bibliographic markup for the [submissions on 2020](https://zbmed.github.io/damalos/docs/2020.html). The workshop web page is based on GitHub pages and the markup for the publications was manually added at the end of the corresponding [MarkDown document](https://github.com/zbmed/damalos/blob/master/docs/2020.md).
+For websites without a production pipeline behind, those where you manually edit the HTML yourself, you will have to add the markup by hand. For instance, if you organize a half-day workshop with less than 10 accepted papers, you could add the corresponding markup by hand. This is the case for the [Research Objects Management for Linked Open Science Workshop](https://zbmed.github.io/damalos) which includes bibliographic markup for the [submissions on 2020](https://zbmed.github.io/damalos/docs/2020.html) ([SMV](https://validator.schema.org/#url=https%3A%2F%2Fzbmed.github.io%2Fdamalos%2Fdocs%2F2020.html)). The workshop web page is based on GitHub pages and the markup for the publications was manually added at the end of the corresponding [MarkDown document](https://github.com/zbmed/damalos/blob/master/docs/2020.md).
 
 ### 3.4. Where to add the markup
 
@@ -124,7 +124,7 @@ This summary corresponds to a two-colum ```<div>``` used to show the name, CCDS,
 
 {% include image.html file="/tutorials/images/brca_gene_html.png" caption="Figure 2: Code corresponding to the BRCA2 gene summary" alt="Code corresponding to the BRCA2 gene summary" %}
 
-If you want to include only one ```<script type="application/ld+json">``` with all the markup relevant to your page, a common option is adding the JSON-LD at the end of the HTML code so it will not interfere with the rendering of the page.
+If you want to include only one ```<script type="application/ld+json">``` with all the markup relevant to your page, a common option is adding the JSON-LD at the end of the HTML code so it will not interfere with the rendering of the page. _Just make sure that it is before the closing `</html>` tag!_
 
 If your page is not too big, you can also choose to have the JSON-LD at the beginning of the HTML code as part of the ```<head>```. This is the way used for Bioschemas how-to pages as shown in Figure 3 where the JSON-LD is highlighted in blue.
 
@@ -132,6 +132,6 @@ If your page is not too big, you can also choose to have the JSON-LD at the begi
 
 ### 4. JSON-LD special characters
 
-JSON-LD, as any other computational format, has some special characters. For example, property keys as well as property String values can be enclosed with either single or double quotations; quotation marks are therefore seen as special characters (i.e., they have a special meaning as part of the format specification and will be parsed by tools accordingly). Here you can see a key (name) - value (Bioschemas) pair, notice how the key and the value are surrounded by double quotes: `"name": "Bioschemas"`.
+JSON-LD, as any other computational format, has some special characters. For example, property keys as well as property string values can be enclosed with either single or double quotations; quotation marks are therefore seen as special characters (i.e., they have a special meaning as part of the format specification and will be parsed by tools accordingly). Here you can see a key (name) - value (Bioschemas) pair, notice how the key and the value are surrounded by double quotes: `"name": "Bioschemas"`.
 
-If you want to include any of those special characters in either a key or a value, you will need to escape them by adding a `\` before the character; for instance: `"name": "\"Bioschemas\", schemas for Life Sciences"` will result in the key _name_ having the value _"Bioschemas", schemas for Life Sciences_ (we use here italics to make it easier to read). A special case is the `\` itself; if you need to use it, you should escape it as `\\`
+If you want to include any of those special characters in either a key or a value, you will need to escape them by adding a `\` before the character; for instance: `"name": "\"Bioschemas\", schemas for Life Sciences"` will result in the key _name_ having the value _"Bioschemas", schemas for Life Sciences_ (we use here italics to make it easier to read). A special case is the `\` itself; if you need to use it, you should escape it as `\\`. For example, this is the case with the [`smiles`](https://schema.org/smiles) property.
