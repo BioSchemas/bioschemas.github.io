@@ -780,7 +780,7 @@
     "nodes": "IT",
     "sitemap": "https://disprot.org/sitemap.xml",
     "profiles":
-    [
+      [
         {
             "profileName": "Protein",
             "conformsTo": "0.11",
@@ -809,7 +809,52 @@
             "exampleURL": "https://disprot.org/DP00086r026",
             "highlight": "3.5k protein regions"
         }
-    ]
+      ]
+    },
+    {
+    "name": "Protein Ensemble (PED)",
+    "description": "The Protein Ensemble Database (PED) is an open access database for the deposition of structural ensembles, including intrinsically disordered proteins (IDPs). Manually curated data of structural ensembles measured with nuclear magnetic resonance spectroscopy, small-angle X-ray scattering, fluorescence resonance energy transfer are annotated in PED. The deposition of structural coordinates can be used for the evaluation of the ensembles, thus supporting the evolution of new modeling methods leading to much improved skills of connecting the characteristic \"lack of structure\" of IDPs with function. Each entry in PED corresponds to the primary experimental data and to the structural ensembles associated with these data.",
+    "url": "https://proteinensemble.org/",
+    "nodes": "IT",
+    "sitemap": "https://proteinensemble.org/sitemap.xml",
+    "profiles":
+      [
+        {
+            "profileName": "Protein",
+            "conformsTo": "0.11",
+            "exampleURL": "https://proteinensemble.org/PED00014"
+        },
+        {
+            "profileName": "Dataset",
+            "conformsTo": "0.3",
+            "exampleURL": "https://proteinensemble.org/"
+        },
+        {
+            "profileName": "DataCatalog",
+            "conformsTo": "0.3",
+            "exampleURL": "https://proteinensemble.org/"
+        },
+        {
+            "profileName": "ScholarlyArticle",
+            "conformsTo": "0.2-DRAFT",
+            "exampleURL": "https://proteinensemble.org/"
+        },
+        {
+            "profileName": "Organization",
+            "conformsTo": "0.2-DRAFT",
+            "exampleURL": "https://proteinensemble.org/"
+        },
+        {
+            "profileName": "SequenceAnnotation",
+            "conformsTo": "0.6-DRAFT",
+            "exampleURL": "https://proteinensemble.org/PED00014"
+        },
+        {
+            "profileName": "SequenceRange",
+            "conformsTo": "0.1-DRAFT",
+            "exampleURL": "https://proteinensemble.org/PED00014"
+        }
+      ]
     },
     {
       "name": "UniProt",
