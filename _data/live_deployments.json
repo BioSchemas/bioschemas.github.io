@@ -1372,6 +1372,26 @@
           "highlight": "Over 750k pages"
         }
       ]
+    },
+    {
+      "name": "DaMaLOS",
+      "description": "DaMaLOS is a workshop about Research data and objects management for Linked Open Science, running since 2020 and co-located with ISWC",
+      "url": "https://zbmed.github.io/damalos/",
+      "sitemap": "https://zbmed.github.io/damalos/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3-RELEASE-2019_06_14",
+          "exampleURL": "https://zbmed.github.io/damalos/",
+          "highlight": "DaMaLOS workshop proceedings since 2020"
+        },
+        {
+          "profileName": "ScholarlyArticle",
+          "conformsTo": "0.2-DRAFT-2020_12_03",
+          "exampleURL": "https://zbmed.github.io/damalos/docs/2020.html",
+          "highlight": "DaMaLOS 2020 workshop proceedings"
+        }
+      ]
     }
   ]
 }
