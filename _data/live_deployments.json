@@ -1310,6 +1310,31 @@
       ]
     },
     {
+      "name": "MetaNetX",
+      "description": "Automated model construction and genome annotation for large-scale metabolic networks",
+      "url": "https://www.metanetx.org/",
+      "nodes": "CH",
+      "sitemap": "https://www.metanetx.org/sitemap.xml",
+      "profiles": [
+                {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3-RELEASE",
+          "exampleURL": "https://www.metanetx.org/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.4-DRAFT",
+          "exampleURL": "https://www.metanetx.org/ftp/"
+        },
+        {
+          "profileName": "MolecularEntity",
+          "conformsTo": "0.5-RELEASE",
+          "exampleURL": "https://www.metanetx.org/chem_info/MNXM680",
+          "highlight": "Over 1M chemical compound pages"
+        }
+      ]
+    },
+    {
       "name": "Bioversions",
       "url": "https://biopragmatics.github.io/bioversions/",
       "sitemap": "https://biopragmatics.github.io/bioversions/sitemap.xml",
