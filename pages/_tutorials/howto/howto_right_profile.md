@@ -95,9 +95,9 @@ If your resource provides data and you can easily identify a common entity type 
 
 ### 3.3. MolecularEntity
 
-When your webpages describe molecules then you can identify them with the [MolecularEntity](/specifications/MolecularEntity) profile. This profile allows you to give details on every molecule separately, unlike with Dataset which describes normally many molecules. The [MolecularEntity](/specifications/MolecularEntity) allows you to specify molecule-specific information like an InChI or InChIKey, IUPAC name, molecular formula, and even the SMILES line notation for the molecule.
+When your webpages describe molecules then you can identify them with the [MolecularEntity](/profiles/MolecularEntity) profile. This profile allows you to give details on every molecule separately, unlike with Dataset which describes normally many molecules. The [MolecularEntity](/profiles/MolecularEntity) allows you to specify molecule-specific information like an InChI or InChIKey, IUPAC name, molecular formula, and even the SMILES line notation for the molecule.
 
 ### 3.4. ChemicalSubstance
 
-When the chemical is not a well-defined molecule but, for example, a nanomaterial, then you can annoated them with the [ChemicalSubstance](/specifications/ChemicalSubstance) profile. This profile allows you to give details on the identifier of the substance and a chemical composition. The profile inherits properties from [BioChemEntity](/specifications/BioChemEntity), like chemical and biological roles.
+When the chemical is not a well-defined molecule but, for example, a nanomaterial, then you can annoated them with the [ChemicalSubstance](/profiles/ChemicalSubstance) profile. This profile allows you to give details on the identifier of the substance and a chemical composition. The profile inherits properties from [BioChemEntity](/types/BioChemEntity), like chemical and biological roles.
 
