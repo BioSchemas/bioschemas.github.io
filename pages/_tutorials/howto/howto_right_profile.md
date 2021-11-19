@@ -39,7 +39,11 @@ bioschemas:
     name: "Franck Michel"
     "@id": https://bioschemas.org/people/FranckMichel
     url: https://bioschemas.org/people/FranckMichel/    
-  dateModified: 2021-07-22
+  - "@type": Person
+    name: "Egon Willighagen"
+    "@id": https://bioschemas.org/people/EgonWillighagen
+    url: https://bioschemas.org/people/EgonWillighagen    
+  dateModified: 2021-11-06
   description: "In this how-to, we will guide you through the necessary steps for you to select a Bioschemas profile that will be later used to add mark up to your own resources"
   keywords: "schemaorg, markup, structured data, bioschemas profile"
   license: CC-BY 4.0
@@ -88,3 +92,12 @@ Also known as data repository, a data catalog commonly aggregates more than one 
 ### 3.2. Dataset
 
 If your resource provides data and you can easily identify a common entity type for all the data contained in it, you should probably go for a [Dataset](/specifications/Dataset) profile. Let's clarify what we mean by "common type". Let's suppose you have chemical compounds including drugs, proteins and cells. If you see them all as the same thing, chemical compound, you have one [Dataset](/specifications/Dataset), and you have found the right profile for you. However, if you actually distinguish drugs from proteins from cells and so, and (maybe even) tailor the information provided for each case, you have a data catalog and multiple datasets, you should use both, one DataCatalog and multiple [Datasets](/specifications/Dataset).
+
+### 3.3. MolecularEntity
+
+When your webpages describe molecules then you can identify them with the [MolecularEntity](/profiles/MolecularEntity) profile. This profile allows you to give details on every molecule separately, unlike with Dataset which describes normally many molecules. The [MolecularEntity](/profiles/MolecularEntity) allows you to specify molecule-specific information like an InChI or InChIKey, IUPAC name, molecular formula, and even the SMILES line notation for the molecule.
+
+### 3.4. ChemicalSubstance
+
+When the chemical is not a well-defined molecule but, for example, a nanomaterial, then you can annoated them with the [ChemicalSubstance](/profiles/ChemicalSubstance) profile. This profile allows you to give details on the identifier of the substance and a chemical composition. The profile inherits properties from [BioChemEntity](/types/BioChemEntity), like chemical and biological roles.
+
