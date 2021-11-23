@@ -205,3 +205,10 @@ Media sizing
 .mw-13 {
     max-width: 13em;
 }
+
+iframe {
+    @extend .w-100;
+    @extend .shadow;
+    @extend .rounded;
+}
+
