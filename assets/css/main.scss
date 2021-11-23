@@ -31,6 +31,9 @@ $table-cell-padding-y: 0.7rem;
 $table-hover-bg-factor: 0.075;
 $table-hover-bg: rgba($bioschemas-base-color, $table-hover-bg-factor);
 $box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+$container-max-widths: (
+  xxl: 1141px
+) !default;
 
 @import "bootstrap/bootstrap", "header", "spec-tables", "code-highlight", "community", "landing", "specifications";
 
