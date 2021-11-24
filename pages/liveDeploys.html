@@ -88,7 +88,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                         <h4>Implemented Profiles</h4>
                         {%- assign sortedProfiles = resource.profiles | sort: "profileName" %}
                         {%- for profile in sortedProfiles %}
-                        <div class="d-flex p-1 align-content-center list-group-item-action rounded">
+                        <div class="d-flex p-1 align-content-center align-items-center list-group-item-action rounded">
                             <div class="w-100 py-2">
                                 {%- assign profileName = '/profiles/' | append: profile.profileName %}
                                 <a class="me-2" href="{{ profileName | relative_url }}">{{profile.profileName}}</a> <span class="badge bg-dark text-light me-2">v{{profile.conformsTo}}</span>
@@ -98,17 +98,17 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                             </div>
                             {%- if profile.exampleURL != nil %}
                             <div class="ps-1">
-                                <a href="{{profile.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.exampleHoverText}}" class="btn btn-primary" target="_blank">Page</a>
+                                <a href="{{profile.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.exampleHoverText}}" class="btn btn-sm btn-primary" target="_blank">Page</a>
                             </div>
                             {%- endif %}
                             {%- if profile.exampleURL != nil %}
                             <div class="ps-1">
-                                <a href="https://validator.schema.org/#url={{profile.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.schemaHoverText}}" class="btn btn-primary" target="_blank">SMV</a>
+                                <a href="https://validator.schema.org/#url={{profile.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.schemaHoverText}}" class="btn btn-sm btn-primary" target="_blank">SMV</a>
                             </div>
                             {%- endif %}
                             {%- if profile.exampleURL != nil %}
                             <div class="ps-1">
-                                <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{profile.exampleURL}}&output=jsonld" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.bmuseHoverText}}" class="btn btn-primary" target="_blank">BMUSE</a>
+                                <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{profile.exampleURL}}&output=jsonld" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.bmuseHoverText}}" class="btn btn-sm btn-primary" target="_blank">BMUSE</a>
                             </div>
                             {%- endif %}
                         </div>
@@ -155,7 +155,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                     <div class="accordion-body">
                         {%- assign live_sorted_list = profile.items | sort: 'name' %}
                         {%- for live in live_sorted_list %}
-                        <div class="d-flex p-1 align-content-center list-group-item-action rounded">
+                        <div class="d-flex p-1 align-content-center align-items-center list-group-item-action rounded">
                             <div class="w-100 py-2">
                                 <!-- TODO: Connect back to site information -->
                                 <!-- {% if live.resource_URL != nil %}
@@ -171,17 +171,17 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                             </div>
                             {%- if live.exampleURL != nil %}
                             <div class="ps-1">
-                                <a href="{{live.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.exampleHoverText}}" class="btn btn-primary" target="_blank">Page</a>
+                                <a href="{{live.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.exampleHoverText}}" class="btn btn-sm btn-primary" target="_blank">Page</a>
                             </div>
                             {%- endif %}
                             {%- if live.exampleURL != nil %}
                             <div class="ps-1">
-                                <a href="https://validator.schema.org/#url={{live.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.schemaHoverText}}" class="btn btn-primary" target="_blank">SMV</a>
+                                <a href="https://validator.schema.org/#url={{live.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.schemaHoverText}}" class="btn btn-sm btn-primary" target="_blank">SMV</a>
                             </div>
                             {%- endif %}
                             {%- if live.exampleURL != nil %}
                             <div class="ps-1">
-                                <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{live.exampleURL}}&output=jsonld" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.bmuseHoverText}}" class="btn btn-primary" target="_blank">BMUSE</a>
+                                <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{live.exampleURL}}&output=jsonld" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.bmuseHoverText}}" class="btn btn-sm btn-primary" target="_blank">BMUSE</a>
                             </div>
                             {%- endif %}
                         </div>
@@ -296,7 +296,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                                         <h4>Implemented Profiles</h4>
                                         {%- assign sortedProfiles = resource.profiles | sort: "profileName" %}
                                         {%- for profile in sortedProfiles %}
-                                        <div class="d-flex p-1 align-content-center list-group-item-action rounded">
+                                        <div class="d-flex p-1 align-content-center align-items-center list-group-item-action rounded">
                                             <div class="w-100 py-2">
                                                 {%- assign profileName = '/profiles/' | append: profile.profileName %}
                                                 <a class="me-2" href="{{ profileName | relative_url }}">{{ profile.profileName}}</a> <span class="badge bg-dark text-light me-2">v{{profile.conformsTo}}</span>
@@ -306,17 +306,17 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                                             </div>
                                             {%- if profile.exampleURL != nil %}
                                             <div class="ps-1">
-                                                <a href="{{profile.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.exampleHoverText}}" class="btn btn-primary" target="_blank">Page</a>
+                                                <a href="{{profile.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.exampleHoverText}}" class="btn btn-sm btn-primary" target="_blank">Page</a>
                                             </div>
                                             {%- endif %}
                                             {%- if profile.exampleURL != nil %}
                                             <div class="ps-1">
-                                                <a href="https://validator.schema.org/#url={{profile.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.schemaHoverText}}" class="btn btn-primary" target="_blank">SMV</a>
+                                                <a href="https://validator.schema.org/#url={{profile.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.schemaHoverText}}" class="btn btn-sm btn-primary" target="_blank">SMV</a>
                                             </div>
                                             {%- endif %}
                                             {%- if profile.exampleURL != nil %}
                                             <div class="ps-1">
-                                                <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{profile.exampleURL}}&output=jsonld" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.bmuseHoverText}}" class="btn btn-primary" target="_blank">BMUSE</a>
+                                                <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{profile.exampleURL}}&output=jsonld" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.bmuseHoverText}}" class="btn btn-sm btn-primary" target="_blank">BMUSE</a>
                                             </div>
                                             {%- endif %}
                                         </div>
