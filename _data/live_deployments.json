@@ -1396,12 +1396,11 @@
     {
       "name": "RDMkit",
       "description": "Find the answers to your Research Data Management questions in Life Sciences.",
-      "keywords": ["RDM", "research data management", "dmp", "data life cycle", "guide"],
       "url": "https://rdmkit.elixir-europe.org/",
       "sitemap": "https://rdmkit.elixir-europe.org/sitemap.xml",
       "profiles": [
         {
-          "profileName": "Person",
+          "profileName": ["Person"],
           "conformsTo": "0.2-DRAFT-2019_07_19",
           "exampleURL": "https://rdmkit.elixir-europe.org/human_data.html"
         }
