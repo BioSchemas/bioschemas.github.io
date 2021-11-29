@@ -1400,7 +1400,7 @@
       "sitemap": "https://rdmkit.elixir-europe.org/sitemap.xml",
       "profiles": [
         {
-          "profileName": ["Person"],
+          "profileName": "Person",
           "conformsTo": "0.2-DRAFT-2019_07_19",
           "exampleURL": "https://rdmkit.elixir-europe.org/human_data.html"
         }
