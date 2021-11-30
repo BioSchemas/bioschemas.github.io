@@ -34,4 +34,6 @@ Our primary hackathon topic will be on 	[Facilitating life science metadata cura
 
 The embedded slides below contain the project reports from day 1 and day 3 of the BioHackathon.
 
+<div class="ratio ratio-16x9">
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQS9JiUk2J149Xdgrk9S98XfzkPBI0v_VO9h9f7GoIKiZeQt_46-1_TTytupnqe0OO8urWoqLomWTWa/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
