@@ -13,7 +13,7 @@ contact-people:
     - FranckMichel
 ---
 
-<div class="ratio ratio-16x9">
+<div class="ratio ratio-16x9 mw-600">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/ueg5Fi6kgGA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 - [Slides](https://docs.google.com/presentation/d/1YDI8cxAoHsF3kbHFPerUyoJi8lwWF1fU/)
