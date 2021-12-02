@@ -36,16 +36,18 @@ layout: default
 {{ content }}
 
 {% if page.attendees %}
-<strong>Attendees:</strong>
-<ul>
-  {% for attendee-name in page.attendees %}
-  {% assign attendee-id = "/people/" | append: attendee-name %}
-  {% assign attendee = site.people | where:"id", attendee-id | first %}
-  {% if attendee %}
-  <li><a href="{{ attendee.url }}">{{attendee.first-name}} {{attendee.last-name}}</a></li>
-  {% else %}
-  <li>{{attendee-name}}</li>
-  {% endif %}
-  {% endfor %}
-</ul>
+<div class="my-4">
+  <strong>Attendees:</strong>
+  <ul>
+    {% for attendee-name in page.attendees %}
+    {% assign attendee-id = "/people/" | append: attendee-name %}
+    {% assign attendee = site.people | where:"id", attendee-id | first %}
+    {% if attendee %}
+    <li><a href="{{ attendee.url }}">{{attendee.first-name}} {{attendee.last-name}}</a></li>
+    {% else %}
+    <li>{{attendee-name}}</li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
 {% endif %}
