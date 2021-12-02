@@ -231,35 +231,34 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
 
         <div class="accordion">
             {%- assign node_count = 0 %}
-            {%- assign nodes = liveDeploys | group_by: 'nodes' | sort_natural: 'name' %}
-            {%- for node in nodes %}
-            {%- if node.name != '' %}
-            <!-- Convert array of nodes into single string to enable expansion/collapse of table rows -->
-            {% assign nodeName = node.name | remove: '[' | remove: ']' | remove: '"' | replace: ', ', '-' %}
+            {%- assign elixir-nodes = site.data.live_deployments_schema.definitions.elixirNodes.enum | sort %}
+            {%- for cnode in elixir-nodes %}
+            {%- assign node_array = '' | split: '' %}
+            {%- assign resources = liveDeploys | where:"nodes", cnode | sort_natural: 'name' %}
             <div class="accordion-item">
-                <h2 class="accordion-header pt-0" id="node_heading{{node_count}}">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#node_collapse{{node_count}}" aria-controls="node_collapse{{node_count}}">
+                <h2 class="accordion-header pt-0" id="node_heading{{cnode}}">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#node_collapse{{cnode}}" aria-controls="node_collapse{{cnode}}">
                         <div class="d-flex w-100 align-items-center">
-                            <div class="text-nowrap"><strong>Sites: {{node.size}}</strong></div>
-                            <div class="w-100 text-center fs-5">{{nodeName}}</div>
+                            <div class="text-nowrap"><strong>Sites: {{resources.size}}</strong></div>
+                            <div class="w-100 text-center fs-5">{{cnode}}</div>
                         </div>
                     </button>
                 </h2>
-                <div id="node_collapse{{node_count}}" class="accordion-collapse collapse" aria-labelledby="node_heading{{node_count}}">
+                <div id="node_collapse{{cnode}}" class="accordion-collapse collapse" aria-labelledby="node_heading{{cnode}}">
                     <div class="accordion-body">
                         <div class="accordion">
                             {%- assign node_resource_count = 0 %}
-                            {%- for resource in node.items %}
+                            {%- for resource in resources %}
                             <div class="accordion-item">
-                                <h2 class="accordion-header pt-0" id="node_resource_heading{{node_count}}_{{node_resource_count}}">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#node_resource_collapse{{node_count}}_{{node_resource_count}}" aria-controls="node_resource_collapse{{node_count}}_{{node_resource_count}}">
+                                <h2 class="accordion-header pt-0" id="node_resource_heading{{cnode}}_{{node_resource_count}}">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#node_resource_collapse{{cnode}}_{{node_resource_count}}" aria-controls="node_resource_collapse{{cnode}}_{{node_resource_count}}">
                                         <div class="d-flex w-100 ">
                                             <div class="text-nowrap"><strong>Profiles: {{resource.profiles | size}}</strong></div>
                                             <div class="w-100 text-center">{{resource.name}}<a href="{{resource.url}}" target="_blank"> <i class="fas fa-external-link-alt"></i></a></div>
                                         </div>
                                     </button>
                                 </h2>
-                                <div id="node_resource_collapse{{node_count}}_{{node_resource_count}}" class="accordion-collapse collapse" aria-labelledby="node_resource_heading{{node_count}}_{{node_resource_count}}">
+                                <div id="node_resource_collapse{{cnode}}_{{node_resource_count}}" class="accordion-collapse collapse" aria-labelledby="node_resource_heading{{cnode}}_{{node_resource_count}}">
                                     <div class="accordion-body">
                                         {%- if resource.keywords or resource.description or resource.sitemap or resource.nodes %}
                                         <ul>
@@ -330,8 +329,6 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                     </div>
                 </div>
             </div>
-            {%- endif %}
-            {%- assign node_count = node_count | plus: 1 %}
             {%- endfor %}
         </div>
     </div>
