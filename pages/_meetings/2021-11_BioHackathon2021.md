@@ -20,6 +20,7 @@ attendees:
   - NickJuty
   - GingerTsueng
   - AlanWilliams
+  - IvanMicetic
 ---
 
 - [Hackathon Repository](https://github.com/elixir-europe/bioHackathon-projects-2021/tree/main/projects/29)
