@@ -69,7 +69,7 @@
             <img src="{{ '/images/live_deploy.svg' | relative_url }}" alt="View Bioschemas {{ spec.spec_info.title }} Examples" style="filter: grayscale(100%);">
             </a>
             {% else %}
-            <a href="{{spec.live_deploy}}">
+            <a href="{{spec.live_deploy | append: '#nav-profile?row=' | append: spec.name}}">
             <img src="{{ '/images/live_deploy.svg' | relative_url }}" alt="View Bioschemas {{ spec.spec_info.title }} Examples">
             </a>
             {% endif %}
