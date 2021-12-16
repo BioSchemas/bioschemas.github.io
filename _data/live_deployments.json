@@ -1430,6 +1430,34 @@
           "exampleURL": "https://rdmkit.elixir-europe.org/human_data.html"
         }
       ]
+    },
+    {
+      "name": "hPSCreg: Human Pluripotent Stem Cell Registry",
+      "description": "hPSCreg® is a freely accessible global registry for human pluripotent stem cell lines (hPSC lines). The registry allows searching for cell lines and for information available about these cell lines. New cell lines can be registered and information to already registered cell lines can be added.",
+      "url": "https://hpscreg.eu/",
+      "sitemap": "https://hpscreg.eu/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "BioSample",
+          "conformsTo": "0.1-DRAFT",
+          "exampleURL": "https://hpscreg.eu/cell-line/AAKIPSi001-A",
+          "highlight": "Over 3,700 cell lines"
+        }
+      ]
+    },
+    {
+      "name": "EBiSC: European Bank for Induced pluripotent Stem Cells",
+      "description": "The European Bank for induced Pluripotent Stem Cells (EBiSC) is a not-for-profit hiPSC repository which collects, banks and distributes quality-assured and ethically sourced, disease relevant, research-grade hiPSC lines and data to academic and commercial researchers worldwide.",
+      "url": "https://ebisc.org/",
+      "sitemap": "https://ebisc.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "BioSample",
+          "conformsTo": "0.1-DRAFT",
+          "exampleURL": "https://cells.ebisc.org/BIHi009-A",
+          "highlight": "900 cell lines"
+        }
+      ]
     }
   ]
 }
