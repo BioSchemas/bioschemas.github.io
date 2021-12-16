@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Deployment of BioSample Profile by EBISC"
+title: "Deployment of BioSample Profile by hPSCreg"
 tags:
 - Deployment
 - BioSample
