@@ -1440,7 +1440,7 @@
         {
           "profileName": "BioSample",
           "conformsTo": "0.1-DRAFT",
-          "exampleURL": "https://hpscreg.eu/cell-line/AAKIPSi001-A",
+          "exampleURL": "https://hpscreg.eu/cell-line/BIHi006-D",
           "highlight": "Over 3,700 cell lines"
         }
       ]
@@ -1454,7 +1454,7 @@
         {
           "profileName": "BioSample",
           "conformsTo": "0.1-DRAFT",
-          "exampleURL": "https://cells.ebisc.org/BIHi009-A",
+          "exampleURL": "https://cells.ebisc.org/BIHi006-D",
           "highlight": "900 cell lines"
         }
       ]
