@@ -1121,6 +1121,7 @@
         "FR",
         "ES"
       ],
+      "sitemap": "https://bio.tools/api/sitemap.xml",
       "profiles": [
         {
           "profileName": "ComputationalTool",
