@@ -1201,6 +1201,7 @@
       "name": "Bioschemas",
       "url": "https://bioschemas.org/",
       "nodes": ["UK","BE","CH","EBI","ES","FR","Hub","IT","NL","NO","PT","SE"],
+      "sitemap": "https://bioschemas.org/sitemap.xml",
       "profiles": [
         {
           "profileName": "TrainingMaterial",
