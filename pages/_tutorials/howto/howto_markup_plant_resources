@@ -1,0 +1,19 @@
+<div class="col d-flex align-items-start rounded p-4 mb-4 mt-3 shadow">
+  <img class="align-self-center me-3" src="{{ '/tutorials/images/exclamation_mark.png' | relative_url }}" alt="warning">
+  <div>
+      This tutorial complements the tutorials <a href="./howto_right_profile">how to select the right profile for your resource</a> and
+      <a href="./howto_add_markup>how to mark up your own resource with Bioschemas</a> for resources from the plant sciences, so please
+      check these tutorial first.
+  </div>
+</div> 
+
+
+## 1. Profiles relevant for the plant sciences
+- The [DataCatalog](https://schema.org/DataCatalog) profile should be used to markup the data portal/repository itself.
+- The [Dataset](https://schema.org/Dataset) profile should be used to markup plant phenotyping, genotyping or omics datasets, in accordance with the MIAPPE-BioSchemas mapping provided below.
+- The [Taxon](https://bioschemas.org/Taxon) profile is critical for the taxonomic identification of the subject of the data resources, down to the variety level if applicable, as this is key for findability.
+- The [BioChemEntity](https://bioschemas.org/BioChemEntity) profile should be used for identifying the biological material below the taxonomic level, namely when it can be traced to a specific germplasm, seed lot or genotype.
+- For plant omic resources, the key profiles are evidently [Gene](https://bioschemas.org/Gene), [RNA](https://bioschemas.org/RNA) and [Protein](https://bioschemas.org/Protein), but [Sample](https://bioschemas.org/Sample) may also be useful.
+
+## 2. MIAPPE-BioSchemas mapping
+
