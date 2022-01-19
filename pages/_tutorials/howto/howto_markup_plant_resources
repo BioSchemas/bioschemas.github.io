@@ -45,18 +45,18 @@ The recommended fields within each profile and their correspondence to MIAPPE fi
 | name	         | Investigation title       |
 | dateCreated    | Submission date           |
 | datePublished	 | Public release date       |
-| description	   | Investigation description |
-| license	       | License                   |
+| description    | Investigation description |
+| license        | License                   |
 | hasPart        | *connect to Study*        |
 
 | Study fields           | MIAPPE fields             |
 |%----------------------%|%-------------------------%|
-| identifier	           | Study unique ID           |
+| identifier             | Study unique ID           |
 | name                   | Study title               |
 | description            | Study description         |
-| startDate	             | startDate                 |
+| startDate              | startDate                 |
 | endDate                | endDate                   |
-| studyDomain	           | N/A                       |
+| studyDomain            | N/A                       |
 | PPEO:hasGrowthFacility | Type of growth facility   |
 | keywords               | Experimental factor type  |
 | studyProcess           | Trait                     |
@@ -83,7 +83,7 @@ For genotyping or omics datasets, studyProcess can be used accordingly to indica
 
 | BioChemEntity fields   | MIAPPE fields        |
 |%----------------------%|%--------------------%|
-| identifier	           | Material source ID   |
+| identifier             | Material source ID   |
 | url                    | Material source DOI  |
 | name                   | N/A                  |
 | taxonomicRange         | *connect to Taxon*   |
