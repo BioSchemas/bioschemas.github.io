@@ -262,7 +262,7 @@ Note the presence of two `SequenceAnnotation` profiles. The first one (lines 30-
 
 Several proteins or other biochemical entities may be represented in a single data record. In case of an ensemble, such a record can be encoded as a list of multiple `Protein` profiles:
 
-{% highlight json linenos %}
+```json
 {
   "mainEntity": {
     "@type": "ItemList",
@@ -275,7 +275,7 @@ Several proteins or other biochemical entities may be represented in a single da
     ]
   }
 }
-{% endhighlight %}
+```
 
 ## Web resource site map
 
