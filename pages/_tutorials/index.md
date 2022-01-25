@@ -44,6 +44,10 @@ The target audience for these how-to guides are _"Specification developers"_.
 - If you want to [create a new profile](./howto/howto_create_new_profile), our _How to_ includes all the information you need to do so.
 - If you need to create a new version of an existing profile then see guide to [updating a profile](./howto/howto_new_profile_version)
 
+## Community-tailored tutorials
+
+Life science communities, in particular ELIXIR communities, offer some tutorials tailored to their own needs. More information can be found on the [community-based tutorials page](./community_tutorials).
+
 ## Feedback
 For feedback, questions and comments, please [create an issue](https://github.com/Bioschemas/specifications/labels/topic%3ATrainingPortal) and label it `topic:Training Portal`.
 
