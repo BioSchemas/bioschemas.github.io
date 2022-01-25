@@ -7,12 +7,12 @@ Previous tutorial:
 {%- endif %}
 {%- if page.previousTutorial and page.nextTutorial %}
 |
-{%- else %}
+{%- elsif page.previousTutorial and page.nextTutorial == blank %}
 </div>
 {%- endif %}
 {%- if page.nextTutorial %}
 {%- unless page.previousTutorial %}
-<div class="text-center py-3 border-top border-bottom">
+<div class="text-center py-3 border-top border-bottom my-3">
 {%- endunless %}
 Next tutorial:
 {%- assign nextTutorial = '/tutorials/' | append: page.nextTutorial.link %}
