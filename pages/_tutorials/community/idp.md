@@ -1,6 +1,34 @@
 ---
 layout: default
 title: Tutorial for marking up IDP community resources
+
+bioschemas:
+  "@context": https://schema.org/
+  "@type": LearningResource
+  "http://purl.org/dc/terms/conformsTo":
+  - "@type": CreativeWork
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/0.9-DRAFT-2020_12_08/"
+  about:
+  - "@id": http://edamontology.org/topic_0089
+  audience:
+  - "@type": Audience
+    name: (Markup provider, Markup consumer) WebMaster
+  name: "How to check your Bioschemas deployment"
+  author:
+  - "@type": Person
+    name: "Alasdair Gray"
+    "@id": https://bioschemas.org/people/AlasdairGray
+    url: https://bioschemas.org/people/AlasdairGray
+  contributor:
+  - "@type": Person
+    name: "Ivan Mi&ccaron;eti&cacute;"
+    "@id": https://bioschemas.org/people/IvanMicetic
+    url: https://bioschemas.org/people/IvanMicetic
+  dateModified: 2022-01-25
+  description: "This tutorial will show you how to mark up IDP community resources using Bioschemas."
+  keywords: "schemaorg, JSON-LD, bioschemas"
+  license: CC-BY 4.0
+  version: 1.1
 ---
 
 # Tutorial for marking up IDP community resources
