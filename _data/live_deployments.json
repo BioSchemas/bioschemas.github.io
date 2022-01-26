@@ -85,6 +85,18 @@
       ]
     },
     {
+      "name": "PathVisio",
+      "url": "https://pathvisio.org/",
+      "nodes": "NL",
+      "profiles": [
+        {
+          "profileName": "ComputationalTool",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://pathvisio.org/"
+        }
+      ]
+    },
+    {
       "name": "EGA",
       "keywords": ["CDR", "DDR"],
       "url": "https://ega-archive.org/",
