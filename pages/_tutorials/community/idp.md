@@ -23,7 +23,7 @@ bioschemas:
     name: "Ivan Mi&ccaron;eti&cacute;"
     "@id": https://bioschemas.org/people/IvanMicetic
     url: https://bioschemas.org/people/IvanMicetic
-  dateModified: 2022-01-24
+  dateModified: 2022-01-25
   description: "In this how-to, we will guide you through the necessary steps in order to get a JSON-LD markup describing your own IDP resource using a Bioschemas profile"
   keywords: "schemaorg, markup, structured data, bioschemas, ELIXIR IDP Community"
   license: CC-BY 4.0
@@ -53,207 +53,207 @@ The three profiles must not be published on all web pages of a resource. Databas
 
 ### `DataCatalog`
 
-```json
-     1	{
-     2	  "@context": "https://schema.org/",
-     3	  "@type": "DataCatalog",
-     4	  "@id": "https://disprot.org/#DataCatalog",
-     5	  "http://purl.org/dc/terms/conformsTo": {
-     6	    "@type": "CreativeWork",
-     7	    "@id": "https://bioschemas.org/profiles/DataCatalog/0.3-RELEASE-2019_07_01"
-     8	  },
-     9	  "sameAs": "https://registry.identifiers.org/registry/disprot",
-    10	  "url": "https://disprot.org/",
-    11	  "identifier": "https://registry.identifiers.org/registry/disprot",
-    12	  "name": "DisProt, The database of intrinsically disordered proteins",
-    13	  "description": "DisProt is a database of…",
-    14	  "datePublished": "2019-09",
-    15	  "dateModified": "2021-08",
-    16	  "citation": {
-    17	    "@type": "ScholarlyArticle",
-    18	    "@id": "https://doi.org/10.1093/nar/gkz975",
-    19	    "name": "DisProt: intrinsic protein disorder annotation in 2020",
-    20	    "url": "https://doi.org/10.1093/nar/gkz975",
-    21	    "sameAs": [
-    22	      "https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkz975/5622715",
-    23	      "https://pubmed.ncbi.nlm.nih.gov/31713636/"
-    24	    ]
-    25	  },
-    26	  "keywords": [
-    27	    "IDP",
-    28	    "IDPs",
-    29	    … 
-    30	  ],
-    31	  "sourceOrganization": [
-    32	    {
-    33	      "@type": "Organization",
-    34	      "@id": "https://biocomputingup.it/#Organization",
-    35	      "http://purl.org/dc/terms/conformsTo": {
-    36	        "@id": "https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19",
-    37	        "@type": "CreativeWork"
-    38	      },
-    39	      "description": "University of Padua, Department of …",
-    40	      "name": "BioComputing UP, Department of …",
-    41	      "legalName": "University of Padua",
-    42	      "sameAs": "https://biocomputingup.it"
-    43	    }
-    44	  ],
-    45	  "provider": [
-    46	    {
-    47	      "@type": "Person",
-    48	      "givenName": "Silvio",
-    49	      "familyName": "Tosatto",
-    50	      "identifier": "https://orcid.org/0000-0003-4525-7793",
-    51	      "name": "Silvio Tosatto",
-    52	      "email": "user@domain.org",
-    53	      "url": "https://biocomputingup.it/people/silvio"
-    54	    }
-    55	  ],
-    56	  "encodingFormat": [
-    57	    "text/html",
-    58	    "application/json"
-    59	  ],
-    60	  "license": {
-    61	    "@type": "CreativeWork",
-    62	    "@id": "https://creativecommons.org/licenses/by/4.0/",
-    63	    "name": "Creative Commons CC4 Attribution",
-    64	    "url": "https://creativecommons.org/licenses/by/4.0/"
-    65	  },
-    66	  "dataset": {
-    67	    "@type": "Dataset",
-    68	    …
-    69	  }
-    70	}
-```
+{% highlight json linenos %}
+{
+  "@context": "https://schema.org/",
+  "@type": "DataCatalog",
+  "@id": "https://disprot.org/#DataCatalog",
+  "http://purl.org/dc/terms/conformsTo": {
+    "@type": "CreativeWork",
+    "@id": "https://bioschemas.org/profiles/DataCatalog/0.3-RELEASE-2019_07_01"
+  },
+  "sameAs": "https://registry.identifiers.org/registry/disprot",
+  "url": "https://disprot.org/",
+  "identifier": "https://registry.identifiers.org/registry/disprot",
+  "name": "DisProt, The database of intrinsically disordered proteins",
+  "description": "DisProt is a database of…",
+  "datePublished": "2019-09",
+  "dateModified": "2021-08",
+  "citation": {
+    "@type": "ScholarlyArticle",
+    "@id": "https://doi.org/10.1093/nar/gkz975",
+    "name": "DisProt: intrinsic protein disorder annotation in 2020",
+    "url": "https://doi.org/10.1093/nar/gkz975",
+    "sameAs": [
+      "https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkz975/5622715",
+      "https://pubmed.ncbi.nlm.nih.gov/31713636/"
+    ]
+  },
+  "keywords": [
+    "IDP",
+    "IDPs",
+    … 
+  ],
+  "sourceOrganization": [
+    {
+      "@type": "Organization",
+      "@id": "https://biocomputingup.it/#Organization",
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19",
+        "@type": "CreativeWork"
+      },
+      "description": "University of Padua, Department of …",
+      "name": "BioComputing UP, Department of …",
+      "legalName": "University of Padua",
+      "sameAs": "https://biocomputingup.it"
+    }
+  ],
+  "provider": [
+    {
+      "@type": "Person",
+      "givenName": "Silvio",
+      "familyName": "Tosatto",
+      "identifier": "https://orcid.org/0000-0003-4525-7793",
+      "name": "Silvio Tosatto",
+      "email": "user@domain.org",
+      "url": "https://biocomputingup.it/people/silvio"
+    }
+  ],
+  "encodingFormat": [
+    "text/html",
+    "application/json"
+  ],
+  "license": {
+    "@type": "CreativeWork",
+    "@id": "https://creativecommons.org/licenses/by/4.0/",
+    "name": "Creative Commons CC4 Attribution",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "dataset": {
+    "@type": "Dataset",
+    …
+  }
+}
+{% endhighlight %}
 ### `Dataset`
 
-```json
-     1	{
-     2	  "@type": "Dataset",
-     3	  "@id": "https://disprot.org/#2021-08",
-     4	  "http://purl.org/dc/terms/conformsTo": {
-     5	    "@id": "https://bioschemas.org/profiles/Dataset/0.3-RELEASE-2019_06_14",
-     6	    "@type": "CreativeWork"
-     7	  },
-     8	  "includedInDataCatalog": {
-     9	    "@id": "https://disprot.org/#DataCatalog"
-    10	  },
-    11	  "url": "https://disprot.org/",
-    12	  "dateModified": "2021-08",
-    13	  "version": "8.3",
-    14	  "name": "DisProt",
-    15	  "description": "DisProt is …",
-    16	  "identifier": "https://disprot.org/#2020-12",
-    17	  "keywords": [
-    18	    "IDP",
-    19	    "IDPs",
-    20	    …
-    21	  ],
-    22	  "creator": {
-    23	    "@id": "https://biocomputingup.it/#Organization"
-    24	  },
-    25	  "license": {
-    26	    "@type": "CreativeWork",
-    27	    "@id": "https://creativecommons.org/licenses/by/4.0/",
-    28	    "name": "Creative Commons CC4 Attribution",
-    29	    "url": "https://creativecommons.org/licenses/by/4.0/"
-    30	  }
-    31	}
-```
+{% highlight json linenos %}
+{
+  "@type": "Dataset",
+  "@id": "https://disprot.org/#2021-08",
+  "http://purl.org/dc/terms/conformsTo": {
+    "@id": "https://bioschemas.org/profiles/Dataset/0.3-RELEASE-2019_06_14",
+    "@type": "CreativeWork"
+  },
+  "includedInDataCatalog": {
+    "@id": "https://disprot.org/#DataCatalog"
+  },
+  "url": "https://disprot.org/",
+  "dateModified": "2021-08",
+  "version": "8.3",
+  "name": "DisProt",
+  "description": "DisProt is …",
+  "identifier": "https://disprot.org/#2020-12",
+  "keywords": [
+    "IDP",
+    "IDPs",
+    …
+  ],
+  "creator": {
+    "@id": "https://biocomputingup.it/#Organization"
+  },
+  "license": {
+    "@type": "CreativeWork",
+    "@id": "https://creativecommons.org/licenses/by/4.0/",
+    "name": "Creative Commons CC4 Attribution",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}
+{% endhighlight %}
 
 The whole `Dataset` profile can be included in the `DataCatalog` JSON object under the dataset key (`DataCatalog` lines 66-69).
 
 ### Data record profile: `Protein`
 
 In case of data records describing a single protein entity, a Bioschemas Protein 0.11 profile can be used:
-```json
-     1	{
-     2	  "@context": "https://schema.org",
-     3	  "includedInDataset": "https://disprot.org/#2021-08",
-     4	  "@type": "Protein",
-     5	  "@id": "https://disprot.org/DP00003",
-     6	  "http://purl.org/dc/terms/conformsTo": {
-     7	    "@id": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
-     8	    "@type": "CreativeWork"
-     9	  },
-    10	  "identifier": "https://identifiers.org/disprot:DP00003",
-    11	  "sameAs": "http://purl.uniprot.org/uniprot/P03265",
-    12	  "name": "DNA-binding protein",
-    13	  "taxonomicRange": {
-    14	    "@type": "DefinedTerm",
-    15	    "termCode": "28285",
-    16	    "url": "http://purl.bioontology.org/ontology/NCBITAXON/28285",
-    17	    "sameAs": [
-    18	      "http://purl.uniprot.org/taxonomy/28285",
-    19	      "https://identifiers.org/taxonomy:28285",
-    20	      "http://purl.obolibrary.org/obo/NCBITaxon_28285"
-    21	    ],
-    22	    "inDefinedTermSet": {
-    23	      "@type": "DefinedTermSet",
-    24	      "name": "NCBI taxon",
-    25	      "url": "https://bioportal.bioontology.org/ontologies/NCBITAXON"
-    26	    }
-    27	  },
-    28	  "hasBioPolymerSequence": "MASREEEQRET…",
-    29	  "hasSequenceAnnotation": [
-    30	    {
-    31	      "@type": "SequenceAnnotation",
-    32	      "@id": "https://disprot.org/DP00003#disorder-content",
-    33	      "http://purl.org/dc/terms/conformsTo": {
-    34	        "@id": "https://bioschemas.org/profiles/SequenceAnnotation/0.7-DRAFT",
-    35	        "@type": "CreativeWork"
-    36	      }
-    37	      "sequenceLocation": {
-    38	        "@type": "SequenceRange",
-    39	        "rangeStart": 1,
-    40	        "rangeEnd": 529
-    41	      },
-    42	      "additionalProperty": {
-    43	        "@type": "PropertyValue",
-    44	        "name": "Protein disorder content",
-    45	        "propertyID": {
-    46	          "@id": "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00499"
-    47	        },
-    48	        "value": 0.09829867674858223
-    49	      }
-    50	    },
-    51	    {
-    52	      "@type": "SequenceAnnotation",
-    53	      "@id": "https://disprot.org/DP00003r002",
-    54	      "http://purl.org/dc/terms/conformsTo": {
-    55	        "@id": "https://bioschemas.org/profiles/SequenceAnnotation/0.7-DRAFT",
-    56	        "@type": "CreativeWork"
-    57	      }
-    58	      "sequenceLocation": {
-    59	        "@type": "SequenceRange",
-    60	        "rangeStart": 294,
-    61	        "rangeEnd": 334
-    62	      },
-    63	      "additionalProperty": [
-    64	        {
-    65	          "@type": "PropertyValue",
-    66	          "name": "Term",
-    67	          "value": {
-    68	            "@type": "DefinedTerm",
-    69	            "@id": "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00076",
-    70	            "inDefinedTermSet": {
-    71	              "@type": "DefinedTermSet",
-    72	              "@id": "https://disprot.org/assets/data/IDPO_v0.2.owl",
-    73	              "name": "IDP ontology"
-    74	            },
-    75	            "termCode": "IDPO:00076",
-    76	            "name": "disorder"
-    77	          }
-    78	        }
-    79	      ],
-    80	      "subjectOf": {
-    81	        "@type": "ScholarlyArticle",
-    82	        "@id": "https://identifiers.org/pubmed:8632448"
-    83	      }
-    84	    }
-    85	  ]
-    86	}
-```
+{% highlight json linenos %}
+{
+  "@context": "https://schema.org",
+  "includedInDataset": "https://disprot.org/#2021-08",
+  "@type": "Protein",
+  "@id": "https://disprot.org/DP00003",
+  "http://purl.org/dc/terms/conformsTo": {
+    "@id": "https://bioschemas.org/profiles/Protein/0.11-RELEASE",
+    "@type": "CreativeWork"
+  },
+  "identifier": "https://identifiers.org/disprot:DP00003",
+  "sameAs": "http://purl.uniprot.org/uniprot/P03265",
+  "name": "DNA-binding protein",
+  "taxonomicRange": {
+    "@type": "DefinedTerm",
+    "termCode": "28285",
+    "url": "http://purl.bioontology.org/ontology/NCBITAXON/28285",
+    "sameAs": [
+      "http://purl.uniprot.org/taxonomy/28285",
+      "https://identifiers.org/taxonomy:28285",
+      "http://purl.obolibrary.org/obo/NCBITaxon_28285"
+    ],
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "NCBI taxon",
+      "url": "https://bioportal.bioontology.org/ontologies/NCBITAXON"
+    }
+  },
+  "hasBioPolymerSequence": "MASREEEQRET…",
+  "hasSequenceAnnotation": [
+    {
+      "@type": "SequenceAnnotation",
+      "@id": "https://disprot.org/DP00003#disorder-content",
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/SequenceAnnotation/0.7-DRAFT",
+        "@type": "CreativeWork"
+      }
+      "sequenceLocation": {
+        "@type": "SequenceRange",
+        "rangeStart": 1,
+        "rangeEnd": 529
+      },
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Protein disorder content",
+        "propertyID": {
+          "@id": "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00499"
+        },
+        "value": 0.09829867674858223
+      }
+    },
+    {
+      "@type": "SequenceAnnotation",
+      "@id": "https://disprot.org/DP00003r002",
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/SequenceAnnotation/0.7-DRAFT",
+        "@type": "CreativeWork"
+      }
+      "sequenceLocation": {
+        "@type": "SequenceRange",
+        "rangeStart": 294,
+        "rangeEnd": 334
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Term",
+          "value": {
+            "@type": "DefinedTerm",
+            "@id": "https://disprot.org/assets/data/IDPO_v0.2.owl#IDPO:00076",
+            "inDefinedTermSet": {
+              "@type": "DefinedTermSet",
+              "@id": "https://disprot.org/assets/data/IDPO_v0.2.owl",
+              "name": "IDP ontology"
+            },
+            "termCode": "IDPO:00076",
+            "name": "disorder"
+          }
+        }
+      ],
+      "subjectOf": {
+        "@type": "ScholarlyArticle",
+        "@id": "https://identifiers.org/pubmed:8632448"
+      }
+    }
+  ]
+}
+{% endhighlight %}
 
 Note the presence of two `SequenceAnnotation` profiles. The first one (lines 30-50) shows how to annotate a protein region (in this case the whole protein) to an ontology term which has a numerical value. The second one (lines 51-84) shows how to apply an ontology term to a part of a protein (defined by `SequenceRange`).
 
