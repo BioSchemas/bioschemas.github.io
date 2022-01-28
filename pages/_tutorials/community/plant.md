@@ -1,5 +1,5 @@
 ---
-title: How to add markup to IDP resources
+title: How to add markup to plant resources
 overviewTutorial:
   link: ./community_tutorials.html
   title: Return to community tutorials overview
