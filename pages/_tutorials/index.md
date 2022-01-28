@@ -1,7 +1,9 @@
 ---
 layout: default
 title: Bioschemas Tutorials
-
+nextTutorial:
+  link: ./what_why_schema
+  title: What and why Schema.org
 redirect_from:
 - "tutorials"
 ---
@@ -9,6 +11,7 @@ redirect_from:
 # Getting Started with Bioschemas
 >_A quick tour on what this training portal offers_
 
+{% include tutorial-navigation.html %}
 
 [Bioschemas](/) aims to improve findability and interoperability for Life Science resources. It does so by guiding the use of [Schema.org](https://schema.org/) markup on Life Science websites. Guidelines include recommendations on the properties to be used together with the cardinality, ONE or MANY. It also offers recommendation on some well-known ontology terms for some particular properties. All those recommendations are what we call a "[__Bioschemas Profile__](/profiles)". Bioschemas also leads the development and posterior inclusion in Schema.org of some common types used in Life Sciences, i.e., [__Bioschemas types__](/types).
 
@@ -51,7 +54,4 @@ Life science communities, in particular ELIXIR communities, offer some tutorials
 ## Feedback
 For feedback, questions and comments, please [create an issue](https://github.com/Bioschemas/specifications/labels/topic%3ATrainingPortal) and label it `topic:Training Portal`.
 
-***
-First tutorial: [What and why Schema.org](what_why_schema) &#9654;
-
-***
+{% include tutorial-navigation.html %}

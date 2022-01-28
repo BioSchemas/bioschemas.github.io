@@ -96,7 +96,7 @@ On the "Profile Info" tab you will find:
 - __Official Type:__ URL to an existing ontology if applied, e.g https://schema.org/MedicalCondition
 - __Full Example:__ URL to the example folder on the [Bioschemas Specification GitHub](https://github.com/BioSchemas/specifications/)
 
-{% include image.html file="tutorials/howto/images_create_new_profile/profileInfo.png" alt="Disease Profile Information" %}
+{% include image.html file="tutorials/images/profileInfo.png" alt="Disease Profile Information" %}
 
 For a new profile, you will need to create a new folder in the specifications repository to store the examples that you develop. Through the GitHub web interface you can create a README file with basic information about the profile using the following template. Remember to put the README file in a folder with a name corresponding to your profile, e.g. `/Disease/README.md`. You will need to change the content of the file to reflect your profile.
 
@@ -139,7 +139,7 @@ The profile properties can be copied into the GSheet from the Schema.org or Bios
 
 Note that all the expected types need to appear on a separate line within their cell and not in multiple rows. You may need to do some manual editing. Another option is to first paste the content into service that converts the html table code into csv, e.g. [convertcsv](https://www.convertcsv.com/).
 
-{% include image.html file="tutorials/howto/images_create_new_profile/propertiesInitial.png" alt="MedicalCondition properties after they have been pasted into the Schema.org tab" %}
+{% include image.html file="tutorials/images/propertiesInitial.png" alt="MedicalCondition properties after they have been pasted into the Schema.org tab" %}
 
 
 #### 4.2.2. Bioschemas Columns
@@ -153,7 +153,7 @@ These columns control which of the properties in the GSheet will appear in the B
 
 You should now go through the properties for you profile and state their marginality level, their cardinality, when expected values are to be drawn from a domain ontology, and an example. When you change the marginality you will notice that the row gets highlighted: green for Minimal, yellow for Recommended, and blue for Optional. In the following screenshot you will see that the `drug` row is highlighted yellow because its marginality level has been set to Recommended.
 
-{% include image.html file="tutorials/howto/images_create_new_profile/propertiesMarginality.png" alt="Editing the Disease profile properties in the Schema.org mapping tab" %}
+{% include image.html file="tutorials/images/propertiesMarginality.png" alt="Editing the Disease profile properties in the Schema.org mapping tab" %}
 
 ## 5. Authors
 
@@ -163,7 +163,7 @@ While there is an `Authors` tab in the GSheet, this is not copied across to the 
 
 The `Bioschemas fields` tab provides a view over the properties that matches the profile; it only includes the properties from the `Schema.org mapping` tab that have a marginality level declared. This is useful for checking your progress and for reviewing your work.
 
-{% include image.html file="tutorials/howto/images_create_new_profile/bioschemasFields.png" alt="Reviewing the Disease profile properties in the Bioschemas fields tab" %}
+{% include image.html file="tutorials/images/bioschemasFields.png" alt="Reviewing the Disease profile properties in the Bioschemas fields tab" %}
 
 ## 7. Next Steps
 
