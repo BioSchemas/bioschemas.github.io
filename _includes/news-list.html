@@ -2,7 +2,8 @@
   <h3>News</h3>
   <!-- Block for displaying 3 news items -->
   {%- assign count = 0 %}
-  {%- for post in site.posts %}
+  {%- for post in site.news %}
+  {%- if post.layout == 'post' %}
   <div class="event shadow rounded p-3">
     <strong><a href="{{ post.url | relative_url }}">{{ post.title }}</a></strong>
     <p class="mb-0"><em>{{post.date|date_to_long_string}}</em> –
@@ -16,6 +17,7 @@
   {%- assign count = count | plus: 1 %}
   {%- if count == 3 %}
   {%- break %}
+  {%- endif %}
   {%- endif %}
   {%- endfor %}
   <small>Read more news on our <a href="{{ '/news/' | relative_url }}">news page</a>.</small>

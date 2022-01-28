@@ -75,11 +75,6 @@ collections:
     permalink: /:collection/:path
     redirect_from:
       - "/:collection/:path/"
-  posts:
-    output: true
-    permalink: /:collection/:path
-    redirect_from:
-      - "/:collection/:path/"
   news:
     output: true
     permalink: /:collection/:path
