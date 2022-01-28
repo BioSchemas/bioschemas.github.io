@@ -3,11 +3,11 @@ layout: default
 title: Community-based Tutorials
 ---
 
-# Community-based tutorials 
+# Community-based tutorials
 >_A set of community-based tutorials around adding and consuming Bioschemas markup_
 
 ## 1. Why community-based tutorials
-Communities bring together expertise around a particular topic, e.g., proteomics, training, metabolomics. Although the Bioschemas specifications are meant to be community-agnostic, community-based tutorials will include elements that are important for a particular community. For instance, they will use a language that is specialized to the community and familiar examples. 
+Communities bring together expertise around a particular topic, e.g., proteomics, training, metabolomics. Although the Bioschemas specifications are meant to be community-agnostic, community-based tutorials will include elements that are important for a particular community. For instance, they will use a language that is specialized to the community and familiar examples.
 
 ## 2. What community-based tutorials are available?
 
@@ -15,6 +15,8 @@ Communities bring together expertise around a particular topic, e.g., proteomics
   - [How to add markup to IDP community resources](./community/idp) (target audience _"Markup providers"_ and _"Markup consumers"_)
 - Plant Community
   - [How to add markup to Plant  community resources](./community/plant) (target audience _"Markup providers"_ and _"Markup consumers"_)
+- Rare Diseases Community
+  - [Marking up Rare diseases clinical entities](./community/rd) (target audience _"Markup providers"_ and _"Markup consumers"_)
 
 ## 3. My community is interested in adding a tutorial
 
