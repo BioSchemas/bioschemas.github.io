@@ -1,9 +1,8 @@
 ---
-layout: community_tutorial
 title: How to add markup to IDP resources
-previousTutorial:
-  link: ./community/idp
-  title: How to add markup to IDP resources
+overviewTutorial:
+  link: ./community_tutorials.html
+  title: Return to community tutorials overview
 
 bioschemas:
   "@context": https://schema.org/
@@ -32,7 +31,7 @@ bioschemas:
   <img class="align-self-center me-3" src="{{ '/tutorials/images/exclamation_mark.png' | relative_url }}" alt="warning">
   <div>
       This tutorial complements the tutorials <a href="./howto_right_profile">how to select the right profile for your resource</a> and
-      <a href="./howto_add_markup>how to mark up your own resource with Bioschemas</a> for resources from the plant sciences, so please
+      <a href="./howto_add_markup">how to mark up your own resource with Bioschemas</a> for resources from the plant sciences, so please
       check these tutorial first.
   </div>
 </div> 

@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: How to select the right profile for your resource
 previousTutorial:
   link: ./what_why_bioschemas

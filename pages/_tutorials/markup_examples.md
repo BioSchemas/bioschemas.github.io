@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Schema.org markup examples
 previousTutorial:
   link: ./what_why_schema

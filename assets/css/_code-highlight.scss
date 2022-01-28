@@ -213,7 +213,7 @@
     }
 }
 
-.highlighter-rouge :not(.language-plaintext) > .highlight {
+.highlighter-rouge :not(.language-plaintext) > .highlight, figure.highlight {
     border: #eaf2ee 1px solid;
     border-radius: 4px;
     padding: 1em;

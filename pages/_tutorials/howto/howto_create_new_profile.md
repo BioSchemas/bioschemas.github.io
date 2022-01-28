@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: How to create a new draft profile
 previousTutorial:
   link: howto/howto_check_deploy

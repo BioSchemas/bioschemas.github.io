@@ -95,6 +95,11 @@ defaults:
       layout: "profiles"
   - scope:
       path: ""
+      type: "tutorials"
+    values:
+      layout: "tutorial"
+  - scope:
+      path: ""
       type: "types"
     values:
       layout: "default"

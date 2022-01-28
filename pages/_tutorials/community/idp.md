@@ -1,9 +1,9 @@
 ---
-layout: community_tutorial
 title: How to add markup to IDP resources
-nextTutorial:
-  link: ./community/plant
-  title: How to add markup to Plant resources
+overviewTutorial:
+  link: ./community_tutorials.html
+  title: Return to community tutorials overview
+
 
 bioschemas:
   "@context": https://schema.org/

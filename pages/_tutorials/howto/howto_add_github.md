@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Adding Schema.org to a GitHub Pages site
 previousTutorial:
   link: howto/howto_add_markup
@@ -72,7 +71,6 @@ Open `awesome-tutorial.md` and copy the snippet below into it. Jekyll allows you
 ```yaml
 awesome_tutorial.md
 ---
-layout: tutorial
 bioschemas:
   "@context": https://schema.org/
   "@type": LearningResource
