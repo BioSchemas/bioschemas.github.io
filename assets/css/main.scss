@@ -228,7 +228,7 @@ Markdown bootstrap table styling
 *******************************************************************************/
 
 
-table:not(.rouge-table) {
+table:not(.rouge-table):not(.table-borderless) {
     @extend .table;
     @extend .shadow;
     @extend .rounded;
