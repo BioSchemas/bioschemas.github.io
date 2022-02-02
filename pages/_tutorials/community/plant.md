@@ -30,8 +30,8 @@ bioschemas:
 <div class="col d-flex align-items-start rounded p-4 mb-4 mt-3 shadow">
   <img class="align-self-center me-3" src="{{ '/tutorials/images/exclamation_mark.png' | relative_url }}" alt="warning">
   <div>
-      This tutorial complements the tutorials <a href="./howto_right_profile">how to select the right profile for your resource</a> and
-      <a href="./howto_add_markup">how to mark up your own resource with Bioschemas</a> for resources from the plant sciences, so please
+      This tutorial complements the tutorials <a href="../howto/howto_right_profile">how to select the right profile for your resource</a> and
+      <a href="../howto/howto_add_markup">how to mark up your own resource with Bioschemas</a> for resources from the plant sciences, so please
       check these tutorial first.
   </div>
 </div> 
