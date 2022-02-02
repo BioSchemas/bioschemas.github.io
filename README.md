@@ -1,10 +1,10 @@
 # Bioschemas Website
 This repo contains the files for the Bioschemas website. The website is deployed on [GitHub](https://github.com/) using [Jekyll](https://jekyllrb.com/).
 
-# Contribute
+## Contribute
 Feel free to propose changes to the Bioschemas website! This can be done by opening an issue on our [specifications repo](https://github.com/BioSchemas/specifications) or by forking this repository and making a pull request. The content of this website is build using a combination of Markdown and HTML.
 
-## Previewing your changes on your own fork
+### Previewing your changes on your own fork
 
 Since the website uses [GitHub pages](https://pages.github.com/) for its deployment, it is possible to create live previews to inspect your changes. Go to your fork -> settings tab -> pages and select the branch you are working on to activate GitHub pages. GitHub will do the rest and will tell you at which url the website will be served. 
 
