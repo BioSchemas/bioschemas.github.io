@@ -28,6 +28,13 @@ bioschemas:
 ---
 
 <div class="col d-flex align-items-start rounded p-4 mb-4 mt-3 shadow">
+  <img class="align-self-center me-3" src="{{ '/tutorials/images/information_mark.png' | relative_url }}" alt="information">
+  <div>
+      More information about the <a href="https://elixir-europe.org/communities/plant-sciences" target="_blank">ELIXIR Plant community</a>
+  </div>
+</div> 
+
+<div class="col d-flex align-items-start rounded p-4 mb-4 mt-3 shadow">
   <img class="align-self-center me-3" src="{{ '/tutorials/images/exclamation_mark.png' | relative_url }}" alt="warning">
   <div>
       This tutorial complements the tutorials <a href="../howto/howto_right_profile">how to select the right profile for your resource</a> and

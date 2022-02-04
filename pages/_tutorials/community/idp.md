@@ -30,6 +30,13 @@ bioschemas:
   version: 1.0
 ---
 
+<div class="col d-flex align-items-start rounded p-4 mb-4 mt-3 shadow">
+  <img class="align-self-center me-3" src="{{ '/tutorials/images/information_mark.png' | relative_url }}" alt="information">
+  <div>
+      More information about the <a href="https://elixir-europe.org/communities/intrinsically-disordered-proteins" target="_blank">ELIXIR IDP community</a>
+  </div>
+</div> 
+
 ## 1. Overview
 
 This tutorial shows how to implement Bioschemas markup to a community resource. It describes Bioschemas profiles needed for a successful markup, their format and deployment on web pages. Adding a sitemap to a web site as well as registering persistent identifiers to resource data records completes the markup of a resource. These actions will ensure successful consumption of Bioschemas markup aiding resource data findability and interoperability.
