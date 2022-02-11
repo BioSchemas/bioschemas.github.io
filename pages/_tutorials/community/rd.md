@@ -1,5 +1,5 @@
 ---
-title: Marking up Rare diseases clinical entities
+title: Marking up clinical entities in the Rare Diseases community
 overviewTutorial:
   link: ./community_tutorials.html
   title: Return to community tutorials overview
@@ -15,7 +15,7 @@ overviewTutorial:
     audience:
     - "@type": Audience
       name: (Markup provider, Markup consumer) WebMaster
-    name: "Bioschemas deploiement in the context of RD, based on Orphanet website"
+    name: "Adding Bioschemas to the Orphanet website"
     author:
     - "@type": Person
       name: "Marc Hanauer"
@@ -26,65 +26,75 @@ overviewTutorial:
       name: "Celine Rousselot"
       "@id": http://www.orphanet-france.fr/national/FR-FR/index/equipe/
       url: http://www.orphanet-france.fr/national/FR-FR/index/equipe/
-    dateModified: 2021-12-22
-    description: "This tutorial will show you how Orphanet rare diseases pages were annotated with Bioschemas."
-    keywords: "schema, JSON-LD, bioschemas"
+    - "@type": Person
+      name: "Alasdair Gray"
+      "@id": https://bioschemas.org/people/AlasdairGray
+      url: https://bioschemas.org/people/AlasdairGray
+    dateCreated: 2021-12-22
+    dateModified: 2022-02-11
+    description: "This tutorial will show you how Orphanet rare disease pages were annotated with Bioschemas."
+    keywords: "Disease, Rare Disease, Schema.org, JSON-LD, Bioschemas"
     license: CC-BY 4.0
-    version: 1.3
+    version: 1.4
 ---
 
 ## 1. Overview
 
-This tutorial shows how Bioschemas markup was implemented in a community resource dedicated to Rare Diseases. It describes which Bioschemas type and properties were used in order to provide  comprehensive metadata about rare diseases as clinical entities, in several languages, to improve medical nomenclature interoperability.  These implementations will help successful consumption of Bioschemas markup aiding resource data findability and interoperability in the Rare disease field (RD).
+This tutorial shows how Bioschemas markup was implemented in a Rare Diseases community resource. It describes which Bioschemas types and properties were used to provide metadata about rare diseases as clinical entities in several languages in order to improve medical nomenclature interoperability.  The resulting markup is machine processable enabling others to consume and exploit the data.
+
+The main objective of the Bioschemas implementation was to leverage the Findability of the disease information and the interoperability between different Rare Diseases resources.
 
 ## 2. Context
 
-The [Orphanet website](https://www.orpha.net)  is a well known resource for the RD community for years. It provides information about Rare diseases (more than 6000 rare disorders entities, plus groups of diseases and subtypes). It also provides a directory of several resources (Experts centers, support groups, research projects, clinical trials, diagnostic tests, registries & biobanks) relevant for rare diseases in more than 40 countries. The website is available in 9 languages (and further extensions are ongoing). It’s heavily used (around 3 millions view pages by month).
+[Orphanet website](https://www.orpha.net) is a well known resource for the Rare Diseases community. It provides information about Rare Diseases (more than 6,000 rare disorder entities, plus groups of diseases and subtypes). It also provides a directory of several resources (expert centers, support groups, research projects, clinical trials, diagnostic tests, and registries & biobanks) relevant for rare diseases in more than 40 countries. The website is available in 9 languages (and further extensions are ongoing). It’s heavily used with around 3 million page views each month.
 
-We have started to draft the bioschemas implementation during the 2019 Elixir Biohackathon (Implementation of Bioschema for Orphanet and Orphadata) and made a first proposal for any clinical entity described in the Orphanet’s Knowledge base and displayed in the Orphanet’s website. We have described so far 10542 Clinical entities pages, in 9 languages, making 94878 pages with available information with markups including (when relevant): name, synonyms, identifiers (ORPHAcode), description, prevalence and nomenclatures mappings (ICD10, OMIM, UMLS, MeSH, GARD, MedDRA).
+During the [2019 ELIXIR BioHackathon](https://2019.biohackathon-europe.org/), we drafted the implementation of Bioschemas markup within Orphanet and Orphadata. This resulted in a new Bioschemas profile for capturing clinical entities as a [Disease](https://bioschemas.org/profiles/Disease/). We have embedded the markup in over ten thousand clinical entity pages, in 9 languages. The properties include: name, synonyms, identifiers (ORPHAcode), description, prevalence and mappings to common nomenclatures (e.g. ICD10, OMIM, UMLS, MeSH, GARD, MedDRA).
 
 ## Rare disease clinical entities markup
 
-As described in specific Orphanet’s website pages a rare disease clinical entity is part of the Orphanet nomenclature and therefore has a unique identifier (OrphaCode):
-https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=91
-This will serve as an example of bioschemas implementation here.
+The Orphanet website includes pages for rare disease clinical entities. Each page includes data from the Orphanet nomenclature, which has a unique OrphaCode as its identifier. In this tutorial we will be looking at [orpha:91](https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=91), the Orphanet page about 'Aromatase deficiency'.
 
-The Orphanet Knowledge base provides information when available such as a label and synonyms, a definition of the concept, epidemiological information, mappings to other terminologies, inheritance mode, age of onset  and often structured textual information.
+Each page provides information about a disease including its preferred label and known synonyms, a definition of the concept, epidemiological information, mappings to other terminologies, inheritance mode, age of onset, and often structured textual information.
 
-The main objective of the Bioschemas implementation was to leverage the findability of the disease information and the interoperability between different RD resources.
+- `"@type": "MedicalCondition"`:
+  A clinical entity on Orpahnet corresponds to the Bioschemas [Disease profile](https://bioschemas.org/profiles/Disease/) which is defined over the Schema.org [MedicalCondition](https://schema.org/MedicalCondition) type.
 
-`"@type": "MedicalCondition"`:
-Therefore, based on the [Disease profile](https://bioschemas.org/profiles/Disease/) we processed the information accordingly, using the MedicalCondition type.
+- `"@id"` & `"identifier"`:
+  For the JSON-LD `@id` value, the permanent URL of each page is used to identify the concept within the Orphanet website. This will increase the findability of the resource. The OrphaCode is declared using the [schema:identifier](https://schema.org/identifier) property.  
+  In the next iteration, we plan to use [schema:sameAs](https://schema.org/sameAs)to link with ORDO concepts.
 
+- `"name"`,  `"@type": "PronounceableText", "inLanguage":, "textValue"`:
+  As the website displays the information in the language chosen by the user, we had declare the language used within the page rendering. Each instance of the `name` property was declared with it language tag as per the following snippet
+  {% highlight json linenos %}
+    'name': {
+      '@type': 'PronounceableText',
+      'inLanguage': 'en',
+      'textValue': 'Aromatase deficiency'
+    }
+  {% endhighlight %}
 
-`"@id"` & `"identifier"`:
-As “unique id @id” we decided to use the permanent link to the concept in Orphanet website. (Instead, the IRI from the Orphanet Rare Diseases Ontology could be used, but in this particular concept we aim to improve the findability at the website level). Nevertheless, in the next version of the implementation we will probably set a “sameAs” (https://schema.org/sameAs) property to link directly to ORDO concepts.
+- `"alternateName"`:
+  The property [“schema:alternateName”](https://schema.org/alternateName) is used for the list of synonyms (which differ in different languages). Several synonyms could be used, therefore the value set is an array.
 
-The “identifier” is the OrphaCode of each specific RD clinical entity described on the page.
+- `"epidemiology"`:
+  As the concept of “prevalence” is not defined in Schema.org we decided to use [schema:epidemiology](https://schema.org/epidemiology) which is applicable to the MedicalCondition type. We note that the “epidemiology” definition in Schema.org is not as accurate as a “prevalence” concept.
 
-`"name"`,  `"@type": "PronounceableText", "inLanguage":, "textValue"`:
-As the website framework will display the information in the language chosen by users, we had to describe the type of language used for each “name”. Therefore we used the `"@type": "PronounceableText" and "inLanguage"` to give language ISO 2 digit format and `"textValue"` as label instantiation.
+- `"description"`:
+  The [schema:description](https://schema.org/description) property was used to give the definition of the concept. We have decided to limit the textual information available on the website page only to the definition section, which could be easily reusable on other resources. (In the ELIXIR Core Data Resource Orphadata, provided by Orphanet, definitions are part of the open data freely accessible in CC-BY 4.0. Full text are available only under data transfer agreements.
 
-`"alternateName"`:
-We used [“alternateName”](http://schema.org/alternateName) for the list of synonyms (which differ in different languages). Several synonyms could be used, therefore the value set is an array.
+- `"code", codeValue, codingSystem`:
+  The mapping to other terminologies is an important asset of the Orphanet nomenclature which leverages the interoperability between sources.
 
-`"epidemiology"`:
-As the concept of “prevalence” is not defined in schema.org we decided to use “https://schema.org/epidemiology” which is applicable to “MedicalCondition”. Nevertheless the “epidemiology” definition in schema.org is not as accurate as a “prevalence” concept.
+  We decide not to use the [schema:sameAs](https://schema.org/sameAs) property, mostly because often mappings are not an exact match between terminologies. Also mappings could be 1 to many (from 1 Orphanet clinical entity to several in the considered terminology).
 
-`"description"`:
-The http://schema.org/description was used to give the definition of the concept. We have decided to limit the textual information available on the website page only to the definition section, which could be easily reusable on other resources. (In the Elixir Core resource Orphadata, provided by orphanet, definitions are part of the open data freely accessible in CCBY 4.0. Full text are available only under DTA - data transfer agreement- )
+  For the list of [schema:code](https://schema.org/code) we used [schema:MedicalCode](https://schema.org/MedicalCode) which is the most appropriate and [schema:codeValue](https://schema.org/codeValue) and [schema:codingSystem](https://schema.org/codingSystem) properties for each mapping.
 
-`"code", codeValue, codingSystem`:
-The mapping to other terminologies is an important asset of the Orphanet nomenclature which leverages the interoperability between sources.
-
-We decide not to use the “sameAs” property, mostly because often mappings are not “Exact match” (but BTNT NTBT) between terminologies. Also mappings could be 1 to many (from 1 Orphanet clinical entity to several in the considered terminology).
-For the list of “code” we used https://schema.org/MedicalCode which is the most appropriate and “codeValue” and “codingSystem” properties for each mapping.
-
-### JSON-LD
-To ease the process of integration within the Orphanet website framework, we aim to implement directly in all disease page a JSON-LD script section returned in the HTML source constructed by the framework (`<script type="application/ld+json"> </script>`).
-As example here is the code for the [Aromatase deficiency page](https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=91).
+### Complete Example as JSON-LD
+To ease the process of embedding the markup within each disease page on the Orphanet website, the framework that generates the HTML page content was extended to add the markup within a JSON-LD script tag.
+As an example here is the JSON-LD for the [Aromatase deficiency page](https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=91).
 
 {% highlight json linenos %}
+<script type="application/ld+json">
 {
   "@context": "http://schema.org/",
   "@type": "MedicalCondition",
@@ -143,4 +153,9 @@ As example here is the code for the [Aromatase deficiency page](https://www.orph
   ],
   "description": "A rare disorder that disrupts the synthesis of estradiol, resulting in hirsutism of mothers during gestation of an affected child; pseudohermaphroditism and virilization in women; and tall stature, osteoporosis and obesity in men."
 }
+</script>
 {% endhighlight %}
+
+## Conclusion
+
+In this tutorial we have shown how a web page containing information about a disease can include Bioschemas markup to capture the main features of the disease that may be used for search.
