@@ -2,15 +2,15 @@
 This repo contains the files for the Bioschemas website. The website is deployed on [GitHub](https://github.com/) using [Jekyll](https://jekyllrb.com/).
 
 ## Contribute
-Feel free to propose changes to the Bioschemas website! This can be done by opening an issue on our [specifications repo](https://github.com/BioSchemas/specifications) or by forking this repository and making a pull request. The content of this website is build using a combination of Markdown and HTML.
+Feel free to propose changes to the Bioschemas website! This can be done by opening an issue on our [specifications repo](https://github.com/BioSchemas/specifications) or by forking this repository and making a pull request. The content of this website is built using a combination of Markdown and HTML.
 
 ### Previewing your changes on your own fork
 
-Since the website uses [GitHub pages](https://pages.github.com/) for its deployment, it is possible to create live previews to inspect your changes. Go to your fork -> settings tab -> pages and select the branch you are working on to activate GitHub pages. GitHub will do the rest and will tell you at which url the website will be served. 
+Since the website uses [GitHub pages](https://pages.github.com/) for its deployment, it is possible to create live previews to inspect your changes. Go to your fork -> settings tab -> pages and select the branch you are working on to activate GitHub pages. GitHub will do the rest and will tell you at which url the website will be served.
 
 ### Deploying the website locally
 
-It is possible to preview the website locally to preview changes. We recommand installing Ruby version 2.7.3 or earlier since recent version are not compatible with Jekyll. If you already have the correct Ruby installed on your machine, then the following files will allow you to get started by installing the relevant dependencies:
+It is possible to preview the website locally to preview changes. We recommend installing Ruby version 2.7.3 or earlier since recent version are not compatible with Jekyll. If you already have the correct Ruby installed on your machine, then the following files will allow you to get started by installing the relevant dependencies:
 
 - Install Jekyll and Dependencies: ```gem install jekyll bundler jekyll-redirect-from``` and ```gem install jekyll-sitemap```
 - Clone the repository: ```git clone https://github.com/Bioschemas/bioschemas.github.io.git```
