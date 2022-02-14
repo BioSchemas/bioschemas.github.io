@@ -3,9 +3,7 @@ layout: default
 title: News
 ---
 # Bioschemas News
-
-{%- for post in site.news %}
-  {%- if post.layout == 'post' %}
-  {% include post-snippet.html %}
-  {%- endif %}
+{%- assign news = site.news | where: "layout", "post" | reverse %}
+{%- for post in news %}
+{% include post-snippet.html %}
 {%- endfor %}
