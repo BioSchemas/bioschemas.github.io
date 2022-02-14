@@ -39,22 +39,40 @@ bioschemas:
 
 ## 1. Overview
 
-This tutorial shows how to implement Bioschemas markup to a community resource. It describes Bioschemas profiles needed for a successful markup, their format and deployment on web pages. Adding a sitemap to a web site as well as registering persistent identifiers to resource data records completes the markup of a resource. These actions will ensure successful consumption of Bioschemas markup aiding resource data findability and interoperability.
+This tutorial will introduce you to the necessary steps for a successful implementation of Bioschemas markup to an Intrinsically Disordered Protein (IDP) Community resource, providing a detailed description of Bioschemas profiles, their format and deployment on web pages. Adding a sitemap to a web site as well as registering persistent identifiers to resource data records complete the markup of a resource.
+
+Following the instructions below you will learn how to implement Bioschemas markup, aiding resource data findability and interoperability.
+
+IDP resources with Bioschemas markup will benefit from being included in the [IDPcentral registry](https://idpcentral.org/registry) which will act as a domain search engine covering all community resources.
 
 ## 2. Bioschemas profiles for IDP resources
 
-Main IDP resources are primary or aggregating databases describing aspects of intrinsically disordered proteins. As such, they are marked up with Bioschemas as a typical database using three profiles:
-* `DataCatalog`: describes the site providing the data
-* `Dataset`: describes the data releases from the site
-* `Protein`: a profile describing data records, usually `Protein` in the IDP community; these can be supplemented with `SequenceAnnotation` and `SequenceRange` to denote annotations on the protein sequence
+Main IDP resources are primary or aggregating databases describing aspects of IDPs. As such, they are marked up with Bioschemas as a typical database using three profiles:
+* `DataCatalog`, a profile informing on the site providing the data
+* `Dataset`, a profile describing the data releases from the site
+* `Protein`, a profile describing data records, which can be supplemented among others with:
+    * `SequenceAnnotation` and `SequenceRange` to denote annotations on the protein sequence
+    * `ScholarlyArticle` to denote publications describing protein annotations
 
-Every resource is described with a `DataCatalog` profile. That profile specifies the provider of the resource, it’s version, license, keywords, description, format and so on. The `DataCatalog` profile contains one or more `Dataset` profiles which have their own version, license, keywords and description. The difference between `DataCatalog` and `Datasets` can be explained with the [UniProt](https://www.uniprot.org/) resource as an example. UniProt is the `DataCatalog` that contains Swiss-Prot and TrEMBL `Dataset`s.
+Every resource is primarily described with a `DataCatalog` profile, specifying the provider of the resource, its version, license, keywords, description, format and so on.
+In the `DataCatalogue` profile you will find one or more `Dataset` profiles with their own version, license, keywords and description.
+
+For example, in the resource [UniProt](https://www.uniprot.org/), the `DataCatalog` is the UniProt knowledgebase, while the `Dataset`s are Swiss-Prot and TrEMBL.
 
 ## 3. Format and placement of Bioschemas profiles
 
-Because Bioschemas is an extension of schema.org, it uses the same formats for embedding web pages: Microdata, RDFa and JSON-LD. Bioschemas community recommends JSON-LD format for embedding the markup. All implementations of Bioschemas in IDP resources also use the markup in JSON-LD format.
+### Format
 
-The three profiles must not be published on all web pages of a resource. Database resources should have `DataCatalog` and `Dataset`(s) markup on their home pages while entry pages (pages holding data records) should have only `Protein` records. All other pages (About, Help and others) should be void of markup. This implies that a mechanism must be in place that adds and removes dynamically schema profiles from web pages, especially in single page applications. Our suggestion is to place the markup as JSON-LD script in the document head with an id attribute (one for `DataCatalog` and `Dataset` schema and one for data record schema). In that way it will be relatively simple to toggle the visibility of the whole element containing the markup depending on the page that is being requested.
+Bioschemas is an extension of schema.org, therefore it uses the same formats for embedding web pages: Microdata, RDFa and JSON-LD. The Bioschemas community mainly uses the JSON-LD markup format, thus you are also recommended to use this format.
+
+### Placement
+
+When placing profiles in your resource, you must remember the following best practice:
+* `DataCatalog` and `Dataset`(s) profiles must be included on the resource home page exclusively
+* `Protein` profile must be included on entry pages, i.e. pages holding data records, only
+* all other pages (About, Help and others) should be void of markup.
+
+While developing your resource, find a way to add and remove profiles from individual web pages, especially in single page applications. Within a page, you should place the markup as JSON-LD script in the document head with an id attribute (one for `DataCatalog` and `Dataset` schema and one for data record schema). By including id attributes, it will be relatively simple for you to toggle the visibility of the element containing the markup depending on the web page.
 
 ## 4. Example profiles for IDP resources
 
@@ -132,6 +150,7 @@ The three profiles must not be published on all web pages of a resource. Databas
   }
 }
 {% endhighlight %}
+
 ### `Dataset`
 
 {% highlight json linenos %}
@@ -168,11 +187,14 @@ The three profiles must not be published on all web pages of a resource. Databas
 }
 {% endhighlight %}
 
-The whole `Dataset` profile can be included in the `DataCatalog` JSON object under the dataset key (`DataCatalog` lines 66-69).
+You can include the whole `Dataset` profile in the `DataCatalog` JSON object under the dataset key (`DataCatalog` lines 66-69).
+
+A deployed `DataCatalog` and `Dataset` markup can be seen in [MobiDB](https://mobidb.org/), [DisProt](https://disprot.org/) and [PED](https://proteinensemble.org/)
+resource landing pages.
 
 ### Data record profile: `Protein`
 
-In case of data records describing a single protein entity, a Bioschemas Protein 0.11 profile can be used:
+When data records describe a single protein entity, you can use a Bioschemas Protein 0.11 profile, as in the following example:
 {% highlight json linenos %}
 {
   "@context": "https://schema.org",
@@ -262,10 +284,11 @@ In case of data records describing a single protein entity, a Bioschemas Protein
 }
 {% endhighlight %}
 
-Note the presence of two `SequenceAnnotation` profiles. The first one (lines 30-50) shows how to annotate a protein region (in this case the whole protein) to an ontology term which has a numerical value. The second one (lines 51-84) shows how to apply an ontology term to a part of a protein (defined by `SequenceRange`).
+Note the presence of two `SequenceAnnotation` profiles.
+* the first one (lines 30-50) shows how to annotate a protein region (in this case the whole protein) to an ontology term which has a numerical value
+* the second one (lines 51-84) shows how to apply an ontology term to a part of a protein (defined by `SequenceRange`).
 
-Several proteins or other biochemical entities may be represented in a single data record. In case of an ensemble, such a record can be encoded as a list of multiple `Protein` profiles:
-
+When data records describe protein complexes, ensembles or other biochemical entities, you can use a list of multiple `Protein` profiles as in the following example:
 ```json
 {
   "mainEntity": {
@@ -280,10 +303,13 @@ Several proteins or other biochemical entities may be represented in a single da
   }
 }
 ```
+You are encouraged to credit a publication for all protein annotations described in data records by using a `ScholarlyArticle` schema.org type. An example can be seen in `Protein` profile, lines 80-83.
 
 ## 5. Web resource site map
 
-Web crawlers, validators, and scrapers must know what are the pages on a website in order to crawl it efficiently. A site map of a web resource is a list of all the pages that should be accessed by crawlers. Such a  site map can be produced by placing a sitemap file (named sitemap.xml) at the root of the domain. A simple XML sitemap example looks like this:
+For each of your resources, you are required to generate a **sitemap file**, a site map of your web resource listing all the pages accessible to crawlers, validators, or scrapers. This file will enable them to crawl your resource efficiently.
+
+To create your sitemap file, place a file named `sitemap.xml` at the root of the domain. A simple XML sitemap example looks like this:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -303,7 +329,7 @@ Web crawlers, validators, and scrapers must know what are the pages on a website
 </urlset>
 ```
 
-Sitemaps are limited to 50,000 URLs. Resources with a larger number of web pages (data records) or dynamic, single page applications can use a sitemap index file. Such a file can include 50,000 individual sitemaps bringing the overall number of accessible pages to more than a billion URLs.
+Sitemaps are limited to 50,000 URLs. If your resource has a higher number of web pages or data records, you should use a sitemap index file, which can include 50,000 individual sitemap. A sitemap index file example looks like this:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -319,4 +345,11 @@ Sitemaps are limited to 50,000 URLs. Resources with a larger number of web pages
 
 ## 6. Persistent identifiers for data records
 
-Bioschemas promotes the use of persistent identifiers for data records in life sciences. Web resources such as databases (registries, repositories) are encouraged to register a unique URI to all data records within the resource. The registration can be done by requesting a namespace in [Identifiers.org](https://identifiers.org/). A namespace uniquely identifies the data collection while a namespace suffix identifies the data record within the collection. The whole Identifiers.org URI is used throughout Bioschemas markup whenever possible (e.g. line 10 and 19 in the data record profile example).
+Bioschemas promotes the use of persistent identifiers for data records in life sciences. You are encouraged to register a unique URI to all data records within your resources.
+You can register your persistent identifiers by requesting a namespace in [Identifiers.org](https://identifiers.org/).
+
+Each persistent identifier has
+* a namespace which uniquely identifies the data collection
+* a namespace suffix, identifying the data record within the collection.
+
+Persistent identifiers are used throughout Bioschemas markup whenever possible (e.g. line 10 and 19 in the data record profile example).
