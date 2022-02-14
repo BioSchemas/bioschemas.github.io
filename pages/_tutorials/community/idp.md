@@ -288,6 +288,8 @@ Note the presence of two `SequenceAnnotation` profiles.
 * the first one (lines 30-50) shows how to annotate a protein region (in this case the whole protein) to an ontology term which has a numerical value
 * the second one (lines 51-84) shows how to apply an ontology term to a part of a protein (defined by `SequenceRange`).
 
+All data records (like the `Protein` record) must link back to one `dataset` profile with the use of `includedInDataset` property as shown in line 3. This will ensure the correct assignment of data records to one or more datasets.
+
 When data records describe protein complexes, ensembles or other biochemical entities, you can use a list of multiple `Protein` profiles as in the following example:
 ```json
 {
