@@ -7,7 +7,3 @@ def replaceDotsInFilename(filename):
     return str
 
 #### Main
-name = replaceDotsInFilename("ComputationalTool_v1.0-RELEASE.json")
-print(name)
-name = replaceDotsInFilename("Computational.Tool.json_v1.0-RELEASE.json")
-print(name)
