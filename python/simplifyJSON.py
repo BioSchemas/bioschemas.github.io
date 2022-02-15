@@ -7,3 +7,4 @@ def replaceDotsInFilename(filename):
     return str
 
 #### Main
+print("../_data/schemas/" + replaceDotsInFilename("ComputationalTool_v1-0-RELEASE.json"))
