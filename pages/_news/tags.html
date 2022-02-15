@@ -9,13 +9,15 @@ title: News Tags
 
 			{%- comment %}
 			=======================
-			Extracts all the tags from your posts and sort tags, so that you do not need to manually collect your tags to a place.
+			Extracts all the tags from your news and sort tags, so that you do not need to manually collect your tags to a place.
 			=======================
 			{%- endcomment %}
 			{%- assign rawtags = "" %}
-			{%- for post in site.posts %}
+			{%- for post in site.news %}
+			{%- if post.layout == 'post' %}
 			{%- assign ttags = post.tags | join:'|' | append:'|' %}
 			{%- assign rawtags = rawtags | append:ttags %}
+			{%- endif %}
 			{%- endfor %}
 			{%- assign rawtags = rawtags | split:'|' | sort %}
 
@@ -49,12 +51,12 @@ title: News Tags
 			</p>
 			{%- comment %}
 			=======================
-			List all posts with a certain tag.
+			List all news with a certain tag.
 			=======================
 			{%- endcomment %}
 			{%- for tag in tags %}
 			<h2 id="{{tag|slugify}}">{{tag}}</h2>
-			{%- for post in site.posts %}
+			{%- for post in site.news %}
 			{%- if post.tags contains tag %}
 			{% include post-snippet.html %}
 			{%- endif %}
