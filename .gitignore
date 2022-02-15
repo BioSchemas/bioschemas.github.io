@@ -7,3 +7,4 @@ _site/
 *.iml
 .jekyll-cache/
 *.pyc
+*.log
