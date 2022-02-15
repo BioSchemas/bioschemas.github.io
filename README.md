@@ -10,9 +10,9 @@ Since the website uses [GitHub pages](https://pages.github.com/) for its deploym
 
 ### Deploying the website locally
 
-It is possible to preview the website locally to preview changes. We recommend installing Ruby version 2.7.3 or earlier since recent version are not compatible with Jekyll. If you already have the correct Ruby installed on your machine, then the following files will allow you to get started by installing the relevant dependencies:
+It is possible to preview the website locally to preview changes. You need a Ruby installation in order to do so. Ruby version 2.7.* works out of the box well with Jekyll, more recent versions will need `bundle add webrick` to make it work. If you already have the correct Ruby installed on your machine, then the following files will allow you to get started by installing the relevant dependencies:
 
-- Install Jekyll and Dependencies: ```gem install jekyll bundler jekyll-redirect-from``` and ```gem install jekyll-sitemap```
+- Install Jekyll and Dependencies: ```gem install jekyll bundler ``` and ```gem install jekyll-sitemap jekyll-sitemap jekyll-gist jekyll-redirect-from```
 - Clone the repository: ```git clone https://github.com/Bioschemas/bioschemas.github.io.git```
 - Run the website: ```jekyll serve```
 
