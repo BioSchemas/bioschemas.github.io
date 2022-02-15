@@ -1,7 +1,6 @@
-# Import logging
+import json
 import logging
-# Import regex library
-import re
+import re # regex library
 
 ## Logging configuration
 logging.basicConfig(
@@ -9,8 +8,9 @@ logging.basicConfig(
     filemode='w',
     encoding='utf-8',
     format='%(asctime)s %(levelname)s: %(message)s',
-    level=logging.INFO)
+    level=logging.DEBUG)
 
+### GLOBAL CONSTANTS
 # Define location of JSON Schema files
 SCHEMA_LOC = "../_data/schemas/"
 
@@ -19,6 +19,30 @@ def replaceDotsInFilename(filename):
     str = re.sub('\.(?!json$)', '-', filename)
     return str
 
+def readJSONFile(filename):
+    logging.debug('Entering readJSONFile with %s' % filename)
+    f = open(filename)
+    data = json.load(f)
+    f.close()
+    logging.debug('Exiting readJSONFile – dictionary size %d' % len(data))
+    return data
+
+def writeJSONFile(data):
+    logging.debug('Entering writeJSONFile() with dictionary size %d' % len(data))
+    with open('test.json', 'w') as f:
+        json.dump(data, f)
+    f.close()
+    logging.debug('Exiting writeJSONFile')
+
 #### Main
 filename = SCHEMA_LOC + replaceDotsInFilename("ComputationalTool_v1-0-RELEASE.json")
 logging.info('Filename: %s' % filename)
+json_data = readJSONFile(filename)
+writeJSONFile(json_data)
+
+f = open('test.json')
+data = json.load(f)
+for key in data.keys():
+    logging.debug(key)
+    print (key)
+f.close()
