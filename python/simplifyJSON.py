@@ -27,9 +27,9 @@ def readJSONFile(filename):
     logging.debug('Exiting readJSONFile – dictionary size %d' % len(data))
     return data
 
-def writeJSONFile(data):
-    logging.debug('Entering writeJSONFile() with dictionary size %d' % len(data))
-    with open('test.json', 'w') as f:
+def writeJSONFile(data, filename):
+    logging.debug('Entering writeJSONFile() with dictionary size %d and filename %s' % (len(data), filename))
+    with open(filename, 'w') as f:
         json.dump(data, f)
     f.close()
     logging.debug('Exiting writeJSONFile')
@@ -38,7 +38,7 @@ def writeJSONFile(data):
 filename = SCHEMA_LOC + replaceDotsInFilename("ComputationalTool_v1-0-RELEASE.json")
 logging.info('Filename: %s' % filename)
 json_data = readJSONFile(filename)
-writeJSONFile(json_data)
+writeJSONFile(json_data, 'test.json')
 
 f = open('test.json')
 data = json.load(f)
