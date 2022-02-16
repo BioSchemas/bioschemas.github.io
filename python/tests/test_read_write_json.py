@@ -81,6 +81,7 @@ class TestReadWriteJSONFile(unittest.TestCase):
         print(graph_data)
         keyList = list(graph_data[0].keys())
         self.assertTrue('jsonld-id' in keyList, 'jsonld-id not in keys')
+        self.assertTrue('jsonld-validation' in keyList, 'jsonld-validation not in keys')
 
 if __name__ == "__main__":
     unittest.main()
