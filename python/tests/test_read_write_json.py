@@ -6,9 +6,9 @@ from simplifyJSON import readJSONFile, writeJSONFile
 class TestReadWriteJSONFile(unittest.TestCase):
     def test_readJSONFile(self):
         """
-        Test ability to read a JSON file
+        Test ability to read a JSON file from GitHub
         """
-        result = readJSONFile('./tests/test_file.json')
+        result = readJSONFile('https://raw.githubusercontent.com/BioSchemas/bioschemas.github.io/render-dde-profile-json/python/tests/test_file.json')
         self.assertEqual(len(result), 2)
         keyList = list(result.keys())
         self.assertEqual(keyList[0], '@context')

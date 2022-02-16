@@ -1,6 +1,7 @@
 import json
 import logging
 import re # regex library
+import requests
 
 ## Logging configuration
 logging.basicConfig(
@@ -11,19 +12,20 @@ logging.basicConfig(
     level=logging.DEBUG)
 
 ### GLOBAL CONSTANTS
-# Define location of JSON Schema files
-SCHEMA_LOC = "../_data/schemas/"
+# Define location to read DDE generated JSON files
+SCHEMA_SOURCE = "https://raw.githubusercontent.com/BioSchemas/specifications/master/"
+# Define location to write simplified JSON Schema files
+SCHEMA_TARGET = "../_data/schemas/"
 
 def replaceDotsInFilename(filename):
     # Replace `.` in filename with `-` except for final `.json`
     str = re.sub('\.(?!json$)', '-', filename)
     return str
 
-def readJSONFile(filename):
-    logging.debug('Entering readJSONFile with %s' % filename)
-    f = open(filename)
-    data = json.load(f)
-    f.close()
+def readJSONFile(url):
+    logging.debug('Entering readJSONFile from %s' % url)
+    r = requests.get(url)
+    data = json.loads(r.text)
     logging.debug('Exiting readJSONFile – dictionary size %d' % len(data))
     return data
 
@@ -35,14 +37,9 @@ def writeJSONFile(data, filename):
     logging.debug('Exiting writeJSONFile')
 
 #### Main
-filename = SCHEMA_LOC + replaceDotsInFilename("ComputationalTool_v1-0-RELEASE.json")
-logging.info('Filename: %s' % filename)
-json_data = readJSONFile(filename)
-writeJSONFile(json_data, 'test.json')
-
-f = open('test.json')
-data = json.load(f)
-for key in data.keys():
-    logging.debug(key)
-    print (key)
-f.close()
+profile = "ComputationalTool"
+schema_file = "ComputationalTool_v1.0-RELEASE.json"
+json_data = readJSONFile(SCHEMA_SOURCE + profile + "/jsonld/" + schema_file)
+new_filename = SCHEMA_TARGET + replaceDotsInFilename(schema_file)
+logging.info('Filename: %s' % new_filename)
+# writeJSONFile(json_data, 'test.json')
