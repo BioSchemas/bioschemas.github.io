@@ -9,7 +9,7 @@ logging.basicConfig(
     filemode='w',
     encoding='utf-8',
     format='%(asctime)s %(levelname)s: %(message)s',
-    level=logging.DEBUG)
+    level=logging.INFO)
 
 ### GLOBAL CONSTANTS
 # Define location to read DDE generated JSON files
@@ -80,7 +80,11 @@ def replaceJSONLDKey(data):
 #### Main
 profile = "ComputationalTool"
 schema_file = "ComputationalTool_v1.0-RELEASE.json"
-json_data = readJSONFile(SCHEMA_SOURCE + profile + "/jsonld/" + schema_file)
+url = SCHEMA_SOURCE + profile + "/jsonld/" + schema_file
+logging.info('Retrieving file from %s' % url)
+json_data = readJSONFile(url)
+logging.info('Replacing JSON-LD keys')
+json_data = replaceJSONLDKey(json_data)
 new_filename = SCHEMA_TARGET + replaceDotsInFilename(schema_file)
-logging.info('Filename: %s' % new_filename)
-# writeJSONFile(json_data, 'test.json')
+logging.info('Writing data to %s' % new_filename)
+writeJSONFile(json_data, new_filename)
