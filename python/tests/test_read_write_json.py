@@ -73,15 +73,25 @@ class TestReadWriteJSONFile(unittest.TestCase):
                 }]}
 
         result = replaceJSONLDKey(data)
-        print(data)
         keyList = list(result.keys())
         self.assertEqual(keyList[0], 'jsonld-context')
         self.assertEqual(keyList[1], 'jsonld-graph')
+
         graph_data = result.get('jsonld-graph')
-        print(graph_data)
         keyList = list(graph_data[0].keys())
         self.assertTrue('jsonld-id' in keyList, 'jsonld-id not in keys')
+        self.assertTrue('jsonld-type' in keyList, 'jsonld-type not in keys')
         self.assertTrue('jsonld-validation' in keyList, 'jsonld-validation not in keys')
+
+        subKeyList = list(graph_data[0].get('jsonld-validation'))
+        self.assertTrue('jsonld-schema' in subKeyList, 'jsonld-schema not in keys')
+        self.assertTrue('input' in subKeyList, 'input not in keys – should be unchanged from source data')
+        self.assertTrue('type' in subKeyList, 'type not in keys – should be unchanged from source data')
+
+        self.assertTrue('jsonld-ref' in graph_data[0].get('jsonld-validation').get('input').get('oneOf')[0].keys(), 'jsonld-ref not in keys')
+        self.assertTrue('rdfs-comment' in keyList, 'rdfs-comment not in keys')
+        self.assertTrue('rdfs-label' in keyList, 'rdfs-label not in keys')
+        self.assertTrue('rdfs-subClassOf' in keyList, 'rdfs-subClassOf not in keys')
 
 if __name__ == "__main__":
     unittest.main()

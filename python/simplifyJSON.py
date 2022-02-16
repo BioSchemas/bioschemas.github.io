@@ -65,7 +65,13 @@ def replaceJSONLDKey(data):
     replacementStrings = {'@context': 'jsonld-context',
                         '@graph': 'jsonld-graph',
                         '@id': 'jsonld-id',
-                        '$validation': 'jsonld-validation'}
+                        '@type': 'jsonld-type',
+                        '$validation': 'jsonld-validation',
+                        '$schema': 'jsonld-schema',
+                        '$ref': 'jsonld-ref',
+                        'rdfs:comment': 'rdfs-comment',
+                        'rdfs:label': 'rdfs-label',
+                        'rdfs:subClassOf': 'rdfs-subClassOf'}
     for k, v in replacementStrings.items():
         data = replace_nested_json_key(data, k, v)
     logging.debug('Exiting replaceJSONLDKey() with ' + str(data))
