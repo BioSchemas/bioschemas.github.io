@@ -2,7 +2,7 @@ import unittest
 import unittest.mock as unitmock
 
 import os
-from simplifyJSON import readJSONFile, writeJSONFile
+from simplifyJSON import readJSONFile, writeJSONFile, replaceJSONLDKey
 
 class TestReadWriteJSONFile(unittest.TestCase):
     @unitmock.patch('simplifyJSON.requests.get')
@@ -41,7 +41,18 @@ class TestReadWriteJSONFile(unittest.TestCase):
         self.assertTrue(os.path.exists(filename))
         os.remove(filename)
 
-    # TODO: Write more tests
+    def test_replaceJSONLDKey(self):
+        """
+        Test that json-ld strings are converted to regular keys
+        """
+        # Load in test data
+        data = {"@context":{"schema":"http://schema.org/","rdf":"http://www.w3.org/1999/02/22-rdf-syntax-ns#","rdfs":"http://www.w3.org/2000/01/rdf-schema#","bioschemas":"http://discovery.biothings.io/view/bioschemas/"},"@graph":[{"@id":"bioschemas:ComputationalTool","@type":"rdfs:Class","rdfs:comment":"The Life Science Tools specification provides a way to describe bioscience tools and software on the World Wide Web. It defines a set of metadata and vocabularies, built on top of existing technologies and standards, that can be used to represent such tools in Web pages and applications. The goal of the specification is to make it easier to discover. Version 1.0-RELEASE.","rdfs:label":"ComputationalTool","rdfs:subClassOf":{"@id":"schema:SoftwareApplication"},"$validation":{"$schema":"http://json-schema.org/draft-07/schema#","type":"object","input":{"description":"Specification of a consumed input.","oneOf":[{"$ref":"#/definitions/formalParameter"},{"type":"array","items":{"$ref":"#/definitions/formalParameter"}}]}}}]}
+
+        result = replaceJSONLDKey(data)
+        keyList = list(result.keys())
+        print(keyList)
+        self.assertEqual(keyList[0], 'jsonld-context')
+        self.assertEqual(keyList[1], 'jsonld-graph')
 
 if __name__ == "__main__":
     unittest.main()

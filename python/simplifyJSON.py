@@ -43,6 +43,13 @@ def writeJSONFile(data, filename):
     f.close()
     logging.debug('Exiting writeJSONFile')
 
+def replaceJSONLDKey(data):
+    logging.debug('Entering replaceJSONLDKey() with ' + str(data))
+    data['jsonld-context'] = data.pop('@context')
+    data['jsonld-graph'] = data.pop('@graph')
+    logging.debug('Exiting replaceJSONLDKey() with ' + str(data))
+    return data
+
 #### Main
 profile = "ComputationalTool"
 schema_file = "ComputationalTool_v1.0-RELEASE.json"
