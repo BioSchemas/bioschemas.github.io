@@ -24,10 +24,17 @@ def replaceDotsInFilename(filename):
 
 def readJSONFile(url):
     logging.debug('Entering readJSONFile from %s' % url)
-    r = requests.get(url)
-    data = json.loads(r.text)
-    logging.debug('Exiting readJSONFile – dictionary size %d' % len(data))
-    return data
+    try:
+        r = requests.get(url)
+        if r.status_code == 200:
+            data = json.loads(r.text)
+            logging.debug('Exiting readJSONFile – dictionary size %d' % len(data))
+            return data
+        else:
+            logging.error('Got a %d error code from %s' % (r.status_code, url))
+            raise Exception('Got a %d error code from %s' % (r.status_code, url))
+    except requests.exceptions.RequestException as e:
+        raise SystemExit(e)
 
 def writeJSONFile(data, filename):
     logging.debug('Entering writeJSONFile() with dictionary size %d and filename %s' % (len(data), filename))
