@@ -43,10 +43,30 @@ def writeJSONFile(data, filename):
     f.close()
     logging.debug('Exiting writeJSONFile')
 
+def replace_nested_json_key(obj, key, newkey):
+    """Recursively replace key/value in nested JSON."""
+    logging.debug("Entering replace_nested_json_key() with key: %s, newkey: %s, and dict:\n%s" % (key, newkey, str(obj)))
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            if isinstance(v, (dict, list)):
+                replace_nested_json_key(v, key, newkey)
+        if key in obj:
+            logging.debug('Replacing %s with %s' % (key, newkey))
+            obj[newkey] = obj.pop(key)
+    elif isinstance(obj, list):
+        for item in obj:
+            replace_nested_json_key(item, key, newkey)
+
+    logging.debug("Exiting replace_nested_json_key() with key: %s, newkey: %s, and dict:\n%s" % (key, newkey, str(obj)))
+    return obj
+
 def replaceJSONLDKey(data):
     logging.debug('Entering replaceJSONLDKey() with ' + str(data))
-    data['jsonld-context'] = data.pop('@context')
-    data['jsonld-graph'] = data.pop('@graph')
+    replacementStrings = {'@context': 'jsonld-context',
+                        '@graph': 'jsonld-graph',
+                        '@id': 'jsonld-id'}
+    for k, v in replacementStrings.items():
+        data = replace_nested_json_key(data, k, v)
     logging.debug('Exiting replaceJSONLDKey() with ' + str(data))
     return data
 
