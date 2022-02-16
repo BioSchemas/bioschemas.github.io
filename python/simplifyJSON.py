@@ -39,7 +39,7 @@ def readJSONFile(url):
 def writeJSONFile(data, filename):
     logging.debug('Entering writeJSONFile() with dictionary size %d and filename %s' % (len(data), filename))
     with open(filename, 'w') as f:
-        json.dump(data, f)
+        json.dump(data, f, indent=4)
     f.close()
     logging.debug('Exiting writeJSONFile')
 
