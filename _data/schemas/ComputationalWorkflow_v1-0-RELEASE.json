@@ -1,0 +1,992 @@
+{
+    "jsonld-context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+    },
+    "jsonld-graph": [
+        {
+            "jsonld-id": "bioschemas:ComputationalWorkflow",
+            "jsonld-type": "rdfs:Class",
+            "jsonld-validation": {
+                "type": "object",
+                "properties": {
+                    "input": {
+                        "description": "An input required to use the computational workflow (eg. Excel spreadsheet, BAM file)",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/formalParameter"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/formalParameter"
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "description": "An output produced by the workflow",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/formalParameter"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/formalParameter"
+                                }
+                            }
+                        ]
+                    },
+                    "creativeWorkStatus": {
+                        "description": "The status of a creative work in terms of its stage in a lifecycle. Example terms include Incomplete, Draft, Published, Obsolete. Some organizations define a set of terms for the stages of their publication lifecycle.",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/definedTerm"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/definedTerm"
+                                }
+                            }
+                        ]
+                    },
+                    "documentation": {
+                        "description": "Documentation describing the ComputationalWorkflow and its use.",
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/creativeWork"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/creativeWork"
+                                }
+                            }
+                        ]
+                    },
+                    "funding": {
+                        "description": "The funding for the workflow",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/grant"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/grant"
+                                }
+                            }
+                        ]
+                    },
+                    "maintainer": {
+                        "description": " maintainer of a Dataset, software package (SoftwareApplication), or other Project. A maintainer is a Person or Organization that manages contributions to, and/or publication of, some (typically complex) artifact. It is common for distributions of software and data to be based on \u201cupstream\u201d sources. When maintainer is applied to a specific version of something e.g. a particular version or packaging of a Dataset, it is always possible that the upstream source has a different maintainer. The isBasedOn property can be used to indicate such relationships between datasets to make the different maintenance roles clear. Similarly in the case of software, a package may have dedicated maintainers working on integration into software distributions such as Ubuntu, as well as upstream maintainers of the underlying work.",
+                        "anyOf": [
+                            {
+                                "jsonld-ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/person"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/organization"
+                                }
+                            }
+                        ]
+                    },
+                    "softwareRequirements": {
+                        "description": "Renaming schema.org/requirements as softwareRequirements. Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime). Supersedes requirements. ",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "conditionsOfAccess": {
+                        "description": "Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an ArchiveComponent held by an ArchiveOrganization. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language.  For example \u201cAvailable by appointment from the Reading Room\u201d or \u201cAccessible only from logged-in accounts \u201c.",
+                        "type": "string"
+                    },
+                    "targetProduct": {
+                        "description": "Target Operating System / Product to which the code applies.  If applies to several versions, just the product name can be used.",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/softwareApplication"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/softwareApplication"
+                                }
+                            }
+                        ]
+                    },
+                    "programmingLanguage": {
+                        "description": "The computer programming language.",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/computerLanguage"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/computerLanguage"
+                                }
+                            }
+                        ]
+                    },
+                    "runtimePlatform": {
+                        "description": "Runtime platform or script interpreter dependencies (Example - Java v1, Python2.3, .Net Framework 3.0).",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "alternateName": {
+                        "description": "An alias for the item.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "description": {
+                        "description": "A description of the item.",
+                        "type": "string"
+                    },
+                    "identifier": {
+                        "description": "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details.",
+                        "anyOf": [
+                            {
+                                "jsonld-ref": "#/definitions/propertyValue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/propertyValue"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "image": {
+                        "description": "An image of the item. This can be a <a class=\"localLink\" href=\"http://schema.org/URL\">URL</a> or a fully described <a class=\"localLink\" href=\"http://schema.org/ImageObject\">ImageObject</a>.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/imageObject"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/imageObject"
+                                }
+                            }
+                        ]
+                    },
+                    "name": {
+                        "description": "The name of the item.",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "URL of the item.",
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "citation": {
+                        "description": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/creativeWork"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/creativeWork"
+                                }
+                            }
+                        ]
+                    },
+                    "contributor": {
+                        "description": "A secondary contributor to the CreativeWork or Event.",
+                        "anyOf": [
+                            {
+                                "jsonld-ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/person"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/organization"
+                                }
+                            }
+                        ]
+                    },
+                    "creator": {
+                        "description": "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
+                        "anyOf": [
+                            {
+                                "jsonld-ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/person"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/organization"
+                                }
+                            }
+                        ]
+                    },
+                    "dateCreated": {
+                        "description": "The date on which the CreativeWork was created or the item was added to a DataFeed.",
+                        "format": "date",
+                        "type": "string"
+                    },
+                    "dateModified": {
+                        "description": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+                        "format": "date",
+                        "type": "string"
+                    },
+                    "datePublished": {
+                        "description": "Date of first broadcast/publication.",
+                        "format": "date",
+                        "type": "string"
+                    },
+                    "encodingFormat": {
+                        "description": "Media type typically expressed using a MIME format (see <a href=\"http://www.iana.org/assignments/media-types/media-types.xhtml\">IANA site</a> and <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types\">MDN reference</a>) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).<br/><br/>\n\nIn cases where a <a class=\"localLink\" href=\"http://schema.org/CreativeWork\">CreativeWork</a> has several media type representations, <a class=\"localLink\" href=\"http://schema.org/encoding\">encoding</a> can be used to indicate each <a class=\"localLink\" href=\"http://schema.org/MediaObject\">MediaObject</a> alongside particular <a class=\"localLink\" href=\"http://schema.org/encodingFormat\">encodingFormat</a> information.<br/><br/>\n\nUnregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "hasPart": {
+                        "description": "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/creativeWork"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/creativeWork"
+                                }
+                            }
+                        ]
+                    },
+                    "isBasedOn": {
+                        "description": "A resource from which this work is derived or from which it is a modification or adaption.",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/product"
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/creativeWork"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ]
+                    },
+                    "keywords": {
+                        "description": "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "license": {
+                        "description": "A license document that applies to this content, typically indicated by URL.",
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/creativeWork"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/creativeWork"
+                                }
+                            }
+                        ]
+                    },
+                    "producer": {
+                        "description": "The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.).",
+                        "anyOf": [
+                            {
+                                "jsonld-ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/person"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/organization"
+                                }
+                            }
+                        ]
+                    },
+                    "publisher": {
+                        "description": "The publisher of the creative work.",
+                        "anyOf": [
+                            {
+                                "jsonld-ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/person"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/organization"
+                                }
+                            }
+                        ]
+                    },
+                    "sdPublisher": {
+                        "description": "Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The\n<a class=\"localLink\" href=\"http://schema.org/sdPublisher\">sdPublisher</a> property helps make such practices more explicit.",
+                        "anyOf": [
+                            {
+                                "jsonld-ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/person"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/organization"
+                                }
+                            }
+                        ]
+                    },
+                    "version": {
+                        "description": "The version of the CreativeWork embodied by a specified resource.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "number"
+                            }
+                        ]
+                    }
+                },
+                "required": [
+                    "input",
+                    "output",
+                    "programmingLanguage",
+                    "name",
+                    "url",
+                    "creator",
+                    "dateCreated",
+                    "license",
+                    "sdPublisher",
+                    "version"
+                ],
+                "recommended": [
+                    "citation",
+                    "contributor",
+                    "creativeWorkStatus",
+                    "description",
+                    "documentation",
+                    "funding",
+                    "hasPart",
+                    "isBasedOn",
+                    "keywords",
+                    "maintainer",
+                    "producer",
+                    "publisher",
+                    "runtimePlatform",
+                    "softwareRequirements",
+                    "targetProduct"
+                ],
+                "optional": [
+                    "alternateName",
+                    "conditionsOfAccess",
+                    "dateModified",
+                    "datePublished",
+                    "encodingFormat",
+                    "identifier",
+                    "image"
+                ],
+                "definitions": {
+                    "formalParameter": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "bioschemas:FormalParameter"
+                    },
+                    "grant": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "sponsor": {
+                                "oneOf": [
+                                    {
+                                        "jsonld-ref": "#/definitions/organization"
+                                    },
+                                    {
+                                        "jsonld-ref": "#/definitions/person"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ],
+                        "jsonld-type": "Grant"
+                    },
+                    "person": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "affiliation": {
+                                "jsonld-ref": "#/definitions/organization"
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ],
+                        "jsonld-type": "Person"
+                    },
+                    "organization": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "alternateName": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "jsonld-type": "Organization"
+                    },
+                    "softwareApplication": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "SoftwareApplication"
+                    },
+                    "propertyValue": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "valueReference": {
+                                "oneOf": [
+                                    {
+                                        "jsonld-ref": "#/definitions/categoryCode"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "jsonld-ref": "#/definitions/categoryCode"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ],
+                        "jsonld-type": "PropertyValue"
+                    },
+                    "categoryCode": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ],
+                        "jsonld-type": "CategoryCode"
+                    },
+                    "creativeWork": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "CreativeWork"
+                    },
+                    "product": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "Product"
+                    },
+                    "definedTerm": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "termCode": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "DefinedTerm"
+                    },
+                    "computerLanguage": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "ComputerLanguage"
+                    },
+                    "imageObject": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "ImageObject"
+                    }
+                },
+                "jsonld-schema": "http://json-schema.org/draft-07/schema#"
+            },
+            "rdfs-comment": "A computational workflow consists of an orchestrated and repeatable pattern of activity enabled by the systematic organization of resources into processes that transform materials, provide services, or process information (source Wikipedia.org). It is executed by a computational process and is thus distinct from laboratory or business workflows. version 1.0-RELEASE",
+            "rdfs-label": "ComputationalWorkflow",
+            "rdfs-subClassOf": {
+                "jsonld-id": "schema:SoftwareSourceCode"
+            }
+        },
+        {
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:ComputationalWorkflow"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "bioschemas:FormalParameter"
+                }
+            ],
+            "jsonld-id": "bioschemas:input",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "An input required to use the computational workflow (eg. Excel spreadsheet, BAM file)",
+            "rdfs-label": "input"
+        },
+        {
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:ComputationalWorkflow"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "bioschemas:FormalParameter"
+                }
+            ],
+            "jsonld-id": "bioschemas:output",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "An output produced by the workflow",
+            "rdfs-label": "output"
+        },
+        {
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:ComputationalWorkflow"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Text"
+                },
+                {
+                    "jsonld-id": "schema:DefinedTerm"
+                }
+            ],
+            "jsonld-id": "bioschemas:creativeWorkStatus",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "The status of a creative work in terms of its stage in a lifecycle. Example terms include Incomplete, Draft, Published, Obsolete. Some organizations define a set of terms for the stages of their publication lifecycle.",
+            "rdfs-label": "creativeWorkStatus"
+        },
+        {
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:ComputationalWorkflow"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "schema:CreativeWork"
+                },
+                {
+                    "jsonld-id": "schema:URL"
+                }
+            ],
+            "jsonld-id": "bioschemas:documentation",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "Documentation describing the ComputationalWorkflow and its use.",
+            "rdfs-label": "documentation"
+        },
+        {
+            "schema:sameAs": {
+                "jsonld-id": "schema:funding"
+            },
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:ComputationalWorkflow"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Grant"
+                }
+            ],
+            "jsonld-id": "bioschemas:funding",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "The funding for the workflow",
+            "rdfs-label": "funding"
+        },
+        {
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:ComputationalWorkflow"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Person"
+                },
+                {
+                    "jsonld-id": "schema:Organization"
+                }
+            ],
+            "jsonld-id": "bioschemas:maintainer",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": " maintainer of a Dataset, software package (SoftwareApplication), or other Project. A maintainer is a Person or Organization that manages contributions to, and/or publication of, some (typically complex) artifact. It is common for distributions of software and data to be based on \u201cupstream\u201d sources. When maintainer is applied to a specific version of something e.g. a particular version or packaging of a Dataset, it is always possible that the upstream source has a different maintainer. The isBasedOn property can be used to indicate such relationships between datasets to make the different maintenance roles clear. Similarly in the case of software, a package may have dedicated maintainers working on integration into software distributions such as Ubuntu, as well as upstream maintainers of the underlying work.",
+            "rdfs-label": "maintainer"
+        },
+        {
+            "schema:sameAs": {
+                "jsonld-id": "schema:softwareRequirements"
+            },
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:ComputationalWorkflow"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Text"
+                },
+                {
+                    "jsonld-id": "schema:URL"
+                }
+            ],
+            "jsonld-id": "bioschemas:softwareRequirements",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "Renaming schema.org/requirements as softwareRequirements. Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime). Supersedes requirements. ",
+            "rdfs-label": "softwareRequirements"
+        },
+        {
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:ComputationalWorkflow"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Text"
+                }
+            ],
+            "jsonld-id": "bioschemas:conditionsOfAccess",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an ArchiveComponent held by an ArchiveOrganization. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language.  For example \u201cAvailable by appointment from the Reading Room\u201d or \u201cAccessible only from logged-in accounts \u201c.",
+            "rdfs-label": "conditionsOfAccess"
+        }
+    ]
+}

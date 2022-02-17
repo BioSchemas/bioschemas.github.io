@@ -1,0 +1,355 @@
+{
+    "jsonld-context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+    },
+    "jsonld-graph": [
+        {
+            "jsonld-id": "bioschemas:DataCatalog",
+            "jsonld-type": "rdfs:Class",
+            "jsonld-validation": {
+                "type": "object",
+                "properties": {
+                    "dataset": {
+                        "description": "A dataset contained in this catalog.",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/datasetObject"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/datasetObject"
+                                }
+                            }
+                        ]
+                    },
+                    "alternateName": {
+                        "description": "An alias for the item.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "description": {
+                        "description": "A description of the item.",
+                        "type": "string"
+                    },
+                    "identifier": {
+                        "description": "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details.",
+                        "anyOf": [
+                            {
+                                "jsonld-ref": "#/definitions/propertyValue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/propertyValue"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "name": {
+                        "description": "The name of the item.",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "URL of the item.",
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "about": {
+                        "description": "The subject matter of the content.",
+                        "type": "string"
+                    },
+                    "citation": {
+                        "description": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/creativeWork"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/creativeWork"
+                                }
+                            }
+                        ]
+                    },
+                    "dateCreated": {
+                        "description": "The date on which the CreativeWork was created or the item was added to a DataFeed.",
+                        "format": "date",
+                        "type": "string"
+                    },
+                    "dateModified": {
+                        "description": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+                        "format": "date",
+                        "type": "string"
+                    },
+                    "encodingFormat": {
+                        "description": "Media type typically expressed using a MIME format (see <a href=\"http://www.iana.org/assignments/media-types/media-types.xhtml\">IANA site</a> and <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types\">MDN reference</a>) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).<br/><br/>\n\nIn cases where a <a class=\"localLink\" href=\"http://schema.org/CreativeWork\">CreativeWork</a> has several media type representations, <a class=\"localLink\" href=\"http://schema.org/encoding\">encoding</a> can be used to indicate each <a class=\"localLink\" href=\"http://schema.org/MediaObject\">MediaObject</a> alongside particular <a class=\"localLink\" href=\"http://schema.org/encodingFormat\">encodingFormat</a> information.<br/><br/>\n\nUnregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "keywords": {
+                        "description": "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "license": {
+                        "description": "A license document that applies to this content, typically indicated by URL.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/creativeWork"
+                            }
+                        ]
+                    },
+                    "provider": {
+                        "description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.",
+                        "anyOf": [
+                            {
+                                "jsonld-ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/person"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/organization"
+                                }
+                            }
+                        ]
+                    },
+                    "sourceOrganization": {
+                        "description": "The Organization on whose behalf the creator was working.",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/organization"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "required": [
+                    "description",
+                    "name",
+                    "url",
+                    "keywords",
+                    "provider"
+                ],
+                "recommended": [
+                    "about",
+                    "alternateName",
+                    "citation",
+                    "dataset",
+                    "dateCreated",
+                    "identifier",
+                    "license",
+                    "sourceOrganization"
+                ],
+                "optional": [
+                    "dateModified",
+                    "encodingFormat"
+                ],
+                "definitions": {
+                    "person": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "affiliation": {
+                                "jsonld-ref": "#/definitions/organization"
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ],
+                        "jsonld-type": "Person"
+                    },
+                    "organization": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ],
+                        "jsonld-type": "Organization"
+                    },
+                    "datasetObject": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "keywords": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "url",
+                            "description",
+                            "keywords",
+                            "identifier"
+                        ],
+                        "jsonld-type": "Dataset"
+                    },
+                    "creativeWork": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "CreativeWork"
+                    },
+                    "propertyValue": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "PropertyValue"
+                    }
+                },
+                "jsonld-schema": "http://json-schema.org/draft-07/schema#"
+            },
+            "rdfs-comment": "A guide for how to describe data catalogs/repositories in the life-sciences using Schema.org-like annotation. Version 0.3-RELEASE-2019_07_01",
+            "rdfs-label": "DataCatalog",
+            "rdfs-subClassOf": {
+                "jsonld-id": "schema:DataCatalog"
+            }
+        }
+    ]
+}

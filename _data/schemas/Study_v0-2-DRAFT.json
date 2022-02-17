@@ -1,0 +1,801 @@
+{
+    "jsonld-context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "ppeo": "http://purl.org/ppeo/PPEO.owl#"
+    },
+    "jsonld-graph": [
+        {
+            "schema:schemaVersion": [
+                "https://bioschemas.org/profiles/Study/0.2-DRAFT"
+            ],
+            "jsonld-id": "bioschemas:Study",
+            "jsonld-type": "rdfs:Class",
+            "jsonld-validation": {
+                "type": "object",
+                "properties": {
+                    "about": {
+                        "description": "Use to link to the Protein, Gene, etc that the study is about The subject matter of the content.\nInverse property: subjectOf.",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/thing"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/thing"
+                                }
+                            }
+                        ]
+                    },
+                    "additionalProperty": {
+                        "description": "Used to provide arbirary properties of a study. A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/propertyvalue"
+                                }
+                            }
+                        ]
+                    },
+                    "author": {
+                        "description": "Used to indicate the person(s) or organizations that conducted the Study. Please use creator to indicate the Research project The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/organization"
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/person"
+                            }
+                        ]
+                    },
+                    "citation": {
+                        "description": " A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "creator": {
+                        "description": "Used to specify the research project that created the study. Please use author to indicate the organisation, or individuals that conducted the study. The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
+                        "anyOf": [
+                            {
+                                "jsonld-ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/person"
+                                }
+                            }
+                        ]
+                    },
+                    "dateCreated": {
+                        "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "date"
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/datetime"
+                            }
+                        ]
+                    },
+                    "datePublished": {
+                        "description": " Date of first broadcast/publication.",
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "description": {
+                        "description": " A description of the item.",
+                        "type": "string"
+                    },
+                    "endDate": {
+                        "description": "Used to indicate the end date of the study. (Extension of existing schema.org property) The end date and time of the item (in <a href=\"http://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 date format</a>).",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "date"
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/datetime"
+                            }
+                        ]
+                    },
+                    "identifier": {
+                        "description": " The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ]
+                    },
+                    "isPartOf": {
+                        "description": "Used to indicate the project that the study is a part of. Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of. Inverse property: hasPart.",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ]
+                    },
+                    "keywords": {
+                        "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "description": " The name of the item.",
+                        "type": "string"
+                    },
+                    "hasGrowthChamber": {
+                        "description": "The kind of growth facility used in a plant study has growth facility",
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "relatedStudy": {
+                        "description": " A study that is related to this one.",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/study"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/study"
+                                }
+                            }
+                        ]
+                    },
+                    "startDate": {
+                        "description": "Used to indicate the start date of the study. (Extension of existing schema.org property) The start date and time of the item (in <a href=\"http://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 date format</a>).",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "date"
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/datetime"
+                            }
+                        ]
+                    },
+                    "studyDomain": {
+                        "description": "For example, in the life sciences  we could have\nFunctional Genomics: http://edamontology.org/topic_0085\nProtemics: http://edamontology.org/topic_0121 Define the domain of the study. For example, the domain could be astrophysics, functional genomics or earth science. Those domains can also have an ontology reference.",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ]
+                    },
+                    "studyLocation": {
+                        "description": "(Reuse of property from MedicalStudy; Expected types extended.) The location in which the study is taking/took place.",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/administrativearea"
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/place"
+                            }
+                        ]
+                    },
+                    "studyProcess": {
+                        "description": "For example, in the life sciences  we could have \nRNA-seq of coding RNA from single cells: http://www.ebi.ac.uk/efo/EFO_0005684\ncase control design: http://www.ebi.ac.uk/efo/EFO_0001427 A process performed as part of an experiment or wider study, i.e. intentionally designed.\nThese processes can have ontology URL attached to.",
+                        "anyOf": [
+                            {
+                                "jsonld-ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/propertyvalue"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "studySubject": {
+                        "description": "(Reuse of property from MedicalStudy; Expected types extended.) A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.",
+                        "anyOf": [
+                            {
+                                "jsonld-ref": "#/definitions/biochementity"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/biochementity"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/medicalentity"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/medicalentity"
+                                }
+                            }
+                        ]
+                    },
+                    "url": {
+                        "description": " URL of the item.",
+                        "type": "string",
+                        "format": "uri"
+                    }
+                },
+                "required": [
+                    "author",
+                    "datePublished",
+                    "description",
+                    "identifier",
+                    "name",
+                    "studyDomain",
+                    "studySubject"
+                ],
+                "recommended": [
+                    "about",
+                    "additionalProperty",
+                    "citation",
+                    "creator",
+                    "dateCreated",
+                    "endDate",
+                    "keywords",
+                    "startDate",
+                    "studyLocation",
+                    "studyProcess",
+                    "url"
+                ],
+                "optional": [
+                    "isPartOf",
+                    "hasGrowthChamber",
+                    "relatedStudy"
+                ],
+                "definitions": {
+                    "thing": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "schema:Thing"
+                    },
+                    "propertyvalue": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "jsonld-ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "jsonld-ref": "#/definitions/categorycode"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ],
+                        "jsonld-type": "PropertyValue"
+                    },
+                    "categorycode": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ],
+                        "jsonld-type": "CategoryCode"
+                    },
+                    "organization": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "legalName": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "sameAs": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "jsonld-type": "Organization"
+                    },
+                    "person": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "mainEntityOfPage": {
+                                "anyOf": [
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "uri"
+                                        }
+                                    },
+                                    {
+                                        "jsonld-ref": "#/definitions/creativework"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "jsonld-ref": "#/definitions/creativework"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ],
+                        "jsonld-type": "Person"
+                    },
+                    "creativework": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "CreativeWork"
+                    },
+                    "datetime": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "schema:DateTime"
+                    },
+                    "definedterm": {
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "termCode": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "inDefinedTermSet": {
+                                "jsonld-ref": "#/definitions/definedtermset"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "DefinedTerm"
+                    },
+                    "definedtermset": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "DefinedTermSet"
+                    },
+                    "study": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "bioschemas:Study"
+                    },
+                    "place": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "address": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "jsonld-ref": "#/definitions/postaladdress"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "jsonld-type": "Place"
+                    },
+                    "administrativearea": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "schema:AdministrativeArea"
+                    },
+                    "biochementity": {
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "bioschemas:BioChemEntity"
+                    },
+                    "medicalentity": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "schema:MedicalEntity"
+                    },
+                    "postaladdress": {
+                        "type": "object",
+                        "properties": {
+                            "addressCountry": {
+                                "type": "string"
+                            },
+                            "addressLocality": {
+                                "type": "string"
+                            },
+                            "addressRegion": {
+                                "type": "string"
+                            },
+                            "postOfficeBoxNumber": {
+                                "type": "string"
+                            },
+                            "postalCode": {
+                                "type": "string"
+                            },
+                            "streetAddress": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "schema:PostalAddress"
+                    }
+                },
+                "jsonld-schema": "http://json-schema.org/draft-07/schema#"
+            },
+            "rdfs-comment": " This Study profile presents the markup when describing a Study Version: 0.2-DRAFT",
+            "rdfs-label": "Study",
+            "rdfs-subClassOf": {
+                "jsonld-id": "schema:CreativeWork"
+            }
+        },
+        {
+            "schema:sameAs": {
+                "jsonld-id": "ppeo:hasGrowthChamber"
+            },
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:Study"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "schema:URL"
+                }
+            ],
+            "jsonld-id": "bioschemas:hasGrowthChamber",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "has growth facility The kind of growth facility used in a plant study",
+            "rdfs-label": "hasGrowthChamber"
+        },
+        {
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:Study"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Date"
+                },
+                {
+                    "jsonld-id": "schema:DateTime"
+                }
+            ],
+            "jsonld-id": "bioschemas:startDate",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "The start date and time of the item (in ISO 8601 date format). ",
+            "rdfs-label": "startDate"
+        },
+        {
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:Study"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Date"
+                },
+                {
+                    "jsonld-id": "schema:DateTime"
+                }
+            ],
+            "jsonld-id": "bioschemas:endDate",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "The end date and time of the item (in ISO 8601 date format). ",
+            "rdfs-label": "endDate"
+        },
+        {
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:Study"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "schema:PropertyValue"
+                }
+            ],
+            "jsonld-id": "bioschemas:additionalProperty",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism. ",
+            "rdfs-label": "additionalProperty"
+        },
+        {
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:Study"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "bioschemas:Study"
+                }
+            ],
+            "jsonld-id": "bioschemas:relatedStudy",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "A study that is related to this one. ",
+            "rdfs-label": "relatedStudy"
+        },
+        {
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:Study"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "schema:PropertyValue"
+                },
+                {
+                    "jsonld-id": "schema:Text"
+                },
+                {
+                    "jsonld-id": "schema:URL"
+                }
+            ],
+            "jsonld-id": "bioschemas:studyDomain",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "Define the domain of the study. For example, the domain could be astrophysics, functional genomics or earth science. Those domains can also have an ontology reference. For example, in the life sciences  we could have\nFunctional Genomics: http://edamontology.org/topic_0085\nProtemics: http://edamontology.org/topic_0121",
+            "rdfs-label": "studyDomain"
+        },
+        {
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:Study"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "schema:PropertyValue"
+                },
+                {
+                    "jsonld-id": "schema:Text"
+                },
+                {
+                    "jsonld-id": "schema:URL"
+                }
+            ],
+            "jsonld-id": "bioschemas:studyProcess",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "A process performed as part of an experiment or wider study, i.e. intentionally designed.\nThese processes can have ontology URL attached to. For example, in the life sciences  we could have \nRNA-seq of coding RNA from single cells: http://www.ebi.ac.uk/efo/EFO_0005684\ncase control design: http://www.ebi.ac.uk/efo/EFO_0001427",
+            "rdfs-label": "studyProcess"
+        },
+        {
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:Study"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Place"
+                },
+                {
+                    "jsonld-id": "schema:AdministrativeArea"
+                }
+            ],
+            "jsonld-id": "bioschemas:studyLocation",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "The location in which the study is taking/took place.",
+            "rdfs-label": "studyLocation"
+        },
+        {
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:Study"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "schema:MedicalEntity"
+                },
+                {
+                    "jsonld-id": "bioschemas:BioChemEntity"
+                }
+            ],
+            "jsonld-id": "bioschemas:studySubject",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.",
+            "rdfs-label": "studySubject"
+        }
+    ]
+}
