@@ -1,858 +1,858 @@
 {
-  "jsonld-context": {
-    "schema": "http://schema.org/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
-  },
-  "jsonld-graph": [
-    {
-      "jsonld-id": "bioschemas:ComputationalTool",
-      "jsonld-type": "rdfs:Class",
-      "rdfs-comment": "The Life Science Tools specification provides a way to describe bioscience tools and software on the World Wide Web. It defines a set of metadata and vocabularies, built on top of existing technologies and standards, that can be used to represent such tools in Web pages and applications. The goal of the specification is to make it easier to discover. Version 1.0-RELEASE.",
-      "rdfs-label": "ComputationalTool",
-      "rdfs-subClassOf": {
-        "jsonld-id": "schema:SoftwareApplication"
-      },
-      "jsonld-validation": {
-        "jsonld-schema": "http://json-schema.org/draft-07/schema#",
-        "type": "object",
-        "properties": {
-          "codeRepository": {
-            "description": "Link to the source code repository of the tool.",
-            "oneOf": [
-              {
-                "type": "string",
-                "format": "uri"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "format": "uri"
-                }
-              }
-            ]
-          },
-          "input": {
-            "description": "Specification of a consumed input.",
-            "oneOf": [
-              {
-                "jsonld-ref": "#/definitions/formalParameter"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/formalParameter"
-                }
-              }
-            ]
-          },
-          "output": {
-            "description": "Specification of a produced output.",
-            "oneOf": [
-              {
-                "jsonld-ref": "#/definitions/formalParameter"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/formalParameter"
-                }
-              }
-            ]
-          },
-          "programmingLanguage": {
-            "description": "The main programming language(s) used to build or execute the tool. Please use terms from the ‘Programming language’ table in the Bio.Tools documentation",
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              {
-                "jsonld-ref": "#/definitions/computerLanguage"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/computerLanguage"
-                }
-              }
-            ]
-          },
-          "downloadUrl": {
-            "description": "Link(s) to the downloadable(s).",
-            "oneOf": [
-              {
-                "type": "string",
-                "format": "uri"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "format": "uri"
-                }
-              }
-            ]
-          },
-          "applicationSubCategory": {
-            "description": "Subcategory of the application, e.g. 'Arcade Game'. Use an EDAM:Topic to describe the category of application",
-            "oneOf": [
-              {
-                "jsonld-ref": "#/definitions/edamTopic"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/edamTopic"
-                }
-              }
-            ]
-          },
-          "applicationCategory": {
-            "description": "Type of software application, e.g. 'Game, Multimedia'. Please use terms from the 'Tool type' table in the biotools documentation.",
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "string",
-                "format": "uri"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              {
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "format": "uri"
-                }
-              }
-            ]
-          },
-          "softwareVersion": {
-            "description": "Version(s) of the tool, which this information is valid for. Can also be a comma-delimited list and include hyphen-separated ranges of versions.",
-            "oneOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            ]
-          },
-          "featureList": {
-            "description": "Features or modules provided by this application (and possibly required by other applications). Functionality provided by the tool. Note: Bioschemas have removed Text from the Expected Types.",
-            "anyOf": [
-              {
-                "jsonld-ref": "#/definitions/edamOperation"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/edamOperation"
-                }
-              },
-              {
-                "type": "string",
-                "format": "uri"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "format": "uri"
-                }
-              }
-            ]
-          },
-          "applicationSuite": {
-            "description": "A suite of tools, to which the tool belongs. The name of the application suite to which the application belongs (e.g. Excel belongs to Office).",
-            "oneOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            ]
-          },
-          "softwareHelp": {
-            "description": "A documentation of the tool.",
-            "oneOf": [
-              {
-                "jsonld-ref": "#/definitions/creativeWork"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/creativeWork"
-                }
-              }
-            ]
-          },
-          "softwareAddOn": {
-            "description": "Additional sub-tools (add-ons, plug-ins, tools in a suite, etc.) that are included in the tool or workflow. Additional content for a software application.",
-            "oneOf": [
-              {
-                "jsonld-ref": "#/definitions/softwareApplication"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/softwareApplication"
-                }
-              }
-            ]
-          },
-          "operatingSystem": {
-            "description": "Operating systems on which the tool can be used (without additional wrapping). Operating systems supported (Windows 7, OSX 10.6, Android 1.6). Please use terms from the ‘Operating systems’ table in the biotools documentation",
-            "oneOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            ]
-          },
-          "description": {
-            "description": "A short description of the tool.",
-            "type": "string"
-          },
-          "identifier": {
-            "description": "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details.",
-            "anyOf": [
-              {
-                "jsonld-ref": "#/definitions/propertyValue"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/propertyValue"
-                }
-              },
-              {
-                "type": "string"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              {
-                "type": "string",
-                "format": "uri"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "format": "uri"
-                }
-              }
-            ]
-          },
-          "name": {
-            "description": "The name of the item.",
-            "type": "string"
-          },
-          "url": {
-            "description": "Homepage of the tool. URL of the item.",
-            "type": "string",
-            "format": "uri"
-          },
-          "author": {
-            "description": "The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
-            "anyOf": [
-              {
-                "jsonld-ref": "#/definitions/organization"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/organization"
-                }
-              },
-              {
-                "jsonld-ref": "#/definitions/person"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/person"
-                }
-              }
-            ]
-          },
-          "citation": {
-            "description": "Publication about this tool. A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
-            "oneOf": [
-              {
-                "jsonld-ref": "#/definitions/citation"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/citation"
-                }
-              }
-            ]
-          },
-          "contributor": {
-            "description": "A secondary contributor to the CreativeWork or Event.",
-            "anyOf": [
-              {
-                "jsonld-ref": "#/definitions/organization"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/organization"
-                }
-              },
-              {
-                "jsonld-ref": "#/definitions/person"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/person"
-                }
-              }
-            ]
-          },
-          "discussionUrl": {
-            "description": "A link to the page containing the comments of the CreativeWork.",
-            "oneOf": [
-              {
-                "type": "string",
-                "format": "uri"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "format": "uri"
-                }
-              }
-            ]
-          },
-          "funder": {
-            "description": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
-            "anyOf": [
-              {
-                "jsonld-ref": "#/definitions/organization"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/organization"
-                }
-              },
-              {
-                "jsonld-ref": "#/definitions/person"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/person"
-                }
-              }
-            ]
-          },
-          "hasPart": {
-            "description": "Indicates any software dependency. Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
-            "oneOf": [
-              {
-                "jsonld-ref": "#/definitions/creativeWork"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/creativeWork"
-                }
-              }
-            ]
-          },
-          "isAccessibleForFree": {
-            "description": "A flag to signal that the tool or the service are available to be used for free.",
-            "type": "boolean"
-          },
-          "isBasedOn": {
-            "description": "A tool or another work which this tool is based on, or is an extension, distribution, or deployment of.  A resource from which this work is derived or from which it is a modification or adaption.",
-            "anyOf": [
-              {
-                "jsonld-ref": "#/definitions/creativeWork"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/creativeWork"
-                }
-              },
-              {
-                "jsonld-ref": "#/definitions/product"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/product"
-                }
-              },
-              {
-                "type": "string",
-                "format": "uri"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "format": "uri"
-                }
-              }
-            ]
-          },
-          "isPartOf": {
-            "description": "A collection, other than a suite of tools, to which the tool belongs.. Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.",
-            "oneOf": [
-              {
-                "jsonld-ref": "#/definitions/creativeWork"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/creativeWork"
-                }
-              }
-            ]
-          },
-          "keywords": {
-            "description": "Additional keywords or tags important for this tool. Multiple entries are delimited by commas. Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
-            "oneOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            ]
-          },
-          "license": {
-            "description": "The license of a software, curated dataset, etc. A license document that applies to this content, typically indicated by URL. Use SPDX list of licenses in form https://spdx.org/licenses/",
-            "anyOf": [
-              {
-                "jsonld-ref": "#/definitions/creativeWork"
-              },
-              {
-                "type": "string",
-                "format": "uri"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/creativeWork"
-                }
-              },
-              {
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "format": "uri"
-                }
-              }
-            ]
-          },
-          "provider": {
-            "description": "The provider organization of a web application, database portal, web service, etc. Note: Bioschemas have removed Person from the Expected Types. The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.",
-            "anyOf": [
-              {
-                "jsonld-ref": "#/definitions/organization"
-              },
-              {
-                "type": "array",
-                "items": {
-                  "jsonld-ref": "#/definitions/organization"
-                }
-              }
-            ]
-          },
-          "thumbnailUrl": {
-            "description": "A small image representing the tool, such as an icon. A thumbnail image relevant to the Thing.",
-            "type": "string",
-            "format": "uri"
-          }
-        },
-        "required": [
-          "description",
-          "name",
-          "url"
-        ],
-        "recommended": [
-          "applicationCategory",
-          "applicationSubCategory",
-          "author",
-          "citation",
-          "featureList",
-          "license",
-          "softwareVersion"
-        ],
-        "optional": [
-          "applicationSuite",
-          "codeRepository",
-          "contributor",
-          "discussionUrl",
-          "downloadUrl",
-          "funder",
-          "hasPart",
-          "identifier",
-          "input",
-          "isAccessibleForFree",
-          "isBasedOn",
-          "isPartOf",
-          "keywords",
-          "operatingSystem",
-          "output",
-          "programmingLanguage",
-          "provider",
-          "softwareAddOn",
-          "softwareHelp",
-          "thumbnailUrl"
-        ],
-        "definitions": {
-          "formalParameter": {
-            "jsonldtype": "bioschemas:FormalParameter",
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "identifier": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": []
-          },
-          "schema": {
-            "jsonldtype": "CreativeWork",
-            "type": "object",
-            "properties": {
-              "url": {
-                "type": "string",
-                "format": "uri"
-              },
-              "name": {
-                "type": "string"
-              },
-              "identifier": {
-                "type": "string"
-              },
-              "jsonld-id": {
-                "type": "string"
-              }
-            },
-            "required": []
-          },
-          "edamTopic": {
-            "jsonldtype": "DefinedTerm",
-            "type": "object",
-            "strict": false,
-            "vocabulary": {
-              "ontology": [
-                "edamTopic"
-              ],
-              "children_of": [
-                "http://edamontology.org/topic_0003"
-              ],
-              "property": {
-                "name": {
-                  "type": "string"
-                },
-                "url": {
-                  "type": "string",
-                  "format": "uri"
-                },
-                "identifier": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "edamOperation": {
-            "jsonldtype": "DefinedTerm",
-            "type": "object",
-            "strict": false,
-            "vocabulary": {
-              "ontology": [
-                "edamOperation"
-              ],
-              "children_of": [
-                "http://edamontology.org/operation_0004"
-              ],
-              "property": {
-                "name": {
-                  "type": "string"
-                },
-                "url": {
-                  "type": "string",
-                  "format": "uri"
-                },
-                "identifier": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "creativeWork": {
-            "jsonldtype": "CreativeWork",
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "identifier": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": []
-          },
-          "softwareApplication": {
-            "jsonldtype": "SoftwareApplication",
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "identifier": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": []
-          },
-          "propertyValue": {
-            "jsonldtype": "PropertyValue",
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "value": {
-                "type": "string"
-              },
-              "identifier": {
-                "type": "string"
-              }
-            },
-            "required": []
-          },
-          "person": {
-            "jsonldtype": "Person",
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "alternateName": {
-                "type": "string"
-              },
-              "givenName": {
-                "type": "string"
-              },
-              "familyName": {
-                "type": "string",
-              "identifier": {
-                "type": "string"
-              }
-              },
-              "affiliation": {
-                  "oneOf": [
-                    {
-                        "jsonld-ref": "#/definitions/organization"
+    "jsonld-context": {
+        "schema": "http://schema.org/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
+    },
+    "jsonld-graph": [
+        {
+            "jsonld-id": "bioschemas:ComputationalTool",
+            "jsonld-type": "rdfs:Class",
+            "jsonld-validation": {
+                "type": "object",
+                "properties": {
+                    "codeRepository": {
+                        "description": "Link to the source code repository of the tool.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
                     },
-                    {
-                        "type": "array",
-                        "items": {
-                            "jsonld-ref": "#/definitions/organization"
-                        }
+                    "input": {
+                        "description": "Specification of a consumed input.",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/formalParameter"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/formalParameter"
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "description": "Specification of a produced output.",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/formalParameter"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/formalParameter"
+                                }
+                            }
+                        ]
+                    },
+                    "programmingLanguage": {
+                        "description": "The main programming language(s) used to build or execute the tool. Please use terms from the \u2018Programming language\u2019 table in the Bio.Tools documentation",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/computerLanguage"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/computerLanguage"
+                                }
+                            }
+                        ]
+                    },
+                    "downloadUrl": {
+                        "description": "Link(s) to the downloadable(s).",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "applicationSubCategory": {
+                        "description": "Subcategory of the application, e.g. 'Arcade Game'. Use an EDAM:Topic to describe the category of application",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/edamTopic"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/edamTopic"
+                                }
+                            }
+                        ]
+                    },
+                    "applicationCategory": {
+                        "description": "Type of software application, e.g. 'Game, Multimedia'. Please use terms from the 'Tool type' table in the biotools documentation.",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "softwareVersion": {
+                        "description": "Version(s) of the tool, which this information is valid for. Can also be a comma-delimited list and include hyphen-separated ranges of versions.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "featureList": {
+                        "description": "Features or modules provided by this application (and possibly required by other applications). Functionality provided by the tool. Note: Bioschemas have removed Text from the Expected Types.",
+                        "anyOf": [
+                            {
+                                "jsonld-ref": "#/definitions/edamOperation"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/edamOperation"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "applicationSuite": {
+                        "description": "A suite of tools, to which the tool belongs. The name of the application suite to which the application belongs (e.g. Excel belongs to Office).",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "softwareHelp": {
+                        "description": "A documentation of the tool.",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/creativeWork"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/creativeWork"
+                                }
+                            }
+                        ]
+                    },
+                    "softwareAddOn": {
+                        "description": "Additional sub-tools (add-ons, plug-ins, tools in a suite, etc.) that are included in the tool or workflow. Additional content for a software application.",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/softwareApplication"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/softwareApplication"
+                                }
+                            }
+                        ]
+                    },
+                    "operatingSystem": {
+                        "description": "Operating systems on which the tool can be used (without additional wrapping). Operating systems supported (Windows 7, OSX 10.6, Android 1.6). Please use terms from the \u2018Operating systems\u2019 table in the biotools documentation",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "description": {
+                        "description": "A short description of the tool.",
+                        "type": "string"
+                    },
+                    "identifier": {
+                        "description": "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details.",
+                        "anyOf": [
+                            {
+                                "jsonld-ref": "#/definitions/propertyValue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/propertyValue"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "name": {
+                        "description": "The name of the item.",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "Homepage of the tool. URL of the item.",
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "author": {
+                        "description": "The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
+                        "anyOf": [
+                            {
+                                "jsonld-ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/person"
+                                }
+                            }
+                        ]
+                    },
+                    "citation": {
+                        "description": "Publication about this tool. A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/citation"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/citation"
+                                }
+                            }
+                        ]
+                    },
+                    "contributor": {
+                        "description": "A secondary contributor to the CreativeWork or Event.",
+                        "anyOf": [
+                            {
+                                "jsonld-ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/person"
+                                }
+                            }
+                        ]
+                    },
+                    "discussionUrl": {
+                        "description": "A link to the page containing the comments of the CreativeWork.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "funder": {
+                        "description": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
+                        "anyOf": [
+                            {
+                                "jsonld-ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/person"
+                                }
+                            }
+                        ]
+                    },
+                    "hasPart": {
+                        "description": "Indicates any software dependency. Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/creativeWork"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/creativeWork"
+                                }
+                            }
+                        ]
+                    },
+                    "isAccessibleForFree": {
+                        "description": "A flag to signal that the tool or the service are available to be used for free.",
+                        "type": "boolean"
+                    },
+                    "isBasedOn": {
+                        "description": "A tool or another work which this tool is based on, or is an extension, distribution, or deployment of.  A resource from which this work is derived or from which it is a modification or adaption.",
+                        "anyOf": [
+                            {
+                                "jsonld-ref": "#/definitions/creativeWork"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/creativeWork"
+                                }
+                            },
+                            {
+                                "jsonld-ref": "#/definitions/product"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/product"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "isPartOf": {
+                        "description": "A collection, other than a suite of tools, to which the tool belongs.. Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.",
+                        "oneOf": [
+                            {
+                                "jsonld-ref": "#/definitions/creativeWork"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/creativeWork"
+                                }
+                            }
+                        ]
+                    },
+                    "keywords": {
+                        "description": "Additional keywords or tags important for this tool. Multiple entries are delimited by commas. Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "license": {
+                        "description": "The license of a software, curated dataset, etc. A license document that applies to this content, typically indicated by URL. Use SPDX list of licenses in form https://spdx.org/licenses/",
+                        "anyOf": [
+                            {
+                                "jsonld-ref": "#/definitions/creativeWork"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/creativeWork"
+                                }
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "provider": {
+                        "description": "The provider organization of a web application, database portal, web service, etc. Note: Bioschemas have removed Person from the Expected Types. The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.",
+                        "anyOf": [
+                            {
+                                "jsonld-ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "jsonld-ref": "#/definitions/organization"
+                                }
+                            }
+                        ]
+                    },
+                    "thumbnailUrl": {
+                        "description": "A small image representing the tool, such as an icon. A thumbnail image relevant to the Thing.",
+                        "type": "string",
+                        "format": "uri"
                     }
-                  ]
-              },
-              "identifier": {
-                "type": "string"
-              }
+                },
+                "required": [
+                    "description",
+                    "name",
+                    "url"
+                ],
+                "recommended": [
+                    "applicationCategory",
+                    "applicationSubCategory",
+                    "author",
+                    "citation",
+                    "featureList",
+                    "license",
+                    "softwareVersion"
+                ],
+                "optional": [
+                    "applicationSuite",
+                    "codeRepository",
+                    "contributor",
+                    "discussionUrl",
+                    "downloadUrl",
+                    "funder",
+                    "hasPart",
+                    "identifier",
+                    "input",
+                    "isAccessibleForFree",
+                    "isBasedOn",
+                    "isPartOf",
+                    "keywords",
+                    "operatingSystem",
+                    "output",
+                    "programmingLanguage",
+                    "provider",
+                    "softwareAddOn",
+                    "softwareHelp",
+                    "thumbnailUrl"
+                ],
+                "definitions": {
+                    "formalParameter": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "bioschemas:FormalParameter"
+                    },
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "jsonld-id": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "CreativeWork"
+                    },
+                    "edamTopic": {
+                        "type": "object",
+                        "strict": false,
+                        "vocabulary": {
+                            "ontology": [
+                                "edamTopic"
+                            ],
+                            "children_of": [
+                                "http://edamontology.org/topic_0003"
+                            ],
+                            "property": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string",
+                                    "format": "uri"
+                                },
+                                "identifier": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "jsonld-type": "DefinedTerm"
+                    },
+                    "edamOperation": {
+                        "type": "object",
+                        "strict": false,
+                        "vocabulary": {
+                            "ontology": [
+                                "edamOperation"
+                            ],
+                            "children_of": [
+                                "http://edamontology.org/operation_0004"
+                            ],
+                            "property": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string",
+                                    "format": "uri"
+                                },
+                                "identifier": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "jsonld-type": "DefinedTerm"
+                    },
+                    "creativeWork": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "CreativeWork"
+                    },
+                    "softwareApplication": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "SoftwareApplication"
+                    },
+                    "propertyValue": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "PropertyValue"
+                    },
+                    "person": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "alternateName": {
+                                "type": "string"
+                            },
+                            "givenName": {
+                                "type": "string"
+                            },
+                            "familyName": {
+                                "type": "string",
+                                "identifier": {
+                                    "type": "string"
+                                }
+                            },
+                            "affiliation": {
+                                "oneOf": [
+                                    {
+                                        "jsonld-ref": "#/definitions/organization"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "jsonld-ref": "#/definitions/organization"
+                                        }
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            }
+                        },
+                        "jsonld-type": "Person"
+                    },
+                    "organization": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "alternateName": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            }
+                        },
+                        "jsonld-type": "Organization"
+                    },
+                    "citation": {
+                        "description": "A citation object for a resource.",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "description": "Name of or title of the citation",
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "description": "An identifier associated with the citation",
+                                "type": "string"
+                            },
+                            "pmid": {
+                                "description": "A pubmed identifier if available",
+                                "type": "string"
+                            },
+                            "doi": {
+                                "description": "A doi if available",
+                                "type": "string"
+                            },
+                            "url": {
+                                "description": "The url of the resource cited",
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "citeText": {
+                                "description": "The bibliographic citation for the referenced resource as is provided",
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "CreativeWork"
+                    },
+                    "product": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "Product"
+                    },
+                    "computerLanguage": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "jsonld-type": "ComputerLanguage"
+                    }
+                },
+                "jsonld-schema": "http://json-schema.org/draft-07/schema#"
+            },
+            "rdfs-comment": "The Life Science Tools specification provides a way to describe bioscience tools and software on the World Wide Web. It defines a set of metadata and vocabularies, built on top of existing technologies and standards, that can be used to represent such tools in Web pages and applications. The goal of the specification is to make it easier to discover. Version 1.0-RELEASE.",
+            "rdfs-label": "ComputationalTool",
+            "rdfs-subClassOf": {
+                "jsonld-id": "schema:SoftwareApplication"
             }
-          },
-          "organization": {
-            "jsonldtype": "Organization",
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "alternateName": {
-                "type": "string"
-              },
-              "identifier": {
-                "type": "string"
-              }
-            }
-          },
-          "citation": {
-            "description": "A citation object for a resource.",
-            "jsonldtype": "CreativeWork",
-            "type": "object",
-            "properties": {
-              "name": {
-                "description": "Name of or title of the citation",
-                "type": "string"
-              },
-              "identifier": {
-                "description": "An identifier associated with the citation",
-                "type": "string"
-              },
-              "pmid": {
-                "description": "A pubmed identifier if available",
-                "type": "string"
-              },
-              "doi": {
-                "description": "A doi if available",
-                "type": "string"
-              },
-              "url": {
-                "description": "The url of the resource cited",
-                "type": "string",
-                "format": "uri"
-              },
-              "citeText": {
-                "description": "The bibliographic citation for the referenced resource as is provided",
-                "type": "string"
-              }
-            },
-            "required": []
-          },
-          "product" : {
-            "jsonldtype": "Product",
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "identifier": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string",
-                "format": "uri"
-              }
-            },
-            "required": []
-          },
-          "computerLanguage": {
-            "jsonldtype": "ComputerLanguage",
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              }
-            },
-            "required": []
-          }
-        }
-      }
-    },
-    {
-      "jsonld-id": "bioschemas:codeRepository",
-      "jsonldtype": "rdf:Property",
-      "jsonld-comment": "Link to the source code repository of the tool.",
-      "jsonld-label": "codeRepository",
-      "schema:domainIncludes": {
-        "jsonld-id": "bioschemas:ComputationalTool"
-      },
-      "schema:rangeIncludes": [
-        {
-          "jsonld-id": "schema:URL"
-        }
-      ]
-    },
-    {
-      "jsonld-id": "bioschemas:input",
-      "jsonldtype": "rdf:Property",
-      "jsonld-comment": "Specification of a consumed input.",
-      "jsonld-label": "input",
-      "schema:domainIncludes": {
-        "jsonld-id": "bioschemas:ComputationalTool"
-      },
-      "schema:rangeIncludes": [
-        {
-          "jsonld-id": "bioschemas:FormalParameter"
-        }
-      ]
-    },
-    {
-      "jsonld-id": "bioschemas:output",
-      "jsonldtype": "rdf:Property",
-      "jsonld-comment": "Specification of a produced output.",
-      "jsonld-label": "output",
-      "schema:domainIncludes": {
-        "jsonld-id": "bioschemas:ComputationalTool"
-      },
-      "schema:rangeIncludes": [
-        {
-          "jsonld-id": "bioschemas:FormalParameter"
-        }
-      ]
-    },
-    {
-      "jsonld-id": "bioschemas:programmingLanguage",
-      "jsonldtype": "rdf:Property",
-      "jsonld-comment": "The main programming language(s) used to build or execute the tool. Please use terms from the ‘Programming language’ table in the Bio.Tools documentation",
-      "jsonld-label": "programmingLanguage",
-      "schema:domainIncludes": {
-        "jsonld-id": "bioschemas:ComputationalTool"
-      },
-      "schema:rangeIncludes": [
-        {
-          "jsonld-id": "schema:Text"
         },
         {
-          "jsonld-id": "schema:ComputerLanguage"
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:ComputationalTool"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "schema:URL"
+                }
+            ],
+            "jsonld-id": "bioschemas:codeRepository",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "Link to the source code repository of the tool.",
+            "rdfs-label": "codeRepository"
+        },
+        {
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:ComputationalTool"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "bioschemas:FormalParameter"
+                }
+            ],
+            "jsonld-id": "bioschemas:input",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "Specification of a consumed input.",
+            "rdfs-label": "input"
+        },
+        {
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:ComputationalTool"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "bioschemas:FormalParameter"
+                }
+            ],
+            "jsonld-id": "bioschemas:output",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "Specification of a produced output.",
+            "rdfs-label": "output"
+        },
+        {
+            "schema:domainIncludes": {
+                "jsonld-id": "bioschemas:ComputationalTool"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Text"
+                },
+                {
+                    "jsonld-id": "schema:ComputerLanguage"
+                }
+            ],
+            "jsonld-id": "bioschemas:programmingLanguage",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "The main programming language(s) used to build or execute the tool. Please use terms from the \u2018Programming language\u2019 table in the Bio.Tools documentation",
+            "rdfs-label": "programmingLanguage"
         }
-      ]
-    }
-  ]
+    ]
 }

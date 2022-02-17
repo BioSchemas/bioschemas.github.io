@@ -78,13 +78,18 @@ def replaceJSONLDKey(data):
     return data
 
 #### Main
-profile = "ComputationalTool"
-schema_file = "ComputationalTool_v1.0-RELEASE.json"
-url = SCHEMA_SOURCE + profile + "/jsonld/" + schema_file
-logging.info('Retrieving file from %s' % url)
-json_data = readJSONFile(url)
-logging.info('Replacing JSON-LD keys')
-json_data = replaceJSONLDKey(json_data)
-new_filename = SCHEMA_TARGET + replaceDotsInFilename(schema_file)
-logging.info('Writing data to %s' % new_filename)
-writeJSONFile(json_data, new_filename)
+profiles = {
+    "BioChemEntity": "0.7-RELEASE",
+    "ComputationalTool": "1.0-RELEASE"
+}
+for profile, release in profiles.items():
+    logging.info('Processing %s release %s' % (profile, release))
+    schema_file = profile + '_v' + release + '.json'
+    url = SCHEMA_SOURCE + profile + "/jsonld/" + schema_file
+    logging.info('Retrieving file from %s' % url)
+    json_data = readJSONFile(url)
+    logging.info('Replacing JSON-LD keys')
+    json_data = replaceJSONLDKey(json_data)
+    new_filename = SCHEMA_TARGET + replaceDotsInFilename(schema_file)
+    logging.info('Writing data to %s' % new_filename)
+    writeJSONFile(json_data, new_filename)
