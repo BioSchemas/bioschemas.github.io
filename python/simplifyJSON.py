@@ -77,19 +77,27 @@ def replaceJSONLDKey(data):
     logging.debug('Exiting replaceJSONLDKey() with ' + str(data))
     return data
 
+def processProfiles(profiles):
+    logging.debug('Entering processProfiles() with %s' % str(profiles))
+    for profile, release in profiles.items():
+        logging.info('Processing %s release %s' % (profile, release))
+        schema_file = profile + '_v' + release + '.json'
+        url = SCHEMA_SOURCE + profile + "/jsonld/" + schema_file
+        logging.info('Retrieving file from %s' % url)
+        json_data = readJSONFile(url)
+        logging.info('Replacing JSON-LD keys')
+        json_data = replaceJSONLDKey(json_data)
+        new_filename = SCHEMA_TARGET + replaceDotsInFilename(schema_file)
+        logging.info('Writing data to %s' % new_filename)
+        writeJSONFile(json_data, new_filename)
+    logging.debug('Exiting processProfiles()')
+
 #### Main
 profiles = {
     "BioChemEntity": "0.7-RELEASE",
     "ComputationalTool": "1.0-RELEASE"
 }
-for profile, release in profiles.items():
-    logging.info('Processing %s release %s' % (profile, release))
-    schema_file = profile + '_v' + release + '.json'
-    url = SCHEMA_SOURCE + profile + "/jsonld/" + schema_file
-    logging.info('Retrieving file from %s' % url)
-    json_data = readJSONFile(url)
-    logging.info('Replacing JSON-LD keys')
-    json_data = replaceJSONLDKey(json_data)
-    new_filename = SCHEMA_TARGET + replaceDotsInFilename(schema_file)
-    logging.info('Writing data to %s' % new_filename)
-    writeJSONFile(json_data, new_filename)
+
+processProfiles(profiles)
+print('All profiles have been processed.\nCheck %s for the generated files.'
+    % SCHEMA_TARGET)
