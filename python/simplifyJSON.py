@@ -1,5 +1,7 @@
 import json
 import logging
+import pandas
+import pathlib
 import re # regex library
 import requests
 
@@ -77,8 +79,11 @@ def replaceJSONLDKey(data):
     logging.debug('Exiting replaceJSONLDKey() with ' + str(data))
     return data
 
-def processProfiles(profiles):
-    logging.debug('Entering processProfiles() with %s' % str(profiles))
+def processProfiles(script_path):
+    logging.debug('Entering processProfiles() with %s' % script_path)
+    # Read profile details in from file
+    profiles = pandas.read_csv('specifications_list.txt',delimiter='\t',header=0)
+    # Process each profile in turn
     for profile, release in profiles.items():
         logging.info('Processing %s release %s' % (profile, release))
         schema_file = profile + '_v' + release + '.json'
@@ -93,11 +98,7 @@ def processProfiles(profiles):
     logging.debug('Exiting processProfiles()')
 
 #### Main
-profiles = {
-    "BioChemEntity": "0.7-RELEASE",
-    "ComputationalTool": "1.0-RELEASE"
-}
-
-processProfiles(profiles)
-print('All profiles have been processed.\nCheck %s for the generated files.'
+script_path = pathlib.Path(__file__).parent.absolute()
+processProfiles(script_path)
+print('SUCCESS! All profiles have been processed.\nCheck %s for the generated files.'
     % SCHEMA_TARGET)
