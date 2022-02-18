@@ -162,7 +162,14 @@ layout: default
   </div>
 </div>
 <p>If you spot any errors or omissions with this type, please file an issue in our <a href="{{page.gh_tasks}}" target="_blank">GitHub</a>.</p>
+
+{% include spec-table-key.html %}
+
+<h3>Validation Rules</h3>
+<p><strong>TODO:</strong> Recreate the profile table using the content of the JSON-Schema validation rules included below.</p>
+{{metadata.jsonld-validation}}
+
 {{content}}
 
 <hr/>
-<p>Schema: {{schema}}</p>
+<p>This is the full content of the schema file for development purposes:<br/> {{schema}}</p>
