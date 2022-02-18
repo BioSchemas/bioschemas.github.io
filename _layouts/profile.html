@@ -1,0 +1,101 @@
+---
+layout: default
+---
+{%- assign schema = site.data.schemas[page.schema_filename] %}
+{%- assign metadata = schema.jsonld-graph | first %}
+{%- assign profile_name = metadata.rdfs-label %}
+{% assign group = site.groups | where:"identifier", page.group %}
+
+<h1>{{profile_name}} Profile</h1>
+
+<h3>Description</h3>
+<blockquote>{{metadata.rdfs-comment}}</blockquote>
+
+<h3>Schema.org Type</h3>
+{% assign profile_type = metadata.rdfs-subClassOf.jsonld-id %}
+{% assign testArray = profile_type | split: 'schema:' %}
+{% if testArray[0] != blank %}
+<p>The {{profile_name}} profile is defined over the <a href='https://schema.org/{{testArray[1]}}'>{{profile_type}}</a> type.</p>
+{% else %}
+<p>The {{profile_name}} profile is defined over the {{profile_type}} type.</p>
+{% endif %}
+
+<h3>Versions</h3>
+<p><strong>This version:</strong> <strong>TODO:</strong> Add version number</p>
+<ul>
+{% assign profile_versions = site.data.profile_versions[profile_name] %}
+{% if profile_versions.latest_release != null %}
+<li><strong>Latest release:</strong> <a href="{{ profile_name | prepend: '/profiles/' | append:'/' | append: profile_versions.latest_release | relative_url }}">{{profile_versions.latest_release}}</a></li>
+{% else %}
+<li><strong>Latest release:</strong> none</li>
+{% endif %}
+{% if profile_versions.latest_publication != null %}
+<li><strong>Latest draft:</strong> <a href="{{ profile_name | prepend: '/profiles/' | append:'/' | append: profile_versions.latest_publication | relative_url }}">{{profile_versions.latest_publication}}</a></li>
+{% else %}
+<li><strong>Latest draft:</strong> none</li>
+{% endif %}
+{% if page.previous_version != null %}
+<li><strong>Previous version:</strong>  <a href="{{ profile_name | prepend: '/profiles/' | append: '/' | append: page.previous_version | relative_url }}">{{page.previous_version}}</a></li>
+{% else %}
+<li><strong>Previous version:</strong> none</li>
+{% endif %}
+{% if page.previous_release != null %}
+<li><strong>Previous release:</strong>  <a href="{{ profile_name | prepend: '/profiles/' | append: '/' | append: page.previous_release | relative_url }}">{{page.previous_version}}</a></li>
+{% else %}
+<li><strong>Previous release:</strong> none</li>
+{% endif %}
+</ul>
+<h3>Links</h3>
+<div class="table-responsive shadow rounded mt-4 mb-5">
+<table class="table table-hover table-borderless mb-0 bioschemas_spec_list">
+   <thead>
+      <tr>
+         <th>Group</th>
+         <th>Use Cases</th>
+         <th>News Stories</th>
+         <th>Task &amp; Issues</th>
+         <th>Examples</th>
+         <th>Live Deploys</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>
+            {% for g in group %}
+            <a href="{{g.url | relative_url}}">{{g.name}}</a>
+            {% endfor %}
+         </td>
+         <td class="spec_links">
+            <a href="{{profile_name | prepend: '/useCases/' | append: '/'}}">
+            <img src="{{ '/images/use_case_spec.svg' | relative_url }}" alt="View Bioschemas {{ profile_name }} Use Cases">
+            </a>
+         </td>
+         <td class="spec_links">
+            <a href="{{profile_name | downcase | prepend: '/news/tags.html#'}}">
+            <img src="{{ '/images/cross_walk.svg' | relative_url }}" alt="View Bioschemas {{ profile_name }} news items">
+            </a>
+         </td>
+         <td class="spec_links">
+            <a href="{{profile_name | prepend: 'https://github.com/Bioschemas/bioschemas/labels/type%3A%20'}}" target="_blank">
+            <img src="{{ '/images/specs_tasks.png' | relative_url }}" alt="Bioschemas {{ profile_name }} Github Tasks or Issues">
+            </a>
+         </td>
+         <td class="spec_links" target="_blank">
+            <a href="{{profile_name | prepend: 'https://github.com/BioSchemas/specifications/tree/master/' | append: '/examples'}}">
+            <img src="{{ '/images/spec_examples.png' | relative_url }}" alt="View Bioschemas {{ profile_name }} examples">
+            </a>
+         </td>
+         <td class="spec_links">
+            <a href="{{profile_name | prepend: '/liveDeploys#nav-profile?row='}}">
+            <img src="{{ '/images/live_deploy.svg' | relative_url }}" alt="View Bioschemas {{ profile_name }} live deployments">
+            </a>
+         </td>
+      </tr>
+   </tbody>
+</table>
+</div>
+<p>If you spot any errors or omissions with this type, please file an issue in our <a href="{{page.gh_tasks}}" target="_blank">GitHub</a>.</p>
+{{content}}
+
+<hr/>
+<p>Schema: {{schema}}</p>

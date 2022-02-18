@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Live Deploys
+title: CompTool Test
 permalink: "/:basename:output_ext"
 redirect_from:
   - "/:basename:output_ext/"
@@ -9,6 +9,8 @@ redirect_from:
 
 {%- assign schema =
     site.data.schemas.ComputationalTool_v1-0-RELEASE %}
+<p>Schema: {{schema}}</p>
+<hr/>
 {%- assign metadata = schema.jsonld-graph | first %}
 <h1>{{metadata.rdfs-label}} Profile</h1>
 <blockquote>{{metadata.rdfs-comment}}</blockquote>
