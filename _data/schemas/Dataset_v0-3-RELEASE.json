@@ -379,7 +379,9 @@
             "rdfs-label": "Dataset",
             "rdfs-subClassOf": {
                 "jsonld-id": "schema:Dataset"
-            }
+            },
+            "schema-additionalType": "https://bioschemas.org/profiles#nav-release",
+            "schema-schemaVersion": "https://bioschemas.org/profiles/Dataset/0.3-RELEASE"
         }
     ]
 }

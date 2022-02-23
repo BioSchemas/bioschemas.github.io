@@ -793,66 +793,68 @@
             "rdfs-label": "ComputationalTool",
             "rdfs-subClassOf": {
                 "jsonld-id": "schema:SoftwareApplication"
-            }
+            },
+            "schema-additionalType": "https://bioschemas.org/profiles#nav-release",
+            "schema-schemaVersion": "https://bioschemas.org/profiles/ComputationalTool/1.0-RELEASE"
         },
         {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:ComputationalTool"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:URL"
-                }
-            ],
             "jsonld-id": "bioschemas:codeRepository",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "Link to the source code repository of the tool.",
-            "rdfs-label": "codeRepository"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "codeRepository",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:ComputationalTool"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
-                    "jsonld-id": "bioschemas:FormalParameter"
+                    "jsonld-id": "schema:URL"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:input",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "Specification of a consumed input.",
-            "rdfs-label": "input"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "input",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:ComputationalTool"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "bioschemas:FormalParameter"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:output",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "Specification of a produced output.",
-            "rdfs-label": "output"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "output",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:ComputationalTool"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "bioschemas:FormalParameter"
+                }
+            ]
+        },
+        {
+            "jsonld-id": "bioschemas:programmingLanguage",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "The main programming language(s) used to build or execute the tool. Please use terms from the \u2018Programming language\u2019 table in the Bio.Tools documentation",
+            "rdfs-label": "programmingLanguage",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:ComputationalTool"
+            },
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:Text"
                 },
                 {
                     "jsonld-id": "schema:ComputerLanguage"
                 }
-            ],
-            "jsonld-id": "bioschemas:programmingLanguage",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": "The main programming language(s) used to build or execute the tool. Please use terms from the \u2018Programming language\u2019 table in the Bio.Tools documentation",
-            "rdfs-label": "programmingLanguage"
+            ]
         }
     ]
 }

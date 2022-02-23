@@ -7,9 +7,6 @@
     },
     "jsonld-graph": [
         {
-            "schema:schemaVersion": [
-                "https://bioschemas.org/profiles/PublicationVolume/0.2-DRAFT-2020_12_03"
-            ],
             "jsonld-id": "bioschemas:PublicationVolume",
             "jsonld-type": "rdfs:Class",
             "jsonld-validation": {
@@ -441,7 +438,9 @@
             "rdfs-label": "PublicationVolume",
             "rdfs-subClassOf": {
                 "jsonld-id": "schema:PublicationVolume"
-            }
+            },
+            "schema-additionalType": "https://bioschemas.org/profiles#nav-draft",
+            "schema-schemaVersion": "https://bioschemas.org/profiles/PublicationVolume/0.2-DRAFT-2020_12_03"
         }
     ]
 }

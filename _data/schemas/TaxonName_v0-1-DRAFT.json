@@ -7,9 +7,6 @@
     },
     "jsonld-graph": [
         {
-            "schema:schemaVersion": [
-                "https://bioschemas.org/profiles/TaxonName/0.1-DRAFT"
-            ],
             "jsonld-id": "bioschemas:TaxonName",
             "jsonld-type": "rdfs:Class",
             "jsonld-validation": {
@@ -344,13 +341,19 @@
             "rdfs-label": "TaxonName",
             "rdfs-subClassOf": {
                 "jsonld-id": "schema:CreativeWork"
-            }
+            },
+            "schema-additionalType": "https://bioschemas.org/profiles#nav-draft",
+            "schema-schemaVersion": "https://bioschemas.org/profiles/TaxonName/0.1-DRAFT"
         },
         {
-            "schema:domainIncludes": {
+            "jsonld-id": "bioschemas:taxonRank",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary \u2013 (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs). ",
+            "rdfs-label": "taxonRank",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:TaxonName"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:PropertyValue"
                 },
@@ -360,11 +363,7 @@
                 {
                     "jsonld-id": "schema:URL"
                 }
-            ],
-            "jsonld-id": "bioschemas:taxonRank",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": "The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary \u2013 (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs). ",
-            "rdfs-label": "taxonRank"
+            ]
         }
     ]
 }

@@ -663,21 +663,23 @@
             "rdfs-label": "Protein",
             "rdfs-subClassOf": {
                 "jsonld-id": "bioschemas:BioChemEntity"
-            }
+            },
+            "schema-additionalType": "https://bioschemas.org/profiles#nav-release",
+            "schema-schemaVersion": "https://bioschemas.org/profiles/Protein/0.11-RELEASE"
         },
         {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:Protein"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:Text"
-                }
-            ],
             "jsonld-id": "bioschemas:hasBioPolymerSequence",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "A symbolic representation of a BioChemEnity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a Protein.",
-            "rdfs-label": "hasBioPolymerSequence"
+            "rdfs-label": "hasBioPolymerSequence",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:Protein"
+            },
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Text"
+                }
+            ]
         }
     ]
 }

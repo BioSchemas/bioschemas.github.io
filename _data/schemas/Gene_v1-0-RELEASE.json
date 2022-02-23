@@ -587,21 +587,23 @@
             "rdfs-label": "Gene",
             "rdfs-subClassOf": {
                 "jsonld-id": "bioschemas:BioChemEntity"
-            }
+            },
+            "schema-additionalType": "https://bioschemas.org/profiles#nav-release",
+            "schema-schemaVersion": "https://bioschemas.org/profiles/Gene/1.0-RELEASE"
         },
         {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:Gene"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:Text"
-                }
-            ],
             "jsonld-id": "bioschemas:hasStatus",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "Schema:  One of pseudogene, dead, killed, live, predicted, suppressed.",
-            "rdfs-label": "hasStatus"
+            "rdfs-label": "hasStatus",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:Gene"
+            },
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Text"
+                }
+            ]
         }
     ]
 }

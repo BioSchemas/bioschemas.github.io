@@ -272,49 +272,51 @@
             "rdfs-label": "ChemicalSubstance",
             "rdfs-subClassOf": {
                 "jsonld-id": "bioschemas:BioChemEntity"
-            }
+            },
+            "schema-additionalType": "https://bioschemas.org/profiles#nav-release",
+            "schema-schemaVersion": "https://bioschemas.org/profiles/ChemicalSubstance/0.4-RELEASE"
         },
         {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:ChemicalSubstance"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:DefinedTerm"
-                }
-            ],
             "jsonld-id": "bioschemas:potentialUse",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "Intended use of the BioChemEntity by humans.",
-            "rdfs-label": "potentialUse"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "potentialUse",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:ChemicalSubstance"
             },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:Text"
-                }
-            ],
-            "jsonld-id": "bioschemas:chemicalComposition",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": "The chemical composition describes the identity and relative ratio of the chemical elements that make up the substance. For substances this often cannot be accurately determined, an approximation is acceptable.",
-            "rdfs-label": "chemicalComposition"
-        },
-        {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:ChemicalSubstance"
-            },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:DefinedTerm"
                 }
-            ],
+            ]
+        },
+        {
+            "jsonld-id": "bioschemas:chemicalComposition",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "The chemical composition describes the identity and relative ratio of the chemical elements that make up the substance. For substances this often cannot be accurately determined, an approximation is acceptable.",
+            "rdfs-label": "chemicalComposition",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:ChemicalSubstance"
+            },
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Text"
+                }
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:chemicalRole",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "A role played by the BioChemEntity or molecular entity within a chemical context.",
-            "rdfs-label": "chemicalRole"
+            "rdfs-label": "chemicalRole",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:ChemicalSubstance"
+            },
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:DefinedTerm"
+                }
+            ]
         }
     ]
 }

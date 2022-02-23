@@ -7,9 +7,6 @@
     },
     "jsonld-graph": [
         {
-            "schema:schemaVersion": [
-                "https://bioschemas.org/profiles/Event/0.2-DRAFT-2019_06_14"
-            ],
             "jsonld-id": "bioschemas:Event",
             "jsonld-type": "rdfs:Class",
             "jsonld-validation": {
@@ -749,16 +746,22 @@
             "rdfs-label": "Event",
             "rdfs-subClassOf": {
                 "jsonld-id": "schema:Event"
-            }
+            },
+            "schema-additionalType": "https://bioschemas.org/profiles#nav-draft",
+            "schema-schemaVersion": "https://bioschemas.org/profiles/Event/0.2-DRAFT-2019_06_14"
         },
         {
             "schema:sameAs": {
                 "jsonld-id": "schema:keywords"
             },
-            "schema:domainIncludes": {
+            "jsonld-id": "bioschemas:keywords",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+            "rdfs-label": "keywords",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Event"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:Text"
                 },
@@ -768,253 +771,249 @@
                 {
                     "jsonld-id": "schema:URL"
                 }
-            ],
-            "jsonld-id": "bioschemas:keywords",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
-            "rdfs-label": "keywords"
+            ]
         },
         {
             "schema:sameAs": {
                 "jsonld-id": "schema:dateModified"
             },
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:Event"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:Date"
-                }
-            ],
             "jsonld-id": "bioschemas:dateModified",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": " The date on which the CreativeWork was most recently modified or when the item\u2019s entry was modified within a DataFeed.",
-            "rdfs-label": "dateModified"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "dateModified",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Event"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:Date"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:acceptanceNotificationDate",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": " Date for the host to confirm acceptance to applicants.",
-            "rdfs-label": "acceptanceNotificationDate"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "acceptanceNotificationDate",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Event"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
-                    "jsonld-id": "bioschemas:Organization"
-                },
-                {
-                    "jsonld-id": "schema:Text"
+                    "jsonld-id": "schema:Date"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:accreditation",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": " Type if accrediation or organisation that accredits the event",
-            "rdfs-label": "accreditation"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "accreditation",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Event"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
-                    "jsonld-id": "schema:URL"
+                    "jsonld-id": "bioschemas:Organization"
+                },
+                {
+                    "jsonld-id": "schema:Text"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:attachment",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": " Any files or related websites which give more information about this event. e.g. flyers, third party sites handling tickets.",
-            "rdfs-label": "attachment"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "attachment",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Event"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:URL"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:audience",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience. The scientific background the participants should be from. Please use a term from [EDAM: Topic](http://edamontology.org/topic_0003).\n\n**Note:** Bioschemas have changed the Expected Types from [Audience](http://schema.org/Audience) to [URL](http://schema.org/URL).",
-            "rdfs-label": "audience"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "audience",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Event"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
-                    "jsonld-id": "bioschemas:Organization"
-                },
-                {
-                    "jsonld-id": "bioschemas:Person"
+                    "jsonld-id": "schema:URL"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:contact",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": " Main point of contact that can be contacted for general queries. This would be an event organizer or an administrator.",
-            "rdfs-label": "contact"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "contact",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Event"
             },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:Text"
-                },
-                {
-                    "jsonld-id": "schema:URL"
-                }
-            ],
-            "jsonld-id": "bioschemas:deadline",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": " Deadlines dates for this event e.g. application deadline, poster submission, paper submission, early registration",
-            "rdfs-label": "deadline"
-        },
-        {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:Event"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:Text"
-                }
-            ],
-            "jsonld-id": "bioschemas:eligibility",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": " Defines the type of eligibility to attend this event e.g. first come first served. Please use one of the values from the Controlled Vocabulary column.",
-            "rdfs-label": "eligibility"
-        },
-        {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:Event"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:EventType"
-                }
-            ],
-            "jsonld-id": "bioschemas:eventType",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": " This can be one of 4 options. Please see controlled vocabulary",
-            "rdfs-label": "eventType"
-        },
-        {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:Event"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "bioschemas:Organization"
-                }
-            ],
-            "jsonld-id": "bioschemas:hostInstitution",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": " The organization or institution responsible for hosting the event (not necessarily responsible for organizing).",
-            "rdfs-label": "hostInstitution"
-        },
-        {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:Event"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:Text"
-                }
-            ],
-            "jsonld-id": "bioschemas:prerequisite",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": " A list of prerequisites to be able to attend the event",
-            "rdfs-label": "prerequisite"
-        },
-        {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:Event"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:Text"
-                },
-                {
-                    "jsonld-id": "schema:URL"
-                }
-            ],
-            "jsonld-id": "bioschemas:programme",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": " A plan or schedule of activities or procedures to be followed.",
-            "rdfs-label": "programme"
-        },
-        {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:Event"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:Text"
-                }
-            ],
-            "jsonld-id": "bioschemas:registrationStatus",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": " The status of registration for an event; choose a value from the Controlled Vocabulary column.",
-            "rdfs-label": "registrationStatus"
-        },
-        {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:Event"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:URL"
-                }
-            ],
-            "jsonld-id": "bioschemas:socialMedia",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": " Link to social media websites like twitter or facebook",
-            "rdfs-label": "socialMedia"
-        },
-        {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:Event"
-            },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "bioschemas:Organization"
                 },
                 {
                     "jsonld-id": "bioschemas:Person"
                 }
-            ],
-            "jsonld-id": "bioschemas:submitter",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": " The person or organization who submits an event to a repository or registry of events (such as iAnn, ISCB).",
-            "rdfs-label": "submitter"
+            ]
         },
         {
-            "schema:domainIncludes": {
+            "jsonld-id": "bioschemas:deadline",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": " Deadlines dates for this event e.g. application deadline, poster submission, paper submission, early registration",
+            "rdfs-label": "deadline",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Event"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Text"
+                },
                 {
                     "jsonld-id": "schema:URL"
                 }
-            ],
+            ]
+        },
+        {
+            "jsonld-id": "bioschemas:eligibility",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": " Defines the type of eligibility to attend this event e.g. first come first served. Please use one of the values from the Controlled Vocabulary column.",
+            "rdfs-label": "eligibility",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:Event"
+            },
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "jsonld-id": "bioschemas:eventType",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": " This can be one of 4 options. Please see controlled vocabulary",
+            "rdfs-label": "eventType",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:Event"
+            },
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:EventType"
+                }
+            ]
+        },
+        {
+            "jsonld-id": "bioschemas:hostInstitution",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": " The organization or institution responsible for hosting the event (not necessarily responsible for organizing).",
+            "rdfs-label": "hostInstitution",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:Event"
+            },
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "bioschemas:Organization"
+                }
+            ]
+        },
+        {
+            "jsonld-id": "bioschemas:prerequisite",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": " A list of prerequisites to be able to attend the event",
+            "rdfs-label": "prerequisite",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:Event"
+            },
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "jsonld-id": "bioschemas:programme",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": " A plan or schedule of activities or procedures to be followed.",
+            "rdfs-label": "programme",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:Event"
+            },
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Text"
+                },
+                {
+                    "jsonld-id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "jsonld-id": "bioschemas:registrationStatus",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": " The status of registration for an event; choose a value from the Controlled Vocabulary column.",
+            "rdfs-label": "registrationStatus",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:Event"
+            },
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "jsonld-id": "bioschemas:socialMedia",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": " Link to social media websites like twitter or facebook",
+            "rdfs-label": "socialMedia",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:Event"
+            },
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "jsonld-id": "bioschemas:submitter",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": " The person or organization who submits an event to a repository or registry of events (such as iAnn, ISCB).",
+            "rdfs-label": "submitter",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:Event"
+            },
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "bioschemas:Organization"
+                },
+                {
+                    "jsonld-id": "bioschemas:Person"
+                }
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:topic",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": " The scientific topic the event is about. Please use a term from [EDAM: Topic](http://edamontology.org/topic_0003).",
-            "rdfs-label": "topic"
+            "rdfs-label": "topic",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:Event"
+            },
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:URL"
+                }
+            ]
         }
     ]
 }

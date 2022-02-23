@@ -349,7 +349,9 @@
             "rdfs-label": "DataCatalog",
             "rdfs-subClassOf": {
                 "jsonld-id": "schema:DataCatalog"
-            }
+            },
+            "schema-additionalType": "https://bioschemas.org/profiles#nav-release",
+            "schema-schemaVersion": "https://bioschemas.org/profiles/DataCatalog/0.3-RELEASE"
         }
     ]
 }

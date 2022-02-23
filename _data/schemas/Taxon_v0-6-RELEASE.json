@@ -269,33 +269,19 @@
             "rdfs-label": "Taxon",
             "rdfs-subClassOf": {
                 "jsonld-id": "schema:Thing"
-            }
+            },
+            "schema-additionalType": "https://bioschemas.org/profiles#nav-release",
+            "schema-schemaVersion": "https://bioschemas.org/profiles/Taxon/0.6-RELEASE"
         },
         {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:Taxon"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "bioschemas:Taxon"
-                },
-                {
-                    "jsonld-id": "schema:Text"
-                },
-                {
-                    "jsonld-id": "schema:URL"
-                }
-            ],
             "jsonld-id": "bioschemas:childTaxon",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "Closest child taxa of the taxon in question. Inverse property: parentTaxon",
-            "rdfs-label": "childTaxon"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "childTaxon",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Taxon"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "bioschemas:Taxon"
                 },
@@ -305,17 +291,37 @@
                 {
                     "jsonld-id": "schema:URL"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:parentTaxon",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "Closest parent taxon of the taxon in question. Inverse property: childTaxon",
-            "rdfs-label": "parentTaxon"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "parentTaxon",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Taxon"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "bioschemas:Taxon"
+                },
+                {
+                    "jsonld-id": "schema:Text"
+                },
+                {
+                    "jsonld-id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "jsonld-id": "bioschemas:taxonRank",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary \u2013 (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs).",
+            "rdfs-label": "taxonRank",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:Taxon"
+            },
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:PropertyValue"
                 },
@@ -325,25 +331,21 @@
                 {
                     "jsonld-id": "schema:URL"
                 }
-            ],
-            "jsonld-id": "bioschemas:taxonRank",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": "The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary \u2013 (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs).",
-            "rdfs-label": "taxonRank"
+            ]
         },
         {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:Taxon"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:Text"
-                }
-            ],
             "jsonld-id": "bioschemas:vernacularName",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "A vernacular (common) name of the taxon",
-            "rdfs-label": "vernacularName"
+            "rdfs-label": "vernacularName",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:Taxon"
+            },
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Text"
+                }
+            ]
         }
     ]
 }

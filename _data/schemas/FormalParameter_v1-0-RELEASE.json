@@ -191,55 +191,57 @@
             "rdfs-label": "FormalParameter",
             "rdfs-subClassOf": {
                 "jsonld-id": "schema:Intangible"
-            }
+            },
+            "schema-additionalType": "https://bioschemas.org/profiles#nav-release",
+            "schema-schemaVersion": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
         },
         {
-            "schema:domainIncludes": {
+            "jsonld-id": "bioschemas:defaultValue",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "The default value for the FormalParameter. This is commonly only used for Inputs.",
+            "rdfs-label": "defaultValue",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:FormalParameter"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:Text"
                 },
                 {
                     "jsonld-id": "schema:Thing"
                 }
-            ],
-            "jsonld-id": "bioschemas:defaultValue",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": "The default value for the FormalParameter. This is commonly only used for Inputs.",
-            "rdfs-label": "defaultValue"
+            ]
         },
         {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:FormalParameter"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:Boolean"
-                }
-            ],
             "jsonld-id": "bioschemas:valueRequired",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "If the FormalParameter must be specified. This is commonly only used for Inputs",
-            "rdfs-label": "valueRequired"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "valueRequired",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:FormalParameter"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Boolean"
+                }
+            ]
+        },
+        {
+            "jsonld-id": "bioschemas:encodingFormat",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "URLs to accepted formats.  It is strongly recommented that this be specified. If it is not specified, then nothing should be assumed about the encoding formats of the FormalParameter. Recommended ontology: http://edamontology.org/format_1915",
+            "rdfs-label": "encodingFormat",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:FormalParameter"
+            },
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:Text"
                 },
                 {
                     "jsonld-id": "schema:URL"
                 }
-            ],
-            "jsonld-id": "bioschemas:encodingFormat",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": "URLs to accepted formats.  It is strongly recommented that this be specified. If it is not specified, then nothing should be assumed about the encoding formats of the FormalParameter. Recommended ontology: http://edamontology.org/format_1915",
-            "rdfs-label": "encodingFormat"
+            ]
         }
     ]
 }

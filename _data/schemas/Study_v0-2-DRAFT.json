@@ -8,9 +8,6 @@
     },
     "jsonld-graph": [
         {
-            "schema:schemaVersion": [
-                "https://bioschemas.org/profiles/Study/0.2-DRAFT"
-            ],
             "jsonld-id": "bioschemas:Study",
             "jsonld-type": "rdfs:Class",
             "jsonld-validation": {
@@ -642,112 +639,98 @@
             "rdfs-label": "Study",
             "rdfs-subClassOf": {
                 "jsonld-id": "schema:CreativeWork"
-            }
+            },
+            "schema-additionalType": "https://bioschemas.org/profiles#nav-draft",
+            "schema-schemaVersion": "https://bioschemas.org/profiles/Study/0.2-DRAFT"
         },
         {
             "schema:sameAs": {
                 "jsonld-id": "ppeo:hasGrowthChamber"
             },
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:Study"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:URL"
-                }
-            ],
             "jsonld-id": "bioschemas:hasGrowthChamber",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "has growth facility The kind of growth facility used in a plant study",
-            "rdfs-label": "hasGrowthChamber"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "hasGrowthChamber",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Study"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
-                    "jsonld-id": "schema:Date"
-                },
-                {
-                    "jsonld-id": "schema:DateTime"
+                    "jsonld-id": "schema:URL"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:startDate",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "The start date and time of the item (in ISO 8601 date format). ",
-            "rdfs-label": "startDate"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "startDate",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Study"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:Date"
                 },
                 {
                     "jsonld-id": "schema:DateTime"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:endDate",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "The end date and time of the item (in ISO 8601 date format). ",
-            "rdfs-label": "endDate"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "endDate",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Study"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
-                    "jsonld-id": "schema:PropertyValue"
+                    "jsonld-id": "schema:Date"
+                },
+                {
+                    "jsonld-id": "schema:DateTime"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:additionalProperty",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism. ",
-            "rdfs-label": "additionalProperty"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "additionalProperty",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Study"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
-                    "jsonld-id": "bioschemas:Study"
+                    "jsonld-id": "schema:PropertyValue"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:relatedStudy",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "A study that is related to this one. ",
-            "rdfs-label": "relatedStudy"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "relatedStudy",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Study"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
-                    "jsonld-id": "schema:PropertyValue"
-                },
-                {
-                    "jsonld-id": "schema:Text"
-                },
-                {
-                    "jsonld-id": "schema:URL"
+                    "jsonld-id": "bioschemas:Study"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:studyDomain",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "Define the domain of the study. For example, the domain could be astrophysics, functional genomics or earth science. Those domains can also have an ontology reference. For example, in the life sciences  we could have\nFunctional Genomics: http://edamontology.org/topic_0085\nProtemics: http://edamontology.org/topic_0121",
-            "rdfs-label": "studyDomain"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "studyDomain",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Study"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:PropertyValue"
                 },
@@ -757,45 +740,61 @@
                 {
                     "jsonld-id": "schema:URL"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:studyProcess",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "A process performed as part of an experiment or wider study, i.e. intentionally designed.\nThese processes can have ontology URL attached to. For example, in the life sciences  we could have \nRNA-seq of coding RNA from single cells: http://www.ebi.ac.uk/efo/EFO_0005684\ncase control design: http://www.ebi.ac.uk/efo/EFO_0001427",
-            "rdfs-label": "studyProcess"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "studyProcess",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Study"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:PropertyValue"
+                },
+                {
+                    "jsonld-id": "schema:Text"
+                },
+                {
+                    "jsonld-id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "jsonld-id": "bioschemas:studyLocation",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "The location in which the study is taking/took place.",
+            "rdfs-label": "studyLocation",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:Study"
+            },
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:Place"
                 },
                 {
                     "jsonld-id": "schema:AdministrativeArea"
                 }
-            ],
-            "jsonld-id": "bioschemas:studyLocation",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": "The location in which the study is taking/took place.",
-            "rdfs-label": "studyLocation"
+            ]
         },
         {
-            "schema:domainIncludes": {
+            "jsonld-id": "bioschemas:studySubject",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.",
+            "rdfs-label": "studySubject",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Study"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:MedicalEntity"
                 },
                 {
                     "jsonld-id": "bioschemas:BioChemEntity"
                 }
-            ],
-            "jsonld-id": "bioschemas:studySubject",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": "A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.",
-            "rdfs-label": "studySubject"
+            ]
         }
     ]
 }

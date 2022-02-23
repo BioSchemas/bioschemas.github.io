@@ -7,9 +7,6 @@
     },
     "jsonld-graph": [
         {
-            "schema:schemaVersion": [
-                "https://bioschemas.org/profiles/LabProtocol/0.6-DRAFT-2020_12_08"
-            ],
             "jsonld-id": "bioschemas:LabProtocol",
             "jsonld-type": "rdfs:Class",
             "jsonld-validation": {
@@ -922,13 +919,19 @@
             "rdfs-label": "LabProtocol",
             "rdfs-subClassOf": {
                 "jsonld-id": "schema:HowTo"
-            }
+            },
+            "schema-additionalType": "https://bioschemas.org/profiles#nav-draft",
+            "schema-schemaVersion": "https://bioschemas.org/profiles/LabProtocol/0.6-DRAFT-2020_12_08"
         },
         {
-            "schema:domainIncludes": {
+            "jsonld-id": "bioschemas:bioSampleUsed",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "BioSample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used.  ",
+            "rdfs-label": "bioSampleUsed",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:LabProtocol"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "bioschemas:BioSample"
                 },
@@ -947,17 +950,17 @@
                 {
                     "jsonld-id": "schema:URL"
                 }
-            ],
-            "jsonld-id": "bioschemas:bioSampleUsed",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": "BioSample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used.  ",
-            "rdfs-label": "bioSampleUsed"
+            ]
         },
         {
-            "schema:domainIncludes": {
+            "jsonld-id": "bioschemas:labEquipmentUsed",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "A laboratory equipment used by a person to follow one or more steps described in this LabProtocol.  ",
+            "rdfs-label": "labEquipmentUsed",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:LabProtocol"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:DefinedTerm"
                 },
@@ -967,102 +970,102 @@
                 {
                     "jsonld-id": "schema:URL"
                 }
-            ],
-            "jsonld-id": "bioschemas:labEquipmentUsed",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": "A laboratory equipment used by a person to follow one or more steps described in this LabProtocol.  ",
-            "rdfs-label": "labEquipmentUsed"
+            ]
         },
         {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:LabProtocol"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:CreativeWork"
-                },
-                {
-                    "jsonld-id": "schema:Text"
-                }
-            ],
             "jsonld-id": "bioschemas:protocolAdvantage",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "Situations where the Protocol has been successfully employed including advantageous elements (e.g. better yield, shorter running time) (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#AdvantageOfTheProtocol\">here</a>) ",
-            "rdfs-label": "protocolAdvantage"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "protocolAdvantage",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:LabProtocol"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:CreativeWork"
                 },
                 {
                     "jsonld-id": "schema:Text"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:protocolApplication",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "Applications of the protocol list the full diversity of the applications of the method and support if is possible to extend the range of applications of the protocol. e.g. northern blot assays, sequencing, etc. (see more information  <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#ApplicationOfTheProtocol\">here</a>) ",
-            "rdfs-label": "protocolApplication"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "protocolApplication",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:LabProtocol"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:CreativeWork"
                 },
                 {
                     "jsonld-id": "schema:Text"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:protocolLimitation",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "Situations where the Protocol would be unreliable or otherwise unsuccessful (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#LimitationOfTheProtocol\">here</a>) ",
-            "rdfs-label": "protocolLimitation"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "protocolLimitation",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:LabProtocol"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:CreativeWork"
                 },
                 {
                     "jsonld-id": "schema:Text"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:protocolOutcome",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "Outcome or expected result by a protocol execution (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#OutcomeOfTheProtocol\">here</a>) ",
-            "rdfs-label": "protocolOutcome"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "protocolOutcome",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:LabProtocol"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:CreativeWork"
                 },
                 {
                     "jsonld-id": "schema:Text"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:protocolPurpose",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "The purpose of the protocol enables readers to make a decision as to the suitability of the protocol to their experimental problem. (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#PurposeOfProtocol\">here</a>) ",
-            "rdfs-label": "protocolPurpose"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "protocolPurpose",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:LabProtocol"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:CreativeWork"
+                },
+                {
+                    "jsonld-id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "jsonld-id": "bioschemas:reagentUsed",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "Reagents used in the protocol. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable. A reagent is defined as 'A substance used in a chemical reaction to detect, measure, examine, or produce other substances' in <a href=\"https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:33893\">CHEBI:33893</a> ",
+            "rdfs-label": "reagentUsed",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:LabProtocol"
+            },
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "bioschemas:MolecularEntity"
                 },
@@ -1081,28 +1084,24 @@
                 {
                     "jsonld-id": "schema:URL"
                 }
-            ],
-            "jsonld-id": "bioschemas:reagentUsed",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": "Reagents used in the protocol. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable. A reagent is defined as 'A substance used in a chemical reaction to detect, measure, examine, or produce other substances' in <a href=\"https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:33893\">CHEBI:33893</a> ",
-            "rdfs-label": "reagentUsed"
+            ]
         },
         {
-            "schema:domainIncludes": {
+            "jsonld-id": "bioschemas:softwareUsed",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "Software or tool used as part of the lab protocol to complete a part of it. ",
+            "rdfs-label": "softwareUsed",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:LabProtocol"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:SoftwareApplication"
                 },
                 {
                     "jsonld-id": "schema:URL"
                 }
-            ],
-            "jsonld-id": "bioschemas:softwareUsed",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": "Software or tool used as part of the lab protocol to complete a part of it. ",
-            "rdfs-label": "softwareUsed"
+            ]
         }
     ]
 }

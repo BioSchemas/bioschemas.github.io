@@ -7,9 +7,6 @@
     },
     "jsonld-graph": [
         {
-            "schema:schemaVersion": [
-                "https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19"
-            ],
             "jsonld-id": "bioschemas:Organization",
             "jsonld-type": "rdfs:Class",
             "jsonld-validation": {
@@ -603,176 +600,178 @@
             "rdfs-label": "Organization",
             "rdfs-subClassOf": {
                 "jsonld-id": "schema:Organization"
-            }
+            },
+            "schema-additionalType": "https://bioschemas.org/profiles#nav-draft",
+            "schema-schemaVersion": "https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19"
         },
         {
             "schema:sameAs": {
                 "jsonld-id": "schema:keywords"
             },
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:Organization"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:Text"
-                }
-            ],
             "jsonld-id": "bioschemas:keywords",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
-            "rdfs-label": "keywords"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "keywords",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Organization"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "jsonld-id": "bioschemas:founderMember",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": " For an alliance or collaboration or project, the founding members. NOTE: schema/Organization has founder but this has a type of Person not Person and Organization.",
+            "rdfs-label": "founderMember",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:Organization"
+            },
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:Person"
                 },
                 {
                     "jsonld-id": "schema:Organization"
                 }
-            ],
-            "jsonld-id": "bioschemas:founderMember",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": " For an alliance or collaboration or project, the founding members. NOTE: schema/Organization has founder but this has a type of Person not Person and Organization.",
-            "rdfs-label": "founderMember"
+            ]
         },
         {
-            "schema:domainIncludes": {
+            "jsonld-id": "bioschemas:dateModified",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": " The date on which the CreativeWork was most recently modified or when the item\u2019s entry was modified within a DataFeed.",
+            "rdfs-label": "dateModified",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Organization"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:Date"
                 },
                 {
                     "jsonld-id": "schema:DateTime"
                 }
-            ],
-            "jsonld-id": "bioschemas:dateModified",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": " The date on which the CreativeWork was most recently modified or when the item\u2019s entry was modified within a DataFeed.",
-            "rdfs-label": "dateModified"
+            ]
         },
         {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:Organization"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:URL"
-                }
-            ],
             "jsonld-id": "bioschemas:attachment",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": " Any files or related websites which give more information about this organization, e.g., flyers, third party sites, ...",
-            "rdfs-label": "attachment"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "attachment",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Organization"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
-                    "jsonld-id": "schema:PriceSpecification"
+                    "jsonld-id": "schema:URL"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:budget",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": " The annual (or total - for a project) budget for the organization.",
-            "rdfs-label": "budget"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "budget",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Organization"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
-                    "jsonld-id": "schema:Text"
+                    "jsonld-id": "schema:PriceSpecification"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:fundingModel",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": " A description of how the organization is funded.",
-            "rdfs-label": "fundingModel"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "fundingModel",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Organization"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
-                    "jsonld-id": "schema:Offer"
+                    "jsonld-id": "schema:Text"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:membershipCategory",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": " Defines a membership category and associated fees (for projects and alliances etc.).",
-            "rdfs-label": "membershipCategory"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "membershipCategory",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Organization"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
-                    "jsonld-id": "schema:URL"
+                    "jsonld-id": "schema:Offer"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:socialMedia",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": " Link to social media websites like twitter or facebook.",
-            "rdfs-label": "socialMedia"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "socialMedia",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Organization"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
-                    "jsonld-id": "schema:Text"
+                    "jsonld-id": "schema:URL"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:status",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": " To record if the organization is still alive, and if it were are project or alliance, what the outcome was, or if it has closed down or merged, why and when.\nNote: There is a health-lifesci.status, but this is not related to the current status property",
-            "rdfs-label": "status"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "status",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Organization"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:Text"
-                },
-                {
-                    "jsonld-id": "schema:URL"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:topic",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": " Scientific topics that describe the organization and its activities, ideally using an ontology term from EDAM:Topic.",
-            "rdfs-label": "topic"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "topic",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:Organization"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:Text"
                 },
                 {
                     "jsonld-id": "schema:URL"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:type",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": " The type of the organization should be selected from the Controlled Vocabulary column.",
-            "rdfs-label": "type"
+            "rdfs-label": "type",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:Organization"
+            },
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:Text"
+                },
+                {
+                    "jsonld-id": "schema:URL"
+                }
+            ]
         }
     ]
 }

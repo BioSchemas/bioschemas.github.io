@@ -7,9 +7,6 @@
     },
     "jsonld-graph": [
         {
-            "schema:schemaVersion": [
-                "https://bioschemas.org/profiles/Journal/0.2-DRAFT-2020_12_03"
-            ],
             "jsonld-id": "bioschemas:Journal",
             "jsonld-type": "rdfs:Class",
             "jsonld-validation": {
@@ -488,7 +485,9 @@
             "rdfs-label": "Journal",
             "rdfs-subClassOf": {
                 "jsonld-id": "schema:CreativeWorkSeries"
-            }
+            },
+            "schema-additionalType": "https://bioschemas.org/profiles#nav-draft",
+            "schema-schemaVersion": "https://bioschemas.org/profiles/Journal/0.2-DRAFT-2020_12_03"
         }
     ]
 }

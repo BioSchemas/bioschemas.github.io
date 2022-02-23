@@ -702,136 +702,138 @@
             "rdfs-label": "MolecularEntity",
             "rdfs-subClassOf": {
                 "jsonld-id": "bioschemas:BioChemEntity"
-            }
+            },
+            "schema-additionalType": "https://bioschemas.org/profiles#nav-release",
+            "schema-schemaVersion": "https://bioschemas.org/profiles/MolecularEntity/0.5-RELEASE"
         },
         {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:MolecularEntity"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:Text"
-                }
-            ],
             "jsonld-id": "bioschemas:inChI",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "Non-proprietary identifier for molecular entity that can be used in printed and electronic data sources thus enabling easier linking of diverse data compilations.",
-            "rdfs-label": "inChI"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "inChI",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:MolecularEntity"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:Text"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:inChIKey",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm).",
-            "rdfs-label": "inChIKey"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "inChIKey",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:MolecularEntity"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:Text"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:iupacName",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "Systematic method of naming chemical compounds as recommended by the International Union of Pure and Applied Chemistry (IUPAC).",
-            "rdfs-label": "iupacName"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "iupacName",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:MolecularEntity"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:Text"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:molecularFormula",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "The empirical formula is the simplest whole number ratio of all the atoms in a molecule.",
-            "rdfs-label": "molecularFormula"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "molecularFormula",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:MolecularEntity"
             },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:QuantitativeValue"
-                }
-            ],
-            "jsonld-id": "bioschemas:molecularWeight",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": "This is the molecular weight of the entity being described, not of the parent. Units should be included in the form \u2018 ', for example '12 amu' or as '.",
-            "rdfs-label": "molecularWeight"
-        },
-        {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:MolecularEntity"
-            },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:Text"
                 }
-            ],
+            ]
+        },
+        {
+            "jsonld-id": "bioschemas:molecularWeight",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "This is the molecular weight of the entity being described, not of the parent. Units should be included in the form \u2018 ', for example '12 amu' or as '.",
+            "rdfs-label": "molecularWeight",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:MolecularEntity"
+            },
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:QuantitativeValue"
+                }
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:smiles",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "A specification in form of a line notation for describing the structure of chemical species using short ASCII strings. Double bond stereochemistry \\ indicators may need to be escaped in the string in formats where the backslash is an escape character.",
-            "rdfs-label": "smiles"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "smiles",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:MolecularEntity"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
                 {
-                    "jsonld-id": "schema:DefinedTerm"
+                    "jsonld-id": "schema:Text"
                 }
-            ],
+            ]
+        },
+        {
             "jsonld-id": "bioschemas:chemicalRole",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "A role played by the BioChemEntity within a chemical context.",
-            "rdfs-label": "chemicalRole"
-        },
-        {
-            "schema:domainIncludes": {
+            "rdfs-label": "chemicalRole",
+            "schema-domainIncludes": {
                 "jsonld-id": "bioschemas:MolecularEntity"
             },
-            "schema:rangeIncludes": [
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:DefinedTerm"
+                }
+            ]
+        },
+        {
+            "jsonld-id": "bioschemas:monoisotopicMolecularWeight",
+            "jsonld-type": "rdf:Property",
+            "rdfs-comment": "The monoisotopic mass is the sum of the masses of the atoms in a molecule using the unbound, ground-state, rest mass of the principal (most abundant) isotope for each element instead of the isotopic average mass. Please include the units the form \u2018 ', for example '770.230488 g/mol' or as '.",
+            "rdfs-label": "monoisotopicMolecularWeight",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:MolecularEntity"
+            },
+            "schema-rangeIncludes": [
                 {
                     "jsonld-id": "schema:Text"
                 },
                 {
                     "jsonld-id": "schema:QuantitativeValue"
                 }
-            ],
-            "jsonld-id": "bioschemas:monoisotopicMolecularWeight",
-            "jsonld-type": "rdf:Property",
-            "rdfs-comment": "The monoisotopic mass is the sum of the masses of the atoms in a molecule using the unbound, ground-state, rest mass of the principal (most abundant) isotope for each element instead of the isotopic average mass. Please include the units the form \u2018 ', for example '770.230488 g/mol' or as '.",
-            "rdfs-label": "monoisotopicMolecularWeight"
+            ]
         },
         {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:MolecularEntity"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:DefinedTerm"
-                }
-            ],
             "jsonld-id": "bioschemas:potentialUse",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "Intended use of the BioChemEntity by humans.",
-            "rdfs-label": "potentialUse"
+            "rdfs-label": "potentialUse",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:MolecularEntity"
+            },
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:DefinedTerm"
+                }
+            ]
         }
     ]
 }

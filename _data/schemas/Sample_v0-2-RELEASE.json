@@ -220,21 +220,23 @@
             "rdfs-label": "Sample",
             "rdfs-subClassOf": {
                 "jsonld-id": "schema:Thing"
-            }
+            },
+            "schema-additionalType": "https://bioschemas.org/profiles#nav-release",
+            "schema-schemaVersion": "https://bioschemas.org/profiles/Sample/0.2-RELEASE"
         },
         {
-            "schema:domainIncludes": {
-                "jsonld-id": "bioschemas:Sample"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "jsonld-id": "schema:PropertyValue"
-                }
-            ],
             "jsonld-id": "bioschemas:additionalProperty",
             "jsonld-type": "rdf:Property",
             "rdfs-comment": "A property-value pair representing an additional characteristics of the entity, e.g. \u201cOrganism: Homo sapiens\u201d or \u201ctissue type: leaf\u201d. For details of how to use PropertyValue see below.",
-            "rdfs-label": "additionalProperty"
+            "rdfs-label": "additionalProperty",
+            "schema-domainIncludes": {
+                "jsonld-id": "bioschemas:Sample"
+            },
+            "schema-rangeIncludes": [
+                {
+                    "jsonld-id": "schema:PropertyValue"
+                }
+            ]
         }
     ]
 }
