@@ -171,11 +171,55 @@ layout: default
 </div>
 <p>If you spot any errors or omissions with this type, please file an issue in our <a href="{{page.gh_tasks}}" target="_blank">GitHub</a>.</p>
 
+<h3>Profile Definition</h3>
 {% include spec-table-key.html %}
-
-<h3>Validation Rules</h3>
+<p><strong>TODO:</strong> Add examples button back in</p>
 <p><strong>TODO:</strong> Recreate the profile table using the content of the JSON-Schema validation rules included below.</p>
-{{metadata.jsonld-validation}}
+<p><strong>TODO:</strong> Cope with more than one expected type given with 'oneOf' or 'anyOf' keys</p>
+
+<div class="table-responsive shadow rounded mt-4 mb-5">
+<table class="table table-hover table-borderless mb-0 spec-prof-table">
+  <thead>
+      <tr>
+          <th>Property</th>
+          <th>Expected Type</th>
+          <th>Description</th>
+          <th>CD</th>
+          <th class="control-vocabulary-column">Controlled Vocabulary</th>
+          <th class="example-column">Example</th>
+      </tr>
+  </thead>
+  <tbody>
+    {%- assign required = metadata.jsonld-validation.required %}
+    {%- assign properties = metadata.jsonld-validation.properties %}
+    {%- if required.size > 0 %}
+    <tr class="cardinality">
+        <td colspan="6">
+            Marginality: <b>Minimal.</b>
+        </td>
+    </tr>
+    {%- endif %}
+    {%- for req in required %}
+    {%- assign property = properties[req] %}
+    <tr>
+      <td class="property-column"><a href="https://schema.org/{{req}}">{{req}}</a></td>
+      <td>
+        {%- if property.type == 'string' and property.format == 'uri' %}
+        <a href="https://schema.org/URL">URL</a>
+        {%- elsif property.type == 'string' %}
+        <a href="https://schema.org/Text">Text</a>
+        {%- else %}
+        {{property.type}}
+        {%- endif %}
+      </td>
+      <td>{{property.description}}</td>
+      <td colspan="3">{{properties[req]}}</td>
+    </tr>
+    {%- endfor %}
+  </tbody>
+</table>
+
+<p>Properties: {{metadata.jsonld-validation.properties}}</p>
 
 {{content}}
 
