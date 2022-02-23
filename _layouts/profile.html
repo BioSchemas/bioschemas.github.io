@@ -4,9 +4,17 @@ layout: default
 {%- assign schema = site.data.schemas[page.schema_filename] %}
 {%- assign metadata = schema.jsonld-graph | first %}
 {%- assign profile_name = metadata.rdfs-label %}
-{% assign group = site.groups | where:"identifier", page.group %}
+{%- assign group = site.groups | where:"identifier", page.group %}
 
-<h1>{{profile_name}} Profile</h1>
+{%- assign status = metadata.schema-additionalType | split: 'nav-' | last %}
+{%- case status %}
+{%- when "release" %}
+  <h1>{{profile_name}} Profile</h1>
+{%- when "draft" %}
+  <h1>{{profile_name}} <u>DRAFT</u> Profile</h1>
+{%- when "deprecated" %}
+  <h1>{{profile_name}} <u>DEPRECATED</u> Profile</h1>
+{%- endcase %}
 
 <h3>Description</h3>
 <blockquote>{{metadata.rdfs-comment}}</blockquote>
