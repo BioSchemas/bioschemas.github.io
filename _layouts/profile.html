@@ -1,56 +1,52 @@
 ---
 layout: default
 ---
-{%- assign schema = site.data.schemas[page.schema_filename] %}
-{%- assign metadata = schema.jsonld-graph | first %}
-{%- assign profile_name = metadata.rdfs-label %}
 {%- assign group = site.groups | where:"identifier", page.group %}
 
-{%- assign status = metadata.schema-additionalType | split: 'nav-' | last %}
-{%- case status %}
-{%- when "release" %}
-  <h1>{{profile_name}} Profile</h1>
-{%- when "draft" %}
-  <h1>{{profile_name}} <u>DRAFT</u> Profile</h1>
-{%- when "deprecated" %}
-  <h1>{{profile_name}} <u>DEPRECATED</u> Profile</h1>
+{%- case page.status %}
+{%- when "RELEASE" %}
+  <h1>{{page.name}} Profile</h1>
+{%- when "DRAFT" %}
+  <h1>{{page.name}} <u>DRAFT</u> Profile</h1>
+{%- when "DEPRECATED" %}
+  <h1>{{page.name}} <u>DEPRECATED</u> Profile</h1>
 {%- endcase %}
 
 <h3>Description</h3>
-<blockquote>{{metadata.rdfs-comment}}</blockquote>
+<blockquote>{{page.description}}</blockquote>
 
 <h3>Schema.org Type</h3>
-{% assign profile_type = metadata.rdfs-subClassOf.jsonld-id %}
+{% assign profile_type = page.schema_type %}
 {% assign testArray = profile_type | split: 'schema:' %}
 {% if testArray[0] != blank %}
-<p>The {{profile_name}} profile is defined over the <a href='https://schema.org/{{testArray[1]}}'>{{profile_type}}</a> type.</p>
+<p>The {{page.name}} profile is defined over the <a href='https://schema.org/{{testArray[1]}}'>{{profile_type}}</a> type.</p>
 {% else %}
-<p>The {{profile_name}} profile is defined over the {{profile_type}} type.</p>
+<p>The {{page.name}} profile is defined over the {{profile_type}} type.</p>
 {% endif %}
 
 <h3>Versions</h3>
 <ul>
-  <li><strong>This version: <a href="{{metadata.schema-schemaVersion}}">{{metadata.schema-schemaVersion | split: '/' | last }}</a></strong></li>
-{% assign profile_versions = site.data.profile_versions[profile_name] %}
-{% if profile_versions.latest_release != null %}
-<li>Latest release: <a href="{{ profile_name | prepend: '/profiles/' | append:'/' | append: profile_versions.latest_release | relative_url }}">{{profile_versions.latest_release}}</a></li>
-{% else %}
+  <li><strong>This version: <a href="{{page.version}}">{{page.version | split: '/' | last }}</a></strong></li>
+{% assign profile_versions = site.data.profile_versions[page.name] %}
+{% if profile_versions.latest_release == null or profile_versions.latest_release == '' %}
 <li>Latest release: none</li>
-{% endif %}
-{% if profile_versions.latest_publication != null %}
-<li>Latest draft: <a href="{{ profile_name | prepend: '/profiles/' | append:'/' | append: profile_versions.latest_publication | relative_url }}">{{profile_versions.latest_publication}}</a></li>
 {% else %}
+<li>Latest release: <a href="{{ page.name | prepend: '/profiles/' | append:'/' | append: profile_versions.latest_release | relative_url }}">{{profile_versions.latest_release}}</a></li>
+{% endif %}
+{% if profile_versions.latest_publication == null or profile_versions.latest_publication == '' %}
 <li>Latest draft: none</li>
-{% endif %}
-{% if page.previous_version != null %}
-<li>Previous version: <a href="{{ profile_name | prepend: '/profiles/' | append: '/' | append: page.previous_version | relative_url }}">{{page.previous_version}}</a></li>
 {% else %}
+<li>Latest draft: <a href="{{ page.name | prepend: '/profiles/' | append:'/' | append: profile_versions.latest_publication | relative_url }}">{{profile_versions.latest_publication}}</a></li>
+{% endif %}
+{% if page.previous_version == null or page.previous_version == '' %}
 <li>Previous version: none</li>
-{% endif %}
-{% if page.previous_release != null %}
-<li>Previous release: <a href="{{ profile_name | prepend: '/profiles/' | append: '/' | append: page.previous_release | relative_url }}">{{page.previous_version}}</a></li>
 {% else %}
+<li>Previous version: <a href="{{ page.name | prepend: '/profiles/' | append: '/' | append: page.previous_version | relative_url }}">{{page.previous_version}}</a></li>
+{% endif %}
+{% if page.previous_release == null or page.previous_release == '' %}
 <li>Previous release: none</li>
+{% else %}
+<li>Previous release: <a href="{{ page.name | prepend: '/profiles/' | append: '/' | append: page.previous_release | relative_url }}">{{page.previous_version}}</a></li>
 {% endif %}
 </ul>
 
@@ -86,28 +82,28 @@ layout: default
                   {% endfor %}
                </td>
                <td class="spec_links">
-                  <a href="{{profile_name | prepend: '/useCases/' | append: '/'}}">
-                  <img src="{{ '/images/use_case_spec.svg' | relative_url }}" alt="View Bioschemas {{ profile_name }} Use Cases">
+                  <a href="{{page.name | prepend: '/useCases/' | append: '/'}}">
+                  <img src="{{ '/images/use_case_spec.svg' | relative_url }}" alt="View Bioschemas {{ page.name }} Use Cases">
                   </a>
                </td>
                <td class="spec_links">
-                  <a href="{{profile_name | downcase | prepend: '/news/tags.html#'}}">
-                  <img src="{{ '/images/cross_walk.svg' | relative_url }}" alt="View Bioschemas {{ profile_name }} news items">
+                  <a href="{{page.name | downcase | prepend: '/news/tags.html#'}}">
+                  <img src="{{ '/images/cross_walk.svg' | relative_url }}" alt="View Bioschemas {{ page.name }} news items">
                   </a>
                </td>
                <td class="spec_links">
-                  <a href="{{profile_name | prepend: 'https://github.com/Bioschemas/bioschemas/labels/type%3A%20'}}" target="_blank">
-                  <img src="{{ '/images/specs_tasks.png' | relative_url }}" alt="Bioschemas {{ profile_name }} Github Tasks or Issues">
+                  <a href="{{page.name | prepend: 'https://github.com/Bioschemas/bioschemas/labels/type%3A%20'}}" target="_blank">
+                  <img src="{{ '/images/specs_tasks.png' | relative_url }}" alt="Bioschemas {{ page.name }} Github Tasks or Issues">
                   </a>
                </td>
                <td class="spec_links" target="_blank">
-                  <a href="{{profile_name | prepend: 'https://github.com/BioSchemas/specifications/tree/master/' | append: '/examples'}}">
-                  <img src="{{ '/images/spec_examples.png' | relative_url }}" alt="View Bioschemas {{ profile_name }} examples">
+                  <a href="{{page.name | prepend: 'https://github.com/BioSchemas/specifications/tree/master/' | append: '/examples'}}">
+                  <img src="{{ '/images/spec_examples.png' | relative_url }}" alt="View Bioschemas {{ page.name }} examples">
                   </a>
                </td>
                <td class="spec_links">
-                  <a href="{{profile_name | prepend: '/liveDeploys#nav-profile?row='}}">
-                  <img src="{{ '/images/live_deploy.svg' | relative_url }}" alt="View Bioschemas {{ profile_name }} live deployments">
+                  <a href="{{page.name | prepend: '/liveDeploys#nav-profile?row='}}">
+                  <img src="{{ '/images/live_deploy.svg' | relative_url }}" alt="View Bioschemas {{ page.name }} live deployments">
                   </a>
                </td>
             </tr>
@@ -156,11 +152,11 @@ layout: default
   <div class="tab-pane fade" id="nav-changes" role="tabpanel" aria-labelledby="nav-changes-tab">
     <h3>Summary of Changes</h3>
     {% if page.previous_version == nil %}
-    <p>There have been no previous versions of the {{profile_name}} profile.</p>
+    <p>There have been no previous versions of the {{page.name}} profile.</p>
     {% elsif page.changes == nil %}
-    <p>There have been no changes since the <a href="{{ profile_name | prepend: '/profiles/' | append: '/' | append: page.previous_version | relative_url }}">{{page.previous_version}}</a> version.</p>
+    <p>There have been no changes since the <a href="{{ page.name | prepend: '/profiles/' | append: '/' | append: page.previous_version | relative_url }}">{{page.previous_version}}</a> version.</p>
     {% else %}
-    <p>The following changes have been made since the <a href="{{ profile_name | prepend: '/profiles/' | append: '/' | append: page.previous_version | relative_url }}">{{page.previous_version}}</a> version:</p>
+    <p>The following changes have been made since the <a href="{{ page.name | prepend: '/profiles/' | append: '/' | append: page.previous_version | relative_url }}">{{page.previous_version}}</a> version:</p>
     <ul>
       {% for change in page.changes %}
         <li>{{change}}</li>
