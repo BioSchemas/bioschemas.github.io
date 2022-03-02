@@ -46,7 +46,7 @@ layout: default
 {% if page.previous_release == null or page.previous_release == '' %}
 <li>Previous release: none</li>
 {% else %}
-<li>Previous release: <a href="{{ page.name | prepend: '/profiles/' | append: '/' | append: page.previous_release | relative_url }}">{{page.previous_version}}</a></li>
+<li>Previous release: <a href="{{ page.name | prepend: '/profiles/' | append: '/' | append: page.previous_release | relative_url }}">{{page.previous_release}}</a></li>
 {% endif %}
 </ul>
 
