@@ -56,7 +56,8 @@ title: News Tags
 			{%- endcomment %}
 			{%- for tag in tags %}
 			<h2 id="{{tag|slugify}}">{{tag}}</h2>
-			{%- for post in site.news %}
+			{%- assign news = site.news | where: "layout", "post" | reverse %}
+			{%- for post in news %}
 			{%- if post.tags contains tag %}
 			{% include post-snippet.html %}
 			{%- endif %}
