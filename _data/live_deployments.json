@@ -1472,6 +1472,18 @@
           "highlight": "900 cell lines"
         }
       ]
+    },
+    {
+      "name": "PSnpBind",
+      "description": "A database of mutated binding site protein-ligand complexes constructed using a multithreaded virtual screening workflow.",
+      "url": "https://ebisc.org/",
+      "sitemap": "https://psnpbind.org/",
+      "profiles": [
+        {
+          "profileName": "Protein",
+          "exampleURL": "https://psnpbind.org/protein/1owh"
+        }
+      ]
     }
   ]
 }
