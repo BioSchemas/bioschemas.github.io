@@ -4,38 +4,38 @@ overviewTutorial:
   link: ./community_tutorials.html
   title: Return to community tutorials overview
 
-  bioschemas:
-    "@context": https://schema.org/
-    "@type": LearningResource
-    "http://purl.org/dc/terms/conformsTo":
-    - "@type": CreativeWork
-      "@id": "https://bioschemas.org/profiles/TrainingMaterial/0.9-DRAFT-2020_12_08/"
-    about:
-    - "@id": https://www.orpha.net
-    audience:
-    - "@type": Audience
-      name: (Markup provider, Markup consumer) WebMaster
-    name: "Adding Bioschemas to the Orphanet website"
-    author:
-    - "@type": Person
-      name: "Marc Hanauer"
-      "@id": https://orcid.org/0000-0002-6758-2506
-      url: https://orcid.org/0000-0002-6758-2506
-    contributor:
-    - "@type": Person
-      name: "Celine Rousselot"
-      "@id": http://www.orphanet-france.fr/national/FR-FR/index/equipe/
-      url: http://www.orphanet-france.fr/national/FR-FR/index/equipe/
-    - "@type": Person
-      name: "Alasdair Gray"
-      "@id": https://bioschemas.org/people/AlasdairGray
-      url: https://bioschemas.org/people/AlasdairGray
-    dateCreated: 2021-12-22
-    dateModified: 2022-02-11
-    description: "This tutorial will show you how Orphanet rare disease pages were annotated with Bioschemas."
-    keywords: "Disease, Rare Disease, Schema.org, JSON-LD, Bioschemas"
-    license: CC-BY 4.0
-    version: 1.4
+bioschemas:
+  "@context": https://schema.org/
+  "@type": LearningResource
+  "http://purl.org/dc/terms/conformsTo":
+  - "@type": CreativeWork
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/0.9-DRAFT-2020_12_08/"
+  about:
+  - "@id": https://www.orpha.net
+  audience:
+  - "@type": Audience
+    name: (Markup provider, Markup consumer) WebMaster
+  name: "Adding Bioschemas to the Orphanet website"
+  author:
+  - "@type": Person
+    name: "Marc Hanauer"
+    "@id": https://orcid.org/0000-0002-6758-2506
+    url: https://orcid.org/0000-0002-6758-2506
+  contributor:
+  - "@type": Person
+    name: "Celine Rousselot"
+    "@id": http://www.orphanet-france.fr/national/FR-FR/index/equipe/
+    url: http://www.orphanet-france.fr/national/FR-FR/index/equipe/
+  - "@type": Person
+    name: "Alasdair Gray"
+    "@id": https://bioschemas.org/people/AlasdairGray
+    url: https://bioschemas.org/people/AlasdairGray
+  dateCreated: 2021-12-22
+  dateModified: 2022-02-11
+  description: "This tutorial will show you how Orphanet rare disease pages were annotated with Bioschemas."
+  keywords: "Disease, Rare Disease, Schema.org, JSON-LD, Bioschemas"
+  license: CC-BY 4.0
+  version: 1.4
 ---
 
 ## 1. Overview
