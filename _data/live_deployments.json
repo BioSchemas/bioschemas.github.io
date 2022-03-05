@@ -1481,7 +1481,9 @@
       "profiles": [
         {
           "profileName": "Protein",
-          "exampleURL": "https://psnpbind.org/protein/1owh"
+          "conformsTo": "0.11",
+          "exampleURL": "https://psnpbind.org/protein/1owh",
+          "highlight": "Bioschemas annotation of 26 protein structures. For these 0.6 million docking results are found in the database"
         }
       ]
     }
