@@ -1476,8 +1476,8 @@
     {
       "name": "PSnpBind",
       "description": "A database of mutated binding site protein-ligand complexes constructed using a multithreaded virtual screening workflow.",
-      "url": "https://ebisc.org/",
-      "sitemap": "https://psnpbind.org/",
+      "url": "https://psnpbind.org/",
+      "sitemap": "https://psnpbind.org/sitemap.xml",
       "profiles": [
         {
           "profileName": "Protein",
