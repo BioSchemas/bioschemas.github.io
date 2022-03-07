@@ -1047,6 +1047,20 @@
       ]
     },
     {
+      "name": "RiskGONE",
+      "description": "List of European Registry of Materials identifiers used by the RiskGONE project.",
+      "url": "https://riskgone.eu/",
+      "nodes": "NL",
+      "sitemap": "https://h2020-riskgone.github.io/riskgone-materials/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "ChemicalSubstance",
+          "conformsTo": "0.4",
+          "exampleURL": "https://h2020-riskgone.github.io/riskgone-materials/"
+        }
+      ]
+    },
+    {
       "name": "opalesurfcasting.net",
       "url": "https://www.opalesurfcasting.net/",
       "nodes": "FR",
