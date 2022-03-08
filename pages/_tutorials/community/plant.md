@@ -1,7 +1,7 @@
 ---
 title: How to add markup to plant resources
 overviewTutorial:
-  link: ./community_tutorials.html
+  link: ./community/
   title: Return to community tutorials overview
 
 bioschemas:
