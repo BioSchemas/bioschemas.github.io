@@ -16,7 +16,7 @@ Communities bring together expertise around a particular topic, e.g., proteomics
 - Plant Community
   - [How to add markup to Plant  community resources](./community/plant) (target audience _"Markup providers"_ and _"Markup consumers"_)
 - Rare Diseases Community
-  - [Marking up Rare diseases clinical entities](./community/rd) (target audience _"Markup providers"_ and _"Markup consumers"_)
+  - [How to add markup to Rare diseases clinical entities](./community/rd) (target audience _"Markup providers"_ and _"Markup consumers"_)
 
 ## 3. My community is interested in adding a tutorial
 
