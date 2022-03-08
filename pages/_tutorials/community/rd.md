@@ -38,6 +38,13 @@ bioschemas:
   version: 1.4
 ---
 
+<div class="col d-flex align-items-start rounded p-4 mb-4 mt-3 shadow">
+  <img class="align-self-center me-3" src="{{ '/tutorials/images/information_mark.png' | relative_url }}" alt="information">
+  <div>
+      More information about the <a href="https://elixir-europe.org/communities/rare-diseases" target="_blank">ELIXIR Rare Diseases community</a>
+  </div>
+</div> 
+
 ## 1. Overview
 
 This tutorial shows how Bioschemas markup was implemented in a Rare Diseases community resource. It describes which Bioschemas types and properties were used to provide metadata about rare diseases as clinical entities in several languages in order to improve medical nomenclature interoperability.  The resulting markup is machine processable enabling others to consume and exploit the data.
