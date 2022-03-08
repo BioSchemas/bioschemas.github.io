@@ -2,7 +2,7 @@
 layout: post
 title: "RiskGONE annotates nanomaterials with ChemicalSubstance"
 tags:
-- Tutorial
+- ChemicalSubstance
 ---
 
 The H2020 project [RiskGONE](https://riskgone.eu/) started [annotating nanomaterials](https://h2020-riskgone.github.io/riskgone-materials/) they study
