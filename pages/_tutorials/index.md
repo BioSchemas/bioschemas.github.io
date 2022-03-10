@@ -49,7 +49,7 @@ The target audience for these how-to guides are _"Specification developers"_.
 
 ## Community-tailored tutorials
 
-Life science communities, in particular ELIXIR communities, offer some tutorials tailored to their own needs. More information can be found on the [community-based tutorials page](./community_tutorials).
+Life science communities, in particular ELIXIR communities, offer some tutorials tailored to their own needs. More information can be found on the [community-based tutorials page](./community/).
 
 ## Feedback
 For feedback, questions and comments, please [create an issue](https://github.com/Bioschemas/specifications/labels/topic%3ATrainingPortal) and label it `topic:Training Portal`.
