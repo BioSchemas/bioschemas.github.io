@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: How to mark up your own resource with Bioschemas
 previousTutorial:
   link: ./howto/howto_right_profile

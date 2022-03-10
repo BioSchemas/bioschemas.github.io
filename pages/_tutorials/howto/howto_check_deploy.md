@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Check Deployed Markup
 
 previousTutorial:

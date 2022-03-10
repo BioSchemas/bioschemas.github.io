@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Bioschemas, what and why?
 previousTutorial:
   link: ./markup_examples

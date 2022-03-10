@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: How to update a profile
 previousTutorial:
   link: ./howto/howto_create_new_profile

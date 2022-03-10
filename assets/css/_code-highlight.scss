@@ -7,7 +7,7 @@
         background-color: #f8f8f8;
         border: 1px solid #ccc;
         padding: 6px 10px;
-        border-radius: 3px;
+        border-radius: $border-radius-sm;
     }
     .c {
         color: #999988;
@@ -213,10 +213,11 @@
     }
 }
 
-.highlighter-rouge :not(.language-plaintext) > .highlight {
-    border: #eaf2ee 1px solid;
-    border-radius: 4px;
+.highlighter-rouge :not(.language-plaintext) > .highlight, figure.highlight {
+    border-radius: $border-radius;
     padding: 1em;
+    @extend .shadow;
+    @extend .rounded;
 }
 
 .highlighter-rouge {

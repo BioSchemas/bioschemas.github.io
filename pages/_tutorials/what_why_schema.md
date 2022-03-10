@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: 'Schema.org: What and Why?'
 previousTutorial:
   link: ./
