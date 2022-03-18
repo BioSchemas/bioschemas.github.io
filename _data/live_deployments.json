@@ -1402,6 +1402,19 @@
       ]
     },
     {
+      "name": "NanoSafety Data Interface",
+      "description": "The NanoSafety Data Interface provides a user-friendly access to the aggregated search index of the (sub)set of eNanoMapper database instances with toxicity studies for nanomaterials.",
+      "url": "https://search.data.enanomapper.net/",
+      "sitemap": "https://search.data.enanomapper.net/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.4-DRAFT",
+          "exampleURL": "https://search.data.enanomapper.net/about/enanomapper/"
+        }
+      ]
+    },
+    {
       "name": "DaMaLOS",
       "description": "DaMaLOS is a workshop about Research data and objects management for Linked Open Science, running since 2020 and co-located with ISWC",
       "url": "https://zbmed.github.io/damalos/",
