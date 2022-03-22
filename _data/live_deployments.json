@@ -1500,6 +1500,34 @@
           "highlight": "Bioschemas annotation of 26 protein structures. For these 0.6 million docking results are found in the database"
         }
       ]
+    },
+    {
+      "name": "Browsing the eNanoMapper ontology with BioPortal, AberOWL and Protégé",
+      "description": "Lesson on browsing the eNanoMapper ontology with BioPortal, AberOWL and Protégé",
+      "url": "https://enanomapper.github.io/tutorials/",
+      "nodes": "NL",
+      "sitemap": "https://enanomapper.github.io/tutorials/sitemap.xml",
+      "profiles":[
+      	{
+        	"profileName": "TrainingMaterial",
+        	"conformsTo": "0.9-DRAFT-2020_12_08",
+        	"exampleURL": "https://enanomapper.github.io/tutorials/BrowseOntology/Tutorial%20browsing%20eNM%20ontology.html"
+      	},
+    	]
+    },
+    {
+      "name": "Biomedical semantics, information retrieval and knowledge discovery",
+      "description": "Lecture on biomedical semantics, information retrieval and knowledge discovery",
+      "url": "https://zbmed-semtec.github.io/BioMedSem-IR-KD",
+      "sitemap": "https://zbmed-semtec.github.io/BioMedSem-IR-KD/sitemap",
+      "profiles":[
+        {
+          "profileName": "TrainingMaterial",
+          "conformsTo": "0.9-DRAFT-2020_12_08",
+          "exampleURL": "https://zbmed-semtec.github.io/BioMedSem-IR-KD/docs/Lesson1.html",
+          "highlight": "12"
+        }
+      ]
     }
   ]
 }
