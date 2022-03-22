@@ -1043,6 +1043,11 @@
           "profileName": "Dataset",
           "conformsTo": "0.4-DRAFT",
           "exampleURL": "https://nanocommons.github.io/datasets/"
+        },
+        {
+          "profileName": "TrainingMaterial",
+          "conformsTo": "0.9-DRAFT",
+          "exampleURL": "https://nanocommons.github.io/tutorials/enteringData"
         }
       ]
     },
