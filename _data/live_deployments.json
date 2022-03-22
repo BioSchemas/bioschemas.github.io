@@ -1507,8 +1507,8 @@
       ]
     },
     {
-      "name": "Browsing the eNanoMapper ontology with BioPortal, AberOWL and Protégé",
-      "description": "Lesson on browsing the eNanoMapper ontology with BioPortal, AberOWL and Protégé",
+      "name": "eNanoMapper Tutorials",
+      "description": "Various tutorials developed by or during the EC FP7 project eNanoMapper about ontology development, regression modelling, and pathway analysis.",
       "url": "https://enanomapper.github.io/tutorials/",
       "nodes": "NL",
       "sitemap": "https://enanomapper.github.io/tutorials/sitemap.xml",
@@ -1516,7 +1516,7 @@
       	{
         	"profileName": "TrainingMaterial",
         	"conformsTo": "0.9-DRAFT-2020_12_08",
-        	"exampleURL": "https://enanomapper.github.io/tutorials/BrowseOntology/Tutorial%20browsing%20eNM%20ontology.html"
+        	"exampleURL": "https://enanomapper.github.io/tutorials/Entering_and_analysing_nano_safety_data/readme.html"
       	}
     	]
     },
