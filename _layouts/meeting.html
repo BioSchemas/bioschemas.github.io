@@ -1,0 +1,53 @@
+---
+layout: default
+---
+<h1>{{ page.name }}</h1>
+{% if page.time %}
+<p><strong>Time:</strong> {{page.time}}</p>
+{% endif %}
+{% if page.start_date == page.end_date %}
+<p><strong>Date:</strong> {{page.start_date | date_to_long_string}}</p>
+{% else %}
+<p><strong>Dates:</strong> {{page.start_date | date_to_long_string}} - {{page.end_date | date_to_long_string}}</p>
+{% endif %}
+<p><strong>Venue:</strong> {{page.venue}}</p>
+
+{% if page.contact-people %}
+<strong>Contacts:</strong>
+<ul>
+  {% for contact-person in page.contact-people %}
+  {% assign person-id = "/people/" | append: contact-person %}
+  {% assign person = site.people | where:"id", person-id | first%}
+  <li><a href="{{ person.url }}">{{person.first-name}} {{person.last-name}}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if page.meeting-url %}
+{% if page.meeting-name %}
+<p><strong>Meeting page:</strong> <a href="{{page.meeting-url}}">{{page.meeting-name}}</a></p>
+{% else %}
+<p><strong>Meeting page:</strong> <a href="{{page.meeting-url}}">{{page.meeting-url}}</a></p>
+{% endif %}
+{% endif %}
+{% if page.agenda-doc %}
+<p><strong>Agenda:</strong> <a href="{{page.agenda-doc}}">Meeting Notes</a></p>
+{% endif %}
+{{ content }}
+
+{% if page.attendees %}
+<div class="my-4">
+  <strong>Attendees:</strong>
+  <ul>
+    {% for attendee-name in page.attendees %}
+    {% assign attendee-id = "/people/" | append: attendee-name %}
+    {% assign attendee = site.people | where:"id", attendee-id | first %}
+    {% if attendee %}
+    <li><a href="{{ attendee.url }}">{{attendee.first-name}} {{attendee.last-name}}</a></li>
+    {% else %}
+    <li>{{attendee-name}}</li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

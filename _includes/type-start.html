@@ -1,0 +1,175 @@
+{% if page.status == 'release' %}
+<h1>{{page.name}} (Type)</h1>
+{% elsif site.data.type_versions[page.name].status == "deprecated"%}
+<h1>{{page.name}} <u>DEPRECATED</u> Type</h1>
+{% else %}
+<h1>{{page.name}} <u>DRAFT</u> Type</h1>
+{% endif %}
+<h3><strong>Version:</strong> {{page.version}} ({{page.dateModified}})</h3>
+{% if site.data.profile_versions[page.name].latest_release != nill or site.data.profile_versions[page.name].latest_publication != nill %}
+<h3><strong>Profile:</strong></h3>
+{% endif %}
+<ul>
+  {% if site.data.profile_versions[page.name].latest_release != nill %}
+  {%- assign profileName = '/profiles/' | append: page.name %}
+  <li>Latest Release: <a href="{{ profileName | relative_url }}">{{page.name}} (version {{site.data.profile_versions[page.name].latest_release}})</a></li>
+  {% endif %}
+  {% if site.data.profile_versions[page.name].latest_publication != nill %}
+  {%- assign profileName = '/profiles/' | append: page.name | append:'/' | append: site.data.profile_versions[page.name].latest_publication %}
+  <li>Latest Draft: <a href="{{ profileName | relative_url }}">{{page.name}} (version {{site.data.profile_versions[page.name].latest_publication}})</a></li>
+  {% endif %}
+</ul>
+{%- if page.subtitle %}
+<h2>{{page.subtitle}}</h2>
+{%- endif %}
+<br />
+<p>If you spot any errors or omissions with this type, please file an issue in our <a href="{{page.gh_tasks}}" target="_blank">GitHub</a>.</p>
+<nav class="mt-3">
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-description-tab" data-bs-toggle="tab" data-bs-target="#nav-description" type="button" role="tab" aria-controls="nav-description" aria-selected="true">Description</button>
+    <button class="nav-link" id="nav-contributors-tab" data-bs-toggle="tab" data-bs-target="#nav-contributors" type="button" role="tab" aria-controls="nav-contributors" aria-selected="false">Contributors</button>
+    <button class="nav-link" id="nav-links-tab" data-bs-toggle="tab" data-bs-target="#nav-links" type="button" role="tab" aria-controls="nav-links" aria-selected="false">Links</button>
+  </div>
+</nav>
+<div class="tab-content py-3 mb-3 border-bottom" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
+    <!-- Bioschemas <a href="/specifications/">specifications and types list.</a> -->
+    <h3>Canonical URL</h3>
+    <a href="{{page.name | relative_url }}">https://bioschemas.org/{{page.name}}</a>
+    <h3>Schema.org hierarchy</h3>
+    This is a new {{page.spec_type}} that fits into the schema.org hierarchy as follows:
+    <br />
+    {%for branch_name in page.hierarchy %}
+    {% if branch_name == "BioChemEntity" or
+    branch_name == "BioChemStructure" or
+    branch_name == "BioSample" or
+    branch_name == "ChemicalSubstance" or
+    branch_name == "ComputationalWorkflow" or
+    branch_name == "DataRecord" or
+    branch_name == "DNA" or
+    branch_name == "Enzyme" or
+    branch_name == "FormalParameter" or
+    branch_name == "Gene" or
+    branch_name == "LabProtocol" or
+    branch_name == "MolecularEntity" or
+    branch_name == "Phenotype" or
+    branch_name == "Protein" or
+    branch_name == "RNA" or
+    branch_name == "Sample" or
+    branch_name == "SequenceAnnotation" or
+    branch_name == "SequenceMatchingModel" or
+    branch_name == "SequenceRange" or
+    branch_name == "Study" or
+    branch_name == "Taxon" or
+    branch_name == "TaxonName" %}
+    <a href="{{branch_name | relative_url }}">{{branch_name}}</a>
+    {% else %}
+    <a href="http://schema.org/{{branch_name}}">{{branch_name}}</a>
+    {% endif %}
+    {%if forloop.index < page.hierarchy.size%} &gt; {%endif%} {%endfor%} {%if page.spec_type=='Type' %} &gt; <a href="{{page.name | relative_url }}">{{page.name}}</a>
+      {%endif%}
+      <h3>Description</h3>
+      <p>{{page.description}}</p>
+      <h3>Latest types</h3>
+      {% assign profile_versions = site.data.type_versions[page.name] %}
+      {% if profile_versions.latest_release != null %}
+      {%- assign typesName = '/types/' | append: page.name | append:'/' | append: profile_versions.latest_release %}
+      <p>Latest release: <a href="{{ typesName | relative_url }}">{{profile_versions.latest_release}}</a></p>
+      {% else %}
+      <p>Latest release: none</p>
+      {% endif %}
+      {% if profile_versions.latest_publication != null %}
+      {%- assign typesName = '/types/' | append: page.name | append:'/' | append: profile_versions.latest_publication %}
+      <p>Latest draft: <a href="{{ typesName | relative_url }}">{{profile_versions.latest_publication}}</a></p>
+      {% endif %}
+
+
+      <h3>Previous types</h3>
+      {% assign prev_version = page.previous_version %}
+      {% if prev_version != null %}
+      {%- assign typesName = '/types/' | append: page.name | append:'/' | append: page.previous_version %}
+      <p>Previous version: <a href="{{ typesName | relative_url }}">{{page.previous_version}}</a></p>
+      {% else %}
+      <p>Previous version: none</p>
+      {% endif %}
+      {% assign prev_release = page.previous_release %}
+      {% if prev_release != null %}
+      {%- assign typesName = '/types/' | append: page.name | append:'/' | append: page.previous_release %}
+      <p>Previous release: <a href="{{ typesName | relative_url }}">{{page.previous_release}}</a></p>
+      {% endif %}
+  </div>
+  <div class="tab-pane fade" id="nav-contributors" role="tabpanel" aria-labelledby="nav-contributors-tab">
+    <h3>Contributors</h3>
+    {% assign group = site.groups | where:"identifier", page.group %}
+    {% for g in group %}
+    <p>The following people have been involved in the creation of this specification document. They are all members of the <a href="{{g.url}}">{{g.name}}</a> group.</p>
+    {% endfor %}
+
+    <h6>Group Leader(s)</h6>
+    <div id="leadTable">
+      {% for g in group %}
+      {% for leader in g.lead %}
+      {% assign lead-id = "/people/" | append: leader %}
+      {% assign author = site.people | where:"id", lead-id | first %}
+      {% if author.homepage or author.github_username or author.orcid %}
+      <p><a href="{{ author.url | relative_url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
+      {% else %}
+      <p>{{ author.first-name }} {{ author.last-name }}</p>
+      {% endif %}
+      {% else %}
+      <p>No team leaders currently specified.</p>
+      {% endfor %}
+      {% endfor %}
+    </div>
+    <h6>Other team members</h6>
+    <div id="peopleTable">
+      {% for g in group %}
+      {% for member-name in g.members %}
+
+      {% unless g.lead contains member-name %}
+
+      {% assign member-id = "/people/" | append: member-name %}
+      {% assign member = site.people | where:"id", member-id | first %}
+      <p><a href="{{ member.url | relative_url }}">{{ member.first-name }} {{ member.last-name }}</a></p>
+
+      {% endunless %}
+
+      {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="tab-pane fade" id="nav-links" role="tabpanel" aria-labelledby="nav-links-tab">
+    <div class="table-responsive shadow rounded mt-4 mb-5">
+    <table class="table table-hover table-borderless mb-0 bioschemas_spec_list">
+      <thead>
+        <tr>
+          <th>Group</th>
+          <th>Task &amp; Issues</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            {% for g in group %}
+            <a href="{{g.url | relative_url }}">{{g.name}}</a>
+            {% endfor %}
+          </td>
+          <td class="spec_links">
+            {% if page.gh_tasks == '' %}
+            <a>
+              <img src="{{ '/images/specs_tasks.png' | relative_url }}" alt="Bioschemas {{ spec.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
+            </a>
+            {% else %}
+            <a href="{{page.gh_tasks}}" target="_blank">
+              <img src="{{ '/images/specs_tasks.png' | relative_url }}" alt="Bioschemas {{ spec.name }} Github Tasks or Issues">
+            </a>
+            {% endif %}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+{% include spec-table-key.html %}

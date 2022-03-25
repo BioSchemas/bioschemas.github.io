@@ -1,0 +1,1551 @@
+{
+  "@context": {
+    "conformsTo": "http://purl.org/dc/terms/conformsTo",
+    "description": "https://schema.org/description",
+    "exampleURL": "https://schema.org/url",
+    "highlight": "http://example.com/bs/highlight",
+    "keywords": "https://schema.org/keywords",
+    "name": "https://schema.org/name",
+    "nodes": "http://example.com/bs/nodes",
+    "profiles": "http://example.com/bs/profiles",
+    "profileName": "https://schema.org/name",
+    "resources": "https://schema.org/WebSite",
+    "sitemap": "http://example.com/bs/sitemap",
+    "url": "https://schema.org/url"
+  },
+  "resources": [
+    {
+      "name": "Identifiers.org",
+      "keywords": ["RIR"],
+      "url": "https://identifiers.org/",
+      "nodes": "EBI",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://identifiers.org/"
+        }
+      ]
+    },
+    {
+      "name": "FAIRsharing",
+      "keywords": ["RIR"],
+      "url": "https://fairsharing.org/",
+      "nodes": "UK",
+      "sitemap": "https://fairsharing.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://fairsharing.org/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://fairsharing.org/",
+          "highlight": "Over 3,000 datasets"
+        }
+      ]
+    },
+    {
+      "name": "Gigadb",
+      "url": "http://gigadb.org/",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "http://gigadb.org/site/index"
+        }
+      ]
+    },
+    {
+      "name": "Human Protein Atlas",
+      "keywords": ["CDR"],
+      "url": "https://www.proteinatlas.org/",
+      "nodes": "SE",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.proteinatlas.org/"
+        }
+      ]
+    },
+    {
+      "name": "WikiPathways",
+      "url": "https://wikipathways.org/",
+      "nodes": "NL",
+      "sitemap": "https://www.wikipathways.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.4-DRAFT",
+          "exampleURL": "https://wikipathways.org/"
+        }
+      ]
+    },
+    {
+      "name": "PathVisio",
+      "url": "https://pathvisio.org/",
+      "nodes": "NL",
+      "profiles": [
+        {
+          "profileName": "ComputationalTool",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://pathvisio.org/"
+        }
+      ]
+    },
+    {
+      "name": "EGA",
+      "keywords": ["CDR", "DDR"],
+      "url": "https://ega-archive.org/",
+      "nodes": "EBI",
+      "sitemap": "https://ega-archive.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://ega-archive.org/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://ega-archive.org/datasets/EGAD00000000001",
+          "highlight": "Over 5,300 datasets"
+        },
+        {
+          "profileName": "Study",
+          "conformsTo": "0.1",
+          "exampleURL": "https://ega-archive.org/studies/EGAS00000000001",
+          "highlight": "Over 3,700 studies"
+        }
+      ]
+    },
+    {
+      "name": "IUPHAR/BPS Guide to Pharmacology",
+      "url": "https://www.guidetopharmacology.org/",
+      "nodes": "UK",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://www.guidetopharmacology.org/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://www.guidetopharmacology.org/"
+        },
+        {
+          "profileName": "MolecularEntity",
+          "conformsTo": "0.2-DRAFT",
+          "exampleURL": "https://www.guidetopharmacology.org/GRAC/LigandDisplayForward?ligandId=8299",
+          "highlight": "Over 9,800 ligands"
+        },
+        {
+          "profileName": "Protein",
+          "conformsTo": "0.11",
+          "exampleURL": "https://www.guidetopharmacology.org/coronavirus.jsp",
+          "highlight": "Proteins associated with COVID-19"
+        }
+      ]
+    },
+    {
+    "name": "MobiDB",
+    "description": "MobiDB is a database of protein disorder and mobility annotations.",
+    "url": "https://mobidb.org/",
+    "nodes": "IT",
+    "sitemap": "https://mobidb.org/sitemap.xml",
+    "profiles":
+    [
+        {
+            "profileName": "Protein",
+            "conformsTo": "0.11",
+            "exampleURL": "https://mobidb.org/P04637",
+            "highlight": "~2k proteins"
+        },
+        {
+            "profileName": "Dataset",
+            "conformsTo": "0.3",
+            "exampleURL": "https://mobidb.org/"
+        },
+        {
+            "profileName": "DataCatalog",
+            "conformsTo": "0.3",
+            "exampleURL": "https://mobidb.org/"
+        },
+        {
+            "profileName": "SequenceAnnotation",
+            "conformsTo": "0.6-DRAFT",
+            "exampleURL": "https://mobidb.org/P04637",
+            "highlight": "3.1k protein regions"
+        },
+        {
+            "profileName": "SequenceRange",
+            "conformsTo": "0.1-DRAFT",
+            "exampleURL": "https://mobidb.org/P04637",
+            "highlight": "3.1k protein regions"
+        }
+    ]
+    },
+    {
+      "name": "Biosamples",
+      "keywords": ["DDR"],
+      "url": "https://www.ebi.ac.uk/biosamples/",
+      "nodes": "EBI",
+      "sitemap": "https://www.ebi.ac.uk/biosamples/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.ebi.ac.uk/biosamples/"
+        },
+        {
+          "profileName": "Sample",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.ebi.ac.uk/biosamples/samples/SAMEA491372",
+          "highlight": "Over 16 million samples"
+        }
+      ]
+    },
+    {
+      "name": "DataMed",
+      "url": "https://datamed.org/",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://datamed.org/display-item.php?repository=0006&id=59139ef65152c62a9fc18ff7"
+        }
+      ]
+    },
+    {
+      "name": "Pscan",
+      "url": "http://159.149.160.88/pscan/",
+      "profiles": [
+        {
+          "profileName": "ComputationalTool",
+          "conformsTo": "0.1",
+          "exampleURL": "http://159.149.160.88/pscan/"
+        }
+      ]
+    },
+    {
+      "name": "PscanChIP",
+      "url": "http://159.149.160.88/pscan_chip_dev/",
+      "profiles": [
+        {
+          "profileName": "ComputationalTool",
+          "conformsTo": "0.1",
+          "exampleURL": "http://159.149.160.88/pscan_chip_dev/"
+        }
+      ]
+    },
+    {
+      "name": "Cscan",
+      "url": "http://159.149.160.88/cscan/",
+      "profiles": [
+        {
+          "profileName": "ComputationalTool",
+          "conformsTo": "0.1",
+          "exampleURL": "http://159.149.160.88/cscan"
+        }
+      ]
+    },
+    {
+      "name": "BAR 3.0",
+      "url": "https://bar.biocomp.unibo.it/bar3/",
+      "profiles": [
+        {
+          "profileName": "ComputationalTool",
+          "conformsTo": "0.1",
+          "exampleURL": "https://bar.biocomp.unibo.it/bar3/"
+        }
+      ]
+    },
+    {
+      "name": "ELIXIR TeSS",
+      "url": "https://tess.elixir-europe.org/",
+      "nodes": "UK",
+      "sitemap": "https://tess.elixir-europe.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Event",
+          "conformsTo": "0.1",
+          "exampleURL": "https://tess.elixir-europe.org/events",
+          "highlight": "Over 12,000 events"
+        }
+      ]
+    },
+    {
+      "name": "PDBe",
+      "keywords": ["CDR", "DDR"],
+      "url": "http://www.ebi.ac.uk/pdbe/",
+      "nodes": "EBI",
+      "sitemap": "https://www.ebi.ac.uk/pdbe/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Protein",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.ebi.ac.uk/pdbe/entry/pdb/5hbi/protein/1",
+          "highlight": "Over 215,000 proteins"
+        },
+        {
+          "profileName": "ProteinStructure",
+          "conformsTo": "0.1",
+          "exampleURL": "http://www.ebi.ac.uk/pdbe/entry/pdb/4a7l",
+          "highlight": "Over 175,000 protein structures"
+        }
+      ]
+    },
+    {
+      "name": "French Institute of Bioinformatics (IFB)",
+      "url": "https://www.france-bioinformatique.fr/",
+      "nodes": "FR",
+      "sitemap": "https://www.france-bioinformatique.fr/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Event",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.france-bioinformatique.fr/en/evenements_upcoming"
+        }
+      ]
+    },
+    {
+      "name": "SIB",
+      "url": "https://www.sib.swiss/",
+      "nodes": "CH",
+      "profiles": [
+        {
+          "profileName": "Event",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.sib.swiss/training/upcoming-training-events"
+        }
+      ]
+    },
+    {
+      "name": "ELIXIR",
+      "url": "https://www.elixir-europe.org/",
+      "nodes": "Hub",
+      "profiles": [
+        {
+          "profileName": "Event",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.elixir-europe.org/events/biohackathon-2018-paris"
+        }
+      ]
+    },
+    {
+      "name": "Birmingham Metabolomics Training Centre",
+      "url": "https://www.birmingham.ac.uk/",
+      "nodes": "UK",
+      "profiles": [
+        {
+          "profileName": "Event",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.birmingham.ac.uk/facilities/metabolomics-training-centre/courses/q-exactive.aspx"
+        }
+      ]
+    },
+    {
+      "name": "HmmerWeb",
+      "url": "http://www.ebi.ac.uk/Tools/hmmer/",
+      "nodes": "EBI",
+      "profiles": [
+        {
+          "profileName": "Protein",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.ebi.ac.uk/Tools/hmmer/search/phmmer",
+          "highlight": "Result of searches are annotated (results last 1 week)"
+        },
+        {
+          "profileName": "ProteinStructure",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.ebi.ac.uk/Tools/hmmer/search/phmmer",
+          "highlight": "Result of searches are annotated (results last 1 week)"
+        },
+        {
+          "profileName": "ProteinAnnotation",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.ebi.ac.uk/Tools/hmmer/search/phmmer",
+          "highlight": "Result of searches are annotated (results last 1 week)"
+        }
+      ]
+    },
+    {
+      "name": "Galaxy Project",
+      "url": "https://galaxyproject.org/",
+      "profiles": [
+        {
+          "profileName": "Event",
+          "conformsTo": "0.1",
+          "exampleURL": "https://galaxyproject.org/events/"
+        }
+      ]
+    },
+    {
+      "name": "OmicsDI",
+      "keywords": ["RIR"],
+      "url": "https://www.omicsdi.org/",
+      "nodes": "EBI",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.omicsdi.org/#/dataset/arrayexpress-repository/E-MTAB-6848",
+          "highlight": "Over 150,000 datasets"
+        }
+      ]
+    },
+    {
+      "name": "CATH-Gene3D",
+      "keywords": ["CDR"],
+      "url": "http://www.cathdb.info",
+      "nodes": "UK",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "http://www.cathdb.info"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "http://www.cathdb.info"
+        }
+      ]
+    },
+    {
+      "name": "The Molecular INTeraction Database (MINT)",
+      "keywords": ["CDR"],
+      "url": "https://mint.bio.uniroma2.it/",
+      "nodes": "IT",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://mint.bio.uniroma2.it/"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://mint.bio.uniroma2.it/"
+        }
+      ]
+    },
+    {
+      "name": "DEB Register",
+      "url": "https://deb-central.org/",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://deb-central.org/"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://deb-central.org/"
+        }
+      ]
+    },
+    {
+      "name": "CHD7 Database",
+      "nodes": "NL",
+      "url": "https://www.chd7.org/",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.chd7.org/"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.chd7.org/"
+        }
+      ]
+    },
+    {
+      "name": "International Microvillus Inclusion Disease (MVID) Patient Registry",
+      "url": "http://mvid-central.org/",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "http://mvid-central.org/"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "http://mvid-central.org/"
+        }
+      ]
+    },
+    {
+      "name": "AIP Mutation Database",
+      "url": "https://aip.fipapatients.org/",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://aip.fipapatients.org/"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://aip.fipapatients.org/"
+        }
+      ]
+    },
+    {
+      "name": "Reactome",
+      "keywords": ["CDR"],
+      "nodes": "EBI",
+      "url": "https://reactome.org/",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://reactome.org/content/detail/R-HSA-449147"
+        }
+      ]
+    },
+    {
+      "name": "ChEMBL",
+      "keywords": ["CDR"],
+      "nodes": "EBI",
+      "url": "https://www.ebi.ac.uk/chembl/",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.2",
+          "exampleURL": "https://www.ebi.ac.uk/chembl/"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "",
+          "exampleURL": "https://www.ebi.ac.uk/chembl/"
+        },
+        {
+          "profileName": "MolecularEntity",
+          "conformsTo": "0.2-DRAFT",
+          "exampleURL": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL59/"
+        }
+      ]
+    },
+    {
+      "name": "Alliance of Genome Resources",
+      "url": "https://www.alliancegenome.org/",
+      "sitemap": "https://www.alliancegenome.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://www.alliancegenome.org/gene/RGD:620474"
+        },
+        {
+          "profileName": "Gene",
+          "conformsTo": "0.5",
+          "exampleURL": "https://www.alliancegenome.org/gene/MGI:2442292",
+          "highlight": "Provides MGI, FlyBase, RGD, WormBase, SGD and Zfin. Release 2.2.0 contains 276,945 Gene records."
+        }
+      ]
+    },
+    {
+      "name": "SWISS-MODEL",
+      "nodes": "CH",
+      "url": "https://swissmodel.expasy.org/",
+      "sitemap": "https://swissmodel.expasy.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://swissmodel.expasy.org/repository"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.2",
+          "exampleURL": "https://swissmodel.expasy.org/repository",
+          "highlight": "12 Datasets"
+        },
+        {
+          "profileName": "ComputationalTool",
+          "conformsTo": "0.1",
+          "exampleURL": "https://swissmodel.expasy.org/"
+        }
+      ]
+    },
+    {
+      "name": "ModelArchive",
+      "url": "https://modelarchive.org/",
+      "nodes": "CH",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://modelarchive.org/"
+        }
+      ]
+    },
+    {
+      "name": "HAMAP",
+      "url": "https://hamap.expasy.org/",
+      "nodes": "CH",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://hamap.expasy.org/cgi-bin/unirule/unirule_browse.cgi"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.1",
+          "exampleURL": "https://hamap.expasy.org/archaea.html"
+        }
+      ]
+    },
+    {
+      "name": "ENZYME - The Enzyme Data Bank",
+      "url": "https://enzyme.expasy.org",
+      "nodes": "CH",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://enzyme.expasy.org/EC/1.1.3.-",
+          "highlight": "4450 datasets"
+        }
+      ]
+    },
+    {
+      "name": "PROSITE - Protein domains, families and functional sites description",
+      "url": "https://prosite.expasy.org",
+      "nodes": "CH",
+      "sitemap": "https://prosite.expasy.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.1",
+          "exampleURL": "https://prosite.expasy.org"
+        }
+      ]
+    },
+    {
+      "name": "Ensembl Genome Browser",
+      "keywords": ["CDR"],
+      "url": "https://www.ensembl.org/",
+      "nodes": "EBI",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.2",
+          "exampleURL": "https://www.ensembl.org/"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.2",
+          "exampleURL": "https://www.ensembl.org/"
+        },
+        {
+          "profileName": "DataRecord",
+          "conformsTo": "0.2",
+          "exampleURL": "https://www.ensembl.org/id/ENSG00000139618"
+        },
+        {
+          "profileName": "Gene",
+          "conformsTo": "0.7",
+          "exampleURL": "https://www.ensembl.org/id/ENSG00000139618"
+        }
+      ]
+    },
+    {
+      "name": "ITSoneDB",
+      "url": "http://itsonedb.cloud.ba.infn.it/",
+      "nodes": "IT",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.2",
+          "exampleURL": "http://itsonedb.cloud.ba.infn.it/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.2",
+          "exampleURL": "http://itsonedb.cloud.ba.infn.it/"
+        }
+      ]
+    },
+    {
+      "name": "Global Biodiversity Information Facility (GBIF)",
+      "url": "https://www.gbif.org/",
+      "sitemap": "https://www.gbif.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.2",
+          "exampleURL": "https://www.gbif.org/dataset/c0cc29de-f49f-4b66-b4ec-c83afbb7101d"
+        },
+        {
+          "profileName": "Taxon",
+          "conformsTo": "0.7-DRAFT",
+          "exampleURL": "https://www.gbif.org/species/5220113",
+          "highlight": "3 million+ taxon pages in the GBIF Backbone taxonomy annotated"
+        },
+        {
+          "profileName": "TaxonName",
+          "conformsTo": "0.1-DRAFT",
+          "exampleURL": "https://www.gbif.org/species/5220113",
+          "highlight": "3 million+ taxon pages in the GBIF Backbone taxonomy annotated"
+        }
+      ]
+    },
+    {
+      "name": "COSMIC Gene at Sanger",
+      "url": "http://cancer.sanger.ac.uk/cosmic/",
+      "sitemap": "https://cancer.sanger.ac.uk/cosmic/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.2",
+          "exampleURL": "https://cancer.sanger.ac.uk/cosmic/"
+        }
+      ]
+    },
+    {
+      "name": "SynBioHub",
+      "url": "https://synbiohub.org/",
+      "nodes": "UK",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://synbiohub.org/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://synbiohub.org/"
+        },
+        {
+          "profileName": "DataRecord",
+          "conformsTo": "0.2-DRAFT",
+          "exampleURL": "https://synbiohub.org/public/igem/BBa_K165005/1"
+        },
+        {
+          "profileName": "BioChemEntity",
+          "conformsTo": "0.7-RC",
+          "exampleURL": "https://synbiohub.org/public/igem/BBa_K165005/1"
+        }
+      ]
+    },
+    {
+      "name": "National Museum of Natural History of Paris",
+      "url": "https://inpn.mnhn.fr/",
+      "nodes": "FR",
+      "profiles": [
+        {
+          "profileName": "Taxon",
+          "conformsTo": "0.7-DRAFT",
+          "exampleURL": "https://inpn.mnhn.fr/espece/cd_nom/60878/",
+          "highlight": "180,000+ species have been annotated"
+        },
+        {
+          "profileName": "TaxonName",
+          "conformsTo": "0.1-DRAFT",
+          "exampleURL": "https://inpn.mnhn.fr/espece/cd_nom/60878/",
+          "highlight": "180,000+ species have been annotated"
+        }
+      ]
+    },
+    {
+      "name": "FlyMine",
+      "keywords": ["RIR"],
+      "url": "https://flymine.org/",
+      "nodes": "UK",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://flymine.org/"
+        }
+      ]
+    },
+    {
+      "name": "HumanMine",
+      "keywords": ["RIR"],
+      "url": "https://humanmine.org/",
+      "nodes": "UK",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://humanmine.org/"
+        }
+      ]
+    },
+    {
+    "name": "DisProt",
+    "description": "DisProt is a database of intrinsically disordered proteins. Disordered regions are manually curated from literature. DisProt annotations cover both structural and functional aspects of disorder detected by specific experimental methods. Annotation concepts and detection methods are encoded in the Disorder Ontology.",
+    "url": "https://disprot.org",
+    "nodes": "IT",
+    "sitemap": "https://disprot.org/sitemap.xml",
+    "profiles":
+      [
+        {
+            "profileName": "Protein",
+            "conformsTo": "0.11",
+            "exampleURL": "https://disprot.org/DP00086",
+            "highlight": "~2k proteins"
+        },
+        {
+            "profileName": "Dataset",
+            "conformsTo": "0.3",
+            "exampleURL": "https://disprot.org/"
+        },
+        {
+            "profileName": "DataCatalog",
+            "conformsTo": "0.3",
+            "exampleURL": "https://disprot.org/"
+        },
+        {
+            "profileName": "SequenceAnnotation",
+            "conformsTo": "0.6-DRAFT",
+            "exampleURL": "https://disprot.org/DP00086r026",
+            "highlight": "3.5k protein regions"
+        },
+        {
+            "profileName": "SequenceRange",
+            "conformsTo": "0.1-DRAFT",
+            "exampleURL": "https://disprot.org/DP00086r026",
+            "highlight": "3.5k protein regions"
+        }
+      ]
+    },
+    {
+    "name": "Protein Ensemble (PED)",
+    "description": "The Protein Ensemble Database (PED) is an open access database for the deposition of structural ensembles, including intrinsically disordered proteins (IDPs). Manually curated data of structural ensembles measured with nuclear magnetic resonance spectroscopy, small-angle X-ray scattering, fluorescence resonance energy transfer are annotated in PED. The deposition of structural coordinates can be used for the evaluation of the ensembles, thus supporting the evolution of new modeling methods leading to much improved skills of connecting the characteristic \"lack of structure\" of IDPs with function. Each entry in PED corresponds to the primary experimental data and to the structural ensembles associated with these data.",
+    "url": "https://proteinensemble.org/",
+    "nodes": "IT",
+    "sitemap": "https://proteinensemble.org/sitemap.xml",
+    "profiles":
+      [
+        {
+            "profileName": "Protein",
+            "conformsTo": "0.11",
+            "exampleURL": "https://proteinensemble.org/PED00014"
+        },
+        {
+            "profileName": "Dataset",
+            "conformsTo": "0.3",
+            "exampleURL": "https://proteinensemble.org/"
+        },
+        {
+            "profileName": "DataCatalog",
+            "conformsTo": "0.3",
+            "exampleURL": "https://proteinensemble.org/"
+        },
+        {
+            "profileName": "ScholarlyArticle",
+            "conformsTo": "0.2-DRAFT",
+            "exampleURL": "https://proteinensemble.org/"
+        },
+        {
+            "profileName": "Organization",
+            "conformsTo": "0.2-DRAFT",
+            "exampleURL": "https://proteinensemble.org/"
+        },
+        {
+            "profileName": "SequenceAnnotation",
+            "conformsTo": "0.6-DRAFT",
+            "exampleURL": "https://proteinensemble.org/PED00014"
+        },
+        {
+            "profileName": "SequenceRange",
+            "conformsTo": "0.1-DRAFT",
+            "exampleURL": "https://proteinensemble.org/PED00014"
+        }
+      ]
+    },
+    {
+      "name": "UniProt",
+      "keywords": ["CDR"],
+      "url": "https://www.uniprot.org/",
+      "nodes": "CH",
+      "sitemap": "https://www.uniprot.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://www.uniprot.org/uniprot/"
+        }
+      ]
+    },
+    {
+      "name": "Scholia",
+      "description": "Scholia is a service that creates visual scholarly profiles for topic, people, organizations, species, chemicals, etc using bibliographic and other information in Wikidata.",
+      "url": "https://scholia.toolforge.org/",
+      "profiles": [
+        {
+          "profileName": "Gene",
+          "conformsTo": "0.7",
+          "exampleURL": "https://scholia.toolforge.org/gene/Q18030793",
+          "highlight": "Over 40,000 genes."
+        },
+        {
+          "profileName": "MolecularEntity",
+          "conformsTo": "0.5",
+          "exampleURL": "https://scholia.toolforge.org/chemical/Q18216",
+          "highlight": "More than 1.2M pages annotated with chemical compounds. Live statistics from https://scholia.toolforge.org/chemical/."
+        },
+        {
+          "profileName": "Protein",
+          "conformsTo": "0.11",
+          "exampleURL": "https://scholia.toolforge.org/protein/Q424728",
+          "highlight": "More than 100,000 proteins."
+        },
+        {
+          "profileName": "Taxon",
+          "conformsTo": "0.6",
+          "exampleURL": "https://scholia.toolforge.org/taxon/Q15978631",
+          "highlight": "More than 2.9M pages annotated with Taxon."
+        }
+      ]
+    },
+    {
+      "name": "PCDDB",
+      "url": "https://pcddb.cryst.bbk.ac.uk/",
+      "nodes": "UK",
+      "sitemap": "https://pcddb.cryst.bbk.ac.uk/sitemap/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://pcddb.cryst.bbk.ac.uk/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://pcddb.cryst.bbk.ac.uk/deposit/CD0000031000",
+          "highlight": "653 datasets as of May 2020"
+        }
+      ]
+    },
+    {
+      "name": "PhenPath",
+      "url": "http://phenpath.biocomp.unibo.it/phenpath/",
+      "nodes": "IT",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "http://phenpath.biocomp.unibo.it/phenpath/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "http://phenpath.biocomp.unibo.it/cgi-bin/phenpath/ppDB.py"
+        }
+      ]
+    },
+    {
+      "name": "eDGAR",
+      "url": "http://edgar.biocomp.unibo.it/",
+      "nodes": "IT",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "http://edgar.biocomp.unibo.it/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "http://edgar.biocomp.unibo.it/"
+        },
+        {
+          "profileName": "Gene",
+          "conformsTo": "0.7",
+          "exampleURL": "http://edgar.biocomp.unibo.it/cgi-bin/gene_disease_db/gene.py?gene=A2M",
+          "highlight": "3,658 genes"
+        }
+      ]
+    },
+    {
+      "name": "WorkflowHub",
+      "url": "https://workflowhub.eu/",
+      "nodes": "UK",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://workflowhub.eu/"
+        },
+        {
+          "profileName": "ComputationalWorkflow",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://workflowhub.eu/workflows/18",
+          "highlight": "Over 100 workflows"
+        },
+        {
+          "profileName": "FormalParameter",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://workflowhub.eu/workflows/18",
+          "highlight": "Over 100 workflows"
+        },
+        {
+          "profileName": "Person",
+          "conformsTo": "0.2-DRAFT",
+          "exampleURL": "https://workflowhub.eu/people/9",
+          "highlight": "Over 100 people"
+        }
+      ]
+    },
+    {
+      "name": "BridgeDb",
+      "keywords": ["RIR"],
+      "url": "https://bridgedb.github.io/",
+      "nodes": "NL",
+      "sitemap": "https://bridgedb.github.io/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.4-DRAFT",
+          "exampleURL": "https://bridgedb.github.io/data/gene_database/",
+          "highlight": "23 identifier mapping databases for genes, proteins, complexes, metabolites, and more"
+        },
+        {
+          "profileName": "ComputationalTool",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bridgedb.github.io/"
+        }
+      ]
+    },
+    {
+      "name": "NanoCommons",
+      "description": "Open License datasets by the NanoSafety Cluster. Ontology IRIs for the JRC representative industrial nanomaterials.",
+      "url": "https://www.nanocommons.eu/",
+      "nodes": "NL",
+      "sitemap": "https://nanocommons.github.io/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "ChemicalSubstance",
+          "conformsTo": "0.4",
+          "exampleURL": "https://nanocommons.github.io/specifications/jrc/"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://nanocommons.github.io/datasets/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.4-DRAFT",
+          "exampleURL": "https://nanocommons.github.io/datasets/"
+        },
+        {
+          "profileName": "TrainingMaterial",
+          "conformsTo": "0.9-DRAFT",
+          "exampleURL": "https://nanocommons.github.io/tutorials/enteringData"
+        }
+      ]
+    },
+    {
+      "name": "RiskGONE",
+      "description": "List of European Registry of Materials identifiers used by the RiskGONE project.",
+      "url": "https://riskgone.eu/",
+      "nodes": "NL",
+      "sitemap": "https://h2020-riskgone.github.io/riskgone-materials/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "ChemicalSubstance",
+          "conformsTo": "0.4",
+          "exampleURL": "https://h2020-riskgone.github.io/riskgone-materials/identifiers_and_guidance.html"
+        }
+      ]
+    },
+    {
+      "name": "opalesurfcasting.net",
+      "url": "https://www.opalesurfcasting.net/",
+      "nodes": "FR",
+      "profiles": [
+        {
+          "profileName": "Taxon",
+          "conformsTo": "0.4-DRAFT",
+          "exampleURL": "https://www.opalesurfcasting.net/connaissances/faune-et-flore/le-saumon-de-l-atlantique-salmo-salar.html"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://www.opalesurfcasting.net/connaissances/faune-et-flore/le-saumon-de-l-atlantique-salmo-salar.html"
+        }
+      ]
+    },
+    {
+      "name": "MassBank Europe",
+      "url": "https://massbank.eu/MassBank/",
+      "nodes": "DE",
+      "sitemap": "https://massbank.eu/MassBank/sitemapindex.xml",
+      "profiles": [
+        {
+          "profileName": "MolecularEntity",
+          "conformsTo": "0.5",
+          "exampleURL": "https://massbank.eu/MassBank/RecordDisplay?id=LQB00001&dsn=RIKEN_IMS"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://massbank.eu/MassBank/RecordDisplay?id=LQB00001&dsn=RIKEN_IMS"
+        }
+      ]
+    },
+    {
+      "name": "iPPI-DB",
+      "description": "Inhibitors of Protein-Protein Interaction Database",
+      "url": "https://ippidb.pasteur.fr/",
+      "nodes": "FR",
+      "sitemap": "https://ippidb.pasteur.fr/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "MolecularEntity",
+          "conformsTo": "0.5",
+          "exampleURL": "https://ippidb.pasteur.fr/compounds/1103#compound",
+          "highlight": "2,035 compounds"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://ippidb.pasteur.fr/"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://ippidb.pasteur.fr/"
+        }
+      ]
+    },
+    {
+      "name": "COVID-19 Data Portal",
+      "description": "Bringing together relevant datasets related to COVID-19 for sharing and analysis in an effort to accelerate coronavirus research.",
+      "url": "https://www.covid19dataportal.org/",
+      "nodes": "EBI",
+      "sitemap": "https://www.covid19dataportal.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://www.covid19dataportal.org/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://www.covid19dataportal.org/"
+        }
+      ]
+    },
+    {
+      "name": "bio.tools",
+      "url": "https://bio.tools/",
+      "nodes": [
+        "DK",
+        "FR",
+        "ES"
+      ],
+      "sitemap": "https://bio.tools/api/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "ComputationalTool",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bio.tools/covidmine",
+          "highlight": "22,687 tools"
+        },
+        {
+          "profileName": "FormalParameter",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bio.tools/blast"
+        }
+      ]
+    },
+    {
+      "name": "STRING",
+      "keywords": ["CDR"],
+      "url": "https://string-db.org/",
+      "nodes": "CH",
+      "profiles": [
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://string-db.org/"
+        },
+        {
+          "profileName": "Protein",
+          "conformsTo": "0.9-DRAFT",
+          "exampleURL": "https://string-db.org/network/9606.ENSP00000379258",
+          "highlight": "25 million+ protein networks"
+        }
+      ]
+    },
+    {
+      "name": "Paired Omics Data Platform",
+      "url": "https://pairedomicsdata.bioinformatics.nl/",
+      "nodes": "NL",
+      "sitemap": "https://pairedomicsdata.bioinformatics.nl/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://pairedomicsdata.bioinformatics.nl/projects/d0f1add5-5b16-4f78-9b93-0d1d9c9bcb59.1",
+          "highlight": "71 Datasets"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://pairedomicsdata.bioinformatics.nl/"
+        }
+      ]
+    },
+    {
+      "name": "HUGO Gene Nomenclature Committee",
+      "url": "https://www.genenames.org/",
+      "nodes": "UK",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3",
+          "exampleURL": "https://www.genenames.org/data/gene-symbol-report/#data-set"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://www.genenames.org/#data-catalog"
+        },
+        {
+          "profileName": "Gene",
+          "conformsTo": "0.7",
+          "exampleURL": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:37133",
+          "highlight": "Over 44,000 genes"
+        }
+      ]
+    },
+    {
+      "name": "Bioschemas",
+      "url": "https://bioschemas.org/",
+      "nodes": ["UK","BE","CH","EBI","ES","FR","Hub","IT","NL","NO","PT","SE"],
+      "sitemap": "https://bioschemas.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "TrainingMaterial",
+          "conformsTo": "0.9",
+          "exampleURL": "https://bioschemas.org/tutorials/what_why_bioschemas"
+        }
+      ]
+    },
+    {
+      "name": "IMI Data Catalog",
+      "url": "https://datacatalog.elixir-luxembourg.org/",
+      "nodes": "LU",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.4-DRAFT",
+          "exampleURL": "https://datacatalog.elixir-luxembourg.org/e/dataset/924dfe7a-71e8-11eb-bafe-3e22fbb3883f",
+          "highlight": "Over 200 datasets"
+        },
+        {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3",
+          "exampleURL": "https://datacatalog.elixir-luxembourg.org/"
+        }
+      ]
+    },
+    {
+      "name": "PIPPA: PSB Interface for Plant Phenotype Analysis",
+      "url": "https://pippa.psb.ugent.be/",
+      "nodes": "BE",
+      "profiles": [
+        {
+          "profileName": "Study",
+          "conformsTo": "0.2-DRAFT",
+          "exampleURL": "https://pippa.psb.ugent.be/pippa_experiments/consult_experiment_basic_info/55"
+        },
+        {
+          "profileName": "Taxon",
+          "conformsTo": "0.6",
+          "exampleURL": "https://pippa.psb.ugent.be/pippa_experiments/consult_experiment_basic_info/55"
+        }
+      ]
+    },
+    {
+      "name": "CorkOakDB",
+      "url": "https://corkoakdb.org/",
+      "nodes": "PT",
+      "profiles": [
+        {
+          "profileName": "Gene",
+          "conformsTo": "0.7",
+          "exampleURL": "https://corkoakdb.org/gene/13014"
+        },
+        {
+          "profileName": "Taxon",
+          "conformsTo": "0.6",
+          "exampleURL": "https://corkoakdb.org/gene/13014"
+        }
+      ]
+    },
+    {
+      "name": "Orphanet",
+      "description": "The portal for rare diseases and orphan drugs",
+      "keywords": ["CDR"],
+      "url": "https://www.orpha.net/",
+      "nodes": "FR",
+      "sitemap": "https://www.orpha.net/consor/cgi-bin/html/orphanet-googlemap.xml",
+      "profiles": [
+        {
+          "profileName": "Disease",
+          "conformsTo": "0.1-DRAFT",
+          "exampleURL": "https://www.orpha.net/consor/cgi-bin/OC_Exp.php?Expert=141189&lng=en",
+          "highlight": "Over 6,000 diseases"
+        }
+      ]
+    },
+    {
+      "name": "InterPro",
+      "description": "Classification of protein families",
+      "keywords": ["CDR"],
+      "url": "https://www.ebi.ac.uk/interpro/",
+      "nodes": "EBI",
+      "sitemap": "https://www.ebi.ac.uk/interpro/sitemap/interpro.sitemap.txt",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3-RELEASE",
+          "exampleURL": "https://www.ebi.ac.uk/interpro/"
+        },
+        {
+          "profileName": "ProteinAnnotation",
+          "conformsTo": "0.6-DRAFT",
+          "exampleURL": "https://www.ebi.ac.uk/interpro/entry/InterPro/IPR015252/",
+          "highlight": "Over 38,000 protein entries"
+        }
+      ]
+    },
+    {
+      "name": "Biological Magnetic Resonance Data Bank (BMRB)",
+      "description": "A Repository for Data from NMR Spectroscopy on Proteins, Peptides, Nucleic Acids, and other Biomolecules",
+      "url": "https://bmrb.io/",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3-RELEASE",
+          "exampleURL": "https://bmrb.io/data_library/summary/index.php?bmrbId=30309"
+        }
+      ]
+    },
+    {
+      "name": "MetaNetX",
+      "description": "Automated model construction and genome annotation for large-scale metabolic networks",
+      "url": "https://www.metanetx.org/",
+      "nodes": "CH",
+      "sitemap": "https://www.metanetx.org/sitemap.xml",
+      "profiles": [
+                {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3-RELEASE",
+          "exampleURL": "https://www.metanetx.org/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.4-DRAFT",
+          "exampleURL": "https://www.metanetx.org/ftp/"
+        },
+        {
+          "profileName": "MolecularEntity",
+          "conformsTo": "0.5-RELEASE",
+          "exampleURL": "https://www.metanetx.org/chem_info/MNXM680",
+          "highlight": "Over 1M chemical compound pages"
+        }
+      ]
+    },
+    {
+      "name": "Bioversions",
+      "url": "https://biopragmatics.github.io/bioversions/",
+      "sitemap": "https://biopragmatics.github.io/bioversions/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "-",
+          "exampleURL": "https://biopragmatics.github.io/bioversions/",
+          "highlight": "Aggregation site about 279 datasets. Due to the aggregation not all properties can be retrieved to comply with the Bioschemas profile."
+        }
+      ]
+    },
+    {
+      "name": "Bgee",
+      "description": "Bgee is a database for retrieval and comparison of gene expression patterns across multiple animal species. It provides an intuitive answer to the question \"where is a gene expressed?\" and supports research in cancer and agriculture as well as evolutionary biology.",
+      "url": "https://bgee.org/",
+      "nodes": "CH",
+      "sitemap": "https://bgee.org/sitemap.xml",
+      "profiles": [
+                {
+          "profileName": "DataCatalog",
+          "conformsTo": "0.3-RELEASE",
+          "exampleURL": "https://bgee.org/",
+          "highlight": "Contains 29 species specific datasets"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.4-DRAFT",
+          "exampleURL": "https://bgee.org/?page=species&amp;species_id=9606#expr-calls"
+        },
+        {
+          "profileName": "Gene",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bgee.org/?page=gene&gene_id=ENSG00000274928",
+          "highlight": "Over 750k pages"
+        }
+      ]
+    },
+    {
+      "name": "NanoSafety Data Interface",
+      "description": "The NanoSafety Data Interface provides a user-friendly access to the aggregated search index of the (sub)set of eNanoMapper database instances with toxicity studies for nanomaterials.",
+      "url": "https://search.data.enanomapper.net/",
+      "sitemap": "https://search.data.enanomapper.net/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.4-DRAFT",
+          "exampleURL": "https://search.data.enanomapper.net/about/enanomapper/"
+        }
+      ]
+    },
+    {
+      "name": "DaMaLOS",
+      "description": "DaMaLOS is a workshop about Research data and objects management for Linked Open Science, running since 2020 and co-located with ISWC",
+      "url": "https://zbmed.github.io/damalos/",
+      "sitemap": "https://zbmed.github.io/damalos/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "0.3-RELEASE-2019_06_14",
+          "exampleURL": "https://zbmed.github.io/damalos/",
+          "highlight": "DaMaLOS workshop proceedings since 2020"
+        },
+        {
+          "profileName": "ScholarlyArticle",
+          "conformsTo": "0.2-DRAFT-2020_12_03",
+          "exampleURL": "https://zbmed.github.io/damalos/docs/2020.html",
+          "highlight": "DaMaLOS 2020 workshop proceedings"
+        }
+      ]
+    },
+    {
+      "name": "RDMkit",
+      "description": "Find the answers to your Research Data Management questions in Life Sciences.",
+      "url": "https://rdmkit.elixir-europe.org/",
+      "sitemap": "https://rdmkit.elixir-europe.org/sitemap.xml",
+      "nodes": [
+        "EBI",
+        "UK",
+        "SE",
+        "CH",
+        "CZ",
+        "EE",
+        "NO",
+        "NL",
+        "DK",
+        "IL",
+        "PT",
+        "FI",
+        "FR",
+        "BE",
+        "IT",
+        "SI",
+        "LU",
+        "IE",
+        "DE",
+        "HU",
+        "ES",
+        "GR",
+        "CY"
+      ],
+      "profiles": [
+        {
+          "profileName": "Person",
+          "conformsTo": "0.2-DRAFT-2019_07_19",
+          "exampleURL": "https://rdmkit.elixir-europe.org/human_data.html"
+        }
+      ]
+    },
+    {
+      "name": "hPSCreg: Human Pluripotent Stem Cell Registry",
+      "description": "hPSCreg® is a freely accessible global registry for human pluripotent stem cell lines (hPSC lines). The registry allows searching for cell lines and for information available about these cell lines. New cell lines can be registered and information to already registered cell lines can be added.",
+      "url": "https://hpscreg.eu/",
+      "sitemap": "https://hpscreg.eu/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "BioSample",
+          "conformsTo": "0.1-DRAFT",
+          "exampleURL": "https://hpscreg.eu/cell-line/BIHi006-D",
+          "highlight": "Over 3,700 cell lines"
+        }
+      ]
+    },
+    {
+      "name": "EBiSC: European Bank for Induced pluripotent Stem Cells",
+      "description": "The European Bank for induced Pluripotent Stem Cells (EBiSC) is a not-for-profit hiPSC repository which collects, banks and distributes quality-assured and ethically sourced, disease relevant, research-grade hiPSC lines and data to academic and commercial researchers worldwide.",
+      "url": "https://ebisc.org/",
+      "sitemap": "https://ebisc.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "BioSample",
+          "conformsTo": "0.1-DRAFT",
+          "exampleURL": "https://cells.ebisc.org/BIHi006-D",
+          "highlight": "900 cell lines"
+        }
+      ]
+    },
+    {
+      "name": "PSnpBind",
+      "description": "A database of mutated binding site protein-ligand complexes constructed using a multithreaded virtual screening workflow.",
+      "url": "https://psnpbind.org/",
+      "sitemap": "https://psnpbind.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Protein",
+          "conformsTo": "0.11",
+          "exampleURL": "https://psnpbind.org/protein/1owh",
+          "highlight": "Bioschemas annotation of 26 protein structures. For these 0.6 million docking results are found in the database"
+        }
+      ]
+    },
+    {
+      "name": "eNanoMapper Tutorials",
+      "description": "Various tutorials developed by or during the EC FP7 project eNanoMapper about ontology development, regression modelling, and pathway analysis.",
+      "url": "https://enanomapper.github.io/tutorials/",
+      "nodes": "NL",
+      "sitemap": "https://enanomapper.github.io/tutorials/sitemap.xml",
+      "profiles":[
+      	{
+        	"profileName": "TrainingMaterial",
+        	"conformsTo": "0.9-DRAFT-2020_12_08",
+        	"exampleURL": "https://enanomapper.github.io/tutorials/Entering_and_analysing_nano_safety_data/readme.html"
+      	}
+    	]
+    },
+    {
+      "name": "Biomedical semantics, information retrieval and knowledge discovery",
+      "description": "Lecture on biomedical semantics, information retrieval and knowledge discovery",
+      "url": "https://zbmed-semtec.github.io/BioMedSem-IR-KD",
+      "sitemap": "https://zbmed-semtec.github.io/BioMedSem-IR-KD/sitemap",
+      "profiles":[
+        {
+          "profileName": "TrainingMaterial",
+          "conformsTo": "0.9-DRAFT-2020_12_08",
+          "exampleURL": "https://zbmed-semtec.github.io/BioMedSem-IR-KD/docs/Lesson1.html",
+          "highlight": "12"
+        }
+      ]
+    }
+  ]
+}

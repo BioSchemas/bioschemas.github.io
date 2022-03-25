@@ -1,0 +1,191 @@
+---
+layout: default
+title: Bioschemas Types
+redirect_from:
+- "/devTypes/"
+- "/types/drafts/"
+
+---
+<h1>Bioschemas Types
+    <a target="_blank" href="mailto:enquiries@bioschemas.org?subject=[Bioschemas] request to create a new type" class="btn btn-primary btn-sm float-end" role="button">
+    Propose a new type</a>
+</h1>
+
+<p><a href="https://schema.org/">Schema.org</a> provides a vocabulary of terms that can be used to describe data on the Internet. The Bioschemas community are extending that vocabulary to be able to describe life sciences resources. Here we host the types and properties that are being proposed to the Schema.org vocabulary.</p>
+
+<p>Comments and discussions on the <a href="https://lists.w3.org/Archives/Public/public-bioschemas/" itemprop="email">mailing list</a> or <a href="https://github.com/Bioschemas/specifications/issues">GitHub issue tracker</a> are encouraged.</p>
+<br />
+{% assign dep_types = site.data.type_versions | where: 'status', 'deprecated' %}
+{% assign dep_types_names = "" | split: ',' %}
+{% for item in dep_types %}
+{% assign dep_types_names = dep_types_names | push: item.name %}
+{% endfor %}
+
+{% assign active_types = site.data.type_versions | where: 'status', 'active' %}
+{% assign active_types_names = "" | split: ',' %}
+{% for item in active_types %}
+{% assign active_types_names = active_types_names | push: item.name %}
+{% endfor %}
+
+<div class="bioschemas-spec-list-wrapper">
+    <!-- Tab layout for different profile release status -->
+    <nav class="mt-3">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-release-tab" data-bs-toggle="tab" data-bs-target="#nav-release" type="button" role="tab" aria-controls="nav-release" aria-selected="true">RELEASE</button>
+            <button class="nav-link" id="nav-draft-tab" data-bs-toggle="tab" data-bs-target="#nav-draft" type="button" role="tab" aria-controls="nav-draft" aria-selected="false">DRAFT</button>
+            <button class="nav-link" id="nav-deprecated-tab" data-bs-toggle="tab" data-bs-target="#nav-deprecated" type="button" role="tab" aria-controls="nav-deprecated" aria-selected="false">DEPRECATED</button>
+        </div>
+    </nav>
+    <div class="tab-content py-3 mb-3" id="nav-tabContent">
+        <!-- RELEASED TYPES -->
+        <div class="tab-pane fade show active" id="nav-release" role="tabpanel" aria-labelledby="nav-release-tab">
+            <h3>RELEASE</h3>
+            <p><em>Released</em> types have been agreed by the community and are widely deployed.</p>
+            <p>Please note that there may be a newer version in <em>draft</em> status when the community agree that a refinement is needed. Where applicable, these are linked from the release version with the label 'Latest draft'.</p>
+            <p><strong>Note:</strong> In May 2020 we adopted a new set of <a href="https://github.com/Bioschemas/governance/blob/master/governance.md">governance</a> rules which affect the numbering of our types. Since May 2020, new releases are given the next major release number, i.e. are of the form X.0-RELEASE.</p>
+            <div class="table-responsive shadow rounded mt-4 mb-5">
+            <table class="table table-hover table-borderless mb-0 bioschemas_spec_list">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th style="text-align: center;">Group</th>
+                        <th style="text-align: center;">Task &amp; Issues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% assign prof_types = site.types | where: 'spec_type', 'Type'%}
+                    {% for spec in prof_types %}
+                    {% if active_types_names contains spec.name %}
+                    {% if site.data.type_versions[spec.name].latest_release != nill %}
+                    {% if spec.version == site.data.type_versions[spec.name].latest_release %}
+                    <tr>
+                        {%- assign typesName = '/types/' | append: spec.name | append:'/' | append: spec.version %}
+                        <th><a href="{{ typesName | relative_url }}" title="{{spec.subtitle}}">{{ spec.name }}</a><br />(v{{spec.version}})<br />{{spec.dateModified}}</th>
+                        <td>
+                            {% assign group = site.groups | where:"identifier", spec.group | first %}
+                            <a href="{{group.url | relative_url }}">{{group.name}}</a>
+                        </td>
+                        <td class="spec_links">
+                            {% if spec.gh_tasks == '' %}
+                            <a>
+                                <img src="{{ '/images/specs_tasks.png' | relative_url }}" alt="Bioschemas {{ spec.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
+                            </a>
+                            {% else %}
+                            <a href="{{spec.gh_tasks}}" target="_blank">
+                                <img src="{{ '/images/specs_tasks.png' | relative_url }}" alt="Bioschemas {{ spec.name }} Github Tasks or Issues">
+                            </a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endif %}
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+        <!-- DRAFT TYPES -->
+        <div class="tab-pane fade" id="nav-draft" role="tabpanel" aria-labelledby="nav-draft-tab">
+            <h3>DRAFT</h3>
+            <p><em>Draft</em> types are actively being worked on and are likely to change. Disucssions take place on the <a href="https://lists.w3.org/Archives/Public/public-bioschemas/" itemprop="email">mailing list</a> and the <a href="https://github.com/Bioschemas/specifications/issues">GitHub issue tracker</a>.</p>
+            <p>Draft types are either working towards their first release or are refinements of a previously <em>released</em> version.</p>
+            <div class="table-responsive shadow rounded mt-4 mb-5">
+            <table class="table table-hover table-borderless mb-0 bioschemas_spec_list">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th style="text-align: center;">Group</th>
+                        <th style="text-align: center;">Task &amp; Issues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% assign prof_types = site.types | where: 'spec_type', 'Type'%}
+                    {% for spec in prof_types %}
+                    {% if active_types_names contains spec.name %}
+
+                    {% if site.data.type_versions[spec.name].latest_publication != nill %}
+                    {% if spec.version == site.data.type_versions[spec.name].latest_publication %}
+                    <tr>
+                        {%- assign typesName = '/types/' | append: spec.name | append: '/' | append: spec.version %}
+                        <th><a href="{{ typesName | relative_url }}" title="{{spec.subtitle}}">{{ spec.name }}</a><br />(v{{spec.version}})<br />{{spec.dateModified}}</th>
+                        <td>
+                            {% assign group = site.groups | where:"identifier", spec.group | first %}
+                            <a href="{{ group.url | relative_url }}">{{group.name}}</a>
+                        </td>
+                        <td class="spec_links">
+                            {% if spec.gh_tasks == '' %}
+                            <a>
+                                <img src="{{ '/images/specs_tasks.png' | relative_url }}" alt="Bioschemas {{ spec.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
+                            </a>
+                            {% else %}
+                            <a href="{{spec.gh_tasks}}" target="_blank">
+                                <img src="{{ '/images/specs_tasks.png' | relative_url }}" alt="Bioschemas {{ spec.name }} Github Tasks or Issues">
+                            </a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endif %}
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+        <!-- DEPRECATED TYPES -->
+        <div class="tab-pane fade" id="nav-deprecated" role="tabpanel" aria-labelledby="nav-deprecated-tab">
+            <h3>DEPRECATED</h3>
+            <p>A type can be <em>deprecated</em> because:</p>
+            <ul>
+                <li>The working group decided that the type is no longer required, e.g. the work undertaken was deemed unsatisfactory, or failed to accomplish the desired objective(s), or has been superseded by some other activity; or</li>
+                <li>The working group developing it have suspended work.</li>
+            </ul>
+            <p>If you would like to continue work on one of these types then please email the community <a href="mailto:public-bioschemas@w3.org" itemprop="email">public-bioschemas@w3.org</a> to discuss.</p>
+            <div class="table-responsive shadow rounded mt-4 mb-5">
+            <table class="table table-hover table-borderless mb-0 bioschemas_spec_list">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th style="text-align: center;">Group</th>
+                        <th style="text-align: center;">Task &amp; Issues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% assign prof_types = site.types | where: 'spec_type', 'Type'%}
+                    {% for spec in prof_types %}
+                    {% if dep_types_names contains spec.name %}
+
+                    {% if site.data.type_versions[spec.name].latest_publication != nill %}
+                    {% if spec.version == site.data.type_versions[spec.name].latest_publication %}
+                    <tr>
+                        {%- assign typesName = '/types/' | append: spec.name | append:'/' | append: spec.version %}
+                        <th><a href="{{ typesName | relative_url }}" title="{{spec.subtitle}}">{{ spec.name }}</a><br />(v{{spec.version}})<br />{{spec.dateModified}}</th>
+                        <td>
+                            {% assign group = site.groups | where:"identifier", spec.group | first %}
+                            <a href="{{group.url | relative_url}}">{{group.name}}</a>
+                        </td>
+                        <td class="spec_links">
+                            {% if spec.gh_tasks == '' %}
+                            <a>
+                                <img src="{{ '/images/specs_tasks.png' | relative_url }}" alt="Bioschemas {{ spec.name }} Github Tasks or Issues" style="filter: grayscale(100%);">
+                            </a>
+                            {% else %}
+                            <a href="{{spec.gh_tasks}}" target="_blank">
+                                <img src="{{ '/images/specs_tasks.png' | relative_url }}" alt="Bioschemas {{ spec.name }} Github Tasks or Issues">
+                            </a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endif %}
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+</div>

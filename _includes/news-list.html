@@ -1,0 +1,23 @@
+<section class="upcoming-events">
+  <h3>News</h3>
+  <!-- Block for displaying 3 news items -->
+  {%- assign count = 0 %}
+  {%- assign news = site.news | where: "layout", "post" | reverse %}
+  {%- for post in news %}
+  <div class="event shadow rounded p-3">
+    <strong><a href="{{ post.url | relative_url }}">{{ post.title }}</a></strong>
+    <p class="mb-0"><em>{{post.date|date_to_long_string}}</em> -
+      {%- for tag in post.tags %}
+      {%- assign newsUrl = tag | slugify %}
+      {%- assign finalUrl = '/news/tags.html#' | append: newsUrl %}
+      <a href="{{ finalUrl | relative_url }}"><span class="badge bg-light text-secondary"><i class="fas fa-tag me-1"></i>{{tag}}</span></a>
+      {%- endfor %}
+    </p>
+  </div>
+  {%- assign count = count | plus: 1 %}
+  {%- if count == 3 %}
+  {%- break %}
+  {%- endif %}
+  {%- endfor %}
+  <small>Read more news on our <a href="{{ '/news/' | relative_url }}">news page</a>.</small>
+</section>

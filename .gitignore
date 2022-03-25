@@ -1,0 +1,8 @@
+_site/
+.sass-cache
+/.idea/
+.DS_Store
+/bioschemas.github.io.iml
+/_bsc_specs.zip
+*.iml
+.jekyll-cache/

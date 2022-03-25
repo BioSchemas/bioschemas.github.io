@@ -1,0 +1,158 @@
+{%- if page.mapping != null %}
+{%- assign mapping_examples = "" | split: "" %}
+{%- for prop in page.mapping %}
+{%- if prop.example != '' %}
+{%- assign mapping_examples = mapping_examples | push: prop %}
+{%- endif %}
+{%- endfor %}
+{%- unless mapping_examples.size < 1 %} 
+<span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="View all examples">
+    <button type="button" class="btn btn-primary" data-bs-target="#exampleModal" data-bs-toggle="modal">
+        Examples
+    </button>
+</span>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Examples for all properties</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="bundle-property-examples" class="example-code">
+{% highlight javascript %}
+{% for prop in mapping_examples %}
+//Property: {{prop.property}}
+{{prop.example}}
+{% endfor %}{% endhighlight %}
+                    <button type="button" data-bs-toggle="tooltip" title="Copy to clipboard" class="btn btn-primary btn-copy" data-clipboard-target="#bundle-property-examples"><i class="fas fa-copy"></i></button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{%- endunless %}
+<div class="table-responsive shadow rounded mt-4 mb-5">
+<table class="table table-hover table-borderless mb-0 spec-prof-table">
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Expected Type</th>
+            <th>Description</th>
+            <th>CD</th>
+            <th class="control-vocabulary-column">Controlled Vocabulary</th>
+            <th class="example-column">Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%- assign marginality_list = "Minimum,Recommended,Optional" | split: ',' %}
+        {%- for current_mg in marginality_list %}
+        {%- assign props_list = page.mapping | where: 'marginality', current_mg | sort: 'property' %}
+        {%- if props_list.size > 0 or current_mg == 'Minimum' %}
+        <tr class="cardinality">
+            <td colspan="6">
+                Marginality: <b>{{current_mg}}.</b>
+            </td>
+        </tr>
+        {%- endif%}
+        {% if current_mg == "Minimum" %}
+          {% include standard-properties.html %}
+        {% endif %}
+        {%- for prop in props_list %}
+        <tr>
+            {%- if prop.type == "bioschemas" %}
+            <td class="property-column"><a href="{{prop.type_url }}" target="_blank" class="bioschema">{{prop.property}}</a></td>
+            {%- elsif prop.type == "schemas.org" or prop.type == "" %}
+            <td class="property-column"><a href="http://schema.org/{{prop.property}}" target="_blank" class="schemaorg">{{prop.property}}</a></td>
+            {%- elsif prop.type == "pending" %}
+            <td class="property-column"><a href="http://schema.org/{{prop.property}}" target="_blank" class="pending">{{prop.property}}</a></td>
+            {%- else %}
+            <td class="property-column"><a href="{{prop.type_url}}" target="_blank" class="external">{{prop.property}}</a></td>
+            {%- endif %}
+            <td>
+                {%- for temp_exp_type in prop.expected_types %}
+                {%- assign expected_type_type = temp_exp_type | split: ':' %}
+                {%- if temp_exp_type == "BioChemEntity" or
+                temp_exp_type == "BioChemStructure" or
+                temp_exp_type == "BioSample" or
+                temp_exp_type == "ChemicalSubstance" or
+                temp_exp_type == "ComputationalWorkflow" or
+                temp_exp_type == "DataRecord" or
+                temp_exp_type == "DNA" or
+                temp_exp_type == "Enzyme" or
+                temp_exp_type == "FormalParameter" or
+                temp_exp_type == "Gene" or
+                temp_exp_type == "LabProtocol" or
+                temp_exp_type == "MolecularEntity" or
+                temp_exp_type == "Phenotype" or
+                temp_exp_type == "Protein" or
+                temp_exp_type == "RNA" or
+                temp_exp_type == "Sample" or
+                temp_exp_type == "SequenceAnnotation" or
+                temp_exp_type == "SequenceMatchingModel" or
+                temp_exp_type == "SequenceRange" or
+                temp_exp_type == "Study" or
+                temp_exp_type == "Taxon" or
+                temp_exp_type == "TaxonName" %}
+                <a href="/{{temp_exp_type}}/" class="bioschema" target="_blank">{{temp_exp_type}}</a><br>
+                {%- elsif expected_type_type[0] == "bioschemas" %}
+                <a href="/{{expected_type_type[1]}}" class="bioschema" target="_blank">{{expected_type_type[1]}}</a><br>
+                {%- else %}
+                <a href="http://schema.org/{{temp_exp_type}}" target="_blank">{{temp_exp_type}}</a><br>
+                {%- endif %}
+                {%- endfor %}
+            </td>
+            <td class="description-column">
+                {%- unless prop.description == "" %}
+                <strong>Schema: </strong>{{prop.description | markdownify }}<br />
+                {%- endunless %}
+                {%- unless prop.bsc_description == "" %}
+                <strong>Bioschemas: </strong>{{prop.bsc_description | markdownify }}
+                {%- endunless %}
+            </td>
+            <td>{{prop.cardinality}}</td>
+            <td class="control-vocabulary-column">{{prop.controlled_vocab | markdownify }}</td>
+            <td class="example-column">
+                <!-- Example modal starts here -->
+                {%- unless prop.example == "" %}
+                <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-html="true" title="View <strong>&#8810{{prop.property}}&#8811</strong> example">
+                    <button type="button" class="btn btn-primary" data-bs-target="#myModal{{prop.property}}" data-bs-toggle="modal">
+                        <i class="fas fa-file-code"></i>
+                    </button>
+                </span>
+                <!-- Modal -->
+                </div>
+                <div class="modal fade" id="myModal{{prop.property}}" tabindex="-1" aria-labelledby="myModal{{prop.property}}" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Property <strong>&#8810{{prop.property}}&#8811</strong> example</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="{{current_mg}}-example-num-{{forloop.index}}" class="example-code">
+                                    {% highlight javascript %}{{prop.example}}{% endhighlight %}
+                                    <button type="button" data-bs-toggle="tooltip" title="Copy to clipboard" class="btn btn-primary btn-copy" data-clipboard-target="#{{current_mg}}-example-num-{{forloop.index}}"><i class="fas fa-copy"></i></button>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {%- endunless %}
+            </td>
+        </tr>
+        {%- endfor %}
+        {%- endfor %}
+    </tbody>
+</table>
+</div>
+{%- else %}
+<span class="alert alert-warning" role="alert">Mapping in progress.</span>
+{%- endif %}

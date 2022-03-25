@@ -1,0 +1,24 @@
+{%- if page.overviewTutorial or page.previousTutorial or page.nextTutorial %}
+<div class="text-center py-3 border-top border-bottom my-3">
+{%- if page.overviewTutorial %}
+{%- assign overviewTutorial = '/tutorials/' | append: page.overviewTutorial.link %}
+<i class="fas fa-angle-right fa-lg me-2"></i>
+<a href="{{ overviewTutorial | relative_url}}">{{page.overviewTutorial.title}}</a>
+{%- endif %}
+{%- if page.previousTutorial %}
+{%- assign previousTutorial = '/tutorials/' | append: page.previousTutorial.link %}
+<i class="fas fa-angle-left fa-lg me-2"></i>
+Previous tutorial:
+<a href="{{ previousTutorial | relative_url}}">{{page.previousTutorial.title}}</a>
+{%- endif %}
+{%- if page.previousTutorial and page.nextTutorial %}
+|
+{%- endif %}
+{%- if page.nextTutorial %}
+Next tutorial:
+{%- assign nextTutorial = '/tutorials/' | append: page.nextTutorial.link %}
+<a href="{{ nextTutorial | relative_url}}">{{ page.nextTutorial.title }}</a>
+<i class="fas fa-angle-right fa-lg ms-2"></i>
+{%- endif %}
+</div>
+{%- endif %}

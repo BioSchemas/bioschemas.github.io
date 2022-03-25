@@ -1,0 +1,55 @@
+---
+layout: use-case
+name: Genes
+group: genes
+collection: useCases
+active: true
+redirect_from: useCases/Genes/
+---
+
+<p>This use cases apply to the following biological types: <a href="/Gene">Gene</a>.</p>
+
+<h3>Findability</h3>
+<p>As a user, I would like to find as many gene resources as possible when looking by gene entity/name/identifier (ID).</p>
+
+<h3>Summarization</h3>
+<p>As a user, when I look for a gene, I would like to get a quick summary with information regarding gene entities. Such summary should contain at least the data sources, IDs, names and organisms for the gene entity. Additionally, it could contain alternatively spliced transcript, sequence, citations, protein structure and gene features such as genetic variants (SNPs and mutations), regulatory features (promoter regions, enhancers, transcription factor binding sites, sites for methylation):</p>
+<ol>
+  <li>Search for a gene or transcript (to include IDs, names, synonyms)</li>
+  <li>Enable discovery by indexing on free text description</li>
+  <li>Enable direct access, resolution of gene entity</li>
+  <li>Allow restriction to specific isoforms (alternatively spliced transcripts)</li>
+  <li>Search according to a disease linked to that gene, author</li>
+  <li>Allow restriction to where the gene belongs to (human, mouse – which strain, wheat, etc)</li>
+</ol>
+
+<h3>Link to external resources</h3>
+<p>As a user, I want to be able to distinguish what is a gene, what is a transcript, whether the gene is protein coding or not, whether it is associated with diseases or other phenotypes, where it has orthologues in other species or paralogs, duplicated versions in the same organism. I also want to be able to gather genetic variation information from as many variation and genomic resources as possible; this would be useful, for instance, to create visualisation tools or to enrich other pages/databases.</p>
+
+<h3>Gene Related Resources</h3>
+<p>The following is a non-exhaustive list of external resources containing gene related information:</p>
+<ul>
+  <li>Ensembl: genes in vertebrates ( species including human, mice – 16 strains, rat, zebrafish, chicken and ?? more)</li>
+  <li>Ensembl Metazoa: genes in non-vertebrate metazoa (mosquitos, worms, flies)</li>
+  <li>Ensembl Fungi: genes in fungi (e.g. S. cerevisiae)</li>
+  <li>Ensembl Plants: genes in plants (e.g. soybean, wheat, tomato)</li>
+  <li>Ensembl Protists: genes in parasites (e.g. Plasmodium sp)</li>
+  <li>Ensembl Bacteria: genes in ?? K bacteria (these are all intronless, hence 1 gene à 1 transcript, no alternatively spliced transcripts)</li>
+  <li>NCBI EntrezGene</li>
+  <li>UCSC genome browser</li>
+  <li>GeneCards</li>
+  <li>Open Targets Platform</li>
+  <li>Open Targets Genetics</li>
+  <li>DisGeNET</li>
+  <li>Official gene nomenclatures e.g. HGNC (human), MGI (mouse), ZNF (zebrafish), RDG (rat), Wormbase (C. elegans), Yeast (SGD)  * All summarized in Alliance of Genome Resources (AGR) and Monarch Initiative</li>
+  <li>List of agricultural databases (<a href="https://www.agbiodata.org/databases">https://www.agbiodata.org/databases</a>)</li>
+  <li>Wikigenes</li>
+  <li>OMIM</li>
+  <li>Literature search: Europe PMC, PubMed, LINK (literature knowledge graph with semantic relationships for genes among other entities)</li>
+  <li>Cancer Gene Census</li>
+  <li>Gene2Phenotype</li>
+  <li>miRBase (microRNA db)</li>
+  <li>Orphanet, rare disease genes</li>
+  <li>Locus specific databases, such as the Leiden Open Variation Database</li>
+  <li><a href="https://mygene.info">MyGene.info</a> API (gene-centric high-performance API, a part of <a href="https://biothings.io">BioThings API</a> project). A typical gene object from MyGene.info is like this: <a href="http://mygene.info/v3/gene/1017">http://mygene.info/v3/gene/1017</a>.</li>
+</ul>
