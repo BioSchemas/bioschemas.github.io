@@ -58,7 +58,7 @@ DataRecord:
 Dataset:
     name: "Dataset"
     latest_publication: "0.5-DRAFT"
-    latest_release: "0.3-RELEASE-2019_06_14"
+    latest_release: "1.0-RELEASE"
     status: "active"
 
 Disease:
