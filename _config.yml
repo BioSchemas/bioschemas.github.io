@@ -72,6 +72,11 @@ defaults:
       layout: "default"
   - scope:
       path: ""
+      type: "types"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
       type: "profiles"
     values:
       layout: "profiles"
