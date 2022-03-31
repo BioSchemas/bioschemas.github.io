@@ -2,7 +2,6 @@
 layout: use-case
 name: Chemistry Data
 group: chemicals
-collection: useCases
 active: true
 ---
 
