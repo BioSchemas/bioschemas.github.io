@@ -49,7 +49,7 @@ In Firefox right click on the page and select ‘Inspect Element’, in Chrome i
 
 Once you have verified that the content is rendered on the page, you can test what external services are able to pick up. Some of these services simply retrieve the markup while others will validate it against a defined profile.
 
-Note that since Bioschemas is an evolving extension of Schema.org, not all types and properties will be known to all services. Additionally, only Bioschemas specific services will know about the Bioscheams profiles; proprietary services will validate against their own internal views of Schema.org.
+Note that since Bioschemas is an evolving extension of Schema.org, not all types and properties will be known to all services. Additionally, only Bioschemas specific services will know about the Bioschemas profiles; proprietary services will validate against their own internal views of Schema.org.
 
 ### 2.1. Google Structured Data Testing Tool
 
