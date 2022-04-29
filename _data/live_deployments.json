@@ -1011,9 +1011,9 @@
       "profiles": [
         {
           "profileName": "Dataset",
-          "conformsTo": "0.4-DRAFT",
+          "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://bridgedb.github.io/data/gene_database/",
-          "highlight": "23 identifier mapping databases for genes, proteins, complexes, metabolites, and more"
+          "highlight": "40 identifier mapping databases for genes, proteins, complexes, metabolites, and more"
         },
         {
           "profileName": "ComputationalTool",
