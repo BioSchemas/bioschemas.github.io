@@ -26,28 +26,29 @@ layout: default
 
 <h3>Versions</h3>
 <ul>
-  <li><strong>This version: <a href="{{page.version}}">{{page.version | split: '/' | last }}</a></strong></li>
-{% assign profile_versions = site.data.profile_versions[page.name] %}
-{% if profile_versions.latest_release == null or profile_versions.latest_release == '' %}
-<li>Latest release: none</li>
-{% else %}
-<li>Latest release: <a href="{{ page.name | prepend: '/profiles/' | append:'/' | append: profile_versions.latest_release | relative_url }}">{{profile_versions.latest_release}}</a></li>
-{% endif %}
-{% if profile_versions.latest_publication == null or profile_versions.latest_publication == '' %}
-<li>Latest draft: none</li>
-{% else %}
-<li>Latest draft: <a href="{{ page.name | prepend: '/profiles/' | append:'/' | append: profile_versions.latest_publication | relative_url }}">{{profile_versions.latest_publication}}</a></li>
-{% endif %}
-{% if page.previous_version == null or page.previous_version == '' %}
-<li>Previous version: none</li>
-{% else %}
-<li>Previous version: <a href="{{ page.name | prepend: '/profiles/' | append: '/' | append: page.previous_version | relative_url }}">{{page.previous_version}}</a></li>
-{% endif %}
-{% if page.previous_release == null or page.previous_release == '' %}
-<li>Previous release: none</li>
-{% else %}
-<li>Previous release: <a href="{{ page.name | prepend: '/profiles/' | append: '/' | append: page.previous_release | relative_url }}">{{page.previous_release}}</a></li>
-{% endif %}
+   {% assign version = page.version | split: '/' | last %}
+   <li><strong>This version: <a href="{{page.name | prepend: '/profiles/' | append:'/' | append: version | reative_url }}">{{ version }}</a></strong></li>
+   {% assign profile_versions = site.data.profile_versions[page.name] %}
+   {% if profile_versions.latest_release == null or profile_versions.latest_release == '' %}
+   <li>Latest release: none</li>
+   {% else %}
+   <li>Latest release: <a href="{{ page.name | prepend: '/profiles/' | append:'/' | append: profile_versions.latest_release | relative_url }}">{{profile_versions.latest_release}}</a></li>
+   {% endif %}
+   {% if profile_versions.latest_publication == null or profile_versions.latest_publication == '' %}
+   <li>Latest draft: none</li>
+   {% else %}
+   <li>Latest draft: <a href="{{ page.name | prepend: '/profiles/' | append:'/' | append: profile_versions.latest_publication | relative_url }}">{{profile_versions.latest_publication}}</a></li>
+   {% endif %}
+   {% if page.previous_version == null or page.previous_version == '' %}
+   <li>Previous version: none</li>
+   {% else %}
+   <li>Previous version: <a href="{{ page.name | prepend: '/profiles/' | append: '/' | append: page.previous_version | relative_url }}">{{page.previous_version}}</a></li>
+   {% endif %}
+   {% if page.previous_release == null or page.previous_release == '' %}
+   <li>Previous release: none</li>
+   {% else %}
+   <li>Previous release: <a href="{{ page.name | prepend: '/profiles/' | append: '/' | append: page.previous_release | relative_url }}">{{page.previous_release}}</a></li>
+   {% endif %}
 </ul>
 
 <!-- Navigation tabs -->
