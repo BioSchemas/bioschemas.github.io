@@ -1528,8 +1528,9 @@
       "profiles":[
       	{
         	"profileName": "TrainingMaterial",
-        	"conformsTo": "0.9-DRAFT-2020_12_08",
-        	"exampleURL": "https://enanomapper.github.io/tutorials/Entering_and_analysing_nano_safety_data/readme.html"
+        	"conformsTo": "1.0-RELEASE",
+        	"exampleURL": "https://enanomapper.github.io/tutorials/Entering_and_analysing_nano_safety_data/readme.html",
+          "highlight": "Collection of 7 tutorials indexed by ELIXIR TeSS."
       	}
     	]
     },
