@@ -97,6 +97,18 @@
       ]
     },
     {
+      "name": "BiGCaT, Maastricht University",
+      "url": "http://www.bigcat.unimaas.nl/",
+      "nodes": "NL",
+      "profiles": [
+        {
+          "profileName": "TrainingMaterial",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bigcat-um.github.io/BiGCaT-Teaching/"
+        }
+      ]
+    },
+    {
       "name": "EGA",
       "keywords": ["CDR", "DDR"],
       "url": "https://ega-archive.org/",
