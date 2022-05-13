@@ -79,7 +79,7 @@
       "profiles": [
         {
           "profileName": "Dataset",
-          "conformsTo": "0.4-DRAFT",
+          "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://wikipathways.org/"
         }
       ]
@@ -1041,7 +1041,7 @@
         },
         {
           "profileName": "Dataset",
-          "conformsTo": "0.4-DRAFT",
+          "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://nanocommons.github.io/datasets/"
         },
         {
