@@ -4,8 +4,6 @@ title: Bioschemas Tutorials
 nextTutorial:
   link: ./what_why_schema
   title: What and why Schema.org
-redirect_from:
-- "tutorials"
 ---
 
 # Getting Started with Bioschemas
