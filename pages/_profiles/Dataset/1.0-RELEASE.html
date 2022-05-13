@@ -103,13 +103,20 @@ mapping:
   example: |-
     {
     "@type": "Dataset",
-    "creator": {
-        "@type": "Person",
-        "familyName": "Kohlbacher",
-        "givenName": "Oliver",
-        "email": "oliver.kohlbacher@uni-tuebingen.de",
-        "affiliation": "Wilhelm Schickard Institute for Computer Science, University of Tubingen"
-      }
+    "creator": [
+        {
+            "@type": "Person",
+            "familyName": "Kohlbacher",
+            "givenName": "Oliver",
+            "email": "oliver.kohlbacher@uni-tuebingen.de",
+            "affiliation": "Wilhelm Schickard Institute for Computer Science, University of Tubingen"
+        },
+        {
+            "@type": "Organization",
+            "name": "NanoSolveIT",
+            "@id": "https://www.nanosolveit.eu/"
+        }
+      ]
     }
 - property: dateCreated
   expected_types:
