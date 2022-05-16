@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Community-based Tutorials
+permalink: /tutorials/community/
+redirect_from:
+    - /tutorials/community
 ---
 
 # Community-based tutorials
