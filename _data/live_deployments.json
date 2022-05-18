@@ -1272,6 +1272,21 @@
       ]
     },
     {
+      "name": "FAIR Cookbook",
+      "description": "Created by researchers and data managers professionals, the FAIR Cookbook is an online resource for the Life Sciences with recipes that help you to make and keep data Findable, Accessible, Interoperable and Reusable (FAIR).",
+      "url": "https://faircookbook.elixir-europe.org/content/home.html",
+      "nodes": ["EBI","LU","UK"],
+      "sitemap": "https://faircookbook.elixir-europe.org/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "TrainingMaterial",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://w3id.org/faircookbook/FCB010",
+          "highlight": "Over 40 recipes"
+        }
+      ]
+    },
+    {
       "name": "PIPPA: PSB Interface for Plant Phenotype Analysis",
       "url": "https://pippa.psb.ugent.be/",
       "nodes": "BE",
