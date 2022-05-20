@@ -1065,15 +1065,21 @@
     },
     {
       "name": "RiskGONE",
-      "description": "List of European Registry of Materials identifiers used by the RiskGONE project.",
       "url": "https://riskgone.eu/",
       "nodes": "NL",
-      "sitemap": "https://h2020-riskgone.github.io/riskgone-materials/sitemap.xml",
+      "sitemap": "https://h2020-riskgone.github.io/sitemap.xml",
       "profiles": [
         {
           "profileName": "ChemicalSubstance",
           "conformsTo": "0.4",
-          "exampleURL": "https://h2020-riskgone.github.io/riskgone-materials/identifiers_and_guidance.html"
+          "exampleURL": "https://h2020-riskgone.github.io/riskgone-materials/identifiers_and_guidance.html",
+		  "highlight": "List of European Registry of Materials identifiers used by the RiskGONE project.",
+        },
+		{
+          "profileName": "Dataset",
+          "conformsTo": "1.0",
+          "exampleURL": "https://ammar257ammar.github.io/Nanosafety-data-reusability-34-datasets/overview/5d2e680699.html",
+		  "highlight": "Overview of 34 datasets from the nanosafety domain annotated with community-standards metadata according to the NSDRA.org framework."
         }
       ]
     },
