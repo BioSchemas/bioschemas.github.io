@@ -6,3 +6,5 @@ _site/
 /_bsc_specs.zip
 *.iml
 .jekyll-cache/
+.bundle/config
+vendor
