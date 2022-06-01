@@ -7,7 +7,7 @@ description: > # this means to ignore newlines until "baseurl:"
 url: "http://bioschemas.org" # the base hostname & protocol for your site
 twitter_username: Bioschemas
 github_username:  Bioschemas
-permalink: /news/:year/:month/:day/:title:output_ext
+
 
 # Build settings
 markdown: kramdown
@@ -21,68 +21,60 @@ plugins:
  - jekyll-gist
  - jekyll-relative-links
 
-
 # Collections
 collections_dir: pages
 collections:
   types:
     output: true
     permalink: /:collection/:path
-    redirect_from:
-      - "/:collection/:path/"
   meetings:
     output: true
     permalink: /:collection/:path
-    redirect_from:
-      - "/:collection/:path/"
   tutorials:
     output: true
     permalink: /:collection/:path
-    redirect_from:
-      - "/:collection/:path/"
   people:
     output: true
     permalink: /:collection/:path
-    redirect_from:
-      - "/:collection/:path/"
   groups:
     output: true
     permalink: /:collection/:path
-    redirect_from:
-      - "/:collection/:path/"
   useCases:
     output: true
     permalink: /:collection/:path
-    redirect_from:
-      - "/:collection/:path/"
   stories:
     output: true
     permalink: /:collection/:path
-    redirect_from:
-      - "/:collection/:path/"
   profiles:
     output: true
     permalink: /:collection/:path
-    redirect_from:
-      - "/:collection/:path/"
   community:
     output: true
     permalink: /:collection/:path
-    redirect_from:
-      - "/:collection/:path/"
   about:
     output: true
     permalink: /:collection/:path
-    redirect_from:
-      - "/:collection/:path/"
   news:
     output: true
     permalink: /:collection/:path
-    redirect_from:
-      - "/:collection/:path/"
+  developer:
+    output: true
+    permalink: /:collection/:path
 
 # Defaults
 defaults:
+  -
+    scope:
+      path: "pages"
+      type: "pages"
+    values:
+      permalink: /:basename
+      layout: "default"
+  - scope:
+      path: ""
+      type: "types"
+    values:
+      layout: "default"
   - scope:
       path: ""
       type: "profiles"
@@ -93,8 +85,3 @@ defaults:
       type: "tutorials"
     values:
       layout: "tutorial"
-  - scope:
-      path: ""
-      type: "types"
-    values:
-      layout: "default"

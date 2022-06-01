@@ -109,7 +109,7 @@ The first two properties specify which vocabulary we are using  and what type of
 
 You will use a different schema type depending on your page is about (e.g. `"@type": "Event"` for events, `"@type": "Dataset"` to describe a page containing a dataset, or `"@type": "Recipe"` to describe a potato salad).
 
-Lines 6-18 is a list of key-value pairs. Each key is a property of the LearningResource type (e.g. keywords, description, name) along with its value (e.g. "schemaorg", "In order to establish...", "Adding Schema.org..."). The full list of properties, the expected types, and examples on how to use them are all available on the vocabulary page https://schema.org/LearningResource. To simplify knowing which properties to use, Bioscheams have developed a usage profile with the most important properties listed.
+Lines 6-18 is a list of key-value pairs. Each key is a property of the LearningResource type (e.g. keywords, description, name) along with its value (e.g. "schemaorg", "In order to establish...", "Adding Schema.org..."). The full list of properties, the expected types, and examples on how to use them are all available on the vocabulary page https://schema.org/LearningResource. To simplify knowing which properties to use, Bioschemas have developed a usage profile with the most important properties listed.
 
 We’ve also added `layout: tutorial` to our YAML. This tells Jekyll (the underlying framework) that this page should be rendered as part of a HTML layout template called _tutorial_.
 

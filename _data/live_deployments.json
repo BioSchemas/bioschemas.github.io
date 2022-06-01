@@ -97,6 +97,18 @@
       ]
     },
     {
+      "name": "BiGCaT, Maastricht University",
+      "url": "http://www.bigcat.unimaas.nl/",
+      "nodes": "NL",
+      "profiles": [
+        {
+          "profileName": "TrainingMaterial",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bigcat-um.github.io/BiGCaT-Teaching/"
+        }
+      ]
+    },
+    {
       "name": "EGA",
       "keywords": ["CDR", "DDR"],
       "url": "https://ega-archive.org/",
@@ -1011,9 +1023,9 @@
       "profiles": [
         {
           "profileName": "Dataset",
-          "conformsTo": "0.4-DRAFT",
+          "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://bridgedb.github.io/data/gene_database/",
-          "highlight": "23 identifier mapping databases for genes, proteins, complexes, metabolites, and more"
+          "highlight": "40 identifier mapping databases for genes, proteins, complexes, metabolites, and more"
         },
         {
           "profileName": "ComputationalTool",
@@ -1528,8 +1540,9 @@
       "profiles":[
       	{
         	"profileName": "TrainingMaterial",
-        	"conformsTo": "0.9-DRAFT-2020_12_08",
-        	"exampleURL": "https://enanomapper.github.io/tutorials/Entering_and_analysing_nano_safety_data/readme.html"
+        	"conformsTo": "1.0-RELEASE",
+        	"exampleURL": "https://enanomapper.github.io/tutorials/Entering_and_analysing_nano_safety_data/readme.html",
+          "highlight": "Collection of 7 tutorials indexed by ELIXIR TeSS."
       	}
     	]
     },
