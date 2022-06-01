@@ -39,7 +39,7 @@ spec_info:
   subtitle: ""
   description: 'A guide for how to describe datasets in the life-sciences using Schema.org-like
     annotation.<h4>Summary of Changes</h4><p>Key changes since 0.3-RELEASE:</p><ul><li>Updated properties to Schema.org v12.0; various properties added at recommended or optional level, expected types updated. See <a href="https://bioschemas.org/profiles/Dataset/0.4-DRAFT.html">0.4-DRAFT</a> for full details.</li><li>license now a minimum property</li><li>keywords: Other <a href="https://github.com/BioSchemas/specifications/issues/501">#501</a>
-    – Cardinality is MANY</li></ul>'
+    – Cardinality is MANY</li><li>distribution: Other <a href="https://github.com/BioSchemas/specifications/issues/574">#574</a> – Cardinality changed to MANY</li></ul>'
   version: 1.0-RELEASE
   version_date: 20220422T115609
   official_type: http://schema.org/Dataset
@@ -179,7 +179,7 @@ mapping:
   type_url: ""
   bsc_description: ""
   marginality: Recommended
-  cardinality: ONE
+  cardinality: MANY
   controlled_vocab: ""
   example: |-
     {
