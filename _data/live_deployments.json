@@ -109,6 +109,19 @@
       ]
     },
     {
+      "name": "Galaxy Training Network",
+      "url": "https://training.galaxyproject.org/",
+      "sitemap": "https://training.galaxyproject.org/sitemap.xml",
+      "nodes": ["DE", "NL", "FR", "GR", "EE"],
+      "profiles": [
+        {
+          "profileName": "TrainingMaterial",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-101-everyone/tutorial.html"
+        }
+      ]
+    },
+    {
       "name": "EGA",
       "keywords": ["CDR", "DDR"],
       "url": "https://ega-archive.org/",
