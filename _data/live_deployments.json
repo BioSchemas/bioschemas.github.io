@@ -112,7 +112,7 @@
       "name": "Galaxy Training Network",
       "url": "https://training.galaxyproject.org/",
       "sitemap": "https://training.galaxyproject.org/sitemap.xml",
-      "nodes": ["DE", "NL", "FR", "GR", "EE"],
+      "nodes": ["DE", "NL", "FR", "GR", "EE", "IT", "BE", "UK", "CZ", "CH", "NO", "SE"],
       "profiles": [
         {
           "profileName": "TrainingMaterial",
