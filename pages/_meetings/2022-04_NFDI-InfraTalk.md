@@ -25,5 +25,6 @@ The Bioschemas community aims to build on these approaches to enable life scienc
 Bioschemas markup can also be exploited by our own communities. The ELIXIR Training Portal (TeSS) already harvests Bioschemas markup to populate their registry, and we have been working with different ELIXIR communities to generate community specific Knowledge Graphs over their resources. Another benefit is that the same markup can be used to feed content into general research knowledge graphs such as OpenAIRE.
 
 In this talk, we will give an overview of Bioschemas and show how the markup can be consumed by others. imported into a triplestore, and exposed as a REST API.
-
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSd49GbIRoasJkqEHoOhnASK-ahkJXoNpPPdjAhNAy7nkMRiE2PgM_k-qZxM0Ynxxh3qdMGwnKukEQ5/embed?start=false&loop=false&delayms=3000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<div class="ratio ratio-16x9 mw-600">
+  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSd49GbIRoasJkqEHoOhnASK-ahkJXoNpPPdjAhNAy7nkMRiE2PgM_k-qZxM0Ynxxh3qdMGwnKukEQ5/embed?start=false&loop=false&delayms=3000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
