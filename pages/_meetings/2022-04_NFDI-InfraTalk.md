@@ -11,7 +11,9 @@ tbc: false
 contact-people:
   - AlasdairGray
 ---
-
+<div style="float: right">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PnwlKWBTqNg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 **Title:** (Bio)schemas – Making (not only life science) data resources more interoperable and discoverable on the Web
 
 **Date:** 4 April 2022 @ 15:00 (BST)
@@ -24,3 +26,4 @@ Bioschemas markup can also be exploited by our own communities. The ELIXIR Train
 
 In this talk, we will give an overview of Bioschemas and show how the markup can be consumed by others. imported into a triplestore, and exposed as a REST API.
 
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSd49GbIRoasJkqEHoOhnASK-ahkJXoNpPPdjAhNAy7nkMRiE2PgM_k-qZxM0Ynxxh3qdMGwnKukEQ5/embed?start=false&loop=false&delayms=3000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
