@@ -21,4 +21,6 @@ The goal of this workshop is to showcase some of the successful solutions implem
 
 Below are the slides that were presented.
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRj2MYpCmmW-kNizFd9rCZpuJ_YM8o5DCmbtUXDsvYoR-8AP75qy3MmNIKqUSk4NtHBn6rvTqyiL7sX/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<div class="ratio ratio-16x9 mw-600">
+  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRj2MYpCmmW-kNizFd9rCZpuJ_YM8o5DCmbtUXDsvYoR-8AP75qy3MmNIKqUSk4NtHBn6rvTqyiL7sX/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
