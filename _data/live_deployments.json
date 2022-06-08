@@ -117,12 +117,14 @@
         {
           "profileName": "TrainingMaterial",
           "conformsTo": "1.0-RELEASE",
-          "exampleURL": "https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-101-everyone/tutorial.html"
+          "exampleURL": "https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-101-everyone/tutorial.html",
+          "highligh": "Over 250 tutorials have been marked up."
         },
         {
           "profileName": "Person",
-          "conformsTo": "v0.2-DRAFT-2019_07_19",
-          "exampleURL": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
+          "conformsTo": "0.2-DRAFT-2019_07_19",
+          "exampleURL": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/",
+          "highligh": "The contributors of over 250 tutorials have been marked up."
         }
       ]
     },
