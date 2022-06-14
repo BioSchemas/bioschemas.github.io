@@ -669,25 +669,26 @@
       "keywords": ["CDR"],
       "url": "https://www.ensembl.org/",
       "nodes": "EBI",
+      "sitemap": "http://www.ensembl.org/sitemaps/index.xml",
       "profiles": [
         {
           "profileName": "Dataset",
-          "conformsTo": "0.2",
+          "conformsTo": "0.3",
           "exampleURL": "https://www.ensembl.org/"
         },
         {
           "profileName": "DataCatalog",
-          "conformsTo": "0.2",
+          "conformsTo": "0.3",
           "exampleURL": "https://www.ensembl.org/"
         },
         {
-          "profileName": "DataRecord",
-          "conformsTo": "0.2",
+          "profileName": "Gene",
+          "conformsTo": "1.0",
           "exampleURL": "https://www.ensembl.org/id/ENSG00000139618"
         },
         {
-          "profileName": "Gene",
-          "conformsTo": "0.7",
+          "profileName": "Taxon",
+          "conformsTo": "0.6-RELEASE",
           "exampleURL": "https://www.ensembl.org/id/ENSG00000139618"
         }
       ]
