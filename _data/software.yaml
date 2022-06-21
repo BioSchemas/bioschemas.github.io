@@ -1,48 +1,50 @@
-- id: BMUSE
-  name: "BMUSE: Bioschemas Markup Scraper and Extractor"
-  summary: A scraper for extracting Bioschemas markup embedded in web sites.
-  description: |
-    BMUSE is a directed scraping framework capable of extracting JSON-LD and RDFa markup from static and single page application sites. Markup is returned in a variety of RDF formats together with metadata about when the markup was extracted and from where.
-      
-    BMUSE can be deployed as a scraping service. As input it takes a list of URLs or sitemaps. We have deployed a version to do a daily scrape of sites known to contain data relevant to COVID-19. You can get the data from [here](https://github.com/HW-SWeL/COVID-19/).
-      
-  people: 
-    - "[Petros Papadopoulos](https://bioschemas.org/people/PetrosPapadopoulos)"
-    - "[Alasdair Gray](https://bioschemas.org/people/AlasdairGray)"
-    - "[Kenneth McLeod](https://bioschemas.org/people/KennethMcLeod)"
-  links: 
-    - Try it out using our [Swagger Hub](https://app.swaggerhub.com/apis-docs/kcmcleod/Scraper/) deployment
-    - Get the code from [GitHub](https://github.com/HW-SWeL/BMUSE)
-  category: scrapper
-  url: https://github.com/HW-SWeL/BMUSE
-  image: /images/bmuse.png
+types: [generator, scrapper, validator]
+tools:
+  - id: BMUSE
+    name: "BMUSE: Bioschemas Markup Scraper and Extractor"
+    summary: A scraper for extracting Bioschemas markup embedded in web sites.
+    description: |
+      BMUSE is a directed scraping framework capable of extracting JSON-LD and RDFa markup from static and single page application sites. Markup is returned in a variety of RDF formats together with metadata about when the markup was extracted and from where.
+        
+      BMUSE can be deployed as a scraping service. As input it takes a list of URLs or sitemaps. We have deployed a version to do a daily scrape of sites known to contain data relevant to COVID-19. You can get the data from [here](https://github.com/HW-SWeL/COVID-19/).
+        
+    people: 
+      - "[Petros Papadopoulos](https://bioschemas.org/people/PetrosPapadopoulos)"
+      - "[Alasdair Gray](https://bioschemas.org/people/AlasdairGray)"
+      - "[Kenneth McLeod](https://bioschemas.org/people/KennethMcLeod)"
+    links: 
+      - Try it out using our [Swagger Hub](https://app.swaggerhub.com/apis-docs/kcmcleod/Scraper/) deployment
+      - Get the code from [GitHub](https://github.com/HW-SWeL/BMUSE)
+    category: scrapper
+    url: https://github.com/HW-SWeL/BMUSE
+    image: /images/bmuse.png
 
-- id: BioGen
-  name: "Bioschemas Generator"
-  summary: A [web application](http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/) for prototyping markup against the Bioschemas [profiles](https://bioschemas.org/profiles/).
-  description: |
-    This web application supports users in the creation of Bioschemas compliant markup required for inclusion on their web resource. Bioschemas provides profiles for Schema.org mark-up in order to structure and expose life-sciences metadata on the web. Each profile brings a list of allowed attributes with their constraints and properties. Some attributes are required, some are composite, some allow multiple values, some are under controlled vocabularies, and some can even be all of that.
+  - id: BioGen
+    name: "Bioschemas Generator"
+    summary: A [web application](http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/) for prototyping markup against the Bioschemas [profiles](https://bioschemas.org/profiles/).
+    description: |
+      This web application supports users in the creation of Bioschemas compliant markup required for inclusion on their web resource. Bioschemas provides profiles for Schema.org mark-up in order to structure and expose life-sciences metadata on the web. Each profile brings a list of allowed attributes with their constraints and properties. Some attributes are required, some are composite, some allow multiple values, some are under controlled vocabularies, and some can even be all of that.
 
-    The Bioschemas Generator is a web application that assists users in the creation of their metadata structure, through dynamically generated forms, allowing easier development of Bioschemas compliant markup for web resources.  
-  people: 
-    - "[Alasdair Gray](https://bioschemas.org/people/AlasdairGray)"
-  links: 
-    - "[Bioschemas Generator](http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/)"
+      The Bioschemas Generator is a web application that assists users in the creation of their metadata structure, through dynamically generated forms, allowing easier development of Bioschemas compliant markup for web resources.  
+    people: 
+      - "[Alasdair Gray](https://bioschemas.org/people/AlasdairGray)"
+    links: 
+      - "[Bioschemas Generator](http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/)"
 
-  category: generator
-  url: http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/
-  image: /images/bioschemasGenerator.png
+    category: generator
+    url: http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/
+    image: /images/bioschemasGenerator.png
 
-- id: example
-  name: "Example name"
-  summary: Example summary
-  description: |
-    Example description
-  people: 
-    - "Example person"
-  links: 
-    - "Example link"
+  - id: example
+    name: "Example name"
+    summary: Example summary
+    description: |
+      Example description
+    people: 
+      - "Example person"
+    links: 
+      - "Example link"
 
-  category: validator
-  url: example_url
-  image: 
+    category: validator
+    url: example_url
+    image: 
