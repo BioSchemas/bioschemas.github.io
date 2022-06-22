@@ -16,3 +16,6 @@ To create a new type, you will need to determine which existing type you would d
 
 ### Step 3 - Extend from the parent class
 {% include_relative extend_class.md %}
+
+### Step 4 - Create new properties as needed
+{% include_relative create_properties.md %}
