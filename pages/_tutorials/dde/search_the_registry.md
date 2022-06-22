@@ -1,9 +1,11 @@
 <details>
   <summary>
     - Visit the DDE’s Schema Playground and click on `Search Existing` (and scroll down a little), and click on 'To Registry'
-  </summary>
+  </summary>  
   
-- Enter the class of interest into the search box and click the search icon.
+  (['Search existing' screenshot](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.p5)), (['To Registry' screenshot](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.p6))
+  
+- Enter the class of interest into the search box and [click the search icon](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.p7).
   <details>
     <summary> Understanding the search interface </summary>
     
@@ -19,7 +21,7 @@
   - Note that all Schema.org classes are already registered and available from the DDE. They will be under the `schema` namespace (ie - it will have the term `schema` next to the little home icon
   - New types should generally be derived from existing schema.org or bioschemas classes (ie- parent namespace is `schema` or `bioschemastypes`
   - The bioschemas community has 5 namespaces within the DDE registry which help distinguish classes that are drafts, releases, types, profiles, and deprecated specifications.
-  - You can compare up to 4 classes using by selecting classes by clicking on the checkbox to select a class for comparison. Once you have selected the classes you’d like to compare, click on the (not equal) icon
+  - You can compare up to 4 classes using by selecting classes by [clicking on the checkbox](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.g12bfbc3a89b_3_0) to select a class for comparison. Once you have selected the classes you’d like to compare, [click on the (not equal) icon](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.g1286c9c5fea_0_0)
   </details>
 
 </details>  
