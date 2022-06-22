@@ -13,3 +13,6 @@ To create a new type, you will need to determine which existing type you would d
 
 ### Step 2 - Search for the parent class of your new type
 {% include_relative search_the_schema_registry.md %}
+
+### Step 3 - Extend from the parent class
+{% include_relative extend_class.md %}
