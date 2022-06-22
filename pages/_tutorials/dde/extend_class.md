@@ -32,6 +32,7 @@
     <details>
     <summary> Select the checkbox on pre-existing properties for reuse.</summary>
       
+     (see [screenshot of checkboxes for pre-existing properties](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.p40)) 
      - The [display shows](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.p17) inheritable class properties ([blue bar](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.g12bfbc3a89b_3_57)) , and class-specific properties ([yellow bar](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.g12bfbc3a89b_3_65)). 
       Also shown is the inheritance ‘path’ of the class and its properties. The ‘...’ icon  on existing properties is an expandable view, listing existing properties from the class hierarchy.
      - Selecting a property will allow you to specify its marginality and to create constraints in the form of JSON Schema validation rules 
