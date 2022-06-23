@@ -19,3 +19,9 @@ To create a new type, you will need to determine which existing type you would d
 
 ### Step 4 - Create new properties as needed
 {% include_relative create_properties.md %}
+
+### Step 5 - Save your schema
+{% include_relative save_your_schema.md %}
+
+### Step 6 - Edit your JSONLD to remove the default JSON Schema validation rules
+{% include_relative edit_your_jsonld.md %}
