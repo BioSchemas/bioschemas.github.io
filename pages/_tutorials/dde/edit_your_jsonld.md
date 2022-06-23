@@ -2,7 +2,10 @@
   <summary>You may need to edit your JSONLD depending on what you're trying to do with a specification</summary>
   
   <details>
-    <summary> If your JSONLD has been saved locally</summary>
+    <summary> How to edit your JSON LD</summary>
+    
+  <details>
+    <summary>  If your JSONLD has been saved locally</summary>
       
   - If you downloaded your json, open it in a simple text editor like notepad
   - text editors like Sublime, Brackets, will also work and provide a nicer editing experience
@@ -15,6 +18,11 @@
   - Click on the `edit` icon in github  
   </details>
   
+  </details>  
+  
+  <details>
+    <summary> What to edit in your JSONLD</summary>
+    
   <details>
     <summary> Edits needed when creating a new type specification</summary>
   
@@ -49,8 +57,63 @@
     <summary> Other common manual edits</summary>
     
   - Using external vocabularies as properties (not property values)
-    - 
+    - When using external vocabularies as properties, you will need to include the url for the vocabulary in the `@context`, and to fix the namespace in the property definition
+    - For example, I create a property (for a new class called `test`) in the DDE called `dateCopyrighted`, but I really want it to just use `dateCopyrighted` from an external vocabulary, the Dublin Core Initiative Term. The DDE-generated property definition would look like this:
+    
+          {
+            "@id": "test:dct:dateCopyrighted",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Date of copyright of the resource.",
+            "rdfs:label": "dct:dateCopyrighted",
+            "schema:domainIncludes": {
+              "@id": "test:MyTest"
+            },
+            "schema:rangeIncludes": [
+              {
+                "@id": "schema:Date"
+              }
+            ]
+          }
+    
+    and would need to be adjusted to:
+    
+          {
+            "@id": "dct:dateCopyrighted",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Date of copyright of the resource.",
+            "rdfs:label": "dateCopyrighted",
+            "schema:domainIncludes": {
+              "@id": "test:MyTest"
+            },
+            "schema:rangeIncludes": [
+              {
+                "@id": "schema:Date"
+              }
+            ]
+          }
+    
+    and the DDE-generated `@context` content:
+    
+         "@context": {
+          "schema": "http://schema.org/",
+          "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+          "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+          "test": "https://discovery.biothings.io/view/test/",
+          "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
+        }
+    
+    would need to be adjusted to include dct:
+    
+          "@context": {
+          "schema": "http://schema.org/",
+          "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+          "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+          "test": "https://discovery.biothings.io/view/test/",
+          "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+          "dct": "http://purl.org/dc/terms/"
+        }   
   </details>   
     
+  </details>
 </details>
   
