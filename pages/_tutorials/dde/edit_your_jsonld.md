@@ -1,8 +1,5 @@
 <details>
-  <summary>You may need to edit your JSONLD depending on what you're trying to do with a specification</summary>
-  
-  <details>
-    <summary> How to edit your JSON LD</summary>
+  <summary> How to edit your JSON LD</summary>
     
   <details>
     <summary>  If your JSONLD has been saved locally</summary>
@@ -75,45 +72,45 @@
             ]
           }
     
-    and would need to be adjusted to:
-    
-          {
-            "@id": "dct:dateCopyrighted",
-            "@type": "rdf:Property",
-            "rdfs:comment": "Date of copyright of the resource.",
-            "rdfs:label": "dateCopyrighted",
-            "schema:domainIncludes": {
-              "@id": "test:MyTest"
-            },
-            "schema:rangeIncludes": [
-              {
-                "@id": "schema:Date"
-              }
-            ]
+      and would need to be adjusted to:
+
+            {
+              "@id": "dct:dateCopyrighted",
+              "@type": "rdf:Property",
+              "rdfs:comment": "Date of copyright of the resource.",
+              "rdfs:label": "dateCopyrighted",
+              "schema:domainIncludes": {
+                "@id": "test:MyTest"
+              },
+              "schema:rangeIncludes": [
+                {
+                  "@id": "schema:Date"
+                }
+              ]
+            }
+
+      and the DDE-generated `@context` content:
+
+           "@context": {
+            "schema": "http://schema.org/",
+            "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+            "test": "https://discovery.biothings.io/view/test/",
+            "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
           }
-    
-    and the DDE-generated `@context` content:
-    
-         "@context": {
-          "schema": "http://schema.org/",
-          "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-          "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-          "test": "https://discovery.biothings.io/view/test/",
-          "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
-        }
-    
-    would need to be adjusted to include dct:
-    
-          "@context": {
-          "schema": "http://schema.org/",
-          "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-          "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-          "test": "https://discovery.biothings.io/view/test/",
-          "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
-          "dct": "http://purl.org/dc/terms/"
-        }   
+
+      would need to be adjusted to include dct:
+
+            "@context": {
+            "schema": "http://schema.org/",
+            "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+            "test": "https://discovery.biothings.io/view/test/",
+            "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+            "dct": "http://purl.org/dc/terms/"
+          }   
   </details>   
     
-  </details>
 </details>
+
   
