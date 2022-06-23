@@ -23,3 +23,12 @@ Profiles are constraints agreed by the community that capture (i) the informatio
 
 ### Step 5 - Add JSON validation rules to express property constraints
 {% include_relative add_validation_rules.md %}
+
+### Step 6 - Save your schema
+{% include_relative save_your_schema.md %}
+
+### optional - Edit your JSONLD (if external vocabulary used as properties)
+{% include_relative edit_your_jsonld.md %}
+
+### Step 7 - Verify that your JSONLD schema file is working properly
+{% include_relative check_your_spec.md %}
