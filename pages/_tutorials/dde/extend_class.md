@@ -38,6 +38,10 @@
      - Selecting a property will allow you to specify its marginality and to create constraints in the form of JSON Schema validation rules 
     </details>
   - If you are extending from a class with JSON schema validation rules (ie- a profile), the inheritable properties will be pre-loaded by default. **You will need to un-select any that you do NOT wish to keep**
+  - Special exception: `conformsTo`
+    - If you are extending from a bioschemas type specification, do NOT select `conformsTo` as that will be added via external script
+    - If you are extending from a bioschemas profile specification, you may need to "uncheck" `conformsTo`
+  
   </details>
   <details>
   <summary> Special considerations for types</summary>
