@@ -20,3 +20,6 @@ Profiles are constraints agreed by the community that capture (i) the informatio
 
 ### Step 4 - Create new properties as needed
 {% include_relative create_properties.md %}
+
+### Step 5 - Add JSON validation rules to express property constraints
+{% include_relative add_validation_rules.md %}
