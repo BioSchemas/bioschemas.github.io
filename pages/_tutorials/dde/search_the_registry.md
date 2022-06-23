@@ -24,4 +24,15 @@
   - You can compare up to 4 classes using by selecting classes by [clicking on the checkbox](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.g12bfbc3a89b_3_0) to select a class for comparison. Once you have selected the classes you’d like to compare, [click on the (not equal) icon](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.g1286c9c5fea_0_0)
   </details>
 
+- If you are searching for a bioschemas specification, you can also search by namespace
+  <details>
+    <summary>The namespaces for bioschemas specifications are as follows</summary>
+    
+    - `bioschemas` = bioschemas profile specifications
+    - `bioschemasdrafts` = bioschemas draft profile specifications
+    - `bioschemastypes` = bioschemas type specifications
+    - `bioschemastypesdrafts` = bioschemas draft type specifications
+    - `bioschemasdeprecated` = deprecated bioschemas specifications
+  </details>
+  
 </details>  
