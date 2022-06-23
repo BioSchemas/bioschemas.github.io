@@ -25,3 +25,6 @@ To create a new type, you will need to determine which existing type you would d
 
 ### Step 6 - Edit your JSONLD to remove the default JSON Schema validation rules
 {% include_relative edit_your_jsonld.md %}
+
+### Step 7 - Verify that your JSONLD schema file is working properly
+{% include_relative check_your_spec.md %}
