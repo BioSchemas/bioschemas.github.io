@@ -28,3 +28,9 @@ To create a new type, you will need to determine which existing type you would d
 
 ### Step 7 - Verify that your JSONLD schema file is working properly
 {% include_relative check_your_spec.md %}
+
+### Step 8 - If you have not already, save your JSONLD to the bioschemas Specification repository
+{% include_relative save_to_specs_repo.md %}
+
+### Step 9 - Update the bioschemas specification in the DDE schema registry
+{% include_relative push_updates_to_dde.md %}
