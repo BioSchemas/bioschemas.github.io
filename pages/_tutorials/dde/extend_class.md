@@ -35,7 +35,10 @@
      (see [screenshot of checkboxes for pre-existing properties](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.p40)) 
      - The [display shows](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.p17) inheritable class properties ([blue bar](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.g12bfbc3a89b_3_57)) , and class-specific properties ([yellow bar](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.g12bfbc3a89b_3_65)). 
       Also shown is the inheritance ‘path’ of the class and its properties. The ‘...’ icon  on existing properties is an expandable view, listing existing properties from the class hierarchy.
-     - Selecting a property will allow you to specify its marginality and to create constraints in the form of JSON Schema validation rules 
+     - Selecting a property will allow you to specify its marginality and to create constraints in the form of JSON Schema validation rules
+       - [Red star](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.g12bfbc3a89b_3_105) to mark it mandatory.
+       - [Yellow circle](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.g12bfbc3a89b_3_112) to mark it recommended.
+       - [Turquoise square](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.g12bfbc3a89b_3_119) to mark it optional. 
     </details>
   - If you are extending from a class with JSON schema validation rules (ie- a profile), the inheritable properties will be pre-loaded by default. **You will need to un-select any that you do NOT wish to keep**
   - Special exception: `conformsTo`
