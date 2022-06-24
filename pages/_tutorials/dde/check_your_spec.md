@@ -8,8 +8,8 @@
 - Use the [link convert option](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.p33) if it pops up
 - Click on "[Let’s go](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.p34)" to test the compatibility of your schema with the DDE
   - If it works well, you will see [no errors](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.p35)
+  - If there are some minor issues, you will receive a warning **but can and should select the option to continue**
   - If there are major issues, you will be blocked from continuing until those issues are addressed
-  - If there are some minor issues, you will receive a warning **but can opt to continue**
 
 - Double check that your loaded schema has the expected parentage, properties and constraints  
 </details>
