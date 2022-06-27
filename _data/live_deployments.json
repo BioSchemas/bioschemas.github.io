@@ -1580,6 +1580,20 @@
           "highlight": "12"
         }
       ]
+    },
+    {
+      "name": "EUbOPEN",
+      "description": "The EUbOPEN Portal is a comprehensive tool that allows searching among an open access chemogenomic library comprising about 5,000 well annotated compounds covering roughly 1,000 different proteins.",
+      "url": "https://gateway.eubopen.org/",
+      "nodes": "EBI",
+      "sitemap": "https://gateway.eubopen.org/sitemap.xml",
+      "profiles":[
+      	{
+        	"profileName": "MolecularEntity",
+        	"conformsTo": "0.5-RELEASE",
+        	"exampleURL": "https://gateway.eubopen.org/compound/CHEMBL4580220"
+      	}
+    	]
     }
   ]
 }
