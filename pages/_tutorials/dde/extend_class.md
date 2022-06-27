@@ -6,7 +6,7 @@
   <details>
     <summary>You will need to be logged in to continue</summary>
     
-   - You can [login via your github account](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.p10)
+   - You can [login via your GitHub account](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.p10)
    - The DDE requires read access to find your repositories (so you can save to them) and write access in order for you to be able to export your work (specification in JSONLD format) to github
   </details>
   
