@@ -8,7 +8,7 @@ JSON Schema validation rules are automatically created and used by the DDE to ap
 
 To create a new type, you will need to determine which existing type you would derive your new type from. For instance, it may just be a basic schema.org type, such as ‘Thing’.
 
-### Step 1 - Create your new type specification in google sheets for ease of collaborative development
+### Step 1 - Create your new type specification in your community's preferred collaborative environment (google spreadsheets, whiteboard, HackMd document, etc.)
 {% include_relative create_google_sheet.md %}
 
 ### Step 2 - Search for the parent class of your new type

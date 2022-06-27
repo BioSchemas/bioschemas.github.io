@@ -52,5 +52,16 @@
   - Since types are NOT subject to marginality and cardinality constraints, jsonschema validation rules do not apply, so you don’t need to select any properties as they will all be inherited by default
    
   </details>
- 
+  <details>
+  <summary> Saving and restoring your work</summary>
+    
+  - You can and should save your work locally.
+    - Click on "save/load progress"
+    - Use the "Select Action" drop down manu to:
+      - 'save' your work
+      - 'load' previous work
+      - 'delete' save files that you no longer need
+   
+  </details>
+  
  </details>
