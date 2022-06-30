@@ -9,7 +9,7 @@ The [Data Discovery Engine (DDE)](https://discovery.biothings.io/) provides guid
  - Note, a GitHub account is required to unlock most of the functionality of the DDE. You can sign up for GitHub for free at https://github.com
 
 ### How Bioschemas Specifications are stored in the DDE Schema Registry
-Only the most recent drafts and releases of specifications should be saved to the registry. The DDE does not currently distinguish between profiles and types and instead treats all specifications as classes. Hence, different kinds of specifications are saved to different namespaces in the DDE registry. These namespaces include:
+Only the most recent drafts and releases of specifications should be saved to the registry. The DDE does not currently distinguish between profiles and types and instead treats all specifications as classes. The term **class** in the DDE is equivalent to the term **specification** in Bioschemas; hence, different kinds of specifications are saved to different namespaces in the DDE registry. These namespaces include:
  - [bioschemas](https://discovery.biothings.io/view/bioschemas): for released profiles
  - [bioschemasdrafts](https://discovery.biothings.io/view/bioschemasdrafts): for draft profiles
  - [bioschemastypes](https://discovery.biothings.io/view/bioschemastypes): for released types
