@@ -1,4 +1,4 @@
-## How to use the Validation Editor to apply constraints to your schema
+## How to use the Validation Editor to apply constraints to your profile specification
 
 The constraints for a profile specification are expressed as JSON Schema validation rules. JSON schema validation rules allow users of the **schema** to use [online validators](https://www.jsonschemavalidator.net/) to validate their json-formatted data against the schema.
 
