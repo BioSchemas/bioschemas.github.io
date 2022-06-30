@@ -9,11 +9,11 @@ The constraints for a profile specification are expressed as JSON Schema validat
 
 The validation editor has the most commonly used JSON Schema validation rules for drag-and-drop use. It includes a custom validation **rule editor** for more complicated validation rules, and a definitions editor is available for even more complex custom validation rules. 
 
-The validations rules apply only to the class in which they are being defined and do not apply outside the class. Using the validation rule editor and definition editor enables the user to flexibly customise the validation rules as needed within the DDE. Users comfortable with jsonschema, are welcome to customize the json file outside the DDE in their favourite text or json editor.
+The validations rules apply only to the class in which they are being defined and do not apply outside the class. Using the validation rule editor and definition editor enables the user to flexibly customise the validation rules as needed within the DDE. Users comfortable with jsonschema, are welcome to customize the JSONLD file outside the DDE in their favourite text or json editor.
 
-This guide details the use of the Validation Editor to express the constraints of a profile specification. Validation rules should not be applied to type specifications. If you are updating an existing profile, you should only need to add validation rules to properties that are new or being changed.
+This guide details the use of the Validation Editor to express the constraints of a profile specification. JSON schema validation rules should not be applied to type specifications. If you are updating an existing profile, you should only need to add validation rules to properties that are new or being changed.
 
-### Creating JSON validation rules for the most common expected types
+### Creating JSON schema validation rules for the most common expected types
 <details>
   <summary>If the cardinality is ONE, you can usually just drag and drop the appropriate validation rule.</summary>
 
@@ -76,7 +76,7 @@ The most basic validation rule is expressing an expected type for a property. Fo
 </details>
   
 
-### Creating JSON validation rules for limiting the expected type
+### Creating JSON schema validation rules for limiting the expected type
 <details>
   <summary>Common expected types (Text, Date, etc.) are available for drag-and-drop by default</summary>
 
