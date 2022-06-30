@@ -12,6 +12,7 @@
   <summary>Add validation rules for each property</summary>
 
   Note that type specifications do not have marginality or cardinality constraints so JSON Schema validation rules do NOT apply
+  For more detailed explanations on creating JSON schema validation rules, see [the validation editor quick start guide](validation_editor)
 </details>
 
 <details>
