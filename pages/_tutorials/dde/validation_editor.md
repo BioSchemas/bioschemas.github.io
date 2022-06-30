@@ -1,3 +1,8 @@
+---
+layout: default
+title: Data Discovery Engine - Validation Editor
+---
+
 ## How to use the Validation Editor to apply constraints to your profile specification
 
 The constraints for a profile specification are expressed as JSON Schema validation rules. JSON schema validation rules allow users of the **schema** to use [online validators](https://www.jsonschemavalidator.net/) to validate their json-formatted data against the schema.
@@ -6,7 +11,7 @@ The validation editor has the most commonly used JSON Schema validation rules fo
 
 The validations rules apply only to the class in which they are being defined and do not apply outside the class. Using the validation rule editor and definition editor enables the user to flexibly customise the validation rules as needed within the DDE. Users comfortable with jsonschema, are welcome to customize the json file outside the DDE in their favourite text or json editor.
 
-This guide details the use of the Validation Editor to express the constraints of a profile specification. Validation rules should not be applied to type specifications.
+This guide details the use of the Validation Editor to express the constraints of a profile specification. Validation rules should not be applied to type specifications. If you are updating an existing profile, you should only need to add validation rules to properties that are new or being changed.
 
 ### Creating JSON validation rules for the most common expected types
 <details>
