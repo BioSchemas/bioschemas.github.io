@@ -21,26 +21,11 @@
     <summary> What to edit in your JSONLD</summary>
     
   <details>
-    <summary> Edits needed when creating a new type specification</summary>
-  
-  - Since types do not have marginality/cardinality constraints, you'll need to delete the entire `$validation`
-    - {% include_relative remove_validation.md  %} 
-  </details>
-  
-  <details>
     <summary> Edits needed when updating an existing type specification</summary>
     
-  - Since types do not have marginality/cardinality constraints, you'll need to delete the entire `$validation`
-    - {% include_relative remove_validation.md  %}
   - Since this JSONLD schema is meant to REPLACE a previous version rather than be a child of the previous version, you'll need to update the parent class
     - {% include_relative change_parent_class.md %} 
   </details>  
-  
-  <details>
-    <summary> Edits needed when creating a new profile specification</summary>
-  
-  - The DDE was originally designed for deriving profile-like specifications from schema.org; hence, editing the JSONLD for a new profile specification is usually not necessary with some exceptions (see other common manual edits)
-  </details>
   
   <details>
     <summary> Edits needed when updating an existing profile specification</summary>

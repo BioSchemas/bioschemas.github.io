@@ -23,17 +23,20 @@ To create a new type, you will need to determine which existing type you would d
 ### Step 4 - Create new properties as needed
 {% include_relative create_properties.md %}
 
-### Step 5 - Save your schema
+### Step 5 - Remove the default JSON Schema validation rules
+{% include_relative remove_validation.md %}
+
+### Step 6 - Save your schema
 {% include_relative save_your_schema.md %}
 
-### Step 6 - Edit your JSONLD to remove the default JSON Schema validation rules and fix the parent class
+### Step 7 - Fix the parent class
 {% include_relative edit_your_jsonld.md %}
 
-### Step 7 - Verify that your JSONLD schema file is working properly
+### Step 8 - Verify that your JSONLD schema file is working properly
 {% include_relative check_your_spec.md %}
 
-### Step 8 - If you have not already, save your JSONLD to the bioschemas Specification repository
+### Step 9 - If you have not already, save your JSONLD to the bioschemas Specification repository
 {% include_relative save_to_specs_repo.md %}
 
-### Step 9 - Update the bioschemas specification in the DDE schema registry
+### Step 10 - Update the bioschemas specification in the DDE schema registry
 {% include_relative push_updates_to_dde.md %}
