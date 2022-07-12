@@ -41,7 +41,7 @@ The most basic validation rule is expressing an expected type for a property. Fo
      `{“type”: “string”, “format”: “uri”}`
   - And we can see that the [validation rule for string(s)](https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.g12bfbc3a89b_3_191) is:
     
-     ```
+     ```json
      {“oneOf”: [
        {“type”: “string”},
        {“type”: “array”,
@@ -52,7 +52,7 @@ The most basic validation rule is expressing an expected type for a property. Fo
      ```
  - We can use the validation rule editor (see the next section) to create a new rule which combines the two rules to be:
   
-  ```
+  ```json
      {“oneOf”: [
        {“type”: “string”, “format”: “uri”},
        {“type”: “array”,
