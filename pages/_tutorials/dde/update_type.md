@@ -15,7 +15,7 @@ To create a new type, you will need to determine which existing type you would d
 ### Step 1 - Obtain community consensus on the proposed changes to be made
 
 ### Step 2 - Search for the bioschemas type to be updated in the DDE
-{% include_relative search_the_schema_registry.md %}
+{% include_relative search_the_registry.md %}
 
 ### Step 3 - Extend from the bioschemas type to be updated in the DDE
 {% include_relative extend_class.md %}
