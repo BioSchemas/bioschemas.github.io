@@ -1594,6 +1594,26 @@
           "highlight": "1"
         }
       ]
+    },
+    {
+      "name": "EMBL-EBI Training Courses",
+      "description": "To enable EMBL to deliver world-leading training in bioinformatics and scientific service provision to the research community, empowering scientists at all career stages to make the most of biological data, and strengthening bioinformatics capacity across the globe.",
+      "url": "https://www.ebi.ac.uk/training",
+      "nodes": "EBI",
+      "profiles":[
+        {
+          "profileName": "Course",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://www.ebi.ac.uk/training/events/metagenomics-bioinformatics-2022/",
+          "highlight": "300 training courses"
+        },
+        {
+          "profileName": "CourseInstance",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://www.ebi.ac.uk/training/events/metagenomics-bioinformatics-2022/",
+          "highlight": "300 training courses"
+        }
+      ]
     }
   ]
 }
