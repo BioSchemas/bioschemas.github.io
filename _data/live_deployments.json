@@ -1271,6 +1271,14 @@
           "profileName": "TrainingMaterial",
           "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://bioschemas.org/tutorials/what_why_bioschemas"
+        },{
+          "profileName": "Course",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bioschemas.org/meetings/2022-01_SWAT4HCLS_leiden"
+        },{
+          "profileName": "CourseInstance",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bioschemas.org/meetings/2022-01_SWAT4HCLS_leiden"
         }
       ]
     },
