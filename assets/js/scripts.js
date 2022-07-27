@@ -58,9 +58,6 @@ $(document).ready(() => {
     $('button[data-bs-target="#' + newhash[0] + '"]').tab("show");
     url = location.href.replace(/\/#/, "#");
     history.replaceState(null, null, url);
-    setTimeout(() => {
-      $(window).scrollTop(0);
-    }, 400);
   }
 
   $('button[data-bs-toggle="tab"]').on("click", function () {
@@ -135,24 +132,24 @@ $(document).ready(() => {
  * Scroll to top
  */
 
-var toggleHeight = $(window).outerHeight() / 3;
+ var toggleHeight = $(window).outerHeight() / 3;
 
-$(window).scroll(function () {
-  if ($(window).scrollTop() > toggleHeight) {
-    //Adds active class to make button visible
-    $(".top_link").addClass("visible");
-
-  } else {
-    //Removes active class to make button visible
-    $(".top_link").removeClass("visible");
-  }
-});
+ $(window).scroll(function () {
+     if ($(window).scrollTop() > toggleHeight) {
+         //Adds active class to make button visible
+         $("#back-to-top").addClass("visible");
+ 
+     } else {
+         //Removes active class to make button visible
+         $("#back-to-top").removeClass("visible");
+     }
+ });
 
 //Scrolls the user to the top of the page again
-$(".top_link").click(function () {
-  $("html, body").animate({ scrollTop: 0 }, "slow");
-  return false;
-});
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 
 /**
  * Activate tooltips
