@@ -1620,19 +1620,19 @@
       "description": "Bioinformatics.ca, home of the Canadian Bioinformatics Workshops and bioinformatics resources in Canada.",
       "url": "https://bioinformatics.ca/",
       "profiles": [
-      {
-      "profileName": "Course",
-      "conformsTo": "1.0-RELEASE",
-      "exampleURL": "https://bioinformatics.ca/workshops-all/2021-infectious-disease-epidemiology-analysis/",
-      "highlight": "27 courses with markup"
-      },
-      {
-      "profileName": "CourseInstance",
-      "conformsTo": "1.0-RELEASE",
-      "exampleURL": "https://bioinformatics.ca/workshops-all/2021-infectious-disease-epidemiology-analysis/",
-      "highlight": "27 courses with markup"
-      }
+        {
+          "profileName": "Course",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bioinformatics.ca/workshops-all/2021-infectious-disease-epidemiology-analysis/",
+          "highlight": "27 courses with markup"
+        },
+        {
+          "profileName": "CourseInstance",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bioinformatics.ca/workshops-all/2021-infectious-disease-epidemiology-analysis/",
+          "highlight": "27 courses with markup"
+        }
       ]
-      }
+    }
   ]
 }
