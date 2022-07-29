@@ -9,7 +9,7 @@ bioschemas:
   "@type": LearningResource
   "http://purl.org/dc/terms/conformsTo":
   - "@type": CreativeWork
-    "@id": "https://bioschemas.org/profiles/TrainingMaterial/0.9-DRAFT-2020_12_08/"
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
   about:
     - "@id": https://schema.org
     - "@id": http://edamontology.org/topic_0089

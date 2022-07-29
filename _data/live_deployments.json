@@ -79,7 +79,7 @@
       "profiles": [
         {
           "profileName": "Dataset",
-          "conformsTo": "0.4-DRAFT",
+          "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://wikipathways.org/"
         }
       ]
@@ -1074,7 +1074,7 @@
         },
         {
           "profileName": "Dataset",
-          "conformsTo": "0.4-DRAFT",
+          "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://nanocommons.github.io/datasets/"
         },
         {
@@ -1269,8 +1269,16 @@
       "profiles": [
         {
           "profileName": "TrainingMaterial",
-          "conformsTo": "0.9",
+          "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://bioschemas.org/tutorials/what_why_bioschemas"
+        },{
+          "profileName": "Course",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bioschemas.org/meetings/2022-01_SWAT4HCLS_leiden"
+        },{
+          "profileName": "CourseInstance",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bioschemas.org/meetings/2022-01_SWAT4HCLS_leiden"
         }
       ]
     },
@@ -1575,9 +1583,62 @@
       "profiles":[
         {
           "profileName": "TrainingMaterial",
-          "conformsTo": "0.9-DRAFT-2020_12_08",
+          "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://zbmed-semtec.github.io/BioMedSem-IR-KD/docs/Lesson1.html",
           "highlight": "12"
+        }
+      ]
+    },
+    {
+      "name": "DOME recommendations with a Galaxy tutorial as use case",
+      "description": "In this lesson we will introduce the subject of good practices via the DOME recommendations when sharing supervised machine learning approaches with peers",
+      "url": "https://zbmed-semtec.github.io/dome-galaxy-training",
+      "sitemap": "https://zbmed-semtec.github.io/dome-galaxy-training/sitemap.xml",
+      "profiles":[
+        {
+          "profileName": "TrainingMaterial",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://zbmed-semtec.github.io/dome-galaxy-training/docs/DOME.html",
+          "highlight": "1"
+        }
+      ]
+    },
+    {
+      "name": "EMBL-EBI Training Courses",
+      "description": "To enable EMBL to deliver world-leading training in bioinformatics and scientific service provision to the research community, empowering scientists at all career stages to make the most of biological data, and strengthening bioinformatics capacity across the globe.",
+      "url": "https://www.ebi.ac.uk/training",
+      "nodes": "EBI",
+      "profiles":[
+        {
+          "profileName": "Course",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://www.ebi.ac.uk/training/events/metagenomics-bioinformatics-2022/",
+          "highlight": "300 training courses"
+        },
+        {
+          "profileName": "CourseInstance",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://www.ebi.ac.uk/training/events/metagenomics-bioinformatics-2022/",
+          "highlight": "300 training courses"
+        }
+      ]
+    },
+    {
+      "name": "Bioinformatics.ca",
+      "description": "Bioinformatics.ca, home of the Canadian Bioinformatics Workshops and bioinformatics resources in Canada.",
+      "url": "https://bioinformatics.ca/",
+      "profiles": [
+        {
+          "profileName": "Course",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bioinformatics.ca/workshops-all/2021-infectious-disease-epidemiology-analysis/",
+          "highlight": "27 courses with markup"
+        },
+        {
+          "profileName": "CourseInstance",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bioinformatics.ca/workshops-all/2021-infectious-disease-epidemiology-analysis/",
+          "highlight": "27 courses with markup"
         }
       ]
     }
