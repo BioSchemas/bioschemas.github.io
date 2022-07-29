@@ -1,16 +1,28 @@
 ---
+redirect_from:
+- "/devSpecs/CourseInstance/specification/"
+- "/devSpecs/CourseInstance/specification"
+- "/devSpecs/CourseInstance/"
+- "/devSpecs/CourseInstance"
+- "/specifications/drafts/CourseInstance/"
+- "/specifications/drafts/CourseInstance"
+- "/specifications/CourseInstance/"
+- "/specifications/CourseInstance"
+- "/profiles/CourseInstance/"
+- "/profiles/CourseInstance"
+
 name: CourseInstance
 
-previous_version: '0.7-DRAFT-2019_11_08'
+previous_version: '0.8-DRAFT-2020_10_06'
 previous_release:
 
-status: revision
+status: release
 spec_type: Profile
 group: training
 use_cases_url: /useCases/TrainingGroup
-cross_walk_url: https://docs.google.com/spreadsheets/d/1rriBGZpJYcwIHbEzwkfbhPCn3KArC6wr9DhKFpTuIiQ
+cross_walk_url: https://docs.google.com/spreadsheets/d/1_yT0h0CflyiK9_K49GeRUKpy-zE9irotn4CacaSJjIY/
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20CourseInstance
-live_deploy: ''
+live_deploy: /liveDeploys
 
 parent_type: CourseInstance
 hierarchy:
@@ -26,24 +38,11 @@ spec_info:
   description: 'This specification can be used in tandem with a Course. A course is
     used to describe the broad, common aspects of a recurring training event - whereas
     a course instance is about the specific times and location of when that course
-    is held. <h4>Summary of Changes</h4>    Changes since previous draft 0.7 of the
-    CourseInstance profile:    <ul>     <li>Removed CourseInstance->mentions</li><li>Inserted
-    CourseInstance->courseWorkLoad (it was missing)</li><li>Inserted Event->eventAttendanceMode</li><li>Inserted
-    Event->eventSchedule</li><li>doorTime - added Time in Expected Type column (it
-    was missing)</li><li>location - added VirtualLocation in Expected Type column
-    (it was missing)</li><li>offers - added "Demand or" in Expected Type column (it
-    was missing)</li><li>offers - modified Description column (it was not the same
-    as in schema.org)</li><li>instructor - added BSC Description</li><li>duration
-    - changed the BSC Description (changed timeRequired by duration, which was changed
-    also in Course)</li><li>name - changed the BSC Description (made the description
-    more explicit)</li><li>offers - changed the BSC Description (corrected wording)</li><li>description
-    - extended the example</li><li>workFeatured - changed the BSC Description (extended
-    the description)</li><li>Adjusted Authors: Patricia Palagi to editor; Niall Beard
-    no longer editor</li> <li>Changes prepared by Patricia Palagi</li>    </ul>'
-  version: 0.8-DRAFT-2020_10_06
-  version_date: 20201006T134459
+    is held. <h4>Summary of Changes</h4>     No changes since CourseInstance 0.8-DRAFT profile.'
+  version: 1.0-RELEASE
+  version_date: 20220729T133949
   official_type: CourseInstance
-  full_example: https://github.com/BioSchemas/specifications/blob/master/CourseInstance/examples/08-DRAFT/courseInstance.json
+  full_example: https://github.com/BioSchemas/specifications/blob/master/CourseInstance/examples/1.0-RELEASE
 mapping:
 - property: alternateName
   expected_types:
