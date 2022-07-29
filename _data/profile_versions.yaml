@@ -32,8 +32,8 @@ ComputationalWorkflow:
 
 Course:
     name: "Course"
-    latest_publication: 
-    latest_release: "1.0-RELEASE"
+    latest_publication: "0.9-DRAFT-2020_12_08"
+    latest_release:
     status: "active"
 
 CourseInstance:
