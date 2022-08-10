@@ -11,6 +11,8 @@ current-leads:
   start-date: 2020-11-02
 - person: MichelleBrazas
   start-date: 2020-11-02
+- person: LeylaGarcia
+  start-date: 2022-08-09  
 former-leads:
 - person: NiallBeard
   start-date: 2018-09-25
@@ -18,6 +20,7 @@ former-leads:
 - person: GabriellaRustici
   start-date: 2018-09-25
   end-date: 2020-10-01
+lead: [PatriciaPalagi, MichelleBrazas, LeylaGarcia]
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20training%20material
 folder: https://drive.google.com/drive/u/1/folders/0B6crv12s8piRT0w5VXRUc09VTFU
