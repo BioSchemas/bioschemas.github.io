@@ -1,4 +1,4 @@
-types: [generator, scrapper, validator]
+applicationCategoryTypes: [generator, scrapper, validator]
 tools:
   - id: BMUSE
     name: "BMUSE: Bioschemas Markup Scraper and Extractor"
@@ -15,9 +15,9 @@ tools:
     links: 
       - Try it out using our [Swagger Hub](https://app.swaggerhub.com/apis-docs/kcmcleod/Scraper/) deployment
       - Get the code from [GitHub](https://github.com/HW-SWeL/BMUSE)
-    category: scrapper
+    applicationCategory: scrapper
     url: https://github.com/HW-SWeL/BMUSE
-    image: /images/bmuse.png
+    thumbnailUrl: /images/bmuse.png
 
   - id: BioGen
     name: "Bioschemas Generator"
@@ -31,9 +31,9 @@ tools:
     links: 
       - "[Bioschemas Generator](http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/)"
 
-    category: generator
+    applicationCategory: generator
     url: http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/
-    image: /images/bioschemasGenerator.png
+    thumbnailUrl: /images/bioschemasGenerator.png
 
   - id: example
     name: "Example name"
@@ -45,6 +45,6 @@ tools:
     links: 
       - "Example link"
 
-    category: validator
+    applicationCategory: validator
     url: example_url
-    image: 
+    thumbnailUrl: 

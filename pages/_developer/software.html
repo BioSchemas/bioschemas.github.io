@@ -24,22 +24,22 @@ description: |-
 <!-- TABS at top of page -->
 <nav class="mt-5">
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    {%- for type in site.data.software.types %}
+    {%- for type in site.data.software.applicationCategoryTypes %}
       <button class="nav-link{% if forloop.first %} active{% endif %}" id="nav-{{type}}s-tab" data-bs-toggle="tab" data-bs-target="#nav-{{type}}s" type="button" role="tab" aria-controls="nav-{{type}}s" aria-selected="true">{{type | capitalize }}s</button>
     {%- endfor %}
   </div>
 </nav>
 
 <div class="tab-content pb-3 mb-3" id="nav-tabContent">
-  {%- for type in site.data.software.types %}
-  <div class="tab-pane fade{% if forloop.first %} show active{% endif %}" id="nav-{{type}}s" role="tabpanel" aria-labelledby="nav-{{type}}s-tab">
+  {%- for type in site.data.software.applicationCategoryTypes %}
+  <div class="tab-pane fade border-bottom border-start border-end rounded p-4{% if forloop.first %} show active{% endif %}" id="nav-{{type}}s" role="tabpanel" aria-labelledby="nav-{{type}}s-tab">
     {%- for tool in site.data.software.tools %}
-    {%- if tool.category == type %}
-    <div id="{{tool.id}}">
+    {%- if tool.applicationCategory == type %}
+    <div id="{{tool.id}}" class="rounded bg-white p-4 mb-4 shadow">
       <h2>{{tool.name}}</h2>
       {%- if tool.image  %}
       <a href="{{tool.url}}"><img align="right"
-          alt="{{tool.summary}}" src="{{ tool.image | relative_url }}"
+          alt="{{tool.summary}}" src="{{ tool.thumbnailUrl | relative_url }}"
           width="500" class="img-fluid"></a>
       {%- endif %}
       <p>{{tool.summary | markdownify }}</p>
