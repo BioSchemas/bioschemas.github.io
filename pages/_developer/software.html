@@ -32,7 +32,7 @@ description: |-
 
 <div class="tab-content pb-3 mb-3" id="nav-tabContent">
   {%- for type in site.data.software.applicationCategoryTypes %}
-  <div class="tab-pane fade border-bottom border-start border-end rounded-bottom p-4{% if forloop.first %} show active{% endif %}" id="nav-{{type}}s" role="tabpanel" aria-labelledby="nav-{{type}}s-tab">
+  <div class="tab-pane fade border border-top-0 rounded-bottom p-4{% if forloop.first %} show active{% endif %}" id="nav-{{type}}s" role="tabpanel" aria-labelledby="nav-{{type}}s-tab">
     {%- for tool in site.data.software.tools %}
     {%- if tool.applicationCategory == type %}
     <div id="{{tool.id}}" class="rounded bg-white p-4 mb-4 shadow">
