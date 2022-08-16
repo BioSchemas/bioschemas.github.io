@@ -1,15 +1,26 @@
 ---
+redirect_from:
+- "/devSpecs/CourseInstance/specification/"
+- "/devSpecs/CourseInstance/specification"
+- "/devSpecs/CourseInstance/"
+- "/devSpecs/CourseInstance"
+- "/specifications/drafts/CourseInstance/"
+- "/specifications/drafts/CourseInstance"
+- "/specifications/CourseInstance/"
+- "/specifications/CourseInstance"
+- "/profiles/CourseInstance/"
+- "/profiles/CourseInstance"
 
 name: CourseInstance
 
-previous_version: '0.7-DRAFT-2019_11_08'
+previous_version: '0.8-DRAFT-2020_10_06'
 previous_release:
 
 status: revision
 spec_type: Profile
 group: training
 use_cases_url: /useCases/TrainingGroup
-cross_walk_url: https://docs.google.com/spreadsheets/d/1rriBGZpJYcwIHbEzwkfbhPCn3KArC6wr9DhKFpTuIiQ
+cross_walk_url: https://docs.google.com/spreadsheets/d/1PFU2A5Oe1McaMiRvfxaTZR5_QzkWumJSd-dU9NLSvY4
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20CourseInstance
 live_deploy: ''
 
@@ -27,22 +38,17 @@ spec_info:
   description: 'This specification can be used in tandem with a Course. A course is
     used to describe the broad, common aspects of a recurring training event - whereas
     a course instance is about the specific times and location of when that course
-    is held. <h4>Summary of Changes</h4>    Changes since previous draft 0.7 of the
-    CourseInstance profile:    <ul>     <li>Removed CourseInstance->mentions</li><li>Inserted
-    CourseInstance->courseWorkLoad (it was missing)</li><li>Inserted Event->eventAttendanceMode</li><li>Inserted
-    Event->eventSchedule</li><li>doorTime - added Time in Expected Type column (it
-    was missing)</li><li>location - added VirtualLocation in Expected Type column
-    (it was missing)</li><li>offers - added "Demand or" in Expected Type column (it
-    was missing)</li><li>offers - modified Description column (it was not the same
-    as in schema.org)</li><li>instructor - added BSC Description</li><li>duration
-    - changed the BSC Description (changed timeRequired by duration, which was changed
-    also in Course)</li><li>name - changed the BSC Description (made the description
-    more explicit)</li><li>offers - changed the BSC Description (corrected wording)</li><li>description
-    - extended the example</li><li>workFeatured - changed the BSC Description (extended
-    the description)</li><li>Adjusted Authors: Patricia Palagi to editor; Niall Beard
-    no longer editor</li> <li>Changes prepared by Patricia Palagi</li>    </ul>'
-  version: 0.8-DRAFT-2020_10_06
-  version_date: 20201006T134459
+    is held. <h4>Summary of Changes</h4>    Changes since previous draft 0.8 of the
+    CourseInstance profile:    <ul> <li>courseMode - added the BSC Description (made
+    the description more explicit with more examples</li> <li>courseMode - removed
+    the Controled Vocabullary </li> <li>eventStatus - added the BSC Description with
+    examples</li> <li> eventStatus - removed the Controled Vocabullary </li> <li>offers
+    - added the BSC Description with examples</li> <li> offers - added IOS 8601 for
+    the dates and ISO 4217 for currency in the Controled Vocabullary </li> <li> workFeatured
+    - removed "Inverse property: workFeatured" from the Description</li><li>Changes
+    prepared by Patricia Palagi</li>    </ul>'
+  version: 0.9-DRAFT-2022_08_16
+  version_date: 20220816T160148
   official_type: CourseInstance
   full_example: https://github.com/BioSchemas/specifications/blob/master/CourseInstance/examples/08-DRAFT/courseInstance.json
 mapping:
@@ -82,11 +88,16 @@ mapping:
     ).
   type: ""
   type_url: ""
-  bsc_description: ""
+  bsc_description: "The medium, means or pace of delivery of the course instance or
+    the mode of study, either as a text label (e.g. \"online\", \"onsite\", \"hybrid\"
+    or \"blended\"; \"synchronous\" or \"asynchronous\"; \"full-time\" or \"part-time\")
+    or as a URL reference to a term from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous
+    ).\n\nAnother example of a Glossary of terms as defined by the Bioschemas Training
+    community and published in Zenodo in 2016: https://zenodo.org/record/166378#.YrHnEi8iu-o
+    \n"
   marginality: Minimum
   cardinality: MANY
-  controlled_vocab: "- \"online\", \"onsite\" or \"blend of online and onsite\" \n-
-    \"synchronous\" or \"asynchronous\"\n- \"full-time\" or \"part-time\""
+  controlled_vocab: ""
   example: '"courseMode": ["online", "synchronous", "part-time"]'
 - property: description
   expected_types:
@@ -133,11 +144,11 @@ mapping:
     when an event is cancelled or rescheduled.
   type: ""
   type_url: ""
-  bsc_description: ""
+  bsc_description: |
+    An eventStatus of an event represents its status; particularly useful when an event is cancelled or rescheduled. Used as text label (e.g. "postponed", "cancelled", "date TBC", "application open" or "registration closed").
   marginality: Optional
   cardinality: ONE
-  controlled_vocab: "- postponed\n- cancelled\n- date TBD\n- application open \n-
-    registration closed"
+  controlled_vocab: ""
   example: '"eventStatus": "postponed"'
 - property: funder
   expected_types:
@@ -254,10 +265,14 @@ mapping:
     Inverse property: itemOffered.
   type: ""
   type_url: ""
-  bsc_description: The price an attendee would pay to attend this CourseInstance.
+  bsc_description: 'The price an attendee would pay to attend this CourseInstance.
+    The price currency can be for instance in "GBP" (pound sterling) or "CHF" (Swiss
+    francs). '
   marginality: Recommended
   cardinality: MANY
-  controlled_vocab: Currency and value, Date specified price
+  controlled_vocab: |-
+    Price currency ISO 4217
+    Date specified price ISO 8601
   example: |-
     "offers": [
         //Early bird tickets
@@ -397,8 +412,8 @@ mapping:
   type: ""
   type_url: ""
   bsc_description: "The training material used in this specific course instance, or
-    produced for this course instance. \n\nInverse property: workFeatured\n\nIf this
-    is the same for all Course Instances, use hasPart and/or mentions in Course instead"
+    produced for this course instance. \n\nIf this is the same for all Course Instances,
+    use hasPart and/or mentions in Course instead"
   marginality: Optional
   cardinality: MANY
   controlled_vocab: ""
@@ -408,7 +423,8 @@ mapping:
     to various resources about this course\" \n  \"keywords\": \"Computer Science,
     CS, Introductory\"\n},\n{\n  \"@type\": \"Thing\",\n  \"name\": \"neXtProt database\",\n
     \ \"url\": \"https://www.nextprot.org\"\n  \"description\": \"The course instance
-    was dedicated to the neXtProt datbase and how to explore the universe of human
+    was dedicated to the neXtProt database and how to explore the universe of human
     proteins\" \n  \"keywords\": \"Molecular Biology, Introductory\"\n}\n]"
+
 
 ---
