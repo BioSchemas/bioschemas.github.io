@@ -30,6 +30,7 @@ You have come to a community consensus on changes needed to a profile that alrea
   * The version of the class
   * Any descriptions of changes between versions
   * The name of the person who prepared the changes
+* Click submit when you are done
 <br><img src="https://github.com/gtsueng/bioschemas.github.io/blob/master/pages/_tutorials/dde/images/fill-out-spec-form.png" width="80%"></img>
 
 2.3 Select minimum, recommended and optional properties of your profile
