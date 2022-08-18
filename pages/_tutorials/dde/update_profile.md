@@ -51,4 +51,4 @@ You have come to a community consensus on changes needed to a profile that alrea
 {% include_relative save_your_schema.md %}
 
 ### Step 5 - Submit a pull request
-{% include_relative save_to_spec_repo.md %}
+{% include_relative save_to_specs_repo.md %}
