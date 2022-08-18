@@ -1,17 +1,20 @@
 ---
+redirect_from:
+- "/profiles/Course/"
+- "/profiles/Course"
 
 name: Course
 
-previous_version: '0.9-DRAFT-2020_12_08'
+previous_version: '0.10-DRAFT'
 previous_release:
 
-status: revision
+status: release
 spec_type: Profile
 group: training
 use_cases_url: /useCases/TrainingGroup
-cross_walk_url: https://docs.google.com/spreadsheets/d/19CGQ3G2FzLsEChaqvLNeDnc0EoQtmhr0jWz3Kbrn9is
+cross_walk_url: https://docs.google.com/spreadsheets/d/1cEucRnFH-rbhrAldyxOO1R16lqsHmkh-zpjDN-blIgg
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20Course
-live_deploy: /developer/liveDeploys#nav-profile
+live_deploy: /liveDeploys
 
 parent_type: Course
 hierarchy:
@@ -27,14 +30,12 @@ spec_info:
   description: 'This specification must be used in tandem with a CourseInstance. A
     course is used to describe the broad, common aspects of a recurring training event
     - whereas a course instance is about the specific times and location of when that
-    course is held. <h4>Summary of Changes</h4>    Changes since previous draft 0.9
-    of the Course profile:    <ul>      <li>Removes Bioschemas description from _mentions_ 
-      property "If this varies in a *CourseInstance*, use the *CourseInstance* version of 
-      _mentions_ to override this mentions."</li>         </ul>'
-  version: 0.10-DRAFT
-  version_date: 20220816T155611
+    course is held. <h4>Summary of Changes</h4>    No changes since 0.10-DRAFT
+    of the Course profile.'
+  version: 1.0-RELEASE
+  version_date: 20220818T104156
   official_type: Course
-  full_example: https://github.com/BioSchemas/specifications/blob/master/Course/examples/0.10-DRAFT/course.json
+  full_example: https://github.com/BioSchemas/specifications/blob/master/Course/examples/1.0-RELEASE/course.json
 mapping:
 - property: about
   expected_types:
