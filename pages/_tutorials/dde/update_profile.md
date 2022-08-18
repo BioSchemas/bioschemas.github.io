@@ -15,23 +15,23 @@ You have come to a community consensus on changes needed to a profile that alrea
 ### Step 2 - Prepare the profile for update
 2.1 Find the profile in the Registry
 * On the Registry page, select “Browse By Namespace”
-<br><img src="https://github.com/gtsueng/bioschemas.github.io/blob/master/pages/_tutorials/dde/images/namespace-search-1.png" width="80%"></img>
+<br><img src="/pages/_tutorials/dde/images/namespace-search-1.png" width="80%"></img>
 * Select ‘bioschemas’ or ‘bioschemasdraft’ depending on whether you are updating a release or draft profile
-<br><img src="https://github.com/gtsueng/bioschemas.github.io/blob/master/pages/_tutorials/dde/images/select-profiles.png" width="80%"></img>
+<br><img src="/pages/_tutorials/dde/images/select-profiles.png" width="80%"></img>
 * Search for the name of the profile to be updated
-<br><img src="https://github.com/gtsueng/bioschemas.github.io/blob/master/pages/_tutorials/dde/images/extend-specification.png" width="80%"></img>
+<br><img src="/pages/_tutorials/dde/images/extend-specification.png" width="80%"></img>
 * Click ‘extend’ (icon on the right at the end of the row corresponding to the profile name)
 
 2.2 Follow the prompts to update your profile
 * Create a temporary namespace (it will get replaced later on). Please use PascalCase for your temporary namespace. This step might timeout.
-<br><img src="https://github.com/gtsueng/bioschemas.github.io/blob/master/pages/_tutorials/dde/images/create-temp-namespace.png" width="80%"></img>
+<br><img src="/pages/_tutorials/dde/images/create-temp-namespace.png" width="80%"></img>
 * Fill in the form to create the updated profile version including the name of the profile and a description. The description should include:
   * The description of the class as determined by the community
   * The version of the class
   * Any descriptions of changes between versions
   * The name of the person who prepared the changes
 * Click submit when you are done
-<br><img src="https://github.com/gtsueng/bioschemas.github.io/blob/master/pages/_tutorials/dde/images/fill-out-spec-form.png" width="80%"></img>
+<br><img src="/pages/_tutorials/dde/images/fill-out-spec-form.png" width="80%"></img>
 
 2.3 Select minimum, recommended and optional properties of your profile
 * You can select properties from all parent classes. Each parent class will be displayed on a blue box. 
