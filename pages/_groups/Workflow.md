@@ -55,6 +55,7 @@ members:
     - IvanTopolsky
     - SalvadorCapella
     - FrederikCoppens
+    - SaharFrikha
 #    - fbacall
 #    - longr
 #    - FrederikCoppens

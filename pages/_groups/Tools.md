@@ -50,4 +50,5 @@ members:
     - AlbanGaignard
     - MatusKalas
     - StianSoiland-Reyes
+    - SaharFrikha
 ---
