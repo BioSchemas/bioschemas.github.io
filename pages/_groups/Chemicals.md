@@ -6,7 +6,10 @@ collection: groups
 active: true
 type: biological
 description: Specification for protein type
-lead: [EgonWillighagen, RicardoArcila, DavidMendez]
+lead: 
+- person: EgonWillighagen
+- person: RicardoArcila
+- person: DavidMendez
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/specifications/labels/type%3A%20Chemistry
 folder: https://drive.google.com/drive/folders/0B7J0zlrcfEkGNnk3MXhyb01mTEk
