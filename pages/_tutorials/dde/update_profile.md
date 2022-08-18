@@ -7,7 +7,7 @@ nextTutorial:
 ---
 # Update a Profile
 
-Profiles are constraints agreed by the community that capture (i) the information properties which are minimum (M), recommended (R), or optional (O), (ii) the cardinality of the property, i.e. whether it is expected to occur once or many times, and (iii) associated controlled vocabulary terms drawn from existing ontologies. These refine and optimise the use of ‘types’ by a specific community. Since communities may change, for example, the cardinality of a property after discussion, there is a need to have a simple mechanism to version and modify profiles. The process for updating a profile is described below. Note, if you are comfortable with JSON schema and JSON-LD, you are welcome to copy, paste, and edit the JSON-LD files in the Bioschemas Specifications repository (and skip directly to step 8 below)
+You have come to a community consensus on changes needed to a profile that already exists. Congratulations! Now you have to update the Bioschemas website. Note, if you are comfortable with JSON schema and JSON-LD, you are welcome to copy, paste, and edit the JSON-LD files in the Bioschemas Specifications repository (and skip directly to step 6 below)
 
 ### Step 1 - Log in
 {% include_relative login_to_dde.md %}
@@ -43,9 +43,11 @@ Profiles are constraints agreed by the community that capture (i) the informatio
 *  Special property: conformsTo
   * "Uncheck" conformsTo as it will be added automatically via a script
 
-### Step 5 - Add JSON validation rules to express property constraints
+### Step 3 - Add JSON validation rules to express property constraints
 {% include_relative add_validation_rules.md %}
 
-### Step 6 - Save your schema
+### Step 4 - Save your schema
 {% include_relative save_your_schema.md %}
 
+### Step 5 - Submit a pull request
+{% include_relative save_to_spec_repo.md %}
