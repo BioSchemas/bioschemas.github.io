@@ -20,6 +20,7 @@ members:
     - RicardoArcila
     - KennethMcLeod
     - PetrosPapadopoulos
+    - SaharFrikha
 ---
 
 <div id="links">
