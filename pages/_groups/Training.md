@@ -40,8 +40,6 @@ specifications:
 
 
 members:
-    - MichelleBrazas
-    - PatriciaPalagi
     - CeliaVanGelder
     - SonikaTyagi
     - TerriAtwood   
@@ -58,7 +56,6 @@ members:
     - AnnMeyer
     - PaulaMartinez     
     - SarahMorgan    
-    - LeylaGarcia
     - VictoriaDominguezDelAngel
     - ChrisChild
 
