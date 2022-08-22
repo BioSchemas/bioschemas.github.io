@@ -47,11 +47,3 @@ You have come to a community consensus on changes needed to a profile that alrea
 *  Special property: conformsTo
   * "Uncheck" conformsTo as it will be added automatically via a script
 
-### Step 3 - Add JSON validation rules to express property constraints
-{% include_relative add_validation_rules.md %}
-
-### Step 4 - Save your schema
-{% include_relative save_your_schema.md %}
-
-### Step 5 - Submit a pull request
-{% include_relative save_to_specs_repo.md %}
