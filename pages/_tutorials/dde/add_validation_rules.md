@@ -11,19 +11,10 @@
     href="https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.p43">drag</a>
   and <a
     href="https://docs.google.com/presentation/d/1yl_aTm-od5U729-nVZWsGnl33oTDTS3NNlLzou60phI/edit#slide=id.p44">drop</a>
-  any other range ‘types’ into the properties on the left.
+  any other range or ‘expected types’ into the properties on the left.
   For example, here we added ‘string’ to the property “description”. This is because the property constraint of
   &quot;expected type&quot; = &quot;schema:Text&quot; must be expressed using JSON Schema validation rules.
   For more detailed explanations on using the validation editor, see &quot;Using the Validation Editor&quot;.
-</details>
-
-<details>
-  <summary>Add validation rules for each property</summary>
-
-  Note that type specifications do not have marginality or cardinality constraints so JSON Schema validation rules do
-  NOT apply
-  For more detailed explanations on creating JSON schema validation rules, see <a href="validation_editor">the
-    validation editor quick start guide</a>
 </details>
 
 <details>
