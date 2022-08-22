@@ -23,23 +23,26 @@ You have come to a community consensus on changes needed to a profile that alrea
 * Click ‘extend’ (icon on the right at the end of the row corresponding to the profile name)
 
 2.2 Follow the prompts to update your profile
-* Create a temporary namespace (it will get replaced later on). Please use PascalCase for your temporary namespace. This step might timeout.
+* Create a temporary namespace (it will get replaced later on). **Please use PascalCase for your temporary namespace**. This step might timeout.
 <br><img src="/pages/_tutorials/dde/images/create-temp-namespace.png" width="80%"></img>
 * Fill in the form to create the updated profile version including the name of the profile and a description. The description should include:
   * The description of the class as determined by the community
   * The version of the class
   * Any descriptions of changes between versions
   * The name of the person who prepared the changes
-* Click submit when you are done
+* **You will not be able to change this information on the next steps so make sure it is correct before moving on**
 <br><img src="/pages/_tutorials/dde/images/fill-out-spec-form.png" width="80%"></img>
 
 2.3 Select minimum, recommended and optional properties of your profile
 * You can select properties from all parent classes. Each parent class will be displayed on a blue box. 
 * The  minimum (aka requested/mandatory), recommended, and optional properties are automatically shown from the latest available profile you selected in 2.1.
 * You can select additional properties or unselect those that are no longer needed for the updated version.
-* To update properties for a particular parent class, click on the “...” icon on the right of that parent class. This will open up a list of all availables properties for this class. 
-  * If a property should be included in the profile, you should (i) select it with the checkbox icon, and (ii) define its marginality (red star for minimum, yellow circle for recommended, turquoise square for optional)
-  * If a property should NOT be part of the profile, make sure it is NOT selected (i.e., checkbox icon should be grey)
+* To **update properties for a particular parent class**, click on the “...” icon on the right of that parent class. This will open up a list of all availables properties for this class. 
+  * If a property **should be** included in the profile:
+    * select it with the checkbox icon
+    * define its marginality (red star for minimum, yellow circle for recommended, turquoise square for optional)
+  * If a property **should NOT** be part of the profile:
+    * deselect it with the checkbox icon - i.e., checkbox icon should be gray
   * Change the selection checkbox icon and marginality buttons as needed for each available property
 *  Special property: conformsTo
   * "Uncheck" conformsTo as it will be added automatically via a script
