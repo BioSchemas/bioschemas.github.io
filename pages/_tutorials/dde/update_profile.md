@@ -22,11 +22,10 @@ You have come to a community consensus on changes needed to a profile that alrea
 <br><img src="/pages/_tutorials/dde/images/extend-specification.png" width="80%"></img>
 
 #### 2.2 Follow the prompts to update your profile
-* Create a temporary namespace (it will get replaced later on). **Please use PascalCase for your temporary namespace**. This step might timeout.
-<br><img src="/pages/_tutorials/dde/images/create-temp-namespace.png" width="80%"></img>
+* Create a temporary namespace that will help us identify your working space.
 * Fill in the form to create the updated profile version including the name of the profile and a description. The description should include:
-  * The description of the class as determined by the community
-  * The version of the class
+  * The description of the profile as determined by the community
+  * The version of the profile
   * Any descriptions of changes between versions
   * The name of the person who prepared the changes
 * **You will not be able to change this information on the next steps so make sure it is correct before moving on**
