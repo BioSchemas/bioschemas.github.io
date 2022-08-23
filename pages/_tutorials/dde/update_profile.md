@@ -19,7 +19,7 @@ You have come to a community consensus on changes needed to a profile that alrea
 <br><img src="/pages/_tutorials/dde/images/select-namespace.png" width="80%"></img>
 * Search for the name of the profile to be updated
 * Click ‘extend’ (icon on the right at the end of the row corresponding to the profile name)
-<!--<br><img src="/pages/_tutorials/dde/images/extend-specification.png" width="80%"></img>-->
+<br><img src="/pages/_tutorials/dde/images/extend-specification.png" width="80%"></img>
 
 #### 2.2 Follow the prompts to update your profile
 * Create a temporary namespace that will help us identify your working space.
@@ -29,7 +29,7 @@ You have come to a community consensus on changes needed to a profile that alrea
   * Any descriptions of changes between versions
   * The name of the person who prepared the changes
 * **You will not be able to change this information on the next steps so make sure it is correct before moving on**
-<!--<br><img src="/pages/_tutorials/dde/images/fill-out-spec-form.png" width="80%"></img>-->
+<br><img src="/pages/_tutorials/dde/images/fill-out-spec-form.png" width="80%"></img>
 
 #### 2.3 Select minimum, recommended and optional properties of your profile
 * You can select properties from all parent classes. Each parent class will be displayed on a blue box. 
