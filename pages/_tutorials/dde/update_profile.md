@@ -7,7 +7,7 @@ nextTutorial:
 ---
 # Update a Profile
 
-You have come to a community consensus on changes needed to a profile that already exists. Congratulations! Now you have to update the new profile version on the Bioschemas website. Note, if you are comfortable with JSON schema and JSON-LD, you are welcome to copy, paste, and edit the JSON-LD files in the Bioschemas Specifications repository (and skip directly to step 6 below)
+You have come to a community consensus on changes needed to a profile that already exists. Congratulations! Now you have to update the new profile version on the Bioschemas website. Note, if you are comfortable with JSON schema and JSON-LD, you are welcome to copy, paste, and edit the JSON-LD files in the Bioschemas Specifications repository
 
 ### Step 1 - Log in
 {% include_relative login_to_dde.md %}
@@ -16,8 +16,8 @@ You have come to a community consensus on changes needed to a profile that alrea
 2.1 Find the profile in the Registry
 * On the Registry page, select “Browse By Namespace”
 <br><img src="/pages/_tutorials/dde/images/namespace-search-1.png" width="80%"></img>
-* Select ‘bioschemas’ or ‘bioschemasdraft’ depending on whether you are updating a release or draft profile
-<br><img src="/pages/_tutorials/dde/images/select-profiles.png" width="80%"></img>
+* Select ‘bioschemas’ or ‘bioschemasdraft’ depending on whether you are updating a release or draft profile. In this tutorial we will use examples corresponding to updating a draft profile.
+<br><img src="/pages/_tutorials/dde/images/select-namespace.png" width="80%"></img>
 * Search for the name of the profile to be updated
 <br><img src="/pages/_tutorials/dde/images/extend-specification.png" width="80%"></img>
 * Click ‘extend’ (icon on the right at the end of the row corresponding to the profile name)
