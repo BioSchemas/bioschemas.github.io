@@ -1,4 +1,5 @@
 # Specify the tabs/catagories in which the tools are ordered in following list and use these as values for the applicationCategory.
+# Values should be singular, so they can be displayed in plural on the website.
 applicationCategoryTypes: [generator, scrapper, viewer, validator]
 tools:
   - id: BMUSE
@@ -78,7 +79,7 @@ tools:
     people: 
       - "Dan Brickley, Schema.org Chair/Google"
     links: 
-      - [Documentation](https://schema.org/docs/validator.html)
-      - [Blog post](http://blog.schema.org/2021/05/announcing-schema-markup-validator.html)
+      - "[Documentation](https://schema.org/docs/validator.html)"
+      - "[Blog post](http://blog.schema.org/2021/05/announcing-schema-markup-validator.html)"
     applicationCategory: validator
     url: https://validator.schema.org/
