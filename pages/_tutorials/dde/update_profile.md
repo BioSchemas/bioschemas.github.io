@@ -19,7 +19,7 @@ You have come to a community consensus on changes needed to a profile that alrea
 <br><img src="/pages/_tutorials/dde/images/select-namespace.png" width="80%"></img>
 * Search for the name of the profile to be updated
 * Click ‘extend’ (icon on the right at the end of the row corresponding to the profile name)
-<br><img src="/pages/_tutorials/dde/images/extend-specification.png" width="80%"></img>
+<br><img src="[/pages/_tutorials/dde/images/extend-specification.png)" width="80%"></img>
 
 #### 2.2 Follow the prompts to update your profile
 * Create a temporary namespace (it will get replaced later on). **Please use PascalCase for your temporary namespace**. This step might timeout.
