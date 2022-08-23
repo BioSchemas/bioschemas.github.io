@@ -7,7 +7,7 @@ nextTutorial:
 ---
 # Update a Profile
 
-You have come to a community consensus on changes needed to a profile that already exists. Congratulations! Now you have to update the Bioschemas website. Note, if you are comfortable with JSON schema and JSON-LD, you are welcome to copy, paste, and edit the JSON-LD files in the Bioschemas Specifications repository (and skip directly to step 6 below)
+You have come to a community consensus on changes needed to a profile that already exists. Congratulations! Now you have to update the new profile version on the Bioschemas website. Note, if you are comfortable with JSON schema and JSON-LD, you are welcome to copy, paste, and edit the JSON-LD files in the Bioschemas Specifications repository (and skip directly to step 6 below)
 
 ### Step 1 - Log in
 {% include_relative login_to_dde.md %}
