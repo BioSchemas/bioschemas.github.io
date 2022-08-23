@@ -1,4 +1,5 @@
-applicationCategoryTypes: [generator, scrapper, validator]
+# Specify the tabs/catagories in which the tools are ordered in following list and use these as values for the applicationCategory.
+applicationCategoryTypes: [generator, scrapper, viewer]
 tools:
   - id: BMUSE
     name: "BMUSE: Bioschemas Markup Scraper and Extractor"
@@ -64,17 +65,3 @@ tools:
     applicationCategory: viewer
     url: https://discovery.biothings.io/schema-playground
     thumbnailUrl: https://discovery.biothings.io/static/img/dde-logo-o.svg
-
-  - id: example
-    name: "Example name"
-    summary: Example summary
-    description: |
-      Example description
-    people: 
-      - "Example person"
-    links: 
-      - "Example link"
-
-    applicationCategory: validator
-    url: example_url
-    thumbnailUrl: 
