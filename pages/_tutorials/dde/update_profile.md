@@ -15,7 +15,6 @@ You have come to a community consensus on changes needed to a profile that alrea
 ### Step 2 - Prepare the profile for update
 2.1 Find the profile in the Registry
 * On the Registry page, select “Browse By Namespace”
-<br><img src="/pages/_tutorials/dde/images/namespace-search-1.png" width="80%"></img>
 * Select ‘bioschemas’ or ‘bioschemasdraft’ depending on whether you are updating a release or draft profile. In this tutorial we will use examples corresponding to updating a draft profile.
 <br><img src="/pages/_tutorials/dde/images/select-namespace.png" width="80%"></img>
 * Search for the name of the profile to be updated
