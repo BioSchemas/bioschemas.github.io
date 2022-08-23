@@ -13,7 +13,7 @@ You have come to a community consensus on changes needed to a profile that alrea
 {% include_relative login_to_dde.md %}
 
 ### Step 2 - Prepare the profile for update
-2.1 Find the profile in the Registry
+#### 2.1 Find the profile in the Registry
 * On the Registry page, select “Browse By Namespace”
 * Select ‘bioschemas’ or ‘bioschemasdraft’ depending on whether you are updating a release or draft profile. In this tutorial we will use examples corresponding to updating a draft profile.
 <br><img src="/pages/_tutorials/dde/images/select-namespace.png" width="80%"></img>
@@ -21,7 +21,7 @@ You have come to a community consensus on changes needed to a profile that alrea
 <br><img src="/pages/_tutorials/dde/images/extend-specification.png" width="80%"></img>
 * Click ‘extend’ (icon on the right at the end of the row corresponding to the profile name)
 
-2.2 Follow the prompts to update your profile
+#### 2.2 Follow the prompts to update your profile
 * Create a temporary namespace (it will get replaced later on). **Please use PascalCase for your temporary namespace**. This step might timeout.
 <br><img src="/pages/_tutorials/dde/images/create-temp-namespace.png" width="80%"></img>
 * Fill in the form to create the updated profile version including the name of the profile and a description. The description should include:
@@ -32,7 +32,7 @@ You have come to a community consensus on changes needed to a profile that alrea
 * **You will not be able to change this information on the next steps so make sure it is correct before moving on**
 <br><img src="/pages/_tutorials/dde/images/fill-out-spec-form.png" width="80%"></img>
 
-2.3 Select minimum, recommended and optional properties of your profile
+#### 2.3 Select minimum, recommended and optional properties of your profile
 * You can select properties from all parent classes. Each parent class will be displayed on a blue box. 
 * The  minimum (aka requested/mandatory), recommended, and optional properties are automatically shown from the latest available profile you selected in 2.1.
 * You can select additional properties or unselect those that are no longer needed for the updated version.
