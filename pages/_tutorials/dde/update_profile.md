@@ -34,6 +34,7 @@ You have come to a community consensus on changes needed to a profile that alrea
 #### 2.3 Select minimum, recommended and optional properties of your profile
 * You can select properties from all parent classes. Each parent class will be displayed on a blue box. 
 * The  minimum (aka requested/mandatory), recommended, and optional properties are automatically shown from the latest available profile you selected in 2.1.
+<br><img src="/pages/_tutorials/dde/images/inherit-properties.png" width="80%"></img>
 * You can select additional properties or unselect those that are no longer needed for the updated version.
 * To **update properties for a particular parent class**, click on the “...” icon on the right of that parent class. This will open up a list of all availables properties for this class. 
   * If a property **should be** included in the profile:
@@ -42,6 +43,6 @@ You have come to a community consensus on changes needed to a profile that alrea
   * If a property **should NOT** be part of the profile:
     * deselect it with the checkbox icon - i.e., checkbox icon should be gray
   * Change the selection checkbox icon and marginality buttons as needed for each available property
-*  Special property: conformsTo
+* Special property: conformsTo
   * "Uncheck" conformsTo as it will be added automatically via a script
 
