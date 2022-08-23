@@ -30,10 +30,10 @@ tools:
     people: 
       - "[Alasdair Gray](https://bioschemas.org/people/AlasdairGray)"
     links: 
-      - "[Bioschemas Generator](http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/)"
+      - "[Bioschemas Generator](https://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/)"
 
     applicationCategory: generator
-    url: http://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/
+    url: https://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/
     thumbnailUrl: /images/bioschemasGenerator.png
 
   - id: dde_playground
