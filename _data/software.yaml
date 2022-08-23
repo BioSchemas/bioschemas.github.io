@@ -14,7 +14,7 @@ tools:
       - "[Alasdair Gray](https://bioschemas.org/people/AlasdairGray)"
       - "[Kenneth McLeod](https://bioschemas.org/people/KennethMcLeod)"
     links: 
-      - Try it out using our [Swagger Hub](https://app.swaggerhub.com/apis-docs/kcmcleod/Scraper/) deployment
+      - Try it out using our [Swagger Hub](https://app.swaggerhub.com/apis-docs/swel/BMUSE/) deployment
       - Get the code from [GitHub](https://github.com/HW-SWeL/BMUSE)
     applicationCategory: scrapper
     url: https://github.com/HW-SWeL/BMUSE
