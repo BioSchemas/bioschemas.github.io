@@ -1,5 +1,5 @@
 # Specify the tabs/catagories in which the tools are ordered in following list and use these as values for the applicationCategory.
-applicationCategoryTypes: [generator, scrapper, viewer]
+applicationCategoryTypes: [generator, scrapper, viewer, validator]
 tools:
   - id: BMUSE
     name: "BMUSE: Bioschemas Markup Scraper and Extractor"
@@ -65,3 +65,20 @@ tools:
     applicationCategory: viewer
     url: https://discovery.biothings.io/schema-playground
     thumbnailUrl: https://discovery.biothings.io/static/img/dde-logo-o.svg
+    
+  - id: sdoValidator
+    name: "Schema.org Validator"
+    summary: A validator provided by Schema.org that checks the syntax of deployed markup against the defined Schema.org types.
+    description: |
+      An online validator that can either retrieve a page from a specified URL or use pasted markup. The markup can be in any markup format and is checked against the Schema.org defined types.
+        
+      Note that Bioschemas defined types and properties will be highlighted as an error since these have not yet been included in the Schema.org vocabulary. The validator can still be used to determine that markup is retrievable and syntactically correct.
+      
+      Also note that the validation is only against the defined types and properties. The tool is not aware of the Bioschemas profiles and does not check against for these restrictions.
+    people: 
+      - "Dan Brickley, Schema.org Chair/Google"
+    links: 
+      - [Documentation](https://schema.org/docs/validator.html)
+      - [Blog post](http://blog.schema.org/2021/05/announcing-schema-markup-validator.html)
+    applicationCategory: validator
+    url: https://validator.schema.org/
