@@ -8,3 +8,4 @@ _site/
 .jekyll-cache/
 .bundle/config
 vendor
+.jekyll-metadata
