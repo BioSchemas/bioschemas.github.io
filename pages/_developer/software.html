@@ -30,16 +30,16 @@ description: |-
   </div>
 </nav>
 
+<!-- Content of these tiles are defined in the _data/software.yaml file -->
 <div class="tab-content pb-3 mb-3" id="nav-tabContent">
   {%- for type in site.data.software.applicationCategoryTypes %}
   <div class="tab-pane fade border border-top-0 rounded-bottom p-4{% if forloop.first %} show active{% endif %}" id="nav-{{type}}s" role="tabpanel" aria-labelledby="nav-{{type}}s-tab">
     {%- for tool in site.data.software.tools %}
     {%- if tool.applicationCategory == type %}
     <div id="{{tool.id}}" class="rounded bg-white p-4 mb-4 shadow">
-      <h2>{{tool.name}}</h2>
+      <a href="{{tool.url}}" target="_blank"><div class="d-flex align-items-center"><h2>{{tool.name}}</h2><i class="fa-solid fa-up-right-from-square ms-3 mt-3"></i></div></a>
       {%- if tool.thumbnailUrl  %}
-      <a href="{{tool.url}}"><img
-          alt="{{tool.summary}}" src="{{ tool.thumbnailUrl | relative_url }}" class="img-fluid mw-35 float-end"></a>
+      <img alt="{{tool.summary}}" src="{{ tool.thumbnailUrl | relative_url }}" class="img-fluid mw-35 float-end mt-3">
       {%- endif %}
       <p>{{tool.summary | markdownify }}</p>
       <h4>Description</h4>
