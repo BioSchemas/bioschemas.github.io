@@ -38,9 +38,8 @@ description: |-
     <div id="{{tool.id}}" class="rounded bg-white p-4 mb-4 shadow">
       <h2>{{tool.name}}</h2>
       {%- if tool.thumbnailUrl  %}
-      <a href="{{tool.url}}"><img align="right"
-          alt="{{tool.summary}}" src="{{ tool.thumbnailUrl | relative_url }}"
-          width="500" class="img-fluid"></a>
+      <a href="{{tool.url}}"><img
+          alt="{{tool.summary}}" src="{{ tool.thumbnailUrl | relative_url }}" class="img-fluid mw-35 float-end"></a>
       {%- endif %}
       <p>{{tool.summary | markdownify }}</p>
       <h4>Description</h4>
