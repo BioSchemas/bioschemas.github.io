@@ -83,3 +83,21 @@ tools:
       - "[Blog post](http://blog.schema.org/2021/05/announcing-schema-markup-validator.html)"
     applicationCategory: validator
     url: https://validator.schema.org/
+    
+  - id: FAIR-Checker
+    name: "FAIR-Checker: improve the FAIRness of your web resources"
+    summary: A metadata validation and inspection service leveraging Bioschemas profiles.
+    description: |
+      FAIR-Checker is a tool aimed at assessing FAIR principles and empowering data provider to enhance the quality of their digital resources. 
+
+      Data providers and consumers can check how FAIR are web resources. Developers can explore and inspect metadata exposed in web resources.
+    people: 
+      - "[Thomas Rosnet](https://ressources.france-bioinformatique.fr/en/users/rosnet-thomas)"
+      - "[Alban Gaignard](https://bioschemas.org/people/AlbanGaignard)"
+      - "[Marie-Dominique Devignes](https://members.loria.fr/MDDevignes/)"
+    links: 
+      - Try it out at [https://fair-checker.france-bioinformatique.fr](https://fair-checker.france-bioinformatique.fr) deployment
+      - Get the code from [GitHub](https://github.com/IFB-ElixirFr/fair-checker)
+    applicationCategory: validator
+    url: https://github.com/IFB-ElixirFr/fair-checker
+    thumbnailUrl: /images/fair-checker.png
