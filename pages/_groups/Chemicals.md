@@ -31,4 +31,5 @@ types:
 
 members:
   - AnnaGaulton
+  - SteffenNeumann
 ---

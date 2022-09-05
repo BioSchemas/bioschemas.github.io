@@ -63,4 +63,5 @@ members:
   - anyango
   - HaydeeArtaza
   - DavidvanEnckevort
+  - SteffenNeumann
 ---
