@@ -17,6 +17,8 @@ Communities bring together expertise around a particular topic, e.g., proteomics
   - [How to add markup to Plant  community resources](./plant) (target audience _"Markup providers"_ and _"Markup consumers"_)
 - Rare Diseases Community
   - [How to add markup to Rare diseases clinical entities](./rd) (target audience _"Markup providers"_ and _"Markup consumers"_)
+- Training Community
+  - [How Bioschemas uses the training profiles with GitHub pages and Jekyll](./training) (target audience _"Markup providers"_ and _"Markup consumers"_)  
 
 ## 3. My community is interested in adding a tutorial
 
