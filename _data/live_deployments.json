@@ -304,9 +304,24 @@
       "profiles": [
         {
           "profileName": "Event",
-          "conformsTo": "0.1",
-          "exampleURL": "https://tess.elixir-europe.org/events",
+          "conformsTo": "0.2-DRAFT",
+          "exampleURL": "https://tess.elixir-europe.org/events/1st-international-conference-on-fair-digital-objects-fdo2022",
           "highlight": "Over 12,000 events"
+        },
+        {
+          "profileName": "TrainingMaterial",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://tess.elixir-europe.org/materials/hands-on-for-exome-sequencing-data-analysis-for-diagnosing-a-genetic-disease-tutorial"
+        },
+        {
+          "profileName": "Course",
+          "conformsTo": "0.10-DRAFT",
+          "exampleURL": "https://tess.elixir-europe.org/events/introduction-to-r-for-biologists-online"
+        },
+        {
+          "profileName": "CourseInstance",
+          "conformsTo": "0.9-DRAFT",
+          "exampleURL": "https://tess.elixir-europe.org/events/introduction-to-r-for-biologists-online"
         }
       ]
     },
