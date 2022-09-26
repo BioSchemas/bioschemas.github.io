@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <html>
-  {% include head.html %}
-  <body>
-    {% include header.html %}
-    {% include navbar.html %}
-    <div class="container min-vh-100">
-      <main id="main" class="my-5">
-        {{ content }}
-      </main>
-    </div>
-    {% include footer.html %}
-  </body>
+{% include head.html %}
+
+<body>
+  {% include header.html %}
+  {% include navbar.html %}
+  {% include carousel.html height="50" unit="%" duration="7" number="1" %}
+  <div class="container min-vh-100">
+    <main id="main" class="my-5">
+      {{ content }}
+    </main>
+  </div>
+  {% include footer.html %}
+</body>
+
 </html>
