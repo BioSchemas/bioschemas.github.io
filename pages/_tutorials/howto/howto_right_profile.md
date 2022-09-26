@@ -100,3 +100,6 @@ When your webpages describe molecules then you can identify them with the [Molec
 
 When the chemical is not a well-defined molecule but, for example, a nanomaterial, then you can annoated them with the [ChemicalSubstance](/profiles/ChemicalSubstance) profile. This profile allows you to give details on the identifier of the substance and a chemical composition. The profile inherits properties from [BioChemEntity](/types/BioChemEntity), like chemical and biological roles.
 
+### 3.5. ComputationalTool
+
+If your webpage describes a software aimed at producing or analyzing scientific data, then you can annotate it with the [ComputationalTool](/profiles/ComputationalTool) profile. This profile guides you on providing at least minimal metadata inherited from the [SoftwareApplication](http://schema.org/SoftwareApplication) type, such as the tool name and its short description. In addition, thanks to the [EDAM](https://edamontology.org) ontology, you can provide semantic annotations to document what does the tool, what kind of data is taken as input or produced as ouput. 
