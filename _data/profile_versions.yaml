@@ -32,14 +32,14 @@ ComputationalWorkflow:
 
 Course:
     name: "Course"
-    latest_publication: "0.10-DRAFT"
-    latest_release:
+    latest_publication: 
+    latest_release: "1.0-RELEASE"
     status: "active"
 
 CourseInstance:
     name: "CourseInstance"
-    latest_publication: "0.9-DRAFT"
-    latest_release:
+    latest_publication: 
+    latest_release: "1.0-RELEASE"
     status: "active"
 
 DataCatalog:
