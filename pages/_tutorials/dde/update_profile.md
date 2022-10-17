@@ -16,7 +16,7 @@ You have come to a community consensus on changes needed to a profile that alrea
 #### 2.1 Find the profile in the Registry
 * On the Registry page, select “Browse By Namespace”
 * Select ‘bioschemas’ or ‘bioschemasdraft’ depending on whether you are updating a release or draft profile. In this tutorial we will use examples corresponding to updating a draft profile.
-<br><img src="/pages/_tutorials/dde/images/select-namespace.png" width="80%"></img>
+<br><img src="{{/images/select-namespace.png | relative_url }}" width="80%"></img>
 * Search for the name of the profile to be updated
 * Click ‘extend’ (icon on the right at the end of the row corresponding to the profile name)
 <br><img src="/pages/_tutorials/dde/images/extend-specification.png" width="80%"></img>
