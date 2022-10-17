@@ -46,7 +46,7 @@ You have come to a community consensus on changes needed to a profile that alrea
 * Special property: conformsTo
   * "Uncheck" conformsTo as it will be added automatically via a script
 
-#### Modify cardinality and description of properties selected for your profile
+#### 2.4 Modify cardinality and description of properties selected for your profile
 * You can modify the cardinality of those properties that you have selected for your profile. To activate the cardinality selection, please look for the “Validation Editor” option on the top of your profile and enable it
 <br><img src="/pages/_tutorials/dde/images/validation_toggle.jpg" width="15%"></img>
 * On the Validation View, make sure that “Cardinality” is enabled, you will find this option on the top left
@@ -57,3 +57,34 @@ You have come to a community consensus on changes needed to a profile that alrea
 <br><img src="/pages/_tutorials/dde/images/edit_description.jpg" width="30%"></img>
 * Remember to save your work. The DDE editor will tell you if there is any property that still need validation rules
 <br><img src="/pages/_tutorials/dde/images/validation_warning.jpg" width="20%"></img>
+* Add or modify existing validation rules as needed via the drag-and-drop interface in the DDE validation editor
+
+#### 2.5 Download / Save your JSON-LD schema
+* Downloading your DDE-generated schema
+  * Click the download button 
+  * Name your DDE-generated file, and click download
+* Saving your DDE-generated schema to GitHub
+  * Click the GitHub icon to save your JSON-LD to a GitHub repository
+  * Click "get repos" to see repositories for which you have access
+  * Select a repository for which you have access
+  * To save a new file, slide the "Update file" toggle to the off position
+  * Enter a name for your file and a github commit comment (if you wish) and click "save"
+* Interpreting the validation warnings
+  * The DDE will automatically check your schema for JSON validation rules and give warnings if they are missing
+  * Revisit the DDE validation editor and add JSON Schema validation rules to the properties that lack them
+
+#### 2.6 Test your JSON-LD schema
+* Click on "Register Schema"
+* Copy the url to your JSONLD schema in GitHub from the address bar of your browser and paste it into the schema playground (Use the link convert option if it pops up)
+* Click on "Let’s go" to test the compatibility of your schema with the DDE
+  * If it works well, you will see no errors
+  * If there are some minor issues, you will receive a warning but can and should select the option to continue
+  * If there are major issues, you will be blocked from continuing until those issues are addressed. If you don't think you can address them yourself, copy them into a temporary text file so you can paste them in your pull request later
+
+#### 3.0 Save your JSON-LD to the Bioschemas Specification Repository and create a pull request
+* Go to the [Bioschemas Specification repository](https://github.com/BioSchemas/specifications) and find your specification
+* In your fork or branch, add your JSON-LD to the `jsonld` directory for your specification
+* Create a pull request for your fork or branch
+  * Include any issues you encountered from your test that you were unable to address
+
+
