@@ -63,27 +63,19 @@ You have come to a community consensus on changes needed to a profile that alrea
 * Downloading your DDE-generated schema
   * Click the download button 
   * Name your DDE-generated file, and click download
-* Saving your DDE-generated schema to GitHub
-  * Click the GitHub icon to save your JSON-LD to a GitHub repository
-  * Click "get repos" to see repositories for which you have access
-  * Select a repository for which you have access
-  * To save a new file, slide the "Update file" toggle to the off position
-  * Enter a name for your file and a github commit comment (if you wish) and click "save"
+  * Your JSON-LD file should follow the appropriate naming convention
+    * (Profile Name)_v(version)-(DRAFT|RELEASE)-(version date, if applicable).(json|jsonld)
+    * example 1 - LabProtocol_v0.6-DRAFT-2020_12_08.json
+    * example 2 - Gene_v1.0-RELEASE.json
 * Interpreting the validation warnings
   * The DDE will automatically check your schema for JSON validation rules and give warnings if they are missing
   * Revisit the DDE validation editor and add JSON Schema validation rules to the properties that lack them
 
-#### 2.6 Test your JSON-LD schema
-* Click on "Register Schema"
-* Copy the url to your JSONLD schema in GitHub from the address bar of your browser and paste it into the schema playground (Use the link convert option if it pops up)
-* Click on "Let’s go" to test the compatibility of your schema with the DDE
-  * If it works well, you will see no errors
-  * If there are some minor issues, you will receive a warning but can and should select the option to continue
-  * If there are major issues, you will be blocked from continuing until those issues are addressed. If you don't think you can address them yourself, copy them into a temporary text file so you can paste them in your pull request later
-
 #### 3.0 Save your JSON-LD to the Bioschemas Specification Repository and create a pull request
-* Go to the [Bioschemas Specification repository](https://github.com/BioSchemas/specifications) and find your specification
-* In your fork or branch, add your JSON-LD to the `jsonld` directory for your specification
+* Go to the [Bioschemas Specification repository](https://github.com/BioSchemas/specifications) 
+* Create a new branch or fork the repository
+* In your branch or fork, and find your specification
+* Add your JSON-LD to the `jsonld` directory for your specification
 * Create a pull request for your fork or branch
   * Include any issues you encountered from your test that you were unable to address
 
