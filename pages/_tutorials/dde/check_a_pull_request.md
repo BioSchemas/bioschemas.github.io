@@ -1,4 +1,4 @@
-## Check a pull request for a profile update:
+## Check a pull request for a new or updated specification:
 
 ### Step 1 - Verify the parent class is correct. If not, edit the JSONLD to fix it
 {% include_relative edit_your_jsonld.md %}
