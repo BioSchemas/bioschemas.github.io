@@ -16,10 +16,10 @@ You have come to a community consensus on changes needed to a profile that alrea
 #### 2.1 Find the profile in the Registry
 * On the Registry page, select “Browse By Namespace”
 * Select ‘bioschemas’ or ‘bioschemasdraft’ depending on whether you are updating a release or draft profile. In this tutorial we will use examples corresponding to updating a draft profile.
-<br><img src="/pages/_tutorials/dde/images/select-namespace.png" width="80%"></img>
+<br><img src="/tutorials/dde/images/select-namespace.png" width="80%"></img>
 * Search for the name of the profile to be updated
 * Click ‘extend’ (icon on the right at the end of the row corresponding to the profile name)
-<br><img src="/pages/_tutorials/dde/images/extend-specification.png" width="80%"></img>
+<br><img src="/tutorials/dde/images/extend-specification.png" width="80%"></img>
 
 #### 2.2 Follow the prompts to update your profile
 * Create a temporary namespace that will help us identify your working space.
@@ -29,12 +29,12 @@ You have come to a community consensus on changes needed to a profile that alrea
   * Any descriptions of changes between versions
   * The name of the person who prepared the changes
 * **You will not be able to change this information on the next steps so make sure it is correct before moving on**
-<br><img src="/pages/_tutorials/dde/images/fill-out-spec-form.png" width="80%"></img>
+<br><img src="/tutorials/dde/images/fill-out-spec-form.png" width="80%"></img>
 
 #### 2.3 Select minimum, recommended and optional properties of your profile
 * You can select properties from all parent classes. Each parent class will be displayed on a blue box. 
 * The  minimum (aka requested/mandatory), recommended, and optional properties are automatically shown from the latest available profile you selected in 2.1.
-<br><img src="/pages/_tutorials/dde/images/inherit-properties.png" width="80%"></img>
+<br><img src="/tutorials/dde/images/inherit-properties.png" width="80%"></img>
 * You can select additional properties or unselect those that are no longer needed for the updated version.
 * To **update properties for a particular parent class**, click on the “...” icon on the right of that parent class. This will open up a list of all availables properties for this class. 
   * If a property **should be** included in the profile:
@@ -48,15 +48,15 @@ You have come to a community consensus on changes needed to a profile that alrea
 
 #### 2.4 Modify cardinality and description of properties selected for your profile
 * You can modify the cardinality of those properties that you have selected for your profile. To activate the cardinality selection, please look for the “Validation Editor” option on the top of your profile and enable it
-<br><img src="/pages/_tutorials/dde/images/validation_toggle.jpg" width="15%"></img>
+<br><img src="/tutorials/dde/images/validation_toggle.jpg" width="15%"></img>
 * On the Validation View, make sure that “Cardinality” is enabled, you will find this option on the top left
-<br><img src="/pages/_tutorials/dde/images/cardinality_toggle.jpg" width="30%"></img>
+<br><img src="/tutorials/dde/images/cardinality_toggle.jpg" width="30%"></img>
 * You will have to select the cardinality for each property 
-<br><img src="/pages/_tutorials/dde/images/cardinality_selection.jpg" width="15%"></img>
+<br><img src="/tutorials/dde/images/cardinality_selection.jpg" width="15%"></img>
 * You can also modify the description. We suggest doing so only when you need to add a note on how the property should be used for the Bioschemas use case, otherwise leave it as it comes from schema.org. Remember to always copy the portion corresponding to the original text in schema.org and then, separated by an empty line, add the usage note for Bioschemas. The usage note should include any recommendation on existing controlled vocabularies for the property.
-<br><img src="/pages/_tutorials/dde/images/edit_description.jpg" width="30%"></img>
+<br><img src="/tutorials/dde/images/edit_description.jpg" width="30%"></img>
 * Remember to save your work. The DDE editor will tell you if there is any property that still need validation rules
-<br><img src="/pages/_tutorials/dde/images/validation_warning.jpg" width="20%"></img>
+<br><img src="/tutorials/dde/images/validation_warning.jpg" width="20%"></img>
 * Add or modify existing validation rules as needed via the drag-and-drop interface in the DDE validation editor
 
 #### 2.5 Download / Save your JSON-LD schema
