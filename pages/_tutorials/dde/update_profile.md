@@ -4,6 +4,39 @@ title: Profile Update
 nextTutorial:
   link: ./new_profile
   title: Create a New Profile
+  
+bioschemas:
+  "@context": https://schema.org/
+  "@type": LearningResource
+  "http://purl.org/dc/terms/conformsTo":
+  - "@type": CreativeWork
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
+  about:
+    - "@id": https://schema.org
+    - "@id": http://edamontology.org/topic_0089
+  audience:
+  - "@type": Audience
+    name: People interested in updating a Bioschemas profile
+  name: "How to update a Bioschemas Profile with the Data Discovery Engine (DDE) Schema Playground"
+  author:
+  - "@type": Person
+    name: "Ginger Tsueng"
+    "@id": https://bioschemas.org/people/GingerTsueng
+    url: https://bioschemas.org/people/GingerTsueng
+  - "@type": Person
+    name: "Leyla Garcia"
+    "@id": https://bioschemas.org/people/LeylaGarcia
+    url: https://bioschemas.org/people/LeylaGarcia
+  - "@type": Person
+    name: "Nick Juty"
+    "@id": https://bioschemas.org/people/NickJuty
+    url: https://bioschemas.org/people/NickJuty
+  dateModified: 2022-10-24
+  description: "In this how-to, we will guide you through the necessary steps in order to update an existing Bioschemas profile"
+  keywords: "schemaorg, markup, structured data, bioschemas"
+  license: CC-BY 4.0
+  version: 0.1
+
 ---
 # Update a Profile
 
