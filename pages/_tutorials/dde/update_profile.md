@@ -48,7 +48,7 @@ You have come to a community consensus on changes needed to a profile that alrea
 
 #### 2.4 Modify cardinality and description of properties selected for your profile
 * You can modify the cardinality of those properties that you have selected for your profile. To activate the cardinality selection, please look for the “Validation Editor” option on the top of your profile and enable it
-<br><img src="{{images/validation_toggle.jpg" | relative_url}} width="15%"></img>
+{% include_relative images/images/validation_toggle.jpg width="15%" %} 
 * On the Validation View, make sure that “Cardinality” is enabled, you will find this option on the top left
 <br><img src="/tutorials/dde/images/cardinality_toggle.jpg" width="30%"></img>
 * You will have to select the cardinality for each property 
