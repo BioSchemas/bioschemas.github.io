@@ -103,3 +103,7 @@ When the chemical is not a well-defined molecule but, for example, a nanomateria
 ### 3.5. ComputationalTool
 
 If your webpage describes a software aimed at producing or analyzing scientific data, then you can annotate it with the [ComputationalTool](/profiles/ComputationalTool) profile. This profile guides you on providing at least minimal metadata inherited from the [SoftwareApplication](http://schema.org/SoftwareApplication) type, such as the tool name and its short description. In addition, thanks to the [EDAM](https://edamontology.org) ontology, you can provide semantic annotations to document what does the tool, what kind of data is taken as input or produced as ouput. 
+
+### 3.6. ComputationalWorkflow
+
+When you are publishing on the web a complex data analysis, made of several processing steps, you can annotate it with the [ComputationalWorkflow](/profiles/ComputationalWorkflow) profile. This profile provides guidelines to choose  minimal, or recommended metadata inherited from the [SoftwareSourceCode](http://schema.org/SoftwareSourceCode) type. For instance the community agreed to document, among other minimal metadata, workflow input and output parameters as well as the workflow license. 
