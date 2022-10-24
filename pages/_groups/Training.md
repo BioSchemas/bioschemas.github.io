@@ -6,11 +6,13 @@ collection: groups
 active: true
 type: generic
 description: Specification for describing training resources such as materials and courses.
-current-leads:
+lead:
 - person: PatriciaPalagi
   start-date: 2020-11-02
 - person: MichelleBrazas
   start-date: 2020-11-02
+- person: LeylaGarcia
+  start-date: 2022-08-09  
 former-leads:
 - person: NiallBeard
   start-date: 2018-09-25
@@ -38,8 +40,6 @@ specifications:
 
 
 members:
-    - MichelleBrazas
-    - PatriciaPalagi
     - CeliaVanGelder
     - SonikaTyagi
     - TerriAtwood   
@@ -56,7 +56,6 @@ members:
     - AnnMeyer
     - PaulaMartinez     
     - SarahMorgan    
-    - LeylaGarcia
     - VictoriaDominguezDelAngel
     - ChrisChild
 

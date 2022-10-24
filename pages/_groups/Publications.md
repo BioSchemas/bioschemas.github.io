@@ -6,7 +6,9 @@ collection: groups
 active: true
 type: generic
 description: Specifications for scholarly publication related profiles
-lead: [AlexanderGarcia, LeylaGarcia]
+lead: 
+- person: AlexanderGarcia
+- person: LeylaGarcia
 email: enquiries@bioschemas.org
 issues:
   - https://github.com/BioSchemas/specifications/labels/group%3A%20Scholarly%20Publication

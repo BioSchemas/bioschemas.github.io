@@ -6,7 +6,9 @@ collection: groups
 active: true
 type: biological
 description: Specification for protein type
-lead: [MariaMartin, LeylaGarcia]
+lead: 
+- person: MariaMartin
+- person: LeylaGarcia
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20protein
 folder: https://drive.google.com/drive/folders/0B0fE3oOZIq44eFktTmhFQlhLeDA

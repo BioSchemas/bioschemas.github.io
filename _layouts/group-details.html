@@ -95,20 +95,15 @@ layout: default
 <h5>Group Leaders</h5>
 <div id="leadTable">
    <ul>
-   {% if page.lead %}
    {% for leader in page.lead %}
-   {% assign lead-id = "/people/" | append: leader %}
-   {% assign author = site.people | where:"id", lead-id | first %}
-      <li><a href="{{ author.url | relative_url }}">{{ author.first-name }} {{ author.last-name }}</a></li>
-   {% endfor %}
-   {% else %}
-   {% for leader in page.current-leads %}
    {% assign lead-id = "/people/" | append: leader.person %}
    {% assign author = site.people | where:"id", lead-id | first %}
-      <li><a href="{{ author.url | relative_url }}">{{ author.first-name }} {{ author.last-name }}</a><br/>
-      (since {{leader.start-date | date_to_long_string}})</li>
+      <li><a href="{{ author.url | relative_url }}">{{ author.first-name }} {{ author.last-name }}</a>
+      {% if leader.start-date %}
+         <br/>(since {{leader.start-date | date_to_long_string}})
+      {% endif %}
+      </li>
    {% endfor %}
-   {% endif %}
    </ul>
 </div>
 <br />

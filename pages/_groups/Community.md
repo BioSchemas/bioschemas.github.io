@@ -6,7 +6,9 @@ collection: groups
 active: true
 type: other
 description: 'The objective of this workstream is to support this project and the involvement of the Bioschemas community.'
-lead: [CaroleGoble, AlasdairGray]
+lead: 
+- person: CaroleGoble
+- person: AlasdairGray
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/bioschemas/labels/topic%3A%20community
 folder: https://drive.google.com/drive/u/1/folders/0Bw_p-HKWUjHoRWgxWHcwVHNQUGM

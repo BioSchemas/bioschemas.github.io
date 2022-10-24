@@ -6,7 +6,9 @@ collection: groups
 active: true
 type: biological
 description: Specification for biodiversity-related profiles and/or types
-lead: [FranckMichel, LeylaGarcia]
+lead: 
+- person: FranckMichel
+- person: LeylaGarcia
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/specifications/labels/type%3A%20Taxon
 folder: https://drive.google.com/drive/folders/1Fp2AKbb07So7rVvUhnQIjpl8HLPSwpbP

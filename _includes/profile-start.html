@@ -127,7 +127,7 @@
       <div id="leadTable">
          {% for g in group %}
          {% for leader in g.lead %}
-         {% assign lead-id = "/people/" | append: leader %}
+         {% assign lead-id = "/people/" | append: leader.person %}
          {% assign author = site.people | where:"id", lead-id | first %}
          {% if author.homepage or author.github_username or author.orcid %}
          <p><a href="{{ author.url | relative_url }}">{{ author.first-name }} {{ author.last-name }}</a></p>
