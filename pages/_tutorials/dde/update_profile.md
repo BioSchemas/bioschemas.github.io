@@ -56,7 +56,8 @@ You have come to a community consensus on changes needed to a profile that alrea
 * You can also modify the description. We suggest doing so only when you need to add a note on how the property should be used for the Bioschemas use case, otherwise leave it as it comes from schema.org. Remember to always copy the portion corresponding to the original text in schema.org and then, separated by an empty line, add the usage note for Bioschemas. The usage note should include any recommendation on existing controlled vocabularies for the property.
 <br><img src="/tutorials/dde/images/edit_description.jpg" width="30%"></img>
 * Remember to save your work. The DDE editor will tell you if there is any property that still need validation rules
-<br><img src="/tutorials/dde/images/validation_warning.jpg" width="20%"></img>
+<br>{% include image.html file="/tutorials/dde/images/validation_warning.jpg" width="20%" %}
+
 * Add or modify existing validation rules as needed via the drag-and-drop interface in the DDE validation editor
 
 #### 2.5 Download / Save your JSON-LD schema
