@@ -29,7 +29,7 @@ You have come to a community consensus on changes needed to a profile that alrea
   * Any descriptions of changes between versions
   * The name of the person who prepared the changes
 * **You will not be able to change this information on the next steps so make sure it is correct before moving on**
-<br><img src="/_tutorials/dde/images/fill-out-spec-form.png" width="80%"></img>
+<br><img src="/tutorials/dde/images/fill-out-spec-form.png" width="80%"></img>
 
 #### 2.3 Select minimum, recommended and optional properties of your profile
 * You can select properties from all parent classes. Each parent class will be displayed on a blue box. 
