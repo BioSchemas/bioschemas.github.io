@@ -67,7 +67,7 @@ You have come to a community consensus on changes needed to a profile that alrea
 #### 2.3 Select minimum, recommended and optional properties of your profile
 * You can select properties from all parent classes. Each parent class will be displayed on a blue box. 
 * The  minimum (aka requested/mandatory), recommended, and optional properties are automatically shown from the latest available profile you selected in 2.1.
-<br><img src={% include_relative images/inherit-properties.png %} width="80%"></img>
+<!-- <br><img src={% include_relative images/inherit-properties.png %} width="80%"></img> -->
 * You can select additional properties or unselect those that are no longer needed for the updated version.
 * To **update properties for a particular parent class**, click on the “...” icon on the right of that parent class. This will open up a list of all availables properties for this class. 
   * If a property **should be** included in the profile:
@@ -81,7 +81,7 @@ You have come to a community consensus on changes needed to a profile that alrea
 
 #### 2.4 Modify cardinality and description of properties selected for your profile
 * You can modify the cardinality of those properties that you have selected for your profile. To activate the cardinality selection, please look for the “Validation Editor” option on the top of your profile and enable it
-{% include_relative images/images/validation_toggle.jpg width="15%" %} 
+<!-- {% include_relative images/images/validation_toggle.jpg width="15%" %} -->
 * On the Validation View, make sure that “Cardinality” is enabled, you will find this option on the top left
 <br><img src="/tutorials/dde/images/cardinality_toggle.jpg" width="30%"></img>
 * You will have to select the cardinality for each property 
