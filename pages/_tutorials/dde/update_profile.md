@@ -107,8 +107,10 @@ You have come to a community consensus on changes needed to a profile that alrea
   * Click the download button 
   * Name your DDE-generated file, and click download
   * Your JSON-LD file should follow the appropriate naming convention
-    * (Profile Name)_v(version)-(DRAFT|RELEASE)-(version date, if applicable).(json|jsonld)
-    * example 1 - LabProtocol_v0.6-DRAFT-2020_12_08.json
+  ```
+  (Profile Name)_v(version)-(DRAFT|RELEASE).(json|jsonld)
+  ```
+    * example 1 - LabProtocol_v0.6-DRAFT.json
     * example 2 - Gene_v1.0-RELEASE.json
 * Interpreting the validation warnings
   * The DDE will automatically check your schema for JSON validation rules and give warnings if they are missing
