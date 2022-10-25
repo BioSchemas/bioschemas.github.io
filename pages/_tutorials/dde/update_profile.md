@@ -30,11 +30,15 @@ bioschemas:
     name: "Nick Juty"
     "@id": https://bioschemas.org/people/NickJuty
     url: https://bioschemas.org/people/NickJuty
-  dateModified: 2022-10-24
+  - "@type": Person
+    name: "Alasdair Gray"
+    "@id": https://bioschemas.org/people/AlasdairGray
+    url: https://bioschemas.org/people/AlasdairGray
+  dateModified: 2022-10-25
   description: "In this how-to, we will guide you through the necessary steps in order to update an existing Bioschemas profile"
   keywords: "schemaorg, markup, structured data, bioschemas"
   license: CC-BY 4.0
-  version: 0.1
+  version: 0.2
 
 ---
 # Update a Profile
