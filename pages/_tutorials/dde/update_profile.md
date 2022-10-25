@@ -85,7 +85,7 @@ You have come to a community consensus on changes needed to a profile that alrea
   * Change the selection checkbox icon and marginality buttons as needed for each available property
 * Special property: conformsTo
   * "Uncheck" conformsTo as it will be added automatically via a script
- {% include image.html file="tutorials/dde/images/inherit-properties.png" alt=width="80%" %}
+ {% include image.html file="tutorials/dde/images/inherit-properties.png" alt="inherit properties" width="80%" %}
 
 #### 2.4 Modify cardinality and description of properties selected for your profile
 * You can modify the cardinality of those properties that you have selected for your profile. To activate the cardinality selection, please look for the “Validation Editor” option on the top of your profile and enable it
