@@ -114,7 +114,7 @@ You have come to a community consensus on changes needed to a profile that alrea
   * The DDE will automatically check your schema for JSON validation rules and give warnings if they are missing
   * Revisit the DDE validation editor and add JSON Schema validation rules to the properties that lack them
 
-#### 3.0 Save your JSON-LD to the Bioschemas Specification Repository and create a pull request
+### Step 3 - Save your JSON-LD to the Bioschemas Specification Repository and create a pull request
 * Go to the [Bioschemas Specification repository](https://github.com/BioSchemas/specifications) 
 * Create a new branch or fork the repository
 * In your branch or fork, and find your specification
