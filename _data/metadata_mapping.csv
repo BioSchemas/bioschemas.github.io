@@ -1,4 +1,4 @@
-profile,group,get_redirect_from,cross_walk_url
+profile,group,get_redirect_from,TypeParent,ProfileParent,cross_walk_url
 Beacon,beacons,"- ""/devSpecs/Beacon/specification/""
 - ""/devSpecs/Beacon/specification""
 - ""/devSpecs/Beacon/""
@@ -8,7 +8,7 @@ Beacon,beacons,"- ""/devSpecs/Beacon/specification/""
 - ""/specifications/Beacon/""
 - ""/specifications/Beacon""
 - ""/profiles/Beacon/""
-- ""/profiles/Beacon""",https://docs.google.com/spreadsheets/d/1Hl-K9wBtp8Ys0OJxzj8SC72xDKX_OeKDSs5ioZpPfTw/
+- ""/profiles/Beacon""",,schema:DataCatalog,https://docs.google.com/spreadsheets/d/1Hl-K9wBtp8Ys0OJxzj8SC72xDKX_OeKDSs5ioZpPfTw/
 BioSample,samples,"- ""/devSpecs/BioSample/specification/""
 - ""/devSpecs/BioSample/specification""
 - ""/devSpecs/BioSample/""
@@ -18,7 +18,7 @@ BioSample,samples,"- ""/devSpecs/BioSample/specification/""
 - ""/specifications/BioSample/""
 - ""/specifications/BioSample""
 - ""/profiles/BioSample/""
-- ""/profiles/BioSample""",https://docs.google.com/spreadsheets/d/1kcq7fEP1sQ9zf2YRNoyUYY87ahkz4ZsnRXHEb89KiOg 
+- ""/profiles/BioSample""",schema:BioChemEntity,bioschemastypes:BioSample,https://docs.google.com/spreadsheets/d/1kcq7fEP1sQ9zf2YRNoyUYY87ahkz4ZsnRXHEb89KiOg 
 ChemicalSubstance,chemicals,"- ""/devSpecs/ChemicalSubstance/specification/""
 - ""/devSpecs/ChemicalSubstance/specification""
 - ""/devSpecs/ChemicalSubstance/""
@@ -28,10 +28,10 @@ ChemicalSubstance,chemicals,"- ""/devSpecs/ChemicalSubstance/specification/""
 - ""/specifications/ChemicalSubstance/""
 - ""/specifications/ChemicalSubstance""
 - ""/profiles/ChemicalSubstance/""
-- ""/profiles/ChemicalSubstance""",https://docs.google.com/spreadsheets/d/1ZuJHrUwpkWACAt0De6OXhlWZ9pSRTJ1m9H954i8-FvQ/edit?ts=5bebfe78&pli=1#gid=1261485211https://docs.google.com/spreadsheets/d/1-E7IbF6Fe2uMyTpWMvthci8Lx58kXxlcz8BiXLmJTdk
-BioChemEntity,,,
-BioChemStructure,,,
-BioChemicalReaction,,,
+- ""/profiles/ChemicalSubstance""",schema:BioChemEntity,schema:ChemicalSubstance,https://docs.google.com/spreadsheets/d/1ZuJHrUwpkWACAt0De6OXhlWZ9pSRTJ1m9H954i8-FvQ/edit?ts=5bebfe78&pli=1#gid=1261485211https://docs.google.com/spreadsheets/d/1-E7IbF6Fe2uMyTpWMvthci8Lx58kXxlcz8BiXLmJTdk
+BioChemEntity,,,schema:BioChemEntity,,
+BioChemStructure,,,schema:BioChemEntity,,
+BioChemicalReaction,,,,,
 ComputationalTool,tools,"- ""devSpecs/Tool/specification""
 - ""devSpecs/Tool/specification/""
 - ""/devSpecs/Tool/""
@@ -39,8 +39,8 @@ ComputationalTool,tools,"- ""devSpecs/Tool/specification""
 - ""/profiles/Tool/""
 - ""/profiles/ComputationalTool/""
 - ""/profiles/ComputationalTool/0.5-DRAFT/""
-- ""/profiles/Tool/0.5-DRAFT/""",https://docs.google.com/spreadsheets/d/1B7Ei57KSY13AFzWNNjvXnvKB5t7PxQAL7lvNOjisQ2o/edit?usp=sharing
-ComputationalWorkflow,workflow,"- ""/profiles/Workflow/0.1-DRAFT-2019_02_08/""",https://docs.google.com/spreadsheets/d/1E_wZV77rHntJ6ismn7f-Gyng3XAEGY415xNiqwoihLM/
+- ""/profiles/Tool/0.5-DRAFT/""",,schema:SoftwareApplication,https://docs.google.com/spreadsheets/d/1B7Ei57KSY13AFzWNNjvXnvKB5t7PxQAL7lvNOjisQ2o/edit?usp=sharing
+ComputationalWorkflow,workflow,"- ""/profiles/Workflow/0.1-DRAFT-2019_02_08/""",schema:SoftwareSourceCode,bioschemastypes:ComputationalWorkflow,https://docs.google.com/spreadsheets/d/1E_wZV77rHntJ6ismn7f-Gyng3XAEGY415xNiqwoihLM/
 Course,trainingmaterials,"- ""/devSpecs/Course/specification/""
 - ""/devSpecs/Course/specification""
 - ""/devSpecs/Course/""
@@ -50,7 +50,7 @@ Course,trainingmaterials,"- ""/devSpecs/Course/specification/""
 - ""/specifications/Course/""
 - ""/specifications/Course""
 - ""/profiles/Course/""
-- ""/profiles/Course""",https://docs.google.com/spreadsheets/d/1cQ6mDbsG_cMX2EDAN8xH6-9yMRba8-rErlPeP8HTs8A
+- ""/profiles/Course""",,schema:Course,https://docs.google.com/spreadsheets/d/1cQ6mDbsG_cMX2EDAN8xH6-9yMRba8-rErlPeP8HTs8A
 CourseInstance,training,"- ""/devSpecs/CourseInstance/specification/""
 - ""/devSpecs/CourseInstance/specification""
 - ""/devSpecs/CourseInstance/""
@@ -60,9 +60,8 @@ CourseInstance,training,"- ""/devSpecs/CourseInstance/specification/""
 - ""/specifications/CourseInstance/""
 - ""/specifications/CourseInstance""
 - ""/profiles/CourseInstance/""
-- ""/profiles/CourseInstance""
-",https://docs.google.com/spreadsheets/d/1rriBGZpJYcwIHbEzwkfbhPCn3KArC6wr9DhKFpTuIiQ
-DNA,,,
+- ""/profiles/CourseInstance""",,schema:CourseInstance,https://docs.google.com/spreadsheets/d/1rriBGZpJYcwIHbEzwkfbhPCn3KArC6wr9DhKFpTuIiQ
+DNA,,,schema:BioChemEntity,,
 DataCatalog,datarepositories,"- ""/devSpecs/DataCatalog/specification/""
 - ""/devSpecs/DataCatalog/specification""
 - ""/devSpecs/DataCatalog/""
@@ -72,7 +71,7 @@ DataCatalog,datarepositories,"- ""/devSpecs/DataCatalog/specification/""
 - ""/specifications/DataCatalog/""
 - ""/specifications/DataCatalog""
 - ""/profiles/DataCatalog/""
-- ""/profiles/DataCatalog""",https://docs.google.com/spreadsheets/d/1H12h5VpVNJFzNs2RQJWjXkauCEn3qEsVFzKRoiHHffY
+- ""/profiles/DataCatalog""",,schema:DataCatalog,https://docs.google.com/spreadsheets/d/1H12h5VpVNJFzNs2RQJWjXkauCEn3qEsVFzKRoiHHffY
 DataRecord,data,"- ""/devSpecs/DataRecord/specification/""
 - ""/devSpecs/DataRecord/specification""
 - ""/devSpecs/DataRecord/""
@@ -82,8 +81,7 @@ DataRecord,data,"- ""/devSpecs/DataRecord/specification/""
 - ""/specifications/DataRecord/""
 - ""/specifications/DataRecord""
 - ""/profiles/DataRecord/""
-- ""/profiles/DataRecord""
-",https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAvaADLmI_FrIk7O3BEkxY/
+- ""/profiles/DataRecord""",schema:CreativeWork,bioschemasdeprecated:DataRecord,https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAvaADLmI_FrIk7O3BEkxY/
 Dataset,data,"- ""/specifications/Dataset/""
 - ""/specifications/Dataset""
 - ""/profiles/Dataset/""
@@ -93,8 +91,7 @@ Dataset,data,"- ""/specifications/Dataset/""
 - ""/devSpecs/Dataset/""
 - ""/devSpecs/Dataset""
 - ""/specifications/drafts/Dataset/""
-- ""/specifications/drafts/Dataset""
-",https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAvaADLmI_FrIk7O3BEkxY/
+- ""/specifications/drafts/Dataset""",,schema:Dataset,https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAvaADLmI_FrIk7O3BEkxY/
 Disease,diseases,"- ""/devSpecs/Disease/specification/""
 - ""/devSpecs/Disease/specification""
 - ""/devSpecs/Disease/""
@@ -104,8 +101,8 @@ Disease,diseases,"- ""/devSpecs/Disease/specification/""
 - ""/specifications/Disease/""
 - ""/specifications/Disease""
 - ""/profiles/Disease/""
-- ""/profiles/Disease""",https://docs.google.com/spreadsheets/d/1hGKPatus04Oz1OmM6KrNFobFQ2TGOZ8oQlUbTRn4obM/
-Enzyme,,,
+- ""/profiles/Disease""",,schema:MedicalCondition,https://docs.google.com/spreadsheets/d/1hGKPatus04Oz1OmM6KrNFobFQ2TGOZ8oQlUbTRn4obM/
+Enzyme,,,schema:BioChemEntity,,
 Event,events,"- ""/devSpecs/Event/specification/""
 - ""/devSpecs/Event/specification""
 - ""/devSpecs/Event/""
@@ -116,7 +113,7 @@ Event,events,"- ""/devSpecs/Event/specification/""
 - ""/specifications/Event""
 - ""/profiles/Event/""
 - ""/profiles/Event
-",https://docs.google.com/spreadsheets/d/1Hu1dmrS7jPgHWp8hUQWve9BzaYZi_EzTj9-gDuI9sBM/
+",,schema:Event,https://docs.google.com/spreadsheets/d/1Hu1dmrS7jPgHWp8hUQWve9BzaYZi_EzTj9-gDuI9sBM/
 FormalParameter,workflow,"- ""/devSpecs/FormalParameter/specification/""
 - ""/devSpecs/FormalParameter/specification""
 - ""/devSpecs/FormalParameter/""
@@ -126,11 +123,11 @@ FormalParameter,workflow,"- ""/devSpecs/FormalParameter/specification/""
 - ""/specifications/FormalParameter/""
 - ""/specifications/FormalParameter""
 - ""/profiles/FormalParameter/""
-- ""/profiles/FormalParameter""",https://docs.google.com/spreadsheets/d/1VKntwxkgjvup6yfzaPZsBN3h5aKWU5nuTKGEds3GzeQ/edit#gid=1483018794
+- ""/profiles/FormalParameter""",schema:Intangible,bioschemastypes:FormalParameter,https://docs.google.com/spreadsheets/d/1VKntwxkgjvup6yfzaPZsBN3h5aKWU5nuTKGEds3GzeQ/edit#gid=1483018794
 Gene,genes,"- ""/specifications/Gene/""
 - ""/specifications/Gene""
 - ""/profiles/Gene/""
-- ""/profiles/Gene""",https://docs.google.com/spreadsheets/d/1iCMknj6yWbkJsMiQ46_nSa82lZ4jNFOk-ZKx2ZApFq8/edit#gid=1483018794
+- ""/profiles/Gene""",schema:BioChemEntity,schema:Gene,https://docs.google.com/spreadsheets/d/1iCMknj6yWbkJsMiQ46_nSa82lZ4jNFOk-ZKx2ZApFq8/edit#gid=1483018794
 Journal,publications,"- ""/devSpecs/Journal/specification/""
 - ""/devSpecs/Journal/specification""
 - ""/devSpecs/Journal/""
@@ -140,7 +137,7 @@ Journal,publications,"- ""/devSpecs/Journal/specification/""
 - ""/specifications/Journal/""
 - ""/specifications/Journal""
 - ""/profiles/Journal/""
-- ""/profiles/Journal""",https://docs.google.com/spreadsheets/d/1FM0-KW6MI3_-yvDUI_oZ8D5vR8muvmR9RHm7Ocd6YdU/
+- ""/profiles/Journal""",,schema:CreativeWorkSeries,https://docs.google.com/spreadsheets/d/1FM0-KW6MI3_-yvDUI_oZ8D5vR8muvmR9RHm7Ocd6YdU/
 LabProtocol,labprotocols,"- ""/devSpecs/LabProtocol/specification/""
 - ""/devSpecs/LabProtocol/specification""
 - ""/devSpecs/LabProtocol/""
@@ -150,7 +147,7 @@ LabProtocol,labprotocols,"- ""/devSpecs/LabProtocol/specification/""
 - ""/specifications/LabProtocol/""
 - ""/specifications/LabProtocol""
 - ""/profiles/LabProtocol/""
-- ""/profiles/LabProtocol""",https://docs.google.com/spreadsheets/d/1KfhBNetyt9xzI7cs3S6HwIWEsgWpPEKnGlqu19Q49vo/
+- ""/profiles/LabProtocol""",schema:CreativeWork,bioschemastypes:LabProtocol,https://docs.google.com/spreadsheets/d/1KfhBNetyt9xzI7cs3S6HwIWEsgWpPEKnGlqu19Q49vo/
 MolecularEntity,chemicals,"- ""/devSpecs/MolecularEntity/specification/""
 - ""/devSpecs/MolecularEntity/specification""
 - ""/devSpecs/MolecularEntity/""
@@ -160,7 +157,7 @@ MolecularEntity,chemicals,"- ""/devSpecs/MolecularEntity/specification/""
 - ""/specifications/MolecularEntity/""
 - ""/specifications/MolecularEntity""
 - ""/profiles/MolecularEntity/""
-- ""/profiles/MolecularEntity""",https://docs.google.com/spreadsheets/d/1KKg8JJzK3GybuVrvdZxbMqG2PYkU_0e7gTUqWzGx3QQ/edit#gid=1483018794
+- ""/profiles/MolecularEntity""",schema:BioChemEntity,schema:MolecularEntity,https://docs.google.com/spreadsheets/d/1KKg8JJzK3GybuVrvdZxbMqG2PYkU_0e7gTUqWzGx3QQ/edit#gid=1483018794
 Organization,organizations,"- ""/devSpecs/Organization/specification/""
 - ""/devSpecs/Organization/specification""
 - ""/devSpecs/Organization/""
@@ -170,7 +167,7 @@ Organization,organizations,"- ""/devSpecs/Organization/specification/""
 - ""/specifications/Organization/""
 - ""/specifications/Organization""
 - ""/profiles/Organization/""
-- ""/profiles/Organization""",https://docs.google.com/spreadsheets/d/1Cy45Llql88NvkqwRw7WD1y8HeVQ4z5_V6MhJh6hhbks/
+- ""/profiles/Organization""",,schema:Organization,https://docs.google.com/spreadsheets/d/1Cy45Llql88NvkqwRw7WD1y8HeVQ4z5_V6MhJh6hhbks/
 Person,people,"- ""/devSpecs/Person/specification/""
 - ""/devSpecs/Person/specification""
 - ""/devSpecs/Person/""
@@ -180,7 +177,7 @@ Person,people,"- ""/devSpecs/Person/specification/""
 - ""/specifications/Person/""
 - ""/specifications/Person""
 - ""/profiles/Person/""
-- ""/profiles/Person""",https://docs.google.com/spreadsheets/d/1vliGiKWlHzqXWcGPa15l0PzJbQGXPKxYPq8Mups_or4
+- ""/profiles/Person""",,schema:Person,https://docs.google.com/spreadsheets/d/1vliGiKWlHzqXWcGPa15l0PzJbQGXPKxYPq8Mups_or4
 Phenotype,phenotypes,"- ""/devSpecs/Phenotype/specification/""
 - ""/devSpecs/Phenotype/specification""
 - ""/devSpecs/Phenotype/""
@@ -190,8 +187,8 @@ Phenotype,phenotypes,"- ""/devSpecs/Phenotype/specification/""
 - ""/specifications/Phenotype/""
 - ""/specifications/Phenotype""
 - ""/profiles/Phenotype/""
-- ""/profiles/Phenotype""",https://docs.google.com/spreadsheets/d/1Vk8C-T6tjTL-s_u3xiCnjp87zVWCPQVbzySv1jqsK78/
-Protein,proteins,,https://docs.google.com/spreadsheets/d/1agujmyTPuysB0268Nptfbg6IVI_5Su3I9do092oYEdE/edit#gid=1483018794
+- ""/profiles/Phenotype""",schema:Thing,bioschemastypes:Phenotype,https://docs.google.com/spreadsheets/d/1Vk8C-T6tjTL-s_u3xiCnjp87zVWCPQVbzySv1jqsK78/
+Protein,proteins,,schema:BioChemEntity,schema:Protein,https://docs.google.com/spreadsheets/d/1agujmyTPuysB0268Nptfbg6IVI_5Su3I9do092oYEdE/edit#gid=1483018794
 ProteinAnnotation,proteins,"- ""/devSpecs/ProteinAnnotation/specification/""
 - ""/devSpecs/ProteinAnnotation/specification""
 - ""/devSpecs/ProteinAnnotation/""
@@ -201,7 +198,7 @@ ProteinAnnotation,proteins,"- ""/devSpecs/ProteinAnnotation/specification/""
 - ""/specifications/ProteinAnnotation/""
 - ""/specifications/ProteinAnnotation""
 - ""/profiles/ProteinAnnotation/""
-- ""/profiles/ProteinAnnotation""",https://docs.google.com/spreadsheets/d/1gnZePvUKpXE8gXbMLdZ3kfSgyqp-LY8cbDXO8NamyEM/
+- ""/profiles/ProteinAnnotation""",,schema:BioChemEntity,https://docs.google.com/spreadsheets/d/1gnZePvUKpXE8gXbMLdZ3kfSgyqp-LY8cbDXO8NamyEM/
 ProteinStructure,proteins,"- ""/devSpecs/ProteinStructure/specification/""
 - ""/devSpecs/ProteinStructure/specification""
 - ""/devSpecs/ProteinStructure/""
@@ -211,7 +208,7 @@ ProteinStructure,proteins,"- ""/devSpecs/ProteinStructure/specification/""
 - ""/specifications/ProteinStructure/""
 - ""/specifications/ProteinStructure""
 - ""/profiles/ProteinStructure/""
-- ""/profiles/ProteinStructure""",https://docs.google.com/spreadsheets/d/1MfvX5tJs5mKA835e-98eaLmN5_5xYjFfcMcbtdMRtC4
+- ""/profiles/ProteinStructure""",,schema:BioChemEntity,https://docs.google.com/spreadsheets/d/1MfvX5tJs5mKA835e-98eaLmN5_5xYjFfcMcbtdMRtC4
 PublicationIssue,publications,"- ""/devSpecs/PublicationIssue/specification/""
 - ""/devSpecs/PublicationIssue/specification""
 - ""/devSpecs/PublicationIssue/""
@@ -221,7 +218,7 @@ PublicationIssue,publications,"- ""/devSpecs/PublicationIssue/specification/""
 - ""/specifications/PublicationIssue/""
 - ""/specifications/PublicationIssue""
 - ""/profiles/PublicationIssue/""
-- ""/profiles/PublicationIssue""",https://docs.google.com/spreadsheets/d/12JdtgbvHreHV5J7UhnWcaVZylrjAp0PG-r-0IoIH7u4/
+- ""/profiles/PublicationIssue""",,schema:PublicationIssue,https://docs.google.com/spreadsheets/d/12JdtgbvHreHV5J7UhnWcaVZylrjAp0PG-r-0IoIH7u4/
 PublicationVolume,publications,"- ""/devSpecs/PublicationVolume/specification/""
 - ""/devSpecs/PublicationVolume/specification""
 - ""/devSpecs/PublicationVolume/""
@@ -231,7 +228,7 @@ PublicationVolume,publications,"- ""/devSpecs/PublicationVolume/specification/""
 - ""/specifications/PublicationVolume/""
 - ""/specifications/PublicationVolume""
 - ""/profiles/PublicationVolume/""
-- ""/profiles/PublicationVolume""",https://docs.google.com/spreadsheets/d/1URvG6DVYNLwJvURHEUx7huEGxdVtURKCQ4KtQvvgwXw
+- ""/profiles/PublicationVolume""",,schema:PublicationVolume,https://docs.google.com/spreadsheets/d/1URvG6DVYNLwJvURHEUx7huEGxdVtURKCQ4KtQvvgwXw
 RNA,DNA,"- ""/devSpecs/RNA/specification/""
 - ""/devSpecs/RNA/specification""
 - ""/devSpecs/RNA/""
@@ -241,7 +238,7 @@ RNA,DNA,"- ""/devSpecs/RNA/specification/""
 - ""/specifications/RNA/""
 - ""/specifications/RNA""
 - ""/profiles/RNA/""
-- ""/profiles/RNA""",https://docs.google.com/spreadsheets/d/1N2_6iLktDXlcgkuXJdpW4UKg9M9Q08VfMqtDDS5tEp4/edit#gid=292464567
+- ""/profiles/RNA""",schema:BioChemEntity,bioschemastypes:RNA,https://docs.google.com/spreadsheets/d/1N2_6iLktDXlcgkuXJdpW4UKg9M9Q08VfMqtDDS5tEp4/edit#gid=292464567
 Sample,samples,"- ""/devSpecs/Sample/specification/""
 - ""/devSpecs/Sample/specification""
 - ""/devSpecs/Sample/""
@@ -251,7 +248,7 @@ Sample,samples,"- ""/devSpecs/Sample/specification/""
 - ""/specifications/Sample/""
 - ""/specifications/Sample""
 - ""/profiles/Sample/""
-- ""/profiles/Sample""",https://docs.google.com/spreadsheets/d/122y9X5ZxFN5sPDX63ox8UGQlHkddT6O69_e2b_eAv5Y/edit#gid=1483018794
+- ""/profiles/Sample""",schema:Sample,bioschemastypes:Sample,https://docs.google.com/spreadsheets/d/122y9X5ZxFN5sPDX63ox8UGQlHkddT6O69_e2b_eAv5Y/edit#gid=1483018794
 ScholarlyArticle,publications,"- ""/devSpecs/ScholarlyArticle/specification/""
 - ""/devSpecs/ScholarlyArticle/specification""
 - ""/devSpecs/ScholarlyArticle/""
@@ -261,7 +258,7 @@ ScholarlyArticle,publications,"- ""/devSpecs/ScholarlyArticle/specification/""
 - ""/specifications/ScholarlyArticle/""
 - ""/specifications/ScholarlyArticle""
 - ""/profiles/ScholarlyArticle/""
-- ""/profiles/ScholarlyArticle""",https://docs.google.com/spreadsheets/d/1-AtKXJ1FW57T2tDEKF0hlxraPVbLqnREr-kRpQK0vhQ/
+- ""/profiles/ScholarlyArticle""",,schema:ScholarlyArticle,https://docs.google.com/spreadsheets/d/1-AtKXJ1FW57T2tDEKF0hlxraPVbLqnREr-kRpQK0vhQ/
 SemanticTextAnnotation,publications,"- ""/devSpecs/SemanticTextAnnotation/specification/""
 - ""/devSpecs/SemanticTextAnnotation/specification""
 - ""/devSpecs/SemanticTextAnnotation/""
@@ -271,7 +268,7 @@ SemanticTextAnnotation,publications,"- ""/devSpecs/SemanticTextAnnotation/specif
 - ""/specifications/SemanticTextAnnotation/""
 - ""/specifications/SemanticTextAnnotation""
 - ""/profiles/SemanticTextAnnotation/""
-- ""/profiles/SemanticTextAnnotation""",https://docs.google.com/spreadsheets/d/1FSz3Wn3pgUQl-fFx-mpz_qiuhxPJGMYGXRAEaZ9aPrU/
+- ""/profiles/SemanticTextAnnotation""",,schema:CreativeWork,https://docs.google.com/spreadsheets/d/1FSz3Wn3pgUQl-fFx-mpz_qiuhxPJGMYGXRAEaZ9aPrU/
 SequenceAnnotation,proteins,"- ""/devSpecs/SequenceAnnotation/specification/""
 - ""/devSpecs/SequenceAnnotation/specification""
 - ""/devSpecs/SequenceAnnotation/""
@@ -281,8 +278,8 @@ SequenceAnnotation,proteins,"- ""/devSpecs/SequenceAnnotation/specification/""
 - ""/specifications/SequenceAnnotation/""
 - ""/specifications/SequenceAnnotation""
 - ""/profiles/SequenceAnnotation/""
-- ""/profiles/SequenceAnnotation""",https://docs.google.com/spreadsheets/d/18TQcNrJh3-qSyML_NM68_BRmS15AHgmqK1_OrM29lSc/
-SequenceMatchingModel,,,
+- ""/profiles/SequenceAnnotation""",schema:BioChemEntity,bioschemastypes:SequenceAnnotation,https://docs.google.com/spreadsheets/d/18TQcNrJh3-qSyML_NM68_BRmS15AHgmqK1_OrM29lSc/
+SequenceMatchingModel,,,schema:CreativeWork,,
 SequenceRange,proteins,"- ""/devSpecs/SequenceRange/specification/""
 - ""/devSpecs/SequenceRange/specification""
 - ""/devSpecs/SequenceRange/""
@@ -292,7 +289,7 @@ SequenceRange,proteins,"- ""/devSpecs/SequenceRange/specification/""
 - ""/specifications/SequenceRange/""
 - ""/specifications/SequenceRange""
 - ""/profiles/SequenceRange/""
-- ""/profiles/SequenceRange""",https://docs.google.com/spreadsheets/d/1G7YcTaM5jjpF0SGoPkrPmirflfb9DAyFPfiW1iN0FcU/
+- ""/profiles/SequenceRange""",schema:BioChemEntity,bioschemastypes:SequenceStructure,https://docs.google.com/spreadsheets/d/1G7YcTaM5jjpF0SGoPkrPmirflfb9DAyFPfiW1iN0FcU/
 Study,studies,"- ""/devSpecs/Study/specification/""
 - ""/devSpecs/Study/specification""
 - ""/devSpecs/Study/""
@@ -302,12 +299,11 @@ Study,studies,"- ""/devSpecs/Study/specification/""
 - ""/specifications/Study/""
 - ""/specifications/Study""
 - ""/profiles/Study/""
-- ""/profiles/Study""",https://docs.google.com/spreadsheets/d/1320sC6scXagwB5kJyGObuW5YkWGrZ1JNIYk-rmC3pyE/
+- ""/profiles/Study""",schema:CreativeWork,bioschemastypes:Study,https://docs.google.com/spreadsheets/d/1320sC6scXagwB5kJyGObuW5YkWGrZ1JNIYk-rmC3pyE/
 Taxon,biodiversity,"- ""/specifications/Taxon/""
 - ""/specifications/Taxon""
 - ""/profiles/Taxon/""
-- ""/profiles/Taxon""
-",https://docs.google.com/spreadsheets/d/18aNmjLlMs7FItcozTZXdktKuZEap2sbqgqgksWQSkD0/edit#gid=1483018794
+- ""/profiles/Taxon""",schema:CreativeWork,schema:Taxon,https://docs.google.com/spreadsheets/d/18aNmjLlMs7FItcozTZXdktKuZEap2sbqgqgksWQSkD0/edit#gid=1483018794
 TaxonName,biodiversity,"- ""/devSpecs/TaxonName/specification/""
 - ""/devSpecs/TaxonName/specification""
 - ""/devSpecs/TaxonName/""
@@ -317,10 +313,9 @@ TaxonName,biodiversity,"- ""/devSpecs/TaxonName/specification/""
 - ""/specifications/TaxonName/""
 - ""/specifications/TaxonName""
 - ""/profiles/TaxonName/""
-- ""/profiles/TaxonName""",https://docs.google.com/spreadsheets/d/1cQPR7KGU0fOHXiRoaJpahEgrX9i6SIc36X8cupfg6_4/
+- ""/profiles/TaxonName""",schema:CreativeWork,bioschemastypes:TaxonName,https://docs.google.com/spreadsheets/d/1cQPR7KGU0fOHXiRoaJpahEgrX9i6SIc36X8cupfg6_4/
 Tool,tools,"- ""/profiles/ComputationalTool/0.4-DRAFT-2019_07_19/""
-- ""/profiles/Tool/0.4-DRAFT-2019_07_19/""
-",https://docs.google.com/spreadsheets/d/1kogQ4tLMbhnM-B8IKtFNmMenRgqopi76wGKCCyAqUXM
+- ""/profiles/Tool/0.4-DRAFT-2019_07_19/""",,,https://docs.google.com/spreadsheets/d/1kogQ4tLMbhnM-B8IKtFNmMenRgqopi76wGKCCyAqUXM
 TrainingMaterial,training,"- ""/devSpecs/TrainingMaterial/specification/""
 - ""/devSpecs/TrainingMaterial/specification""
 - ""/devSpecs/TrainingMaterial/""
@@ -330,4 +325,4 @@ TrainingMaterial,training,"- ""/devSpecs/TrainingMaterial/specification/""
 - ""/specifications/TrainingMaterial/""
 - ""/specifications/TrainingMaterial""
 - ""/profiles/TrainingMaterial/""
-- ""/profiles/TrainingMaterial""",https://docs.google.com/spreadsheets/d/1w6_iqgcBgbqqZVmhpf9L21eoVlq64U7RPf1xGKhiRpk/edit#gid=1483018794
+- ""/profiles/TrainingMaterial""",,schema:LearningResource,https://docs.google.com/spreadsheets/d/1w6_iqgcBgbqqZVmhpf9L21eoVlq64U7RPf1xGKhiRpk/edit#gid=1483018794
