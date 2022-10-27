@@ -164,25 +164,6 @@ About Us Organizations Links
     text-align: justify;
 }
 
-/*******************************************************************************
-Variable amount of columns in some tables
-*******************************************************************************/
-
-#peopleTable,
-#formerPeopleTable,
-#leadTable,
-#formerLeadTable {
-    column-count: 4;
-}
-
-@media (max-width: 768px) {
-    #peopleTable,
-    #formerPeopleTable,
-    #leadTable,
-    #formerLeadTable {
-        column-count: 2;
-    }
-}
 
 /*******************************************************************************
 Table of contents
