@@ -48,7 +48,7 @@
    {%- assign author = site.people | where:"id", lead-id | first %}
    {%- if author.first-name and author.last-name %}
       <div class="col mt-2"><a href="{{ author.url | relative_url }}">{{ author.first-name }} {{ author.last-name }}</a>
-      ({{leader.start-date | date: "%d %b %Y"}} - {{leader.end-date | date: "%d %b %Y"}})</div>
+      <span class="text-muted"><small>({{leader.start-date | date: "%d %b %Y"}} - {{leader.end-date | date: "%d %b %Y"}})</small></span></div>
    {%- endif %}
    {%- endfor %}
 </div>
