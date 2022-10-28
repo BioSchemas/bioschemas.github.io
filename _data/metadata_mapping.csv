@@ -303,7 +303,7 @@ Study,studies,"- ""/devSpecs/Study/specification/""
 Taxon,biodiversity,"- ""/specifications/Taxon/""
 - ""/specifications/Taxon""
 - ""/profiles/Taxon/""
-- ""/profiles/Taxon""",schema:CreativeWork,schema:Taxon,https://docs.google.com/spreadsheets/d/18aNmjLlMs7FItcozTZXdktKuZEap2sbqgqgksWQSkD0/edit#gid=1483018794
+- ""/profiles/Taxon""",schema:Thing,schema:Taxon,https://docs.google.com/spreadsheets/d/18aNmjLlMs7FItcozTZXdktKuZEap2sbqgqgksWQSkD0/edit#gid=1483018794
 TaxonName,biodiversity,"- ""/devSpecs/TaxonName/specification/""
 - ""/devSpecs/TaxonName/specification""
 - ""/devSpecs/TaxonName/""
