@@ -126,7 +126,7 @@ You have come to a community consensus on changes needed to a profile that alrea
 * Create a new branch or fork the repository
 * In your branch or fork, and find your specification
 * Add your JSON-LD to the `jsonld` directory for your specification
-* Create a pull request for your fork or branch
+* Create a [pull request](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request) for your fork or branch
   * Include any issues you encountered from your test that you were unable to address
 
 
