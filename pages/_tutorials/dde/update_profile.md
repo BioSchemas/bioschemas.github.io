@@ -123,10 +123,10 @@ You have come to a community consensus on changes needed to a profile that alrea
 
 ### Step 3 - Save your JSON-LD to the Bioschemas Specification Repository and create a pull request
 * Go to the [Bioschemas Specification repository](https://github.com/BioSchemas/specifications) 
-* Create a new branch or fork the repository
+* Create a [new branch](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/viewing-branches-in-your-repository) or [fork the repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 * In your branch or fork, and find your specification
 * Add your JSON-LD to the `jsonld` directory for your specification
-* Create a pull request for your fork or branch
+* Create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) for your fork or branch
   * Include any issues you encountered from your test that you were unable to address
 
 
