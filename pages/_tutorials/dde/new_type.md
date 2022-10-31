@@ -103,8 +103,8 @@ You have come to a community consensus on creating a new type. Congratulations! 
   ```
   (Type Name)_v(version)-(DRAFT|RELEASE).(json|jsonld)
   ```
-    * example 1 - LabProtocol_v0.6-DRAFT.json
-    * example 2 - Gene_v1.0-RELEASE.json (note, you cannot create a new type RELEASEe without approval from the Steering Council)
+    * example 1 - LabProtocol_v0.3-DRAFT.json
+    * example 2 - Gene_v0.3-RELEASE.json (note, you cannot create a new type RELEASE without approval from the Steering Council)
 * Interpreting the validation warnings
   * The DDE will automatically check your schema for JSON validation rules and give warnings if they are missing
   * Revisit the DDE validation editor and add JSON Schema validation rules to the properties that lack them
