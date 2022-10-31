@@ -13,7 +13,7 @@ lead:
   start-date: 2020-11-02
 - person: LeylaGarcia
   start-date: 2022-08-09  
-former-leads:
+former-lead:
 - person: NiallBeard
   start-date: 2018-09-25
   end-date: 2020-10-01
@@ -59,7 +59,7 @@ members:
     - VictoriaDominguezDelAngel
     - ChrisChild
 
-Former-Members:    
+former-members:    
     - ChrisTaylor
     - PhilippeRocca-Serra
     - SusannaSansone
