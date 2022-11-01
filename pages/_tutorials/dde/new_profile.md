@@ -1,40 +1,135 @@
 ---
-layout: default
 title: Create New Profile
 nextTutorial:
   link: ./update_type
   title: Update a Type
+  
+bioschemas:
+  "@context": https://schema.org/
+  "@type": LearningResource
+  "http://purl.org/dc/terms/conformsTo":
+  - "@type": CreativeWork
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
+  about:
+    - "@id": https://schema.org
+    - "@id": http://edamontology.org/topic_0089
+  audience:
+  - "@type": Audience
+    name: People interested in creating a new Bioschemas profile
+  name: "How to create a new Bioschemas Profile with the Data Discovery Engine (DDE) Schema Playground"
+  author:
+  - "@type": Person
+    name: "Ginger Tsueng"
+    "@id": https://bioschemas.org/people/GingerTsueng
+    url: https://bioschemas.org/people/GingerTsueng
+  - "@type": Person
+    name: "Leyla Garcia"
+    "@id": https://bioschemas.org/people/LeylaGarcia
+    url: https://bioschemas.org/people/LeylaGarcia
+  - "@type": Person
+    name: "Nick Juty"
+    "@id": https://bioschemas.org/people/NickJuty
+    url: https://bioschemas.org/people/NickJuty
+  - "@type": Person
+    name: "Alasdair Gray"
+    "@id": https://bioschemas.org/people/AlasdairGray
+    url: https://bioschemas.org/people/AlasdairGray
+  dateModified: 2022-10-25
+  description: "In this how-to, we will guide you through the necessary steps in order to create a new Bioschemas profile"
+  keywords: "schemaorg, markup, structured data, bioschemas"
+  license: CC-BY 4.0
+  version: 0.2
+
 ---
+# Create a Profile
 
-# Create a New Profile
-Profiles are constraints agreed by the community that capture (i) the information properties which are minimum (M), recommended (R), or optional (O), (ii) the cardinality of the property, i.e. whether it is expected to occur once or many times, and (iii) associated controlled vocabulary terms drawn from existing ontologies. These refine and optimise the use of ‘types’ by a specific community. Since communities may change, for example, the cardinality of a property after discussion, there is a need to have a simple mechanism to version and modify profiles. The process for creating a new profile is described below.
+You have come to a community consensus on changes needed to a profile that already exists. Congratulations! Now you have to update the new profile version on the Bioschemas website. Note, if you are comfortable with JSON schema and JSON-LD, you are welcome to copy, paste, and edit the JSON-LD files in the Bioschemas Specifications repository
 
-### Step 1 - Create your new profile specification in in your community's preferred collaborative environment (google spreadsheets, whiteboard, HackMd document, etc.)
-{% include_relative create_google_sheet.md %}
+### Step 1 - Log in
+{% include_relative login_to_dde.md %}
 
-### Step 2 - Search for the parent class of your new profile
-{% include_relative search_the_registry.md %}
+### Step 2 - Create the new profile
+#### 2.1 Find the parent type/class of the new profile in the Registry
+* DDE classes are commonly known as ‘types’ in schema.org and ‘specifications’ in Bioschemas
+* If the parent type/class __is from schema.org__, search for it in the search bar in the ‘Search By Class Name’ tab
+* If the parent type/class is from bioschemas:
+  * On the Registry page, select “Browse By Namespace”
+    * Select ‘bioschemastypes’ if the parent type/class is a released Bioschemas type
+    * Select ‘bioschemastypesdraft’ if the parent type/class is a draft Bioschemas type
+{% include image.html file="/tutorials/dde/images/select-namespace-type.png" alt="Browse types in the DDE by namespace" width="80%" %}
 
-### Step 3 - Extend from the parent class
-{% include_relative extend_class.md %}
+* Search for the name of the parent class for your new profile
+* Click ‘extend’ (icon on the right at the end of the row corresponding to the parent class/type)
 
-### Step 4 - Create new properties as needed
-{% include_relative create_properties.md %}
+{% include image.html file="/tutorials/dde/images/extend_bioschemas_parent.png" alt="Selecting a bioschemas type to extend" width="80%" %}
 
-### Step 5 - Add JSON validation rules to express property constraints
-{% include_relative add_validation_rules.md %}
+#### 2.2 Follow the prompts to create your new profile
+* Create a temporary namespace that will help us identify your working space.
+* Fill in the form to create the new profile including the name of the profile and a description. The description should include:
+  * The description of the profile as determined by the community
+  * The version of the profile
+  * Any descriptions of changes between versions
+  * The name of the person who prepared the changes
+  
+  __You will not be able to change this information on the next steps so make sure it is correct before moving on.__
 
-### Step 6 - Save your schema
-{% include_relative save_your_schema.md %}
+{% include image.html file="/tutorials/dde/images/fill-out-spec-form.png" alt="Complete the web form for the profile" width="80%" %}
 
-### optional - Edit your JSONLD (if external vocabulary used as properties)
-{% include_relative edit_your_jsonld.md %}
+#### 2.3 Select minimum, recommended and optional properties of your profile
+* You can select properties from all parent classes. Each parent class will be displayed on a blue box. 
+* The  minimum (aka requested/mandatory), recommended, and optional properties are automatically shown from the latest available profile you selected in 2.1.
+* You can select additional properties or unselect those that are no longer needed for the updated version.
+* To **update properties for a particular parent class**, click on the "..." icon on the right of that parent class. This will open up a list of all availables properties for this class. 
+  * If a property **should be** included in the profile:
+    * select it with the checkbox icon
+    * define its marginality (red star for minimum, yellow circle for recommended, turquoise square for optional)
+  * If a property **should NOT** be part of the profile:
+    * deselect it with the checkbox icon - i.e., checkbox icon should be gray
+  * Change the selection checkbox icon and marginality buttons as needed for each available property
+* Special property: conformsTo
+  * "Uncheck" conformsTo as it will be added automatically via a script
+ {% include image.html file="tutorials/dde/images/inherit-properties.png" alt="inherit properties" width="80%" %}
 
-### Step 7 - Verify that your JSONLD schema file is working properly
-{% include_relative check_your_spec.md %}
+#### 2.4 Modify cardinality and description of properties selected for your profile
+* You can modify the cardinality of those properties that you have selected for your profile. To activate the cardinality selection, please look for the “Validation Editor” option on the top of your profile and enable it
+* On the Validation View, make sure that “Cardinality” is enabled, you will find this option on the top left
 
-### Step 8 - If you have not already, save your JSONLD to the bioschemas Specification repository
-{% include_relative save_to_specs_repo.md %}
+{% include image.html file="/tutorials/dde/images/cardinality_toggle.jpg" alt="Enabling cardinality" width="30%" %}
 
-### Step 9 - Update the bioschemas specification in the DDE schema registry
-{% include_relative push_updates_to_dde.md %}
+* You will have to select the cardinality for each property 
+
+{% include image.html file="/tutorials/dde/images/cardinality_selection.jpg" alt="Select cardinality for a property%" width="15%" %}
+
+* You can also modify the description. We suggest doing so only when you need to add a note on how the property should be used for the Bioschemas use case, otherwise leave it as it comes from schema.org. Remember to always copy the portion corresponding to the original text in schema.org and then, separated by an empty line, add the usage note for Bioschemas. The usage note should include any recommendation on existing controlled vocabularies for the property.
+
+{% include image.html file="/tutorials/dde/images/edit_description.jpg" alt="Editing the description of a property" width="30%" %}
+
+* Remember to save your work. The DDE editor will tell you if there is any property that still need validation rules
+
+{% include image.html file="/tutorials/dde/images/validation_warning.jpg" alt="Validation warning" width="20%" %}
+
+* Add validation rules as needed via the drag-and-drop interface in the DDE validation editor
+
+#### 2.5 Download / Save your JSON-LD schema
+* Downloading your DDE-generated schema
+  * Click the download button 
+  * Name your DDE-generated file, and click download
+  * Your JSON-LD file should follow the appropriate naming convention
+  ```
+  (Profile Name)_v(version)-(DRAFT|RELEASE).(json|jsonld)
+  ```
+    * example 1 - LabProtocol_v0.6-DRAFT.json
+    * example 2 - Gene_v1.0-RELEASE.json
+* Interpreting the validation warnings
+  * The DDE will automatically check your schema for JSON validation rules and give warnings if they are missing
+  * Revisit the DDE validation editor and add JSON Schema validation rules to the properties that lack them
+
+### Step 3 - Save your JSON-LD to the Bioschemas Specification Repository and create a pull request
+* Go to the [Bioschemas Specification repository](https://github.com/BioSchemas/specifications) 
+* Create a [new branch](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/viewing-branches-in-your-repository) or [fork the repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+* In your branch or fork, and find your specification
+* Add your JSON-LD to the `jsonld` directory for your specification
+* Create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) for your fork or branch
+  * Include any issues you encountered from your test that you were unable to address
+
+
