@@ -86,3 +86,11 @@ A community member has created or updated a Bioschemas specification JSON-LD fil
 
 ### Step 5 - Update the bioschemas specification in the DDE schema registry (to be automated and removed as a step)
 * This step has been automated in a branch, but that branch has not been merged as it is dependant on the GitHub action in Step 4
+
+
+### Links and Further Reading
+* Documentation on the automated JSON-LD-to-webpage conversion: https://hackmd.io/zGOAxx-BRfi4rDiaW9Rk4Q?both
+* Documentation on the automated DDE-updates: https://github.com/bioschemas/bioschemas-dde
+* About JSON-LD: https://json-ld.org/
+* About JSON-schema: https://json-schema.org/
+* The FAQ for the Data Discovery Engine (DDE): https://discovery.biothings.io/faq/dde 
