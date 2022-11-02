@@ -25,6 +25,8 @@ Only the most recent drafts and releases of specifications should be saved to th
 
 ## How to review a pull request on a specification JSON-LD file
 Pull requests to the [Bioschemas specification repository](https://github.com/BioSchemas/specifications) will automatically trigger a notification in the bioschemas `#spec_repo_updates` slack channel. Community members are encouraged to help review these pull requests if they are:
-* Familiar with or interested in learning about how to perform pull requests and merges on GitHub
-* Familiar with or interested in learning about how JSON-LD formatting
-* Familiar with or interested in learning about JSON-schema validation rules __(only for pull requests involving PROFILES)__
+- Familiar with or interested in learning about how to perform pull requests and merges on GitHub
+- Familiar with or interested in learning about how JSON-LD formatting
+- Familiar with or interested in learning about JSON-schema validation rules __(only for pull requests involving PROFILES)__
+
+Interested? [Here's how to review a pull request on a specification](review_a_specification_pull_request)
