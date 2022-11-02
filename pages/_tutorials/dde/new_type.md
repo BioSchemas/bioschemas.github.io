@@ -1,8 +1,11 @@
 ---
 title: Create New Type
+previousTutorial:
+  link: ./update_type
+  title: Type Update
 nextTutorial:
-  link: ./update_profile
-  title: Profile Update
+  link: ./review_a_specification_pull_request
+  title: Review a pull request on a Bioschemas Specification
   
 bioschemas:
   "@context": https://schema.org/
