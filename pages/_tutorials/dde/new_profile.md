@@ -1,5 +1,8 @@
 ---
 title: Create New Profile
+previousTutorial:
+  link: ./update_profile
+  title: Update a Profile
 nextTutorial:
   link: ./update_type
   title: Update a Type
