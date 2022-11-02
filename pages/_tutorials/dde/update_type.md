@@ -1,5 +1,8 @@
 ---
 title: Type Update
+previousTutorial:
+  link: ./update_profile
+  title: Create a New Profile
 nextTutorial:
   link: ./new_type
   title: Create a New Type
@@ -41,7 +44,7 @@ bioschemas:
   version: 0.2
 
 ---
-# Create a new Type on the Bioschemas site
+# Update an existing Type on the Bioschemas site
 
 You have come to a community consensus on updating an existing Bioschemas type. Congratulations! Now you have to update the type on the Bioschemas website.
  Note, if you are comfortable with JSON schema and JSON-LD, you are welcome to copy, paste, and edit the JSON-LD files in the Bioschemas Specifications repository
