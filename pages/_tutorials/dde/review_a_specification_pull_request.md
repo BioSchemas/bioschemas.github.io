@@ -1,8 +1,9 @@
 ---
 title: Review a pull request on a Bioschemas Specification
-nextTutorial:
-  link: ./new_profile
-  title: Create a New Profile
+previousTutorial:
+  link: ./new_type
+  title: Create New Type
+
   
 bioschemas:
   "@context": https://schema.org/
