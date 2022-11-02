@@ -1,5 +1,5 @@
 ---
-title: Review a pull request on a Bioschemas Profile
+title: Review a pull request on a Bioschemas Specification
 nextTutorial:
   link: ./new_profile
   title: Create a New Profile
@@ -16,7 +16,7 @@ bioschemas:
   audience:
   - "@type": Audience
     name: People familiar with GitHub, JSON-LD and JSON-schema representation
-  name: "How to review a pull request for a Bioschemas Profile"
+  name: "How to review a pull request for a Bioschemas Specification"
   author:
   - "@type": Person
     name: "Ginger Tsueng"
@@ -39,19 +39,19 @@ bioschemas:
     "@id": https://bioschemas.org/people/SaharFrikha
     url: https://bioschemas.org/people/SaharFrikha
   dateModified: 2022-11-02
-  description: "In this how-to, we will provide recommendations for reviewing a pull request on a Bioschemas profile and triggering the automated scripts for pushing it onto the website"
+  description: "In this how-to, we will provide recommendations for reviewing a pull request on a Bioschemas specification and triggering the automated scripts for pushing it onto the website"
   keywords: "schemaorg, markup, structured data, bioschemas"
   license: CC-BY 4.0
   version: 0.2
 
 ---
-# Review a pull request for a Bioschemas Profile JSON-LD file
+# Review a pull request for a Bioschemas Specification JSON-LD file
 A community member has created or updated a Bioschemas specification JSON-LD file and created a pull request. Here’s how to help review and merge it, so that the website and the DDE will be updated. 
 
 ### Step 1 ensure you have access to the appropriate channels and repositories
-* You will need access to the '#spec_repo_updates' channel on slack (bioschemas.slack.com)
-* You will need to be able to perform merges in the Bioschemas specification repository (https://github.com/BioSchemas/specifications)
-* You will need to be able to perform merges in the Bioschemas website repository (https://github.com/BioSchemas/bioschemas.github.io)
+* You will need access to the '#spec_repo_updates' channel on [slack](https://bioschemas.slack.com)
+* You will need to be able to perform merges in the [Bioschemas specification repository](https://github.com/BioSchemas/specifications)
+* You will need to be able to perform merges in the [Bioschemas website repository](https://github.com/BioSchemas/bioschemas.github.io)
 
 ### Step 2 Claim the pull request
 * Reply to the slack notification on the pull request to inform others that you will be reviewing it
@@ -62,11 +62,13 @@ A community member has created or updated a Bioschemas specification JSON-LD fil
   * Does it load without error in the DDE?
   * Does it have the correct hierarchy (rdfs:subclassOf)?
   * Does the `@context` have the necessary iri’s?
-  * Are the constraints properly expressed in the `$validation`?
+  * __Only if it is a __profile__: Are the constraints properly expressed in the `$validation`?
 * Verify that the configuration file in the bioschemas website repository is up-to-date
-  * The configuration file needs to be updated __only for brand new profiles__, to update:
+  * The configuration file needs to be updated __only for brand new specifications__, to update:
     * Create a new branch in the Bioschemas website repository with a suitable name to identify the intended outcome of the work, e.g. for a new 0.4 draft of the “example profile” we might have draft-example-0.4.
-    * Find the [`_data/metadata_mapping.csv` file](https://github.com/BioSchemas/bioschemas.github.io/blob/profile-auto-generation/_data/metadata_mapping.csv). If it isn’t, add a row for the profile stating the profile name and working group name.
+    * Find the [`_data/metadata_mapping.csv` file](https://github.com/BioSchemas/bioschemas.github.io/blob/profile-auto-generation/_data/metadata_mapping.csv). If it isn’t, add a row for the specification stating the specification name, working group name, and expected parent.
+      * Note that the expected parent of a profile specification and type specification may be different:
+        * For example: parent for FormalParameter profile is expected to be bioschemastypes:FormalParameter type, but the parent for FormalParameter type is expected to be schema:Intangible
     * Create a pull request from your branch to the parent branch.
 
 ### Step 4 - Merge the pull requests
