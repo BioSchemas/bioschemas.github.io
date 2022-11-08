@@ -3,6 +3,9 @@ layout: use-case
 name: Chemistry Data
 group: chemicals
 active: true
+redirect_from: 
+- /useCases/ChemicalSubstance
+- /useCases/MolecularEntity
 ---
 
 Finding information about chemicals is an open challenge. There are plenty of databases that have been collecting properties in central places, but at the same time there is a long list of databases and smaller and larger website with essential information about these chemicals, their properties, their use cases, that are not currently systematically aggregated. Bioschemas is the door to the long tail of chemical information, opening niche databases and overviews of chemical information found on websites. The `MolecularEntity` and `ChemicalSubstance` profiles will allow us to recognize chemical information.
