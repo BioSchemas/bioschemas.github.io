@@ -169,6 +169,10 @@
             "type": "string",
             "format": "uri"
           },
+          "datafeed": {
+            "type": "string",
+            "format": "uri"
+          },
           "profiles": {
             "type": "array",
             "items": {
