@@ -34,6 +34,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
         <button class="nav-link active" id="nav-site-tab" data-bs-toggle="tab" data-bs-target="#nav-site" type="button" role="tab" aria-controls="nav-site" aria-selected="true">By Site</button>
         <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">By Profile</button>
         <button class="nav-link" id="nav-elixir-tab" data-bs-toggle="tab" data-bs-target="#nav-elixir" type="button" role="tab" aria-controls="nav-elixir" aria-selected="false">By ELIXIR Node</button>
+        <button class="nav-link" id="nav-datafeed-tab" data-bs-toggle="tab" data-bs-target="#nav-datafeed" type="button" role="tab" aria-controls="nav-datafeed" aria-selected="false">By DataFeed</button>
     </div>
 </nav>
 <div class="tab-content py-3 mb-3" id="nav-tabContent">
@@ -335,6 +336,93 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                     </div>
                 </div>
             </div>
+            {%- endfor %}
+        </div>
+    </div>
+    <div class="tab-pane fade show active" id="nav-datafeed" role="tabpanel" aria-labelledby="nav-datafeed-tab">
+        <div class="accordion">
+            {%- assign count = 0 %}
+            {%- for resource in liveDeploys %}
+            {%- if resource.datafeed %}
+            <div class="accordion-item">
+                <h2 class="accordion-header pt-0" id="heading{{count}}">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{count}}" aria-controls="collapse{{count}}">
+                        <div class="d-flex w-100 ">
+                            <div class="text-nowrap"><strong>Profiles: {{resource.profiles | size}}</strong></div>
+                            <div class="w-100 text-center">{{resource.name}}<a href="{{resource.url}}" target="_blank"> <i class="fas fa-external-link-alt"></i></a></div>
+                        </div>
+                    </button>
+                </h2>
+                <div id="collapse{{count}}" class="accordion-collapse collapse" aria-labelledby="heading{{count}}">
+                    <div class="accordion-body">
+                        {%- if resource.keywords or resource.description or resource.sitemap or resource.nodes %}
+                        <ul>
+                            {%- if resource.keywords %}
+                            <li><strong>Keywords:</strong>
+                                {%- for keyword in resource.keywords %}
+                                {%- if forloop.last %}
+                                {{keyword}}
+                                {%- else %}
+                                {{keyword}},
+                                {%- endif %}
+                                {%- endfor %}
+                            </li>
+                            {%- endif %}
+                            {%- if resource.description %}
+                            <li><strong>Description:</strong> {{ resource.description }}</li>
+                            {%- endif %}
+                            {%- if resource.sitemap %}
+                            <li><strong>Sitemap:</strong> <a href="{{ resource.sitemap }}">{{ resource.sitemap }}</a></li>
+                            {%- endif %}
+                            {%- if resource.datafeed %}
+                            <li><strong>DataFeed:</strong> <a href="{{ resource.datafeed }}">{{ resource.datafeed }}</a></li>
+                            {%- endif %}
+                            {%- if resource.nodes %}
+                            <li><strong>Nodes:</strong>
+                                {%- for node in resource.nodes %}
+                                {%- if forloop.last %}
+                                {{node}}
+                                {%- else %}
+                                {{node}},
+                                {%- endif %}
+                                {%- endfor %}
+                            </li>
+                            {%- endif %}
+                        </ul>
+                        {%- endif %}
+                        <h4>Implemented Profiles</h4>
+                        {%- assign sortedProfiles = resource.profiles | sort: "profileName" %}
+                        {%- for profile in sortedProfiles %}
+                        <div class="d-flex p-1 align-content-center align-items-center list-group-item-action rounded">
+                            <div class="w-100 py-2">
+                                {%- assign profileName = '/profiles/' | append: profile.profileName %}
+                                <a class="me-2" href="{{ profileName | relative_url }}">{{profile.profileName}}</a> <span class="badge bg-dark text-light me-2">v{{profile.conformsTo}}</span>
+                                {%- if profile.highlight %}
+                                <small class="text-muted me-2">{{profile.highlight}}</small>
+                                {%- endif %}
+                            </div>
+                            {%- if profile.exampleURL != nil %}
+                            <div class="ps-1">
+                                <a href="{{profile.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.exampleHoverText}}" class="btn btn-sm btn-primary" target="_blank">Page</a>
+                            </div>
+                            {%- endif %}
+                            {%- if profile.exampleURL != nil %}
+                            <div class="ps-1">
+                                <a href="https://validator.schema.org/#url={{profile.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.schemaHoverText}}" class="btn btn-sm btn-primary" target="_blank">SMV</a>
+                            </div>
+                            {%- endif %}
+                            {%- if profile.exampleURL != nil %}
+                            <div class="ps-1">
+                                <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{profile.exampleURL}}&output=jsonld" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.bmuseHoverText}}" class="btn btn-sm btn-primary" target="_blank">BMUSE</a>
+                            </div>
+                            {%- endif %}
+                        </div>
+                        {%- endfor %}
+                    </div>
+                </div>
+            </div>
+            {%- endif %}
+            {%- assign count = count | plus: 1 %}
             {%- endfor %}
         </div>
     </div>
