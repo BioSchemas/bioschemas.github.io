@@ -1201,6 +1201,7 @@
         "ES"
       ],
       "sitemap": "https://bio.tools/api/sitemap.xml",
+      "datafeed": "https://raw.githubusercontent.com/bio-tools/content/master/datasets/bioschemas-dump.ttl",
       "profiles": [
         {
           "profileName": "ComputationalTool",
