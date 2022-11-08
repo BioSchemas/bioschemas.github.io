@@ -72,6 +72,9 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                             {%- if resource.sitemap %}
                             <li><strong>Sitemap:</strong> <a href="{{ resource.sitemap }}">{{ resource.sitemap }}</a></li>
                             {%- endif %}
+                            {%- if resource.datafeed %}
+                            <li><strong>DataFeed:</strong> <a href="{{ resource.datafeed }}">{{ resource.datafeed }}</a></li>
+                            {%- endif %}
                             {%- if resource.nodes %}
                             <li><strong>Nodes:</strong>
                                 {%- for node in resource.nodes %}
