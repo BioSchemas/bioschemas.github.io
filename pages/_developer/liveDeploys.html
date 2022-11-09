@@ -119,7 +119,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
     <div class="tab-pane fade" id="nav-elixir" role="tabpanel" aria-labelledby="nav-elixir-tab">
         <!-- Live deployments by ELIXIR node -->
 
-        {%- assign numSites = 0 %}
+        {%- assign numElixirSites = 0 %}
         {%- assign cdrCount = 0 %}
         {%- assign ddrCount = 0 %}
         {%- assign rirCount = 0 %}
@@ -133,7 +133,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
         -->
         {%- for site in liveDeploys %}
         {%- if site.nodes %}
-        {%- assign numSites = numSites | plus:1 %}
+        {%- assign numElixirSites = numElixirSites | plus:1 %}
         {%- if site.keywords contains "CDR" %}
         {%- assign cdrCount = cdrCount | plus:1 %}
         {%- endif %}
@@ -144,12 +144,13 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
         {%- assign rirCount = rirCount | plus:1 %}
         {%- endif %}
         {%- endif %}
+        <!-- Count number of sites with datafeed as well -->
         {%- if site.datafeed %}
         {%- assign datafeedCount = datafeedCount | plus:1 %}
         {%- endif %}
         {%- endfor %}
 
-        <p><strong>{{numSites}}</strong> ELIXIR resources have Bioschemas markup. Of which there are</p>
+        <p><strong>{{numElixirSites}}</strong> ELIXIR resources have Bioschemas markup. Of which there are</p>
 
         <ul style='text-align: left;'>
             <li>{{cdrCount}} ELIXIR Core Data Resource (<a href="https://elixir-europe.org/platforms/data/core-data-resources">CDR</a>)</li>
