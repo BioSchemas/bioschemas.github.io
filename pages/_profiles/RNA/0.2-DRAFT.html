@@ -6,9 +6,22 @@ dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdraft
 gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20RNA
 group: DNA
 hierarchy: []
-json-ld_url: RNA/jsonld/RNA_v0.1-DRAFT-2019_11_15.json
+json-ld_url: RNA/jsonld/RNA_v0.2-DRAFT.json
 live_deploy: /liveDeploys
 mapping:
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
+  type: ''
+  type_url: ''
 - bsc_description: ''
   cardinality: ONE
   controlled_vocab: ''
@@ -309,19 +322,6 @@ mapping:
 - bsc_description: ''
   cardinality: ONE
   controlled_vocab: ''
-  description: ' URL of a reference Web page that unambiguously indicates the item''s
-    identity. E.g. the URL of the item''s Wikipedia page, Wikidata entry, or official
-    website.'
-  example: ''
-  expected_types:
-  - URL
-  marginality: Optional
-  property: sameAs
-  type: ''
-  type_url: ''
-- bsc_description: ''
-  cardinality: ONE
-  controlled_vocab: ''
   description: ' The taxonomic grouping of the organism that expresses, encodes, or
     in someway related to the BioChemEntity.'
   example: ''
@@ -348,7 +348,7 @@ mapping:
 name: RNA
 parent_type: RNA
 previous_release: ''
-previous_version: ''
+previous_version: 0.1-DRAFT-2019
 redirect_from: '- "/devSpecs/RNA/specification/"
 
   - "/devSpecs/RNA/specification"
@@ -369,13 +369,14 @@ redirect_from: '- "/devSpecs/RNA/specification/"
 
   - "/profiles/RNA"'
 spec_info:
-  description: ' Version: 0.1-DRAFT-2019_11_15. Note, the parent class for this type
-    has been updated to a pending class in schema.org.'
+  description: ' The parent class for this type has been updated to a pending class
+    in schema.org. Changes since 0.1-DRAFT-2019_11_15<ul><li>added sameAs property
+    as recommended</li></ul>. Version: 0.2-DRAFT'
   full_example: https://github.com/BioSchemas/specifications/tree/master/RNA/examples
   official_type: RNA
   title: RNA
-  version: 0.1-DRAFT-2019_11_15
+  version: 0.2-DRAFT
 spec_type: Profile
-status: ''
+status: revision
 use_cases_url: /useCases/RNA
 ---
