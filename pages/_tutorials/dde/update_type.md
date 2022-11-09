@@ -92,10 +92,9 @@ You have come to a community consensus on updating an existing Bioschemas type. 
       * Eg- bioschemastypes:BioSample
       * Eg2- bioschemastypesdrafts:Phenotype
 * __Saving, restoring and submitting work on a property__
-  * Save your work locally regularly 
+  * Save your work locally regularly (it will be saved to your browser's data so clearing your browser's data may cause your files to be lost)
     * Click on "save/load progress" on the top dark gray bar
     * Use the "Select Action" drop down menu to ‘save’ your work
-{% include image.html file="/tutorials/dde/images/save-progress-1.png" alt="Save your progress" width="40%" %}{% include image.html file="/tutorials/dde/images/save-progress-2.png" alt="Save your progress" width="40%" %}
 
 #### 2.4 Download / Save your JSON-LD schema
 * Downloading your DDE-generated schema
