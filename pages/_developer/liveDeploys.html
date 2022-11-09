@@ -41,7 +41,6 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
     <!-- Live deployments by site -->
     <div class="tab-pane fade show active" id="nav-site" role="tabpanel" aria-labelledby="nav-site-tab">
         <div class="accordion">
-            {%- assign count = 0 %}
             {%- include live-deploy-site-info.html allSites = true %}
         </div>
     </div>
@@ -262,7 +261,6 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
     </div>
     <div class="tab-pane fade show active" id="nav-datafeed" role="tabpanel" aria-labelledby="nav-datafeed-tab">
         <div class="accordion">
-            {%- assign count = 0 %}
             {%- include live-deploy-site-info.html allSites = false %}
         </div>
     </div>
