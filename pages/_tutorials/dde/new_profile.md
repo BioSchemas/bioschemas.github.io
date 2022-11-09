@@ -107,7 +107,10 @@ You have come to a community consensus on changes needed to a profile that alrea
 
 {% include image.html file="/tutorials/dde/images/edit_description.jpg" alt="Editing the description of a property" width="30%" %}
 
-* Remember to save your work. The DDE editor will tell you if there is any property that still need validation rules
+* Save your work locally regularly (it will be saved to your browser's data so clearing your browser's data may cause your files to be lost)
+  * Click on "save/load progress" on the top dark gray bar
+  * Use the "Select Action" drop down menu to ‘save’ your work
+* The DDE editor will tell you if there is any property that still need validation rules
 
 {% include image.html file="/tutorials/dde/images/validation_warning.jpg" alt="Validation warning" width="20%" %}
 
