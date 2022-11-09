@@ -189,6 +189,7 @@
     "url": "https://mobidb.org/",
     "nodes": "IT",
     "sitemap": "https://mobidb.org/sitemap.xml",
+    "datafeed": "https://mobidb.org/.well-known/protein",
     "profiles":
     [
         {
@@ -1135,6 +1136,7 @@
       "url": "https://massbank.eu/MassBank/",
       "nodes": "DE",
       "sitemap": "https://massbank.eu/MassBank/sitemapindex.xml",
+      "datafeed": "https://msbi.ipb-halle.de/~sneumann/DataDump.json",
       "profiles": [
         {
           "profileName": "MolecularEntity",
