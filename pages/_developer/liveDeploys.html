@@ -123,6 +123,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
         {%- assign cdrCount = 0 %}
         {%- assign ddrCount = 0 %}
         {%- assign rirCount = 0 %}
+        {%- assign datafeedCount = 0 %}
 
         <!--
           Iterate through sites and manipulate so that nodes are all single strings
@@ -142,6 +143,9 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
         {%- if site.keywords contains "RIR" %}
         {%- assign rirCount = rirCount | plus:1 %}
         {%- endif %}
+        {%- endif %}
+        {%- if site.datafeed %}
+        {%- assign datafeedCount = datafeedCount | plus:1 %}
         {%- endif %}
         {%- endfor %}
 
@@ -260,6 +264,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
         </div>
     </div>
     <div class="tab-pane fade show active" id="nav-datafeed" role="tabpanel" aria-labelledby="nav-datafeed-tab">
+        <p>There are <strong>{{datafeedCount}}</strong> sites with data feeds.</p>
         <div class="accordion">
             {%- include live-deploy-site-info.html allSites = false %}
         </div>
