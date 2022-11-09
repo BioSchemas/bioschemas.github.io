@@ -101,7 +101,9 @@ You have come to a community consensus on changes needed to a profile that alrea
 
 {% include image.html file="/tutorials/dde/images/edit_description.jpg" alt="Editing the description of a property" width="30%" %}
 
-* Remember to save your work. The DDE editor will tell you if there is any property that still need validation rules
+* Remember to save your work. You can save or load it locally to your browser's data at any time.
+{% include image.html file="/tutorials/dde/images/save-progress-1.png" alt="Save your progress" width="40%" %}{% include image.html file="/tutorials/dde/images/save-progress-2.png" alt="Save your progress" width="40%" %}
+* The DDE editor will tell you if there is any property that still need validation rules
 
 {% include image.html file="/tutorials/dde/images/validation_warning.jpg" alt="Validation warning" width="20%" %}
 
