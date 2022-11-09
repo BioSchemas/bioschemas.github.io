@@ -94,13 +94,15 @@ You have come to a community consensus on creating a new type. Congratulations! 
       * Eg- bioschemastypes:BioSample
       * Eg2- bioschemastypesdrafts:Phenotype
 * __Saving, restoring and submitting work on a property__
-  * Save your work locally regularly 
+  * Save your work locally regularly (it will be saved to your browser's data so clearing your browser's data may cause your files to be lost)
     * Click on "save/load progress" on the top dark gray bar
     * Use the "Select Action" drop down menu to ‘save’ your work
+{% include image.html file="/tutorials/dde/images/save-progress-1.png" alt="Save your progress" width="40%" %}{% include image.html file="/tutorials/dde/images/save-progress-2.png" alt="Save your progress" width="40%" %}
 
 #### 2.4 Download / Save your JSON-LD schema
 * Downloading your DDE-generated schema
   * Click the download button 
+{% include image.html file="/tutorials/dde/images/download_schema.png" alt="Download schema" width="80%" %}
   * Name your DDE-generated file, and click download
   * Your JSON-LD file should follow the appropriate naming convention
   ```
@@ -115,3 +117,7 @@ You have come to a community consensus on creating a new type. Congratulations! 
 ### Step 3 - Save your JSON-LD to the Bioschemas Specification Repository and create a pull request
 * Go to the [Bioschemas Specification repository](https://github.com/BioSchemas/specifications) 
 * Create a [new branch](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/viewing-branches-in-your-repository) or [fork the repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+* In your branch or fork, and find your specification
+* Add your JSON-LD to the `jsonld` directory for your specification
+* Create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) for your fork or branch
+  * Include any issues you encountered from your test that you were unable to address

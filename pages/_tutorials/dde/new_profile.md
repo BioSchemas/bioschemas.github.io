@@ -107,7 +107,12 @@ You have come to a community consensus on changes needed to a profile that alrea
 
 {% include image.html file="/tutorials/dde/images/edit_description.jpg" alt="Editing the description of a property" width="30%" %}
 
-* Remember to save your work. The DDE editor will tell you if there is any property that still need validation rules
+* __Saving, restoring and submitting work on a property__
+  * Save your work locally regularly (it will be saved to your browser's data so clearing your browser's data may cause your files to be lost)
+    * Click on "save/load progress" on the top dark gray bar
+    * Use the "Select Action" drop down menu to ‘save’ your work
+{% include image.html file="/tutorials/dde/images/save-progress-1.png" alt="Save your progress" width="40%" %}{% include image.html file="/tutorials/dde/images/save-progress-2.png" alt="Save your progress" width="40%" %}
+* The DDE editor will tell you if there is any property that still need validation rules
 
 {% include image.html file="/tutorials/dde/images/validation_warning.jpg" alt="Validation warning" width="20%" %}
 
@@ -116,6 +121,7 @@ You have come to a community consensus on changes needed to a profile that alrea
 #### 2.5 Download / Save your JSON-LD schema
 * Downloading your DDE-generated schema
   * Click the download button 
+{% include image.html file="/tutorials/dde/images/download_schema.png" alt="Download schema" width="80%" %}
   * Name your DDE-generated file, and click download
   * Your JSON-LD file should follow the appropriate naming convention
   ```
