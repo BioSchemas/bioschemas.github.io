@@ -99,6 +99,7 @@ You have come to a community consensus on updating an existing Bioschemas type. 
 #### 2.4 Download / Save your JSON-LD schema
 * Downloading your DDE-generated schema
   * Click the download button 
+{% include image.html file="/tutorials/dde/images/download_schema.png" alt="Download schema" width="80%" %}
   * Name your DDE-generated file, and click download
   * Your JSON-LD file should follow the appropriate naming convention
   ```
