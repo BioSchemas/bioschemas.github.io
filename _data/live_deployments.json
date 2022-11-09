@@ -593,16 +593,19 @@
         {
           "profileName": "MolecularEntity",
           "conformsTo": "0.5-RELEASE",
+          "exampleURL": "http://",
           "highlight": "Over 1.9 million molecular entities"
         },
         {
           "profileName": "Protein",
           "conformsTo": "0.12-DRAFT",
+          "exampleURL": "http://",
           "highlight": "Over 8.5 thousand proteins"
         },
         {
           "profileName": "Taxon",
           "conformsTo": "0.6-RELEASE",
+          "exampleURL": "http://",
           "highlight": "Over 1.2 thousand taxa"
         }
       ]
@@ -1694,6 +1697,7 @@
         {
           "profileName": "MolecularEntity",
           "conformsTo": "0.5-RELEASE",
+          "exampleURL": "http://",
           "highlight": "Over 12,000 chemicals"
         }
       ]
