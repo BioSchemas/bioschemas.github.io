@@ -1,378 +1,374 @@
 ---
-redirect_from:
-- "/devSpecs/RNA/specification/"
-- "/devSpecs/RNA/specification"
-- "/devSpecs/RNA/"
-- "/devSpecs/RNA"
-- "/specifications/drafts/RNA/"
-- "/specifications/drafts/RNA"
-- "/specifications/RNA/"
-- "/specifications/RNA"
-- "/profiles/RNA/"
-- "/profiles/RNA"
-
-name: RNA
-
-previous_version:
-previous_release:
-
-status: revision # Change to revision if you are working on an update
-spec_type: Profile
-group: DNA
-use_cases_url: /useCases/DNA
-cross_walk_url: https://docs.google.com/spreadsheets/d/1N2_6iLktDXlcgkuXJdpW4UKg9M9Q08VfMqtDDS5tEp4/edit#gid=292464567
-gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20RNA
-live_deploy: /liveDeploys
-
-parent_type: BioChemEntity
-hierarchy:
-- Thing
-- BioChemEntity
-- RNA
-
 # spec_info content generated using GOWeb
 # DO NOT MANUALLY EDIT THE CONTENT
-spec_info:
-  title: RNA
-  subtitle: ""
-  description: ""
-  version: 0.1-DRAFT-2019_11_15
-  version_date: 20191115T181208
-  official_type: RNA
-  full_example: ""
+cross_walk_url: https://docs.google.com/spreadsheets/d/1N2_6iLktDXlcgkuXJdpW4UKg9M9Q08VfMqtDDS5tEp4/edit#gid=292464567
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:RNA
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20RNA
+group: DNA
+hierarchy: []
+json-ld_url: RNA/jsonld/RNA_v0.1-DRAFT-2019_11_15.json
+live_deploy: /liveDeploys
 mapping:
-- property: additionalType
-  expected_types:
-  - URL
-  description: An additional type for the item, typically used for adding more specific
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' An additional type for the item, typically used for adding more specific
     types from external vocabularies in microdata syntax. This is a relationship between
     something and a class that the thing is in. In RDFa syntax, it is better to use
-    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
+    the native RDFa syntax - the ''typeof'' attribute - for multiple types. Schema.org
     tools may have only weaker understanding of extra types, in particular those defined
-    externally.
-  type: ""
-  type_url: ""
-  bsc_description: ""
+    externally.'
+  example: ''
+  expected_types:
+  - URL
   marginality: Optional
+  property: additionalType
+  type: ''
+  type_url: ''
+- bsc_description: ''
   cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: alternateName
+  controlled_vocab: ''
+  description: ' An alias for the item.'
+  example: ''
   expected_types:
   - Text
-  description: An alias for the item.
-  type: ""
-  type_url: ""
-  bsc_description: ""
   marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-- property: associatedDisease
-  expected_types:
-  - MedicalCondition
-  - PropertyValue
-  - URL
-  description: Disease associated to this BioChemEntity. Such disease can be a MedicalCondition
+  property: alternateName
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' Disease associated to this BioChemEntity. Such disease can be a MedicalCondition
     or a URL. If you want to add an evidence supporting the association, please use
-    PropertyValue.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-- property: bioChemInteraction
+    PropertyValue.'
+  example: ''
   expected_types:
-  - BioChemEntity
-  description: A BioChemEntity that is known to interact with this item.
-  type: ""
-  type_url: ""
-  bsc_description: ""
+  - URL
+  - Propertyvalue
+  - MedicalCondition
   marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-- property: bioChemSimilarity
-  expected_types:
-  - BioChemEntity
-  description: A similar molecular entity, e.g., obtained by fingerprint similarity
-    algorithms.
-  type: ""
-  type_url: ""
-  bsc_description: ""
+  property: associatedDisease
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ''
+  controlled_vocab: ''
+  description: ' A BioChemEntity that is known to interact with this item.'
+  example: ''
+  expected_types: []
   marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-- property: biologicalRole
-  expected_types:
-  - DefinedTerm
-  description: A role played by the molecular entity within a biological context.
-  type: ""
-  type_url: ""
-  bsc_description: ""
+  property: bioChemInteraction
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ''
+  controlled_vocab: ''
+  description: ' A similar molecular entity, e.g., obtained by fingerprint similarity
+    algorithms.'
+  example: ''
+  expected_types: []
   marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-- property: description
-  expected_types:
-  - Text
-  description: A description of the item.
-  type: ""
-  type_url: ""
-  bsc_description: ""
+  property: bioChemSimilarity
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ''
+  controlled_vocab: ''
+  description: ' A role played by the molecular entity within a biological context.'
+  example: ''
+  expected_types: []
   marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-- property: disambiguatingDescription
+  property: biologicalRole
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' A description of the item.'
+  example: ''
   expected_types:
   - Text
-  description: A sub property of description. A short description of the item used
+  marginality: Optional
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' A sub property of description. A short description of the item used
     to disambiguate from other, similar items. Information from other properties (in
-    particular, name) may be necessary for the description to be useful for disambiguation.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-- property: encodesBioChemEntity
-  expected_types:
-  - BioChemEntity
-  description: |-
-    Another BioChemEntity encoded by this one.
-    Inverse property:isEncodedByBioChemEntity.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-- property: hasBioChemEntityPart
-  expected_types:
-  - BioChemEntity
-  description: |-
-    Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.
-    Inverse property:isPartOfBioChemEntity.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-- property: hasMolecularFunction
-  expected_types:
-  - DefinedTerm
-  - PropertyValue
-  - URL
-  description: Molecular function performed by this BioChemEntity; please use PropertyValue
-    if you want to include any evidence.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-- property: hasRepresentation
-  expected_types:
-  - PropertyValue
-  - Text
-  - URL
-  description: A common representation such as a protein sequence or chemical structure
-    for this entity. For images use schema.org/image.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-- property: hasSequence
+    particular, name) may be necessary for the description to be useful for disambiguation.'
+  example: ''
   expected_types:
   - Text
-  description: Nucleotide or amino acid sequence.
-  type: ""
-  type_url: ""
-  bsc_description: ""
   marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-- property: hasSequenceAnnotation
+  property: disambiguatingDescription
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ''
+  controlled_vocab: ''
+  description: ' Another BioChemEntity encoded by this one.
+
+    Inverse property:isEncodedByBioChemEntity.'
+  example: ''
+  expected_types: []
+  marginality: Optional
+  property: encodesBioChemEntity
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ''
+  controlled_vocab: ''
+  description: ' Indicates a BioChemEntity that (in some sense) has this BioChemEntity
+    as a part.
+
+    Inverse property:isPartOfBioChemEntity.'
+  example: ''
+  expected_types: []
+  marginality: Optional
+  property: hasBioChemEntityPart
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' Molecular function performed by this BioChemEntity; please use PropertyValue
+    if you want to include any evidence.'
+  example: ''
   expected_types:
+  - URL
+  - Definedterm
   - PropertyValue
+  marginality: Optional
+  property: hasMolecularFunction
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' A common representation such as a protein sequence or chemical structure
+    for this entity. For images use schema.org/image.'
+  example: ''
+  expected_types:
+  - URL
+  - Text
+  - PropertyValue
+  marginality: Optional
+  property: hasRepresentation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' Nucleotide or amino acid sequence.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: hasSequence
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' Pointer to a sequence annotation; please use PropertyValue if you
+    want to include any evidence.'
+  example: ''
+  expected_types:
   - SequenceAnnotation
-  description: Pointer to a sequence annotation; please use PropertyValue if you want
-    to include any evidence.
-  type: ""
-  type_url: ""
-  bsc_description: ""
+  - Propertyvalue
   marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-- property: identifier
+  property: hasSequenceAnnotation
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The identifier property represents any kind of identifier for any
+    kind ofThing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. Seebackground notesfor more details.'
+  example: ''
   expected_types:
-  - PropertyValue
-  - Text
   - URL
-  description: The identifier property represents any kind of identifier for any kind
-    ofThing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties
-    for representing many of these, either as textual strings or as URL (URI) links.
-    Seebackground notesfor more details.
-  type: ""
-  type_url: ""
-  bsc_description: ""
+  - Text
+  - PropertyValue
   marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-- property: image
+  property: identifier
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' An image of the item. This can be aURLor a fully describedImageObject.'
+  example: ''
   expected_types:
   - ImageObject
   - URL
-  description: An image of the item. This can be aURLor a fully describedImageObject.
-  type: ""
-  type_url: ""
-  bsc_description: ""
   marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-- property: isCodingRNA
+  property: image
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' Indicates whether or not this Rna is a coding one.'
+  example: ''
   expected_types:
   - Boolean
-  description: Indicates whether or not this RNA is a coding one.
-  type: ""
-  type_url: ""
-  bsc_description: ""
   marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-- property: isEncodedByBioChemEntity
+  property: isCodingRNA
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' Another BioChemEntity encoding by this one.
+
+    Inverse property:encodesBioChemEntity.'
+  example: ''
   expected_types:
-  - DNA
   - Gene
+  - Dna
   - RNA
-  description: |-
-    Another BioChemEntity encoding by this one.
-    Inverse property:encodesBioChemEntity.
-  type: ""
-  type_url: ""
-  bsc_description: ""
   marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-- property: isInvolvedInBiologicalProcess
+  property: isEncodedByBioChemEntity
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' Biological process this BioChemEntity is involved in; please use
+    PropertyValue if you want to include any evidence.'
+  example: ''
   expected_types:
-  - DefinedTerm
-  - PropertyValue
   - URL
-  description: Biological process this BioChemEntity is involved in; please use PropertyValue
-    if you want to include any evidence.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-- property: isLocatedInSubcellularLocation
-  expected_types:
-  - DefinedTerm
+  - Definedterm
   - PropertyValue
+  marginality: Optional
+  property: isInvolvedInBiologicalProcess
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' Subcellular location where this BioChemEntity is located; please
+    use PropertyValue if you want to include any evidence.'
+  example: ''
+  expected_types:
   - URL
-  description: Subcellular location where this BioChemEntity is located; please use
-    PropertyValue if you want to include any evidence.
-  type: ""
-  type_url: ""
-  bsc_description: ""
+  - Definedterm
+  - PropertyValue
   marginality: Optional
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: isMatchedBy
-  expected_types:
-  - SequenceMatchingModel
-  description: A model matching this BioChemEntity.
-  type: ""
-  type_url: ""
-  bsc_description: ""
+  property: isLocatedInSubcellularLocation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ''
+  controlled_vocab: ''
+  description: ' A model matching this BioChemEntity.'
+  example: ''
+  expected_types: []
   marginality: Optional
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: isPartOfBioChemEntity
-  expected_types:
-  - BioChemEntity
-  description: |-
-    Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
-    Inverse property:hasBioChemEntityPart.
-  type: ""
-  type_url: ""
-  bsc_description: ""
+  property: isMatchedBy
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: ''
+  controlled_vocab: ''
+  description: ' Indicates a BioChemEntity that is (in some sense) a part of this
+    BioChemEntity.
+
+    Inverse property:hasBioChemEntityPart.'
+  example: ''
+  expected_types: []
   marginality: Optional
+  property: isPartOfBioChemEntity
+  type: ''
+  type_url: ''
+- bsc_description: ''
   cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: name
+  controlled_vocab: ''
+  description: ' The name of the item.'
+  example: ''
   expected_types:
   - Text
-  description: The name of the item.
-  type: ""
-  type_url: ""
-  bsc_description: ""
   marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-- property: sameAs
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' URL of a reference Web page that unambiguously indicates the item''s
+    identity. E.g. the URL of the item''s Wikipedia page, Wikidata entry, or official
+    website.'
+  example: ''
   expected_types:
   - URL
-  description: URL of a reference Web page that unambiguously indicates the item's
-    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
-    website.
-  type: ""
-  type_url: ""
-  bsc_description: ""
   marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-- property: taxonomicRange
+  property: sameAs
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The taxonomic grouping of the organism that expresses, encodes, or
+    in someway related to the BioChemEntity.'
+  example: ''
   expected_types:
-  - DefinedTerm
+  - Text
   - Taxon
-  - Text
   - URL
-  description: The taxonomic grouping of the organism that expresses, encodes, or
-    in someway related to the BioChemEntity.
-  type: ""
-  type_url: ""
-  bsc_description: ""
+  - Definedterm
   marginality: Optional
+  property: taxonomicRange
+  type: ''
+  type_url: ''
+- bsc_description: ''
   cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: url
+  controlled_vocab: ''
+  description: ' URL of the item.'
+  example: ''
   expected_types:
   - URL
-  description: URL of the item.
-  type: ""
-  type_url: ""
-  bsc_description: ""
   marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
+  property: url
+  type: ''
+  type_url: ''
+name: RNA
+parent_type: RNA
+previous_release: ''
+previous_version: 0.2-DRAFT
+redirect_from: '- "/devSpecs/RNA/specification/"
+
+  - "/devSpecs/RNA/specification"
+
+  - "/devSpecs/RNA/"
+
+  - "/devSpecs/RNA"
+
+  - "/specifications/drafts/RNA/"
+
+  - "/specifications/drafts/RNA"
+
+  - "/specifications/RNA/"
+
+  - "/specifications/RNA"
+
+  - "/profiles/RNA/"
+
+  - "/profiles/RNA"'
+spec_info:
+  description: ' Version: 0.1-DRAFT-2019_11_15. Note, the parent class for this type
+    has been updated to a pending class in schema.org.'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/RNA/examples
+  official_type: RNA
+  title: RNA
+  version: 0.1-DRAFT-2019_11_15
+spec_type: Profile
+status: ''
+use_cases_url: /useCases/RNA
 ---
