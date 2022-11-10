@@ -35,7 +35,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
         <button class="nav-link active" id="nav-site-tab" data-bs-toggle="tab" data-bs-target="#nav-site" type="button" role="tab" aria-controls="nav-site" aria-selected="true">By Site</button>
         <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">By Profile</button>
         <button class="nav-link" id="nav-elixir-tab" data-bs-toggle="tab" data-bs-target="#nav-elixir" type="button" role="tab" aria-controls="nav-elixir" aria-selected="false">By ELIXIR Node</button>
-        <button class="nav-link" id="nav-datafeed-tab" data-bs-toggle="tab" data-bs-target="#nav-datafeed" type="button" role="tab" aria-controls="nav-datafeed" aria-selected="false">By DataFeed</button>
+        <button class="nav-link" id="nav-datadump-tab" data-bs-toggle="tab" data-bs-target="#nav-datadump" type="button" role="tab" aria-controls="nav-datadump" aria-selected="false">By DataDump</button>
     </div>
 </nav>
 <div class="tab-content py-3 mb-3" id="nav-tabContent">
@@ -124,7 +124,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
         {%- assign cdrCount = 0 %}
         {%- assign ddrCount = 0 %}
         {%- assign rirCount = 0 %}
-        {%- assign datafeedCount = 0 %}
+        {%- assign datadumpCount = 0 %}
 
         <!--
           Iterate through sites and manipulate so that nodes are all single strings
@@ -145,9 +145,9 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
         {%- assign rirCount = rirCount | plus:1 %}
         {%- endif %}
         {%- endif %}
-        <!-- Count number of sites with datafeed as well -->
-        {%- if site.datafeed %}
-        {%- assign datafeedCount = datafeedCount | plus:1 %}
+        <!-- Count number of sites with datadump as well -->
+        {%- if site.datadump %}
+        {%- assign datadumpCount = datadumpCount | plus:1 %}
         {%- endif %}
         {%- endfor %}
 
@@ -190,7 +190,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                                 </h2>
                                 <div id="node_resource_collapse{{cnode}}_{{node_resource_count}}" class="accordion-collapse collapse" aria-labelledby="node_resource_heading{{cnode}}_{{node_resource_count}}">
                                     <div class="accordion-body">
-                                        {%- if resource.keywords or resource.description or resource.sitemap or resource.datafeed or resource.nodes %}
+                                        {%- if resource.keywords or resource.description or resource.sitemap or resource.datadump or resource.nodes %}
                                         <ul>
                                             {%- if resource.keywords %}
                                             <li><strong>Keywords:</strong>
@@ -209,8 +209,8 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                                             {%- if resource.sitemap %}
                                             <li><strong>Sitemap:</strong> <a href="{{ resource.sitemap }}">{{ resource.sitemap }}</a></li>
                                             {%- endif %}
-                                            {%- if resource.datafeed %}
-                                            <li><strong>DataFeed:</strong> <a href="{{ resource.datafeed }}">{{ resource.datafeed }}</a></li>
+                                            {%- if resource.datadump %}
+                                            <li><strong>DataDump:</strong> <a href="{{ resource.datadump }}">{{ resource.datadump }}</a></li>
                                             {%- endif %}
                                             {%- if resource.nodes %}
                                             <li><strong>Nodes:</strong>
@@ -265,8 +265,8 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
             {%- endfor %}
         </div>
     </div>
-    <div class="tab-pane fade show active" id="nav-datafeed" role="tabpanel" aria-labelledby="nav-datafeed-tab">
-        <p>There are <strong>{{datafeedCount}}</strong> sites with data feeds.</p>
+    <div class="tab-pane fade show active" id="nav-datadump" role="tabpanel" aria-labelledby="nav-datadump-tab">
+        <p>There are <strong>{{datadumpCount}}</strong> sites with data feeds.</p>
         <div class="accordion">
             {%- include live-deploy-site-info.html allSites = false %}
         </div>

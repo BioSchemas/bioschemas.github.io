@@ -169,7 +169,7 @@
             "type": "string",
             "format": "uri"
           },
-          "datafeed": {
+          "datadump": {
             "type": "string",
             "format": "uri"
           },

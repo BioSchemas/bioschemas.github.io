@@ -189,7 +189,7 @@
     "url": "https://mobidb.org/",
     "nodes": "IT",
     "sitemap": "https://mobidb.org/sitemap.xml",
-    "datafeed": "https://mobidb.org/.well-known/protein",
+    "datadump": "https://mobidb.org/.well-known/protein",
     "profiles":
     [
         {
@@ -588,7 +588,7 @@
       "description": "A mirror of ChEMBL content captured using Bioschemas generated from ChEMBL-RDF hosted by Maastricht University. See <a href='https://github.com/ammar257ammar/SWAT4HCLS2022-ChEMBL-bioschemas-mapping/tree/v1.0.0'>GitHub repo</a> for more details.",
       "url": "https://github.com/ammar257ammar/SWAT4HCLS2022-ChEMBL-bioschemas-mapping/tree/v1.0.0",
       "nodes": "NL",
-      "datafeed": "https://github.com/ammar257ammar/SWAT4HCLS2022-ChEMBL-bioschemas-mapping/releases/download/v1.0.0/json-ld-output.zip",
+      "datadump": "https://github.com/ammar257ammar/SWAT4HCLS2022-ChEMBL-bioschemas-mapping/releases/download/v1.0.0/json-ld-output.zip",
       "profiles": [
         {
           "profileName": "MolecularEntity",
@@ -1052,7 +1052,7 @@
       "name": "WorkflowHub",
       "url": "https://workflowhub.eu/",
       "nodes": "UK",
-      "datafeed": "https://workflowhub.eu/workflows.bioschemas.json",
+      "datadump": "https://workflowhub.eu/workflows.bioschemas.json",
       "profiles": [
         {
           "profileName": "DataCatalog",
@@ -1164,7 +1164,7 @@
       "url": "https://massbank.eu/MassBank/",
       "nodes": "DE",
       "sitemap": "https://massbank.eu/MassBank/sitemapindex.xml",
-      "datafeed": "https://msbi.ipb-halle.de/~sneumann/DataDump.json",
+      "datadump": "https://msbi.ipb-halle.de/~sneumann/DataDump.json",
       "profiles": [
         {
           "profileName": "MolecularEntity",
@@ -1231,7 +1231,7 @@
         "ES"
       ],
       "sitemap": "https://bio.tools/api/sitemap.xml",
-      "datafeed": "https://raw.githubusercontent.com/bio-tools/content/master/datasets/bioschemas-dump.ttl",
+      "datadump": "https://raw.githubusercontent.com/bio-tools/content/master/datasets/bioschemas-dump.ttl",
       "profiles": [
         {
           "profileName": "ComputationalTool",
@@ -1693,7 +1693,7 @@
       "description": "An unofficial version of Rhea content captured using Bioschemas. Rhea is an expert-curated knowledgebase of chemical and transport reactions of biological interest - and the standard for enzyme and transporter annotation in UniProtKB. Rhea uses the chemical dictionary ChEBI (Chemical Entities of Biological Interest) to describe reaction participants.",
       "url": "https://www.rhea-db.org/",
       "nodes": ["CH", "NL"],
-      "datafeed": "https://bioschemas.slack.com/files/U013U0WAKHV/F049JSR3EDD/rhea.ttl",
+      "datadump": "https://bioschemas.slack.com/files/U013U0WAKHV/F049JSR3EDD/rhea.ttl",
       "profiles": [
         {
           "profileName": "MolecularEntity",
