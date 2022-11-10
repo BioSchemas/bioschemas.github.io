@@ -1,0 +1,227 @@
+---
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+cross_walk_url: https://docs.google.com/spreadsheets/d/1FSz3Wn3pgUQl-fFx-mpz_qiuhxPJGMYGXRAEaZ9aPrU/
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:SemanticTextAnnotation
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20SemanticTextAnnotation
+group: publications
+hierarchy: []
+json-ld_url: SemanticTextAnnotation/jsonld/SemanticTextAnnotation_v0.3-DRAFT.json
+live_deploy: /liveDeploys
+mapping:
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: "Ontology terms associated to this annotation. On the DefinedTerm,\
+    \ use additionalType to link to a Unified Medical Language System (UMLS) semantic\
+    \ type (TUI) or group, and sameAs to link to the corresponding concept unique\
+    \ identifier (CUI), if available.\nNote: Bioschemas recommends using DefinedTerm\
+    \ rather than Thing (as specified in schema.org) Indicates the primary entity\
+    \ described in some page or other CreativeWork.\n Inverse property: mainEntityOfPage."
+  example: ''
+  expected_types:
+  - DefinedTerm
+  marginality: Minimum
+  property: mainEntity
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Expression found in the text corresponding to this annotation. The
+    textual content of this CreativeWork.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: text
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: "ScholarlyArticle where this annotation is located. It is also possible\
+    \ to link from the ScholarlyArticle to the SemanticTextAnnotation via about\n\
+    Note: For the Bioschemas case, the preferred property range is ScholarlyArticle\
+    \ A CreativeWork or Event about this Thing. \nInverse property: about"
+  example: ''
+  expected_types:
+  - CreativeWork
+  - Event
+  marginality: Recommended
+  property: subjectOf
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: URL of additional sources for the dataset
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Number of times this annotation is found in the associated scholarly
+    article. The number of comments this CreativeWork (e.g. Article, Question or Answer)
+    has received. This is most applicable to works published in Web sites with commenting
+    system; additional comments may exist elsewhere.
+  example: ''
+  expected_types:
+  - Integer
+  marginality: Optional
+  property: commentCount
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' The creator/author of this CreativeWork. This is the same as the
+    Author property for CreativeWork.'
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Optional
+  property: creator
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The date on which the CreativeWork was created or the item was added
+    to a DataFeed.'
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Optional
+  property: dateCreated
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The date on which the CreativeWork was most recently modified or
+    when the item''s entry was modified within a DataFeed.'
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Optional
+  property: dateModified
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' Date of first broadcast/publication.'
+  example: ''
+  expected_types:
+  - Date
+  marginality: Optional
+  property: datePublished
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: If available. The identifier property represents any kind of identifier
+    for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides
+    dedicated properties for representing many of these, either as textual strings
+    or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  example: ''
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Optional
+  property: identifier
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The language of the content or performance or used in an action.
+    Please use one of the language codes from the IETF BCP 47 standard. See also availableLanguage.
+    Supersedes language.'
+  example: ''
+  expected_types:
+  - Language
+  - Text
+  marginality: Optional
+  property: inLanguage
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: "Dataset or collection aggregating this annotation Indicates an item\
+    \ or CreativeWork that this item, or CreativeWork (in some sense), is part of.\n\
+    \ Inverse property: hasPart."
+  example: ''
+  expected_types:
+  - CreativeWork
+  - PublicationIssue
+  - Publicationvolume
+  - Trip
+  - journal
+  marginality: Optional
+  property: isPartOf
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' The position of an item in a series or sequence of items.'
+  example: ''
+  expected_types:
+  - Integer
+  - Text
+  marginality: Optional
+  property: position
+  type: ''
+  type_url: ''
+name: SemanticTextAnnotation
+parent_type: CreativeWork
+previous_release: ''
+previous_version: 0.2-DRAFT-2020_12_03
+redirect_from: '- "/devSpecs/SemanticTextAnnotation/specification/"
+
+  - "/devSpecs/SemanticTextAnnotation/specification"
+
+  - "/devSpecs/SemanticTextAnnotation/"
+
+  - "/devSpecs/SemanticTextAnnotation"
+
+  - "/specifications/drafts/SemanticTextAnnotation/"
+
+  - "/specifications/drafts/SemanticTextAnnotation"
+
+  - "/specifications/SemanticTextAnnotation/"
+
+  - "/specifications/SemanticTextAnnotation"
+
+  - "/profiles/SemanticTextAnnotation/"
+
+  - "/profiles/SemanticTextAnnotation"'
+spec_info:
+  description: 'Bioschemas profile, based on Biotea model, describing a semantic annotation
+    associated to a piece of text in a ScholarlyArticle in Life Sciences. A SemanticTextAnnotation
+    corresponds to an expression identified in a ScholarlyArticle and associated to
+    an ontology term.<h4>Summary of Changes</h4>    Changes since previous draft 0.2-DRAFT-2020_12_03
+    of the SemanticAnnotation profile:    <ul>  <li>added sameAs property as recommended</li>
+    </ul> Version: 0.3-DRAFT'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/SemanticTextAnnotation/examples
+  official_type: CreativeWork
+  title: SemanticTextAnnotation
+  version: 0.3-DRAFT
+spec_type: Profile
+status: revision
+use_cases_url: /useCases/SemanticTextAnnotation
+---
