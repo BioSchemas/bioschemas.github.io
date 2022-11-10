@@ -1,265 +1,260 @@
 ---
-redirect_from:
-- "/profiles/Workflow/0.2-DRAFT-2019_11_29/"
-
-name: Workflow
-
-previous_version: 0.1-DRAFT-2019_02_08
-previous_release:
-
-status: revision
-spec_type: Profile
-group: workflow
-use_cases_url:
-cross_walk_url: https://docs.google.com/spreadsheets/d/1Z3eQrj5Gbs3WGVd1cXUzpL6X1v8Y8cWg-oe2nKzXgzo/edit
-gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Workflow
-live_deploy: ''
-
-parent_type: SoftwareSourceCode
-hierarchy:
-- Thing
-- CreativeWork
-- SoftwareSourceCode
-
 # spec_info content generated using GOWeb
 # DO NOT MANUALLY EDIT THE CONTENT
-spec_info:
-  title: Workflow
-  subtitle: Bioschemas specification for describing a workflow in the Life Sciences
-  description: A workflow consists of an orchestrated and repeatable pattern of activity
-    enabled by the systematic organization of resources into processes that transform
-    materials, provide services, or process information. It can be depicted as a sequence
-    of operations, the work of a person or group, the work of an organization of staff,
-    or one or more simple or complex mechanisms. (source Wikipedia.org)
-  version: 0.2-DRAFT-2019_11_29
-  version_date: 20191129T093338
-  official_type: 'http://schema.org/Workflow '
-  full_example: pending
+cross_walk_url: https://docs.google.com/spreadsheets/d/1E_wZV77rHntJ6ismn7f-Gyng3XAEGY415xNiqwoihLM/
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:ComputationalWorkflow
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20ComputationalWorkflow
+group: workflow
+hierarchy: []
+json-ld_url: ComputationalWorkflow/jsonld/ComputationalWorkflow_v0.2-DRAFT-2019_11_29.json
+live_deploy: /liveDeploys
 mapping:
-- property: author
-  expected_types:
-  - Organization
-  - Person
-  description: The author of this content or rating. Please note that author is special
-    in that HTML 5 provides a special mechanism for indicating authorship via the
-    rel tag. That is equivalent to this and may be used interchangeably.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Minimum
+- bsc_description: ''
   cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: contributor
+  controlled_vocab: ''
+  description: ' The author of this content or rating. Please note that author is
+    special in that HTML 5 provides a special mechanism for indicating authorship
+    via the rel tag. That is equivalent to this and may be used interchangeably.'
+  example: ''
   expected_types:
   - Organization
   - Person
-  description: A secondary contributor to the CreativeWork or Event.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Recommended
+  marginality: Minimum
+  property: author
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The date on which the CreativeWork was created or the item was added
+    to a DataFeed.'
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Minimum
+  property: dateCreated
+  type: ''
+  type_url: ''
+- bsc_description: ''
   cardinality: MANY
-  controlled_vocab: ""
-  example: ""
-- property: dateCreated
+  controlled_vocab: ''
+  description: ' '
+  example: ''
   expected_types:
-  - Date
-  - DateTime
-  description: The date on which the CreativeWork was created or the item was added
-    to a DataFeed.
-  type: ""
-  type_url: ""
-  bsc_description: ""
+  - Thing
   marginality: Minimum
+  property: input
+  type: ''
+  type_url: ''
+- bsc_description: ''
   cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: dateModified
-  expected_types:
-  - Date
-  - DateTime
-  description: The date on which the CreativeWork was most recently modified or when
-    the item's entry was modified within a DataFeed.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: description
+  controlled_vocab: ''
+  description: ' The name of the item.'
+  example: ''
   expected_types:
   - Text
-  description: A description of the item.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Recommended
+  marginality: Minimum
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' '
+  example: ''
+  expected_types:
+  - Thing
+  marginality: Minimum
+  property: output
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' The computer programming language.
+
+    '
+  example: ''
+  expected_types:
+  - ComputerLanguage
+  - Text
+  marginality: Minimum
+  property: programmingLanguage
+  type: ''
+  type_url: ''
+- bsc_description: ''
   cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: hasPart
+  controlled_vocab: ''
+  description: ' URL of the item.'
+  example: ''
+  expected_types:
+  - URL
+  marginality: Minimum
+  property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' A secondary contributor to the CreativeWork or Event.'
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Recommended
+  property: contributor
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' A description of the item.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' Indicates an item or CreativeWork that is part of this item, or CreativeWork
+    (in some sense).
+
+    Inverse property: isPartOf.'
+  example: ''
   expected_types:
   - CreativeWork
-  description: |-
-    Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).
-    Inverse property: isPartOf.
-  type: ""
-  type_url: ""
-  bsc_description: ""
   marginality: Recommended
+  property: hasPart
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' Keywords or tags used to describe this content. Multiple entries
+    in a keywords list are typically delimited by commas.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: keywords
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' A license document that applies to this content, typically indicated
+    by URL.'
+  example: ''
+  expected_types:
+  - CreativeWork
+  - URL
+  marginality: Recommended
+  property: license
+  type: ''
+  type_url: ''
+- bsc_description: ''
   cardinality: MANY
-  controlled_vocab: ""
-  example: ""
-- property: identifier
+  controlled_vocab: ''
+  description: 'Renaming schema.org/requirements as softwareRequirements Component
+    dependency requirements for application. This includes runtime environments and
+    shared libraries that are not included in the application distribution package,
+    but required to run the application (Examples: DirectX, Java or .NET runtime).
+    Supersedes requirements.'
+  example: ''
+  expected_types:
+  - Text
+  - URL
+  marginality: Recommended
+  property: softwareRequirements
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' Target Operating System / Product to which the code applies. If applies
+    to several versions, just the product name can be used.'
+  example: ''
+  expected_types:
+  - SoftwareApplication
+  marginality: Recommended
+  property: targetProduct
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The date on which the CreativeWork was most recently modified or
+    when the item''s entry was modified within a DataFeed.'
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Optional
+  property: dateModified
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' The identifier property represents any kind of identifier for any
+    kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.'
+  example: ''
   expected_types:
   - PropertyValue
   - Text
   - URL
-  description: The identifier property represents any kind of identifier for any kind
-    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
-    properties for representing many of these, either as textual strings or as URL
-    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
-    for more details.
-  type: ""
-  type_url: ""
-  bsc_description: ""
   marginality: Optional
+  property: identifier
+  type: ''
+  type_url: ''
+- bsc_description: ''
   cardinality: MANY
-  controlled_vocab: ""
-  example: ""
-- property: image
+  controlled_vocab: ''
+  description: ' An image of the item. This can be a URL or a fully described ImageObject.'
+  example: ''
   expected_types:
   - ImageObject
   - URL
-  description: An image of the item. This can be a URL or a fully described ImageObject.
-  type: ""
-  type_url: ""
-  bsc_description: ""
   marginality: Optional
-  cardinality: MANY
-  controlled_vocab: ""
-  example: ""
-- property: input
-  expected_types:
-  - Thing
-  description: ""
-  type: bioschemas
-  type_url: ""
-  bsc_description: ""
-  marginality: Minimum
-  cardinality: MANY
-  controlled_vocab: ""
-  example: ""
-- property: keywords
-  expected_types:
-  - Text
-  description: Keywords or tags used to describe this content. Multiple entries in
-    a keywords list are typically delimited by commas.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Recommended
+  property: image
+  type: ''
+  type_url: ''
+- bsc_description: ''
   cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: license
-  expected_types:
-  - CreativeWork
-  - URL
-  description: A license document that applies to this content, typically indicated
-    by URL.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Recommended
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: name
-  expected_types:
-  - Text
-  description: The name of the item.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Minimum
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: output
-  expected_types:
-  - Thing
-  description: ""
-  type: bioschemas
-  type_url: ""
-  bsc_description: ""
-  marginality: Minimum
-  cardinality: MANY
-  controlled_vocab: ""
-  example: ""
-- property: programmingLanguage
-  expected_types:
-  - ComputerLanguage
-  - Text
-  description: |
-    The computer programming language.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Minimum
-  cardinality: MANY
-  controlled_vocab: ""
-  example: ""
-- property: softwareRequirements
-  expected_types:
-  - Text orURL
-  description: 'Component dependency requirements for application. This includes runtime
-    environments and shared libraries that are not included in the application distribution
-    package, but required to run the application (Examples: DirectX, Java or .NET
-    runtime). Supersedes requirements.'
-  type: bioschemas
-  type_url: ""
-  bsc_description: Renaming schema.org/requirements as softwareRequirements
-  marginality: Recommended
-  cardinality: MANY
-  controlled_vocab: ""
-  example: ""
-- property: targetProduct
-  expected_types:
-  - SoftwareApplication
-  description: Target Operating System / Product to which the code applies. If applies
-    to several versions, just the product name can be used.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Recommended
-  cardinality: MANY
-  controlled_vocab: ""
-  example: ""
-- property: url
-  expected_types:
-  - URL
-  description: URL of the item.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Minimum
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-- property: version
+  controlled_vocab: ''
+  description: ' The version of the CreativeWork embodied by a specified resource.'
+  example: ''
   expected_types:
   - Number
   - Text
-  description: The version of the CreativeWork embodied by a specified resource.
-  type: ""
-  type_url: ""
-  bsc_description: ""
   marginality: Optional
-  cardinality: ONE
-  controlled_vocab: ""
-  example: ""
-
+  property: version
+  type: ''
+  type_url: ''
+name: ComputationalWorkflow
+parent_type: ComputationalWorkflow
+previous_release: ''
+previous_version: 0.1-DRAFT-2019_02_08
+redirect_from: '- "/profiles/Workflow/0.1-DRAFT-2019_02_08/"'
+spec_info:
+  description: ' A workflow consists of an orchestrated and repeatable pattern of
+    activity enabled by the systematic organization of resources into processes that
+    transform materials, provide services, or process information. It can be depicted
+    as a sequence of operations, the work of a person or group, the work of an organization
+    of staff, or one or more simple or complex mechanisms. (source Wikipedia.org)
+    Version: 0.2-DRAFT-2019_11_29'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/ComputationalWorkflow/examples
+  official_type: ComputationalWorkflow
+  title: ComputationalWorkflow
+  version: 0.2-DRAFT-2019_11_29
+spec_type: Profile
+status: ''
+use_cases_url: /useCases/ComputationalWorkflow
 ---
