@@ -1052,6 +1052,7 @@
       "name": "WorkflowHub",
       "url": "https://workflowhub.eu/",
       "nodes": "UK",
+      "datafeed": "https://workflowhub.eu/workflows.bioschemas.json",
       "profiles": [
         {
           "profileName": "DataCatalog",
