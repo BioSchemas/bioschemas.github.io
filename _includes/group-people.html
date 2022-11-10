@@ -1,0 +1,70 @@
+{%- assign group_id = include.group_id | default: page.group %}
+{%- assign group = site.groups | where:"identifier", group_id | first %}
+
+{%- unless include.former %}
+<h3>Contributors</h3>
+<p>The following people have been involved in the creation of this specification document. They are all members of the <a href="{{group.url}}">{{group.name}}</a> group.</p>
+{%- endunless %}
+
+<h5 class="my-4">Group Leader(s)</h5>
+<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-4" id="leadTable">
+    {%- for leader in group.lead %}
+    {%- assign lead-id = "/people/" | append: leader.person %}
+    {%- assign author = site.people | where:"id", lead-id | first %}
+    {%- if author.homepage or author.github_username or author.orcid %}
+    {%- if author.first-name and author.last-name %}
+    <div class="col mt-2"><a href="{{ author.url | relative_url }}">{{ author.first-name }} {{ author.last-name }}</a></div>
+    {%- endif %}
+    {%- else %}
+    <div class="col mt-2">{{ author.first-name }} {{ author.last-name }}</div>
+    {%- endif %}
+    {%- else %}
+    <p>No team leaders currently specified.</p>
+    {%- endfor %}
+</div>
+
+<h5 class="my-4">Other team members</h5>
+<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-4" id="peopleTable">
+    {%- for member-name in group.members %}
+    {%- unless group.lead contains member-name %}
+    {%- assign member-id = "/people/" | append: member-name %}
+    {%- assign member = site.people | where:"id", member-id | first %}
+    {%- if member.first-name and member.last-name %}
+    <div class="col mt-2"><a href="{{ member.url | relative_url }}">{{ member.first-name }} {{ member.last-name }}</a></div>
+    {%- endif %}
+    {%- endunless %}
+    {%- else %}
+    <p>No members currently specified.</p>
+    {%- endfor %}
+</div>
+
+{%- if include.former %}
+
+{%- if group.former-lead %}
+<h5 class="my-4">Former Group Leads</h5>
+<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-4" id="formerLeadTable">
+   {%- for leader in group.former-lead %}
+   {%- assign lead-id = "/people/" | append: leader.person %}
+   {%- assign author = site.people | where:"id", lead-id | first %}
+   {%- if author.first-name and author.last-name %}
+      <div class="col mt-2"><a href="{{ author.url | relative_url }}">{{ author.first-name }} {{ author.last-name }}</a>
+      <span class="text-muted"><small>({{leader.start-date | date: "%d %b %Y"}} - {{leader.end-date | date: "%d %b %Y"}})</small></span></div>
+   {%- endif %}
+   {%- endfor %}
+</div>
+{%- endif %}
+
+{%- if group.former-members %}
+<h5 class="my-4">Former Group Members</h5>
+<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-4" id="formerPeopleTable">
+   {%- for member-name in group.former-members %}
+   {%- assign member-id = "/people/" | append: member-name %}
+   {%- assign member = site.people | where:"id", member-id | first %}
+   {%- if member.first-name and member.last-name %}
+      <div class="col mt-2"><a href="{{ member.url | relative_url }}">{{ member.first-name }} {{ member.last-name }}</a></div>
+   {%- endif %}
+   {%- endfor %}
+</div>
+{%- endif %}
+
+{%- endif %}
