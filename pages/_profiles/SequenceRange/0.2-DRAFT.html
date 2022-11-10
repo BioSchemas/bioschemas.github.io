@@ -1,0 +1,113 @@
+---
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+cross_walk_url: https://docs.google.com/spreadsheets/d/1G7YcTaM5jjpF0SGoPkrPmirflfb9DAyFPfiW1iN0FcU/
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:SequenceRange
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20SequenceRange
+group: proteins
+hierarchy: []
+json-ld_url: SequenceRange/jsonld/SequenceRange_v0.2-DRAFT.json
+live_deploy: /liveDeploys
+mapping:
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Final position of the range
+  example: ''
+  expected_types:
+  - Integer
+  marginality: Minimum
+  property: rangeEnd
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Initial position of the range.
+  example: ''
+  expected_types:
+  - Integer
+  marginality: Minimum
+  property: rangeStart
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: "If the initial position is not known with reasonable certainty, specify\
+    \ here the uncertainty type as one of \u2018<\u2019 (any position before than\
+    \ rangeEnd), \u2018>\u2019 (any position after rangeEnd), \u2018~\u2019 (around\
+    \ rangeEnd), \u2018[#-#] (to indicate a range where rangeEnd could be located)\u2019\
+    ."
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: endUncertainty
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: "If the initial position is not known with reasonable certainty, specify\
+    \ here the uncertainty type as one of \u2018<\u2019 (any position before than\
+    \ rangeStart), \u2018>\u2019 (any position after rangeStart), \u2018~\u2019 (around\
+    \ the rangeStart), \u2018[#-#] (to indicate a range where rangeStart could be\
+    \ located)\u2019."
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: startUncertainty
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
+  type: ''
+  type_url: ''
+name: SequenceRange
+parent_type: SequenceRange
+previous_release: ''
+previous_version: 0.1-DRAFT
+redirect_from: '- "/devSpecs/SequenceRange/specification/"
+
+  - "/devSpecs/SequenceRange/specification"
+
+  - "/devSpecs/SequenceRange/"
+
+  - "/devSpecs/SequenceRange"
+
+  - "/specifications/drafts/SequenceRange/"
+
+  - "/specifications/drafts/SequenceRange"
+
+  - "/specifications/SequenceRange/"
+
+  - "/specifications/SequenceRange"
+
+  - "/profiles/SequenceRange/"
+
+  - "/profiles/SequenceRange"'
+spec_info:
+  description: 'Used to define the range of a subsequence, typically used in conjunction
+    with SequenceAnnotation to define the range of the annotation on the protein or
+    gene sequence. Version: 0.1-DRAFT. Note, the parent class for this profile has
+    been updated to a pending class in schema.org.'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/SequenceRange/examples
+  official_type: SequenceRange
+  title: SequenceRange
+  version: 0.2-DRAFT
+  version_date: 20221110T151350
+spec_type: Profile
+status: revision
+use_cases_url: /useCases/SequenceRange
+---
