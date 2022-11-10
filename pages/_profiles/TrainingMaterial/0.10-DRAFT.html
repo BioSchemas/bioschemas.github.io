@@ -1,0 +1,460 @@
+---
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+cross_walk_url: https://docs.google.com/spreadsheets/d/1w6_iqgcBgbqqZVmhpf9L21eoVlq64U7RPf1xGKhiRpk/edit#gid=1483018794
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:TrainingMaterial
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20TrainingMaterial
+group: training
+hierarchy: []
+json-ld_url: TrainingMaterial/jsonld/TrainingMaterial_v0.10-DRAFT.json
+live_deploy: /liveDeploys
+mapping:
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' A description of the item.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' Keywords or tags used to describe this content. Multiple entries
+    in a keywords list are typically delimited by commas.'
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  marginality: Minimum
+  property: keywords
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The name of the item.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: "The subject of this Training Material. Use the DefinedTerm type to\
+    \ add a\n controlled vocabulary term to describe the topic (such as from the EDAM\n\
+    \ ontology) The subject matter of the content.\n Inverse property: subjectOf."
+  example: ''
+  expected_types:
+  - Thing
+  marginality: Recommended
+  property: about
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' An abstract is a short description that summarizes a CreativeWork.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: abstract
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'A succinct description of the intended target audience for your materials:
+    e.g., graduates, postgraduates, clinicians. An intended audience, i.e. a group
+    for whom something was created. Supersedes serviceAudience.'
+  example: ''
+  expected_types:
+  - Audience
+  marginality: Recommended
+  property: audience
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' Those involved in the preparation, creation and/or presentation of
+    the published work, specifically writing the initial draft The author of this
+    content or rating. Please note that author is special in that HTML 5 provides
+    a special mechanism for indicating authorship via the rel tag. That is equivalent
+    to this and may be used interchangeably.'
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Recommended
+  property: author
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' Knowledge, skill, ability or personal attribute that must be demonstrated
+    by a person or other entity in order to do something such as earn an Educational
+    Occupational Credential or understand a LearningResource.'
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  marginality: Recommended
+  property: competencyRequired
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The students level of ability in the topic being taught. Examples of
+    skill levels include 'beginner', 'intermediate' or 'advanced'. The level in terms
+    of progression through an educational or training context. Examples of educational
+    levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level
+    indicators.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  marginality: Recommended
+  property: educationalLevel
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: "An identifier for this resource such as a DOI or compact URI\n The\
+    \ identifier property represents any kind of identifier for any kind of Thing,\
+    \ such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties\
+    \ for representing many of these, either as textual strings or as URL (URI) links.\
+    \ See background notes for more details."
+  example: ''
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Recommended
+  property: identifier
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Defaults to English if not specified. Please choose a value from [IETF
+    BCP 47 standard](http://tools.ietf.org/html/bcp47).
+
+    You can add multiple languages if the Training Material offers different translations
+    The language of the content or performance or used in an action. Please use one
+    of the language codes from the IETF BCP 47 standard. See also availableLanguage.
+    Supersedes language.'
+  example: ''
+  expected_types:
+  - Language
+  - Text
+  marginality: Recommended
+  property: inLanguage
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: This may include things such as video lecture, e-Learning module, or
+    tutorial. The predominant type or kind characterizing the learning resource. For
+    example, 'presentation', 'handout'.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  marginality: Recommended
+  property: learningResourceType
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: If there is a licence it must be added. A license document that applies
+    to this content, typically indicated by URL.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - URL
+  marginality: Recommended
+  property: license
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Datasets, tools, technologies, entities etc, which are referred to
+    by this training material or actively used in this training material. Indicates
+    that the CreativeWork contains a reference to, but is not necessarily about a
+    concept.
+  example: ''
+  expected_types:
+  - Thing
+  marginality: Recommended
+  property: mentions
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' The item being described is intended to help a person learn the competency
+    or learning outcome defined by the referenced term.'
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  marginality: Recommended
+  property: teaches
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'The estimated time it takes to work through this resource.
+
+
+    Please specify in [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601).
+    Approximate or typical time it takes to work with or through this learning resource
+    for the typical intended target audience, e.g. ''PT30M'', ''PT1H25M''.'
+  example: ''
+  expected_types:
+  - Duration
+  marginality: Recommended
+  property: timeRequired
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The preferred URL of the Training Material. You must provide this value
+    if it is known. URL of the item.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: URL of additional sources for the dataset
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' A human-readable summary of specific accessibility features or deficiencies,
+    consistent with the other accessibility metadata but expressing subtleties such
+    as "short descriptions are present but long descriptions will be needed for non-visual
+    users" or "short descriptions are present and no long descriptions are needed."'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: accessibilitySummary
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Contributors are those that made non-authorship contributions e.g.
+    critical review, commentary or revision A secondary contributor to the CreativeWork
+    or Event.
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Optional
+  property: contributor
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'The status of a training material. If this is not filled in it will
+    be regarded as Active.
+
+
+    Options are ''Active'', ''Under development'', and ''Archived''. The status of
+    a creative work in terms of its stage in a lifecycle. Example terms include Incomplete,
+    Draft, Published, Obsolete. Some organizations define a set of terms for the stages
+    of their publication lifecycle.'
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  marginality: Optional
+  property: creativeWorkStatus
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The date on which the CreativeWork was created or the item was added
+    to a DataFeed.'
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Optional
+  property: dateCreated
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The date on which the CreativeWork was most recently modified or
+    when the item''s entry was modified within a DataFeed.'
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Optional
+  property: dateModified
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' Date of first broadcast/publication.'
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Optional
+  property: datePublished
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: "A sub-training material or externally referenced training material\n\
+    \ Indicates an item or CreativeWork that is part of this item, or CreativeWork\
+    \ (in some sense).\n Inverse property: isPartOf."
+  example: ''
+  expected_types:
+  - CreativeWork
+  marginality: Optional
+  property: hasPart
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: "The Course this Training Material was/will be used in. Or a training\
+    \ material this training material is a part of (for example, if this is a module\
+    \ in a book, isPartOf can describe the book).\n\nInverse property: hasPart\n\n\
+    If this varies in CourseInstances, use the workFeatured property  Indicates an\
+    \ item or CreativeWork that this item, or CreativeWork (in some sense), is part\
+    \ of.\n Inverse property: hasPart."
+  example: ''
+  expected_types:
+  - CreativeWork
+  - URL
+  marginality: Optional
+  property: isPartOf
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: "The course instance or event where this training material was or will\
+    \ be featured. \n\nUse isPartOf to refer to a Course, unless this training material\
+    \ is unique to a specific Course Instance. The Event where the CreativeWork was\
+    \ recorded. The CreativeWork may capture all or part of the event.\nInverse property:\
+    \ recordedIn."
+  example: ''
+  expected_types:
+  - Event
+  marginality: Optional
+  property: recordedAt
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: If this training material is versioned, its strongly recommended you
+    use this property to list the version being displayed The version of the CreativeWork
+    embodied by a specified resource.
+  example: ''
+  expected_types:
+  - Number
+  - Text
+  marginality: Optional
+  property: version
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: " A work that is a translation of the content of this work. e.g. \u897F\
+    \u904A\u8A18 has an English workTranslation \u201CJourney to the West\u201D,a\
+    \ German workTranslation \u201CMonkeys Pilgerfahrt\u201D and a Vietnamese translation\
+    \ T\xE2y du k\xFD b\xECnh kh\u1EA3o.\nInverse property: translationOfWork."
+  example: ''
+  expected_types:
+  - CreativeWork
+  marginality: Optional
+  property: workTranslation
+  type: ''
+  type_url: ''
+name: TrainingMaterial
+parent_type: LearningResource
+previous_release: ''
+previous_version: 0.9-DRAFT-2020_12_08
+redirect_from: '- "/devSpecs/TrainingMaterial/specification/"
+
+  - "/devSpecs/TrainingMaterial/specification"
+
+  - "/devSpecs/TrainingMaterial/"
+
+  - "/devSpecs/TrainingMaterial"
+
+  - "/specifications/drafts/TrainingMaterial/"
+
+  - "/specifications/drafts/TrainingMaterial"
+
+  - "/specifications/TrainingMaterial/"
+
+  - "/specifications/TrainingMaterial"
+
+  - "/profiles/TrainingMaterial/"
+
+  - "/profiles/TrainingMaterial"'
+spec_info:
+  description: 'A specification for describing training materials in life sciences.
+    The Life Science Training Materials specification provides a way to describe bioscience
+    training material on the World Wide Web. It defines a set of metadata and vocabularies,
+    built on top of existing technologies and standards, that can be used to represent
+    events in Web pages and applications. The goal of the specification is to make
+    it easier to discover, exchange and integrate life science training material information
+    across the Internet.<h4>Summary of Changes</h4>    Changes since previous draft
+    0.9-DRAFT-2020_12_08 of the TrainingMaterials profile:    <ul>  <li>added sameAs
+    property as recommended</li> </ul> Version: 0.10-DRAFT'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/TrainingMaterial/examples
+  official_type: LearningResource
+  title: TrainingMaterial
+  version: 0.10-DRAFT
+  version_date: 20221110T16411
+spec_type: Profile
+status: revision
+use_cases_url: /useCases/TrainingMaterial
+---
