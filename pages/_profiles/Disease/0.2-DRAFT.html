@@ -1,0 +1,158 @@
+---
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+cross_walk_url: https://docs.google.com/spreadsheets/d/1hGKPatus04Oz1OmM6KrNFobFQ2TGOZ8oQlUbTRn4obM/
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:Disease
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20Disease
+group: diseases
+hierarchy: []
+json-ld_url: Disease/jsonld/Disease_v0.2-DRAFT.json
+live_deploy: /liveDeploys
+mapping:
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: "The identifier property represents any kind of identifier for any\
+    \ kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides\
+    \ dedicated properties for representing many of these, either as textual strings\
+    \ or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg)\
+    \ for more details.\n        "
+  example: ''
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Minimum
+  property: identifier
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The name of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Specifying a drug or medicine used in a medication procedure.
+  example: ''
+  expected_types:
+  - Drug
+  marginality: Recommended
+  property: drug
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A description of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+  example: ''
+  expected_types:
+  - ImageObject
+  - URL
+  marginality: Recommended
+  property: image
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: URL of the item. Link to the official webpage associated to this entity.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: An alias for the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: alternateName
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A sub property of description. A short description of the item used
+    to disambiguate from other, similar items. Information from other properties (in
+    particular, name) may be necessary for the description to be useful for disambiguation.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: disambiguatingDescription
+  type: ''
+  type_url: ''
+name: Disease
+parent_type: MedicalCondition
+previous_release: ''
+previous_version: 0.1-DRAFT
+redirect_from: '- "/devSpecs/Disease/specification/"
+
+  - "/devSpecs/Disease/specification"
+
+  - "/devSpecs/Disease/"
+
+  - "/devSpecs/Disease"
+
+  - "/specifications/drafts/Disease/"
+
+  - "/specifications/drafts/Disease"
+
+  - "/specifications/Disease/"
+
+  - "/specifications/Disease"
+
+  - "/profiles/Disease/"
+
+  - "/profiles/Disease"'
+spec_info:
+  description: This is the first draft of the Disease profile, using MedicalCondition
+    type from schema.org as template for inheriting some properties. Version 0.2-DRAFT.
+    <h3>Summary of Changes</h3> <br>Changes since 0.1-DRAFT:<ul><li>added sameAs as
+    recommended<li></ul>
+  full_example: https://github.com/BioSchemas/specifications/tree/master/Disease/examples
+  official_type: MedicalCondition
+  title: Disease
+  version: 0.2-DRAFT
+  version_date: 20221111T103815
+spec_type: Profile
+status: revision
+use_cases_url: /useCases/Disease
+---
