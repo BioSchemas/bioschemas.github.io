@@ -157,7 +157,7 @@ SequenceRange:
   name: SequenceRange
   status: active
 Study:
-  latest_publication: 0.2-DRAFT
+  latest_publication: 0.3-DRAFT
   latest_release: null
   name: Study
   status: active
