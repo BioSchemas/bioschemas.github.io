@@ -1,0 +1,310 @@
+---
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+cross_walk_url: https://docs.google.com/spreadsheets/d/1vliGiKWlHzqXWcGPa15l0PzJbQGXPKxYPq8Mups_or4
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:Person
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20Person
+group: people
+hierarchy: []
+json-ld_url: Person/jsonld/Person_v0.3-DRAFT.json
+live_deploy: /liveDeploys
+mapping:
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' A description of the item.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' Indicates a page (or other CreativeWork) for which this thing is
+    the main entity being described. See background notes for details.
+
+    Inverse property: mainEntity.'
+  example: ''
+  expected_types:
+  - CreativeWork
+  - URL
+  marginality: Minimum
+  property: mainEntityOfPage
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The name of the item.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' Email address.'
+  example: ''
+  expected_types:
+  - ContactPoint
+  - Organization
+  - Place
+  marginality: Recommended
+  property: email
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'A textual description of the topic which a person has the most expertise
+    in. This should make use of an ontology such as the EDAM ontology '
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: expertise
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' A contact location for a person''s residence.'
+  example: ''
+  expected_types:
+  - ContactPoint
+  - Place
+  marginality: Recommended
+  property: homeLocation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' An image of the item. This can be a URL or a fully described ImageObject.'
+  example: ''
+  expected_types:
+  - ImageObject
+  - URL
+  marginality: Recommended
+  property: image
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' An Organization (or ProgramMembership) to which this Person or Organization
+    belongs.
+
+    Inverse property: member.'
+  example: ''
+  expected_types:
+  - Organization
+  - ProgramMembership
+  marginality: Recommended
+  property: memberOf
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'The url of ID of the person''s ORCID (see http://orcid.org) '
+  example: ''
+  expected_types:
+  - Text
+  - URL
+  marginality: Recommended
+  property: orcid
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' Organizations that the person works for.'
+  example: ''
+  expected_types:
+  - Organization
+  marginality: Recommended
+  property: worksFor
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: URL of additional sources for the dataset
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'A person who has been an educational, professional or personal advisor
+    to the person. '
+  example: ''
+  expected_types:
+  - Person
+  marginality: Optional
+  property: advisor
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'A link or body of text describing the person''s notable achievements,
+    employment history, and contact details. '
+  example: ''
+  expected_types:
+  - Text
+  - URL
+  marginality: Optional
+  property: curriculumVitae
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'A textual description of the professional experiences a person has
+    acquired. '
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: experience
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Textual description of current or past funding ths person has acquired '
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: funding
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Any interests held by the person. These should be single words or
+    short phrases that relate to a person '
+  example: ''
+  expected_types:
+  - Text
+  - URL
+  marginality: Optional
+  property: interest
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Global connetions related to teaching and scholarly work in the past
+    3 years '
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: internatonalActivities
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Which journals this person is a reeree of '
+  example: ''
+  expected_types:
+  - CreativeWork
+  marginality: Optional
+  property: journalReferee
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Keywords to describe the person. These should be single words or short
+    phrases that relate to a person. Keywords or tags used to describe this content.
+    Multiple entries in a keywords list are typically delimited by commas.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: keywords
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A list of languages spoken by the Person Of a Person, and less typically
+    of an Organization, to indicate a known language. We do not distinguish skill
+    levels or reading/writing/speaking/signing here. Use language codes from the IETF
+    BCP 47 standard.
+  example: ''
+  expected_types:
+  - Language
+  marginality: Optional
+  property: knowsLanguage
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'All or notable publications, presentations, training materials, research
+    outputs or any other body of work attributed to this person. '
+  example: ''
+  expected_types:
+  - CreativeWork
+  marginality: Optional
+  property: works
+  type: ''
+  type_url: ''
+name: Person
+parent_type: Person
+previous_release: ''
+previous_version: 0.2-DRAFT-2019_07_19
+redirect_from: '- "/devSpecs/Person/specification/"
+
+  - "/devSpecs/Person/specification"
+
+  - "/devSpecs/Person/"
+
+  - "/devSpecs/Person"
+
+  - "/specifications/drafts/Person/"
+
+  - "/specifications/drafts/Person"
+
+  - "/specifications/Person/"
+
+  - "/specifications/Person"
+
+  - "/profiles/Person/"
+
+  - "/profiles/Person"'
+spec_info:
+  description: 'A specification for describing people in life sciences The Life Science
+    Person specification provides a way to describe bioscience events on the World
+    Wide Web. It defines a set of metadata and vocabularies, built on top of existing
+    technologies and standards, that can be used to represent the profile information
+    of people in Web pages and applications. The goal of the specification is to make
+    it easier to discover, life science profile information. Version: 0.3-DRAFT. <h3>Summary
+    of Changes</h3><br>Changes since 0.2-DRAFT-2019_07_19:<ul><li>added sameAs property
+    as recommended</li></ul>. '
+  full_example: https://github.com/BioSchemas/specifications/tree/master/Person/examples
+  official_type: Person
+  title: Person
+  version: 0.3-DRAFT
+  version_date: 20221111T105313
+spec_type: Profile
+status: revision
+use_cases_url: /useCases/Person
+---

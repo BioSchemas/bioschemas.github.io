@@ -1,0 +1,222 @@
+---
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+cross_walk_url: https://docs.google.com/spreadsheets/d/1URvG6DVYNLwJvURHEUx7huEGxdVtURKCQ4KtQvvgwXw
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:PublicationVolume
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20PublicationVolume
+group: publications
+hierarchy: []
+json-ld_url: PublicationVolume/jsonld/PublicationVolume_v0.3-DRAFT.json
+live_deploy: /liveDeploys
+mapping:
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Oficial URL. URL of the item.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Minimum
+  property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' Identifies the volume of publication or multi-part work; for example,
+    "iii" or "2".'
+  example: ''
+  expected_types:
+  - Integer
+  - Text
+  marginality: Minimum
+  property: volumeNumber
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: "A PublicationVolume has part PublicationIssue (a.k.a. supplements)\
+    \ or ScholaryArticle. We recommend to include at least the highest 'hasPart' level,\
+    \ i.e., PublicationIssue. It is also possible to use 'hasPart' to link as well\
+    \ directly to ScholarlyArticle, making it easier to find articles in this volume.\
+    \ Indicates an item or CreativeWork that is part of this item, or CreativeWork\
+    \ (in some sense).\n Inverse property: isPartOf."
+  example: ''
+  expected_types:
+  - PublicationIssue
+  - Scholarlyarticle
+  marginality: Recommended
+  property: hasPart
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Volumes in a journal are commonly identified by a number thus not unique
+    nor global. We recommend to use the URL as identifier whenever possible. The identifier
+    property represents any kind of identifier for any kind of Thing, such as ISBNs,
+    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
+    many of these, either as textual strings or as URL (URI) links. See [background
+    notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.
+  example: ''
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Recommended
+  property: identifier
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: "A PublicationVolume is part of a Journal. Indicates an item or CreativeWork\
+    \ that this item, or CreativeWork (in some sense), is part of.\n Inverse property:\
+    \ hasPart."
+  example: ''
+  expected_types:
+  - Journal
+  marginality: Recommended
+  property: isPartOf
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The page on which the work ends; for example "138" or "xvi".'
+  example: ''
+  expected_types:
+  - Integer
+  - Text
+  marginality: Recommended
+  property: pageEnd
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The page on which the work starts; for example "135" or "xiii".'
+  example: ''
+  expected_types:
+  - Integer
+  - Text
+  marginality: Recommended
+  property: pageStart
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Any other URL linking to this volume, preferrable in machine-readable
+    format. URL of a reference Web page that unambiguously indicates the item's identity.
+    E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: "Describes what this volume is about. The subject matter of the content.\n\
+    \ Inverse property: subjectOf."
+  example: ''
+  expected_types:
+  - Thing
+  marginality: Optional
+  property: about
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' Specifies the Person who edited the CreativeWork.'
+  example: ''
+  expected_types:
+  - Person
+  marginality: Optional
+  property: editor
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' The language of the content or performance or used in an action.
+    Please use one of the language codes from the IETF BCP 47 standard. See also availableLanguage.
+    Supersedes language.'
+  example: ''
+  expected_types:
+  - Language
+  - Text
+  marginality: Optional
+  property: inLanguage
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' Keywords or tags used to describe this content. Multiple entries
+    in a keywords list are typically delimited by commas.'
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  marginality: Optional
+  property: keywords
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' Any description of pages that is not separated into pageStart and
+    pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: pagination
+  type: ''
+  type_url: ''
+name: PublicationVolume
+parent_type: PublicationVolume
+previous_release: ''
+previous_version: 0.2-DRAFT-2020_12_03
+redirect_from: '- "/devSpecs/PublicationVolume/specification/"
+
+  - "/devSpecs/PublicationVolume/specification"
+
+  - "/devSpecs/PublicationVolume/"
+
+  - "/devSpecs/PublicationVolume"
+
+  - "/specifications/drafts/PublicationVolume/"
+
+  - "/specifications/drafts/PublicationVolume"
+
+  - "/specifications/PublicationVolume/"
+
+  - "/specifications/PublicationVolume"
+
+  - "/profiles/PublicationVolume/"
+
+  - "/profiles/PublicationVolume"'
+spec_info:
+  description: 'Bioschemas profile, based on Biotea model, describing a PublicationVolume
+    in Life Sciences. A PublicationVolume is a collection of publication issues, or
+    scholarly articles, or possibly, although no commonly, any mix from those mentioned.
+    It is commonly part of a Journal. Version 0.3-DRAFT. <h3>Summary of Changes</h3><br>Changes
+    since previous draft 0.2-DRAFT-2020_12_03 of the PublicationVolumen profile: <ul><li>added
+    sameAs property as recommended.</li></ul>'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/PublicationVolume/examples
+  official_type: PublicationVolume
+  title: PublicationVolume
+  version: 0.3-DRAFT
+  version_date: 20221111T105313
+spec_type: Profile
+status: revision
+use_cases_url: /useCases/PublicationVolume
+---
