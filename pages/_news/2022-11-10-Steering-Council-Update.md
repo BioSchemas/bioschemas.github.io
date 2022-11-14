@@ -6,7 +6,7 @@ tags:
 ---
 We are pleased to announce our new Steering Council
 - Chair: Leyla Jael Castro
-- Research Infrastructure Liaison: Nick Juty (co-chair)
+- Research Infrastructure Liaison: Nick Juty (Vice Chair)
 - Engagement and Adoption: Ivan Mičetić
 - Support Tools: Chunlei Wu and Alban Gaignard
 - Operations Manager: Ginger Tsuegn
