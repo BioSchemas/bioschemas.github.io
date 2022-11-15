@@ -1693,7 +1693,7 @@
       "description": "An unofficial version of Rhea content captured using Bioschemas. Rhea is an expert-curated knowledgebase of chemical and transport reactions of biological interest - and the standard for enzyme and transporter annotation in UniProtKB. Rhea uses the chemical dictionary ChEBI (Chemical Entities of Biological Interest) to describe reaction participants.",
       "url": "https://www.rhea-db.org/",
       "nodes": ["CH", "NL"],
-      "datadump": "https://bioschemas.slack.com/files/U013U0WAKHV/F049JSR3EDD/rhea.ttl",
+      "datadump": "https://swel.macs.hw.ac.uk/bioschemas-data/BH2022/rhea.jsonld",
       "profiles": [
         {
           "profileName": "MolecularEntity",
