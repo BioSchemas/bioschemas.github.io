@@ -361,14 +361,15 @@
       ]
     },
     {
-      "name": "SIB",
-      "url": "https://www.sib.swiss/",
+      "name": "Training Portal at SIB Swiss Institute of Bioinformatics",
+      "description": "Training material and courses delivered by SIB",
+      "url": "https://www.sib.swiss/training/",
       "nodes": "CH",
       "profiles": [
         {
-          "profileName": "Event",
-          "conformsTo": "0.1",
-          "exampleURL": "https://www.sib.swiss/training/upcoming-training-events"
+          "profileName": "CourseInstance",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://www.sib.swiss/training/course/20221123_OPEMP"
         }
       ]
     },
