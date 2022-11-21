@@ -1,461 +1,300 @@
 ---
-redirect_from:
-- "/devSpecs/Protein/specification/"
-- "/devSpecs/Protein/specification"
-- "/devSpecs/Protein/"
-- "/devSpecs/Protein"
-- "/specifications/drafts/Protein/"
-- "/specifications/drafts/Protein"
-
-name: Protein
-
-previous_version: 0.11-RELEASE
-previous_release: 0.11-RELEASE
-
-
-status: release # Change to revision if you are working on an update
-spec_type: Profile
-group: proteins
-use_cases_url: /useCases/Protein
-cross_walk_url: https://docs.google.com/spreadsheets/d/1jew6b3-9tx27gydLHmCFMzTkPWkEOv8QlBX2N02euY0/
-go_web_url: https://docs.google.com/spreadsheets/d/e/2PACX-1vSLmo9Dw6ZXUyaYgwF-lW6mIrWf0jX7737LL3ljU7kAwqi0yw_UHIxWspsRyiTcpuFMLKxcTSdVWe5b/pub?gid=292464567&single=true&output=csv
-gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Protein
-live_deploy: /liveDeploys
-
-parent_type: Protein
-hierarchy:
-- Thing
-- BioChemEntity
-- Protein
-
 # spec_info content generated using GOWeb
 # DO NOT MANUALLY EDIT THE CONTENT
-spec_info:
-  title: Protein
-  subtitle: Bioschemas profile describing a Protein in Life Sciences.
-  description: 'This Protein profile specification presents the most common properties
-    used for a Protein plus examples on how to use them.<h4>Summary of Changes</h4>    Changes
-    since previous release of the Protein Profile:    <ul>      <li>Updated type properties
-    to Schema.org pending release</li>      <li>Addition of hasSequenceAnnotation
-    property at Recommended level</li>    </ul>'
-  version: 0.12-DRAFT
-  version_date: 20210610T141040
-  official_type: https://bioschemas.org/schema/Protein.html
-  full_example: https://github.com/BioSchemas/specifications/tree/master/Protein/examples/0.12-DRAFT
+cross_walk_url: https://docs.google.com/spreadsheets/d/1agujmyTPuysB0268Nptfbg6IVI_5Su3I9do092oYEdE/edit#gid=1483018794
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:Protein
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20Protein
+group: proteins
+hierarchy: []
+json-ld_url: Protein/jsonld/Protein_v0.12-DRAFT.json
+live_deploy: /liveDeploys
 mapping:
-- property: alternateName
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The identifier property represents any kind of identifier for any kind
+    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
+    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
+    many of these, either as textual strings or as URL (URI) links. See <a href="/docs/datamodel.html#identifierBg">background
+    notes</a> for more details.
+  example: ''
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Minimum
+  property: identifier
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The name of the item.
+  example: ''
   expected_types:
   - Text
-  description: An alias for the item.
-  type: ""
-  type_url: ""
-  bsc_description: Use it for alternate names of this Protein
-  marginality: Optional
+  marginality: Minimum
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
   cardinality: MANY
-  controlled_vocab: ""
-  example: |-
-    {
-      "@type": "Protein",
-      "alternateName": ["ABL", "JTK7"]
-    }
-- property: associatedDisease
+  controlled_vocab: ''
+  description: Disease associated to this protein, if any.
+  example: ''
   expected_types:
   - MedicalCondition
   - PropertyValue
   - URL
-  description: Disease associated to this BioChemEntity. Such disease can be a MedicalCondition
-    or a URL. If you want to add an evidence supporting the association, please use
-    PropertyValue.
-  type: pending
-  type_url: ""
-  bsc_description: Disease associated to this protein, if any.
   marginality: Recommended
-  cardinality: MANY
-  controlled_vocab: ""
-  example: |-
-    {
-      "@type": "Protein",
-      "associatedDisease": {
-        "@type": "MedicalCondition",
-        "name": "Leukemia, chronic myeloid (CML)",
-        "code": {
-          "@type": "MedicalCode",
-          "codeValue": "608232",
-          "codingSystem": "OMIM"
-        },
-        "id": "http://purl.uniprot.org/diseases/03735"
-      }
-    }
-- property: bioChemInteraction
-  expected_types:
-  - BioChemEntity
-  description: A BioChemEntity that is known to interact with this item.
-  type: pending
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: Any suitable source of information
-  example: "{\n  \"@type\": \"Protein\",\n  \"@id\" : \"http://purl.uniprot.org/uniprot/P05067\",\n
-    \ \"bioChemInteraction\": [{\n    \"@id\": \"http://purl.uniprot.org/uniprot/Q306T3\"
-    \n  },{\n    \"@id\": \"http://purl.uniprot.org/uniprot/Q02410\"\n  }]\n}"
-- property: bioChemSimilarity
-  expected_types:
-  - BioChemEntity
-  description: A similar BioChemEntity, e.g., obtained by fingerprint similarity algorithms.
-  type: pending
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: ""
-  example: "{\n  \"@type\": \"Protein\",\n  \"@id\": \"http://purl.uniprot.org/uniprot/P05067\"
-    ,\n  \"bioChemSimilarity\": [{ \n    \"@id\" : \"http://purl.uniprot.org/uniprot/O97584\"
-    \n  }, { \"@id\" : \"http://purl.uniprot.org/uniparc/UPI0000110448\" } ]\n}"
-- property: description
-  expected_types:
-  - Text
-  description: A description of the item.
-  type: ""
-  type_url: ""
-  bsc_description: 'Protein function. We recommend to start the description with "Function:
-    [...]".'
-  marginality: Recommended
+  property: associatedDisease
+  type: ''
+  type_url: ''
+- bsc_description: ''
   cardinality: ONE
-  controlled_vocab: ""
-  example: |-
-    {
-      "@type": "Protein",
-      "description": "Function: Non-receptor tyrosine-protein kinase that plays a role..."
-    }
-- property: hasBioChemEntityPart
-  expected_types:
-  - BioChemEntity
-  description: 'Indicates a BioChemEntity that (in some sense) has this BioChemEntity
-    as a part. Inverse property: isPartOfBioChemEntity.'
-  type: pending
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: Any suitable ontology
-  example: ""
-- property: hasBioPolymerSequence
+  controlled_vocab: ''
+  description: "Protein function. We recommend to start the description with \u201C\
+    Function: [\u2026]\u201D."
+  example: ''
   expected_types:
   - Text
-  description: "A symbolic representation of a BioChemEnity. For example, a nucleotide
-    \nsequence of a Gene or an amino acid sequence of a Protein."
-  type: pending
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
+  marginality: Recommended
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
   cardinality: MANY
-  controlled_vocab: ""
-  example: |-
-    {
-      "@type": "Protein",
-      "hasSequence": "MVLSPADKTN"
-    }
-- property: hasMolecularFunction
-  expected_types:
-  - DefinedTerm
-  - PropertyValue
-  - URL
-  description: Molecular function performed by this BioChemEntity; please use PropertyValue
-    if you want to include any evidence.
-  type: pending
-  type_url: ""
-  bsc_description: GO term corresponding to the Molecular Function branch of the GO
-    ontology.
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: Any suitable ontology
-  example: |-
-    {
-      "@type": "Protein",
-      "hasMolecularFunction": "http://purl.obolibrary.org/obo/GO_0035325"
-    }
-- property: hasRepresentation
-  expected_types:
-  - PropertyValue
-  - Text
-  - URL
-  description: A common representation such as a protein sequence or chemical structure
-    for this entity. For images use schema.org/image.
-  type: pending
-  type_url: ""
-  bsc_description: '**Bioschemas Protein**: This property could be used, for instance,
-    to link to a page containing the corresponding sequence protein. If you want to
-    better define the nature of the representation, use a PropertyValue as described
-    in [additionalProperty](http://bioschemas.org/devSpecs/Protein/specification/#additionalProperty).'
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: ""
-  example: ""
-- property: hasSequenceAnnotation
+  controlled_vocab: ''
+  description: The taxonomic grouping of the organism that expresses, encodes, or
+    in someway related to the BioChemEntity.
+  example: ''
   expected_types:
   - SequenceAnnotation
   - URL
-  description: An annotation on the BioPolymerSequence associated with this BioChemEntity
+  marginality: Recommended
+  property: hasSequenceAnnotation
   type: bioschemas
-  type_url: ""
-  bsc_description: ""
-  marginality: Recommended
+  type_url: ''
+- bsc_description: ''
   cardinality: MANY
-  controlled_vocab: ""
-  example: |-
-    "hasSequenceAnnotation": [
-        {
-          "@type": "SequenceAnnotation",
-          "@id": "https://disprot.org/DP00086r026",
-          "http://purl.org/dc/terms/conformsTo": {"@id": "https://bioschemas.org/specifications/SequenceAnnotation/0.7-DRAFT"},
-          "creationMethod": {
-            "@type": "DefinedTerm",
-            "@id": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00120",
-            "inDefinedTermSet": {
-              "@type": "DefinedTermSet",
-              "@id": "https://www.disprot.org/assets/data/idpontology_disprot_8_v0.1.0.owl",
-              "name": "IDP Ontology"
-            },
-            "termCode": "DO:00120",
-            "name": "Nuclear magnetic resonance",
-            "url": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00120"
-          },
-          "editor": {
-            "@id": "https://disprot.org/curator#bhajdu"
-          },
-          "citation": {
-            "@id": "https://www.ncbi.nlm.nih.gov/pubmed/16793543"
-          },
-          "isPartOfBioChemEntity": {
-            "@id": "http://disprot.org/DP00086"
-          },
-          "sequenceLocation": {
-            "@type": "SequenceRange",
-            "http://purl.org/dc/terms/conformsTo": {"@id": "https://bioschemas.org/specifications/SequenceRange/0.1-DRAFT"},
-            "rangeStart": 20,
-            "rangeEnd": 73
-          },
-          "additionalProperty": {
-            "@type": "PropertyValue",
-            "name": "Term",
-            "value": {
-              "@type": "DefinedTerm",
-              "@id": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00076",
-              "inDefinedTermSet": {
-                "@type": "DefinedTermSet",
-                "@id": "https://www.disprot.org/assets/data/idpontology_disprot_8_v0.1.0.owl",
-                "name": "IDP Ontology"
-              },
-              "termCode": "DO:00076",
-              "name": "Disorder",
-              "url": "http://www.semanticweb.org/idpfun/ontologies/2019/08/idpontology_disprot_8#DO:00076"
-            }
-          },
-          "description": [
-            "Chemical shift analysis and the NOE pattern demonstrated that p53 in complex with Tfb1 adopts an\na-helical fold that extends from Pro47 to Thr55. Outside this region, p53 is flexible, as also supported by the 15N-1H heteronuclear NOE data."
-          ]
-        }
-- property: identifier
+  controlled_vocab: ''
+  description: 'Another BioChemEntity encoding this one. Inverse property: encodesBioChemEntity.'
+  example: ''
   expected_types:
-  - PropertyValue
-  - Text
-  - URL
-  description: The identifier property represents any kind of identifier for any kind
-    of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
-    properties for representing many of these, either as textual strings or as URL
-    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
-    for more details.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Minimum
-  cardinality: ONE
-  controlled_vocab: ""
-  example: |-
-    {
-      "@type": "Protein",
-      "identifier": "http://purl.uniprot.org/uniprot/P00519"
-    }
-- property: image
-  expected_types:
-  - ImageObject
-  - URL
-  description: An image of the item. This can be a URL or a fully described ImageObject.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: ""
-  example: "{ \n  \"@type\": \"Protein\", \n  \"image\": \"https://commons.wikimedia.org/wiki/File:Spombe_Pop2p_protein_structure_rainbow.png\"
-    \"http://rdf.wwpdb.org/pdb/2WJD\"\n}"
-- property: isEncodedByBioChemEntity
-  expected_types:
+  - DNA
   - Gene
-  description: |-
-    Another BioChemEntity encoding by this one. Inverse property: encodesBioChemEntity.
-     Inverse property: encodesBioChemEntity.
-  type: pending
-  type_url: ""
-  bsc_description: ""
+  - Rna
   marginality: Recommended
+  property: isEncodedByBioChemEntity
+  type: ''
+  type_url: ''
+- bsc_description: ''
   cardinality: MANY
-  controlled_vocab: Any suitable ontology
-  example: |-
-    {
-      "@type": "Protein",
-      "isEncodedByBioChemEntity": "https://www.ncbi.nlm.nih.gov/UniGene/clust.cgi?ORG=Hs&CID=146339"
-    }
-- property: isInvolvedInBiologicalProcess
-  expected_types:
-  - DefinedTerm
-  - PropertyValue
-  - URL
-  description: Biological process this BioChemEntity is involved in; please use PropertyValue
-    if you want to include any evidence.
-  type: pending
-  type_url: ""
-  bsc_description: Functional term corresponding to the biological process (typically
-    the Biological Process branch of the GO ontology).
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: Any suitable ontology
-  example: |-
-    {
-      "@type": "Protein",
-      "isInvolvedInBiologicalProcess": "http://purl.obolibrary.org/obo/GO_0005739"
-    }
-- property: isLocatedInSubcellularLocation
-  expected_types:
-  - DefinedTerm
-  - PropertyValue
-  - URL
-  description: Subcellular location where this BioChemEntity is located; please use
-    PropertyValue if you want to include any evidence.
-  type: pending
-  type_url: ""
-  bsc_description: Functional term corresponding to the subcellular location (typically
-    the Subcellular Location branch of the GO ontology).
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: Any suitable ontology
-  example: |-
-    {
-      "@type": "Protein",
-      "isLocatedInSubcellularLocation": "http://purl.obolibrary.org/obo/GO_0005739"
-    }
-- property: isPartOfBioChemEntity
-  expected_types:
-  - BioChemEntity
-  description: |-
-    Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: hasBioChemEntityPart.
-     Inverse property: hasBioChemEntityPart.
-  type: pending
-  type_url: ""
-  bsc_description: '**Bioschemas Protein**: For proteins, it can be used to link to
-    protein sequence annotations such as domains, sites, regions, etc.'
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: Any suitable ontology
-  example: |-
-    //Protein is part of a protein complex
-    {
-      "@type": "Protein",
-      "isPartOfBioChemEntity": {
-        "@type": "BioChemEntity",
-        "url": "https://www.ebi.ac.uk/complexportal/complex/CPX-2158"
-        }
-    }
-- property: mainEntityOfPage
-  expected_types:
-  - CreativeWork
-  - URL
-  description: |-
-    Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See [background notes](http://schema.org/docs/datamodel.html#mainEntityBackground) for details.
-    Inverse property: mainEntity.
-  type: ""
-  type_url: ""
-  bsc_description: 'Link to the main DataRecord representing this entity in a dataset. '
-  marginality: Optional
-  cardinality: ONE
-  controlled_vocab: ""
-  example: "//From a webpage\n{\n\n  \"@type\": \"WebPage\",\n  \"@id\": \"https://www.uniprot.org/uniprot/P05519\",\n
-    \ \"mainEntity\": {\n    \"@type\": \"Protein\",\n    \"@id\" : \"http://purl.uniprot.org/uniprot/P05519\"\n
-    \   #Any other property for this Protein entity    \n  }\n}\n\n//Also possible
-    from Protein or any other entity referred to from the Protein, e.g., associated
-    disease\n{\n  \"@type\": \"Protein\",\n   \"@id\" : \"http://purl.uniprot.org/uniprot/P05519\"\n
-    \ \"mainEntityOfPage\": {\n     \"@id\": \"https://www.uniprot.org/uniprot/P05519\"
-    \n  }\n}"
-- property: name
-  expected_types:
-  - Text
-  description: The name of the item.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Minimum
-  cardinality: ONE
-  controlled_vocab: ""
-  example: |-
-    {
-      "@type": "Protein",
-      "name": "ABL1"
-    }
-- property: sameAs
-  expected_types:
-  - URL
-  description: URL of a reference Web page that unambiguously indicates the item's
-    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
-    website.
-  type: ""
-  type_url: ""
-  bsc_description: Link to any resource other than the Record and the official webpage,
-    for instance a Wikipedia page.
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: ""
-  example: "{\n  \"@type\": \"Protein\",\n  \"sameAs\": [\n    \"https://www.wikidata.org/wiki/Q587961\",
-    \n    \"https://identifiers.org/uniprot:P05519\",\n    \"https://purl.org/uniprot/P05519\"\n
-    \ ]\n}"
-- property: taxonomicRange
+  controlled_vocab: ''
+  description: For proteins, it is recommended to use this property to specify the
+    taxon/organism corresponding to a genome including a expressed gene that can be
+    translated to this protein. For taxon/organism, it is a good practice to use hasCategoryCode
+    to point to a controlled vacabulary such as NCBI taxon or UniProt Taxonomy..
+  example: ''
   expected_types:
   - DefinedTerm
   - Taxon
   - Text
   - URL
-  description: The taxonomic grouping of the organism that expresses, encodes, or
-    in someway related to the BioChemEntity.
-  type: pending
-  type_url: ""
-  bsc_description: '**Bioschemas Protein**: For proteins, it is recommended to use
-    this property to specify the taxon/organism corresponding to a genome including
-    a expressed gene that can be translated to this protein. For taxon/organism, it
-    is a good practice to use hasCategoryCode to point to a controlled vacabulary
-    such as NCBI taxon or UniProt Taxonomy. '
   marginality: Recommended
-  cardinality: MANY
-  controlled_vocab: Taxonomies or any suitable controlled vocabulary
-  example: "{\n  \"@type\": \"Protein\",\n  \"taxonomicRange\": {\n    \"@type\":
-    \"DefinedTerm\",\n    \"termCode\": \"9606\",\n    \"url\": \"http://purl.bioontology.org/ontology/NCBITAXON/9606\",\n
-    \   \"sameAs\": \"http://purl.uniprot.org/taxonomy/9606\",\n    \"inDefinedTermSet\":
-    {\n      \"@type\": \"DefinedTermSet\",\n      \"name\": \"NCBI taxon\",\n      \"url\":
-    \"https://bioportal.bioontology.org/ontologies/NCBITAXON\"\n    } \n  }\n}\n//
-    This could also be e.g. all bacteria and does not need to be a single organism"
-- property: url
+  property: taxonomicRange
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Link to the official webpage associated to this entity.
+  example: ''
   expected_types:
   - URL
-  description: URL of the item.
-  type: ""
-  type_url: ""
-  bsc_description: Link to the official webpage associated to this entity.
   marginality: Recommended
+  property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Link to any resource other than the Record and the official webpage,
+    for instance a Wikipedia page.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
+  type: ''
+  type_url: ''
+- bsc_description: ''
   cardinality: ONE
-  controlled_vocab: ""
-  example: |-
-    {
-      "@type": "Protein",
-      "url": "https://www.uniprot.org/uniprot/P05519"
-    }
-
+  controlled_vocab: ''
+  description: An alias for the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: alternateName
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A BioChemEntity that is know to interact with this item.
+  example: ''
+  expected_types:
+  - BioChemEntity
+  marginality: Optional
+  property: bioChemInteraction
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A similar molecular entity, e.g., obtained by fingerprint similarity
+    algorithm.
+  example: ''
+  expected_types:
+  - BioChemEntity
+  marginality: Optional
+  property: bioChemSimilarity
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Indicates a BioChemEntity that (in some sense) has this BioChemEntity
+    as a part. Inverse property: isPartOfBioChemEntity'
+  example: ''
+  expected_types:
+  - BioChemEntity
+  - URL
+  marginality: Optional
+  property: hasBioChemEntityPart
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A symbolic representation of a BioChemEnity. For example, a nucleotide
+    sequence of a Gene or an amino acid sequence of a Protein.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: hasBioPolymerSequence
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: GO term corresponding to the Molecular Function branch of the GO ontology.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  marginality: Optional
+  property: hasMolecularFunction
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Bioschemas Protein: This property could be used, for instance, to
+    link to a page containing the corresponding sequence protein. If you want to better
+    define the nature of the representation, use a PropertyValue as described in additionalProperty.'
+  example: ''
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Optional
+  property: hasRepresentation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a>
+    or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: image
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Functional term corresponding to the biological process (typically
+    the Biological Process branch of the GO ontology).
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  marginality: Optional
+  property: isInvolvedInBiologicalProcess
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Functional term corresponding to the subcellular location (typically
+    the Subcellular Location branch of the GO ontology).
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  marginality: Optional
+  property: isLocatedInSubcellularLocation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: For proteins, it can be used to link to protein sequence annotations
+    such as domains, sites, regions, etc.
+  example: ''
+  expected_types:
+  - BioChemEntity
+  marginality: Optional
+  property: isPartOfBioChemEntity
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Link to the main DataRecord representing this entity in a dataset.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Optional
+  property: mainEntityOfPage
+  type: ''
+  type_url: ''
+name: Protein
+parent_type: Protein
+previous_release: 0.11-RELEASE
+previous_version: 0.10-DRAFT-2020_04_02
+redirect_from: ''
+spec_info:
+  description: This Protein profile specification presents the most common properties
+    used for a Protein plus examples on how to use them. Version 0.12-DRAFT. <h3>Summary
+    of Changes</h3><br>Changes since 0.11-DRAFT:<ul><li> Updated type properties to
+    Schema.org pending release.</li><li>Addition of hasSequenceAnnotation property
+    at Recommended level.</li></ul>
+  full_example: https://github.com/BioSchemas/specifications/tree/master/Protein/examples
+  official_type: Protein
+  title: Protein
+  version: 0.12-DRAFT
+  version_date: 20221121T154023
+spec_type: Profile
+status: revision
+use_cases_url: /useCases/Protein
 ---
