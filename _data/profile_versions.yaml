@@ -127,7 +127,7 @@ PublicationVolume:
   name: PublicationVolume
   status: active
 RNA:
-  latest_publication: 0.2-DRAFT
+  latest_publication: 0.1-DRAFT-2019_06_21
   latest_release: null
   name: RNA
   status: active
