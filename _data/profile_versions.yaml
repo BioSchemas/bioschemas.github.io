@@ -112,7 +112,7 @@ ProteinAnnotation:
   status: deprecated
   superseded_by: SequenceAnnotation
 ProteinStructure:
-  latest_publication: 0.5-DRAFT-2018_08_15
+  latest_publication: 0.6-DRAFT
   latest_release: null
   name: ProteinStructure
   status: active
@@ -142,7 +142,7 @@ ScholarlyArticle:
   name: ScholarlyArticle
   status: active
 SemanticTextAnnotation:
-  latest_publication: 0.2-DRAFT-2020_12_03
+  latest_publication: 0.3-DRAFT
   latest_release: null
   name: SemanticTextAnnotation
   status: active
