@@ -86,7 +86,7 @@ MolecularEntity:
   name: MolecularEntity
   status: active
 Organization:
-  latest_publication: 0.3-DRAFT
+  latest_publication: 0.2-DRAFT-2019_07_19
   latest_release: null
   name: Organization
   status: active
