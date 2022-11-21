@@ -56,7 +56,7 @@ Disease:
   name: Disease
   status: active
 Event:
-  latest_publication: 0.2-DRAFT-2019_06_14
+  latest_publication: 0.3-DRAFT
   latest_release: null
   name: Event
   status: active
