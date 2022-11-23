@@ -20,7 +20,7 @@ ComputationalTool:
   name: ComputationalTool
   status: active
 ComputationalWorkflow:
-  latest_publication: null
+  latest_publication: 2.0-DRAFT
   latest_release: 1.0-RELEASE
   name: ComputationalWorkflow
   status: active
