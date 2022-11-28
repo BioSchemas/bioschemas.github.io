@@ -6,7 +6,8 @@ collection: groups
 active: true
 type: biological
 description: Specification for phenotype profile
-lead: [FedericoLopezGomez]
+lead: 
+- person: FedericoLopezGomez
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Phenotype
 folder: https://drive.google.com/open?id=1zznGVUcp4yTSzyMoIA7BF9k-nieOSHbL

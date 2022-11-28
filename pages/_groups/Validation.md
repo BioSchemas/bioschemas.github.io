@@ -6,7 +6,8 @@ collection: groups
 active: true
 type: other
 description: Tools for validating markup against a specification
-lead: [AlasdairGray]
+lead: 
+- person: AlasdairGray
 email: enquiries@bioschemas.org
 
 # Progress status

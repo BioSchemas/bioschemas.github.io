@@ -6,7 +6,9 @@ collection: groups
 active: true
 type: biological
 description: Specifications relating to diseases
-lead: [MarcHanauer, MarcoRoos]
+lead: 
+- person: MarcHanauer
+- person: MarcoRoos
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/specifications/labels/type%3A%20Disease
 folder: https://drive.google.com/drive/folders/1NklfXu2wDW36t_2ylL26tFV94_pn9Hp_

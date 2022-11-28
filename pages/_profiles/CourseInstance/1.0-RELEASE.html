@@ -1,16 +1,20 @@
 ---
+redirect_from:
+- "/profiles/CourseInstance/"
+- "/profiles/CourseInstance"
+
 name: CourseInstance
 
-previous_version: '0.8-DRAFT-2020_10_06'
+previous_version: '0.9-DRAFT'
 previous_release:
 
-status: revision
+status: release
 spec_type: Profile
 group: training
 use_cases_url: /useCases/TrainingGroup
-cross_walk_url: https://docs.google.com/spreadsheets/d/1PFU2A5Oe1McaMiRvfxaTZR5_QzkWumJSd-dU9NLSvY4
+cross_walk_url: https://docs.google.com/spreadsheets/d/1I0WLOYzL4Och-IkrztQQjyUKvrTtfVjXKgNN3UaAcgg
 gh_tasks: https://github.com/BioSchemas/bioschemas/labels/type%3A%20CourseInstance
-live_deploy: /developer/liveDeploys#nav-profile
+live_deploy: /liveDeploys
 
 parent_type: CourseInstance
 hierarchy:
@@ -26,19 +30,11 @@ spec_info:
   description: 'This specification can be used in tandem with a Course. A course is
     used to describe the broad, common aspects of a recurring training event - whereas
     a course instance is about the specific times and location of when that course
-    is held. <h4>Summary of Changes</h4>    Changes since previous draft 0.8 of the
-    CourseInstance profile:    <ul> <li>courseMode - added the BSC Description (made
-    the description more explicit with more examples</li> <li>courseMode - removed
-    the Controled Vocabullary </li> <li>eventStatus - added the BSC Description with
-    examples</li> <li> eventStatus - removed the Controled Vocabullary </li> <li>offers
-    - added the BSC Description with examples</li> <li> offers - added IOS 8601 for
-    the dates and ISO 4217 for currency in the Controled Vocabullary </li> <li> workFeatured
-    - removed "Inverse property: workFeatured" from the Description</li><li>Changes
-    prepared by Patricia Palagi</li>    </ul>'
-  version: 0.9-DRAFT
-  version_date: 20220816T160148
+    is held. <h4>Summary of Changes</h4>    No changes since 0.9-DRAFT of the CourseInstance profile.'
+  version: 1.0-RELEASE
+  version_date: 20220913T104848
   official_type: CourseInstance
-  full_example: https://github.com/BioSchemas/specifications/blob/master/CourseInstance/examples/0.9-DRAFT/courseInstance.json
+  full_example: https://github.com/BioSchemas/specifications/blob/master/CourseInstance/examples/1.0-RELEASE/courseInstance.json
 mapping:
 - property: alternateName
   expected_types:
