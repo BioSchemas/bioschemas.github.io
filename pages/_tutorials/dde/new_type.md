@@ -1,10 +1,10 @@
 ---
 title: Create New Type
 previousTutorial:
-  link: ./update_type
+  link: ./dde/update_type
   title: Type Update
 nextTutorial:
-  link: ./review_a_specification_pull_request
+  link: ./dde/review_a_specification_pull_request
   title: Review a pull request on a Bioschemas Specification
   
 bioschemas:

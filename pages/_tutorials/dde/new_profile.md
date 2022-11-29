@@ -1,11 +1,14 @@
 ---
 title: Create New Profile
 previousTutorial:
-  link: ./update_profile
+  link: ./dde/update_profile
   title: Update a Profile
 nextTutorial:
-  link: ./update_type
+  link: ./dde/update_type
   title: Update a Type
+
+redirect_from:
+- "/tutorials/howto/howto_create_new_profile"
   
 bioschemas:
   "@context": https://schema.org/

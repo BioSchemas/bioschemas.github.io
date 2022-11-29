@@ -1,7 +1,7 @@
 ---
 title: Review a pull request on a Bioschemas Specification
 previousTutorial:
-  link: ./new_type
+  link: ./dde/new_type
   title: Create New Type
 
   

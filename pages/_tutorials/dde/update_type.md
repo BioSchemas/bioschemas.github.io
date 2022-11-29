@@ -1,10 +1,10 @@
 ---
 title: Type Update
 previousTutorial:
-  link: ./new_profile
+  link: ./dde/new_profile
   title: Create a New Profile
 nextTutorial:
-  link: ./new_type
+  link: ./dde/new_type
   title: Create a New Type
   
 bioschemas:
