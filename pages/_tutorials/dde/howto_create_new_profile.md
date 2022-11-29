@@ -1,11 +1,14 @@
 ---
 title: How to create a new draft profile
-previousTutorial:
-  link: howto/howto_check_deploy
-  title: How to check your deployed markup
 nextTutorial:
-  link: ./howto/howto_new_profile_version
-  title: How to update a profile
+  link: ./dde/new_profile
+  title: Create a New Profile in the DDE
+previousTutorial:
+  link: ./dde/update_profile
+  title: Profile Update
+
+redirect_from:
+- "/tutorials/howto/howto_create_new_profile"
 
 bioschemas:
   "@context": https://schema.org/

@@ -1,8 +1,8 @@
 ---
 title: Profile Update
 nextTutorial:
-  link: ./dde/new_profile
-  title: Create a New Profile
+  link: ./dde/howto_create_new_profile
+  title: How to create a new draft profile
 
 redirect_from: 
 - "/tutorials/howto/howto_new_profile_version"

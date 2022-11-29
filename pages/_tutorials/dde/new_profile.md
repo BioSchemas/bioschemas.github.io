@@ -1,14 +1,11 @@
 ---
-title: Create New Profile
+title: Create a New Profile in the DDE
 previousTutorial:
   link: ./dde/update_profile
-  title: Update a Profile
+  title: How to create a new draft profile
 nextTutorial:
   link: ./dde/update_type
   title: Update a Type
-
-redirect_from:
-- "/tutorials/howto/howto_create_new_profile"
   
 bioschemas:
   "@context": https://schema.org/
