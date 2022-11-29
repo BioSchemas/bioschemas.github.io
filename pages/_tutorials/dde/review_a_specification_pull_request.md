@@ -35,7 +35,7 @@ bioschemas:
     name: "Alasdair Gray"
     "@id": https://bioschemas.org/people/AlasdairGray
     url: https://bioschemas.org/people/AlasdairGray
-    - "@type": Person
+  - "@type": Person
     name: "Sahar Frika"
     "@id": https://bioschemas.org/people/SaharFrikha
     url: https://bioschemas.org/people/SaharFrikha
