@@ -50,17 +50,19 @@ Profiles are developed within [working groups](/groups). Before starting on a ne
 
 ### 1.1 Use Case Development
 
-The use cases should be captured in a Markdown file that can be added to the [use case][/useCases] collection. Bioschemas use cases tend to focus search scenarios, but some also support lightweight data exchange.
+The use cases should be captured in a Markdown file that can be added to the [use case](/useCases) collection. Bioschemas use cases tend to focus on search scenarios, but some also support lightweight data exchange.
 
 A good use case will be specific about what is needed as input and what is expected as output. For example, in the following pattern you would fill in specicifics for the `X`, `Y`, and `Z`.
 
 > Alicia is looking for an `X` by using terms `Y`. To enable Alicia to distinguish between returned resources, properties `Z` are provided in the search results.
 
+The use cases are helpful to identify the properties required and what cardinality level they should be within the profile. As a rule of thumb, __search terms__ are at the Minimal Level, __diambiguation properties__ are at the Recommended Level, and __other properties of interest__ are provided at the Optional Level.
+
 ### 1.2 Cross-walk over Existing Terminologies
 
-There are many existing terminologies within the life sciences. The aim of Bioschemas is not to replace these, but to provide a lightweight set of terms that support the discovery of resources on the Web. The Bioschemas types and properties should build on the existing terminologies from the domain.
+There are many existing terminologies within the life sciences. The aim of Bioschemas is not to replace these, but to provide a lightweight set of terms that support the discovery of resources on the Web. The Bioschemas types and properties should be inspired by and reuse as much as possible the existing terminologies from the domain.
 
-The attributes that they have identified through the development of their use cases should be captured into a GSheet ([template](https://docs.google.com/spreadsheets/d/1UrEWtP8-ezbhG8anmNgaDwWbCUAi4e7cqq31dr69yf0/edit?usp=sharing)) within the Bioschemas Specification GDrive [folder](https://drive.google.com/drive/folders/0Bw_p-HKWUjHoNThZOWNKbGhOODg?resourcekey=0-H1gdWdmBSIZ1Nj6LGxuj9Q&usp=share_link). The first three columns allow for capturing the property, a description of the property, and the expectet type of the values for the property.
+The attributes that have been identified through the development of the use cases should be captured into a Crosswalk GSheet ([template](https://docs.google.com/spreadsheets/d/1UrEWtP8-ezbhG8anmNgaDwWbCUAi4e7cqq31dr69yf0/edit?usp=sharing)) within the Bioschemas Specification GDrive [folder](https://drive.google.com/drive/folders/0Bw_p-HKWUjHoNThZOWNKbGhOODg?resourcekey=0-H1gdWdmBSIZ1Nj6LGxuj9Q&usp=share_link). The first three columns allow for capturing the property, a description of the property, and the expected type of the values for the property.
 
 The remaining columns in the spreadsheet are for capturing releated properties from existing relevant terminologies.
 For each relevant terminology, the working group should identify which properties in the terminology correspond to those identified in the use cases and populate the corresponding cell with the terminology property name/identifier.
@@ -70,10 +72,12 @@ Once an initial version of the crosswalk is complete, you can start to develop y
 
 ## 2. Profile Development Process
 
-The development steps for a profile are:
-1. Identify the base Schema.org type for the profile, or develop a new Bioschemas type; see the [Create a New Type](./dde/new_type) tutorial
+![Overview of profile development process](https://raw.githubusercontent.com/BioSchemas/governance/master/specification_process.png){: width="100%" }
 
-2. For each property defined for the type use the DDE to create the profile; see the [Create a New Profile with the DDE](./dde/new_profile) tutorial for details 
+The development steps for a profile are shown in the image above and outlined below:
+1. Identify the base Schema.org type for the profile, or develop a new Bioschemas type; see the [Create a New Type](./new_type) tutorial
+
+2. For each property defined for the type use the DDE to create the profile; see the [Create a New Profile with the DDE](./new_profile) tutorial for details 
    _Note that the properties `@id`, `@type`, `@context`, and `dct:conformsTo` are automatically added as minimal properties to all profiles._
     1. Decide its cardinality recommendation (minimal, recommended, or optional) based on the defined use cases, with a goal of having no more than 6 minimal properties;
 
@@ -95,7 +99,7 @@ The development steps for a profile are:
 
 ## 3. Final Remarks
 
-Once you have completed a first draft of the profile, you are ready to create it in the DDE and get it published onto the Bioschemas website in the draft profiles page. The steps for this process are given in the [Create a New Profile with the DDE](./dde/new_profile) tutorial.
+Once you have completed a first draft of the profile, you are ready to create it in the DDE and get it published onto the Bioschemas website in the draft profiles page. The steps for this process are given in the [Create a New Profile with the DDE](./new_profile) tutorial.
 
 ### 3.1. Profile Authorship
 When the profile is rendered on the Bioschemas website, the membership of the working group is used to determine contributors to the profile. All members of the working group are assumed to have contributed to the profile.
@@ -106,5 +110,5 @@ Examples of markup are stored in the [Bioschemas Specification Repository](https
 - `jsonld` folder which is where the output of the DDE should be stored
 
 ### 3.3. Issue Tracker
-Issues should be added to the issue tracker in the [Bioschemas Specification Repository](https://github.com/BioSchemas/specifications/). A new label should be added for the profile that follows the common pattern used already. For example, when the disease profile was created the following label was used `https://github.com/BioSchemas/bioschemas/labels/type%3A%20Disease`
+Issues should be added to the issue tracker in the [Bioschemas Specification Repository](https://github.com/BioSchemas/specifications/issues). A new label should be added for the profile that follows the common pattern used already. For example, when the disease profile was created the following label was used `https://github.com/BioSchemas/bioschemas/labels/type%3A%20Disease`
 
