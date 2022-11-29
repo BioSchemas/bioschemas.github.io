@@ -72,7 +72,7 @@ Once an initial version of the crosswalk is complete, you can start to develop y
 
 ## 2. Profile Development Process
 
-![Overview of profile development process](https://raw.githubusercontent.com/BioSchemas/governance/master/specification_process.png){: width="300" }
+![Overview of profile development process](https://raw.githubusercontent.com/BioSchemas/governance/master/specification_process.png){: width="100%" }
 
 The development steps for a profile are shown in the image above and outlined below:
 1. Identify the base Schema.org type for the profile, or develop a new Bioschemas type; see the [Create a New Type](./new_type) tutorial
