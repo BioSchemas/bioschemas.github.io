@@ -56,7 +56,7 @@ You have come to a community consensus on updating an existing Bioschemas type. 
 #### 2.1 Find the parent type/class of the new type in the Registry
 * DDE classes are commonly known as ‘types’ in schema.org and ‘specifications’ in Bioschemas
 * On the Registry page, select “Browse By Namespace”
-  * If the type to be updated is a RELEASED type,sSelect ‘bioschemastypes’
+  * If the type to be updated is a RELEASED type, Select ‘bioschemastypes’
   * If the type to be updates is a draft type,  select ‘bioschemastypesdraft’
 
 {% include image.html file="/tutorials/dde/images/select-namespace-type.png" alt="Browse types in the DDE by namespace" width="80%" %}
