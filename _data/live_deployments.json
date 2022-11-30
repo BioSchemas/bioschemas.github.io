@@ -118,13 +118,13 @@
           "profileName": "TrainingMaterial",
           "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-101-everyone/tutorial.html",
-          "highligh": "Over 250 tutorials have been marked up."
+          "highlight": "Over 250 tutorials have been marked up."
         },
         {
           "profileName": "Person",
           "conformsTo": "0.2-DRAFT-2019_07_19",
           "exampleURL": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/",
-          "highligh": "The contributors of over 250 tutorials have been marked up."
+          "highlight": "The contributors of over 250 tutorials have been marked up."
         }
       ]
     },
@@ -189,6 +189,7 @@
     "url": "https://mobidb.org/",
     "nodes": "IT",
     "sitemap": "https://mobidb.org/sitemap.xml",
+    "datadump": "https://mobidb.org/.well-known/protein",
     "profiles":
     [
         {
@@ -304,9 +305,24 @@
       "profiles": [
         {
           "profileName": "Event",
-          "conformsTo": "0.1",
-          "exampleURL": "https://tess.elixir-europe.org/events",
+          "conformsTo": "0.2-DRAFT",
+          "exampleURL": "https://tess.elixir-europe.org/events/1st-international-conference-on-fair-digital-objects-fdo2022",
           "highlight": "Over 12,000 events"
+        },
+        {
+          "profileName": "TrainingMaterial",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://tess.elixir-europe.org/materials/hands-on-for-exome-sequencing-data-analysis-for-diagnosing-a-genetic-disease-tutorial"
+        },
+        {
+          "profileName": "Course",
+          "conformsTo": "0.10-DRAFT",
+          "exampleURL": "https://tess.elixir-europe.org/events/introduction-to-r-for-biologists-online"
+        },
+        {
+          "profileName": "CourseInstance",
+          "conformsTo": "0.9-DRAFT",
+          "exampleURL": "https://tess.elixir-europe.org/events/introduction-to-r-for-biologists-online"
         }
       ]
     },
@@ -345,14 +361,15 @@
       ]
     },
     {
-      "name": "SIB",
-      "url": "https://www.sib.swiss/",
+      "name": "Training Portal at SIB Swiss Institute of Bioinformatics",
+      "description": "Training material and courses delivered by SIB",
+      "url": "https://www.sib.swiss/training/",
       "nodes": "CH",
       "profiles": [
         {
-          "profileName": "Event",
-          "conformsTo": "0.1",
-          "exampleURL": "https://www.sib.swiss/training/upcoming-training-events"
+          "profileName": "CourseInstance",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://www.sib.swiss/training/course/20221123_OPEMP"
         }
       ]
     },
@@ -564,6 +581,33 @@
           "profileName": "MolecularEntity",
           "conformsTo": "0.2-DRAFT",
           "exampleURL": "https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL59/"
+        }
+      ]
+    },
+    {
+      "name": "ChEMBL (Mirror)",
+      "description": "A mirror of ChEMBL content captured using Bioschemas generated from ChEMBL-RDF hosted by Maastricht University. See <a href='https://github.com/ammar257ammar/SWAT4HCLS2022-ChEMBL-bioschemas-mapping/tree/v1.0.0'>GitHub repo</a> for more details.",
+      "url": "https://github.com/ammar257ammar/SWAT4HCLS2022-ChEMBL-bioschemas-mapping/tree/v1.0.0",
+      "nodes": "NL",
+      "datadump": "https://github.com/ammar257ammar/SWAT4HCLS2022-ChEMBL-bioschemas-mapping/releases/download/v1.0.0/json-ld-output.zip",
+      "profiles": [
+        {
+          "profileName": "MolecularEntity",
+          "conformsTo": "0.5-RELEASE",
+          "exampleURL": "http://",
+          "highlight": "Over 1.9 million molecular entities"
+        },
+        {
+          "profileName": "Protein",
+          "conformsTo": "0.12-DRAFT",
+          "exampleURL": "http://",
+          "highlight": "Over 8.5 thousand proteins"
+        },
+        {
+          "profileName": "Taxon",
+          "conformsTo": "0.6-RELEASE",
+          "exampleURL": "http://",
+          "highlight": "Over 1.2 thousand taxa"
         }
       ]
     },
@@ -1009,6 +1053,7 @@
       "name": "WorkflowHub",
       "url": "https://workflowhub.eu/",
       "nodes": "UK",
+      "datadump": "https://workflowhub.eu/workflows.bioschemas.json",
       "profiles": [
         {
           "profileName": "DataCatalog",
@@ -1120,6 +1165,7 @@
       "url": "https://massbank.eu/MassBank/",
       "nodes": "DE",
       "sitemap": "https://massbank.eu/MassBank/sitemapindex.xml",
+      "datadump": "https://msbi.ipb-halle.de/~sneumann/DataDump.json",
       "profiles": [
         {
           "profileName": "MolecularEntity",
@@ -1186,6 +1232,7 @@
         "ES"
       ],
       "sitemap": "https://bio.tools/api/sitemap.xml",
+      "datadump": "https://raw.githubusercontent.com/bio-tools/content/master/datasets/bioschemas-dump.ttl",
       "profiles": [
         {
           "profileName": "ComputationalTool",
@@ -1639,6 +1686,21 @@
           "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://bioinformatics.ca/workshops-all/2021-infectious-disease-epidemiology-analysis/",
           "highlight": "27 courses with markup"
+        }
+      ]
+    },
+    {
+      "name": "Rhea (Unofficial)",
+      "description": "An unofficial version of Rhea content captured using Bioschemas. Rhea is an expert-curated knowledgebase of chemical and transport reactions of biological interest - and the standard for enzyme and transporter annotation in UniProtKB. Rhea uses the chemical dictionary ChEBI (Chemical Entities of Biological Interest) to describe reaction participants.",
+      "url": "https://www.rhea-db.org/",
+      "nodes": ["CH", "NL"],
+      "datadump": "https://swel.macs.hw.ac.uk/bioschemas-data/BH2022/rhea.jsonld",
+      "profiles": [
+        {
+          "profileName": "MolecularEntity",
+          "conformsTo": "0.5-RELEASE",
+          "exampleURL": "http://",
+          "highlight": "Over 12,000 chemicals"
         }
       ]
     }

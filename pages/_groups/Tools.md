@@ -6,7 +6,10 @@ collection: groups
 active: false
 type: generic
 description: Specification for tools
-lead: [RicardoArcila, JustinClark-Casey, LeylaGarcia]
+lead: 
+- person: RicardoArcila
+- person: JustinClark-Casey
+- person: LeylaGarcia
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20tool
 folder: https://drive.google.com/open?id=0BzDhyOWTnRNTYkdQNHppUjZ3U2M
@@ -50,4 +53,5 @@ members:
     - AlbanGaignard
     - MatusKalas
     - StianSoiland-Reyes
+    - SaharFrikha
 ---

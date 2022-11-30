@@ -6,7 +6,10 @@ collection: groups
 active: true
 type: generic
 description: Description for Workflow related data, pattern of activities and so on.
-lead: [AlanWilliams, StuartOwen, BertDroesbeke]
+lead: 
+- person: AlanWilliams
+- person: StuartOwen
+- person: BertDroesbeke
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20ComputationalWorkflow
 folder: https://drive.google.com/open?id=10QSvgnEGFXTeOT8qz4-4xwZgLT5GJrqG
@@ -55,6 +58,7 @@ members:
     - IvanTopolsky
     - SalvadorCapella
     - FrederikCoppens
+    - SaharFrikha
 #    - fbacall
 #    - longr
 #    - FrederikCoppens

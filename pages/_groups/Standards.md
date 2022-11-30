@@ -6,7 +6,8 @@ collection: groups
 active: false
 type: generic
 description: Specification for standards
-lead: [PeterMcQuilton]
+lead: 
+- person: PeterMcQuilton
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20standard
 folder: https://drive.google.com/drive/u/1/folders/0Bw_p-HKWUjHoaDRIWlVwUXNJcHM

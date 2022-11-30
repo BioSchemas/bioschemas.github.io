@@ -6,7 +6,9 @@ collection: groups
 active: false
 type: generic
 description: Specification for organization
-lead: [RafaelJimenez, RichardHolland]
+lead: 
+- person: RafaelJimenez
+- person: RichardHolland
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20organization
 folder: https://drive.google.com/drive/u/1/folders/0B1TdgUL4-iBaOXVaZ0szWlRQc2M

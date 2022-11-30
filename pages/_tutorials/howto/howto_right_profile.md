@@ -42,11 +42,11 @@ bioschemas:
     name: "Egon Willighagen"
     "@id": https://bioschemas.org/people/EgonWillighagen
     url: https://bioschemas.org/people/EgonWillighagen    
-  dateModified: 2021-11-06
+  dateModified: 2022-08-23
   description: "In this how-to, we will guide you through the necessary steps for you to select a Bioschemas profile that will be later used to add mark up to your own resources"
   keywords: "schemaorg, markup, structured data, bioschemas profile"
   license: CC-BY 4.0
-  version: 2.0
+  version: 2.1
 ---
 
 ## 1. Your first encounter with Bioschemas profiles
@@ -99,4 +99,30 @@ When your webpages describe molecules then you can identify them with the [Molec
 ### 3.4. ChemicalSubstance
 
 When the chemical is not a well-defined molecule but, for example, a nanomaterial, then you can annoated them with the [ChemicalSubstance](/profiles/ChemicalSubstance) profile. This profile allows you to give details on the identifier of the substance and a chemical composition. The profile inherits properties from [BioChemEntity](/types/BioChemEntity), like chemical and biological roles.
+
+### 3.5. ComputationalTool
+
+If your webpage describes software aimed at producing or analyzing scientific data, then you can annotate it with the [ComputationalTool](/profiles/ComputationalTool) profile. This profile guides you on providing metadata from the [SoftwareApplication](https://schema.org/SoftwareApplication) type, such as the tool name and a short description. In addition, thanks to the [EDAM](https://edamontology.org) ontology, you can provide semantic annotations to document what the tool does, what kind of data is taken as input, or produced as ouput. 
+
+### 3.6. ComputationalWorkflow
+
+When you are publishing on the web a complex data analysis, made of several processing steps, you can annotate it with the [ComputationalWorkflow](/profiles/ComputationalWorkflow) profile. This profile provides guidelines to choose metadata inherited from the [SoftwareSourceCode](http://schema.org/SoftwareSourceCode) type. For instance the community agreed to document, among other minimal metadata, workflow input and output parameters as well as the workflow license. 
+
+### 3.7. Course, CourseInstance and TrainingMaterial
+
+These three profiles work well together but also on their own. Whether you use them all together or not, depends on your own use case. Here we present the different scenarios and things to consider. 
+
+A [Course](/profiles/Course) is used to describe the broad, common aspects of a recurring training event (e.g., a course "Introduction to Bioinformatics" part of the regular delivery of a Bionformatics master in a university), whereas a [CourseInstance](/profiles/CourseInstance) is about the specific times and location of when a particular version of a *Course* is held (e.g., the specific edition of that "Introduction to Bioinformatics" course on the first academic semester of 2022). [Course](/profiles/Course) and [CourseInstance](/profiles/CourseInstance) have been design to be used in tandem. These two views on a training event, i.e., *Course* and *CourseInstance*, are complemented with [TrainingMaterial](/profiles/TrainingMaterial) (aka [LearningReource](https://schema.org/LearningResource) in Schema.org). Below we present a series of scenarios that should help you decide the right training profile for your own case.
+
+**Scenario 1 - Course alone** A new master in "Biomedical Data Science" is starting in the following semester and the delivery includes some optional courses that will be scheduled depending on the demand, e.g., "Description logics for Biomedical Ontologies". At this point, it has not beed decided when exactly the first edition of this course will run. In this case, you have a *Course* but you do not have (yet) a *CourseInstance* or *TrainingMaterial*. 
+
+**Scenario 2 - One Course and one CourseInstance** An "Introduction to Bioschemas" course will be offered as part of the tutorials of the "Bionformatics Amazing Conference 2022", this course (aka tutorial in this scenario) is scheduled for one day, on the 13th of May of 2022. At this point you do not know if the same course will ever be run again. In this case, you have one *Course* "Introduction to Bioschemas" with one *CourseInstance* offered at the mentioned conference. 
+
+If it is one *CourseInstance* only, cannot I not simply use *CourseInstance* and forget about *Course*? No, a *CourseInstance* should always be used in tandem with a *Course*. *Course* includes elements such as *description* and *name* which are not included in *CourseInstance*. You would use *Course* for those "generic" aspects of a course (e.g., its *name* and *description*) while *CourseInstance* for elements spefic to a particular edition (e.g., *location*).
+
+**Scenario 3 - A course, at least one CourseInstance and at least one TrainingMaterial** In addition to what you had in **Scenario 2**, you also have the training material corresponding to the first half where you explain "What is Bioschemas about?" Your material has a *name* "What is Bioschemas about?", a *description* and some *keywords*, in addition, you have also defined some pre-requisites aka *competency required* for learners/trainees (e.g., basic knowledge on Schema.org), and the target *audience* (e.g., bioinformaticians). In this case, you have the *Course* and *CourseInstance* from **Scenario 2** but also a *TrainingMaterial".
+
+As an example (or learning activity), I am going to use a protein dataset to show how to use the Bioschemas profile *Dataset*, does it mean that that protein dataset becomes a "TrainingMaterial"? Not really. The protein dataset remains a *Dataset* that happens to be momentarily used for a training activity, i.e., as part of a *TrainingMaterial*. We can use *TraininMaterial* *mentions* "Dataset" to make the connection explicit, and give credit to the dataset that we are reusing and make it easier for others to reach that dataset.
+
+**Scenario 4 - A stand-alone TrainingMaterial** As part of the Bioschemas website, we offer to the community a tutorial on [Adding Schema.org to a GitHub Pages site](/tutorials/howto/howto_add_github). We do not know when this tutorial will be used, by whom, or how long it will take for someone to go through it. We have, however, designed that page as a tutorial, i.e., a *TrainingMaterial*, that anyone can use on their own. In this case, we have a *TrainingMaterial* but no *Course* or *CourseInstance*.
 

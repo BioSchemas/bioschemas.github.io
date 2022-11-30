@@ -6,7 +6,8 @@ collection: groups
 active: true
 type: generic
 description: Specification for Dataset
-lead: [SusannaSansone]
+lead: 
+- person: SusannaSansone
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Dataset
 folder: https://drive.google.com/open?id=0B2tKthYRS0f5aEhkU1Q4aEE5TEU
@@ -63,4 +64,5 @@ members:
   - anyango
   - HaydeeArtaza
   - DavidvanEnckevort
+  - SteffenNeumann
 ---

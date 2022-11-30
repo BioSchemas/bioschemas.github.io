@@ -7,7 +7,8 @@ collection: groups
 active: true
 type: generic
 description:
-lead: [JustinClark-Casey]
+lead: 
+- person: JustinClark-Casey
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/bioschemas/labels/SupportSoftware
 
@@ -20,6 +21,7 @@ members:
     - RicardoArcila
     - KennethMcLeod
     - PetrosPapadopoulos
+    - SaharFrikha
 ---
 
 <div id="links">

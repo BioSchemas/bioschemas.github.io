@@ -1,0 +1,25 @@
+{% assign presentations = site.data.presentations %}
+{% for presentation in site.data.presentations reversed %}
+    <li>
+    {% if presentation.EventBSLink %}
+        {% assign event-id = "/meetings/" | append: {{presentation.EventBSLink}} %}
+        {% assign event = site.meetings | where:"id", event-id | first %}
+        <a href="{{event-id}}">{{event.name}}</a>, {{event.dates}}
+    {% else %}
+        {% if presentation.EventURL %}
+            <a href="{{presentation.EventURL}}">{{presentation.EventName}}</a>
+        {% else %}
+            {{presentation.EventName}}, {{presentation.EventDate}}
+        {% endif %}
+    {% endif %}
+    <ul><li>
+        {% assign author-id = "/people/" | append: presentation.Presenter %}
+        {% assign author = site.people | where:"id", author-id | first %}
+        <a href="{{author-id}}">{{author.first-name}} {{author.last-name}}</a>. 
+        {{presentation.first[1]}}
+        (<a href="{{presentation.Slides}}">Slides</a>)
+    </li></ul>
+</li>
+{% endfor %}
+
+{{presentation.first | remove_first: "Title"}} 
