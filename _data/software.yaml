@@ -1,6 +1,6 @@
 # Specify the tabs/catagories in which the tools are ordered in following list and use these as values for the applicationCategory.
 # Values should be singular, so they can be displayed in plural on the website.
-applicationCategoryTypes: [generator, scrapper, viewer, validator]
+applicationCategoryTypes: [generator, scraper, viewer, validator]
 tools:
   - id: BMUSE
     name: "BMUSE: Bioschemas Markup Scraper and Extractor"
@@ -17,7 +17,7 @@ tools:
     links: 
       - Try it out using our [Swagger Hub](https://app.swaggerhub.com/apis-docs/swel/BMUSE/) deployment
       - Get the code from [GitHub](https://github.com/HW-SWeL/BMUSE)
-    applicationCategory: scrapper
+    applicationCategory: scraper
     url: https://github.com/HW-SWeL/BMUSE
     thumbnailUrl: /images/bmuse.png
 
