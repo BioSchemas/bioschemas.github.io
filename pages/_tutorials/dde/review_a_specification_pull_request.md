@@ -89,8 +89,8 @@ A community member has created or updated a Bioschemas specification JSON-LD fil
 
 
 ### Links and Further Reading
-* Documentation on the automated JSON-LD-to-webpage conversion: [https://hackmd.io/zGOAxx-BRfi4rDiaW9Rk4Q?both] 
-* Documentation on the automated DDE-updates: [https://github.com/bioschemas/bioschemas-dde]
-* About JSON-LD: [https://json-ld.org/]
-* About JSON-schema: [https://json-schema.org/]
-* The FAQ for the Data Discovery Engine (DDE): [https://discovery.biothings.io/faq/dde] 
+* Documentation on the automated JSON-LD-to-webpage conversion: <https://hackmd.io/zGOAxx-BRfi4rDiaW9Rk4Q?both>
+* Documentation on the automated DDE-updates: <https://github.com/bioschemas/bioschemas-dde>
+* About JSON-LD: <https://json-ld.org/>
+* About JSON-schema: <https://json-schema.org/>
+* The FAQ for the Data Discovery Engine (DDE): <https://discovery.biothings.io/faq/dde>
