@@ -1436,6 +1436,7 @@
       "url": "https://www.metanetx.org/",
       "nodes": "CH",
       "sitemap": "https://www.metanetx.org/sitemap.xml",
+      "datadump": "https://www.metanetx.org/ftp/latest/metanetx.schema_org.jsonld.gz",
       "profiles": [
                 {
           "profileName": "DataCatalog",
