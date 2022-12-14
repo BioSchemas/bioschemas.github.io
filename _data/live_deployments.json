@@ -1165,7 +1165,7 @@
       "url": "https://massbank.eu/MassBank/",
       "nodes": "DE",
       "sitemap": "https://massbank.eu/MassBank/sitemapindex.xml",
-      "datadump": "https://msbi.ipb-halle.de/~sneumann/DataDump.json",
+      "datadump": "https://msbi.ipb-halle.de/~sneumann/MassBank-2006.06.jsonld",
       "profiles": [
         {
           "profileName": "MolecularEntity",
