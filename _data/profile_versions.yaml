@@ -172,7 +172,7 @@ TaxonName:
   name: TaxonName
   status: active
 TrainingMaterial:
-  latest_publication: 0.10-DRAFT
+  latest_publication: 1.1-DRAFT
   latest_release: 1.0-RELEASE
   name: TrainingMaterial
   status: active
