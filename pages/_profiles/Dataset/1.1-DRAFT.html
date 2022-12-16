@@ -5,7 +5,10 @@ cross_walk_url: https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAv
 dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:Dataset
 gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20Dataset
 group: data
-hierarchy: []
+hierarchy:
+- Thing
+- CreativeWork
+- Dataset
 json-ld_url: Dataset/jsonld/Dataset_v0.6-DRAFT.json
 live_deploy: /liveDeploys
 mapping:
@@ -38,12 +41,11 @@ mapping:
   property: identifier
   type: ''
   type_url: ''
-- bsc_description: ''
+- bsc_description: Keywords should be drawn from a controlled vocabulary, e.g. [EDAM](https://edamontology.org/),
+and supplied as a DefinedTerm list. 
   cardinality: ONE
   controlled_vocab: ''
-  description: Keywords should be drawn from a controlled vocabulary, e.g. [EDAM](https://edamontology.org/),
-    and supplied as a DefinedTerm list. Keywords or tags used to describe this content.
-    Multiple entries in a keywords list are typically delimited by commas.
+  description: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.
   example: ''
   expected_types:
   - DefinedTerm
@@ -196,7 +198,6 @@ mapping:
     corresponding [measurementTechnique](https://schema.org/measurementTechnique).'
   example: ''
   expected_types:
-  - DefinedTerm
   - Text
   - URL
   marginality: Recommended
@@ -357,7 +358,7 @@ mapping:
   type_url: ''
 name: Dataset
 parent_type: Dataset
-previous_release: 0.3-RELEASE
+previous_release: 1.0-RELEASE
 previous_version: 0.5-DRAFT
 redirect_from: '- "/specifications/Dataset/"
 
@@ -380,12 +381,12 @@ redirect_from: '- "/specifications/Dataset/"
   - "/specifications/drafts/Dataset"'
 spec_info:
   description: ' A guide for how to describe datasets in the life-sciences using Schema.org-like
-    annotation. Version 0.6-DRAFT. <h3>Summary of Changes:</h3> <br><ul><li>add sameAs
-    property as recommended.</li><li> Included DefinedTerm as expected type for measurementTechnique</li></ul>'
+    annotation. Version 1.1-DRAFT. <h3>Summary of Changes:</h3> <br><ul><li>add sameAs
+    property as recommended.</li></ul>'
   full_example: https://github.com/BioSchemas/specifications/tree/master/Dataset/examples
   official_type: Dataset
   title: Dataset
-  version: 0.6-DRAFT
+  version: 1.1-DRAFT
   version_date: 20221111T103815
 spec_type: Profile
 status: revision
