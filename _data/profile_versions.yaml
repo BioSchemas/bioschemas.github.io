@@ -152,7 +152,7 @@ SequenceAnnotation:
   name: SequenceAnnotation
   status: active
 SequenceRange:
-  latest_publication: 0.1-DRAFT
+  latest_publication: 0.2-DRAFT
   latest_release: null
   name: SequenceRange
   status: active
