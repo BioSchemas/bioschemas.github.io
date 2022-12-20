@@ -100,7 +100,15 @@ When your webpages describe molecules then you can identify them with the [Molec
 
 When the chemical is not a well-defined molecule but, for example, a nanomaterial, then you can annoated them with the [ChemicalSubstance](/profiles/ChemicalSubstance) profile. This profile allows you to give details on the identifier of the substance and a chemical composition. The profile inherits properties from [BioChemEntity](/types/BioChemEntity), like chemical and biological roles.
 
-### 3.5. Course, CourseInstance and TrainingMaterial
+### 3.5. ComputationalTool
+
+If your webpage describes software aimed at producing or analyzing scientific data, then you can annotate it with the [ComputationalTool](/profiles/ComputationalTool) profile. This profile guides you on providing metadata from the [SoftwareApplication](https://schema.org/SoftwareApplication) type, such as the tool name and a short description. In addition, thanks to the [EDAM](https://edamontology.org) ontology, you can provide semantic annotations to document what the tool does, what kind of data is taken as input, or produced as ouput. 
+
+### 3.6. ComputationalWorkflow
+
+When you are publishing on the web a complex data analysis, made of several processing steps, you can annotate it with the [ComputationalWorkflow](/profiles/ComputationalWorkflow) profile. This profile provides guidelines to choose metadata inherited from the [SoftwareSourceCode](http://schema.org/SoftwareSourceCode) type. For instance the community agreed to document, among other minimal metadata, workflow input and output parameters as well as the workflow license. 
+
+### 3.7. Course, CourseInstance and TrainingMaterial
 
 These three profiles work well together but also on their own. Whether you use them all together or not, depends on your own use case. Here we present the different scenarios and things to consider. 
 
@@ -117,5 +125,4 @@ If it is one *CourseInstance* only, cannot I not simply use *CourseInstance* and
 As an example (or learning activity), I am going to use a protein dataset to show how to use the Bioschemas profile *Dataset*, does it mean that that protein dataset becomes a "TrainingMaterial"? Not really. The protein dataset remains a *Dataset* that happens to be momentarily used for a training activity, i.e., as part of a *TrainingMaterial*. We can use *TraininMaterial* *mentions* "Dataset" to make the connection explicit, and give credit to the dataset that we are reusing and make it easier for others to reach that dataset.
 
 **Scenario 4 - A stand-alone TrainingMaterial** As part of the Bioschemas website, we offer to the community a tutorial on [Adding Schema.org to a GitHub Pages site](/tutorials/howto/howto_add_github). We do not know when this tutorial will be used, by whom, or how long it will take for someone to go through it. We have, however, designed that page as a tutorial, i.e., a *TrainingMaterial*, that anyone can use on their own. In this case, we have a *TrainingMaterial* but no *Course* or *CourseInstance*.
-
 

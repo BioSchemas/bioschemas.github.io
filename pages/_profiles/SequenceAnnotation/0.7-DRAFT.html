@@ -1,4 +1,207 @@
 ---
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+cross_walk_url: https://docs.google.com/spreadsheets/d/18TQcNrJh3-qSyML_NM68_BRmS15AHgmqK1_OrM29lSc/
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:SequenceAnnotation
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20SequenceAnnotation
+group: proteins
+hierarchy:
+- Thing
+- BioChemEntity
+- SequencAnnotation
+json-ld_url: SequenceAnnotation/jsonld/SequenceAnnotation_v0.7-DRAFT.json
+live_deploy: /liveDeploys
+mapping:
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A range/position location where this annotation or BioChemEntity is
+    located reagrding another BioChemEntity, for instance a BioChemStructure in a
+    Protein.
+  example: ''
+  expected_types:
+  - SequenceRange
+  marginality: Minimum
+  property: sequenceLocation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Method used to create or obtain this annotation or BioChemEntity; please
+    use PropertyValue if you want to include any evidence.
+  example: ''
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Recommended
+  property: creationMethod
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: One of 1, 0 or -1.
+  example: ''
+  expected_types:
+  - Integer
+  marginality: Recommended
+  property: sequenceOrientation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: value of the sequence
+  example: ''
+  expected_types:
+  - Text
+  - URL
+  marginality: Recommended
+  property: sequenceValue
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A description of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+  example: ''
+  expected_types:
+  - ImageObject
+  - URL
+  marginality: Recommended
+  property: image
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The name of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: URL of the item.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A pointer to a secondary value that provides additional information
+    on the original value, e.g. a reference temperature.
+  example: ''
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Optional
+  property: valueReference
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Indicates a BioChemEntity that (in some sense) has this BioChemEntity
+    as a part. Inverse property: isPartOfBioChemEntity'
+  example: ''
+  expected_types:
+  - BioChemEntity
+  marginality: Optional
+  property: hasBioChemEntityPart
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A common representation such as a protein sequence or chemical structure
+    for this entity. For images use schema.org/image.
+  example: ''
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Optional
+  property: hasRepresentation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Subcellular location where this BioChemEntity is located; please use
+    PropertyValue if you want to include any evidence.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Propertyvalue
+  - URL
+  marginality: Optional
+  property: isLocatedInSubcellularLocation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: An alias for the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: alternateName
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
+    Inverse property: hasBioChemEntityPart'
+  example: ''
+  expected_types:
+  - BioChemEntity
+  - URL
+  marginality: Optional
+  property: isPartOfBioChemEntity
+  type: ''
+  type_url: ''
+name: SequenceAnnotation
+parent_type: SequenceAnnotation
+previous_release: ''
+previous_version: ''
 redirect_from:
 - "/devSpecs/SequenceAnnotation/specification/"
 - "/devSpecs/SequenceAnnotation/specification"
@@ -10,290 +213,17 @@ redirect_from:
 - "/specifications/SequenceAnnotation"
 - "/profiles/SequenceAnnotation/"
 - "/profiles/SequenceAnnotation"
-
-
-name: SequenceAnnotation
-
-previous_version: 0.6-DRAFT
-previous_release:
-
-status: revision
-spec_type: Profile
-group: proteins
-use_cases_url: /useCases/Protein
-cross_walk_url: https://docs.google.com/spreadsheets/d/18TQcNrJh3-qSyML_NM68_BRmS15AHgmqK1_OrM29lSc/
-go_web_url: https://docs.google.com/spreadsheets/d/e/2PACX-1vRKwMcs0hBSLIfE4co791u0LlypxBDVTcorGXH_c9zpIftT4NIjsDSAfR4YuTD9xWZs5Y4G_17p1dkY/pub?gid=292464567&single=true&output=csv
-gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20SequenceAnnotation
-live_deploy: /liveDeploys
-
-parent_type: SequenceAnnotation
-hierarchy:
-- Thing
-- BioChemEntity
-- SequenceAnnotation
-
-# spec_info content generated using GOWeb
-# DO NOT MANUALLY EDIT THE CONTENT
 spec_info:
-  title: SequenceAnnotation
-  subtitle: ""
-  description: Used to provide metadata about Sequence Annotations. The sequence can
-    be an amino acid (protein) or nucleic acid (Gene, DNA, RNA).<h3>Summary of Changes</h3><p>This
-    version supersedes the ProteinAnnotation 0.6-DRAFT.</p><ul><li>Change base type
-    to SequenceAnnotation</li><li>location is replaced with sequenceLocation; promoted
-    to minimal</li><li>sequenceOrientation added as a minimal property</li><li>sequenceValue
-    added as a recommended property</li><li>valueReference added as an optional property</li><li>sameAs
-    promoted to a recommended property</li></ul>
-  version: 0.7-DRAFT
-  version_date: 20210705T114151
+  description: 'Used to provide metadata about Sequence Annotations. The sequence
+    can be an amino acid (protein) or nucleic acid (Gene, DNA, RNA). Version: 0.7-DRAFT
+    (05 July 2021) Note, the parent class for this type has been updated to a pending
+    class in schema.org. <h3>Summary of Changes</h3><br>Not available.'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/SequenceAnnotation/examples
   official_type: SequenceAnnotation
-  full_example: https://github.com/BioSchemas/specifications/tree/master/SequenceAnnotation/examples/0.7-DRAFT
-mapping:
-- property: alternateName
-  expected_types:
-  - Text
-  description: An alias for the item.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: ""
-  example: |-
-    {
-    "alternateName": [" BRCA2_hlx"]
-    }
-- property: creationMethod
-  expected_types:
-  - PropertyValue
-  - Text
-  - URL
-  description: Method used to create or obtain this annotation or BioChemEntity; please
-    use PropertyValue if you want to include any evidence.
-  type: bioschemas
-  type_url: ""
-  bsc_description: ""
-  marginality: Recommended
-  cardinality: ONE
-  controlled_vocab: ""
-  example: |
-    {
-      "creationMethod": {
-        "@type": "PropertyValue",
-        "value": "imported manually asserted information used in automatic assertion",
-        "valueReference": {
-          "@type": "CategoryCode",
-          "codeValue": "ECO:0000322",
-          "inCategorySet": {
-            "@type": "CategoryCodeSet",
-            "name": "ECO Evidence Code Ontology"
-          }
-        }
-      }
-    }
-- property: description
-  expected_types:
-  - Text
-  description: A description of the item.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Recommended
-  cardinality: ONE
-  controlled_vocab: ""
-  example: |-
-    {
-        "description": "This entry represents a domain found in BRCA2 proteins. This domain adopts a helical..."
-    }
-- property: hasBioChemEntityPart
-  expected_types:
-  - BioChemEntity
-  description: |-
-    Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.
-     Inverse property: isPartOfBioChemEntity.
-  type: pending
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: ""
-  example: ""
-- property: hasRepresentation
-  expected_types:
-  - PropertyValue
-  - Text
-  - URL
-  description: A common representation such as a protein sequence or chemical structure
-    for this entity. For images use schema.org/image.
-  type: pending
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: ""
-  example: ""
-- property: image
-  expected_types:
-  - ImageObject
-  - URL
-  description: An image of the item. This can be a URL or a fully described ImageObject.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Recommended
-  cardinality: MANY
-  controlled_vocab: ""
-  example: |-
-    {
-      "image": {
-        "@id": "https://www.ebi.ac.uk/interpro/assets/images/ssf_logo.1Jk.avif"
-      }
-    }
-- property: isLocatedInSubcellularLocation
-  expected_types:
-  - DefinedTerm
-  - PropertyValue
-  - URL
-  description: Subcellular location where this BioChemEntity is located; please use
-    PropertyValue if you want to include any evidence.
-  type: pending
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: Any URL to a GO cellular_component
-  example: "{\n  \"isLocatedInSubcellularLocation\": [\n    \"http://identifiers.org/GO:0012505\",\n
-    \   \"http://identifiers.org/GO:0009707\" \n  ]\n}"
-- property: isPartOfBioChemEntity
-  expected_types:
-  - BioChemEntity
-  - URL
-  description: |-
-    Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
-     Inverse property: hasBioChemEntityPart.
-  type: pending
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: MANY
-  controlled_vocab: ""
-  example: |-
-    //A protein variant is contained in the proteine sequence:
-    {
-      "isPartOfBioChemEntity": {"@id": "http://purl.uniprot.org/uniprot/P05067"}
-    }
-- property: name
-  expected_types:
-  - Text
-  description: The name of the item.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Recommended
-  cardinality: ONE
-  controlled_vocab: ""
-  example: |-
-    {
-      "name": "Breast cancer type 2 susceptibility protein, helical domain"
-    }
-- property: sameAs
-  expected_types:
-  - URL
-  description: URL of a reference Web page that unambiguously indicates the item's
-    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
-    website.
-  type: ""
-  type_url: ""
-  bsc_description: Link to any resource other than the Record and the official webpage,
-    for instance a Wikipedia page.
-  marginality: Recommended
-  cardinality: MANY
-  controlled_vocab: ""
-  example: |-
-    {
-      "sameAs": "https://www.ebi.ac.uk/interpro/entry/pfam/PF09169/"
-    }
-- property: sequenceLocation
-  expected_types:
-  - SequenceRange
-  description: A range/position location where this annotation or BioChemEntity is
-    located reagrding another BioChemEntity, for instance a BioChemStructure in a
-    Protein.
-  type: bioschemas
-  type_url: ""
-  bsc_description: ""
-  marginality: Minimum
-  cardinality: MANY
-  controlled_vocab: FALDO may be used
-  example: |-
-    {
-      "sequenceLocation": {
-        "@type":"SequenceRange",
-        "rangeStart":20,
-        "rangeEnd":73
-      }
-    }
-- property: sequenceOrientation
-  expected_types:
-  - Integer
-  description: One of 1, 0 or -1.
-  type: bioschemas
-  type_url: ""
-  bsc_description: ""
-  marginality: Recommended
-  cardinality: ""
-  controlled_vocab: ""
-  example: |-
-    {
-      "sequenceOrientation": 0
-    }
-- property: sequenceValue
-  expected_types:
-  - Text
-  - URL
-  description: '-'
-  type: bioschemas
-  type_url: ""
-  bsc_description: ""
-  marginality: Recommended
-  cardinality: ""
-  controlled_vocab: ""
-  example: |-
-    {
-      "sequenceValue": "AMSQSLLKTTQEPLARDPVKLP"
-    }
-- property: url
-  expected_types:
-  - URL
-  description: URL of the item.
-  type: ""
-  type_url: ""
-  bsc_description: Link to the official webpage associated to this entity
-  marginality: Recommended
-  cardinality: ONE
-  controlled_vocab: ""
-  example: |-
-    {
-      "url": "https://www.ebi.ac.uk/interpro/entry/IPR015252"
-    }
-- property: valueReference
-  expected_types:
-  - DefinedTerm
-  - Enumeration
-  - PropertyValue
-  - QualitativeValue
-  - QuantitativeValue
-  - StructuredValue
-  - Text
-  - URL
-  description: A pointer to a secondary value that provides additional information
-    on the original value, e.g. a reference temperature.
-  type: ""
-  type_url: ""
-  bsc_description: ""
-  marginality: Optional
-  cardinality: ""
-  controlled_vocab: ""
-  example: ""
-
+  title: SequenceAnnotation
+  version: 0.7-DRAFT
+  version_date: 20221121T155318
+spec_type: Profile
+status: revision
+use_cases_url: /useCases/Protein
 ---
