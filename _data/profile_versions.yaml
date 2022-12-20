@@ -81,7 +81,7 @@ LabProtocol:
   name: LabProtocol
   status: active
 MolecularEntity:
-  latest_publication: null
+  latest_publication: 0.6-DRAFT
   latest_release: 0.5-RELEASE
   name: MolecularEntity
   status: active
