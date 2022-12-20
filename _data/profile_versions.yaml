@@ -76,7 +76,7 @@ Journal:
   name: Journal
   status: active
 LabProtocol:
-  latest_publication: 0.6-DRAFT-2020_12_08
+  latest_publication: 0.7-DRAFT
   latest_release: null
   name: LabProtocol
   status: active
