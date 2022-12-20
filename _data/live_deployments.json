@@ -361,14 +361,15 @@
       ]
     },
     {
-      "name": "SIB",
-      "url": "https://www.sib.swiss/",
+      "name": "Training Portal at SIB Swiss Institute of Bioinformatics",
+      "description": "Training material and courses delivered by SIB",
+      "url": "https://www.sib.swiss/training/",
       "nodes": "CH",
       "profiles": [
         {
-          "profileName": "Event",
-          "conformsTo": "0.1",
-          "exampleURL": "https://www.sib.swiss/training/upcoming-training-events"
+          "profileName": "CourseInstance",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://www.sib.swiss/training/course/20221123_OPEMP"
         }
       ]
     },
@@ -1164,7 +1165,7 @@
       "url": "https://massbank.eu/MassBank/",
       "nodes": "DE",
       "sitemap": "https://massbank.eu/MassBank/sitemapindex.xml",
-      "datadump": "https://msbi.ipb-halle.de/~sneumann/DataDump.json",
+      "datadump": "https://msbi.ipb-halle.de/~sneumann/MassBank-2006.06.jsonld",
       "profiles": [
         {
           "profileName": "MolecularEntity",
@@ -1435,6 +1436,7 @@
       "url": "https://www.metanetx.org/",
       "nodes": "CH",
       "sitemap": "https://www.metanetx.org/sitemap.xml",
+      "datadump": "https://www.metanetx.org/ftp/latest/metanetx.schema_org.jsonld.gz",
       "profiles": [
                 {
           "profileName": "DataCatalog",
@@ -1693,7 +1695,7 @@
       "description": "An unofficial version of Rhea content captured using Bioschemas. Rhea is an expert-curated knowledgebase of chemical and transport reactions of biological interest - and the standard for enzyme and transporter annotation in UniProtKB. Rhea uses the chemical dictionary ChEBI (Chemical Entities of Biological Interest) to describe reaction participants.",
       "url": "https://www.rhea-db.org/",
       "nodes": ["CH", "NL"],
-      "datadump": "https://bioschemas.slack.com/files/U013U0WAKHV/F049JSR3EDD/rhea.ttl",
+      "datadump": "https://swel.macs.hw.ac.uk/bioschemas-data/BH2022/rhea.jsonld",
       "profiles": [
         {
           "profileName": "MolecularEntity",
