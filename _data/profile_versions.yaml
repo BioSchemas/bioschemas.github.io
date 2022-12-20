@@ -162,7 +162,7 @@ Study:
   name: Study
   status: active
 Taxon:
-  latest_publication: 0.8-DRAFT
+  latest_publication: 0.7-DRAFT
   latest_release: 0.6-RELEASE
   name: Taxon
   status: active
