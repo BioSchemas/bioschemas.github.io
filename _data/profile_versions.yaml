@@ -71,7 +71,7 @@ Gene:
   name: Gene
   status: active
 Journal:
-  latest_publication: 0.2-DRAFT-2020_12_03
+  latest_publication: 0.3-DRAFT
   latest_release: null
   name: Journal
   status: active
@@ -117,12 +117,12 @@ ProteinStructure:
   name: ProteinStructure
   status: active
 PublicationIssue:
-  latest_publication: 0.2-DRAFT-2020_12_03
+  latest_publication: 0.3-DRAFT
   latest_release: null
   name: PublicationIssue
   status: active
 PublicationVolume:
-  latest_publication: 0.2-DRAFT-2020_12_03
+  latest_publication: 0.3-DRAFT
   latest_release: null
   name: PublicationVolume
   status: active
@@ -137,7 +137,7 @@ Sample:
   name: Sample
   status: active
 ScholarlyArticle:
-  latest_publication: 0.2-DRAFT-2020_12_03
+  latest_publication: 0.3-DRAFT
   latest_release: null
   name: ScholarlyArticle
   status: active
