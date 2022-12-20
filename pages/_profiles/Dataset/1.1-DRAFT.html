@@ -1,0 +1,385 @@
+---
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+cross_walk_url: https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAvaADLmI_FrIk7O3BEkxY/
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:Dataset
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20Dataset
+group: data
+hierarchy:
+- Thing
+- CreativeWork
+- Dataset
+json-ld_url: Dataset/jsonld/Dataset_v0.6-DRAFT.json
+live_deploy: /liveDeploys
+mapping:
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A short summary describing a dataset. A description of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: CURIEs that can be resolved using [Identifiers.org](https://identifiers.org/)
+    should be used. The identifier property represents any kind of identifier for
+    any kind of [Thing](https://schema.org/Thing), such as ISBNs, GTIN codes, UUIDs
+    etc. Schema.org provides dedicated properties for representing many of these,
+    either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.
+  example: ''
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Minimum
+  property: identifier
+  type: ''
+  type_url: ''
+- bsc_description: Keywords should be drawn from a controlled vocabulary, e.g. [EDAM](https://edamontology.org/), and supplied as a DefinedTerm list. 
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  marginality: Minimum
+  property: keywords
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A license under which the dataset is distributed. A license document
+    that applies to this content, typically indicated by URL.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - URL
+  marginality: Minimum
+  property: license
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A descriptive name of the dataset. The name of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The location of a page describing the dataset. URL of the item.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Minimum
+  property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' An alias for the item.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: alternateName
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A citation for a publication that describes the dataset. A citation
+    or reference to another creative work, such as another publication, web page,
+    scholarly article, etc.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - Text
+  marginality: Recommended
+  property: citation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The name of the dataset creator (person or organization). The creator/author
+    of this CreativeWork. This is the same as the Author property for CreativeWork.
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Recommended
+  property: creator
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' A downloadable form of this dataset, at a specific location, in a
+    specific format.'
+  example: ''
+  expected_types:
+  - DataDownload
+  marginality: Recommended
+  property: distribution
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' A data catalog which contains this dataset. Supersedes [includedDataCatalog](https://schema.org/includedDataCatalog),
+    [catalog](https://schema.org/catalog).
+
+    Inverse property: [dataset](https://schema.org/dataset)'
+  example: ''
+  expected_types:
+  - DataCatalog
+  marginality: Recommended
+  property: includedInDataCatalog
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: "Use to link a Dataset to the Study that it was generated from. A resource\
+    \ that was used in the creation of this resource. This term can be repeated for\
+    \ multiple sources. For example, http://example.com/great-multiplication-intro.html.\
+    \ \nSupersedes isBasedOnUrl."
+  example: ''
+  expected_types:
+  - Creativework
+  - Product
+  - URL
+  marginality: Recommended
+  property: isBasedOn
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' A technique or technology used in a [Dataset](https://schema.org/Dataset)
+    (or [DataDownload](https://schema.org/DataDownload), [DataCatalog](https://schema.org/DataCatalog)),
+    corresponding to the method used for measuring the corresponding variable(s) (described
+    using [variableMeasured](https://schema.org/variableMeasured)). This is oriented
+    towards scientific and scholarly dataset publication but may have broader applicability;
+    it is not intended as a full representation of measurement, but rather as a high
+    level summary for dataset discovery.
+
+
+    For example, if [variableMeasured](https://schema.org/variableMeasured) is: molecule
+    concentration, [measurementTechnique](https://schema.org/measurementTechnique)
+    could be: "mass spectrometry" or "nmr spectroscopy" or "colorimetry" or "immunofluorescence".
+
+
+    If the [variableMeasured](https://schema.org/variableMeasured) is "depression
+    rating", the [measurementTechnique](https://schema.org/measurementTechnique) could
+    be "Zung Scale" or "HAM-D" or "Beck Depression Inventory".
+
+
+    If there are several [variableMeasured](https://schema.org/variableMeasured) properties
+    recorded for some given data object, use a [PropertyValue](https://schema.org/PropertyValue)
+    for each [variableMeasured](https://schema.org/variableMeasured) and attach the
+    corresponding [measurementTechnique](https://schema.org/measurementTechnique).'
+  example: ''
+  expected_types:
+  - Text
+  - URL
+  marginality: Recommended
+  property: measurementTechnique
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: What does the dataset measure? (e.g., temperature, pressure). The variableMeasured
+    property can indicate (repeated as necessary) the variables that are measured
+    in some dataset, either described as text or as pairs of identifier and description
+    using PropertyValue.
+  example: ''
+  expected_types:
+  - PropertyValue
+  - Text
+  marginality: Recommended
+  property: variableMeasured
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The version number for this dataset. The version of the CreativeWork
+    embodied by a specified resource.
+  example: ''
+  expected_types:
+  - Number
+  - Text
+  marginality: Recommended
+  property: version
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' URL of a reference Web page that unambiguously indicates the item''s
+    identity. E.g. the URL of the item''s Wikipedia page, Wikidata entry, or official
+    website.'
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The date on which the CreativeWork was created or the item was added
+    to a DataFeed.'
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Optional
+  property: dateCreated
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The date on which the CreativeWork was most recently modified or
+    when the item''s entry was modified within a DataFeed.'
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Optional
+  property: dateModified
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' Date of first broadcast/publication.'
+  example: ''
+  expected_types:
+  - Date
+  marginality: Optional
+  property: datePublished
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: " Indicates an item or CreativeWork that is part of this item, or CreativeWork\
+    \ (in some sense). \nInverse property: [isPartOf](https://schema.org/isPartOf)"
+  example: ''
+  expected_types:
+  - CreativeWork
+  - Trip
+  marginality: Optional
+  property: hasPart
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' A flag to signal that the item, event, or place is accessible for
+    free. Supersedes [free](https://schema.org/free).'
+  example: ''
+  expected_types:
+  - Boolean
+  marginality: Optional
+  property: isAccessibleForFree
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' Indicates an item or CreativeWork that this item, or CreativeWork
+    (in some sense), is part of. Inverse property: [hasPart](https://schema.org/hasPart)'
+  example: ''
+  expected_types:
+  - CreativeWork
+  - URL
+  marginality: Optional
+  property: isPartOf
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' A maintainer of a [Dataset](https://schema.org/Dataset), software
+    package ([SoftwareApplication](https://schema.org/SoftwareApplication)), or other
+    [Project](https://schema.org/Project). A maintainer is a [Person](https://schema.org/Person)
+    or [Organization](https://schema.org/Organization) that manages contributions
+    to, and/or publication of, some (typically complex) artifact. It is common for
+    distributions of software and data to be based on "upstream" sources. When [maintainer](https://schema.org/maintainer)
+    is applied to a specific version of something e.g. a particular version or packaging
+    of a [Dataset](https://schema.org/Dataset), it is always possible that the upstream
+    source has a different maintainer. The [isBasedOn](https://schema.org/isBasedOn)
+    property can be used to indicate such relationships between datasets to make the
+    different maintenance roles clear. Similarly in the case of software, a package
+    may have dedicated maintainers working on integration into software distributions
+    such as Ubuntu, as well as upstream maintainers of the underlying work.'
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Optional
+  property: maintainer
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The publisher of the creative work.'
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Optional
+  property: publisher
+  type: ''
+  type_url: ''
+name: Dataset
+parent_type: Dataset
+previous_release: 1.0-RELEASE
+previous_version: 0.5-DRAFT
+redirect_from:
+- "/specifications/Dataset/"
+- "/specifications/Dataset"
+- "/profiles/Dataset/"
+- "/profiles/Dataset"
+- "/devSpecs/Dataset/specification/"
+- "/devSpecs/Dataset/specification"
+- "/devSpecs/Dataset/"
+- "/devSpecs/Dataset"
+- "/specifications/drafts/Dataset/"
+- "/specifications/drafts/Dataset"
+spec_info:
+  description: ' A guide for how to describe datasets in the life-sciences using Schema.org-like
+    annotation. Version 1.1-DRAFT. <h3>Summary of Changes:</h3> <br><ul><li>add sameAs
+    property as recommended.</li></ul>'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/Dataset/examples
+  official_type: Dataset
+  title: Dataset
+  version: 1.1-DRAFT
+  version_date: 20221111T103815
+spec_type: Profile
+status: revision
+use_cases_url: /useCases/Dataset
+---
