@@ -167,12 +167,12 @@ Taxon:
   name: Taxon
   status: active
 TaxonName:
-  latest_publication: 0.1-DRAFT
+  latest_publication: 0.2-DRAFT
   latest_release: null
   name: TaxonName
   status: active
 TrainingMaterial:
-  latest_publication: null
+  latest_publication: 1.1-DRAFT
   latest_release: 1.0-RELEASE
   name: TrainingMaterial
   status: active
