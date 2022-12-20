@@ -15,7 +15,7 @@ ChemicalSubstance:
   name: ChemicalSubstance
   status: active
 ComputationalTool:
-  latest_publication: null
+  latest_publication: 1.1-DRAFT
   latest_release: 1.0-RELEASE
   name: ComputationalTool
   status: active
@@ -35,7 +35,7 @@ CourseInstance:
   name: CourseInstance
   status: active
 DataCatalog:
-  latest_publication: null
+  latest_publication: 0.4-DRAFT
   latest_release: 0.3-RELEASE-2019_07_01
   name: DataCatalog
   status: active
@@ -46,12 +46,12 @@ DataRecord:
   name: DataRecord
   status: deprecated
 Dataset:
-  latest_publication: null
+  latest_publication: 1.1-DRAFT
   latest_release: 1.0-RELEASE
   name: Dataset
   status: active
 Disease:
-  latest_publication: 0.1-DRAFT
+  latest_publication: 0.2-DRAFT
   latest_release: null
   name: Disease
   status: active
@@ -157,7 +157,7 @@ SequenceRange:
   name: SequenceRange
   status: active
 Study:
-  latest_publication: 0.2-DRAFT
+  latest_publication: 0.3-DRAFT
   latest_release: null
   name: Study
   status: active

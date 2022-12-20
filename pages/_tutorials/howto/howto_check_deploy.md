@@ -4,9 +4,6 @@ title: Check Deployed Markup
 previousTutorial:
   link: howto/howto_add_github
   title: Adding schema.org to a GitHub Pages site
-nextTutorial:
-  link: ./howto/howto_create_new_profile
-  title: How to create a new draft profile
 
 bioschemas:
   "@context": https://schema.org/
