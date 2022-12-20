@@ -1,6 +1,6 @@
 # Specify the tabs/catagories in which the tools are ordered in following list and use these as values for the applicationCategory.
 # Values should be singular, so they can be displayed in plural on the website.
-applicationCategoryTypes: [generator, scrapper, viewer, validator]
+applicationCategoryTypes: [generator, scraper, viewer, validator]
 tools:
   - id: BMUSE
     name: "BMUSE: Bioschemas Markup Scraper and Extractor"
@@ -17,7 +17,7 @@ tools:
     links: 
       - Try it out using our [Swagger Hub](https://app.swaggerhub.com/apis-docs/swel/BMUSE/) deployment
       - Get the code from [GitHub](https://github.com/HW-SWeL/BMUSE)
-    applicationCategory: scrapper
+    applicationCategory: scraper
     url: https://github.com/HW-SWeL/BMUSE
     thumbnailUrl: /images/bmuse.png
 
@@ -101,3 +101,20 @@ tools:
     applicationCategory: validator
     url: https://github.com/IFB-ElixirFr/fair-checker
     thumbnailUrl: /images/fair-checker.png
+    
+  - id: uomBioschemasValidator
+    name: "Bioschemas Validator (WIP)"
+    summary: A work-in-progress online Bioschemas validator for checking markup against Bioschemas profiles.
+    description: |
+      An online validator similar to the schema.org validator that can retrieve a page from a URL, follow a sitemap, or parse pasted markup, but it checks against Bioschemas profiles rather than just schema.org.
+      
+      It outputs a report listing what fields were invalid or missing from each of the Minimum, Recommended and Optional field sets from the detected Bioschemas profile.
+      
+      This validator began life as a student project and is looking for maintainers to help address some of the outstanding issues and incomplete functionality.
+    people: 
+      - "Yazhuo Cao, University of Manchester student"
+      - "[Oliver Woolland](https://orcid.org/0000-0002-4565-9760)"
+    links: 
+      - Code available on [GitHub](https://github.com/ElixirTeSS/bioschemas-validator/tree/develop)
+    applicationCategory: validator
+    url: https://bioschemas-validator.herokuapp.com/
