@@ -5,11 +5,8 @@ cross_walk_url: https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAv
 dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:Dataset
 gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20Dataset
 group: data
-hierarchy:
-- Thing
-- CreativeWork
-- Dataset
-json-ld_url: Dataset/jsonld/Dataset_v0.6-DRAFT.json
+hierarchy: []
+json-ld_url: Dataset/jsonld/Dataset_v1.1-DRAFT.json
 live_deploy: /liveDeploys
 mapping:
 - bsc_description: ''
@@ -41,10 +38,12 @@ mapping:
   property: identifier
   type: ''
   type_url: ''
-- bsc_description: Keywords should be drawn from a controlled vocabulary, e.g. [EDAM](https://edamontology.org/), and supplied as a DefinedTerm list. 
-  cardinality: ONE
+- bsc_description: ''
+  cardinality: MANY
   controlled_vocab: ''
-  description: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.
+  description: Keywords should be drawn from a controlled vocabulary, e.g. [EDAM](https://edamontology.org/),
+    and supplied as a DefinedTerm list. Keywords or tags used to describe this content.
+    Multiple entries in a keywords list are typically delimited by commas.
   example: ''
   expected_types:
   - DefinedTerm
@@ -130,6 +129,17 @@ mapping:
 - bsc_description: ''
   cardinality: ONE
   controlled_vocab: ''
+  description: ' Date of first broadcast/publication.'
+  example: ''
+  expected_types:
+  - Date
+  marginality: Recommended
+  property: datePublished
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
   description: ' A downloadable form of this dataset, at a specific location, in a
     specific format.'
   example: ''
@@ -197,6 +207,7 @@ mapping:
     corresponding [measurementTechnique](https://schema.org/measurementTechnique).'
   example: ''
   expected_types:
+  - DefinedTerm
   - Text
   - URL
   marginality: Recommended
@@ -225,8 +236,8 @@ mapping:
     embodied by a specified resource.
   example: ''
   expected_types:
-  - Number
   - Text
+  - number
   marginality: Recommended
   property: version
   type: ''
@@ -268,17 +279,6 @@ mapping:
   - DateTime
   marginality: Optional
   property: dateModified
-  type: ''
-  type_url: ''
-- bsc_description: ''
-  cardinality: ONE
-  controlled_vocab: ''
-  description: ' Date of first broadcast/publication.'
-  example: ''
-  expected_types:
-  - Date
-  marginality: Optional
-  property: datePublished
   type: ''
   type_url: ''
 - bsc_description: ''
@@ -358,27 +358,35 @@ mapping:
 name: Dataset
 parent_type: Dataset
 previous_release: 1.0-RELEASE
-previous_version: 0.5-DRAFT
-redirect_from:
-- "/specifications/Dataset/"
-- "/specifications/Dataset"
-- "/profiles/Dataset/"
-- "/profiles/Dataset"
-- "/devSpecs/Dataset/specification/"
-- "/devSpecs/Dataset/specification"
-- "/devSpecs/Dataset/"
-- "/devSpecs/Dataset"
-- "/specifications/drafts/Dataset/"
-- "/specifications/drafts/Dataset"
+previous_version: ''
+redirect_from: '- "/specifications/Dataset/"
+
+  - "/specifications/Dataset"
+
+  - "/profiles/Dataset/"
+
+  - "/profiles/Dataset"
+
+  - "/devSpecs/Dataset/specification/"
+
+  - "/devSpecs/Dataset/specification"
+
+  - "/devSpecs/Dataset/"
+
+  - "/devSpecs/Dataset"
+
+  - "/specifications/drafts/Dataset/"
+
+  - "/specifications/drafts/Dataset"'
 spec_info:
-  description: ' A guide for how to describe datasets in the life-sciences using Schema.org-like
-    annotation. Version 1.1-DRAFT. <h3>Summary of Changes:</h3> <br><ul><li>add sameAs
-    property as recommended.</li></ul>'
+  description: A guide for how to describe datasets in the life-sciences using Schema.org-like
+    annotation. Version 1.1-DRAFT. <h3>Summary of Changes</h3> <br>Key changes since
+    1.0-RELEASE:<ul><li>sameAs now recommended.</li></ul>
   full_example: https://github.com/BioSchemas/specifications/tree/master/Dataset/examples
   official_type: Dataset
   title: Dataset
   version: 1.1-DRAFT
-  version_date: 20221111T103815
+  version_date: 20221221T17340
 spec_type: Profile
 status: revision
 use_cases_url: /useCases/Dataset
