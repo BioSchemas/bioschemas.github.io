@@ -6,7 +6,7 @@ dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdraft
 gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20Taxon
 group: biodiversity
 hierarchy: []
-json-ld_url: Taxon/jsonld/Taxon_v0.7-DRAFT.json
+json-ld_url: Taxon/jsonld/Taxon_v0.8-DRAFT.json
 live_deploy: /liveDeploys
 mapping:
 - bsc_description: ''
@@ -73,6 +73,19 @@ mapping:
   - URL
   marginality: Recommended
   property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: URL of third-party webpages describing the same taxon URL of a reference
+    Web page that unambiguously indicates the item's identity. E.g. the URL of the
+    item's Wikipedia page, Wikidata entry, or official website.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
   type: ''
   type_url: ''
 - bsc_description: ''
@@ -235,23 +248,10 @@ mapping:
   property: mainEntityOfPage
   type: ''
   type_url: ''
-- bsc_description: ''
-  cardinality: MANY
-  controlled_vocab: ''
-  description: URL of third-party webpages describing the same taxon URL of a reference
-    Web page that unambiguously indicates the item's identity. E.g. the URL of the
-    item's Wikipedia page, Wikidata entry, or official website.
-  example: ''
-  expected_types:
-  - URL
-  marginality: Optional
-  property: sameAs
-  type: ''
-  type_url: ''
 name: Taxon
 parent_type: Taxon
 previous_release: 0.3-RELEASE-2018_11_10
-previous_version: 0.5-DRAFT-2020_04_06
+previous_version: 0.7-DRAFT
 redirect_from: '- "/specifications/Taxon/"
 
   - "/specifications/Taxon"
@@ -263,15 +263,12 @@ spec_info:
   description: Bioschemas profile for describing a biological taxon This profile aims
     to denote a taxon by common properties such as its scientific name, taxonomic
     rank and vernacular names. It is also a means to link to existing taxonomic registers
-    where each taxon has a URI. Version 0.7-DRAFT. <br/><h3>Summary of Changes</h3><br>Changes
-    since 0.6-RELEASE:<ul><li>Use of identifier to add the taxon id within well known
-    authorities (NCBI id, GBIF id, EoL id etc.)</li><li>Add property isBasedOn</li><li>Add
-    properties scientificName and alternateScientificName to link the Taxon to TaxonName
-    instances.</li></ul>
+    where each taxon has a URI. Version 0.8-DRAFT. <br/><h3>Summary of Changes</h3><br>Changes
+    since 0.7-DRAFT:<ul><li>Change sameAs from optional to recommended.</li></ul>
   full_example: https://github.com/BioSchemas/specifications/tree/master/Taxon/examples
   official_type: Taxon
   title: Taxon
-  version: 0.7-DRAFT
+  version: 0.8-DRAFT
   version_date: 20221221T174617
 spec_type: Profile
 status: revision
