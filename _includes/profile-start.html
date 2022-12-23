@@ -136,9 +136,8 @@
          <tbody>
             <tr>
                <td>
-                  {% for g in group %}
+                  {%- assign g = site.groups | where:"identifier", page.group | first %}
                   <a href="{{g.url | relative_url}}">{{g.name}}</a>
-                  {% endfor %}
                </td>
                <td class="spec_links">
                   {% if page.use_cases_url == '' or page.use_cases_url == nil %}
@@ -202,10 +201,10 @@
       <br />
       {% if page.name != 'Organization' and page.name != 'Person' and page.name != 'Chemical' and page.name != 'ChemicalStructure' and page.name != 'Course' and page.name != 'Standard' %}
       {% if page.status == 'release' %}
-      {%- assign specificationName = /specifications/drafts/' | append: page.name %}
+      {%- assign specificationName = '/specifications/drafts/' | append: page.name %}
       <p>You can read the <a href="{{ specificationName | relative_url }}">draft version of this specification here</a>.</p>
       {% elsif page.status == 'revision' %}
-      {%- assign specificationName = /specifications/' | append: page.name %}
+      {%- assign specificationName = '/specifications/' | append: page.name %}
       <p>You can read the <a href="{{ specificationName | relative_url }}">release version of this specification here</a>.</p>
       {% endif %}
       {% endif %}
