@@ -204,7 +204,7 @@ The interest of this approach is that a consumer of the Taxon markup data could,
 {% endhighlight %}
 
 
-### Joint ue of Taxon and TaxonName
+### Joint use of Taxon and TaxonName
 
 {% highlight json %}
 {
