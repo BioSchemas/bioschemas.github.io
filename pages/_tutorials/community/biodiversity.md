@@ -30,7 +30,7 @@ bioschemas:
   <div>
       This tutorial complements the tutorials <a href="../howto/howto_right_profile">how to select the right profile for your resource</a> and <a href="../howto/howto_add_markup">how to mark up your own resource with Bioschemas</a>. Please check these tutorials first.
 
-      Depending on your use case, you may also want to check this related tutorial: <a href="../plant">How to add markup to Plant resources</a>.
+      Depending on your use case, you may also want to check this related tutorial: <a href="plant">How to add markup to Plant resources</a>.
   </div>
 </div> 
 
