@@ -1,0 +1,410 @@
+---
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+cross_walk_url: https://docs.google.com/spreadsheets/d/1Cy45Llql88NvkqwRw7WD1y8HeVQ4z5_V6MhJh6hhbks/
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:Organization
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20Organization
+group: organizations
+hierarchy:
+- Thing
+- Organization
+json-ld_url: Organization/jsonld/Organization_v0.3-DRAFT.json
+live_deploy: /liveDeploys
+mapping:
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' A description of the item.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The official name of the organization, e.g. the registered company
+    name.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: legalName
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The name of the item.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' URL of a reference Web page that unambiguously indicates the item''s
+    identity. E.g. the URL of the item''s Wikipedia page, Wikidata entry, or official
+    website.'
+  example: ''
+  expected_types:
+  - URL
+  marginality: Minimum
+  property: sameAs
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Scientific topics that describe the organization and its activities,
+    ideally using an ontology term from EDAM:Topic. '
+  example: ''
+  expected_types:
+  - Text
+  - URL
+  marginality: Minimum
+  property: topic
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'The type of the organization should be selected from the Controlled
+    Vocabulary column. '
+  example: ''
+  expected_types:
+  - Text
+  - URL
+  marginality: Minimum
+  property: rdf:type
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' An alias for the item.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: alternateName
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' A contact point for a person or organization. Supersedes contactPoints.'
+  example: ''
+  expected_types:
+  - ContactPoint
+  marginality: Recommended
+  property: contactPoint
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'A description of how the organization is funded. '
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: fundingModel
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' Keywords or tags used to describe this content. Multiple entries
+    in a keywords list are typically delimited by commas.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: keywords
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The location of for example where the event is happening, an organization
+    is located, or where an action takes place.'
+  example: ''
+  expected_types:
+  - Place
+  - PostalAddress
+  - Text
+  marginality: Recommended
+  property: location
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' An associated logo.'
+  example: ''
+  expected_types:
+  - ImageObject
+  - URL
+  marginality: Recommended
+  property: logo
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' A member of an Organization or a ProgramMembership. Organizations
+    can be members of organizations; ProgramMembership is typically for individuals.
+    Supersedes members, musicGroupMember.
+
+    Inverse property: memberOf.'
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Recommended
+  property: member
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' An Organization (or ProgramMembership) to which this Person or Organization
+    belongs.
+
+    Inverse property: member.'
+  example: ''
+  expected_types:
+  - Organization
+  - Programmembership
+  marginality: Recommended
+  property: memberOf
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Defines a membership category and associated fees (for projects and
+    alliances etc.). '
+  example: ''
+  expected_types:
+  - Offer
+  marginality: Recommended
+  property: membershipCategory
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'To record if the organization is still alive, and if it were are project
+    or alliance, what the outcome was, or if it has closed down or merged, why and
+    when.
+
+    Note: There is a health-lifesci.status, but this is not related to the current
+    status property '
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: status
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' URL of the item.'
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' URL of a reference Web page that unambiguously indicates the item''s
+    identity. E.g. the URL of the item''s Wikipedia page, Wikidata entry, or official
+    website.'
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Any files or related websites which give more information about this
+    organization, e.g., flyers, third party sites, ... '
+  example: ''
+  expected_types:
+  - URL
+  marginality: Optional
+  property: attachment
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'The annual (or total - for a project) budget for the organization. '
+  example: ''
+  expected_types:
+  - PriceSpecification
+  marginality: Optional
+  property: budget
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The date when the organization information was last modified. The date
+    on which the CreativeWork was most recently modified or when the item's entry
+    was modified within a DataFeed.
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Optional
+  property: dateModified
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' A relationship between an organization and a department of that organization,
+    also described as an organization (allowing different urls, logos, opening hours).
+    For example: a store with a pharmacy, or a bakery with a cafe.'
+  example: ''
+  expected_types:
+  - Organization
+  marginality: Optional
+  property: department
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The date that this organization was dissolved.'
+  example: ''
+  expected_types:
+  - Date
+  marginality: Optional
+  property: dissolutionDate
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'For an alliance or collaboration or project, the founding members.
+    NOTE: schema/Organization has founder but this has a type of Person not Person
+    and Organization '
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Optional
+  property: founderMember
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The date that this organization was founded.'
+  example: ''
+  expected_types:
+  - Date
+  marginality: Optional
+  property: foundingDate
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' Products owned by the organization or person.'
+  example: ''
+  expected_types:
+  - OwnershipInfo
+  - Product
+  marginality: Optional
+  property: owns
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The larger organization that this organization is a subOrganization
+    of, if any. Supersedes branchOf.
+
+    Inverse property: subOrganization.'
+  example: ''
+  expected_types:
+  - Organization
+  marginality: Optional
+  property: parentOrganization
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Link to social media websites like twitter or facebook. '
+  example: ''
+  expected_types:
+  - URL
+  marginality: Optional
+  property: socialMedia
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' A relationship between two organizations where the first includes
+    the second, e.g., as a subsidiary. See also: the more specific ''department''
+    property.
+
+    Inverse property: parentOrganization.'
+  example: ''
+  expected_types:
+  - Organization
+  marginality: Optional
+  property: subOrganization
+  type: ''
+  type_url: ''
+name: Organization
+parent_type: Organization
+previous_release: ''
+previous_version: 0.2-DRAFT-2019_07_19
+redirect_from:
+- "/devSpecs/Organization/specification/"
+- "/devSpecs/Organization/specification"
+- "/devSpecs/Organization/"
+- "/devSpecs/Organization"
+- "/specifications/drafts/Organization/"
+- "/specifications/drafts/Organization"
+- "/specifications/Organization/"
+- "/specifications/Organization"
+- "/profiles/Organization/"
+- "/profiles/Organization"
+spec_info:
+  description: 'Bioschemas specification for describing a Organization in the life-science.
+    Provides a way to describe bioscience organizations on the World Wide Web. It
+    defines metadata terms that can be used in the code of web pages and applications,
+    and builds on top of existing technologies and standards. The goal of the specification
+    is to make it easier to discover, exchange and integrate life science organization
+    profiles across the Internet. Version: 0.3-DRAFT. <h3>Summary of Changes</h3><br>Changes
+    since 0.2-DRAFT<ul><li>added sameAs property as recommended.</li></ul>.'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/Organization/examples
+  official_type: Organization
+  title: Organization
+  version: 0.3-DRAFT
+  version_date: 20221121T163413
+spec_type: Profile
+status: revision
+use_cases_url: /useCases/Organization
+---

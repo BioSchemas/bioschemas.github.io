@@ -113,9 +113,8 @@
       <tbody>
         <tr>
           <td>
-            {% for g in group %}
+            {% assign g = site.groups | where:"identifier", page.group | first %}
             <a href="{{g.url | relative_url }}">{{g.name}}</a>
-            {% endfor %}
           </td>
           <td class="spec_links">
             {% if page.gh_tasks == '' %}
