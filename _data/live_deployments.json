@@ -1709,6 +1709,7 @@
       "name": "Bioregistry",
       "description": "An open source, community curated registry, meta-registry, and compact identifier resolver.",
       "url": "https://bioregistry.io/",
+      "nodes": ["NL"],
       "profiles": [
         {
           "profileName": "Dataset",
