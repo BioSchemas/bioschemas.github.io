@@ -1,0 +1,326 @@
+---
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+cross_walk_url: https://docs.google.com/spreadsheets/d/1iCMknj6yWbkJsMiQ46_nSa82lZ4jNFOk-ZKx2ZApFq8/edit#gid=1483018794
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:Gene
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20Gene
+group: genes
+hierarchy:
+- Thing
+- BioChemEntity
+- Gene
+json-ld_url: Gene/jsonld/Gene_v1.1-DRAFT.json
+live_deploy: /liveDeploys
+mapping:
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The identifier property represents any kind of identifier for any kind
+    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
+    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
+    many of these, either as textual strings or as URL (URI) links. See <a href="/docs/datamodel.html#identifierBg">background
+    notes</a> for more details.
+  example: ''
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Minimum
+  property: identifier
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The name of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A description of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: For genes, this property is used to express in a generic way gene products
+    encoded by this gene, for instance RNA or Protein
+  example: ''
+  expected_types:
+  - BioChemEntity
+  marginality: Recommended
+  property: encodesBioChemEntity
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
+    Inverse property: hasBioChemEntityPart. For genes, it is recommended to at least
+    specify the DNA/chromosome containing this gene.'
+  example: ''
+  expected_types:
+  - BioChemEntity
+  marginality: Recommended
+  property: isPartOfBioChemEntity
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: URL of the item.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The taxonomic grouping of the organism that expresses, encodes, or
+    in someway related to the BioChemEntity.
+  example: ''
+  expected_types:
+  - SequenceAnnotation
+  - URL
+  marginality: Recommended
+  property: hasSequenceAnnotation
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: An alias for the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: alternateName
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Is variant of. Use this property to express when a gene is a variant
+    of any other gene.
+  example: ''
+  expected_types:
+  - Gene
+  marginality: Optional
+  property: alternativeOf
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Disease associated to this BioChemEntity. Such a disease can be a MedicalCondition
+    or a URL. If you want to add an evidence supporting the association, please use
+    PropertyValue.
+  example: ''
+  expected_types:
+  - MedicalCondition
+  - PropertyValue
+  - URL
+  marginality: Optional
+  property: associatedDisease
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Tissue, organ, biological sample, etc in which activity of this gene
+    has been observed experimentally. For example brain, digestive system.
+  example: ''
+  expected_types:
+  - AnatomicalStructure
+  - AnatomicalSystem
+  - BioChemEntity
+  - definedTerm
+  marginality: Optional
+  property: expressedIn
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Indicates a BioChemEntity that (in some sense) has this BioChemEntity
+    as a part. Inverse property: isPartOfBioChemEntity'
+  example: ''
+  expected_types:
+  - BioChemEntity
+  marginality: Optional
+  property: hasBioChemEntityPart
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'Schema:  A symbolic representation of a BioChemEnity. For example,
+    a nucleotide sequence of a Gene or an amino acid sequence of a Protein.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: hasBioPolymerSequence
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Molecular function performed by this BioChemEntity; please use PropertyValue
+    if you want to include any evidence.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  marginality: Optional
+  property: hasMolecularFunction
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A common representation such as a protein sequence or chemical structure
+    for this entity. For images use schema.org/image.
+  example: ''
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Optional
+  property: hasRepresentation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'Schema:  One of pseudogene, dead, killed, live, predicted, suppressed.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: hasStatus
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a>
+    or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Optional
+  property: image
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Biological process this BioChemEntity is involved in; please use PropertyValue
+    if you want to include any evidence.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  marginality: Optional
+  property: isInvolvedInBiologicalProcess
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Subcellular location where this BioChemEntity is located; please use
+    PropertyValue if you want to include any evidence.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  marginality: Optional
+  property: isLocatedInSubcellularLocation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Indicates a page (or other CreativeWork) for which this thing is the
+    main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background
+    notes</a> for details.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Optional
+  property: mainEntityOfPage
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The taxonomic grouping of the organism that expresses, encodes, or
+    in someway related to the BioChemEntity.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Taxon
+  - Text
+  - URL
+  marginality: Optional
+  property: taxonomicRange
+  type: ''
+  type_url: ''
+name: Gene
+parent_type: Gene
+previous_release: 1.0-RELEASE
+previous_version: 1.1-DRAFT
+redirect_from:
+- "/devSpecs/Gene/specification/"
+- "/devSpecs/Gene/specification"
+- "/devSpecs/Gene/"
+- "/devSpecs/Gene"
+- "/specifications/drafts/Gene/"
+- "/specifications/drafts/Gene"
+spec_info:
+  description: 'This Gene profile specification presents the markup for describing
+    a Gene. Version 1.1-DRAFT. <h3>Summary of Changes</h3> Changes since 1.0-RELEASE:
+    <ul><li>Updated type properties to Schema.org pending release.</li><li>Addition
+    of hasSequenceAnnotation property at Recommended level.</li><li>Added sameAs as
+    recommended.</li><li>Remove use of mainEntityOfPage; DataRecord has been deprecated.
+    </li></ul>'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/Gene/examples
+  official_type: Gene
+  title: Gene
+  version: 1.2-DRAFT
+  version_date: 20221121T153133
+spec_type: Profile
+status: revision
+use_cases_url: /useCases/Gene
+---

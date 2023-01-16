@@ -9,3 +9,4 @@ _site/
 .bundle/config
 vendor
 .jekyll-metadata
+workspace.code-workspace

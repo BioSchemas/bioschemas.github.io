@@ -126,3 +126,32 @@ As an example (or learning activity), I am going to use a protein dataset to sho
 
 **Scenario 4 - A stand-alone TrainingMaterial** As part of the Bioschemas website, we offer to the community a tutorial on [Adding Schema.org to a GitHub Pages site](/tutorials/howto/howto_add_github). We do not know when this tutorial will be used, by whom, or how long it will take for someone to go through it. We have, however, designed that page as a tutorial, i.e., a *TrainingMaterial*, that anyone can use on their own. In this case, we have a *TrainingMaterial* but no *Course* or *CourseInstance*.
 
+
+### 3.8. Taxon, TaxonName
+
+These two profiles can be used together or separately depending on your use case.
+
+#### Taxon
+
+A [taxon](https://en.wikipedia.org/wiki/Taxon) is a group of organisms with common characteristics, identified by taxonomists to form a certain unit.
+If your resources deal with groups of biological organisms like animals, plants, fungi or bacteria, then you may want to use the [**Taxon profile**](../../profiles/Taxon).
+
+The least you need to know to describe a Taxon is its full [scientific name](https://en.wikipedia.org/wiki/Binomial_nomenclature) (i.e. including authorship and date), also called _accepted name_ in botanics or _valid name_ in zoology, and its [taxonomimc rank](https://en.wikipedia.org/wiki/Taxonomic_rank) such as species, genus, family etc.
+You may also provide **synonyms** of the accepted/valid scientific name that keep track of the taxonomic changes and thus reflect the way biologists think of a given taxon, that is, its circumscription.
+
+For instance, the Beluga species has a valid scientific name which is _Delphinapterus leucas (Pallas, 1776)_, a synonym name is _Balaena albicans Muller, 1776_, and its rank is _species_.
+
+It is also a grood pratice to link a Taxon to its counterparts in third-party taxonomic registers like the [NBCI taxonomy](https://www.ncbi.nlm.nih.gov/taxonomy), or data agregators like [GBIF](https://www.gbif.org/) or [Catalog of Life](https://www.catalogueoflife.org/) so that people would know exactly what taxon you refer to.
+
+#### TaxonName
+
+Furthermore, some databases databases (e.g. [Zoobank](https://zoobank.org/), [IPNI](https://www.ipni.org/) and [Mycobank](https://www.mycobank.org/)) describe specifically _scientific names_ but do not keep track of how names are assigned to taxa, such that they would be poorly supported by the use of the Taxon profile. In such a case, the [**TaxonName profile**](../../profiles/ TaxonName) is more relevant to markup the resources of these taxonomic names registries.
+
+Furthermore, the TaxonName profile may be used jointly with the Taxon profile when you want to describe a taxon while giving details about the scientific names. 
+
+
+#### How do I decide which one to use?
+
+If you are unsure whether your resources deal with taxa or taxon names, just follow this simple rule:
+- When your resources are primarily about biology in the broad sense, organisms, biological features, life traits, phenotypes etc., then most likely you should use the Taxon profile.
+- When your resources relate to the publication and typification of scientific names, specifically when this pertains to the application of a Code of nomenclature, then you should use the TaxonName profile.
