@@ -66,7 +66,7 @@ FormalParameter:
   name: FormalParameter
   status: active
 Gene:
-  latest_publication: 1.1-DRAFT
+  latest_publication: 1.2-DRAFT
   latest_release: 1.0-RELEASE
   name: Gene
   status: active
@@ -162,7 +162,7 @@ Study:
   name: Study
   status: active
 Taxon:
-  latest_publication: 0.7-DRAFT
+  latest_publication: 0.8-DRAFT
   latest_release: 0.6-RELEASE
   name: Taxon
   status: active
