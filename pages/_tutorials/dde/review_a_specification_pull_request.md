@@ -46,7 +46,7 @@ bioschemas:
   version: 0.2
 
 ---
-# Review a pull request for a Bioschemas Specification JSON-LD file
+
 A community member has created or updated a Bioschemas specification JSON-LD file and created a pull request. Here’s how to help review and merge it, so that the website and the DDE will be updated. 
 
 ### Step 1 ensure you have access to the appropriate channels and repositories
