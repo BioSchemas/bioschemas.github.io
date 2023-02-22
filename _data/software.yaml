@@ -64,7 +64,7 @@ tools:
       - Issues for the [DDE Schema Playground, Registry, and Viewer](https://discovery.biothings.io/schema-playground) can be submitted to its [public repository](https://github.com/biothings/discovery-app/issues) 
 
     applicationCategory: viewer
-    url: https://discovery.biothings.io/schema-playground
+    url: https://discovery.biothings.io/registry
     thumbnailUrl: https://discovery.biothings.io/static/img/dde-logo-o.svg
     
   - id: sdoValidator
