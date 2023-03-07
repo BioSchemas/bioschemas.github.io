@@ -94,17 +94,17 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                                 <small class="text-muted me-2">{{live.highlight}}</small>
                                 {%- endif %}
                             </div>
-                            {%- if live.exampleURL != nil %}
+                            {%- if live.exampleURL != nil and live.exampleURL != "http://" %}
                             <div class="ps-1">
                                 <a href="{{live.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.exampleHoverText}}" class="btn btn-sm btn-primary" target="_blank">Page</a>
                             </div>
                             {%- endif %}
-                            {%- if live.exampleURL != nil %}
+                            {%- if live.exampleURL != nil and live.exampleURL != "http://" %}
                             <div class="ps-1">
                                 <a href="https://validator.schema.org/#url={{live.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.schemaHoverText}}" class="btn btn-sm btn-primary" target="_blank">SMV</a>
                             </div>
                             {%- endif %}
-                            {%- if live.exampleURL != nil %}
+                            {%- if live.exampleURL != nil and live.exampleURL != "http://" %}
                             <div class="ps-1">
                                 <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{live.exampleURL}}&output=jsonld" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.bmuseHoverText}}" class="btn btn-sm btn-primary" target="_blank">BMUSE</a>
                             </div>
@@ -236,17 +236,17 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                                                 <small class="text-muted me-2">{{profile.highlight}}</small>
                                                 {%- endif %}
                                             </div>
-                                            {%- if profile.exampleURL != nil %}
+                                            {%- if profile.exampleURL != nil and profile.exampleURL != "http://" %}
                                             <div class="ps-1">
                                                 <a href="{{profile.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.exampleHoverText}}" class="btn btn-sm btn-primary" target="_blank">Page</a>
                                             </div>
                                             {%- endif %}
-                                            {%- if profile.exampleURL != nil %}
+                                            {%- if profile.exampleURL != nil and profile.exampleURL != "http://" %}
                                             <div class="ps-1">
                                                 <a href="https://validator.schema.org/#url={{profile.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.schemaHoverText}}" class="btn btn-sm btn-primary" target="_blank">SMV</a>
                                             </div>
                                             {%- endif %}
-                                            {%- if profile.exampleURL != nil %}
+                                            {%- if profile.exampleURL != nil and profile.exampleURL != "http://" %}
                                             <div class="ps-1">
                                                 <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{profile.exampleURL}}&output=jsonld" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.bmuseHoverText}}" class="btn btn-sm btn-primary" target="_blank">BMUSE</a>
                                             </div>
