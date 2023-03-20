@@ -85,15 +85,19 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                             {%- assign deployhit = deploy.profiles | where:"exampleURL", live.exampleURL | where:"profileName", live.profileName | where:"highlight", live.highlight | first %}
                             {%- if deployhit %}
                             <div class="w-100 py-2">
+                                {%- if live.exampleURL != nil and live.exampleURL != "http://" %}
                                 <a class="me-2" href="{{live.exampleURL}}">
                                     {{deploy.name}}
                                 </a>
+                                {%- else %}
+                                <span class="me-2">{{deploy.name}}</span>
+                                {%- endif %}
                                 <span class="badge bg-dark text-light me-2">v{{live.conformsTo}}</span>
                                 {%- if live.highlight != nil %}
                                 <small class="text-muted me-2">{{live.highlight}}</small>
                                 {%- endif %}
                             </div>
-                            {%- if live.exampleURL != nil %}
+                            {%- if live.exampleURL != nil and live.exampleURL != "http://" %}
                             <div class="ps-1">
                                 <a href="{{live.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.exampleHoverText}}" class="btn btn-sm btn-primary" target="_blank">Page</a>
                             </div>
