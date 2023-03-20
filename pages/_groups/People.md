@@ -10,7 +10,7 @@ lead:
 - person: NiallBeard
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20person
-folder: https://drive.google.com/drive/u/1/folders/0B6crv12s8piRd1hFM2JUeS1wSEk
+folder: https://drive.google.com/drive/folders/0B6crv12s8piRd1hFM2JUeS1wSEk
 
 # Page attributes
 abstract: 'Develops and maintains a community specification for describing life science people profiles.'

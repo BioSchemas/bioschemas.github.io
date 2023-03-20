@@ -11,7 +11,7 @@ lead:
 - person: AlasdairGray
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/bioschemas/labels/topic%3A%20community
-folder: https://drive.google.com/drive/u/1/folders/0Bw_p-HKWUjHoRWgxWHcwVHNQUGM
+folder: https://drive.google.com/drive/folders/0Bw_p-HKWUjHoRWgxWHcwVHNQUGM
 
 abstract: 'This project includes many stakeholders and several workstreams. For this project to be successful it will require good communication and coordination, not just among partners but also with the Bioschemas community.'
 objectives:
