@@ -10,7 +10,7 @@ lead:
 - person: PeterMcQuilton
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20standard
-folder: https://drive.google.com/drive/u/1/folders/0Bw_p-HKWUjHoaDRIWlVwUXNJcHM
+folder: https://drive.google.com/drive/folders/0Bw_p-HKWUjHoaDRIWlVwUXNJcHM
 
 # Page attributes
 abstract: 'Developing a community specification, based on <a href="http://schema.org">schema.org</a>, for standards in the Life Sciences.'
