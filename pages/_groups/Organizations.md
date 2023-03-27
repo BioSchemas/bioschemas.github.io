@@ -11,7 +11,7 @@ lead:
 - person: RichardHolland
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20organization
-folder: https://drive.google.com/drive/u/1/folders/0B1TdgUL4-iBaOXVaZ0szWlRQc2M
+folder: https://drive.google.com/drive/folders/0B1TdgUL4-iBaOXVaZ0szWlRQc2M
 
 # Page attributes
 abstract: 'The Bioschemas Organizations Group develops and maintains a community specification for describing life science organizations.'

@@ -22,7 +22,7 @@ former-lead:
   end-date: 2020-10-01
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20training%20material
-folder: https://drive.google.com/drive/u/1/folders/0B6crv12s8piRT0w5VXRUc09VTFU
+folder: https://drive.google.com/drive/folders/0B6crv12s8piRT0w5VXRUc09VTFU?resourcekey=0-B-b73-zcrGCoRHLkElu6gw&usp=sharing
 
 # Page attributes
 abstract: 'The Bioschemas Training Group develops and maintains community specifications for describing training opportunities (face-to-face and online courses) and training resources (permanently accessible materials, videos, slides etc) in the Life sciences.'
