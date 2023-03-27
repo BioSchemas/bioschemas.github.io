@@ -10,7 +10,7 @@ BioSample:
   name: BioSample
   status: active
 ChemicalSubstance:
-  latest_publication: null
+  latest_publication: 0.5-DRAFT
   latest_release: 0.4-RELEASE
   name: ChemicalSubstance
   status: active
