@@ -5,11 +5,8 @@ cross_walk_url: https://docs.google.com/spreadsheets/d/1KKg8JJzK3GybuVrvdZxbMqG2
 dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:MolecularEntity
 gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20MolecularEntity
 group: chemicals
-hierarchy:
-- Thing
-- BioChemEntity
-- MolecularEntity
-json-ld_url: MolecularEntity/jsonld/MolecularEntity_v0.6-DRAFT.json
+hierarchy: []
+json-ld_url: MolecularEntity/jsonld/MolecularEntity_v0.7-DRAFT.json
 live_deploy: /liveDeploys
 mapping:
 - bsc_description: ''
@@ -335,24 +332,44 @@ mapping:
   property: taxonomicRange
   type: ''
   type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'A CreativeWork or Event about this Thing. Inverse property: about'
+  example: ''
+  expected_types:
+  - Creativework
+  - Event
+  marginality: Optional
+  property: subjectOf
+  type: ''
+  type_url: ''
 name: MolecularEntity
 parent_type: MolecularEntity
 previous_release: 0.5-RELEASE
-previous_version: 0.4-DRAFT-2019_11_11
+previous_version: 0.6-DRAFT
+redirect_from:
+- "/devSpecs/MolecularEntity/specification/"
+- "/devSpecs/MolecularEntity/specification"
+- "/devSpecs/MolecularEntity/"
+- "/devSpecs/MolecularEntity"
+- "/specifications/drafts/MolecularEntity/"
+- "/specifications/drafts/MolecularEntity"
+- "/specifications/MolecularEntity/"
+- "/specifications/MolecularEntity"
+- "/profiles/MolecularEntity/"
+- "/profiles/MolecularEntity"
 spec_info:
   description: 'Bioschemas profile describing a MolecularEntity. Any constitutionally
     or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion,
     complex, conformer etc., identifiable as a separately distinguishable entity.
-    (Source: ChEBI:23367) based on version 0.5. Note, the parent class for this profile
-    has been updated to a pending class in schema.org. Version 0.6-DRAFT. <h3>Summary
-    of Changes</h3><br>Changes since 0.5-DRAFT:<ul></li>anyOf ''name'',''inCHI'',''SMILES''
-    required</li><li>sameAs removed from recommended</li><li>identifier moved from
-    required to optional. </li></ul>'
+    (Source: ChEBI:23367) Version 0.7-DRAFT. <h3>Summary of Changes</h3><br>Changes
+    since 0.6-DRAFT:<ul></li>added subjectOf as optional. </li></ul>'
   full_example: https://github.com/BioSchemas/specifications/tree/master/MolecularEntity/examples
   official_type: MolecularEntity
   title: MolecularEntity
-  version: 0.6-DRAFT
-  version_date: 20221121T152139
+  version: 0.7-DRAFT
+  version_date: 2023112T172328
 spec_type: Profile
 status: revision
 use_cases_url: /useCases/MolecularEntity
