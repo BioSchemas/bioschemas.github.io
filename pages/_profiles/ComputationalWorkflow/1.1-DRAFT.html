@@ -1,0 +1,509 @@
+---
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+cross_walk_url: https://docs.google.com/spreadsheets/d/1E_wZV77rHntJ6ismn7f-Gyng3XAEGY415xNiqwoihLM/
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:ComputationalWorkflow
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20ComputationalWorkflow
+group: workflow
+hierarchy:
+- Thing
+- CreativeWork
+- SoftwareSourceCode
+- ComputationalWorkflow
+json-ld_url: ComputationalWorkflow/jsonld/ComputationalWorkflow_v1.1-DRAFT.json
+live_deploy: /liveDeploys
+mapping:
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The computer programming language.
+  example: ''
+  expected_types:
+  - ComputerLanguage
+  - Text
+  marginality: Minimum
+  property: programmingLanguage
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The creator/author of this CreativeWork. This is the same as the Author
+    property for CreativeWork.
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Minimum
+  property: creator
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The date on which the CreativeWork was created or the item was added
+    to a DataFeed.
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Minimum
+  property: dateCreated
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - URL
+  marginality: Minimum
+  property: license
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Indicates the party responsible for generating and publishing the
+    current structured data markup, typically in cases where the structured data is
+    derived automatically from existing published content but published on a different
+    site. For example, student projects and open data initiatives often re-publish
+    existing content with more explicitly structured metadata. The
+
+    [[sdPublisher]] property helps make such practices more explicit.'
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Minimum
+  property: sdPublisher
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The version of the CreativeWork embodied by a specified resource.
+  example: ''
+  expected_types:
+  - Text
+  - number
+  marginality: Minimum
+  property: version
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The name of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: URL of the item.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Minimum
+  property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Subcategory of the application, e.g. 'Arcade Game'. Use an EDAM:Topic
+    to describe the category of application
+  example: ''
+  expected_types:
+  - DefinedTerm
+  marginality: Recommended
+  property: applicationSubCategory
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Features or modules provided by this application (and possibly required
+    by other applications). Functionality provided by the tool. Note: Bioschemas have
+    removed Text from the Expected Types.'
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - URL
+  marginality: Recommended
+  property: featureList
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Documentation describing the ComputationalWorkflow and its use.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - URL
+  marginality: Recommended
+  property: documentation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The funding for the workflow
+  example: ''
+  expected_types:
+  - Grant
+  marginality: Recommended
+  property: funding
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: An input required to use the computational workflow (eg. Excel spreadsheet,
+    BAM file)
+  example: ''
+  expected_types:
+  - FormalParameter
+  marginality: Recommended
+  property: input
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: An output produced by the workflow
+  example: ''
+  expected_types:
+  - FormalParameter
+  marginality: Recommended
+  property: output
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Renaming schema.org/requirements as softwareRequirements. Component
+    dependency requirements for application. This includes runtime environments and
+    shared libraries that are not included in the application distribution package,
+    but required to run the application (Examples: DirectX, Java or .NET runtime).
+    Supersedes requirements. '
+  example: ''
+  expected_types:
+  - Text
+  - URL
+  marginality: Recommended
+  property: softwareRequirements
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Runtime platform or script interpreter dependencies (Example - Java
+    v1, Python2.3, .Net Framework 3.0).
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: runtimePlatform
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Target Operating System / Product to which the code applies.  If applies
+    to several versions, just the product name can be used.
+  example: ''
+  expected_types:
+  - SoftwareApplication
+  marginality: Recommended
+  property: targetProduct
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - Text
+  marginality: Recommended
+  property: citation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A secondary contributor to the CreativeWork or Event.
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Recommended
+  property: contributor
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The status of a creative work in terms of its stage in a lifecycle.
+    Example terms include Incomplete, Draft, Published, Obsolete. Some organizations
+    define a set of terms for the stages of their publication lifecycle.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  marginality: Recommended
+  property: creativeWorkStatus
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Indicates an item or CreativeWork that is part of this item, or CreativeWork
+    (in some sense).
+  example: ''
+  expected_types:
+  - CreativeWork
+  marginality: Recommended
+  property: hasPart
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A resource from which this work is derived or from which it is a modification
+    or adaption.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - Product
+  - URL
+  marginality: Recommended
+  property: isBasedOn
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: keywords
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: "A maintainer of a [[Dataset]], software package ([[SoftwareApplication]]),\
+    \ or other [[Project]]. A maintainer is a [[Person]] or [[Organization]] that\
+    \ manages contributions to, and/or publication of, some (typically complex) artifact.\
+    \ It is common for distributions of software and data to be based on \"upstream\"\
+    \ sources. When [[maintainer]] is applied to a specific version of something e.g.\
+    \ a particular version or packaging of a [[Dataset]], it is always  possible that\
+    \ the upstream source has a different maintainer. The [[isBasedOn]] property can\
+    \ be used to indicate such relationships between datasets to make the different\
+    \ maintenance roles clear. Similarly in the case of software, a package may have\
+    \ dedicated maintainers working on integration into software distributions such\
+    \ as Ubuntu, as well as upstream maintainers of the underlying work.\n      "
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Recommended
+  property: maintainer
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The person or organization who produced the work (e.g. music album,
+    movie, tv/radio series etc.).
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Recommended
+  property: producer
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The publisher of the creative work.
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Recommended
+  property: publisher
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A description of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'Conditions that affect the availability of, or method(s) of access
+    to, an item. Typically used for real world items such as an [[ArchiveComponent]]
+    held by an [[ArchiveOrganization]]. This property is not suitable for use as a
+    general Web access control mechanism. It is expressed only in natural language.\n\nFor
+    example "Available by appointment from the Reading Room" or "Accessible only from
+    logged-in accounts ". '
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: conditionsOfAccess
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The date on which the CreativeWork was most recently modified or when
+    the item's entry was modified within a DataFeed.
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Optional
+  property: dateModified
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Date of first broadcast/publication.
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Optional
+  property: datePublished
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml)
+    and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types))
+    e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).
+
+
+    In cases where a [[CreativeWork]] has several media type representations, [[encoding]]
+    can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]]
+    information.
+
+
+    Unregistered or niche encoding and file formats can be indicated instead via the
+    most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.'
+  example: ''
+  expected_types:
+  - Text
+  - URL
+  marginality: Optional
+  property: encodingFormat
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: An alias for the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: alternateName
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: "The identifier property represents any kind of identifier for any\
+    \ kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides\
+    \ dedicated properties for representing many of these, either as textual strings\
+    \ or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg)\
+    \ for more details.\n        "
+  example: ''
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Optional
+  property: identifier
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+  example: ''
+  expected_types:
+  - ImageObject
+  - URL
+  marginality: Optional
+  property: image
+  type: ''
+  type_url: ''
+name: ComputationalWorkflow
+parent_type: ComputationalWorkflow
+previous_release: 1.0-RELEASE
+previous_version: ''
+redirect_from: '- "/profiles/Workflow/0.1-DRAFT-2019_02_08/"'
+spec_info:
+  description: "A computational workflow consists of an orchestrated and repeatable\
+    \ pattern of activity enabled by the systematic organization of resources into\
+    \ processes that transform materials, provide services, or process information\
+    \ (source Wikipedia.org). It is executed by a computational process and is thus\
+    \ distinct from laboratory or business workflows. Version 1.1-DRAFT. <h3>Summary\
+    \ of Changes</h3> Changes since 1.0-RELEASE<ul><li>added sameAs property as recommended</li><li>Updates\
+    \ from GH propagated from this spreadsheet here \nhttps://docs.google.com/spreadsheets/d/18FITcHImkm5nNk4HyD-8iMhrzw98Ika6pTrFQ2iaNh8/edit#gid=292464567\
+    \ (Alan Williams)</li><li>updates by Nick Juty:<ul><li>mandate formalParameter\
+    \ (https://github.com/BioSchemas/specifications/issues/563)</li><li>prefix for\
+    \ parameter (https://github.com/BioSchemas/specifications/issues/562)</li><li>applicationSubcategory\
+    \ & featureList (https://github.com/BioSchemas/specifications/issues/564)</li></ul>\
+    \ </ul>"
+  full_example: https://github.com/BioSchemas/specifications/tree/master/ComputationalWorkflow/examples
+  official_type: ComputationalWorkflow
+  title: ComputationalWorkflow
+  version: 1.1-DRAFT
+  version_date: 2023316T152923
+spec_type: Profile
+status: revision
+use_cases_url: /useCases/ComputationalWorkflow
+---

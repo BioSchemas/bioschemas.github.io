@@ -367,6 +367,11 @@
       "nodes": "CH",
       "profiles": [
         {
+          "profileName": "Course",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://www.sib.swiss/training/course/20221123_OPEMP"
+        }, 
+        {
           "profileName": "CourseInstance",
           "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://www.sib.swiss/training/course/20221123_OPEMP"
@@ -1702,6 +1707,20 @@
           "conformsTo": "0.5-RELEASE",
           "exampleURL": "http://",
           "highlight": "Over 12,000 chemicals"
+        }
+      ]
+    },
+    {
+      "name": "Bioregistry",
+      "description": "An open source, community curated registry, meta-registry, and compact identifier resolver.",
+      "url": "https://bioregistry.io/",
+      "nodes": ["NL"],
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bioregistry.io/registry/hgnc",
+          "highlight": "Over 1,500 ontologies, controlled vocabularies, and resources including their preferred prefix, name, description, homepage, mappings to other registries, and more."
         }
       ]
     }

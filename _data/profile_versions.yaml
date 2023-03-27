@@ -10,7 +10,7 @@ BioSample:
   name: BioSample
   status: active
 ChemicalSubstance:
-  latest_publication: null
+  latest_publication: 0.5-DRAFT
   latest_release: 0.4-RELEASE
   name: ChemicalSubstance
   status: active
@@ -20,7 +20,7 @@ ComputationalTool:
   name: ComputationalTool
   status: active
 ComputationalWorkflow:
-  latest_publication: null
+  latest_publication: 1.1-DRAFT
   latest_release: 1.0-RELEASE
   name: ComputationalWorkflow
   status: active

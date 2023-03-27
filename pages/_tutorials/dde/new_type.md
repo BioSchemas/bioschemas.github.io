@@ -44,7 +44,6 @@ bioschemas:
   version: 0.2
 
 ---
-# Create a new Type on the Bioschemas site
 
 You have come to a community consensus on creating a new type. Congratulations! Now you have to add the new type on the Bioschemas website.
  Note, if you are comfortable with JSON schema and JSON-LD, you are welcome to copy, paste, and edit the JSON-LD files in the Bioschemas Specifications repository

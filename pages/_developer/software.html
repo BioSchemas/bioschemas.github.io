@@ -10,6 +10,163 @@ description: |-
   This is a list of software that can help you generate, consume or otherwise work with [Bioschemas](/) markup.
   If you have such software and you'd like to list it here, please email us at [enquiries@bioschemas.org](mailto:enquiries@bioschemas.org).
 
+bioschemas:
+  "@context": https://schema.org/
+  "@graph":
+
+    - "@type": SoftwareApplication
+      "@id": https://github.com/HW-SWeL/BMUSE
+      "http://purl.org/dc/terms/conformsTo": https://bioschemas.org/profiles/ComputationalTool/1.0-RELEASE
+      description: |
+        BMUSE is a directed scraping framework capable of extracting JSON-LD and RDFa markup from static and single page application sites. Markup is returned in a variety of RDF formats together with metadata about when the markup was extracted and from where.
+        
+        BMUSE can be deployed as a scraping service. As input it takes a list of URLs or sitemaps. We have deployed a version to do a daily scrape of sites known to contain data relevant to COVID-19. You can get the data from [here](https://github.com/HW-SWeL/COVID-19/).
+      name: "BMUSE: Bioschemas Markup Scraper and Extractor"
+      url: https://github.com/HW-SWeL/BMUSE
+      applicationCategory: scraper
+      applicationSubCategory: 
+        - "@id": http://edamontology.org/topic_0089
+      featureList: 
+        - "@id": http://edamontology.org/operation_2422
+      author: 
+        - "@id": https://bioschemas.org/people/PetrosPapadopoulos
+          "@type": Person
+          sameAs: http://orcid.org/0000-0002-5711-4872
+        - "@id": https://bioschemas.org/people/AlasdairGray
+          "@type": Person
+          sameAs: http://orcid.org/0000-0002-5711-4872
+        - "@id": https://bioschemas.org/people/KennethMcLeod
+          "@type": Person
+
+    - "@type": SoftwareApplication
+      "@id": https://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/
+      "http://purl.org/dc/terms/conformsTo": https://bioschemas.org/profiles/ComputationalTool/1.0-RELEASE
+      description: | 
+        This web application supports users in the creation of Bioschemas compliant markup required for inclusion on their web resource. Bioschemas provides profiles for Schema.org mark-up in order to structure and expose life-sciences metadata on the web. Each profile brings a list of allowed attributes with their constraints and properties. Some attributes are required, some are composite, some allow multiple values, some are under controlled vocabularies, and some can even be all of that.
+
+        The Bioschemas Generator is a web application that assists users in the creation of their metadata structure, through dynamically generated forms, allowing easier development of Bioschemas compliant markup for web resources.  
+    
+      name: "Bioschemas Generator"
+      url: https://www.macs.hw.ac.uk/SWeL/BioschemasGenerator/
+      applicationCategory: generator
+      applicationSubCategory: 
+        - "@id": http://edamontology.org/topic_0089
+      featureList: 
+        - "@id": http://edamontology.org/operation_3429
+      author: 
+        - "@id": https://bioschemas.org/people/AlasdairGray
+          "@type": Person
+          sameAs: http://orcid.org/0000-0002-5711-4872
+
+
+    - "@type": SoftwareApplication
+      "@id": "https://discovery.biothings.io/schema-playground"
+      "http://purl.org/dc/terms/conformsTo": https://bioschemas.org/profiles/ComputationalTool/1.0-RELEASE
+      description: |
+        The Data Discovery Engine provides guidance for researchers on how to make their data discoverable and reusable, and bring the practical benefits of data sharing to researcher’s own research projects, as well as the research community as a whole. It was developed and is maintained by Dr. Chunlei Wu’s lab at the Scripps Research Institute and is supported by funding from the National Center for Data to Health (CD2H). The Schema Playground provides a set of tools for expressing Schema.org and Schema.org-derived specifications in JSON-schema/JSON-LD compatible formatting for registration in the DDE Schema Registry. 
+      name: "Data Discovery Engine (DDE) Schema Playground"
+      url: "https://discovery.biothings.io/schema-playground"
+      applicationCategory: generator
+      applicationSubCategory: 
+        - "@id": http://edamontology.org/topic_0089
+      featureList: 
+        - "@id": http://edamontology.org/operation_3429
+      author: 
+        - "@id": https://bioschemas.org/people/ChunleiWu
+          "@type": Person
+          sameAs: http://orcid.org/0000-0002-2629-6124
+        - "@id": https://bioschemas.org/people/GingerTsueng
+          "@type": Person
+          sameAs: http://orcid.org/0000-0001-9536-9115
+
+    - "@type": SoftwareApplication
+      "@id": "https://discovery.biothings.io/registry"
+      "http://purl.org/dc/terms/conformsTo": https://bioschemas.org/profiles/ComputationalTool/1.0-RELEASE
+      description: |
+        The Data Discovery Engine provides guidance for researchers on how to make their data discoverable and reusable, and bring the practical benefits of data sharing to researcher’s own research projects, as well as the research community as a whole. It was developed and is maintained by Dr. Chunlei Wu’s lab at the Scripps Research Institute and is supported by funding from the National Center for Data to Health (CD2H). The Schema Registry allows users to browse and compare specifications from Schema.org, Google, BioLink, NIAID, and more. The Schema Viewer allows users to visualize specifications in JSON-LD/JSON-Schema format by entering the url or GitHub link to the jsonld file of the specification. 
+      name: "Data Discovery Engine (DDE) Schema Registry"
+      url: "https://discovery.biothings.io/registry"
+      applicationCategory: viewer
+      applicationSubCategory: 
+        - "@id": http://edamontology.org/topic_0089
+      featureList: 
+        - "@id": http://edamontology.org/operation_0337
+      author: 
+        - "@id": https://bioschemas.org/people/ChunleiWu
+          "@type": Person
+          sameAs: http://orcid.org/0000-0002-2629-6124
+        - "@id": https://bioschemas.org/people/GingerTsueng
+          "@type": Person
+          sameAs: http://orcid.org/0000-0001-9536-9115
+
+    - "@type": SoftwareApplication
+      "@id": "https://validator.schema.org/"
+      "http://purl.org/dc/terms/conformsTo": https://bioschemas.org/profiles/ComputationalTool/1.0-RELEASE
+      description: |
+        An online validator that can either retrieve a page from a specified URL or use pasted markup. The markup can be in any markup format and is checked against the Schema.org defined types.
+    
+        Note that Bioschemas defined types and properties will be highlighted as an error since these have not yet been included in the Schema.org vocabulary. The validator can still be used to determine that markup is retrievable and syntactically correct.
+  
+        Also note that the validation is only against the defined types and properties. The tool is not aware of the Bioschemas profiles and does not check against for these restrictions.
+
+      name: "Schema.org Validator"
+      url: "https://validator.schema.org/"
+      applicationCategory: validator
+      applicationSubCategory: 
+        - "@id": http://edamontology.org/topic_0089
+      featureList: 
+        - "@id": http://edamontology.org/operation_2428
+      author: 
+        - "@id": https://research.google/people/DanBrickley 
+          "@type": Person
+
+    - "@type": SoftwareApplication
+      "@id": "https://bio.tools/fair-checker"
+      "http://purl.org/dc/terms/conformsTo": https://bioschemas.org/profiles/ComputationalTool/1.0-RELEASE
+      description: |
+        FAIR-Checker is a tool aimed at assessing FAIR principles and empowering data provider to enhance the quality of their digital resources. 
+        Data providers and consumers can check how FAIR are web resources. Developers can explore and inspect metadata exposed in web resources.
+      name: "FAIR-Checker"
+      url: "https://github.com/IFB-ElixirFr/fair-checker"
+      applicationCategory: validator
+      applicationSubCategory: 
+        - "@id": http://edamontology.org/topic_0089
+      featureList: 
+        - "@id": http://edamontology.org/operation_2428
+      author: 
+        - "@id": https://ressources.france-bioinformatique.fr/en/users/rosnet-thomas
+          "@type": Person
+          sameas: https://orcid.org/0000-0003-0676-5461
+        - "@id": https://bioschemas.org/people/AlbanGaignard
+          "@type": Person
+          sameas: http://orcid.org/0000-0002-3597-8557
+        - "@id": https://members.loria.fr/MDDevignes/
+          "@type": Person
+          sameas: https://orcid.org/0000-0002-0399-8713
+
+    - "@type": SoftwareApplication
+      "@id": "https://bioschemas-validator.herokuapp.com/"
+      "http://purl.org/dc/terms/conformsTo": https://bioschemas.org/profiles/ComputationalTool/1.0-RELEASE
+      description: |
+        An online validator similar to the schema.org validator that can retrieve a page from a URL, follow a sitemap, or parse pasted markup, but it checks against Bioschemas profiles rather than just schema.org.
+      
+        It outputs a report listing what fields were invalid or missing from each of the Minimum, Recommended and Optional field sets from the detected Bioschemas profile.
+      
+        This validator began life as a student project and is looking for maintainers to help address some of the outstanding issues and incomplete functionality.
+    
+      name: "Bioschemas Validator (WIP)"
+      url: "https://bioschemas-validator.herokuapp.com/"
+      applicationCategory: validator
+      applicationSubCategory: 
+        - "@id": http://edamontology.org/topic_0089
+      featureList: 
+        - "@id": http://edamontology.org/operation_2428
+      author: 
+        - "Yazhuo Cao, University of Manchester student"
+        - "@id": https://orcid.org/0000-0002-4565-9760
+          "@type": Person
+          "name": "Oliver Woolland"
+
 ---
 
 <h1>Software</h1>

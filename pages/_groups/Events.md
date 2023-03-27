@@ -10,7 +10,7 @@ lead:
 - person: MartinCook
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20event
-folder: https://drive.google.com/drive/u/1/folders/0B6crv12s8piRODVQX2U2NHlkdXM
+folder: https://drive.google.com/drive/folders/0B6crv12s8piRODVQX2U2NHlkdXM
 
 # Page attributes
 abstract: 'Most dataset repositories and registries of dataset do not provide structured data easily crawlable by search engines.
