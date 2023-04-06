@@ -30,7 +30,7 @@ Course:
   name: Course
   status: active
 CourseInstance:
-  latest_publication: null
+  latest_publication: 1.1-DRAFT
   latest_release: 1.0-RELEASE
   name: CourseInstance
   status: active
