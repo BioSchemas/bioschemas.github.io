@@ -1,0 +1,426 @@
+---
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+cross_walk_url: https://docs.google.com/spreadsheets/d/1cQ6mDbsG_cMX2EDAN8xH6-9yMRba8-rErlPeP8HTs8A
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:Course
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20Course
+group: trainingmaterials
+hierarchy: []
+json-ld_url: Course/jsonld/Course_v1.1-DRAFT.json
+live_deploy: /liveDeploys
+mapping:
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A description of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  marginality: Minimum
+  property: keywords
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The name of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The subject matter of the content.
+  example: ''
+  expected_types:
+  - Thing
+  marginality: Recommended
+  property: about
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: An abstract is a short description that summarizes a [[CreativeWork]].
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: abstract
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The overall rating, based on a collection of reviews or ratings, of
+    the item.
+  example: ''
+  expected_types:
+  - AggregateRating
+  marginality: Recommended
+  property: aggregateRating
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - Text
+  marginality: Recommended
+  property: citation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Requirements for taking the Course. May be completion of another [[Course]]
+    or a textual description like "permission of instructor". Requirements may be
+    a pre-requisite competency, referenced using [[AlignmentObject]].
+  example: ''
+  expected_types:
+  - AlignmentObject
+  - Bioschemas:Course
+  - Text
+  marginality: Recommended
+  property: coursePrerequisites
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The level in terms of progression through an educational or training
+    context. Examples of educational levels include 'beginner', 'intermediate' or
+    'advanced', and formal sets of level indicators.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  marginality: Recommended
+  property: educationalLevel
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: An offering of the course at a specific time and place or through specific
+    media or mode of study or to a specific section of students.
+  example: ''
+  expected_types:
+  - CourseInstance
+  marginality: Recommended
+  property: hasCourseInstance
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - URL
+  marginality: Recommended
+  property: license
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Indicates that the CreativeWork contains a reference to, but is not
+    necessarily about a concept.
+  example: ''
+  expected_types:
+  - Thing
+  marginality: Recommended
+  property: mentions
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The service provider, service operator, or service performer; the goods
+    producer. Another party (a seller) may offer those services or goods on behalf
+    of the provider. A provider may also serve as the seller.
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Recommended
+  property: provider
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The item being described is intended to help a person learn the competency
+    or learning outcome defined by the referenced term.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  marginality: Recommended
+  property: teaches
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Approximate or typical time it takes to work with or through this learning
+    resource for the typical intended target audience, e.g. 'PT30M', 'PT1H25M'.
+  example: ''
+  expected_types:
+  - Duration
+  marginality: Recommended
+  property: timeRequired
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: URL of the item.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A human-readable summary of specific accessibility features or deficiencies,
+    consistent with the other accessibility metadata but expressing subtleties such
+    as "short descriptions are present but long descriptions will be needed for non-visual
+    users" or "short descriptions are present and no long descriptions are needed."
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: accessibilitySummary
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: An alias for the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: alternateName
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: An intended audience, i.e. a group for whom something was created.
+  example: ''
+  expected_types:
+  - Audience
+  marginality: Optional
+  property: audience
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Comments, typically from users.
+  example: ''
+  expected_types:
+  - Comment
+  marginality: Optional
+  property: comment
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The number of comments this CreativeWork (e.g. Article, Question or
+    Answer) has received. This is most applicable to works published in Web sites
+    with commenting system; additional comments may exist elsewhere.
+  example: ''
+  expected_types:
+  - Integer
+  marginality: Optional
+  property: commentCount
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The identifier for the [[Course]] used by the course [[provider]] (e.g.
+    CS101 or 6.001).
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: courseCode
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The creator/author of this CreativeWork. This is the same as the Author
+    property for CreativeWork.
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Optional
+  property: creator
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The date on which the CreativeWork was created or the item was added
+    to a DataFeed.
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Optional
+  property: dateCreated
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The date on which the CreativeWork was most recently modified or when
+    the item's entry was modified within a DataFeed.
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Optional
+  property: dateModified
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A description of the qualification, award, certificate, diploma or
+    other educational credential awarded as a consequence of successful completion
+    of this course or program.
+  example: ''
+  expected_types:
+  - EducationalOccupationalCredential
+  - Text
+  - URL
+  marginality: Optional
+  property: educationalCredentialAwarded
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Indicates an item or CreativeWork that is part of this item, or CreativeWork
+    (in some sense).
+  example: ''
+  expected_types:
+  - CreativeWork
+  marginality: Optional
+  property: hasPart
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+  example: ''
+  expected_types:
+  - ImageObject
+  - URL
+  marginality: Optional
+  property: image
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A resource from which this work is derived or from which it is a modification
+    or adaption.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - Product
+  - URL
+  marginality: Optional
+  property: isBasedOn
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A thumbnail image relevant to the Thing.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Optional
+  property: thumbnailUrl
+  type: ''
+  type_url: ''
+name: Course
+parent_type: Course
+previous_release: 1.0-RELEASE
+previous_version: ''
+redirect_from: 
+  - "/devSpecs/Course/specification/"
+  - "/devSpecs/Course/specification"
+  - "/devSpecs/Course/"
+  - "/devSpecs/Course"
+  - "/specifications/drafts/Course/"
+  - "/specifications/drafts/Course"
+  - "/specifications/Course/"
+  - "/specifications/Course"
+spec_info:
+  description: 'This specification must be used in tandem with a CourseInstance. A
+    course is used to describe the broad, common aspects of a recurring training event
+    - whereas a course instance is about the specific times and location of when that
+    course is held.<h4>Summary of Changes</h4>Added sameAs <p> Version: 1.1-DRAFT'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/Course/examples
+  official_type: Course
+  title: Course
+  version: 1.1-DRAFT
+  version_date: 20230406T165753
+spec_type: Profile
+status: revision
+use_cases_url: /useCases/Course
+---
