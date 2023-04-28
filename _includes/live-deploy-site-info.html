@@ -69,7 +69,12 @@
                 {%- endif %}
                 {%- if profile.exampleURL != nil %}
                 <div class="ps-1">
-                    <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{profile.exampleURL}}&output=jsonld" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.bmuseHoverText}}" class="btn btn-sm btn-primary" target="_blank">BMUSE</a>
+                    <a href="https://fair-checker.france-bioinformatique.fr/api/inspect/get_rdf_metadata?url={{profile.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.bmuseHoverText}}" class="btn btn-sm btn-primary" target="_blank">json-ld</a>
+                </div>
+                {%- endif %}
+                {%- if profile.exampleURL != nil %}
+                <div class="ps-1">
+                    <a href="https://fair-checker.france-bioinformatique.fr/bioschemas_validation?url={{profile.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.faircheckerHoverText}}" class="btn btn-sm btn-primary" target="_blank">FC</a>
                 </div>
                 {%- endif %}
             </div>
