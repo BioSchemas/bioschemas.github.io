@@ -1,0 +1,306 @@
+---
+redirect_from:
+- "/types/drafts/BioChemEntity/"
+
+previous_version: '0.7-DRAFT-2019_06_14'
+previous_release: '0.7-RELEASE-2019_06_19'
+
+dateModified: 2022-12-22
+description: "Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical."
+hierarchy:
+- Thing
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20BioChemEntity
+group: biologicalentities
+name: BioChemEntity
+parent_type: Thing
+spec_type: Type
+status: release #Revert to revision when working on the next version
+version: '0.8-DRAFT' #Change to 0.9-DRAFT when working on the next version
+---
+
+
+{% include type-start.html %}
+
+<div class="table-responsive shadow rounded mt-4 mb-5">
+<table class="table table-hover table-borderless mb-0 bioschemas_properties bsc_type">
+   <thead>
+      <tr>
+         <th>Property</th>
+         <th>Expected Type</th>
+         <th>Description</th>
+      </tr>
+   </thead>
+   <tbody>
+     <tr class="supertype">
+        <th class="supertype-name" colspan="3">
+           New properties for <a style="color: #0B794B;" href="/{{page.name}}">{{page.name}}</a> ( not yet integrated in schema.org).
+        </th>
+     </tr>
+     <tr id="hasBioPolymerSequence">
+       <th style="color: #0B794B;">hasBioPolymerSequence</th>
+       <td>
+         <a href="http://schema.org/Text">Text</a>
+       </td>
+       <td>
+         A symbolic representation of a BioChemEntity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a Protein.
+       </td>
+     </tr>  
+     <tr class="new_props_sdo">
+        <td colspan="3">
+           Properties from <a style="color: #0B794B;" href="/{{page.name}}">{{page.name}}</a> ( schema.org integration).
+        </td>
+     </tr>
+     <tr id="associatedDisease">
+       <th style="color: #0B794B;">associatedDisease</th>
+       <td>
+         <a href="http://schema.org/MedicalCondition">MedicalCondition</a> or<br/>
+         <a href="http://schema.org/PropertyValue">PropertyValue</a> or<br/>
+         <a href="http://schema.org/URL">URL</a>
+       </td>
+       <td>
+         Disease associated to this BioChemEntity. Such a disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue.
+       </td>
+     </tr>
+     <tr id="bioChemInteraction">
+       <th style="color: #0B794B;">bioChemInteraction</th>
+       <td>
+         <a style="color: #0B794B;" href="/types/drafts/BioChemEntity">BioChemEntity</a>
+       </td>
+       <td>
+        A BioChemEntity that is know to interact with this item.
+       </td>
+     </tr>
+     <tr id="bioChemSimilarity">
+       <th style="color: #0B794B;">bioChemSimilarity</th>
+       <td>
+         <a style="color: #0B794B;" href="/types/drafts/BioChemEntity">BioChemEntity</a>
+       </td>
+       <td>
+        A similar molecular entity, e.g., obtained by fingerprint similarity algorithm.
+       </td>
+     </tr>
+     <tr id="biologicalRole">
+       <th style="color: #0B794B;">biologicalRole</th>
+       <td>
+         <a style="color: #0000CC;" href="http://schema.org/DefinedTerm">DefinedTerm</a>
+       </td>
+       <td>
+        A role played by the molecular entity within a biological context.
+       </td>
+     </tr>
+     <tr id="hasBioChemEntityPart">
+       <th style="color: #0B794B;">hasBioChemEntityPart</th>
+       <td>
+         <a style="color: #0B794B;" href="/types/drafts/BioChemEntity">BioChemEntity</a>
+       </td>
+       <td>
+         Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.<br/>
+         Inverse property: <span style="color: #0B794B;"> isPartOfBioChemEntity</span>
+       </td>
+     </tr>
+      <tr id="hasMolecularFunction">
+       <th style="color: #0B794B;">hasMolecularFunction</th>
+       <td>
+         <a style="color: #0000CC;" href="http://schema.org/DefinedTerm">DefinedTerm</a> or<br/>
+         <a href="http://schema.org/PropertyValue">PropertyValue</a>or<br/>
+         <a href="http://schema.org/URL">URL</a>
+       </td>
+       <td>
+         Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence.
+       </td>
+     </tr>
+     <tr id="hasRepresentation">
+       <th style="color: #0B794B;">hasRepresentation</th>
+       <td>
+         <a href="http://schema.org/PropertyValue">PropertyValue</a> or<br/>
+         <a href="http://schema.org/Text">Text</a> or<br/>
+         <a href="http://schema.org/URL">URL</a>
+       </td>
+       <td>
+         A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.
+       </td>
+     </tr>
+     <tr id="isEncodedByBioChemEntity">
+       <th style="color: #0B794B;">isEncodedByBioChemEntity</th>
+       <td>
+         <a style="color: #0B794B;" href="/types/drafts/Gene">Gene</a>
+       </td>
+       <td>
+         Another BioChemEntity encoding this one. <br/>
+         Inverse property: <span style="color: #0B794B;"> encodesBioChemEntity.</span
+       </td>
+     </tr>
+     <tr id="isInvolvedInBiologicalProcess">
+       <th style="color: #0B794B;">isInvolvedInBiologicalProcess</th>
+       <td>
+							<a style="color: #0000CC;" href="http://schema.org/DefinedTerm">DefinedTerm</a> or</b>
+							<a href="http://schema.org/PropertyValue">PropertyValue</a> or<br/>
+							<a href="http://schema.org/URL">URL</a>
+       </td>
+       <td>
+         Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.
+       </td>
+     </tr>
+     <tr id="isLocatedInSubcellularLocation">
+       <th style="color: #0B794B;">isLocatedInSubcellularLocation</th>
+       <td>
+							<a style="color: #0000CC;" href="http://schema.org/DefinedTerm">DefinedTerm</a> or</b>
+							<a href="http://schema.org/PropertyValue">PropertyValue</a> or<br/>
+							<a href="http://schema.org/URL">URL</a>
+       </td>
+       <td>
+         Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.
+       </td>
+     </tr>
+     <tr id="isPartOfBioChemEntity">
+       <th style="color: #0B794B;">isPartOfBioChemEntity</th>
+       <td>
+         <a style="color: #0B794B;" href="/types/drafts/BioChemEntity">BioChemEntity</a>
+       </td>
+       <td>
+         Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. <br/>
+         Inverse property: <span style="color: #0B794B;">hasBioChemEntityPart</span>
+       </td>
+     </tr>
+     <tr id="taxonomicRange">
+       <th style="color: #0B794B;">taxonomicRange</th>
+       <td>
+       	 <a style="color: #0000CC;" href="http://schema.org/DefinedTerm">DefinedTerm</a> or</b>
+         <a style="color: #0B794B;" href="/types/drafts/Taxon">Taxon</a> or<br/>
+         <a href="http://schema.org/Text">Text</a> or<br/>
+         <a href="http://schema.org/URL">URL</a>
+       </td>
+       <td>
+         The taxonomic grouping of the organism that expresses, encodes, or in someway related to the BioChemEntity.
+       </td>
+     </tr>
+
+     <!-- THING -->
+     <tr class="reu_props_sdo">
+        <td colspan="3">Properties from <a href="http://schema.org/Thing">Thing</a></td>
+     </tr>
+     <tr>
+       <th><a href="http://schema.org/additionalType">additionalType</a></th>
+       <td>
+         <a href="http://schema.org/URL">URL</a>
+       </td>
+       <td>
+         An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax.
+         This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax -
+         the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those
+         defined externally.
+       </td>
+     </tr>
+     <tr>
+       <th><a href="http://schema.org/alternateName">alternateName</a></th>
+       <td>
+         <a href="http://schema.org/Text">Text</a>
+       </td>
+       <td>
+         An alias for the item.
+       </td>
+     </tr>
+     <tr>
+       <th><a href="http://schema.org/description">description</a></th>
+       <td>
+         <a href="http://schema.org/Text">Text</a>
+       </td>
+       <td>
+         A descripton of the item.
+       </td>
+     </tr>
+     <tr>
+       <th><a href="http://schema.org/disambiguatingDescription">disambiguatingDescription</a></th>
+       <td>
+         <a href="http://schema.org/Text">Text</a>
+       </td>
+       <td>
+         A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+       </td>
+     </tr>
+     <tr>
+       <th><a href="http://schema.org/identifier">identifier</a></th>
+       <td>
+         <a href="http://schema.org/PropertyValue">PropertyValue</a> or<br/>
+         <a href="http://schema.org/Text">Text</a> or<br/>
+         <a href="http://schema.org/URL">URL</a>
+       </td>
+       <td>
+         The identifier property represents any kind of identifier for any kind of <a href="http://schema.org/Thing">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc.
+         Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.
+         See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.
+       </td>
+     </tr>
+     <tr>
+       <th><a href="http://schema.org/image">image</a></th>
+       <td>
+         <a href="http://schema.org/ImageObject">ImageObject</a> or<br/>
+         <a href="http://schema.org/URL">URL</a>
+       </td>
+       <td>
+         An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.
+       </td>
+     </tr>
+     <tr>
+       <th><a href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
+       <td>
+         <a href="http://schema.org/CreativeWork">CreativeWork</a> or<br/>
+         <a href="http://schema.org/URL">URL</a>
+       </td>
+       <td>
+         Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See
+         <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/>
+         Inverse property: <a href="http://schema.org/mainEntity">mainEntity</a>
+       </td>
+     </tr>
+     <tr>
+       <th><a href="http://schema.org/name">name</a></th>
+       <td>
+         <a href="http://schema.org/Text">Text</a>
+       </td>
+       <td>
+         The name of the item.
+       </td>
+     </tr>
+     <tr>
+       <th><a href="http://schema.org/potentialAction">potentialAction</a></th>
+       <td>
+         <a href="http://schema.org/Action">Action</a>
+       </td>
+       <td>
+         Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+       </td>
+     </tr>
+     <tr>
+       <th><a href="http://schema.org/sameAs">sameAs</a></th>
+       <td>
+         <a href="http://schema.org/URL">URL</a>
+       </td>
+       <td>
+         URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+       </td>
+     </tr>
+     <tr>
+       <th><a href="http://schema.org/subjectOf">subjectOf</a></th>
+       <td>
+         <a href="http://schema.org/CreativeWork">CreativeWork</a> or<br/>
+         <a href="http://schema.org/Event">Event</a>
+       </td>
+       <td>
+         A CreativeWork or Event about this Thing..<br/>
+         Inverse property: <a href="http://schema.org/about">about</a>.
+       </td>
+     </tr>
+     <tr>
+       <th><a href="http://schema.org/url">url</a></th>
+       <td>
+         <a href="http://schema.org/URL">URL</a>
+       </td>
+       <td>
+         URL of the item.
+       </td>
+     </tr>
+   </tbody>
+ </table>
+ </div>
+

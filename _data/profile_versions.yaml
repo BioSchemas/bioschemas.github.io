@@ -10,32 +10,32 @@ BioSample:
   name: BioSample
   status: active
 ChemicalSubstance:
-  latest_publication: null
+  latest_publication: 0.5-DRAFT
   latest_release: 0.4-RELEASE
   name: ChemicalSubstance
   status: active
 ComputationalTool:
-  latest_publication: null
+  latest_publication: 1.1-DRAFT
   latest_release: 1.0-RELEASE
   name: ComputationalTool
   status: active
 ComputationalWorkflow:
-  latest_publication: null
+  latest_publication: 1.1-DRAFT
   latest_release: 1.0-RELEASE
   name: ComputationalWorkflow
   status: active
 Course:
-  latest_publication: null
+  latest_publication: 1.1-DRAFT
   latest_release: 1.0-RELEASE
   name: Course
   status: active
 CourseInstance:
-  latest_publication: null
+  latest_publication: 1.1-DRAFT
   latest_release: 1.0-RELEASE
   name: CourseInstance
   status: active
 DataCatalog:
-  latest_publication: null
+  latest_publication: 0.4-DRAFT
   latest_release: 0.3-RELEASE-2019_07_01
   name: DataCatalog
   status: active
@@ -46,52 +46,52 @@ DataRecord:
   name: DataRecord
   status: deprecated
 Dataset:
-  latest_publication: null
+  latest_publication: 1.1-DRAFT
   latest_release: 1.0-RELEASE
   name: Dataset
   status: active
 Disease:
-  latest_publication: 0.1-DRAFT
+  latest_publication: 0.2-DRAFT
   latest_release: null
   name: Disease
   status: active
 Event:
-  latest_publication: 0.2-DRAFT-2019_06_14
+  latest_publication: 0.3-DRAFT
   latest_release: null
   name: Event
   status: active
 FormalParameter:
-  latest_publication: null
+  latest_publication: 1.1-DRAFT
   latest_release: 1.0-RELEASE
   name: FormalParameter
   status: active
 Gene:
-  latest_publication: 1.1-DRAFT
+  latest_publication: 1.2-DRAFT
   latest_release: 1.0-RELEASE
   name: Gene
   status: active
 Journal:
-  latest_publication: 0.2-DRAFT-2020_12_03
+  latest_publication: 0.3-DRAFT
   latest_release: null
   name: Journal
   status: active
 LabProtocol:
-  latest_publication: 0.6-DRAFT-2020_12_08
+  latest_publication: 0.7-DRAFT
   latest_release: null
   name: LabProtocol
   status: active
 MolecularEntity:
-  latest_publication: null
+  latest_publication: 0.7-DRAFT
   latest_release: 0.5-RELEASE
   name: MolecularEntity
   status: active
 Organization:
-  latest_publication: 0.2-DRAFT-2019_07_19
+  latest_publication: 0.3-DRAFT
   latest_release: null
   name: Organization
   status: active
 Person:
-  latest_publication: 0.2-DRAFT-2019_07_19
+  latest_publication: 0.3-DRAFT
   latest_release: null
   name: Person
   status: active
@@ -112,17 +112,17 @@ ProteinAnnotation:
   status: deprecated
   superseded_by: SequenceAnnotation
 ProteinStructure:
-  latest_publication: 0.5-DRAFT-2018_08_15
+  latest_publication: 0.6-DRAFT
   latest_release: null
   name: ProteinStructure
   status: active
 PublicationIssue:
-  latest_publication: 0.2-DRAFT-2020_12_03
+  latest_publication: 0.3-DRAFT
   latest_release: null
   name: PublicationIssue
   status: active
 PublicationVolume:
-  latest_publication: 0.2-DRAFT-2020_12_03
+  latest_publication: 0.3-DRAFT
   latest_release: null
   name: PublicationVolume
   status: active
@@ -132,17 +132,17 @@ RNA:
   name: RNA
   status: active
 Sample:
-  latest_publication: null
+  latest_publication: 0.3-DRAFT
   latest_release: 0.2-RELEASE-2018_11_10
   name: Sample
   status: active
 ScholarlyArticle:
-  latest_publication: 0.2-DRAFT-2020_12_03
+  latest_publication: 0.3-DRAFT
   latest_release: null
   name: ScholarlyArticle
   status: active
 SemanticTextAnnotation:
-  latest_publication: 0.2-DRAFT-2020_12_03
+  latest_publication: 0.3-DRAFT
   latest_release: null
   name: SemanticTextAnnotation
   status: active
@@ -152,27 +152,27 @@ SequenceAnnotation:
   name: SequenceAnnotation
   status: active
 SequenceRange:
-  latest_publication: 0.1-DRAFT
+  latest_publication: 0.2-DRAFT
   latest_release: null
   name: SequenceRange
   status: active
 Study:
-  latest_publication: 0.2-DRAFT
+  latest_publication: 0.3-DRAFT
   latest_release: null
   name: Study
   status: active
 Taxon:
-  latest_publication: 0.7-DRAFT
+  latest_publication: 0.8-DRAFT
   latest_release: 0.6-RELEASE
   name: Taxon
   status: active
 TaxonName:
-  latest_publication: 0.1-DRAFT
+  latest_publication: 0.2-DRAFT
   latest_release: null
   name: TaxonName
   status: active
 TrainingMaterial:
-  latest_publication: null
+  latest_publication: 1.1-DRAFT
   latest_release: 1.0-RELEASE
   name: TrainingMaterial
   status: active

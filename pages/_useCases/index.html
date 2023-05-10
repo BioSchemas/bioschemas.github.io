@@ -1,0 +1,13 @@
+---
+layout: default
+title: Use Cases
+---
+
+<h1>Bioschemas Use Cases</h1>
+<ul>
+    {%- for case in site.useCases %}
+    {%- if case.name != nil %}
+    <li><a href="{{ case.url | relative_url }}">{{ case.name }}</a></li>
+    {%- endif %}
+    {%- endfor %}
+</ul>

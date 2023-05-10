@@ -1,0 +1,376 @@
+---
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+cross_walk_url: https://docs.google.com/spreadsheets/d/1KKg8JJzK3GybuVrvdZxbMqG2PYkU_0e7gTUqWzGx3QQ/edit#gid=1483018794
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:MolecularEntity
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20MolecularEntity
+group: chemicals
+hierarchy: []
+json-ld_url: MolecularEntity/jsonld/MolecularEntity_v0.7-DRAFT.json
+live_deploy: /liveDeploys
+mapping:
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm).
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: inChIKey
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Systematic method of naming chemical compounds as recommended by the
+    International Union of Pure and Applied Chemistry (IUPAC).
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: iupacName
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The empirical formula is the simplest whole number ratio of all the
+    atoms in a molecule.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: molecularFormula
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: "This is the molecular weight of the entity being described, not of\
+    \ the parent. Units should be included in the form \u2018 ', for example '12 amu'\
+    \ or as '."
+  example: ''
+  expected_types:
+  - QuantitativeValue
+  - Text
+  marginality: Recommended
+  property: molecularWeight
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The identifier property represents any kind of identifier for any kind
+    of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs,
+    GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing
+    many of these, either as textual strings or as URL (URI) links. See <a href="/docs/datamodel.html#identifierBg">background
+    notes</a> for more details.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Optional
+  property: identifier
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: An alias for the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: alternateName
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Disease associated to this BioChemEntity. Such a disease can be a MedicalCondition
+    or a URL. If you want to add an evidence supporting the association, please use
+    PropertyValue.
+  example: ''
+  expected_types:
+  - MedicalCondition
+  - PropertyValue
+  - URL
+  marginality: Optional
+  property: associatedDisease
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A BioChemEntity that is know to interact with this item.
+  example: ''
+  expected_types:
+  - BioChemEntity
+  marginality: Optional
+  property: bioChemInteraction
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A similar molecular entity, e.g., obtained by fingerprint similarity
+    algorithm.
+  example: ''
+  expected_types:
+  - BioChemEntity
+  marginality: Optional
+  property: bioChemSimilarity
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A role played by the molecular entity within a biological context.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  marginality: Optional
+  property: biologicalRole
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A role played by the BioChemEntity within a chemical context.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  marginality: Optional
+  property: chemicalRole
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A description of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A sub property of description. A short description of the item used
+    to disambiguate from other, similar items. Information from other properties (in
+    particular, name) may be necessary for the description to be useful for disambiguation.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: disambiguatingDescription
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Indicates a BioChemEntity that (in some sense) has this BioChemEntity
+    as a part. Inverse property: isPartOfBioChemEntity'
+  example: ''
+  expected_types:
+  - BioChemEntity
+  marginality: Optional
+  property: hasBioChemEntityPart
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Molecular function performed by this BioChemEntity; please use PropertyValue
+    if you want to include any evidence.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Optional
+  property: hasMolecularFunction
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A common representation such as a protein sequence or chemical structure
+    for this entity. For images use schema.org/image.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Optional
+  property: hasRepresentation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a>
+    or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Optional
+  property: image
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Another BioChemEntity encoding this one. Inverse property: encodesBioChemEntity.'
+  example: ''
+  expected_types:
+  - Gene
+  marginality: Optional
+  property: isEncodedByBioChemEntity
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Biological process this BioChemEntity is involved in; please use PropertyValue
+    if you want to include any evidence.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Optional
+  property: isInvolvedInBiologicalProcess
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Subcellular location where this BioChemEntity is located; please use
+    PropertyValue if you want to include any evidence.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Optional
+  property: isLocatedInSubcellularLocation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
+    Inverse property: hasBioChemEntityPart'
+  example: ''
+  expected_types:
+  - BioChemEntity
+  marginality: Optional
+  property: isPartOfBioChemEntity
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: "The monoisotopic mass is the sum of the masses of the atoms in a molecule\
+    \ using the unbound, ground-state, rest mass of the principal (most abundant)\
+    \ isotope for each element instead of the isotopic average mass. Please include\
+    \ the units the form \u2018 ', for example '770.230488 g/mol' or as '."
+  example: ''
+  expected_types:
+  - QuantitativeValue
+  - Text
+  marginality: Optional
+  property: monoisotopicMolecularWeight
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Intended use of the BioChemEntity by humans.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  marginality: Optional
+  property: potentialUse
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The taxonomic grouping of the organism that expresses, encodes, or
+    in someway related to the BioChemEntity.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Taxon
+  - Text
+  - URL
+  marginality: Optional
+  property: taxonomicRange
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'A CreativeWork or Event about this Thing. Inverse property: about'
+  example: ''
+  expected_types:
+  - Creativework
+  - Event
+  marginality: Optional
+  property: subjectOf
+  type: ''
+  type_url: ''
+name: MolecularEntity
+parent_type: MolecularEntity
+previous_release: 0.5-RELEASE
+previous_version: 0.6-DRAFT
+redirect_from:
+- "/devSpecs/MolecularEntity/specification/"
+- "/devSpecs/MolecularEntity/specification"
+- "/devSpecs/MolecularEntity/"
+- "/devSpecs/MolecularEntity"
+- "/specifications/drafts/MolecularEntity/"
+- "/specifications/drafts/MolecularEntity"
+- "/specifications/MolecularEntity/"
+- "/specifications/MolecularEntity"
+- "/profiles/MolecularEntity/"
+- "/profiles/MolecularEntity"
+spec_info:
+  description: 'Bioschemas profile describing a MolecularEntity. Any constitutionally
+    or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion,
+    complex, conformer etc., identifiable as a separately distinguishable entity.
+    (Source: ChEBI:23367) Version 0.7-DRAFT. <h3>Summary of Changes</h3><br>Changes
+    since 0.6-DRAFT:<ul></li>added subjectOf as optional. </li></ul>'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/MolecularEntity/examples
+  official_type: MolecularEntity
+  title: MolecularEntity
+  version: 0.7-DRAFT
+  version_date: 2023112T172328
+spec_type: Profile
+status: revision
+use_cases_url: /useCases/MolecularEntity
+---

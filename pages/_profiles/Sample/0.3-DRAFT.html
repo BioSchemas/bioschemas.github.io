@@ -1,0 +1,133 @@
+---
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+cross_walk_url: https://docs.google.com/spreadsheets/d/122y9X5ZxFN5sPDX63ox8UGQlHkddT6O69_e2b_eAv5Y/edit#gid=1483018794
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:Sample
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20Sample
+group: samples
+hierarchy: []
+json-ld_url: Sample/jsonld/Sample_v0.3-DRAFT.json
+live_deploy: /liveDeploys
+mapping:
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: "The identifier property represents any kind of identifier for any\
+    \ kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides\
+    \ dedicated properties for representing many of these, either as textual strings\
+    \ or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg)\
+    \ for more details.\n        "
+  example: ''
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Minimum
+  property: identifier
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: URL of the item.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'A property-value pair representing an additional characteristics of
+    the entitity, e.g. a product feature or another characteristic for which there
+    is no matching property in schema.org. Note: Publishers should be aware that applications
+    designed to use specific schema.org properties (e.g. https://schema.org/width,
+    https://schema.org/color, https://schema.org/gtin13, ...) will typically expect
+    such data to be provided using those properties, rather than using the generic
+    property/value mechanism. '
+  example: ''
+  expected_types:
+  - PropertyValue
+  marginality: Optional
+  property: additionalProperty
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A description of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The name of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A CreativeWork or Event about this Thing.
+  example: ''
+  expected_types:
+  - CreativeWork
+  marginality: Optional
+  property: subjectOf
+  type: ''
+  type_url: ''
+name: Sample
+parent_type: Sample
+previous_release: 0.2-RELEASE-2018_11_10
+previous_version: ''
+redirect_from: 
+  - "/devSpecs/Sample/specification/"
+  - "/devSpecs/Sample/specification"
+  - "/devSpecs/Sample/"
+  - "/devSpecs/Sample"
+  - "/specifications/drafts/Sample/"
+  - "/specifications/drafts/Sample"
+  - "/specifications/Sample/"
+  - "/specifications/Sample"
+  - "/profiles/Sample/"
+  - "/profiles/Sample"
+spec_info:
+  description: To deliver on the identified use cases for samples, we have identified
+    a minimal set of properties to encapsulate identification, linking, and metadata
+    descriptions. Some of these properties are existing standard schema.org properties,
+    others require Bioschemas extensions. Version 0.3-DRAFT<h4>Summary of Changes</h4>
+    Changes since 0.2-DRAFT<ul><li>added sameAs property as recommended.</li><li>modified
+    by Nick and Ginger</li><li>removed irrelevant text from description</li></ul>
+  full_example: https://github.com/BioSchemas/specifications/tree/master/Sample/examples
+  official_type: Sample
+  title: Sample
+  version: 0.3-DRAFT
+  version_date: 20230406T173311
+spec_type: Profile
+status: revision
+use_cases_url: /useCases/Sample
+---

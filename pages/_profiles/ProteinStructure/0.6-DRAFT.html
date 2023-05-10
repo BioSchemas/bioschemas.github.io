@@ -1,0 +1,298 @@
+---
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+cross_walk_url: https://docs.google.com/spreadsheets/d/1MfvX5tJs5mKA835e-98eaLmN5_5xYjFfcMcbtdMRtC4
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:ProteinStructure
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20ProteinStructure
+group: proteins
+hierarchy:
+- Thing
+- BioChemEntity
+json-ld_url: ProteinStructure/jsonld/ProteinStructure_v0.6-DRAFT.json
+live_deploy: /liveDeploys
+mapping:
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The identifier property represents any kind of identifier for any
+    kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated
+    properties for representing many of these, either as textual strings or as URL
+    (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg)
+    for more details.'
+  example: ''
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Minimum
+  property: identifier
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' An alias for the item.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: alternateName
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' A description of the item.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: ' The name of the item.'
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Link to the official webpage associated to this entity. URL of the
+    item.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' An image of the item. This can be a URL or a fully described ImageObject.'
+  example: ''
+  expected_types:
+  - ImageObject
+  - URL
+  marginality: Recommended
+  property: image
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Bound molecules.
+  example: ''
+  expected_types:
+  - Text
+  - URL
+  marginality: Recommended
+  property: boundMolecule
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' Organism where this protein structure is expressed.'
+  example: ''
+  expected_types:
+  - BioChemEntity
+  - Taxon
+  marginality: Recommended
+  property: expressionSystem
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: ' Method used to determine the protein structure.'
+  example: ''
+  expected_types:
+  - Text
+  - URL
+  marginality: Recommended
+  property: structureDeterminationMethod
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Link to any resource other than the Record and the official webpage,
+    for instance a Wikipedia page. URL of a reference Web page that unambiguously
+    indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata
+    entry, or official website.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'As much a possible, do not use it! Alternatively, consider reusing
+    properties/relations already coined in controlled vocabularies. We recommed to
+    look at the [OBO Relations Ontology (RO)](http://obofoundry.org/ontology/ro.html)
+    or the [Semanticscience Integrated Ontology (SIO)](http://sio.semanticscience.org/)
+    as starting points. A property-value pair representing an additional characteristics
+    of the entitity, e.g. a product feature or another characteristic for which there
+    is no matching property in schema.org. Note: Publishers should be aware that applications
+    designed to use specific schema.org properties (e.g. http://schema.org/width,
+    http://schema.org/color, http://schema.org/gtin13, ...) will typically expect
+    such data to be provided using those properties, rather than using the generic
+    property/value mechanism.'
+  example: ''
+  expected_types:
+  - PropertyValue
+  marginality: Optional
+  property: additionalProperty
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Should be set to any of the values listed in the Controlled Vocabulary.
+    An additional type for the item, typically used for adding more specific types
+    from external vocabularies in microdata syntax. This is a relationship between
+    something and a class that the thing is in. In RDFa syntax, it is better to use
+    the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org
+    tools may have only weaker understanding of extra types, in particular those defined
+    externally.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Optional
+  property: additionalType
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.
+    Inverse property: isContainedIn. '
+  example: ''
+  expected_types:
+  - BioChemEntity
+  - URL
+  marginality: Optional
+  property: contains
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'A Category code contained in this code set. A controlled vocabulary
+    term equivalent to this entity. For instance, an organism coined in NCBI taxonomy
+    can be represented as a BioChemEntity. As it also exists as a term in an ontology,
+    it would be nice to capture that information via categoryCode. '
+  example: ''
+  expected_types:
+  - CategoryCode
+  marginality: Optional
+  property: hasCategoryCode
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Representation of this entity. For instance, a chemical structure or
+    sequence. A representation for this entity other than, for instance, an image
+    (use image property for that) or the main web page/record (use mainEntityOfPage
+    for that), and see background notes, for sameAs and url).
+  example: ''
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Optional
+  property: hasRepresentation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Indicates a BioChemEntity that this BioChemEntity is (in some sense)
+    a part of. Inverse property: contains. '
+  example: ''
+  expected_types:
+  - BioChemEntity
+  - URL
+  marginality: Optional
+  property: isContainedIn
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'The location can refer to a position in the chromosome or sequence
+    or to a physical place where, for instance, a sample is stored. Using [additionalType](http://bioschemas.org/devSpecs/ProteinStructure/#additionalType)
+    is advised to make this distinction. For instance, [FALDO](https://github.com/OBF/FALDO)
+    can be used for sequence co-ordinates.
+
+    **Note:** The list of Expected Types has been extended as schema.org/location
+    only has Place, PostalAddress and Text. The location of for example where the
+    event is happening, an organization is located, or where an action takes place.'
+  example: ''
+  expected_types:
+  - Place
+  - Postaladdress
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Optional
+  property: location
+  type: bioschemas
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'Link via DataRecord or [URL](http://schema.org/url) to the main Record
+    representing this entity in a dataset.
+
+    **Note:** Bioschemas has replaced DataRecord with CreativeWork in the Expected
+    Types. Indicates a page (or other CreativeWork) for which this thing is the main
+    entity being described. See background notes for details.'
+  example: ''
+  expected_types:
+  - CreativeWork
+  - URL
+  marginality: Optional
+  property: mainEntityOfPage
+  type: ''
+  type_url: ''
+name: ProteinStructure
+parent_type: BioChemEntity
+previous_release: ''
+previous_version: 0.5-DRAFT-2018_08_15
+redirect_from:
+- "/devSpecs/ProteinStructure/specification/"
+- "/devSpecs/ProteinStructure/specification"
+- "/devSpecs/ProteinStructure/"
+- "/devSpecs/ProteinStructure"
+- "/specifications/drafts/ProteinStructure/"
+- "/specifications/drafts/ProteinStructure"
+- "/specifications/ProteinStructure/"
+- "/specifications/ProteinStructure"
+- "/profiles/ProteinStructure/"
+- "/profiles/ProteinStructure"
+spec_info:
+  description: This profile specification presents the BioChemEntity usage when describing
+    a Protein structure. Version 0.6-DRAFT. <h3>Summary of Changes</h3><br>Changes
+    since 0.5-DRAFT-2018_08_15:<ul><li>added sameAs property as recommended</li></ul>
+  full_example: https://github.com/BioSchemas/specifications/tree/master/ProteinStructure/examples
+  official_type: BioChemEntity
+  title: ProteinStructure
+  version: 0.6-DRAFT
+  version_date: 20221121T155821
+spec_type: Profile
+status: revision
+use_cases_url: /useCases/Protein
+---

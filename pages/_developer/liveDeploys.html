@@ -81,34 +81,36 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                         {%- assign live_sorted_list = profile.items | sort: 'name' %}
                         {%- for live in live_sorted_list %}
                         <div class="d-flex p-1 align-content-center align-items-center list-group-item-action rounded">
+                            {%- for deploy in liveDeploys %}
+                            {%- assign deployhit = deploy.profiles | where:"exampleURL", live.exampleURL | where:"profileName", live.profileName | where:"highlight", live.highlight | first %}
+                            {%- if deployhit %}
                             <div class="w-100 py-2">
-                                <!-- TODO: Connect back to site information -->
-                                <!-- {% if live.resource_URL != nil %}
-                                <a href="{{live.resource_URL}}" target="_blank">{{live.name}}</a>
-                                {% else %}
-                                {{live.name}}
-                                {% endif %} -->
-                                <a class="me-2" href="{{live.exampleURL}}">{{live.exampleURL}}</a>
+                                {%- if live.exampleURL != nil and live.exampleURL != "http://" %}
+                                <a class="me-2" href="{{live.exampleURL}}">
+                                    {{deploy.name}}
+                                </a>
+                                {%- else %}
+                                <span class="me-2">{{deploy.name}}</span>
+                                {%- endif %}
                                 <span class="badge bg-dark text-light me-2">v{{live.conformsTo}}</span>
                                 {%- if live.highlight != nil %}
                                 <small class="text-muted me-2">{{live.highlight}}</small>
                                 {%- endif %}
                             </div>
-                            {%- if live.exampleURL != nil %}
+                            {%- if live.exampleURL != nil and live.exampleURL != "http://" %}
                             <div class="ps-1">
                                 <a href="{{live.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.exampleHoverText}}" class="btn btn-sm btn-primary" target="_blank">Page</a>
                             </div>
-                            {%- endif %}
-                            {%- if live.exampleURL != nil %}
                             <div class="ps-1">
                                 <a href="https://validator.schema.org/#url={{live.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.schemaHoverText}}" class="btn btn-sm btn-primary" target="_blank">SMV</a>
                             </div>
-                            {%- endif %}
-                            {%- if live.exampleURL != nil %}
                             <div class="ps-1">
                                 <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{live.exampleURL}}&output=jsonld" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.bmuseHoverText}}" class="btn btn-sm btn-primary" target="_blank">BMUSE</a>
                             </div>
                             {%- endif %}
+                            {%- break %}
+                            {%- endif %}
+                            {%- endfor %}
                         </div>
                         {%- endfor %}
                     </div>
@@ -265,7 +267,7 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
             {%- endfor %}
         </div>
     </div>
-    <div class="tab-pane fade show active" id="nav-datadump" role="tabpanel" aria-labelledby="nav-datadump-tab">
+    <div class="tab-pane fade" id="nav-datadump" role="tabpanel" aria-labelledby="nav-datadump-tab">
         <p>There are <strong>{{datadumpCount}}</strong> sites with data feeds.</p>
         <div class="accordion">
             {%- include live-deploy-site-info.html allSites = false %}

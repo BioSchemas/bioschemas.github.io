@@ -2,7 +2,7 @@
 
 BioChemEntity:
     name: "BioChemEntity"
-    latest_publication:
+    latest_publication: "0.8-DRAFT"
     latest_release: "0.7-RELEASE-2019_06_19"
     status: "active"
 
@@ -57,7 +57,7 @@ FormalParameter:
 
 Gene:
     name: "Gene"
-    latest_publication:
+    latest_publication: "0.4-DRAFT"
     latest_release: "0.3-RELEASE-2019_09_02"
     status: "active"
 
@@ -81,7 +81,7 @@ Phenotype:
 
 Protein:
     name: "Protein"
-    latest_publication:
+    latest_publication: "0.4-DRAFT"
     latest_release: "0.3-RELEASE-2019_09_02"
     status: "active"
 

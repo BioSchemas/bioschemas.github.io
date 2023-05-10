@@ -41,4 +41,6 @@ members:
     - KaisaSilander
     - PetrHolub
     - DavidvanEnckevort
+    - GwenMoncoiffe
+    - BarbaraMagagna
 ---

@@ -361,14 +361,25 @@
       ]
     },
     {
-      "name": "SIB",
-      "url": "https://www.sib.swiss/",
+      "name": "Training Portal at SIB Swiss Institute of Bioinformatics",
+      "description": "Training material and courses delivered by SIB",
+      "url": "https://www.sib.swiss/training/",
       "nodes": "CH",
       "profiles": [
         {
-          "profileName": "Event",
-          "conformsTo": "0.1",
-          "exampleURL": "https://www.sib.swiss/training/upcoming-training-events"
+          "profileName": "Course",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://www.sib.swiss/training/course/20221123_OPEMP"
+        }, 
+        {
+          "profileName": "CourseInstance",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://www.sib.swiss/training/course/20221123_OPEMP"
+        }, 
+        {
+          "profileName": "TrainingMaterial",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://www.sib.swiss/training/course/20230426_DOCK"
         }
       ]
     },
@@ -1164,7 +1175,7 @@
       "url": "https://massbank.eu/MassBank/",
       "nodes": "DE",
       "sitemap": "https://massbank.eu/MassBank/sitemapindex.xml",
-      "datadump": "https://msbi.ipb-halle.de/~sneumann/DataDump.json",
+      "datadump": "https://msbi.ipb-halle.de/~sneumann/MassBank-2006.06.jsonld",
       "profiles": [
         {
           "profileName": "MolecularEntity",
@@ -1435,6 +1446,7 @@
       "url": "https://www.metanetx.org/",
       "nodes": "CH",
       "sitemap": "https://www.metanetx.org/sitemap.xml",
+      "datadump": "https://www.metanetx.org/ftp/latest/metanetx.schema_org.jsonld.gz",
       "profiles": [
                 {
           "profileName": "DataCatalog",
@@ -1700,6 +1712,20 @@
           "conformsTo": "0.5-RELEASE",
           "exampleURL": "http://",
           "highlight": "Over 12,000 chemicals"
+        }
+      ]
+    },
+    {
+      "name": "Bioregistry",
+      "description": "An open source, community curated registry, meta-registry, and compact identifier resolver.",
+      "url": "https://bioregistry.io/",
+      "nodes": ["NL"],
+      "profiles": [
+        {
+          "profileName": "Dataset",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://bioregistry.io/registry/hgnc",
+          "highlight": "Over 1,500 ontologies, controlled vocabularies, and resources including their preferred prefix, name, description, homepage, mappings to other registries, and more."
         }
       ]
     }
