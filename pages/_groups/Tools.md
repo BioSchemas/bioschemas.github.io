@@ -4,7 +4,7 @@ identifier: tools
 name: Tools
 collection: groups
 active: false
-type: generic
+type: other
 description: Specification for tools
 lead: 
 - person: RicardoArcila

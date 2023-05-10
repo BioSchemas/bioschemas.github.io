@@ -4,7 +4,7 @@ identifier: standards
 name: Standards
 collection: groups
 active: false
-type: generic
+type: other
 description: Specification for standards
 lead: 
 - person: PeterMcQuilton
