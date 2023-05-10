@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Schema Playground preprint"
+title: "Schema Playground publication"
 tags:
 - Profile
 - Tooling
 - Community
 ---
-We are pleased to announce that the Schema Playfround preprint from [BMC Bioinformatics](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-023-05258-4). 
+We are pleased to announce that the Schema Playground publication from [BMC Bioinformatics](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-023-05258-4) is available. 
 
 Abstract:
 
@@ -19,4 +19,4 @@ Our browser-based tool includes features which can help address many of the barr
 Conclusions
 We have created a browser-based tool to empower biomedical research resource providers to leverage Schema.org classes to make their research outputs more FAIR.
 
-This work was done in by [Scripps Institute](https://www.scripps.edu/).
+This work was done by [Scripps Institute](https://www.scripps.edu/).
