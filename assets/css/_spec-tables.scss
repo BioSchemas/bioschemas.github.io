@@ -49,6 +49,11 @@
     .property-column {
         background: $gray-200;
         font-weight: bold;
+        
+        .status {
+            font-style: italic;
+            font-weight: normal;
+        }
     }
     .expected-type-column {
         min-width: 15em;

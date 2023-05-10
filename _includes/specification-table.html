@@ -64,13 +64,17 @@
         {%- for prop in props_list %}
         <tr>
             {%- if prop.type == "bioschemas" %}
-            <td class="property-column"><a href="{{prop.type_url }}" target="_blank" class="bioschema">{{prop.property}}</a></td>
+            <td class="property-column"><a href="{{prop.type_url }}" target="_blank" class="bioschema">{{prop.property}}</a>
+            <br><abbr class="status" title="Properties/types are proposed by Bioschemas, or proposed changes by Bioschemas to Schema.org">Bioschemas</abbr></td>
             {%- elsif prop.type == "schemas.org" or prop.type == "" %}
-            <td class="property-column"><a href="http://schema.org/{{prop.property}}" target="_blank" class="schemaorg">{{prop.property}}</a></td>
+            <td class="property-column"><a href="http://schema.org/{{prop.property}}" target="_blank" class="schemaorg">{{prop.property}}</a>
+            <br><abbr class="status" title="Properties/types exist in the core of Schema.org">Schema.org</abbr></td>
             {%- elsif prop.type == "pending" %}
-            <td class="property-column"><a href="http://schema.org/{{prop.property}}" target="_blank" class="pending">{{prop.property}}</a></td>
+            <td class="property-column"><a href="http://schema.org/{{prop.property}}" target="_blank" class="pending">{{prop.property}}</a>
+            <br><abbr class="status" title="Properties/types exist in the pending area of Schema.org">Pending</abbr></td>
             {%- else %}
-            <td class="property-column"><a href="{{prop.type_url}}" target="_blank" class="external">{{prop.property}}</a></td>
+            <td class="property-column"><a href="{{prop.type_url}}" target="_blank" class="external">{{prop.property}}</a>
+            <br><abbr class="status" title="Properties/types are reused from external vocabularies/ontologies">External</abbr></td>
             {%- endif %}
             <td>
                 {%- for temp_exp_type in prop.expected_types %}
