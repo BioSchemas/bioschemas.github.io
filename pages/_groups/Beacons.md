@@ -4,7 +4,7 @@ identifier: beacons
 name: Beacons
 collection: groups
 active: true
-type: generic
+type: biological
 description: Specification for Beacon Type
 lead: 
 - person: SerenaScollen

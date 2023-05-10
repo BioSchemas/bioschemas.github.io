@@ -4,7 +4,7 @@ identifier: labprotocols
 name: Laboratory Protocols
 collection: groups
 active: true
-type: generic
+type: biological
 description: Specification for biological laboratory protocol Type
 lead: 
 - person: OlgaXimenaGiraldo
