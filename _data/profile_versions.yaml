@@ -25,12 +25,12 @@ ComputationalWorkflow:
   name: ComputationalWorkflow
   status: active
 Course:
-  latest_publication: null
+  latest_publication: 1.1-DRAFT
   latest_release: 1.0-RELEASE
   name: Course
   status: active
 CourseInstance:
-  latest_publication: null
+  latest_publication: 1.1-DRAFT
   latest_release: 1.0-RELEASE
   name: CourseInstance
   status: active
@@ -132,7 +132,7 @@ RNA:
   name: RNA
   status: active
 Sample:
-  latest_publication: null
+  latest_publication: 0.3-DRAFT
   latest_release: 0.2-RELEASE-2018_11_10
   name: Sample
   status: active
