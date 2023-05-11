@@ -7,24 +7,52 @@ title: Bioschemas Groups
 <a target="_blank" href="mailto:enquiries@bioschemas.org?subject=[Bioschemas] request to create a new group" class="btn btn-sm btn-primary float-end" role="button">
 Propose a new group</a>
 </h1>
-<h2>Active groups</h2>
-<p>The following groups, responsible for creating specifications within the project, 
-    are active within the Bioschemas community:</p>
+{%- assign sorted_groups = site.groups | sort: 'name' %}
+
+<h2>Bioschemas Life Science groups</h2>
+
+<h3>Active Life Science groups</h3>
+<p>The following groups, responsible for creating specifications in the Life Science domain, are active within the Bioschemas community:</p>
 <ul>
-{%- assign sorted_groups = site.groups | sort: 'name' | where: 'active', true %}
-{%- for group in sorted_groups %}
+{%- assign loop_groups = sorted_groups | where: 'active', true | where: 'type', 'biological' %}
+{%- for group in loop_groups %}
 {%- if group.name %}
     <li><a href="{{group.url | relative_url}}">{{group.name}}</a> - {{group.abstract}}</li>
 {%- endif %}
 {%- endfor %}
 </ul>
 
-<h2>Hybernating groups</h2>
-<p>The following groups, responsible for creating specifications within the project, 
+<h3>Hybernating Life Science groups</h3>
+<p>The following groups, responsible for creating specifications in the Life Science domain,  
     are currently hybernating as there has been no activity in at least 6 months:</p>
 <ul>
-    {%- assign sorted_groups = site.groups | sort: 'name' | where: 'active', false | where: 'type', 'biological' %}
-    {%- for group in sorted_groups %}
+    {%- assign loop_groups = sorted_groups | where: 'active', false | where: 'type', 'biological' %}
+    {%- for group in loop_groups %}
+    {%- if group.name %}
+        <li><a href="{{group.url | relative_url}}">{{group.name}}</a> - {{group.abstract}}</li>
+    {%- endif %}
+    {%- endfor %}
+    </ul>
+
+<h2>Cross-domain groups</h2>  
+
+<h3>Active cross-domain groups</h3>
+<p>The following groups, responsible for creating corss-domain specifications, are active within the Bioschemas community:</p>
+<ul>
+{%- assign loop_groups = sorted_groups | where: 'active', true | where: 'type', 'generic' %}
+{%- for group in loop_groups %}
+{%- if group.name %}
+    <li><a href="{{group.url | relative_url}}">{{group.name}}</a> - {{group.abstract}}</li>
+{%- endif %}
+{%- endfor %}
+</ul>
+
+<h3>Hybernating cross-domain groups</h3>
+<p>The following groups, responsible for creating corss-domain specifications, 
+    are currently hybernating as there has been no activity in at least 6 months:</p>
+<ul>
+    {%- assign loop_groups = sorted_groups | where: 'active', false | where: 'type', 'generic' %}
+    {%- for group in loop_groups %}
     {%- if group.name %}
         <li><a href="{{group.url | relative_url}}">{{group.name}}</a> - {{group.abstract}}</li>
     {%- endif %}
@@ -36,8 +64,8 @@ Propose a new group</a>
     now transitioned to the steering commitee. We keep the informatoin here for attribution and legacy
     purposes:</p>
     <ul>
-        {%- assign sorted_groups = site.groups | sort: 'name' | where: 'type', 'other' %}
-        {%- for group in sorted_groups %}
+        {%- assign loop_groups = sorted_groups | where: 'type', 'other' %}
+        {%- for group in loop_groups %}
         {%- if group.name %}
             <li><a href="{{group.url | relative_url}}">{{group.name}}</a> - {{group.abstract}}</li>
         {%- endif %}
