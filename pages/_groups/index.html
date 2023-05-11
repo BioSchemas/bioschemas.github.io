@@ -22,14 +22,21 @@ Propose a new group</a>
 <h2>Hybernating groups</h2>
 <p>The following groups, responsible for creating specifications within the project, 
     are currently hybernating as there has been no activity in at least 6 months:</p>
-
+<ul>
+    {%- assign sorted_groups = site.groups | sort: 'name' | where: 'active', false | where: 'type', 'biological' %}
+    {%- for group in sorted_groups %}
+    {%- if group.name %}
+        <li><a href="{{group.url | relative_url}}">{{group.name}}</a> - {{group.abstract}}</li>
+    {%- endif %}
+    {%- endfor %}
+    </ul>
 
 <h2>Supporting groups</h2>
 <p>These groups provided supporting functions early in the Bioschemas effort. These functions have been
     now transitioned to the steering commitee. We keep the informatoin here for attribution and legacy
     purposes:</p>
     <ul>
-        {%- assign sorted_groups = site.groups | sort: 'name' | where: 'active', false %}
+        {%- assign sorted_groups = site.groups | sort: 'name' | where: 'type', 'other' %}
         {%- for group in sorted_groups %}
         {%- if group.name %}
             <li><a href="{{group.url | relative_url}}">{{group.name}}</a> - {{group.abstract}}</li>
