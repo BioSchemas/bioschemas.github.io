@@ -11,7 +11,7 @@ Propose a new group</a>
 <p>The following groups, responsible for creating specifications within the project, 
     are active within the Bioschemas community:</p>
 <ul>
-{%- assign sorted_groups = site.groups | sort: 'name' %}
+{%- assign sorted_groups = site.groups | sort: 'name' | where: 'active', true %}
 {%- for group in sorted_groups %}
 {%- if group.name %}
     <li><a href="{{group.url | relative_url}}">{{group.name}}</a> - {{group.abstract}}</li>
@@ -29,7 +29,7 @@ Propose a new group</a>
     now transitioned to the steering commitee. We keep the informatoin here for attribution and legacy
     purposes:</p>
     <ul>
-        {%- assign sorted_groups = site.groups | sort: 'name' %}
+        {%- assign sorted_groups = site.groups | sort: 'name' | where: 'active', false %}
         {%- for group in sorted_groups %}
         {%- if group.name %}
             <li><a href="{{group.url | relative_url}}">{{group.name}}</a> - {{group.abstract}}</li>
