@@ -10,7 +10,7 @@ lead:
 - person: LeylaGarcia
 - person: 
 email: enquiries@bioschemas.org
-issues: 'https://github.com/Bioschemas/bioschemas/issues?q=is%3Aopen+label:"type:%20Datase","type:%20tool"'
+issues: https://github.com/Bioschemas/bioschemas/issues?q=is%3Aopen+label%3A%22type%3A%20Dataset%22,%22type%3A%20tool%22
 folder: 
 
 # Page attributes
