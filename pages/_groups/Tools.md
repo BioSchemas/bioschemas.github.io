@@ -3,8 +3,8 @@ layout: group-details
 identifier: tools
 name: Tools
 collection: groups
-active: false
-type: other
+active: true
+type: generic
 description: Specification for tools
 lead: 
 - person: RicardoArcila
