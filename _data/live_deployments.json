@@ -375,6 +375,11 @@
           "profileName": "CourseInstance",
           "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://www.sib.swiss/training/course/20221123_OPEMP"
+        }, 
+        {
+          "profileName": "TrainingMaterial",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://www.sib.swiss/training/course/20230426_DOCK"
         }
       ]
     },
