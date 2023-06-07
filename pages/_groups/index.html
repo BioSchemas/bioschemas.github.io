@@ -9,9 +9,9 @@ Propose a new group</a>
 </h1>
 {%- assign sorted_groups = site.groups | sort: 'name' %}
 
-<h2>Bioschemas Life Sciences groups</h2>
+<h2>Bioschemas life sciences groups</h2>
 
-<h3>Active Life Sciences groups</h3>
+<h3>Active life sciences groups</h3>
 <p>The following groups, responsible for creating specifications in the Life Science domain, are active within the Bioschemas community:</p>
 <ul>
 {%- assign loop_groups = sorted_groups | where: 'active', true | where: 'type', 'biological' %}
@@ -22,7 +22,7 @@ Propose a new group</a>
 {%- endfor %}
 </ul>
 
-<h3>Hibernated Life Sciences groups</h3>
+<h3>Hibernated life sciences groups</h3>
 <p>The following groups, responsible for creating specifications in the Life Science domain,  
     are currently hibernating as there has been no activity in at least 6 months. 
     The hibernation could correspond to a maturity reached by all of the specifications supported by 
