@@ -9,9 +9,9 @@ Propose a new group</a>
 </h1>
 {%- assign sorted_groups = site.groups | sort: 'name' %}
 
-<h2>Bioschemas Life Science groups</h2>
+<h2>Bioschemas Life Sciences groups</h2>
 
-<h3>Active Life Science groups</h3>
+<h3>Active Life Sciences groups</h3>
 <p>The following groups, responsible for creating specifications in the Life Science domain, are active within the Bioschemas community:</p>
 <ul>
 {%- assign loop_groups = sorted_groups | where: 'active', true | where: 'type', 'biological' %}
@@ -22,9 +22,11 @@ Propose a new group</a>
 {%- endfor %}
 </ul>
 
-<h3>Hybernating Life Science groups</h3>
+<h3>Hibernated Life Sciences groups</h3>
 <p>The following groups, responsible for creating specifications in the Life Science domain,  
-    are currently hybernating as there has been no activity in at least 6 months:</p>
+    are currently hibernating as there has been no activity in at least 6 months. 
+    The hibernation could correspond to a maturity reached by all of the specifications supported by 
+    the group (i.e., stable types and profiles that have not requrired updates for at least 6 months):</p>
 <ul>
     {%- assign loop_groups = sorted_groups | where: 'active', false | where: 'type', 'biological' %}
     {%- for group in loop_groups %}
@@ -47,9 +49,11 @@ Propose a new group</a>
 {%- endfor %}
 </ul>
 
-<h3>Hybernating cross-domain groups</h3>
+<h3>Hibernated cross-domain groups</h3>
 <p>The following groups, responsible for creating corss-domain specifications, 
-    are currently hybernating as there has been no activity in at least 6 months:</p>
+    are currently hibernating as there has been no activity in at least 6 months.
+    The hibernation could correspond to a maturity reached by all of the specifications supported by 
+    the group (i.e., stable types and profiles that have not requrired updates for at least 6 months):</p>:</p>
 <ul>
     {%- assign loop_groups = sorted_groups | where: 'active', false | where: 'type', 'generic' %}
     {%- for group in loop_groups %}
