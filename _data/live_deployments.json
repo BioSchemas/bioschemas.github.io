@@ -1728,6 +1728,29 @@
           "highlight": "Over 1,500 ontologies, controlled vocabularies, and resources including their preferred prefix, name, description, homepage, mappings to other registries, and more."
         }
       ]
+    },
+    {
+      "name": "Stress Knowledge Map (SKM)",
+      "description": "Stress Knowledge Map (SKM) is a resource containing two knowledge graph resulting from the integration of dispersed published information on plant molecular responses to biotic and abiotic stressors.",
+      "url": "https://skm.nib.si/",
+      "nodes": ["SI"],
+      "profiles": [
+        {
+          "profileName": "DataCatalogue",
+          "conformsTo": "0.3-RELEASE-2019_07_01",
+          "exampleURL": "https://skm.nib.si/"
+        },
+        {
+          "profileName": "Dataset",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://skm.nib.si/"
+        }, 
+        {
+          "profileName": "Gene",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://skm.nib.si/search?entity_type=functional_cluster&key=identifier&query=AT5G61600"
+        }
+      ]
     }
   ]
 }
