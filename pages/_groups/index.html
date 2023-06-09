@@ -22,19 +22,24 @@ Propose a new group</a>
 {%- endfor %}
 </ul>
 
+{%- assign loop_groups = sorted_groups | where: 'active', false | where: 'type', 'biological' %}
+{% if loop_groups.size > 0 %}
+
 <h3>Hibernated life sciences groups</h3>
 <p>The following groups, responsible for creating specifications in the Life Science domain,  
     are currently hibernating as there has been no activity in at least 6 months. 
     The hibernation could correspond to a maturity reached by all of the specifications supported by 
     the group (i.e., stable types and profiles that have not requrired updates for at least 6 months):</p>
 <ul>
-    {%- assign loop_groups = sorted_groups | where: 'active', false | where: 'type', 'biological' %}
+    
     {%- for group in loop_groups %}
     {%- if group.name %}
         <li><a href="{{group.url | relative_url}}">{{group.name}}</a> - {{group.abstract}}</li>
     {%- endif %}
     {%- endfor %}
-    </ul>
+</ul>
+{% endif %}
+
 
 <h2>Cross-domain groups</h2>  
 
@@ -49,6 +54,9 @@ Propose a new group</a>
 {%- endfor %}
 </ul>
 
+{%- assign loop_groups = sorted_groups | where: 'active', false | where: 'type', 'generic' %}
+{% if loop_groups.size > 0 %}
+
 <h3>Hibernated cross-domain groups</h3>
 <p>The following groups, responsible for creating corss-domain specifications, 
     are currently hibernating as there has been no activity in at least 6 months.
@@ -61,7 +69,8 @@ Propose a new group</a>
         <li><a href="{{group.url | relative_url}}">{{group.name}}</a> - {{group.abstract}}</li>
     {%- endif %}
     {%- endfor %}
-    </ul>
+</ul>
+{% endif %}
 
 <h2>Supporting groups</h2>
 <p>These groups provided supporting functions early in the Bioschemas effort. These functions have been
