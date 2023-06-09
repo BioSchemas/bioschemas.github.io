@@ -3,7 +3,7 @@ layout: group-details
 identifier: tools
 name: Tools
 collection: groups
-active: false
+active: true
 type: generic
 description: Specification for tools
 lead: 
