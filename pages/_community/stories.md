@@ -9,7 +9,7 @@ Here are some short stories where Bioschemas has been succesfully used by commun
 ## bio.tools
 *the 04th of April 2023*
 
-[Bio.tools](http://bio.tools) is a heavily used registry cataloguing more than 24.000 bioinformatics software, services  and tools. The listings can be searched based on authors, scientific topics or type of data processing entailed, which is underpinned by the [EDAM](http://edamontology.org) ontology. By instrumenting the web application with database queries, it has been possible to produce Schema.org annotations that are nowadays embedded into each bio.tools web page for better findability. 
+[Bio.tools](http://bio.tools) is a heavily used registry cataloguing more than 24.000 bioinformatics software, services  and tools. The listings can be searched based on authors, scientific topics or type of data processing entailed, which is underpinned by the [EDAM](http://edamontology.org) ontology. By automatically transforming the database content, it has been possible to produce Schema.org annotations that are nowadays embedded into each bio.tools web page for better findability. 
 
 These annotations can be used as the source for an RDF dataset, containing 550k+ triples, and  which is continuously updated at https://github.com/bio-tools/content/blob/master/datasets/bioschemas-dump.ttl. This dataset can be queried to retrieve useful information, such as the most used licences (GPL-3, MIT), or to identify the top-3 most represented data processing steps  (Visualisation, Standardisation/normalisation, Genotyping)
 
