@@ -34,6 +34,8 @@ members:
     - JoseMFernandez
     - AllegraVia
     - DimitriosBampakalis
+    - OlgaXimenaGiraldo
+    - DietrichRebholzSchuhmann
     - GiuseppeProfiti
     - NiallBeard
     - PhilippeRocca-Serra
