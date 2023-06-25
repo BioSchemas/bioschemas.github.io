@@ -32,6 +32,7 @@ specifications:
 
 members:
 - AlbanGaignard
+- DietrichRebholzSchuhmann
 
 ---
 
