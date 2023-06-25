@@ -7,9 +7,9 @@ active: true
 type: generic
 description: Specification for digital objects commonly used in machine learning solutions.
 lead: 
-  - LeylaGarcia
-  - FotisPsomopoulos
-  - DanSKatz
+  - person: LeylaGarcia
+  - person: FotisPsomopoulos
+  - person: DanSKatz
 email: enquiries@bioschemas.org
 issues: https://github.com/BioSchemas/specifications/labels/group%3AMachineLearning
 folder: https://drive.google.com/drive/folders/1NGiDfc6WSCJNDheGhYApfEVN3-X6Uj6z?usp=sharing
