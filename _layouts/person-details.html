@@ -25,13 +25,13 @@ layout: default
 <ul>
   {% for group in site.groups %}
   {% for person in group.lead %}
-    {{person}}
+    {{ person.person }}
+    {% if person contains person-id %}
+    <li>
+      <a href="{{group.url}}">{{group.name}}</p>
+    </li>
+    {% endif %}
   {% endfor %}
-  {% if group.lead contains person-id %}
-  <li>
-    <a href="{{group.url}}">{{group.name}}</p>
-  </li>
-  {% endif %}
   {% if group.members contains person-id %}
   <li>
     <a href="{{group.url}}">{{group.name}}</p>
