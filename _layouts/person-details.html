@@ -24,19 +24,18 @@ layout: default
 
 <ul>
   {% for group in site.groups %}
-  {% for person in group.lead %}
-    {{ person.person }}
-    {% if person contains person-id %}
-    <li>
-      <a href="{{group.url}}">{{group.name}}</p>
-    </li>
+    {% for leader in group.lead %}
+      {% if leader.person == person-id %}
+      <li>
+        <a href="{{group.url}}">{{group.name}}</p>
+      </li>
+      {% endif %}
+    {% endfor %}
+    {% if group.members contains person-id %}
+      <li>
+        <a href="{{group.url}}">{{group.name}}</p>
+      </li>
     {% endif %}
-  {% endfor %}
-  {% if group.members contains person-id %}
-  <li>
-    <a href="{{group.url}}">{{group.name}}</p>
-  </li>
-  {% endif %}
   {% endfor %}
 </ul>
 
