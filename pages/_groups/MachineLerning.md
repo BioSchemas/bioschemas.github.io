@@ -11,7 +11,7 @@ lead:
 - person: FotisPsomopoulos
 - person: DanKatz
 email: enquiries@bioschemas.org
-issues: https://github.com/Bioschemas/bioschemas/issues?q=is%3Aopen+label%3A%22type%3A%20Dataset%22,%22type%3A%20tool%22
+issues: https://github.com/BioSchemas/specifications/labels/group%3AMachineLearning
 folder: https://drive.google.com/drive/folders/1NGiDfc6WSCJNDheGhYApfEVN3-X6Uj6z?usp=sharing
 
 # Page attributes
