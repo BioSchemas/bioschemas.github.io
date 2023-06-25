@@ -24,6 +24,9 @@ layout: default
 
 <ul>
   {% for group in site.groups %}
+  {% for person in group.lead %}
+    person
+  {% endfor %}
   {% if group.lead contains person-id %}
   <li>
     <a href="{{group.url}}">{{group.name}}</p>
