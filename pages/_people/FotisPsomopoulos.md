@@ -1,6 +1,6 @@
 ---
 layout: person-details
-id: LeylaJaelCastro
+id: FotisPsomopoulos
 first-name: Fotis E.
 last-name: Psomopoulos
 collection: people
