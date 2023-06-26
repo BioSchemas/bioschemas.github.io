@@ -1,0 +1,288 @@
+---
+redirect_from:
+- "/types/Taxon/"
+- "/types/Taxon"
+
+previous_version: '0.4-DRAFT'
+previous_release: '0.3-RELEASE-2019_11_18'
+
+
+dateModified: 2023-05-01
+description: "A set of organisms asserted to represent a natural cohesive biological unit."
+hierarchy:
+- Thing
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20Taxon
+group: biodiversity
+name: Taxon
+parent_type: Thing
+spec_type: Type
+status: release #Revert to revision when working on the next version
+version: '1.0-RELEASE'
+---
+
+{% include type-start.html %}
+
+<div class="table-responsive shadow rounded mt-4 mb-5">
+<table class="table table-hover table-borderless mb-0 definition-table bsc_type">
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Expected Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+
+    <tr class="supertype">
+        <th class="supertype-name" colspan="3">Properties from <a title="Defined in extension: bio.schema.org" class="ext ext-bio" href="/Taxon">Taxon</a></th>
+
+    </tr>
+
+    <tbody class="supertype">
+        <tr typeof="rdfs:Property" resource="http://schema.org/alternateScientificName">
+
+            <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#alternateScientificName">alternateScientificName</a></code>
+            </th>
+            <td class="prop-ect">
+                <link property="rangeIncludes" href="http://schema.org/TaxonName" /><a title="Defined in extension: bio.schema.org" class="ext ext-bio" href="/TaxonName">TaxonName</a>&nbsp; or <br />
+                <link property="rangeIncludes" href="http://schema.org/Text" /><a href="http://schema.org/Text">Text</a>&nbsp; or <br />
+                <link property="rangeIncludes" href="http://schema.org/URL" /><a href="http://schema.org/URL">URL</a>&nbsp;
+                <link property="domainIncludes" href="http://schema.org/Taxon">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">A TaxonName representing a scientific name, with authorship and date information if known, of a synonym of the currently valid (zoological) or accepted (botanical) name.</td>
+        </tr>
+        <tr typeof="rdfs:Property" resource="http://schema.org/childTaxon">
+
+            <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#childTaxon">childTaxon</a></code>
+            </th>
+            <td class="prop-ect">
+                <link property="rangeIncludes" href="http://schema.org/Taxon" /><a title="Defined in extension: bio.schema.org" class="ext ext-bio" href="/Taxon">Taxon</a>&nbsp; or <br />
+                <link property="rangeIncludes" href="http://schema.org/Text" /><a href="http://schema.org/Text">Text</a>&nbsp; or <br />
+                <link property="rangeIncludes" href="http://schema.org/URL" /><a href="http://schema.org/URL">URL</a>&nbsp;
+                <link property="domainIncludes" href="http://schema.org/Taxon">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">Closest child taxa of the taxon in question.<br /> Inverse property: <a title="Defined in extension: bio.schema.org" class="ext ext-bio" href="#parentTaxon">parentTaxon</a>.</td>
+        </tr>
+        <tr typeof="rdfs:Property" resource="http://schema.org/parentTaxon">
+
+            <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#parentTaxon">parentTaxon</a></code>
+            </th>
+            <td class="prop-ect">
+                <link property="rangeIncludes" href="http://schema.org/Taxon" /><a title="Defined in extension: bio.schema.org" class="ext ext-bio" href="/Taxon">Taxon</a>&nbsp; or <br />
+                <link property="rangeIncludes" href="http://schema.org/Text" /><a href="http://schema.org/Text">Text</a>&nbsp; or <br />
+                <link property="rangeIncludes" href="http://schema.org/URL" /><a href="http://schema.org/URL">URL</a>&nbsp;
+                <link property="domainIncludes" href="http://schema.org/Taxon">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">Closest parent taxon of the taxon in question.<br /> Inverse property: <a title="Defined in extension: bio.schema.org" class="ext ext-bio" href="#childTaxon">childTaxon</a>.</td>
+        </tr>
+        <tr typeof="rdfs:Property" resource="http://schema.org/scientificName">
+
+            <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#scientificName">scientificName</a></code>
+            </th>
+            <td class="prop-ect">
+                <link property="rangeIncludes" href="http://schema.org/TaxonName" /><a title="Defined in extension: bio.schema.org" class="ext ext-bio" href="/TaxonName">TaxonName</a>&nbsp; or <br />
+                <link property="rangeIncludes" href="http://schema.org/Text" /><a href="http://schema.org/Text">Text</a>&nbsp; or <br />
+                <link property="rangeIncludes" href="http://schema.org/URL" /><a href="http://schema.org/URL">URL</a>&nbsp;
+                <link property="domainIncludes" href="http://schema.org/Taxon">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">A TaxonName representing the currently valid (zoological) or accepted (botanical) name for that taxon.</td>
+        </tr>
+        <tr typeof="rdfs:Property" resource="http://schema.org/taxonRank">
+
+            <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a title="Defined in extension: bio.schema.org"  class="ext ext-bio"  href="#taxonRank">taxonRank</a></code>
+            </th>
+            <td class="prop-ect">
+                <link property="rangeIncludes" href="http://schema.org/PropertyValue" /><a href="http://schema.org/PropertyValue">PropertyValue</a>&nbsp; or <br />
+                <link property="rangeIncludes" href="http://schema.org/Text" /><a href="http://schema.org/Text">Text</a>&nbsp; or <br />
+                <link property="rangeIncludes" href="http://schema.org/URL" /><a href="http://schema.org/URL">URL</a>&nbsp;
+                <link property="domainIncludes" href="http://schema.org/Taxon">
+                <link property="domainIncludes" href="http://schema.org/TaxonName">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary – (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs).</td>
+        </tr>
+        <tr class="supertype">
+            <th class="supertype-name" colspan="3">Properties from <a href="http://schema.org/Thing">Thing</a></th>
+
+        </tr>
+
+    <tbody class="supertype">
+        <tr typeof="rdfs:Property" resource="http://schema.org/additionalType">
+
+            <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/additionalType">additionalType</a></code>
+            </th>
+            <td class="prop-ect">
+                <link property="rangeIncludes" href="http://schema.org/URL" /><a href="http://schema.org/URL">URL</a>&nbsp;
+                <link property="domainIncludes" href="http://schema.org/Thing">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.</td>
+        </tr>
+        <tr typeof="rdfs:Property" resource="http://schema.org/alternateName">
+
+            <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/alternateName">alternateName</a></code>
+            </th>
+            <td class="prop-ect">
+                <link property="rangeIncludes" href="http://schema.org/Text" /><a href="http://schema.org/Text">Text</a>&nbsp;
+                <link property="domainIncludes" href="http://schema.org/Thing">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">An alias for the item.</td>
+        </tr>
+        <tr typeof="rdfs:Property" resource="http://schema.org/description">
+
+            <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/description">description</a></code>
+            </th>
+            <td class="prop-ect">
+                <link property="rangeIncludes" href="http://schema.org/Text" /><a href="http://schema.org/Text">Text</a>&nbsp;
+                <link property="domainIncludes" href="http://schema.org/Thing">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">A description of the item.</td>
+        </tr>
+        <tr typeof="rdfs:Property" resource="http://schema.org/disambiguatingDescription">
+
+            <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/disambiguatingDescription">disambiguatingDescription</a></code>
+            </th>
+            <td class="prop-ect">
+                <link property="rangeIncludes" href="http://schema.org/Text" /><a href="http://schema.org/Text">Text</a>&nbsp;
+                <link property="domainIncludes" href="http://schema.org/Thing">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.</td>
+        </tr>
+        <tr typeof="rdfs:Property" resource="http://schema.org/identifier">
+
+            <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/identifier">identifier</a></code>
+            </th>
+            <td class="prop-ect">
+                <link property="rangeIncludes" href="http://schema.org/PropertyValue" /><a href="http://schema.org/PropertyValue">PropertyValue</a>&nbsp; or <br />
+                <link property="rangeIncludes" href="http://schema.org/Text" /><a href="http://schema.org/Text">Text</a>&nbsp; or <br />
+                <link property="rangeIncludes" href="http://schema.org/URL" /><a href="http://schema.org/URL">URL</a>&nbsp;
+                <link property="domainIncludes" href="http://schema.org/Thing">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">The identifier property represents any kind of identifier for any kind of <a class="localLink" href="http://schema.org/Thing">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href="href=" http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.</td>
+        </tr>
+        <tr typeof="rdfs:Property" resource="http://schema.org/image">
+
+            <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/image">image</a></code>
+            </th>
+            <td class="prop-ect">
+                <link property="rangeIncludes" href="http://schema.org/ImageObject" /><a href="http://schema.org/ImageObject">ImageObject</a>&nbsp; or <br />
+                <link property="rangeIncludes" href="http://schema.org/URL" /><a href="http://schema.org/URL">URL</a>&nbsp;
+                <link property="domainIncludes" href="http://schema.org/Thing">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">An image of the item. This can be a <a class="localLink" href="http://schema.org/URL">URL</a> or a fully described <a class="localLink" href="http://schema.org/ImageObject">ImageObject</a>.</td>
+        </tr>
+        <tr typeof="rdfs:Property" resource="http://schema.org/mainEntityOfPage">
+
+            <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></code>
+            </th>
+            <td class="prop-ect">
+                <link property="rangeIncludes" href="http://schema.org/CreativeWork" /><a href="http://schema.org/CreativeWork">CreativeWork</a>&nbsp; or <br />
+                <link property="rangeIncludes" href="http://schema.org/URL" /><a href="http://schema.org/URL">URL</a>&nbsp;
+                <link property="domainIncludes" href="http://schema.org/Thing">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="href=" http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br /> Inverse property: <a href="http://schema.org/mainEntity">mainEntity</a>.</td>
+        </tr>
+        <tr typeof="rdfs:Property" resource="http://schema.org/name">
+
+            <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/name">name</a></code>
+            </th>
+            <td class="prop-ect">
+                <link property="rangeIncludes" href="http://schema.org/Text" /><a href="http://schema.org/Text">Text</a>&nbsp;
+                <link property="domainIncludes" href="http://schema.org/Thing">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">The name of the item.</td>
+        </tr>
+        <tr typeof="rdfs:Property" resource="http://schema.org/potentialAction">
+
+            <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/potentialAction">potentialAction</a></code>
+            </th>
+            <td class="prop-ect">
+                <link property="rangeIncludes" href="http://schema.org/Action" /><a href="http://schema.org/Action">Action</a>&nbsp;
+                <link property="domainIncludes" href="http://schema.org/Thing">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.</td>
+        </tr>
+        <tr typeof="rdfs:Property" resource="http://schema.org/sameAs">
+
+            <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/sameAs">sameAs</a></code>
+            </th>
+            <td class="prop-ect">
+                <link property="rangeIncludes" href="http://schema.org/URL" /><a href="http://schema.org/URL">URL</a>&nbsp;
+                <link property="domainIncludes" href="http://schema.org/Thing">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.</td>
+        </tr>
+        <tr typeof="rdfs:Property" resource="http://schema.org/subjectOf">
+
+            <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/subjectOf">subjectOf</a></code>
+            </th>
+            <td class="prop-ect">
+                <link property="rangeIncludes" href="http://schema.org/CreativeWork" /><a href="http://schema.org/CreativeWork">CreativeWork</a>&nbsp; or <br />
+                <link property="rangeIncludes" href="http://schema.org/Event" /><a href="http://schema.org/Event">Event</a>&nbsp;
+                <link property="domainIncludes" href="http://schema.org/Thing">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">A CreativeWork or Event about this Thing.<br /> Inverse property: <a href="http://schema.org/about">about</a>.</td>
+        </tr>
+        <tr typeof="rdfs:Property" resource="http://schema.org/url">
+
+            <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://schema.org/url">url</a></code>
+            </th>
+            <td class="prop-ect">
+                <link property="rangeIncludes" href="http://schema.org/URL" /><a href="http://schema.org/URL">URL</a>&nbsp;
+                <link property="domainIncludes" href="http://schema.org/Thing">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">URL of the item.</td>
+        </tr>
+
+        <tr class="supertype">
+            <th class="supertype-name" colspan="3">Properties from <a href="http://rs.tdwg.org/dwc/terms/vernacularName">Darwin Core</a></th>
+
+        </tr>
+
+    <tbody class="supertype">
+        <tr typeof="rdfs:Property" resource="http://rs.tdwg.org/dwc/terms/vernacularName">
+
+            <th class="prop-nam" scope="row">
+
+                <code property="rdfs:label"><a   href="http://rs.tdwg.org/dwc/terms/vernacularName">dwc:vernacularName</a></code>
+            </th>
+            <td class="prop-ect">
+                <link property="rangeIncludes" href="http://schema.org/Text" /><a href="http://schema.org/Text">Text</a>&nbsp;
+                <link property="domainIncludes" href="http://schema.org/Taxon">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">A vernacular (common) name of the taxon.</td>
+        </tr>
+        
+</table>
+</div>
