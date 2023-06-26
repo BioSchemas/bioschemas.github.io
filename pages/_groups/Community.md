@@ -3,7 +3,7 @@ layout: group-details
 identifier: community
 name: Community
 collection: groups
-active: true
+active: false
 type: other
 description: 'The objective of this workstream is to support this project and the involvement of the Bioschemas community.'
 lead: 

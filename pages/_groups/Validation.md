@@ -3,7 +3,7 @@ layout: group-details
 identifier: validation
 name: Validation
 collection: groups
-active: true
+active: false
 type: other
 description: Tools for validating markup against a specification
 lead: 
