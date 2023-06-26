@@ -33,6 +33,7 @@ specifications:
 members:
 - AlbanGaignard
 - DietrichRebholzSchuhmann
+- IvanMicetic
 
 ---
 
