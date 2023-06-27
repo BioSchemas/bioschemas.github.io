@@ -20,7 +20,7 @@ folder: https://drive.google.com/open?id=0BzDhyOWTnRNTYkdQNHppUjZ3U2M
 abstract: 'The Tools Group develops and maintains a community specification for describing life science tools.'
 objectives:
   [
-    'This group investigates the required extensions to <a href="http://schema.org">schema.org</a> to support the description of software tools, applications, releaseas and source code.',
+    'This group investigates the required extensions to <a href="http://schema.org">schema.org</a> to support the description of software tools, applications, releases and source code.',
     'A specific use case is supporting machine-actionable Software Management Plans'
   ]
 
