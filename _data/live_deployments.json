@@ -375,6 +375,11 @@
           "profileName": "CourseInstance",
           "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://www.sib.swiss/training/course/20221123_OPEMP"
+        }, 
+        {
+          "profileName": "TrainingMaterial",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://www.sib.swiss/training/course/20230426_DOCK"
         }
       ]
     },
@@ -1721,6 +1726,26 @@
           "conformsTo": "1.0-RELEASE",
           "exampleURL": "https://bioregistry.io/registry/hgnc",
           "highlight": "Over 1,500 ontologies, controlled vocabularies, and resources including their preferred prefix, name, description, homepage, mappings to other registries, and more."
+        }
+      ]
+    },
+    {
+      "name": "Metabolic Atlas",
+      "description": "A web platform integrating open-source genome scale metabolic models (GEMs) for easy browsing and analysis. ",
+      "url": "https://metabolicatlas.org",
+      "nodes": ["SE"],
+      "profiles": [
+        {
+          "profileName": "MolecularEntity",
+          "conformsTo": "0.5-RELEASE",
+          "exampleURL": "https://metabolicatlas.org/explore/Human-GEM/gem-browser/metabolite/MAM00217c",
+          "highlight": "Over 3'000 metabolites."
+        },
+        {
+          "profileName": "Gene",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://metabolicatlas.org/explore/Human-GEM/gem-browser/gene/ENSG00000078237",
+          "highlight": "Over 15'000 genes from multiple organisms."
         }
       ]
     }

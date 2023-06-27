@@ -69,6 +69,8 @@ You have come to a community consensus on changes needed to a profile that alrea
   * The version of the profile
   * Any descriptions of changes between versions
   * The name of the person who prepared the changes
+
+_Note: It is useful to have the Bioschemas page for the profile open at this stage to copy across the required information_
   
   __You will not be able to change this information on the next steps so make sure it is correct before moving on.__
 

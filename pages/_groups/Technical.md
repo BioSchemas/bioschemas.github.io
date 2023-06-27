@@ -4,8 +4,8 @@ layout: group-details
 identifier: technical
 name: Technical
 collection: groups
-active: true
-type: generic
+active: false
+type: other
 description:
 lead: 
 - person: JustinClark-Casey

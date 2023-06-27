@@ -4,7 +4,7 @@ identifier: genes
 name: Genes
 collection: groups
 active: true
-type: generic
+type: biological
 description: Specification for Beacon Type
 lead: 
 - person: LeylaGarcia

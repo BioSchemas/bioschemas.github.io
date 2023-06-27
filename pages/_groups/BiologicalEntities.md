@@ -4,7 +4,7 @@ identifier: biologicalentities
 name: Biological Entities
 collection: groups
 active: true
-type: generic
+type: bilogical
 description: Specification for biological entities
 lead: 
 - person: CarlosHorro

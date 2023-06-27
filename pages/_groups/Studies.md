@@ -4,7 +4,7 @@ identifier: studies
 name: Studies
 collection: groups
 active: true
-type: generic
+type: biological
 description: Developing a profile and type to capture studies and their associated projects
 lead: 
 - person: To be determined
