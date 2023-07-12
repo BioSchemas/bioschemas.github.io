@@ -5,11 +5,8 @@ cross_walk_url: https://docs.google.com/spreadsheets/d/1w6_iqgcBgbqqZVmhpf9L21eo
 dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:TrainingMaterial
 gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20TrainingMaterial
 group: training
-hierarchy:
-- Thing
-- CreativeWork
-- LearningResource
-json-ld_url: TrainingMaterial/jsonld/TrainingMaterial_v0.10-DRAFT.json
+hierarchy: []
+json-ld_url: TrainingMaterial/jsonld/TrainingMaterial_v1.1-DRAFT.json
 live_deploy: /liveDeploys
 mapping:
 - bsc_description: ''
@@ -253,7 +250,9 @@ mapping:
 - bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
-  description: URL of additional sources for the dataset
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
   example: ''
   expected_types:
   - URL
@@ -399,8 +398,8 @@ mapping:
     embodied by a specified resource.
   example: ''
   expected_types:
-  - Number
   - Text
+  - number
   marginality: Optional
   property: version
   type: ''
@@ -422,18 +421,26 @@ mapping:
 name: TrainingMaterial
 parent_type: LearningResource
 previous_release: 1.0-RELEASE
-previous_version: 0.9-DRAFT-2020_12_08
-redirect_from:
-- "/devSpecs/TrainingMaterial/specification/"
-- "/devSpecs/TrainingMaterial/specification"
-- "/devSpecs/TrainingMaterial/"
-- "/devSpecs/TrainingMaterial"
-- "/specifications/drafts/TrainingMaterial/"
-- "/specifications/drafts/TrainingMaterial"
-- "/specifications/TrainingMaterial/"
-- "/specifications/TrainingMaterial"
-- "/profiles/TrainingMaterial/"
-- "/profiles/TrainingMaterial"
+previous_version: ''
+redirect_from: '- "/devSpecs/TrainingMaterial/specification/"
+
+  - "/devSpecs/TrainingMaterial/specification"
+
+  - "/devSpecs/TrainingMaterial/"
+
+  - "/devSpecs/TrainingMaterial"
+
+  - "/specifications/drafts/TrainingMaterial/"
+
+  - "/specifications/drafts/TrainingMaterial"
+
+  - "/specifications/TrainingMaterial/"
+
+  - "/specifications/TrainingMaterial"
+
+  - "/profiles/TrainingMaterial/"
+
+  - "/profiles/TrainingMaterial"'
 spec_info:
   description: 'A specification for describing training materials in life sciences.
     The Life Science Training Materials specification provides a way to describe bioscience
@@ -442,13 +449,13 @@ spec_info:
     events in Web pages and applications. The goal of the specification is to make
     it easier to discover, exchange and integrate life science training material information
     across the Internet. Version: 1.1-DRAFT. <h3>Summary of Changes</h3><br>Changes
-    since previous release 1.0-RELEASE of the TrainingMaterials profile:<ul><li>added
+    since previous draft 0.9-DRAFT-2020_12_08 of the TrainingMaterials profile:<ul><li>added
     sameAs property as recommended</li></ul>'
   full_example: https://github.com/BioSchemas/specifications/tree/master/TrainingMaterial/examples
   official_type: LearningResource
   title: TrainingMaterial
   version: 1.1-DRAFT
-  version_date: 20221121T154316
+  version_date: 2023712T15917
 spec_type: Profile
 status: revision
 use_cases_url: /useCases/TrainingMaterial
