@@ -124,13 +124,13 @@ Study:
 Taxon:
     name: "Taxon"
     latest_publication: "0.4-DRAFT"
-    latest_release: "0.3-RELEASE-2019_11_18"
+    latest_release: "1.0-RELEASE"
     status: "active"
 
 TaxonName:
     name: "TaxonName"
     latest_publication: "0.1-DRAFT"
-    latest_release:
+    latest_release: "1.0-RELEASE"
     status: "active"
 
 ---
