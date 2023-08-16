@@ -6,12 +6,11 @@ redirect_from:
   - "/liveDeploys"
 exampleHoverText: "View example page"
 schemaHoverText: "Visualise on the Schema.org Markup Validation Tool (SMV)"
-bmuseHoverText: "Retrieve using Bioschemas Scraping service"
 ---
 <!-- This count is used to provide a unique ID -->
 {%- assign count = 0 %}
 <h1>{{ page.title }}</h1>
-<p>Below we list the sites that use <a href="/">Bioschemas</a> markup to describe what they are offering. We provide a direct link to the site, an example deployment page, a link to test the markup syntax using the Schema.org Markup Validation tool (<a href="https://validator.schema.org/">SMV</a>), and also a link to the results of using the Bioschemas Markup Scraper and Extractor tool (<a href="https://github.com/HW-SWeL/BMUSE">BMUSE</a>). The links to the Schema.org Markup Validation tool and BMUSE show one example page from the site; however, many more may exist.</p>
+<p>Below we list the sites that use <a href="/">Bioschemas</a> markup to describe what they are offering. We provide a direct link to the site, an example deployment page and a link to test the markup syntax using the Schema.org Markup Validation tool (<a href="https://validator.schema.org/">SMV</a>).</p>
 
 <p>Note that when using the Schema.org Markup Validator, you may encounter some error warnings for types and properties. These should correspond to the types and properties that are being proposed by Bioschemas as extensions to the Schema.org vocabulary.</p>
 
@@ -103,9 +102,6 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                             </div>
                             <div class="ps-1">
                                 <a href="https://validator.schema.org/#url={{live.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.schemaHoverText}}" class="btn btn-sm btn-primary" target="_blank">SMV</a>
-                            </div>
-                            <div class="ps-1">
-                                <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{live.exampleURL}}&output=jsonld" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.bmuseHoverText}}" class="btn btn-sm btn-primary" target="_blank">BMUSE</a>
                             </div>
                             {%- endif %}
                             {%- break %}
@@ -246,11 +242,6 @@ bmuseHoverText: "Retrieve using Bioschemas Scraping service"
                                             {%- if profile.exampleURL != nil %}
                                             <div class="ps-1">
                                                 <a href="https://validator.schema.org/#url={{profile.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.schemaHoverText}}" class="btn btn-sm btn-primary" target="_blank">SMV</a>
-                                            </div>
-                                            {%- endif %}
-                                            {%- if profile.exampleURL != nil %}
-                                            <div class="ps-1">
-                                                <a href="https://swel.macs.hw.ac.uk/scraper/getRDF?url={{profile.exampleURL}}&output=jsonld" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.bmuseHoverText}}" class="btn btn-sm btn-primary" target="_blank">BMUSE</a>
                                             </div>
                                             {%- endif %}
                                         </div>
