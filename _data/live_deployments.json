@@ -1175,17 +1175,17 @@
       "url": "https://massbank.eu/MassBank/",
       "nodes": "DE",
       "sitemap": "https://massbank.eu/MassBank/sitemapindex.xml",
-      "datadump": "https://msbi.ipb-halle.de/~sneumann/MassBank-2006.06.jsonld",
+      "datadump": "https://github.com/MassBank/MassBank-data/releases/latest/download/MassBank.json",
       "profiles": [
         {
-          "profileName": "MolecularEntity",
-          "conformsTo": "0.5",
-          "exampleURL": "https://massbank.eu/MassBank/RecordDisplay?id=LQB00001&dsn=RIKEN_IMS"
+          "profileName": "ChemicalSubstance",
+          "conformsTo": "0.4-RELEASE",
+          "exampleURL": "https://massbank.eu/MassBank/RecordDisplay?id=MSBNK-RIKEN_IMS-LQB00001"
         },
         {
           "profileName": "Dataset",
-          "conformsTo": "0.3",
-          "exampleURL": "https://massbank.eu/MassBank/RecordDisplay?id=LQB00001&dsn=RIKEN_IMS"
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://massbank.eu/MassBank/RecordDisplay?id=MSBNK-RIKEN_IMS-LQB00001"
         }
       ]
     },
