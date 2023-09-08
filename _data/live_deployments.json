@@ -1748,6 +1748,26 @@
           "highlight": "Over 15'000 genes from multiple organisms."
         }
       ]
+    },
+    {
+      "name": "Pharos",
+      "description": "Pharos is the user interface to the Knowledge Management Center (KMC) for the Illuminating the Druggable Genome (IDG) program funded by the National Institutes of Health (NIH) Common Fund. (Grant No. 1U24CA224370-01). The goal of KMC is to develop a comprehensive, integrated knowledge-base for the Druggable Genome (DG) to illuminate the uncharacterized and/or poorly annotated portion of the DG.",
+      "url": "https://pharos.nih.gov/",
+      "sitemap": "https://pharos-api.ncats.io/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "Protein",
+          "conformsTo": "0.11-RELEASE",
+          "exampleURL": "https://pharos.nih.gov/targets/CAMK2A",
+          "highlight": "Over 20412 proteins."
+        },
+        {
+          "profileName": "ChemicalSubstance",
+          "conformsTo": "0.4-RELEASE",
+          "exampleURL": "https://pharos.nih.gov/ligands/tamatinib",
+          "highlight": "Over 355932 chemical substances."
+        }
+      ]
     }
   ]
 }
