@@ -21,9 +21,8 @@
 <h4>Used on these profiles</h4>
 <ul>
   {% for v in page.used_in_profiles %}
-  <li>
-    {{v}}
-  </li>
+  {%- assign profileName = '/profiles/' | append: v %}
+  <li><a href="{{ profileName | relative_url }}">{{ v }}</a></li>
   {% endfor %}
 </ul>
 {% endif %}
@@ -32,9 +31,8 @@
 <h4>Used on these types</h4>
 <ul>
   {% for v in page.used_in_types %}
-  <li>
-    {{v}}
-  </li>
+  {%- assign typeName = '/types/' | append: v %}
+  <li><a href="{{ typeName | relative_url }}">{{ v }}</a></li>
   {% endfor %}
 </ul>
 {% endif %}
