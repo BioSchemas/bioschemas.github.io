@@ -6,8 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
   standards and reach consensus among a wide number of life sciences organizations and communities.
 url: "http://bioschemas.org" # the base hostname & protocol for your site
 twitter_username: Bioschemas
-github_username:  Bioschemas
-
+github_username: Bioschemas
 
 # Build settings
 markdown: kramdown
@@ -16,14 +15,17 @@ sass:
   style: compressed
 highlighter: rouge
 plugins:
- - jekyll-redirect-from
- - jekyll-sitemap
- - jekyll-gist
- - jekyll-relative-links
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-relative-links
 
 # Collections
 collections_dir: pages
 collections:
+  properties:
+    output: true
+    permalink: /:collection/:path
   types:
     output: true
     permalink: /:collection/:path
@@ -63,8 +65,7 @@ collections:
 
 # Defaults
 defaults:
-  -
-    scope:
+  - scope:
       path: "pages"
       type: "pages"
     values:
@@ -73,6 +74,11 @@ defaults:
   - scope:
       path: ""
       type: "types"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "properties"
     values:
       layout: "default"
   - scope:
