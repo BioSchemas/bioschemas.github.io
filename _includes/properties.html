@@ -6,10 +6,14 @@
   {{page.description}}
 </p>
 
-{% if page.expected_values %}
+{% if page.expected_values_as_type or page.expected_values_as_data %}
 <h4>Expected values</h4>
 <ul>
-  {% for v in page.expected_values %}
+  {% for v in page.expected_values_as_type %}
+  {%- assign typeName = '/types/' | append: v %}
+  <li><a href="{{ typeName | relative_url }}">{{ v }}</a></li>
+  {% endfor %}
+  {% for v in page.expected_values_as_data %}
   <li>
     {{v}}
   </li>
