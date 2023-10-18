@@ -433,17 +433,6 @@
       ]
     },
     {
-      "name": "Galaxy Project",
-      "url": "https://galaxyproject.org/",
-      "profiles": [
-        {
-          "profileName": "Event",
-          "conformsTo": "0.1",
-          "exampleURL": "https://galaxyproject.org/events/"
-        }
-      ]
-    },
-    {
       "name": "OmicsDI",
       "keywords": ["RIR"],
       "url": "https://www.omicsdi.org/",
