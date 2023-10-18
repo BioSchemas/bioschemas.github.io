@@ -1748,6 +1748,27 @@
           "highlight": "Over 15'000 genes from multiple organisms."
         }
       ]
+       },
+    {
+      "name": "e!DAL-PGP: Plant Genomics and Phenomics Research Data Repository",
+      "description": "The Leibniz Institute of Plant Genetics and Crop Plant Research (IPK) and German Plant Phenotyping Network (DPPN) has jointly initiated the Plant Genomics and Phenomics Research Data Repository (PGP) as infrastructure to comprehensively publish plant research data. This covers in particular cross-domain datasets that are not being published in central repositories because of its volume or unsupported data scope, like image collections from plant phenotyping and microscopy, unfinished genomes, genotyping data, visualizations of morphological plant models, data from mass spectrometry as well as software and documents.",
+      "url": "https://edal-pgp.ipk-gatersleben.de",
+      "nodes": ["DE"],
+      "profiles": [
+       {
+          "profileName": "Dataset",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "http://dx.doi.org/10.5447/ipk/2022/5",
+          "highlight": "over 250 pages with markup"
+        },
+        {
+          "profileName": "Taxon",
+          "conformsTo": "0.6-RELEASE",
+          "exampleURL": "http://dx.doi.org/10.5447/ipk/2022/5",
+          "highlight": "over 250 pages with markup"
+        }
+       
+      ]
     }
   ]
 }
