@@ -57,14 +57,18 @@
                     <small class="text-muted me-2">{{profile.highlight}}</small>
                     {%- endif %}
                 </div>
-                {%- if profile.exampleURL != nil %}
+                {%- if profile.exampleURL != nil and profile.exampleURL != "http://" %}
                 <div class="ps-1">
                     <a href="{{profile.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.exampleHoverText}}" class="btn btn-sm btn-primary" target="_blank">Page</a>
                 </div>
-                {%- endif %}
-                {%- if profile.exampleURL != nil %}
                 <div class="ps-1">
                     <a href="https://validator.schema.org/#url={{profile.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.schemaHoverText}}" class="btn btn-sm btn-primary" target="_blank">SMV</a>
+                </div>
+                <div class="ps-1">
+                    <a href="https://fair-checker.france-bioinformatique.fr/api/inspect/get_rdf_metadata?url={{profile.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.jsonldHoverText}}" class="btn btn-sm btn-primary text-nowrap" target="_blank">JSON-LD</a>
+                </div>
+                <div class="ps-1">
+                    <a href="https://fair-checker.france-bioinformatique.fr/bioschemas_validation?url={{profile.exampleURL}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{page.faircheckerHoverText}}" class="btn btn-sm btn-primary text-nowrap" target="_blank">FAIR-Checker</a>
                 </div>
                 {%- endif %}
             </div>
