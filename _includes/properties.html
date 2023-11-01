@@ -1,0 +1,42 @@
+<h2>{{page.prop_name}}</h2>
+<em>A Bioschemas property</em>
+
+<h3></h3>
+<p>
+  {{page.description}}
+</p>
+
+{% if page.expected_values_as_type or page.expected_values_as_data %}
+<h4>Expected values</h4>
+<ul>
+  {% for v in page.expected_values_as_type %}
+  {%- assign typeName = '/types/' | append: v %}
+  <li><a href="{{ typeName | relative_url }}">{{ v }}</a></li>
+  {% endfor %}
+  {% for v in page.expected_values_as_data %}
+  <li>
+    {{v}}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if page.used_in_profiles %}
+<h4>Used on these profiles</h4>
+<ul>
+  {% for v in page.used_in_profiles %}
+  {%- assign profileName = '/profiles/' | append: v %}
+  <li><a href="{{ profileName | relative_url }}">{{ v }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if page.used_in_types %}
+<h4>Used on these types</h4>
+<ul>
+  {% for v in page.used_in_types %}
+  {%- assign typeName = '/types/' | append: v %}
+  <li><a href="{{ typeName | relative_url }}">{{ v }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
