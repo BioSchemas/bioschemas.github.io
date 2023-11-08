@@ -361,6 +361,29 @@
       ]
     },
     {
+      "name": "VIB Training at VIB Flemish Institute of Biotechnology",
+      "description": "Training material and courses delivered by VIB",
+      "url": "https://training.vib.be",
+      "nodes": "BE",
+      "profiles": [
+        {
+          "profileName": "Course",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://training.vib.be/all-trainings/bulk-rnaseq-counts-differential-expression-3"
+        }, 
+        {
+          "profileName": "CourseInstance",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://training.vib.be/all-trainings/bulk-rnaseq-counts-differential-expression-3"
+        }, 
+        {
+          "profileName": "TrainingMaterial",
+          "conformsTo": "1.0-RELEASE",
+          "exampleURL": "https://elearning.vib.be/courses/a-tour-of-machine-learning/"
+        }
+      ]
+    },
+    {
       "name": "Training Portal at SIB Swiss Institute of Bioinformatics",
       "description": "Training material and courses delivered by SIB",
       "url": "https://www.sib.swiss/training/",
