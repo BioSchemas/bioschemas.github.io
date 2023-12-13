@@ -92,6 +92,12 @@ Dataset,data,"- ""/specifications/Dataset/""
 - ""/devSpecs/Dataset""
 - ""/specifications/drafts/Dataset/""
 - ""/specifications/drafts/Dataset""",,schema:Dataset,https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAvaADLmI_FrIk7O3BEkxY/
+DefinedTerm,labprotocols,"- ""/specifications/drafts/DefinedTerm/""
+- ""/specifications/drafts/DefinedTerm""
+- ""/specifications/DefinedTerm/""
+- ""/specifications/DefinedTerm""
+- ""/profiles/DefinedTerm/""
+- ""/profiles/DefinedTerm""",,schema:DefinedTerm,
 Disease,diseases,"- ""/devSpecs/Disease/specification/""
 - ""/devSpecs/Disease/specification""
 - ""/devSpecs/Disease/""
