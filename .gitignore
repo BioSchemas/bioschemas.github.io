@@ -10,3 +10,5 @@ _site/
 vendor
 .jekyll-metadata
 workspace.code-workspace
+/Gemfile
+/Gemfile.lock

@@ -28,12 +28,12 @@ folder: https://drive.google.com/drive/folders/0B0fE3oOZIq44TzFwejFEbE9WdXM
 abstract: 'The LabProtocols group aims at providing specifications related to studies, for instance protocol and process, as used in a lab, whether wet- or dry-lab. While specifications at the generic level are the initial target, specializations to better cover wet- or dry-lab are also within the scope of this group (either with sub-types or profiles). It is loosely based on the Investigation/Study/Assay (ISA) model.'
 
 objectives:
-[
-  'Describe lab protocols and processes using Bioschemas compliant markup so they can be more easily indexed by search engines and registries.',
-  'Evaluating the issues and benefits about how to work with laboratory protocols and processes in schema.org and Bioschemas',
-  'Establish a distinct separation between LabProtocol (akin to a Recipe / SOP) and LabProcess (akin to the Action described by such LabProtocol, analogous to a lab notebook in a real-world scenario)',
-  '(wet-lab protocol) Describe biological laboratory protocols using Bioschemas compliant markup so protocols can be more easily indexed by search engines and registries.',
-]
+  [
+    'Describe lab protocols and processes using Bioschemas compliant markup so they can be more easily indexed by search engines and registries.',
+    'Evaluating the issues and benefits about how to work with laboratory protocols and processes in schema.org and Bioschemas',
+    'Establish a distinct separation between LabProtocol (akin to a Recipe / SOP) and LabProcess (akin to the Action described by such LabProtocol, analogous to a lab notebook in a real-world scenario)',
+    '(wet-lab protocol) Describe biological laboratory protocols using Bioschemas compliant markup so protocols can be more easily indexed by search engines and registries.',
+  ]
 
 specifications:
   [
@@ -41,9 +41,9 @@ specifications:
   ]
 
 types:
-    [
-      'LabProtocol'
-    ]
+  [
+    'LabProtocol'
+  ]
 
 members:
     - OlgaXimenaGiraldo
