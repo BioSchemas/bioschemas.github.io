@@ -1119,7 +1119,8 @@
         {
           "profileName": "Dataset",
           "conformsTo": "1.0-RELEASE",
-          "exampleURL": "https://nanocommons.github.io/datasets/"
+          "exampleURL": "https://nanocommons.github.io/datasets/",
+          "highlight": "More than 50 datasets around the topic of nanosafety that are both FAIR and Open"
         },
         {
           "profileName": "TrainingMaterial",
