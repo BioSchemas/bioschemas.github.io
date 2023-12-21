@@ -42,6 +42,28 @@ version: '0.4-DRAFT'
          <tr typeof="rdfs:Property" resource="http://bioschemas.org/properties/computationalTool">
             <th class="prop-nam" scope="row">
                <code
+                  property="rdfs:label"><a title="Defined in extension: bioschemas.org"  class="ext ext-bio"  href="#bioSample">bioSample</a></code>
+            </th>
+            <td class="prop-ect">
+               <link property="rangeIncludes" href="http://schema.org/BioChemEntity" /><a
+                  href="http://schema.org/BioChemEntity">BioChemEntity</a>&nbsp; or <br />
+               <link property="rangeIncludes" href="http://bioschemas.org/types/BioSample" /><a
+                  href="http://bioschemas.org/types/BioSample">BioSample</a>&nbsp; or <br />
+               <link property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a
+                  href="http://schema.org/DefinedTerm">DefinedTerm</a>&nbsp;
+               <link property="rangeIncludes" href="http://schema.org/Taxon" /><a
+                  href="http://schema.org/Taxon">Taxon</a>&nbsp;
+               <link property="rangeIncludes" href="http://schema.org/Text" /><a
+                  href="http://schema.org/Text">Text</a>&nbsp;
+               <link property="rangeIncludes" href="http://schema.org/URL" /><a
+                  href="http://schema.org/URL">URL</a>&nbsp;         
+               <link property="domainIncludes" href="http://bioschemas.org/types/LabProtocol">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">BioSample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used.</td>
+         </tr>
+         <tr typeof="rdfs:Property" resource="http://bioschemas.org/properties/computationalTool">
+            <th class="prop-nam" scope="row">
+               <code
                   property="rdfs:label"><a title="Defined in extension: bioschemas.org"  class="ext ext-bio"  href="#computationalTool">computationalTool</a></code>
             </th>
             <td class="prop-ect">
@@ -158,8 +180,22 @@ version: '0.4-DRAFT'
                   href="http://schema.org/Text">Text</a>&nbsp;
                <link property="domainIncludes" href="http://schema.org/types/LabProtocol">
             </td>
-            <td class="prop-desc" property="rdfs:comment">Situations where the Protocol would be unreliable or otherwise
+            <td class="prop-desc" property="rdfs:comment">Situations where the Protocol would be unreliable or otherwise.
                unsuccessful.</td>
+         </tr>
+         <tr typeof="rdfs:Property" resource="http://bioschemas.org/properties/protocolOutcome">
+            <th class="prop-nam" scope="row">
+               <code
+                  property="rdfs:label"><a title="Defined in extension: bioschemas.org"  class="ext ext-bio"  href="#protocolOutcome">protocolOutcome</a></code>
+            </th>
+            <td class="prop-ect">
+               <link property="rangeIncludes" href="http://schema.org/CreativeWork" /><a
+                  href="http://schema.org/CreativeWork">CreativeWork</a>&nbsp; or <br />
+               <link property="rangeIncludes" href="http://schema.org/Text" /><a
+                  href="http://schema.org/Text">Text</a>&nbsp;
+               <link property="domainIncludes" href="http://schema.org/types/LabProtocol">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">Actual outcome or result by a protocol execution. The shape of the expected outcome/result can be described using the property 'output'.</td>
          </tr>
          <tr typeof="rdfs:Property" resource="http://bioschemas.org/terms/ouput">
             <th class="prop-nam" scope="row">
