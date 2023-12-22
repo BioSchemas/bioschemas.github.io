@@ -63,7 +63,7 @@ Gene:
 
 LabProtocol:
     name: "LabProtocol"
-    latest_publication: "0.3-DRAFT-2019_06_20"
+    latest_publication: "0.4-DRAFT"
     latest_release:
     status: "active"
 
