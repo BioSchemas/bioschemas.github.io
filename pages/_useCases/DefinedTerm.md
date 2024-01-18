@@ -1,7 +1,7 @@
 ---
 layout: use-case
 name: DefinedTerm
-group: Dataset
+group: data
 active: true
 redirect_from:
 - "/useCases/DefinedTerm/"

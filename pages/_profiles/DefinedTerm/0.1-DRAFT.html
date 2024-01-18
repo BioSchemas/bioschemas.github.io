@@ -19,9 +19,15 @@ mapping:
   cardinality: ONE
   controlled_vocab: ''
   description: A [[DefinedTermSet]] that contains this term.
-  example: ''
+  example: |-
+    {
+     "@type": "DefinedTerm",
+     "inDefinedTermSet": "http://purl.obolibrary.org/obo/ncbitaxon.owl",
+     "inDefinedTermSet": "http://purl.obolibrary.org/obo/go.owl"
+    }
   expected_types:
-  - Text
+  - DefinedTermSet
+  - URL
   marginality: Minimum
   property: inDefinedTermSet
   type: ''
@@ -30,7 +36,11 @@ mapping:
   cardinality: ONE
   controlled_vocab: ''
   description: A code that identifies this [[DefinedTerm]] within a [[DefinedTermSet]]
-  example: ''
+  example: |-
+    {
+     "@type": "DefinedTerm",
+     "termCode": "GO:0005515"
+    }
   expected_types:
   - Text
   marginality: Recommended
@@ -43,8 +53,17 @@ mapping:
   description: URL of a reference Web page that unambiguously indicates the item's
     identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
     website.
-  example: ''
-  expected_types: []
+    example: |-
+      {
+       "@type": "DefinedTerm",
+       "sameAs": "http://purl.obolibrary.org/obo/GO_0005515",
+       "sameAs": "http://purl.bioontology.org/ontology/GO/GO:0005515",
+       "sameAs": "https://identifiers.org/GO:0005515",
+       "sameAs": "https://www.ebi.ac.uk/ols4/ontologies/go/terms?obo_id=GO:0005515",
+       "sameAs": "https://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0005515"
+      }
+  expected_types:
+  - URL
   marginality: Recommended
   property: sameAs
   type: ''
@@ -53,7 +72,11 @@ mapping:
   cardinality: ONE
   controlled_vocab: ''
   description: The name of the item.
-  example: ''
+  example: |-
+    {
+     "@type": "DefinedTerm",
+     "name": "protein binding"
+    }
   expected_types:
   - Text
   marginality: Recommended
@@ -64,7 +87,11 @@ mapping:
   cardinality: ONE
   controlled_vocab: ''
   description: A description of the item.
-  example: ''
+  example: |-
+    {
+     "@type": "DefinedTerm",
+     "description": "Binding to a protein."
+    }
   expected_types:
   - Text
   marginality: Optional
