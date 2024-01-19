@@ -26,7 +26,7 @@ objectives:
 
 specifications:
   [
-    'Dataset', 'DataRecord'
+    'Dataset', 'DataRecord', 'DefinedTerm'
   ]
 
 types:
