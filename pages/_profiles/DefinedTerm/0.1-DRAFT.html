@@ -19,7 +19,11 @@ mapping:
   cardinality: ONE
   controlled_vocab: ''
   description: A [[DefinedTermSet]] that contains this term.
-  example: ''
+  example: |-
+    {
+      "@type": "DefinedTerm",
+      "inDefinedTermSet": "http://purl.obolibrary.org/obo/ncbitaxon.owl"
+    }
   expected_types:
   - Text
   marginality: Minimum
@@ -30,7 +34,11 @@ mapping:
   cardinality: ONE
   controlled_vocab: ''
   description: A code that identifies this [[DefinedTerm]] within a [[DefinedTermSet]]
-  example: ''
+  example: |-
+    {
+     "@type": "DefinedTerm",
+     "termCode": "GO:0005515"
+    }
   expected_types:
   - Text
   marginality: Recommended
@@ -43,7 +51,17 @@ mapping:
   description: URL of a reference Web page that unambiguously indicates the item's
     identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
     website.
-  example: ''
+  example: |-
+    {
+      "@type": "DefinedTerm",
+      "sameAs": [
+        "http://purl.obolibrary.org/obo/GO_0005515",
+        "http://purl.bioontology.org/ontology/GO/GO:0005515",
+        "https://identifiers.org/GO:0005515",
+        "https://www.ebi.ac.uk/ols4/ontologies/go/terms?obo_id=GO:0005515",
+        "https://www.ebi.ac.uk/QuickGO/GTerm?id=GO:0005515"
+      ]
+    }
   expected_types: []
   marginality: Recommended
   property: sameAs
@@ -53,7 +71,11 @@ mapping:
   cardinality: ONE
   controlled_vocab: ''
   description: The name of the item.
-  example: ''
+  example: |-
+    {
+      "@type": "DefinedTerm",
+      "termCode": "protein binding"
+    }
   expected_types:
   - Text
   marginality: Recommended
@@ -64,7 +86,11 @@ mapping:
   cardinality: ONE
   controlled_vocab: ''
   description: A description of the item.
-  example: ''
+  example: |-
+    {
+      "@type": "DefinedTerm",
+      "termCode": "Binding to a protein"
+    }
   expected_types:
   - Text
   marginality: Optional
