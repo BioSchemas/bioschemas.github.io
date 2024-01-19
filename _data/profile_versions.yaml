@@ -51,7 +51,7 @@ Dataset:
   name: Dataset
   status: active
 DefinedTerm:
-  latest_publication: 0.1 -DRAFT
+  latest_publication: 0.1-DRAFT
   latest_release: null
   name: DefinedTerm
   status: active
