@@ -1135,6 +1135,12 @@
           "exampleURL": "https://nanocommons.github.io/specifications/jrc/"
         },
         {
+          "profileName": "ChemicalSubstance",
+          "conformsTo": "0.4",
+          "exampleURL": "https://nanocommons.github.io/erm-database/",
+          "highlight": "Database of nanomaterials with European Registry of Materials identifier found on the internet"
+        },
+        {
           "profileName": "DataCatalog",
           "conformsTo": "0.3",
           "exampleURL": "https://nanocommons.github.io/datasets/"
