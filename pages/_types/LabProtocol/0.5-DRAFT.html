@@ -1,9 +1,14 @@
 ---
-previous_version: '0.3-DRAFT-2019_06_20'
+redirect_from:
+- "devTypes/LabProtocol/specification"
+- "devTypes/LabProtocol/specification/"
+- "/devTypes/LabProtocol/"
+- "/LabProtocol"
+- "/types/LabProtocol"
+previous_version: '0.4-DRAFT'
 previous_release:
-dateModified: 2023-12-13
-description: 'An experimental lab protocol is a sequence of tasks and operations executed to perform experimental
-research in wet- or dry-labs.'
+dateModified: 2024-01-12
+description: 'An experimental lab protocol is a sequence of tasks and operations executed to perform experimental research in wet- or dry-labs.'
 hierarchy:
 - Thing
 - CreativeWork
@@ -14,7 +19,7 @@ name: LabProtocol
 parent_type: HowTo
 spec_type: Type
 status: revision
-version: '0.4-DRAFT'
+version: '0.5-DRAFT'
 ---
 {% include type-start.html %}
 <div class="table-responsive shadow rounded mt-4 mb-5">
@@ -44,11 +49,13 @@ version: '0.4-DRAFT'
                <link property="rangeIncludes" href="http://bioschemas.org/types/BioSample" /><a
                   href="http://bioschemas.org/types/BioSample">BioSample</a>&nbsp; or <br />
                <link property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a
-                  href="http://schema.org/DefinedTerm">DefinedTerm</a>&nbsp;
+                  href="http://schema.org/DefinedTerm">DefinedTerm</a>&nbsp; or <br />
+               <link property="rangeIncludes" href="http://schema.org/PropertyValue" /><a
+                  href="http://schema.org/PropertyValue">PropertyValue</a>&nbsp; or <br />
                <link property="rangeIncludes" href="http://schema.org/Taxon" /><a
-                  href="http://schema.org/Taxon">Taxon</a>&nbsp;
+                  href="http://schema.org/Taxon">Taxon</a>&nbsp; or <br />
                <link property="rangeIncludes" href="http://schema.org/Text" /><a
-                  href="http://schema.org/Text">Text</a>&nbsp;
+                  href="http://schema.org/Text">Text</a>&nbsp; or <br />
                <link property="rangeIncludes" href="http://schema.org/URL" /><a
                   href="http://schema.org/URL">URL</a>&nbsp;         
                <link property="domainIncludes" href="http://bioschemas.org/types/LabProtocol">
@@ -63,6 +70,10 @@ version: '0.4-DRAFT'
             <td class="prop-ect">
                <link property="rangeIncludes" href="http://bioschemas.org/terms/ComputationalWorkflow" /><a
                   href="http://bioschemas.org/terms/ComputationalWorkflow">ComputationalWorkflow</a>&nbsp; or <br />
+               <link property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a
+                  href="http://schema.org/DefinedTerm">DefinedTerm</a>&nbsp; or <br />
+               <link property="rangeIncludes" href="http://schema.org/PropertyValue" /><a
+                  href="http://schema.org/PropertyValue">PropertyValue</a>&nbsp; or <br />
                <link property="rangeIncludes" href="http://schema.org/SoftwareApplication" /><a
                   href="http://schema.org/SoftwareApplication">SoftwareApplication</a>&nbsp; or <br />
                <link property="rangeIncludes" href="http://schema.org/SoftwareSourceCode" /><a
@@ -122,6 +133,8 @@ version: '0.4-DRAFT'
             <td class="prop-ect">
                <link property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a
                   href="http://pending.schema.org/DefinedTerm">DefinedTerm</a>&nbsp; or<br />
+                  <link property="rangeIncludes" href="http://schema.org/PropertyValue" /><a
+                  href="http://pending.schema.org/PropertyValue">PropertyValue</a>&nbsp; or<br />
                <link property="rangeIncludes" href="http://schema.org/Text" /><a
                   href="http://schema.org/Text">Text</a>&nbsp; or <br />
                <link property="rangeIncludes" href="http://schema.org/URL" /><a
@@ -214,6 +227,8 @@ version: '0.4-DRAFT'
                   href="/BioChemEntity">BioChemEntity</a>&nbsp; or <br />
                <link property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a
                   href="http://schema.org/DefinedTerm">DefinedTerm</a>&nbsp; or <br />
+               <link property="rangeIncludes" href="http://schema.org/PropertyValue" /><a
+                  href="http://schema.org/PropertyValue">PropertyValue</a>&nbsp; or <br />
                <link property="rangeIncludes" href="http://schema.org/Text" /><a
                   href="http://schema.org/Text">Text</a>&nbsp; or <br />
                <link property="rangeIncludes" href="http://schema.org/URL" /><a
@@ -233,6 +248,10 @@ version: '0.4-DRAFT'
                   property="rdfs:label"><a title="Defined in extension: bioschemas.org"  class="ext ext-bio"  href="#sample">sample</a></code>
             </th>
             <td class="prop-ect">
+               <link property="rangeIncludes" href="http://schema.org/DefinedTerm" /><a
+                  href="http://schema.org/DefinedTerm">DefinedTerm</a>&nbsp; or <br />
+               <link property="rangeIncludes" href="http://schema.org/PropertyValue" /><a
+                  href="http://schema.org/PropertyValue">PropertyValue</a>&nbsp; or <br />
                <link property="rangeIncludes" href="http://schema.org/Text" /><a
                   href="http://schema.org/Thing">Thing</a>&nbsp;
                <link property="domainIncludes" href="http://bioschemas.org/types/LabProtocol">
