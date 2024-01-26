@@ -1,0 +1,266 @@
+---
+redirect_from:
+- "devTypes/LabProcess/specification"
+- "devTypes/LabProcess/specification/"
+- "/devTypes/LabProcess/"
+- "/LabProcess"
+- "/types/LabProcess"
+previous_version: 
+previous_release:
+dateModified: 2024-01-26
+description: 'A LabProcess represents the specific application of a LabProtocol to some input (biological material or data) to produce some output (biological material or data).<br/>This draft was prepared by Florian Wetzels and Lukas Weil, its specification is still up for discussion.'
+hierarchy:
+- Thing
+- Action
+gh_tasks: https://github.com/Bioschemas/bioschemas/labels/type%3A%20LabProcess
+group: labprotocols
+name: LabProcess
+parent_type: Action
+spec_type: Type
+status: revision
+version: '0.1-DRAFT'
+---
+{% include type-start.html %}
+<div class="table-responsive shadow rounded mt-4 mb-5">
+   <table class="table table-hover table-borderless mb-0 definition-table bsc_type">
+      <thead>
+         <tr>
+            <th>Property</th>
+            <th>Expected Type</th>
+            <th>Description</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr class="supertype">
+            <th class="supertype-name" colspan="3">
+               New properties for <a style="color: #0B794B;" href="/{{page.name}}">{{page.name}}</a> ( not yet
+               integrated in schema.org).
+            </th>
+         </tr>
+         <tr typeof="rdfs:Property" resource="http://bioschemas.org/properties/parameterValue">
+            <th class="prop-nam" scope="row">
+               <code
+                  property="rdfs:label"><a title="Defined in extension: bioschemas.org"  class="ext ext-bio"  href="#parameterValue">parameterValue</a></code>
+            </th>
+            <td class="prop-ect">
+               <link property="rangeIncludes" href="http://schema.org/PropertyValue" />
+                  <a href="http://schema.org/PropertyValue">PropertyValue</a>&nbsp;                
+               <link property="domainIncludes" href="http://bioschemas.org/types/LabProcess">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">A parameter value of the experimental process, usually a key-value pair using ontology terms.</td>
+         </tr>
+         <tr typeof="rdfs:Property" resource="http://bioschemas.org/properties/executesLabProtocol">
+            <th class="prop-nam" scope="row">
+               <code
+                  property="rdfs:label"><a title="Defined in extension: bioschemas.org"  class="ext ext-bio"  href="#executesLabProtocol">executesLabProtocol</a></code>
+            </th>
+            <td class="prop-ect">
+               <link property="rangeIncludes" href="http://bioschemas.org/types/LabProtocol" />
+                  <a href="http://bioschemas.org/types/LabProtocol">LabProtocol</a>&nbsp;                
+               <link property="domainIncludes" href="http://bioschemas.org/types/LabProcess">
+            </td>
+            <td class="prop-desc" property="rdfs:comment">The lab protocol describes the experimental workflow and its parameters, which is instantiated by this process.</td>
+         </tr>
+         <!--From here copied from schema.org/Action-->
+         <tr class="supertype"><th class="supertype-name" colspan="3">Properties from 
+            <a href="/Action" class="core" title="Action">Action</a></th></tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/actionStatus" class="core" title="actionStatus">actionStatus</a></code></th>
+                    <td class="prop-ect">
+            <a href="/ActionStatusType" class="core" title="ActionStatusType">ActionStatusType</a></td>
+                    <td class="prop-desc">Indicates the current disposition of the Action.
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/agent" class="core" title="agent">agent</a></code></th>
+                    <td class="prop-ect">
+            <a href="/Organization" class="core" title="Organization">Organization</a>&nbsp; or <br>
+            <a href="/Person" class="core" title="Person">Person</a></td>
+                    <td class="prop-desc">The direct performer or driver of the action (animate or inanimate). E.g. <em>John</em> wrote a book.
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/endTime" class="core" title="endTime">endTime</a></code></th>
+                    <td class="prop-ect">
+            <a href="/DateTime" class="core" title="DateTime">DateTime</a>&nbsp; or <br>
+            <a href="/Time" class="core" title="Time">Time</a></td>
+                    <td class="prop-desc">The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to <em>December</em>. For media, including audio and video, it's the time offset of the end of a clip within a larger file.<br><br>
+        Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/error" class="core" title="error">error</a></code></th>
+                    <td class="prop-ect">
+            <a href="/Thing" class="core" title="Thing">Thing</a></td>
+                    <td class="prop-desc">For failed actions, more information on the cause of the failure.
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/instrument" class="core" title="instrument">instrument</a></code></th>
+                    <td class="prop-ect">
+            <a href="/Thing" class="core" title="Thing">Thing</a></td>
+                    <td class="prop-desc">The object that helped the agent perform the action. E.g. John wrote a book with <em>a pen</em>.
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/location" class="core" title="location">location</a></code></th>
+                    <td class="prop-ect">
+            <a href="/Place" class="core" title="Place">Place</a>&nbsp; or <br>
+            <a href="/PostalAddress" class="core" title="PostalAddress">PostalAddress</a>&nbsp; or <br>
+            <a href="/Text" class="core" title="Text">Text</a>&nbsp; or <br>
+            <a href="/VirtualLocation" class="ext ext-pending" title="VirtualLocation">VirtualLocation</a></td>
+                    <td class="prop-desc">The location of, for example, where an event is happening, where an organization is located, or where an action takes place.
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/object" class="core" title="object">object</a></code></th>
+                    <td class="prop-ect">
+            <a href="/Thing" class="core" title="Thing">Thing</a></td>
+                    <td class="prop-desc">The object upon which the action is carried out, whose state is kept intact or changed. Also known as the semantic roles patient, affected or undergoer (which change their state) or theme (which doesn't). E.g. John read <em>a book</em>.
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/participant" class="core" title="participant">participant</a></code></th>
+                    <td class="prop-ect">
+            <a href="/Organization" class="core" title="Organization">Organization</a>&nbsp; or <br>
+            <a href="/Person" class="core" title="Person">Person</a></td>
+                    <td class="prop-desc">Other co-agents that participated in the action indirectly. E.g. John wrote a book with <em>Steve</em>.
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/provider" class="ext ext-pending" title="provider">provider</a></code></th>
+                    <td class="prop-ect">
+            <a href="/Organization" class="core" title="Organization">Organization</a>&nbsp; or <br>
+            <a href="/Person" class="core" title="Person">Person</a></td>
+                    <td class="prop-desc">The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
+                         Supersedes 
+            <a href="/carrier" class="core" title="carrier">carrier</a>.
+                                                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/result" class="core" title="result">result</a></code></th>
+                    <td class="prop-ect">
+            <a href="/Thing" class="core" title="Thing">Thing</a></td>
+                    <td class="prop-desc">The result produced in the action. E.g. John wrote <em>a book</em>.
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/startTime" class="core" title="startTime">startTime</a></code></th>
+                    <td class="prop-ect">
+            <a href="/DateTime" class="core" title="DateTime">DateTime</a>&nbsp; or <br>
+            <a href="/Time" class="core" title="Time">Time</a></td>
+                    <td class="prop-desc">The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. E.g. John wrote a book from <em>January</em> to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.<br><br>
+        Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/target" class="core" title="target">target</a></code></th>
+                    <td class="prop-ect">
+            <a href="/EntryPoint" class="core" title="EntryPoint">EntryPoint</a>&nbsp; or <br>
+            <a href="/URL" class="core" title="URL">URL</a></td>
+                    <td class="prop-desc">Indicates a target EntryPoint, or url, for an Action.
+                    </td>
+                </tr>
+                      <!-- Properties for Term: Thing-->
+                    <tr class="supertype"><th class="supertype-name" colspan="3">Properties from 
+             <a href="/Thing" class="core" title="Thing">Thing</a></th></tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/additionalType" class="core" title="additionalType">additionalType</a></code></th>
+                    <td class="prop-ect">
+            <a href="/Text" class="core" title="Text">Text</a>&nbsp; or <br>
+            <a href="/URL" class="core" title="URL">URL</a></td>
+                    <td class="prop-desc">An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
+            use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/alternateName" class="core" title="alternateName">alternateName</a></code></th>
+                    <td class="prop-ect">
+            <a href="/Text" class="core" title="Text">Text</a></td>
+                    <td class="prop-desc">An alias for the item.
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/description" class="core" title="description">description</a></code></th>
+                    <td class="prop-ect">
+            <a href="/Text" class="core" title="Text">Text</a>&nbsp; or <br>
+            <a href="/TextObject" class="core" title="TextObject">TextObject</a></td>
+                    <td class="prop-desc">A description of the item.
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/disambiguatingDescription" class="core" title="disambiguatingDescription">disambiguatingDescription</a></code></th>
+                    <td class="prop-ect">
+            <a href="/Text" class="core" title="Text">Text</a></td>
+                    <td class="prop-desc">A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/identifier" class="core" title="identifier">identifier</a></code></th>
+                    <td class="prop-ect">
+            <a href="/PropertyValue" class="core" title="PropertyValue">PropertyValue</a>&nbsp; or <br>
+            <a href="/Text" class="core" title="Text">Text</a>&nbsp; or <br>
+            <a href="/URL" class="core" title="URL">URL</a></td>
+                    <td class="prop-desc">The identifier property represents any kind of identifier for any kind of <a class="localLink" href="/Thing">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href="/docs/datamodel.html#identifierBg">background notes</a> for more details.
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/image" class="core" title="image">image</a></code></th>
+                    <td class="prop-ect">
+            <a href="/ImageObject" class="core" title="ImageObject">ImageObject</a>&nbsp; or <br>
+            <a href="/URL" class="core" title="URL">URL</a></td>
+                    <td class="prop-desc">An image of the item. This can be a <a class="localLink" href="/URL">URL</a> or a fully described <a class="localLink" href="/ImageObject">ImageObject</a>.
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/mainEntityOfPage" class="core" title="mainEntityOfPage">mainEntityOfPage</a></code></th>
+                    <td class="prop-ect">
+            <a href="/CreativeWork" class="core" title="CreativeWork">CreativeWork</a>&nbsp; or <br>
+            <a href="/URL" class="core" title="URL">URL</a></td>
+                    <td class="prop-desc">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See <a href="/docs/datamodel.html#mainEntityBackground">background notes</a> for details.
+                                                        <br>Inverse property: 
+             <a href="/mainEntity" class="core" title="mainEntity">mainEntity</a>
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/name" class="core" title="name">name</a></code></th>
+                    <td class="prop-ect">
+            <a href="/Text" class="core" title="Text">Text</a></td>
+                    <td class="prop-desc">The name of the item.
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/potentialAction" class="core" title="potentialAction">potentialAction</a></code></th>
+                    <td class="prop-ect">
+            <a href="/Action" class="core" title="Action">Action</a></td>
+                    <td class="prop-desc">Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/sameAs" class="core" title="sameAs">sameAs</a></code></th>
+                    <td class="prop-ect">
+            <a href="/URL" class="core" title="URL">URL</a></td>
+                    <td class="prop-desc">URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/subjectOf" class="core" title="subjectOf">subjectOf</a></code></th>
+                    <td class="prop-ect">
+            <a href="/CreativeWork" class="core" title="CreativeWork">CreativeWork</a>&nbsp; or <br>
+            <a href="/Event" class="core" title="Event">Event</a></td>
+                    <td class="prop-desc">A CreativeWork or Event about this Thing.
+                                                        <br>Inverse property: 
+             <a href="/about" class="core" title="about">about</a>
+                    </td>
+                </tr>
+                <tr><th class="prop-nam"><code>
+             <a href="/url" class="core" title="url">url</a></code></th>
+                    <td class="prop-ect">
+            <a href="/URL" class="core" title="URL">URL</a></td>
+                    <td class="prop-desc">URL of the item.
+                    </td>
+                </tr>
+             </tbody>
+      </tbody>
+   </table>
+</div>
