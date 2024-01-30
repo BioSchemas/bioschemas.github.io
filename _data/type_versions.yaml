@@ -61,6 +61,12 @@ Gene:
     latest_release: "0.3-RELEASE-2019_09_02"
     status: "active"
 
+LabProcess:
+    name: "LabProcess"
+    latest_publication: "0.1-DRAFT"
+    latest_release:
+    status: "active"
+
 LabProtocol:
     name: "LabProtocol"
     latest_publication: "0.5-DRAFT"
