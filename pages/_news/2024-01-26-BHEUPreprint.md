@@ -10,7 +10,7 @@ tags:
 - BioHackrXiv
 ---
 
-We are pleased to announce the first [BioHackrXiv](https://biohackrxiv.org) preprint of 2024. It reports on the work done during the past [BioHackathon Europe 2023](https://biohackathon-europe.org/) byt he group  [Enabling FAIR Digital Objects with RO-Crates, Signposting and Bioschemas](https://github.com/elixir-europe/biohackathon-projects-2023/tree/main/15).
+We are pleased to announce the first [BioHackrXiv](https://biohackrxiv.org) preprint of 2024. It reports on the work done during the past [BioHackathon Europe 2023](https://biohackathon-europe.org/) by the group [Enabling FAIR Digital Objects with RO-Crates, Signposting and Bioschemas](https://github.com/elixir-europe/biohackathon-projects-2023/tree/main/15).
 
 Citation and link:
 
