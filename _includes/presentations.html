@@ -1,6 +1,6 @@
 {% assign presentations = site.data.presentations %}
 {% for presentation in site.data.presentations reversed %}
-    <li>
+    <ul> [{{presentation.EventYear}}]
     {% if presentation.EventBSLink %}
         {% assign event-id = "/meetings/" | append: {{presentation.EventBSLink}} %}
         {% assign event = site.meetings | where:"id", event-id | first %}
@@ -23,7 +23,7 @@
         {{presentation.first[1]}}
         (<a href="{{presentation.Slides}}">More info</a>)
     </li></ul>
-</li>
+</ul>
 {% endfor %}
 
 {{presentation.first | remove_first: "Title"}} 
