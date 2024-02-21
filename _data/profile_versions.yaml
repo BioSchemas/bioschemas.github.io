@@ -81,7 +81,7 @@ Journal:
   name: Journal
   status: active
 LabProtocol:
-  latest_publication: 0.7-DRAFT
+  latest_publication: 0.8-DRAFT
   latest_release: null
   name: LabProtocol
   status: active
