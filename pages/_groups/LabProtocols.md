@@ -42,7 +42,7 @@ specifications:
 
 types:
   [
-    'LabProtocol'
+    'LabProcess', 'LabProtocol'
   ]
 
 members:
