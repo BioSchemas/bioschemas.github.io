@@ -20,8 +20,8 @@ abstract: 'Samples of biological origin are becoming a focus of many studies bey
 objectives:
   [
     'Facilitate the findability of biosamples through targeted  metadata definition and adoption through Bioschemas.',
-    'Engage data providers and developers to develop community targeted Bioschemas profiles over a 'general' BioSample type',
-    'Make BioSample resources compliant with Bioschemas, and ultimately inter-relatable, possibly throough Knowledge Graphs.'
+    'Engage data providers and developers to develop community targeted Bioschemas profiles over a "general" BioSample type',
+    'Make BioSample resources compliant with Bioschemas, and ultimately inter-relatable, possibly through Knowledge Graphs.'
   ]
 
 specifications:
