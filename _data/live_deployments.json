@@ -1123,8 +1123,8 @@
       ]
     },
     {
-      "name": "NanoCommons",
-      "description": "Open License datasets by the NanoSafety Cluster. Ontology IRIs for the JRC representative industrial nanomaterials.",
+      "name": "NanoCommons' Ontology IRIs for the JRC representative industrial nanomaterials.",
+      "description": "Overview of JRC representative industrial nanomaterials, their ontology terms, Wikidata links, and literature describing experiments involving these materials.",
       "url": "https://www.nanocommons.eu/",
       "nodes": "NL",
       "sitemap": "https://nanocommons.github.io/sitemap.xml",
@@ -1133,7 +1133,30 @@
           "profileName": "ChemicalSubstance",
           "conformsTo": "0.4",
           "exampleURL": "https://nanocommons.github.io/specifications/jrc/"
-        },
+        }
+      ]
+    },
+    {
+      "name": "NanoCommons' ERM Identifier Database",
+      "description": "Database of nanomaterials with European Registry of Materials (ERM) identifier found on the internet.",
+      "url": "https://www.nanocommons.eu/",
+      "nodes": "NL",
+      "sitemap": "https://nanocommons.github.io/erm-database/sitemap.xml",
+      "profiles": [
+        {
+          "profileName": "ChemicalSubstance",
+          "conformsTo": "0.4",
+          "exampleURL": "https://nanocommons.github.io/erm-database/",
+          "highlight": "Database indexing research output about nanomaterials with around 50 ERM identifiers."
+        }
+      ]
+    },
+    {
+      "name": "NanoCommons' Overview of open datasets",
+      "description": "NanoCommons keeps an index of open-licensed data sets produced by EU NanoSafety Cluster projects.",
+      "url": "https://nanocommons.github.io/datasets/",
+      "nodes": "NL",
+      "profiles": [
         {
           "profileName": "DataCatalog",
           "conformsTo": "0.3",
@@ -1142,9 +1165,18 @@
         {
           "profileName": "Dataset",
           "conformsTo": "1.0-RELEASE",
-          "exampleURL": "https://nanocommons.github.io/datasets/",
+          "exampleURL": "https://doi.org/10.5281/zenodo.8321185",
           "highlight": "More than 50 datasets around the topic of nanosafety that are both FAIR and Open"
-        },
+        }
+      ]
+    },
+    {
+      "name": "NanoCommons' Training Material",
+      "description": "NanoCommons addresses the gap between needs and available safety data for nanomaterials by creating a community framework and infrastructure for reproducible science, and in particular for in silico workflows for nanomaterials safety assessment and beyond.",
+      "url": "https://nanocommons.github.io/tutorials/",
+      "nodes": "NL",
+      "sitemap": "https://nanocommons.github.io/tutorials/sitemap.xml",
+      "profiles": [
         {
           "profileName": "TrainingMaterial",
           "conformsTo": "0.9-DRAFT",
