@@ -1,6 +1,7 @@
-{% assign presentations = site.data.presentations %}
-{% for presentation in site.data.presentations reversed %}
-    <li>
+{% assign presentations_by_year = site.data.presentations | sort: "EventYear" %}
+<ul>
+{% for presentation in presentations_by_year reversed %}
+    <li> [{{presentation.EventYear}}]
     {% if presentation.EventBSLink %}
         {% assign event-id = "/meetings/" | append: {{presentation.EventBSLink}} %}
         {% assign event = site.meetings | where:"id", event-id | first %}
@@ -13,13 +14,18 @@
         {% endif %}
     {% endif %}
     <ul><li>
-        {% assign author-id = "/people/" | append: presentation.Presenter %}
-        {% assign author = site.people | where:"id", author-id | first %}
-        <a href="{{author-id}}">{{author.first-name}} {{author.last-name}}</a>. 
+        {% if presentation.Presenter contains ' ' %}
+            {{presentation.Presenter}}.
+        {% else %}
+            {% assign author-id = "/people/" | append: presentation.Presenter %}
+            {% assign author = site.people | where:"id", author-id | first %}
+            <a href="{{author-id}}">{{author.first-name}} {{author.last-name}}</a>.            
+        {% endif %} 
         {{presentation.first[1]}}
-        (<a href="{{presentation.Slides}}">Slides</a>)
+        (<a href="{{presentation.Slides}}">More info</a>)
     </li></ul>
 </li>
 {% endfor %}
+</ul>
 
 {{presentation.first | remove_first: "Title"}} 
