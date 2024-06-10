@@ -8,8 +8,22 @@ title: People
 <ul>
     {%- assign sorted_people = site.people | sort: 'last-name' %}
     {%- for person in sorted_people %}
+    {%- if person.first-name and person.former != true %}
+    <li><a href="{{ person.url | relative_url  }}">{{ person.first-name }} {{ person.last-name }}</a></li>
+    {%- endif %}
+    {%- endfor %}
+</ul>
+</div>
+
+<h1>Former members</h1>
+<div id="formerTable">
+<ul>
+    {%- assign sorted_people = site.people | sort: 'last-name' %}
+    {%- for person in sorted_people %}
+    {%- if person.former %}
     {%- if person.first-name %}
     <li><a href="{{ person.url | relative_url  }}">{{ person.first-name }} {{ person.last-name }}</a></li>
+    {%- endif %}
     {%- endif %}
     {%- endfor %}
 </ul>
