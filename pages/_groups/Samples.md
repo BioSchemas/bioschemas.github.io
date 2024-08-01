@@ -34,8 +34,22 @@ types:
   [  
     'BioSample', 'Sample'
   ]
-
 members:
+    - NickJuty
+    - GingerTsueng
+    - LeylaGarcia
+    - AlbanGaignard
+    - SaraElGebali
+    - HelenaSchnitzer
+    - JoanaPauperio
+    - RitaMonterio
+    - JustinVanDerHooft
+    - FeliciaWolters
+    - MarcoBradzini
+    - GabrielSchneider
+    - TonyBurdett
+
+Former members:
     - PhilippeRocca-Serra
     - CarlosHorro
     - SimonJupp
