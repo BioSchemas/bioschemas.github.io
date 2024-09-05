@@ -7,9 +7,9 @@ active: true
 type: biological
 description: Specification for sample profile
 lead: 
-- person: HelenParkinson
-- person: TonyBurdett
-- person: MelanieCourtot
+- person: NickJuty
+- person: GingerTsueng
+- person: SaraElGebali
 email: enquiries@bioschemas.org
 issues: https://github.com/Bioschemas/bioschemas/labels/type%3A%20Sample
 folder: https://drive.google.com/drive/folders/0Bw_p-HKWUjHoaWhkTnBka2FWRE0
@@ -34,8 +34,24 @@ types:
   [  
     'BioSample', 'Sample'
   ]
-
 members:
+    - NickJuty
+    - GingerTsueng
+    - LeylaGarcia
+    - AlbanGaignard
+    - SaraElGebali
+    - HelenaSchnitzer
+    - JoanaPauperio
+    - RitaMonterio
+    - JustinVanDerHooft
+    - FeliciaWolters
+    - MarcoBradzini
+    - GabrielSchneider
+    - TonyBurdett
+
+Former members:
+    - HelenParkinson
+    - MelanieCourtot
     - PhilippeRocca-Serra
     - CarlosHorro
     - SimonJupp
