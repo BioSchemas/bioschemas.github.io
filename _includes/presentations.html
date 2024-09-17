@@ -1,25 +1,37 @@
-{% assign presentations = site.data.presentations %}
-{% for presentation in site.data.presentations reversed %}
-    <li>
-    {% if presentation.EventBSLink %}
-        {% assign event-id = "/meetings/" | append: {{presentation.EventBSLink}} %}
-        {% assign event = site.meetings | where:"id", event-id | first %}
-        <a href="{{event-id}}">{{event.name}}</a>, {{event.dates}}
-    {% else %}
-        {% if presentation.EventURL %}
-            <a href="{{presentation.EventURL}}">{{presentation.EventName}}</a>
+{% assign presentations_by_year = site.data.presentations | sort: "EventYear" %}
+<ul>
+    {% for presentation in presentations_by_year reversed %}
+    <li> [{{presentation.EventYear}}]
+        
+        {% if presentation.EventBSLink %}
+            <!-- Bioschemas URL for the event -->
+            {% assign event-id = "/meetings/" | append: {{presentation.EventBSLink}} %}
+            {% assign event = site.meetings | where:"id", event-id | first %}
+            <a href="{{event-id}}">{{event.name}}</a>, {{event.dates}}
         {% else %}
-            {{presentation.EventName}}, {{presentation.EventDate}}
+            <!-- URL for the event -->
+            {% if presentation.EventURL %}
+                <a href="{{presentation.EventURL}}">{{presentation.EventName}}</a>
+            {% else %}
+                {{presentation.EventName}}, {{presentation.EventDate}}
+            {% endif %}
         {% endif %}
-    {% endif %}
-    <ul><li>
-        {% assign author-id = "/people/" | append: presentation.Presenter %}
-        {% assign author = site.people | where:"id", author-id | first %}
-        <a href="{{author-id}}">{{author.first-name}} {{author.last-name}}</a>. 
+        <!-- <ul><li> -->
+        <!-- if multiple authors -->
+        {% if presentation.Presenter contains ' ' %}
+            {{presentation.Presenter}}.
+        {% else %}
+            {% assign author-id = "/people/" | append: presentation.Presenter %}    
+            {% assign author = site.people | where:"id", author-id | first %}
+            <a href="{{author-id}}">{{author.first-name}} {{author.last-name}}</a>.
+        {% endif %}
         {{presentation.first[1]}}
-        (<a href="{{presentation.Slides}}">Slides</a>)
-    </li></ul>
-</li>
-{% endfor %}
+        {% if presentation.Slides %}
+            (<a href="{{presentation.Slides}}">Slides or paper</a>)
+        {% endif %}
+        <!-- </li></ul> -->
+    </li>
+    {% endfor %}
+</ul>
 
-{{presentation.first | remove_first: "Title"}} 
+{{presentation.first | remove_first: "Title"}}
