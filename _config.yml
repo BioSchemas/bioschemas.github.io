@@ -5,8 +5,10 @@ description: > # this means to ignore newlines until "baseurl:"
   Bioschemas relies and extends from schema.org and aims to reuse existing
   standards and reach consensus among a wide number of life sciences organizations and communities.
 url: "http://bioschemas.org" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/
 twitter_username: Bioschemas
 github_username: Bioschemas
+google_analytics: G-G3BQK7PF1V
 
 # Build settings
 markdown: kramdown
