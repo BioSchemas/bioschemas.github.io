@@ -8,7 +8,7 @@ layout: default
 title: Bioschemas
 # Technical Call details
 call-minutes: https://docs.google.com/document/d/1kd5F97ogdiPNhLTnkei-RVR8TC8Ohpc5QSPX3KsfDrk
-call-date: 2024-10-21T15:00UTC
+call-date: 2024-11-18T16:00UTC
 ---
 <div id="landing" itemscope itemtype="http://schema.org/Organization">
    <meta itemprop="logo" content="http://bioschemas.org/assets/img/square_logo2.png"/>
@@ -75,12 +75,14 @@ call-date: 2024-10-21T15:00UTC
                 <!-- Block for monthly community call -->
                 <div class="event shadow rounded p-3" itemscope itemtype="http://schema.org/Event">
                     <strong><span class="title" itemprop="name">Monthly Call</span></strong>
-                    <p>The Bioschemas Community/Technical Call takes place on the 3rd Monday of each month at 15:00 UTC (16:00 BST/17:00 CEST). We alternate between community and technical discussions. Call in details available in the <a href="{{ page.call-minutes }}">agenda</a>.</p>
+                    <p>The Bioschemas Community/Technical Call takes place on the 3rd Monday of each month at 16:00 UTC 
+                        (<a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Bioschemas&iso=20241118T16">see it in your own time zone</a>). 
+                        We alternate between community and technical discussions. Call in details available in the <a href="{{ page.call-minutes }}">agenda</a>.</p>
                     <ul class="mb-0">
                         <li><strong>Next call: {{ page.call-date | date: "%e %B, %Y %H:%M %Z" }}</strong>
                             <meta itemprop="startDate" content="{{ page.call-date}}"/>
                             <meta itemprop="endDate" content="{{ page.call-date }}"/></li>
-                        <li><a href="{{ page.call-minutes }}">Agenda</a> - Technical discussion</li>
+                        <li><a href="{{ page.call-minutes }}">Agenda</a> - Community call</li>
                     </ul>
                 </div>
                 <!-- End of block for monthly community call -->
