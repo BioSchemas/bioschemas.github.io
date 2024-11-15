@@ -1,0 +1,30 @@
+---
+layout: default
+title: Bioschemas Properties
+# redirect_from:
+# - "/devTypes/"
+# - "/types/drafts/"
+
+---
+<h1>Bioschemas Properties
+    <a target="_blank" href="mailto:enquiries@bioschemas.org?subject=[Bioschemas] request to create a new property"
+        class="btn btn-primary btn-sm float-end" role="button">
+        Propose a new property</a>
+</h1>
+
+<p><a href="https://schema.org/">Schema.org</a> provides a vocabulary of terms that can be used to describe data on the
+    Internet. The Bioschemas community is extending this vocabulary to be able to describe life sciences resources.</p>
+
+<p>Comments and discussions on the <a href="https://lists.w3.org/Archives/Public/public-bioschemas/"
+        itemprop="email">mailing list</a> or <a href="https://github.com/Bioschemas/specifications/issues">GitHub issue
+        tracker</a> are encouraged.</p>
+<br />
+
+<ul>
+    {% for prop in site.properties %}
+    {% if prop.prop_name %}
+    {%- assign propName = '/properties/' | append: prop.prop_name %}
+    <li><a href="{{ propName | relative_url }}">{{ prop.prop_name }}</a></li>
+    {% endif %}
+    {% endfor %}
+</ul>

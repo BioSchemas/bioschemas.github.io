@@ -64,7 +64,8 @@
         {%- for prop in props_list %}
         <tr>
             {%- if prop.type == "bioschemas" %}
-            <td class="property-column"><a href="{{prop.type_url }}" target="_blank" class="bioschema">{{prop.property}}</a></td>
+            {% capture url %}/properties/{{ prop.property }}{% endcapture %}
+            <td class="property-column"><a href={{ url | relative_url }} target="_blank" class="bioschema">{{prop.property}}</a></td>
             {%- elsif prop.type == "schemas.org" or prop.type == "" %}
             <td class="property-column"><a href="http://schema.org/{{prop.property}}" target="_blank" class="schemaorg">{{prop.property}}</a></td>
             {%- elsif prop.type == "pending" %}

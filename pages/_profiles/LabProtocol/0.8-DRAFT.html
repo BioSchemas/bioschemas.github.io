@@ -1,0 +1,450 @@
+---
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+cross_walk_url: https://docs.google.com/spreadsheets/d/1KfhBNetyt9xzI7cs3S6HwIWEsgWpPEKnGlqu19Q49vo/
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:LabProtocol
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20LabProtocol
+group: labprotocols
+hierarchy:
+- Thing
+- CreativeWork
+- HowTo
+- LabProtocol
+json-ld_url: LabProtocol/jsonld/LabProtocol_v0.8-DRAFT.json
+live_deploy: /liveDeploys
+mapping:
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'Purpose and intended use stated to enable users to make a decision
+    as to the suitability of this creative work (e.g., lab protocol, machine learning
+    model, software) to their experimental problem or own use case.
+
+
+    See more information <a href=''http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#PurposeOfProtocol''
+    target=''_blank''>here</a>'
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  marginality: Minimum
+  property: intendedUse
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: BioSample used in the protocol. It could be a record in a Dataset describing
+    the sample or a physical object corresponding to the sample or a URL pointing
+    to the type of sample used.
+  example: ''
+  expected_types:
+  - BioSample
+  - Biochementity
+  - Definedterm
+  - Taxon
+  - Text
+  - URL
+  marginality: Minimum
+  property: bioSample
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A laboratory equipment used by a person to follow one or more steps
+    described in this LabProtocol.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  marginality: Minimum
+  property: labEquipment
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: "Reagents used in the protocol. DefinedTerm is preferred whenever possible,\
+    \ e.g., ChEBI and PubChem entities can be used whenever available. Commercial\
+    \ names are also acceptable. A reagent is defined as \u2018A substance used in\
+    \ a chemical reaction to detect, measure, examine, or produce other substances\u2019\
+    \ in [CHEBI:33893](https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:33893)."
+  example: ''
+  expected_types:
+  - Biochementity
+  - Chemicalsubstance
+  - DefinedTerm
+  - MolecularEntity
+  - Text
+  - URL
+  marginality: Minimum
+  property: reagent
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  marginality: Minimum
+  property: keywords
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The name of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Computational tool or workflow used to complete a part of this protocol.
+  example: ''
+  expected_types:
+  - ComputationalWorkflow
+  - SoftwareSourceCode
+  - Softwareapplication
+  marginality: Recommended
+  property: computationalTool
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Situations where the LabProtocol has been successfully employed including
+    advantageous elements (e.g. better yield, shorter running time).
+
+
+    See more information <a href=''http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#AdvantageOfTheProtocol''
+    target=''_blank''>here</a>'
+  example: ''
+  expected_types:
+  - CreativeWork
+  - Text
+  marginality: Recommended
+  property: protocolAdvantage
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: "Applications of the protocol list the full diversity of the applications\
+    \ of the method and support if is possible to extend the range of applications\
+    \ of the protocol. e.g. northern blot assays, sequencing, etc. \n\nSee more information\
+    \ <a href='http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#ApplicationOfTheProtocol'\
+    \ target='_blank'>here</a>"
+  example: ''
+  expected_types:
+  - CreativeWork
+  - Text
+  marginality: Recommended
+  property: protocolApplication
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Situations where the Protocol would be unreliable or otherwise unsuccessful.
+
+
+    See more information <a href=''http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#LimitationOfTheProtocol''
+    target=''_blank''>here</a>'
+  example: ''
+  expected_types:
+  - CreativeWork
+  - Text
+  marginality: Recommended
+  property: protocolLimitation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Actual outcome or result by a protocol execution. The shape of the
+    expected outcome/result can be described using the property ''output''.
+
+
+    See more information <a href=''http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#OutcomeOfTheProtocol''
+    target=''_blank''>here</a>'
+  example: ''
+  expected_types:
+  - CreativeWork
+  - Text
+  marginality: Recommended
+  property: protocolOutcome
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A single step item (as HowToStep, text, document, video, etc.) or a
+    HowToSection.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - HowToStep
+  - Text
+  - howtosection
+  marginality: Recommended
+  property: step
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The total time required to perform instructions or a direction (including
+    time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+  example: ''
+  expected_types:
+  - Duration
+  marginality: Recommended
+  property: totalTime
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The author of this content or rating. Please note that author is special
+    in that HTML 5 provides a special mechanism for indicating authorship via the
+    rel tag. That is equivalent to this and may be used interchangeably.
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Recommended
+  property: author
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - Text
+  marginality: Recommended
+  property: citation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - URL
+  marginality: Recommended
+  property: license
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: "The identifier property represents any kind of identifier for any\
+    \ kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides\
+    \ dedicated properties for representing many of these, either as textual strings\
+    \ or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg)\
+    \ for more details.\n        "
+  example: ''
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Recommended
+  property: identifier
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Considerations wrt ethical, legal and social aspects.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: ethicalLegalSocial
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The length of time it takes to perform instructions or a direction
+    (not including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+  example: ''
+  expected_types:
+  - Duration
+  marginality: Optional
+  property: performTime
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The length of time it takes to prepare the items to be used in instructions
+    or a direction, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
+  example: ''
+  expected_types:
+  - Duration
+  marginality: Optional
+  property: prepTime
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The date on which the CreativeWork was created or the item was added
+    to a DataFeed.
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Optional
+  property: dateCreated
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The date on which the CreativeWork was most recently modified or when
+    the item's entry was modified within a DataFeed.
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Optional
+  property: dateModified
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Date of first broadcast/publication.
+
+
+    ''MANY'' is used to cover original printed and electronic publication dates.'
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Optional
+  property: datePublished
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A resource from which this work is derived or from which it is a modification
+    or adaption.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - URL
+  marginality: Optional
+  property: isBasedOn
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Indicates an item or CreativeWork that this item, or CreativeWork (in
+    some sense), is part of.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - URL
+  marginality: Optional
+  property: isPartOf
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A description of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: description
+  type: ''
+  type_url: ''
+name: LabProtocol
+parent_type: LabProtocol
+previous_release: ''
+previous_version: 0.7-DRAFT
+redirect_from:
+- "/devSpecs/LabProtocol/specification/"
+- "/devSpecs/LabProtocol/specification"
+- "/devSpecs/LabProtocol/"
+- "/devSpecs/LabProtocol"
+- "/specifications/drafts/LabProtocol/"
+- "/specifications/drafts/LabProtocol"
+- "/specifications/LabProtocol/"
+- "/specifications/LabProtocol"
+- "/profiles/LabProtocol/"
+- "/profiles/LabProtocol"
+spec_info:
+  description: 'Bioschemas profile describing a LabProtocol in Life Sciences. An experimental
+    LabProtocol is a sequence of tasks and operations executed to perform experimental
+    research in biological and biomedical areas. This LabProtocol profile specification
+    presents the markup for describing a LabProtocol type according to Bioschemas.
+    An experimental LabProtocol is a sequence of tasks and operations executed to
+    perform experimental research in biological and biomedical areas. Version 0.8-DRAFT.
+
+
+    <h3>Summary of changes</h3>
+
+    Changes since previous draft 0.7 of the LabProtocols profile:
+
+    <ul>
+
+    <li>Uses LabProtocol draft type 0.5</li>
+
+    <li>Uses name for the name/title of the protocol rather than headline</li>
+
+    <li>Uses intendedUse for the purpose of the protocol</li>
+
+    <li>Moves isPartOf to optional as it is rather generic</li>
+
+    <li>Uses computationalTool rather than sotwareUsed</li>
+
+    </ul>'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/LabProtocol/examples
+  official_type: LabProtocol
+  title: LabProtocol
+  version: 0.8-DRAFT
+  version_date: 20240123T18330
+spec_type: Profile
+status: revision
+use_cases_url: /useCases/LabProtocol
+---

@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Projects Accepted at BioHackathon-Europe 2023"

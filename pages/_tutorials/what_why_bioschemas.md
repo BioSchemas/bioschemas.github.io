@@ -49,7 +49,7 @@ Using schema.org markup on web pages enables the generation of 'info box' summar
 
 Imagine an insulin summary appearing within search results, but rather than pointing to Wikipedia, that summary would direct one to specialized resources such as Orphanet or CATH as seen in Figure 1. In this way you would get a quick overview while also being provided links to relevant resources, all in one search.
 
-{% include image.html file="/tutorials/images/ilustration_life_sciences_event.png" caption="Figure 1. Insulin summary on a search engine" alt="Insulin summary on a search engine" %}
+{% include image.html file="/tutorials/images/insulin.png" caption="Figure 1. Insulin summary on a search engine" alt="Insulin summary on a search engine" %}
 
 
 ## 2. What are the benefits of Bioschemas?
