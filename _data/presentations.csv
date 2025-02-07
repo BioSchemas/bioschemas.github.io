@@ -64,3 +64,7 @@ Poster,Leyla Castro,,,,Bio-Ontologies ISMB Community of Special Interest Worksho
 Presentation,Rafael C Jimenez,,,,Bioschemas for Datasets - ELIXIR All Hands Meeting,23 March 2017,2017
 Bioschemas: Finding and Citing life science data using Schema.org,"Carole Goble, Dan Brickley, Natasha Noy, Rafael Jimenez",,,,International Semantic Web Conference (ISWC 2016),October 2016,2016
 FAIR Software (and Data) Citation,Carole Goble,,,,NSF Workshop Data and Software Citation,6-7 June 2016,2016
+Exploiting Bioschemas Markup to Populate Idpcentral,"Gray, Alasdair J. G., Petros Papadopoulos, Ivan Mičetić, and András Hatos",https://doi.org/10.37044/osf.io/v3jct,,https://biohackrxiv.org/,BioHackrXiv,22 June 2021,2021
+Bioschemas Data Harvesting Project Report,"Gray, Alasdair J. G., Petros Papadopoulos, Alban Gaignard, Thomas Rosnet, Ivan Mičetić, and Sébastien Moretti",https://doi.org/10.37044/osf.io/y6gbq,,,,2022-03-25,2022
+An ETL Pipeline to Construct the Intrinsically Disordered Proteins Knowledge Graph (IDP-KG) Using Bioschemas JSON-LD Data Dumps,"Ammar, Ammar, Ivan Mičetić, and Alasdair J. G. Gray",https://doi.org/10.37044/osf.io/7f95d,,https://biohackrxiv.org/,BioHackrXiv,2022-11-25,2022
+BioHackEU24 report: Bioschemas for Mortals,"Phil Reed, Helena Schnitzel, and Nick Juty",https://doi.org/10.37044/osf.io/dch6w,,https://biohackrxiv.org/,BioHackrXiv,2025-01-24,2025
