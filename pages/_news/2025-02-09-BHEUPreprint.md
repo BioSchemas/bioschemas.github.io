@@ -14,6 +14,6 @@ The goal of this project is to reimagine, reframe and supplement the existing Bi
 
 Citation and link:
 
-Reed P, Schnitzel H, and Juty N. BioHackEU24 report: Bioschemas for Mortals. OSF; 2025. doi:10.37044/osf.io/dch6w. Available: [https://osf.io/dch6w_v2/](https://osf.io/dch6w_v2/)
+Reed P, Schnitzel H, and Juty N. BioHackEU24 report: Bioschemas for Mortals. BioHackrXiv; 2025. doi:10.37044/osf.io/dch6w. Available: [https://osf.io/dch6w_v2/](https://osf.io/dch6w_v2/)
 
 
