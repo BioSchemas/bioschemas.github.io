@@ -1,5 +1,5 @@
 ---
-title: Bioschemas, what and why?
+title: Introduction to Bioschemas, what and why?
 previousTutorial:
   link: ./markup_examples
   title: Schema.org markup examples
@@ -19,7 +19,7 @@ bioschemas:
   audience:
   - "@type": Audience
     name: (General interest) People interested in introductory information to Bioschemas
-  name: "Bioschemas, what and why?"
+  name: "Introduction to Bioschemas, what and why?"
   author:
   - "@type": Person
     name: "Leyla Garcia"
@@ -61,6 +61,7 @@ Bioschemas inherits the benefits from schema.org, i.e., enabling machines to und
 <div class="col d-flex align-items-start rounded p-4 mb-4 mt-3 shadow">
   <img class="align-self-center me-3" src="{{ '/tutorials/images/exclamation_mark.png' | relative_url }}" alt="warning">
   <div>
+    <h3 id="types-profiles">What is the difference between a profile and a type?</h3>
     Schema.org provides only 'types', while Bioschemas provides 'types' and 'profiles'. A profile is a customisation of type, including important guidelines on how to use it within the Life Sciences domain. A profile can be used to define the semantics of a particular property, the valid value(s) and ranges that may be attributed to that property, and the cardinality with which that property may appear. <br/>Disclaimer: Initially, Bioschemas types were developed with the aim to eventually mature those types and have them integrated for direct use in schema.org. While this remains desirable, it is not essential; community tools and resources are being developed to directly harvest this markup, and there are activities in progress to migrate Bioschemas markup from individual resources to the EOSC (European Open Science Cloud).
   </div>
 </div>
