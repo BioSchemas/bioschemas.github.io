@@ -58,12 +58,31 @@ bioschemas:
           "@type": Person
           sameAs: http://orcid.org/0000-0002-5711-4872
 
+    - "@type": SoftwareApplication
+      "@id": "https://discovery.biothings.io/markup-generator"
+      "http://purl.org/dc/terms/conformsTo": https://bioschemas.org/profiles/ComputationalTool/1.0-RELEASE
+      description: |
+        The Data Discovery Engine provides guidance for researchers on how to make their data discoverable and reusable, and bring the practical benefits of data sharing to researcher’s own research projects, as well as the research community as a whole. It was developed and is maintained by Dr. Chunlei Wu’s lab at the Scripps Research Institute and is supported by funding from the National Center for Data to Health (CD2H). The Schema Playground provides a set of tools for expressing Schema.org and Schema.org-derived specifications in JSON-schema/JSON-LD compatible formatting for registration in the DDE Schema Registry. The metadata validator allows users to validate JSON-LD/JSON Schema-formatted metadata against a registered schema. The Markup Generator converts registered schemas into a fillable form for generating markup in JSON-LD/JSON-schema format.
+      name: "Data Discovery Engine (DDE) Schema Playground"
+      url: "https://discovery.biothings.io/markup-generator"
+      applicationCategory: validator
+      applicationSubCategory: 
+        - "@id": http://edamontology.org/topic_0089
+      featureList: 
+        - "@id": http://edamontology.org/operation_3429
+      author: 
+        - "@id": https://bioschemas.org/people/ChunleiWu
+          "@type": Person
+          sameAs: http://orcid.org/0000-0002-2629-6124
+        - "@id": https://bioschemas.org/people/GingerTsueng
+          "@type": Person
+          sameAs: http://orcid.org/0000-0001-9536-9115
 
     - "@type": SoftwareApplication
       "@id": "https://discovery.biothings.io/schema-playground"
       "http://purl.org/dc/terms/conformsTo": https://bioschemas.org/profiles/ComputationalTool/1.0-RELEASE
       description: |
-        The Data Discovery Engine provides guidance for researchers on how to make their data discoverable and reusable, and bring the practical benefits of data sharing to researcher’s own research projects, as well as the research community as a whole. It was developed and is maintained by Dr. Chunlei Wu’s lab at the Scripps Research Institute and is supported by funding from the National Center for Data to Health (CD2H). The Schema Playground provides a set of tools for expressing Schema.org and Schema.org-derived specifications in JSON-schema/JSON-LD compatible formatting for registration in the DDE Schema Registry. 
+        The Data Discovery Engine provides guidance for researchers on how to make their data discoverable and reusable, and bring the practical benefits of data sharing to researcher’s own research projects, as well as the research community as a whole. It was developed and is maintained by Dr. Chunlei Wu’s lab at the Scripps Research Institute and is supported by funding from the National Center for Data to Health (CD2H). The Schema Playground provides a set of tools for expressing Schema.org and Schema.org-derived specifications in JSON-schema/JSON-LD compatible formatting for registration in the DDE Schema Registry. The metadata validator allows users to validate JSON-LD/JSON Schema-formatted metadata against a registered schema. The Markup Generator converts registered schemas into a fillable form for generating markup in JSON-LD/JSON-schema format.
       name: "Data Discovery Engine (DDE) Schema Playground"
       url: "https://discovery.biothings.io/schema-playground"
       applicationCategory: generator
@@ -83,7 +102,7 @@ bioschemas:
       "@id": "https://discovery.biothings.io/registry"
       "http://purl.org/dc/terms/conformsTo": https://bioschemas.org/profiles/ComputationalTool/1.0-RELEASE
       description: |
-        The Data Discovery Engine provides guidance for researchers on how to make their data discoverable and reusable, and bring the practical benefits of data sharing to researcher’s own research projects, as well as the research community as a whole. It was developed and is maintained by Dr. Chunlei Wu’s lab at the Scripps Research Institute and is supported by funding from the National Center for Data to Health (CD2H). The Schema Registry allows users to browse and compare specifications from Schema.org, Google, BioLink, NIAID, and more. The Schema Viewer allows users to visualize specifications in JSON-LD/JSON-Schema format by entering the url or GitHub link to the jsonld file of the specification. 
+        The Data Discovery Engine provides guidance for researchers on how to make their data discoverable and reusable, and bring the practical benefits of data sharing to researcher’s own research projects, as well as the research community as a whole. It was developed and is maintained by Dr. Chunlei Wu’s lab at the Scripps Research Institute and is supported by funding from the National Center for Data to Health (CD2H). The Schema Registry allows users to browse and compare specifications from Schema.org, Google, BioLink, NIAID, and more. The Schema Viewer allows users to visualize specifications in JSON-LD/JSON-Schema format by entering the url or GitHub link to the jsonld file of the specification. The metadata validator allows users to validate JSON-LD/JSON Schema-formatted metadata against a registered schema. The Markup Generator converts registered schemas into a fillable form for generating markup in JSON-LD/JSON-schema format.
       name: "Data Discovery Engine (DDE) Schema Registry"
       url: "https://discovery.biothings.io/registry"
       applicationCategory: viewer
@@ -91,6 +110,26 @@ bioschemas:
         - "@id": http://edamontology.org/topic_0089
       featureList: 
         - "@id": http://edamontology.org/operation_0337
+      author: 
+        - "@id": https://bioschemas.org/people/ChunleiWu
+          "@type": Person
+          sameAs: http://orcid.org/0000-0002-2629-6124
+        - "@id": https://bioschemas.org/people/GingerTsueng
+          "@type": Person
+          sameAs: http://orcid.org/0000-0001-9536-9115
+
+    - "@type": SoftwareApplication
+      "@id": "https://discovery.biothings.io/validator"
+      "http://purl.org/dc/terms/conformsTo": https://bioschemas.org/profiles/ComputationalTool/1.0-RELEASE
+      description: |
+        The Data Discovery Engine provides guidance for researchers on how to make their data discoverable and reusable, and bring the practical benefits of data sharing to researcher’s own research projects, as well as the research community as a whole. It was developed and is maintained by Dr. Chunlei Wu’s lab at the Scripps Research Institute and is supported by funding from the National Center for Data to Health (CD2H). The Schema Playground provides a set of tools for expressing Schema.org and Schema.org-derived specifications in JSON-schema/JSON-LD compatible formatting for registration in the DDE Schema Registry. The metadata validator allows users to validate JSON-LD/JSON Schema-formatted metadata against a registered schema. The Markup Generator converts registered schemas into a fillable form for generating markup in JSON-LD/JSON-schema format.
+      name: "Data Discovery Engine (DDE) Schema Playground"
+      url: "https://discovery.biothings.io/validator"
+      applicationCategory: validator
+      applicationSubCategory: 
+        - "@id": http://edamontology.org/topic_0089
+      featureList: 
+        - "@id": http://edamontology.org/operation_2428
       author: 
         - "@id": https://bioschemas.org/people/ChunleiWu
           "@type": Person
