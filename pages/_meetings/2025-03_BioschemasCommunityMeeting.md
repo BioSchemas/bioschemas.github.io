@@ -13,4 +13,4 @@ contact-people:
     - NickJuty
 ---
 
-We have a Bioschemas Mothly Call where we alternate between community and technical meetings. Community meetings happen every odd month (this month 2025.03.17) and technical ones every even month (next one 2025.04.21).
+Our Monthly Bioschemas call alternates between 'technical' meetings, targeting developers, and 'community' calls for general discussions and tips for using Bioschemas. Community meetings occur on odd months (this month 2025.03.17) and technical ones every even month (next one 2025.04.21). Please do join us!
