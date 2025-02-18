@@ -34,5 +34,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="{{ 'assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
   <script src="{{ 'assets/js/toc.js' | relative_url }}"></script>
+  <script src="{{ 'assets/js/simple-jekyll-search.min.js' | relative_url }}"></script>
   <script defer src="{{'assets/js/all.min.js' | relative_url }}"></script>
+  <script>
+    SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '/search.json'
+    })
+  </script>
 </head>

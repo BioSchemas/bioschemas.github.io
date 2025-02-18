@@ -1,11 +1,13 @@
 <a class="visually-hidden-focusable" href='#main'>Skip to content</a>
 <header id="header_wrap" class="p-3">
     <!--start search-->
-    <div class="search-outer">
+    <div class="search-outer" id="search-container">
         <!--<div class="position-relative">-->
-            <form role="search rounded-bottom" class="input-group">
+            <!--ETT<form role="search rounded-bottom" class="input-group">
                 <span class="input-group-text" id="search-label"><i class="fa-solid fa-magnifying-glass"></i></span><input type="search" id="search-input" class="search-input form-control" tabindex="0" placeholder="Search..." aria-label="Search..." autocomplete="off">
-            </form>
+            </form>-->
+            <input type="text" id="search-input" placeholder="Type your search here..." autofocus>
+            <ul id="results-container"></ul>
             <div id="search-results" class="search-results"></div>
         <!--</div>-->
     </div>
