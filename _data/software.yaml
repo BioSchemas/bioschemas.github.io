@@ -50,7 +50,7 @@ tools:
 
     applicationCategory: generator
     url: https://discovery.biothings.io/schema-playground
-    thumbnailUrl: https://discovery.biothings.io/static/img/dde-logo-o.svg
+    thumbnailUrl: https://discovery.biothings.io/_nuxt/dde-logo-o-text-back.6c314aa1.png
 
   - id: dde_registry
     name: "Data Discovery Engine (DDE) Schema Registry"
@@ -65,7 +65,7 @@ tools:
 
     applicationCategory: viewer
     url: https://discovery.biothings.io/registry
-    thumbnailUrl: https://discovery.biothings.io/static/img/dde-logo-o.svg
+    thumbnailUrl: https://discovery.biothings.io/_nuxt/dde-logo-o-text-back.6c314aa1.png
     
   - id: sdoValidator
     name: "Schema.org Validator"
@@ -133,7 +133,7 @@ tools:
 
     applicationCategory: generator
     url: https://discovery.biothings.io/markup-generator
-    thumbnailUrl: https://discovery.biothings.io/static/img/dde-logo-o.svg
+    thumbnailUrl: https://discovery.biothings.io/_nuxt/dde-logo-o-text-back.6c314aa1.png
 
   - id: dde_markup_generator
     name: "Data Discovery Engine (DDE) Metadata Validator"
@@ -148,4 +148,4 @@ tools:
 
     applicationCategory: validator
     url: https://discovery.biothings.io/validator
-    thumbnailUrl: https://discovery.biothings.io/static/img/dde-logo-o.svg
+    thumbnailUrl: https://discovery.biothings.io/_nuxt/dde-logo-o-text-back.6c314aa1.png
