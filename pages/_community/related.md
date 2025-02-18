@@ -2,7 +2,7 @@
 layout: default
 title: Community
 ---
-# Bioschemas in Context
+# Related communities and activities
 
 The major advantage of Schema.org markup is in making metadata readily accessible to common web tools, enabling their harvesting on a huge scale, by general and commercial indexers such as Google. Bioschemas is not alone in developing a strategy to generate a Life Science targeted, opinionated derivation of this markup. Other communities have adopted this general approach, and we provide examples below.
 
