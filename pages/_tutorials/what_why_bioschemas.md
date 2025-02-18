@@ -1,5 +1,5 @@
 ---
-title: Bioschemas, what and why?
+title: Introduction to Bioschemas, what and why?
 previousTutorial:
   link: ./markup_examples
   title: Schema.org markup examples
@@ -19,7 +19,7 @@ bioschemas:
   audience:
   - "@type": Audience
     name: (General interest) People interested in introductory information to Bioschemas
-  name: "Bioschemas, what and why?"
+  name: "Introduction to Bioschemas, what and why?"
   author:
   - "@type": Person
     name: "Leyla Garcia"

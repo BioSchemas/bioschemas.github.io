@@ -1,5 +1,5 @@
 ---
-title: 'Schema.org: What and Why?'
+title: 'Introduction to Schema.org: What and Why?'
 previousTutorial:
   link: ./
   title: Overview of Bioschemas Tutorials
@@ -19,7 +19,7 @@ bioschemas:
   audience:
   - "@type": Audience
     name: (General interest) People interested in introductory information to Schema.org
-  name: "Schema.org, what and why?"
+  name: "Introduction to Schema.org, what and why?"
   author:
   - "@type": Person
     name: "Ricardo Arcila"
