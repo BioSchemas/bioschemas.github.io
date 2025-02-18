@@ -3,10 +3,10 @@
 applicationCategoryTypes: [generator, scraper, viewer, validator]
 tools:
   - id: BMUSE
-    name: "BMUSE: Bioschemas Markup Scraper and Extractor"
+    name: "BMUSE: Bioschemas Markup Scraper and Extractor (deprecated)"
     summary: A scraper for extracting Bioschemas markup embedded in web sites.
     description: |
-      BMUSE is a directed scraping framework capable of extracting JSON-LD and RDFa markup from static and single page application sites. Markup is returned in a variety of RDF formats together with metadata about when the markup was extracted and from where.
+      BMUSE is a deprecated directed scraping framework capable of extracting JSON-LD and RDFa markup from static and single page application sites. Markup is returned in a variety of RDF formats together with metadata about when the markup was extracted and from where.
         
       BMUSE can be deployed as a scraping service. As input it takes a list of URLs or sitemaps. We have deployed a version to do a daily scrape of sites known to contain data relevant to COVID-19. You can get the data from [here](https://github.com/HW-SWeL/COVID-19/).
         
