@@ -16,33 +16,37 @@
           <ul class="dropdown-menu" aria-labelledby="btnCommunity">
             <li><a class="dropdown-item" href="{{ '/tutorials/' | relative_url }}">Overview</a></li>
             <li><a class="dropdown-item" href="{{ '/tutorials/what_why_schema' | relative_url }}">Introduction to
-                Schema.org</a></li>
+                Schema.org, what and why?</a></li>
             <li><a class="dropdown-item" href="{{ '/tutorials/markup_examples' | relative_url }}">Schema.org markup
                 examples</a></li>
             <li><a class="dropdown-item" href="{{ '/tutorials/what_why_bioschemas' | relative_url }}">Introduction to
-                Bioschemas</a></li>
+                Bioschemas, what and why?</a></li>
             <li><a class="dropdown-item" href="{{ '/tutorials/howto/howto_right_profile' | relative_url }}">Choosing a
                 profile</a></li>
+            <li><a class="dropdown-item" href="{{ '/tutorials/dde/howto_create_new_profile' | relative_url }}">Developing profiles from scratch</a></li>
             <li><a class="dropdown-item" href="{{ '/tutorials/howto/howto_add_markup' | relative_url }}">Adding
-                markup</a></li>
+                Bioschemas markup to pages</a></li>
             <li><a class="dropdown-item" href="{{ '/tutorials/howto/howto_add_github' | relative_url }}">Adding markup
                 to GitHub pages</a></li>
             <li><a class="dropdown-item" href="{{ '/tutorials/howto/howto_check_deploy' | relative_url }}">Validating
-                markup</a></li>
+                Bioschemas markup</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="{{ '/tutorials/dde/' | relative_url }}">Profile and Type Development</a>
+            <li><a class="dropdown-item" href="{{ '/tutorials/dde/' | relative_url }}">Profile and Type Development in DDE</a>
             </li>
-            <li><a class="dropdown-item" href="{{ '/tutorials/dde/update_profile' | relative_url }}">Updating a
-                profile</a></li>
-            <li><a class="dropdown-item" href="{{ '/tutorials/dde/howto_create_new_profile' | relative_url }}">Creating
-                a new profile</a></li>
             <li><a class="dropdown-item" href="{{ '/tutorials/dde/new_profile' | relative_url }}">Creating a new
-                profile in the DDE</a></li>
+              profile in the DDE</a></li>
+            <li><a class="dropdown-item" href="{{ '/tutorials/dde/update_profile' | relative_url }}">Updating a
+                profile in DDE</a></li>
+            <li><a class="dropdown-item" href="{{ '/tutorials/dde/new_type' | relative_url }}">Creating a new
+                  type in the DDE</a></li>
+            <li><a class="dropdown-item" href="{{ '/tutorials/dde/update_type' | relative_url }}">Updating a
+                    type in DDE</a></li>
+            <li><a class="dropdown-item" href="{{ '/tutorials/tutorials/dde/add_validation_rules' | relative_url }}">Using a validation editor</a></li> 
             <li><a class="dropdown-item"
                 href="{{ '/tutorials/dde/review_a_specification_pull_request' | relative_url }}">Review a Specification
-                PR</a></li>
+                Pull request (PR)</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
@@ -56,15 +60,16 @@
                 Disease resources</a></li>
             <li><a class="dropdown-item" href="{{ '/tutorials/community/biodiversity' | relative_url }}">Adding markup
                 to Biodiversity-related resources</a></li>
-          </ul>
+                <li><a class="dropdown-item" href="{{ '/tutorials/community/training' | relative_url }}">Adding markup to training resources</a></li>
+            </ul>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle active mx-2" href="#" id="dropdown02" data-bs-toggle="dropdown"
             aria-expanded="false">Specifications</a>
           <ul class="dropdown-menu" aria-labelledby="btnCommunity">
-            <li><a class="dropdown-item" href="{{ '/profiles/' | relative_url }}">Profiles</a></li>
-            <li><a class="dropdown-item" href="{{ '/types/' | relative_url }}">Types</a></li>
-            <li><a class="dropdown-item" href="{{ '/properties/' | relative_url }}">Properties</a></li>
+            <li><a class="dropdown-item" href="{{ '/profiles/' | relative_url }}">Bioschemas Profiles</a></li>
+            <li><a class="dropdown-item" href="{{ '/types/' | relative_url }}">Bioschemas Types</a></li>
+            <li><a class="dropdown-item" href="{{ '/properties/' | relative_url }}">Bioschemas Properties</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -84,14 +89,15 @@
             aria-expanded="false">Community</a>
           <ul class="dropdown-menu" aria-labelledby="btnCommunity">
             <li><a class="dropdown-item" href="{{ '/community/' | relative_url }}">Overview</a></li>
-            <li><a class="dropdown-item" href="{{ '/community/howtojoin' | relative_url }}">Join</a></li>
+            <li><a class="dropdown-item" href="{{ '/community/howtojoin' | relative_url }}">Join Bioschemas!</a></li>
             <li><a class="dropdown-item" href="{{ '/news/' | relative_url }}">News</a></li>
-            <li><a class="dropdown-item" href="{{ '/meetings/' | relative_url }}">Meetings</a></li>
+            <li><a class="dropdown-item" href="{{ '/meetings/' | relative_url }}">BioSchemas-related Meetings</a></li>
             <li><a class="dropdown-item" href="{{ '/people/' | relative_url }}">People</a></li>
             <li><a class="dropdown-item" href="{{ '/groups/' | relative_url }}">Groups</a></li>
-            <li><a class="dropdown-item" href="{{ '/community/champions.html' | relative_url }}">Champions</a></li>
-            <li><a class="dropdown-item" href="{{ '/community/stories' | relative_url }}">Stories</a></li>
+            <li><a class="dropdown-item" href="{{ '/community/champions' | relative_url }}">Bioschemas Champions</a></li>
+            <li><a class="dropdown-item" href="{{ '/community/stories' | relative_url }}">User Stories</a></li>
             <li><a class="dropdown-item" href="{{ '/community/related' | relative_url }}">Related Communities</a></li>
+            <li><a class="dropdown-item" href="{{ '/useCases/' | relative_url }}">Use Cases</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -99,14 +105,15 @@
             aria-expanded="false">About</a>
           <ul class="dropdown-menu" aria-labelledby="btnCommunity">
             <li><a class="dropdown-item"
-                href="https://github.com/Bioschemas/governance/blob/master/governance.md">Governance <i
+                href="https://github.com/Bioschemas/governance/blob/master/governance.md">Bioschemas Governance <i
                   class="fas fa-external-link-alt fa-sm ms-2"></i></a></li>
             <li><a class="dropdown-item"
                 href="https://github.com/Bioschemas/governance/blob/master/codeOfConduct.md">Code of Conduct <i
                   class="fas fa-external-link-alt fa-sm ms-2"></i></a></li>
             <li><a class="dropdown-item" href="{{ '/about/publications' | relative_url }}">Publications</a></li>
-            <li><a class="dropdown-item" href="{{ '/about/funders' | relative_url }}">Funding</a></li>
+            <li><a class="dropdown-item" href="{{ '/about/funding' | relative_url }}">Funding</a></li>
             <li><a class="dropdown-item" href="{{ '/about/logos' | relative_url }}">Logos</a></li>
+            <li><a class="dropdown-item" href="{{ '/about/privacy' | relative_url }}">Privacy Policy</a></li>
           </ul>
         </li>
       </ul>
