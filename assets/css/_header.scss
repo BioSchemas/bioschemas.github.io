@@ -31,18 +31,28 @@
         }
     }
 
+    .search-outer {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 1.625em;
+        form {
+            padding: 0.5em 1.25em; /* overwritten elsewhere */
+        }
+    }
+
     .btn-github {
         background-color: #4c7fe8;
         position: absolute;
         top: 0;
-        right: 1.625em;
+        right: 18.2em;
     }
 
     .btn-twitter {
         background-color: #28a9e2;
         position: absolute;
         top: 0;
-        right: 8.875em;
+        right: 25.25em;
     }
 
     @media (max-width: 576px) {
