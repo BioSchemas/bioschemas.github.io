@@ -151,6 +151,7 @@ bioschemas:associatedDisease a rdf:Property ;
     rdfs:label "associatedDisease" ;
     rdfs:comment "Disease associated to this BioChemEntity. Such a disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue." ;
     owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/associatedDisease>,
+        schema:associatedDisease,
         <https://w3id.org/bioschemas/terms/associatedDisease> ;
     schema:domainIncludes bioschemas:BioChemEntity ;
     schema:rangeIncludes schema:MedicalCondition,
