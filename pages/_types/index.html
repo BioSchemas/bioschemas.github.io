@@ -35,16 +35,14 @@ signposting:
     <a href="/types/bioschemas_types.jsonld" target="_blank">JSON-LD</a> and
     <a href="/types/bioschemas_types.ttl" target="_blank">Turtle</a>. 
     The canonical URL for Bioschemas types is 'https://bioschemas.org/terms/' and we use the namespace 'bioschemas'.
-<br /> 
-    The latest drafts are also provided in 
+<br /> <br /> 
+    The latest drafts (still under discussion by the community, commonly used as release candidates) are also provided in 
     <a href="/types/bioschemas_draft_types.jsonld" target="_blank">JSON-LD</a> and
     <a href="/types/bioschemas_draft_types.ttl" target="_blank">Turtle</a>. 
     For draft types, we use the canonical URL 'https://bioschemas.org/draft_terms/' and the namespace 'bioschemas_draft'.
-<br /> 
+<br /> <br /> 
     To make it easier for machines, we use FAIR Signposting to point to the released types JSON-LD 
-    file from the HTML landing pages. We do not support Signposting for draft types.
-<br /> 
-    In both cases, released types and draft types, content negotiation is supported through https://w3id.org. 
+    file from the HTML landing pages. We do not support Signposting for draft types. In both cases, released types and draft types, content negotiation is supported through https://w3id.org. 
 </p>
 <br />
 {% assign dep_types = site.data.type_versions | where: 'status', 'deprecated' %}
