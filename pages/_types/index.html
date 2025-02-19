@@ -4,6 +4,19 @@ title: Bioschemas Types
 redirect_from:
 - "/devTypes/"
 - "/types/drafts/"
+signposting:
+- rel: "cite-as"
+  link: "Gray, A.J.G, Goble, C.A. and Jimenez, R., 2017. Bioschemas: From Potato Salad to Protein Annotation. In International Semantic Web Conference (Posters, Demos & Industry Tracks)."
+- rel: "describedby"
+  link: "https://bioschemas.org/types/bioschemas_types.jsonld"
+- rel: "license"
+  link: "https://spdx.org/licenses/CC-BY-4.0.html"
+- rel: "type"
+  link: "http://schema.org/DefinedTermSet"
+- rel: "type"
+  link: "http://schema.org/About"
+
+
 
 ---
 <h1>Bioschemas Types
@@ -14,6 +27,23 @@ redirect_from:
 <p><a href="https://schema.org/">Schema.org</a> provides a vocabulary of terms that can be used to describe data on the Internet. The Bioschemas community are extending that vocabulary to be able to describe life sciences resources. Here we host the types and properties that are being proposed to the Schema.org vocabulary.</p>
 
 <p>Comments and discussions on the <a href="https://lists.w3.org/Archives/Public/public-bioschemas/" itemprop="email">mailing list</a> or <a href="https://github.com/Bioschemas/specifications/issues">GitHub issue tracker</a> are encouraged.</p>
+
+<p>
+    <strong>Technical corner</strong>
+<br />    
+    Bioschemas latest released types are provided in machine-actionable formats in  
+    <a href="/types/bioschemas_types.jsonld" target="_blank">JSON-LD</a> and
+    <a href="/types/bioschemas_types.ttl" target="_blank">Turtle</a>. 
+    The canonical URL for Bioschemas types is 'https://bioschemas.org/terms/' and we use the namespace 'bioschemas'.
+<br /> <br /> 
+    The latest drafts (still under discussion by the community, commonly used as release candidates) are also provided in 
+    <a href="/types/bioschemas_draft_types.jsonld" target="_blank">JSON-LD</a> and
+    <a href="/types/bioschemas_draft_types.ttl" target="_blank">Turtle</a>. 
+    For draft types, we use the canonical URL 'https://bioschemas.org/draft_terms/' and the namespace 'bioschemas_draft'.
+<br /> <br /> 
+    To make it easier for machines, we use FAIR Signposting to point to the released types JSON-LD 
+    file from the HTML landing pages. We do not support Signposting for draft types. In both cases, released types and draft types, content negotiation is supported through https://w3id.org. 
+</p>
 <br />
 {% assign dep_types = site.data.type_versions | where: 'status', 'deprecated' %}
 {% assign dep_types_names = "" | split: ',' %}
