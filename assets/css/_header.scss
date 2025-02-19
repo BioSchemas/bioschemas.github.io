@@ -43,11 +43,23 @@
         }
     }
 
+    @media (max-width: 576px) {
+        .search-outer {
+            display: none;
+        }
+    }
+
     .btn-github {
         background-color: #4c7fe8;
         position: absolute;
         top: 0;
         right: 18.2em;
+    }
+
+    @media (max-width: 576px) {
+        .btn-github {
+            right: 1em;
+        }
     }
 
     .btn-twitter {
