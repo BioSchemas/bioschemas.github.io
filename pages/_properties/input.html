@@ -1,23 +1,12 @@
 ---
-dateModified: 2023-10-06
 prop_name: input
-description: a property aimed at specifying the type of consumed data.
-
-expected_values_as_type :
-- FormalParameter
-
-# expected_values_as_data :
-# - text
-
-# used_in_types:
-# -
-
-used_in_profiles:
-- ComputationalTool
+redirect_from: /terms/input
+description: "An input required to use the computational workflow (eg. Excel spreadsheet, BAM file)"
+used_in_types: 
 - ComputationalWorkflow
+expected_values_as_type: 
+- ["FormalParameter", "https://bioschemas.org/terms/FormalParameter"]
 
-redirect_from:
-- /terms/input
 ---
 
 {% include properties.html %}
