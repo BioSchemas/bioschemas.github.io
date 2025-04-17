@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Community-based Tutorials
+breadcrumb:
+  link1: /tutorials/
+  title1: Getting Started
+  title2: "Community-based"
 ---
 
 # Community-based tutorials

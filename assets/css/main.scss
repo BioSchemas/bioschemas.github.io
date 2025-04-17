@@ -218,3 +218,11 @@ table:not(.rouge-table):not(.table-borderless) {
     @extend .shadow;
     @extend .rounded;
 }
+
+
+/*******************************************************************************
+Breadcrumbs
+*******************************************************************************/
+.breadcrumb .breadcrumb-item {
+    line-height: 1; /* does this do anything? */
+}

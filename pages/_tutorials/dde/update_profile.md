@@ -3,6 +3,11 @@ title: Profile Update
 nextTutorial:
   link: ./dde/howto_create_new_profile
   title: How to create a new draft profile
+breadcrumb:
+  link1: /tutorials/
+  title1: Getting Started
+  link2: /tutorials/dde/
+  title2: "DDE"
 
 redirect_from: 
 - "/tutorials/howto/howto_new_profile_version"

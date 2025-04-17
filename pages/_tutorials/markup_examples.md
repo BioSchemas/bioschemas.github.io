@@ -6,6 +6,9 @@ previousTutorial:
 nextTutorial:
   link: ./what_why_bioschemas
   title: What and why Bioschemas
+breadcrumb:
+  link1: /tutorials/
+  title1: Getting Started
 
 bioschemas:
   "@context": https://schema.org/

@@ -4,6 +4,10 @@ title: Check Deployed Markup
 previousTutorial:
   link: howto/howto_add_github
   title: Adding schema.org to a GitHub Pages site
+breadcrumb:
+  link1: /tutorials/
+  title1: Getting Started
+  title2: "How to..."
 
 bioschemas:
   "@context": https://schema.org/

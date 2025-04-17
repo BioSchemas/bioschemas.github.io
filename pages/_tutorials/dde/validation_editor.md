@@ -1,6 +1,11 @@
 ---
 layout: default
 title: Data Discovery Engine - Validation Editor
+breadcrumb:
+  link1: /tutorials/
+  title1: Getting Started
+  link2: /tutorials/dde/
+  title2: "DDE"
 ---
 
 ## How to use the Validation Editor to apply constraints to your profile specification

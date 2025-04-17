@@ -6,6 +6,11 @@ previousTutorial:
 nextTutorial:
   link: ./dde/review_a_specification_pull_request
   title: Review a pull request on a Bioschemas Specification
+breadcrumb:
+  link1: /tutorials/
+  title1: Getting Started
+  link2: /tutorials/dde/
+  title2: "DDE"
   
 bioschemas:
   "@context": https://schema.org/
