@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Bioschemas Tutorials
+title: Bioschemas Tutorials Overview
 nextTutorial:
   link: ./what_why_schema
   title: What and why Schema.org
