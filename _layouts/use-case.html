@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% include breadcrumb.html title1="Community" link1="/community/" title2="Use Cases" link2="/useCases/" %}
 <h1>Use Cases for {{page.name}}</h1>
 {% assign group = site.groups | where:"identifier", page.group %}
 {% for g in group %}

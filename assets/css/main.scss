@@ -224,5 +224,6 @@ table:not(.rouge-table):not(.table-borderless) {
 Breadcrumbs
 *******************************************************************************/
 .breadcrumb .breadcrumb-item {
-    line-height: 1; /* does this do anything? */
+    line-height: 1;
+    margin: 0;
 }
