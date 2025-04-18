@@ -6,6 +6,11 @@ previousTutorial:
 nextTutorial:
   link: ./dde/new_type
   title: Create a New Type
+breadcrumb:
+  link1: /tutorials/
+  title1: Getting Started
+  link2: /tutorials/dde/
+  title2: "DDE"
   
 bioschemas:
   "@context": https://schema.org/

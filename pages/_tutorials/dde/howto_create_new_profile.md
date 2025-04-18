@@ -6,6 +6,11 @@ nextTutorial:
 previousTutorial:
   link: ./dde/update_profile
   title: Profile Update
+breadcrumb:
+  link1: /tutorials/
+  title1: Getting Started
+  link2: /tutorials/dde/
+  title2: "DDE"
 
 redirect_from:
 - "/tutorials/howto/howto_create_new_profile"
