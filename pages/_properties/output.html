@@ -1,23 +1,12 @@
 ---
-dateModified: 2023-10-06
 prop_name: output
-description: a property aimed at specifying the type of produced data.
-
-expected_values_as_type :
-- FormalParameter
-
-# expected_values_as_data :
-# - text
-
-# used_in_types:
-# -
-
-used_in_profiles:
-- ComputationalTool
+redirect_from: /terms/output
+description: "An output produced by the workflow"
+used_in_types: 
 - ComputationalWorkflow
+expected_values_as_type: 
+- ["FormalParameter", "https://bioschemas.org/terms/FormalParameter"]
 
-redirect_from:
-- /terms/output
 ---
 
 {% include properties.html %}
