@@ -6,6 +6,9 @@ previousTutorial:
 nextTutorial:
   link: ./markup_examples
   title: Schema.org markup examples
+breadcrumb:
+  link1: /tutorials/
+  title1: Getting Started
 
 bioschemas:
   "@context": https://schema.org/

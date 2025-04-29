@@ -1,0 +1,79 @@
+{% assign breadcrumb_title1 = page.breadcrumb.title1 %}
+{% assign breadcrumb_link1 = page.breadcrumb.link1 %}
+{% assign breadcrumb_title2 = page.breadcrumb.title2 %}
+{% assign breadcrumb_link2 = page.breadcrumb.link2 %}
+{% assign breadcrumb_title3 = page.breadcrumb.title3 %}
+{% assign breadcrumb_link3 = page.breadcrumb.link3 %}
+{% comment %}If included from a layout page instead of a regular page{% endcomment %}
+{% if include.title1 %}
+{% capture breadcrumb_title1 %}{{ include.title1 }}{% endcapture %}
+{% endif %}
+{% if include.link1 %}
+{% capture breadcrumb_link1 %}{{ include.link1 }}{% endcapture %}
+{% endif %}
+{% if include.title2 %}
+{% capture breadcrumb_title2 %}{{ include.title2 }}{% endcapture %}
+{% endif %}
+{% if include.link2 %}
+{% capture breadcrumb_link2 %}{{ include.link2 }}{% endcapture %}
+{% endif %}
+{% if include.title3 %}
+{% capture breadcrumb_title3 %}{{ include.title3 }}{% endcapture %}
+{% endif %}
+{% if include.link3 %}
+{% capture breadcrumb_link3 %}{{ include.link3 }}{% endcapture %}
+{% endif %}
+
+
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="house-door-fill" viewBox="0 0 16 16">
+        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+    </symbol>
+</svg>
+
+<div class="container my-1">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb p-3 bg-body-tertiary bg-light shadow rounded-3">
+            <li class="breadcrumb-item">
+                <a class="link-body-emphasis fw-semibold text-decoration-none" href="{{ "/" | relative_url }}">
+                    <svg class="bi" width="16" height="16" aria-hidden="true"><use xlink:href="#house-door-fill"></use></svg>
+                    Home
+                </a>
+            </li>
+            {% if breadcrumb_title1 %}
+            <li class="breadcrumb-item">
+                {% if breadcrumb_link1 %}
+                <a class="link-body-emphasis fw-semibold text-decoration-none" href="{{ breadcrumb_link1 | relative_url  }}">{{ breadcrumb_title1 }}</a>
+                {% else %}
+                {{ breadcrumb_title1 }}
+                {% endif %}
+            </li>
+            {% endif %}
+            {% if breadcrumb_title2 %}
+            <li class="breadcrumb-item">
+                {% if breadcrumb_link2 %}
+                <a class="link-body-emphasis fw-semibold text-decoration-none" href="{{ breadcrumb_link2 | relative_url  }}">{{ breadcrumb_title2 }}</a>
+                {% else %}
+                {{ breadcrumb_title2 }}
+                {% endif %}
+            </li>
+            {% endif %}
+            {% if breadcrumb_title3 %}
+            <li class="breadcrumb-item">
+                {% if breadcrumb_link3 %}
+                <a class="link-body-emphasis fw-semibold text-decoration-none" href="{{ breadcrumb_link3 | relative_url  }}">{{ breadcrumb_title3 }}</a>
+                {% else %}
+                {{ breadcrumb_title3 }}
+                {% endif %}
+            </li>
+            {% endif %}
+            <li class="breadcrumb-item active" aria-current="page">
+                {% if page.title %}
+                {{ page.title }}
+                {% else %}
+                {{ site.title }}
+                {% endif %}
+            </li>
+        </ol>
+    </nav>
+</div>

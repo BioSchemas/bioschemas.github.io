@@ -1,6 +1,9 @@
 ---
 layout: default
-title: Community
+title: Related communities
+breadcrumb:
+  link1: /community/
+  title1: Community
 ---
 # Related communities and activities
 

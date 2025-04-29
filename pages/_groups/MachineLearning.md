@@ -35,6 +35,11 @@ members:
 - DietrichRebholzSchuhmann
 - IvanMicetic
 
+breadcrumb:
+  link1: /community/
+  title1: Community
+  link2: /groups/
+  title2: Groups
 ---
 
 <h2>Further Details</h2>

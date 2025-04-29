@@ -6,6 +6,9 @@ previousTutorial:
 nextTutorial:
   link: ./howto/howto_right_profile
   title: How to select the right profile
+breadcrumb:
+  link1: /tutorials/
+  title1: Getting Started
 
 bioschemas:
   "@context": https://schema.org/
