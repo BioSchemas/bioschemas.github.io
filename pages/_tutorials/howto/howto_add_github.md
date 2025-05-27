@@ -6,6 +6,10 @@ previousTutorial:
 nextTutorial:
   link: howto/howto_check_deploy
   title: How to check your deployed markup
+breadcrumb:
+  link1: /tutorials/
+  title1: Getting Started
+  title2: "How to..."
 
 bioschemas:
   "@context": https://schema.org/

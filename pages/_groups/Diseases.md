@@ -28,4 +28,10 @@ specifications:
 
 members:
 - RajaramKaliyaperumal
+
+breadcrumb:
+  link1: /community/
+  title1: Community
+  link2: /groups/
+  title2: Groups
 ---

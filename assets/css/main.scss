@@ -218,3 +218,18 @@ table:not(.rouge-table):not(.table-borderless) {
     @extend .shadow;
     @extend .rounded;
 }
+
+
+/*******************************************************************************
+Breadcrumbs
+*******************************************************************************/
+.breadcrumb .breadcrumb-item {
+    line-height: 1;
+    margin: 0;
+}
+
+/* When including the breadcrumb from within a non-default layout, move this back up.
+ * (Within the main tag, undo the effect of the main margin-top.) */
+main .breadcrumb {
+    transform: translateY(-3rem);
+}

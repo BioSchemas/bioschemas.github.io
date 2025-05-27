@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Bioschemas stories
+breadcrumb:
+  link1: /community/
+  title1: Community
 ---
 # Bioschemas user stories
 

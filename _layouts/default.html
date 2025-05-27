@@ -5,6 +5,9 @@
   <body>
     {% include header.html %}
     {% include navbar.html %}
+    {% if page.breadcrumb.title1 %}
+    {% include breadcrumb.html %}
+    {% endif %}
     <div class="container min-vh-100">
       <main id="main" class="my-5">
         {{ content }}

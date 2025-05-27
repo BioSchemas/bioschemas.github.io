@@ -22,6 +22,12 @@ members:
     - KennethMcLeod
     - PetrosPapadopoulos
     - SaharFrikha
+
+breadcrumb:
+  link1: /community/
+  title1: Community
+  link2: /groups/
+  title2: Groups
 ---
 
 <div id="links">

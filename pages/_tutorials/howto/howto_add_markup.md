@@ -6,6 +6,10 @@ previousTutorial:
 nextTutorial:
   link: ./howto/howto_add_github
   title: How to add markup to GitHub pages
+breadcrumb:
+  link1: /tutorials/
+  title1: Getting Started
+  title2: "How to..."
 
 bioschemas:
   "@context": https://schema.org/

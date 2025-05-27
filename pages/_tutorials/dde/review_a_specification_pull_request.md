@@ -3,6 +3,11 @@ title: Review a pull request on a Bioschemas Specification
 previousTutorial:
   link: ./dde/new_type
   title: Create New Type
+breadcrumb:
+  link1: /tutorials/
+  title1: Getting Started
+  link2: /tutorials/dde/
+  title2: "DDE"
 
   
 bioschemas:

@@ -3,6 +3,11 @@ title: How to add markup to plant resources
 overviewTutorial:
   link: ./community/
   title: Return to community tutorials overview
+breadcrumb:
+  link1: /tutorials/
+  title1: Getting Started
+  link2: /tutorials/community/
+  title2: "Community-based"
 
 bioschemas:
   "@context": https://schema.org/

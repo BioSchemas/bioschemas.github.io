@@ -3,6 +3,11 @@ title: How Bioschemas uses the training profiles with GitHub pages and Jekyll
 overviewTutorial:
   link: ./community/
   title: Return to community tutorials overview
+breadcrumb:
+  link1: /tutorials/
+  title1: Getting Started
+  link2: /tutorials/community/
+  title2: "Community-based"
 
 
 bioschemas:

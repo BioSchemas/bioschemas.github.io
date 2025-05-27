@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Data Discovery Engine
+breadcrumb:
+  link1: /tutorials/
+  title1: Getting Started
+  title2: "DDE"
 ---
 
 # Data Discovery Engine
