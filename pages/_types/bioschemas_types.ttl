@@ -9,7 +9,7 @@ bioschemas:BioChemEntity a rdfs:Class ;
     rdfs:label "BioChemEntity" ;
     rdfs:comment "Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical. Note, this version (0.7-RELEASE) is the version that is currently pending on schema.org" ;
     rdfs:subClassOf schema:Thing ;
-    owl:equivalentClass <https://discovery.biothings.io/view/bioschemastypes/BioChemEntity>,
+    owl:equivalentClass <https://discovery.biothings.io/ns/bioschemastypes/BioChemEntity>,
         schema:BioChemEntity,
         <https://w3id.org/bioschemas/terms/BioChemEntity> ;
     schema:schemaVersion "https://bioschemas.org/types/BioChemEntity/0.7-RELEASE",
@@ -20,7 +20,7 @@ bioschemas:BioSample a rdfs:Class ;
     rdfs:comment """A biological material entity that is representative of a whole.
 Comments: Typically samples are intended to be representative of the whole or aspects thereof. Examples of samples include biomedical samples (blood, urine) and plant specimens held at herbaria. Version 0.1-RELEASE. Note, the parent class for this schema has been updated to a pending class in schema.org.""" ;
     rdfs:subClassOf schema:BioChemEntity ;
-    owl:equivalentClass <https://discovery.biothings.io/view/bioschemastypes/BioSample>,
+    owl:equivalentClass <https://discovery.biothings.io/ns/bioschemastypes/BioSample>,
         <https://w3id.org/bioschemas/terms/BioSample> ;
     schema:schemaVersion "https://bioschemas.org/types/BioSample/0.1-RELEASE",
         "https://github.com/BioSchemas/specifications/tree/master/BioSample/jsonld/type/BioSample_v0.1-RELEASE.json" .
@@ -29,7 +29,7 @@ bioschemas:ChemicalSubstance a rdfs:Class ;
     rdfs:label "ChemicalSubstance" ;
     rdfs:comment "A chemical substance is 'a portion of matter of constant composition, composed of molecular entities of the same type or of different types' (source: ChEBI:59999). Version: 0.3-RELEASE-2019_09_02. This version is was released as a pending class as of schema.org version 13" ;
     rdfs:subClassOf schema:BioChemEntity ;
-    owl:equivalentClass <https://discovery.biothings.io/view/bioschemastypes/ChemicalSubstance>,
+    owl:equivalentClass <https://discovery.biothings.io/ns/bioschemastypes/ChemicalSubstance>,
         schema:ChemicalSubstance,
         <https://w3id.org/bioschemas/terms/ChemicalSubstance> ;
     schema:schemaVersion "https://bioschemas.org/types/ChemicalSubstance/0.3-RELEASE-2019_09_02",
@@ -39,7 +39,7 @@ bioschemas:ComputationalWorkflow a rdfs:Class ;
     rdfs:label "ComputationalWorkflow" ;
     rdfs:comment "A computational workflow consists of an orchestrated and repeatable pattern of activity enabled by the systematic organization of resources into processes that transform materials, provide services, or process information (source Wikipedia.org). It is executed by a computational process and is thus distinct from laboratory or business workflows. version 1.0-RELEASE" ;
     rdfs:subClassOf schema:SoftwareSourceCode ;
-    owl:equivalentClass <https://discovery.biothings.io/view/bioschemastypes/ComputationalWorkflow>,
+    owl:equivalentClass <https://discovery.biothings.io/ns/bioschemastypes/ComputationalWorkflow>,
         <https://w3id.org/bioschemas/terms/ComputationalWorkflow> ;
     schema:schemaVersion "https://bioschemas.org/types/ComputationalWorkflow/1.0-RELEASE",
         "https://github.com/BioSchemas/specifications/blob/master/ComputationalWorkflow/jsonld/type/ComputationalWorkflow_v1.0-RELEASE.json" .
@@ -48,7 +48,7 @@ bioschemas:FormalParameter a rdfs:Class ;
     rdfs:label "FormalParameter" ;
     rdfs:comment "A FormalParameter is an identified variable used to stand for the actual value(s) that are consumed/produced by a set of steps. Version: 1.0-RELEASE (09 March 2021) " ;
     rdfs:subClassOf schema:Intangible ;
-    owl:equivalentClass <https://discovery.biothings.io/view/bioschemastypes/FormalParameter>,
+    owl:equivalentClass <https://discovery.biothings.io/ns/bioschemastypes/FormalParameter>,
         <https://w3id.org/bioschemas/terms/FormalParameter> ;
     schema:schemaVersion "https://bioschemas.org/types/FormalParameter/1.0-RELEASE",
         "https://github.com/BioSchemas/specifications/blob/master/FormalParameter/jsonld/type/FormalParameter_v1.0-RELEASE.json" .
@@ -57,7 +57,7 @@ bioschemas:Gene a rdfs:Class ;
     rdfs:label "Gene" ;
     rdfs:comment "A discrete unit of inheritance which affects one or more biological traits (Source: https://en.wikipedia.org/wiki/Gene). Examples include FOXP2 (Forkhead box protein P2), SCARNA21 (small Cajal body-specific RNA 21), A- (agouti genotype). Note, this version of the type has been added as a pending class in schema.org." ;
     rdfs:subClassOf schema:BioChemEntity ;
-    owl:equivalentClass <https://discovery.biothings.io/view/bioschemastypes/Gene>,
+    owl:equivalentClass <https://discovery.biothings.io/ns/bioschemastypes/Gene>,
         schema:Gene,
         <https://w3id.org/bioschemas/terms/Gene> ;
     schema:schemaVersion "https://bioschemas.org/types/Gene/0.3-RELEASE-2019_09_02",
@@ -67,7 +67,7 @@ bioschemas:MolecularEntity a rdfs:Class ;
     rdfs:label "MolecularEntity" ;
     rdfs:comment "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity. (Source: ChEBI:23367). Note, this version has been updated to a pending class in schema.org." ;
     rdfs:subClassOf schema:BioChemEntity ;
-    owl:equivalentClass <https://discovery.biothings.io/view/bioschemastypes/MolecularEntity>,
+    owl:equivalentClass <https://discovery.biothings.io/ns/bioschemastypes/MolecularEntity>,
         schema:MolecularEntity,
         <https://w3id.org/bioschemas/terms/MolecularEntity> ;
     schema:schemaVersion "https://bioschemas.org/types/MolecularEntity/0.3-RELEASE-2019_09_02",
@@ -77,7 +77,7 @@ bioschemas:Protein a rdfs:Class ;
     rdfs:label "Protein" ;
     rdfs:comment "Protein is here used in its widest possible definition, as classes of amino acid based molecules. Amyloid-beta Protein in human (UniProt P05067), eukaryota (e.g. an OrthoDB group) or even a single molecule that one can point to are all of type schema:Protein. A protein can thus be a subclass of another protein, e.g. schema:Protein as a UniProt record can have multiple isoforms inside it which would also be schema:Protein. They can be imagined, synthetic, hypothetical or naturally occurring. This version has been added to schema.org as a pending type." ;
     rdfs:subClassOf schema:BioChemEntity ;
-    owl:equivalentClass <https://discovery.biothings.io/view/bioschemastypes/Protein>,
+    owl:equivalentClass <https://discovery.biothings.io/ns/bioschemastypes/Protein>,
         schema:Protein,
         <https://w3id.org/bioschemas/terms/Protein> ;
     schema:schemaVersion "https://bioschemas.org/types/Protein/0.3-RELEASE-2019_09_02",
@@ -87,7 +87,7 @@ bioschemas:Taxon a rdfs:Class ;
     rdfs:label "Taxon" ;
     rdfs:comment "A set of organisms asserted to represent a natural cohesive biological unit. Version: 1.0-RELEASE" ;
     rdfs:subClassOf schema:Thing ;
-    owl:equivalentClass <https://discovery.biothings.io/view/bioschemastypes/Taxon>,
+    owl:equivalentClass <https://discovery.biothings.io/ns/bioschemastypes/Taxon>,
         schema:Taxon,
         <https://w3id.org/bioschemas/terms/Taxon> ;
     schema:schemaVersion "https://bioschemas.org/types/Taxon/1.0-RELEASE",
@@ -97,7 +97,7 @@ bioschemas:TaxonName a rdfs:Class ;
     rdfs:label "TaxonName" ;
     rdfs:comment "A name of a biological taxon, may it be valid (zoology) / accepted (botany) or not. Version: 1.0-RELEASE" ;
     rdfs:subClassOf schema:CreativeWork ;
-    owl:equivalentClass <https://discovery.biothings.io/view/bioschemastypes/TaxonName>,
+    owl:equivalentClass <https://discovery.biothings.io/ns/bioschemastypes/TaxonName>,
         <https://w3id.org/bioschemas/terms/TaxonName> ;
     schema:schemaVersion "https://bioschemas.org/types/TaxonName/1.0-RELEASE",
         "https://github.com/BioSchemas/specifications/blob/master/TaxonName/jsonld/type/TaxonName_v1.0-RELEASE.json" .
@@ -122,7 +122,7 @@ dct:conformsTo a rdf:Property ;
 bioschemas:additionalProperty a rdf:Property ;
     rdfs:label "additionalProperty" ;
     rdfs:comment "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/additionalProperty>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/additionalProperty>,
         <https://w3id.org/bioschemas/terms/additionalProperty> ;
     schema:domainIncludes bioschemas:BioSample ;
     schema:rangeIncludes schema:PropertyValue ;
@@ -131,7 +131,7 @@ bioschemas:additionalProperty a rdf:Property ;
 bioschemas:alternateScientificName a rdf:Property ;
     rdfs:label "alternateScientificName" ;
     rdfs:comment "A TaxonName representing a scientific name, with authorship and date information if known, of a synonym of the currently valid (zoological) or accepted (botanical) name." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/alternateScientificName>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/alternateScientificName>,
         <https://w3id.org/bioschemas/terms/alternateScientificName> ;
     schema:domainIncludes bioschemas:Taxon ;
     schema:rangeIncludes bioschemas:TaxonName,
@@ -141,7 +141,7 @@ bioschemas:alternateScientificName a rdf:Property ;
 bioschemas:alternativeOf a rdf:Property ;
     rdfs:label "alternativeOf" ;
     rdfs:comment "Another gene which is a variation of this one." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/alternativeOf>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/alternativeOf>,
         schema:alternativeOf,
         <https://w3id.org/bioschemas/terms/alternativeOf> ;
     schema:domainIncludes bioschemas:Gene ;
@@ -150,7 +150,7 @@ bioschemas:alternativeOf a rdf:Property ;
 bioschemas:associatedDisease a rdf:Property ;
     rdfs:label "associatedDisease" ;
     rdfs:comment "Disease associated to this BioChemEntity. Such a disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/associatedDisease>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/associatedDisease>,
         schema:associatedDisease,
         <https://w3id.org/bioschemas/terms/associatedDisease> ;
     schema:domainIncludes bioschemas:BioChemEntity ;
@@ -161,7 +161,7 @@ bioschemas:associatedDisease a rdf:Property ;
 bioschemas:bioChemInteraction a rdf:Property ;
     rdfs:label "bioChemInteraction" ;
     rdfs:comment "A BioChemEntity that is know to interact with this item." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/bioChemInteraction>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/bioChemInteraction>,
         schema:bioChemInteraction,
         <https://w3id.org/bioschemas/terms/bioChemInteraction> ;
     schema:domainIncludes bioschemas:BioChemEntity ;
@@ -170,7 +170,7 @@ bioschemas:bioChemInteraction a rdf:Property ;
 bioschemas:bioChemSimilarity a rdf:Property ;
     rdfs:label "bioChemSimilarity" ;
     rdfs:comment "A similar molecular entity, e.g., obtained by fingerprint similarity algorithm." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/bioChemSimilarity>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/bioChemSimilarity>,
         schema:bioChemSimilarity,
         <https://w3id.org/bioschemas/terms/bioChemSimilarity> ;
     schema:domainIncludes bioschemas:BioChemEntity ;
@@ -179,7 +179,7 @@ bioschemas:bioChemSimilarity a rdf:Property ;
 bioschemas:biologicalRole a rdf:Property ;
     rdfs:label "biologicalRole" ;
     rdfs:comment "A role played by the molecular entity within a biological context." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/biologicalRole>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/biologicalRole>,
         schema:biologicalRole,
         <https://w3id.org/bioschemas/terms/biologicalRole> ;
     schema:domainIncludes bioschemas:BioChemEntity ;
@@ -188,7 +188,7 @@ bioschemas:biologicalRole a rdf:Property ;
 bioschemas:chemicalComposition a rdf:Property ;
     rdfs:label "chemicalComposition" ;
     rdfs:comment "The chemical composition describes the identity and relative ratio of the chemical elements that make up the substance. For substances this often cannot be accurately determined, an approximation is acceptable." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/chemicalComposition>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/chemicalComposition>,
         schema:chemicalComposition,
         <https://w3id.org/bioschemas/terms/chemicalComposition> ;
     schema:domainIncludes bioschemas:ChemicalSubstance ;
@@ -197,7 +197,7 @@ bioschemas:chemicalComposition a rdf:Property ;
 bioschemas:chemicalRole a rdf:Property ;
     rdfs:label "chemicalRole" ;
     rdfs:comment "A role played by the BioChemEntity within a chemical context. A role played by the molecular entity within a chemical context." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/chemicalRole>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/chemicalRole>,
         schema:chemicalRole,
         <https://w3id.org/bioschemas/terms/chemicalRole> ;
     schema:domainIncludes bioschemas:ChemicalSubstance,
@@ -208,7 +208,7 @@ bioschemas:childTaxon a rdf:Property ;
     rdfs:label "childTaxon" ;
     rdfs:comment """Closest child taxa of the taxon in question.
 Inverse property: parentTaxon Direct, most proximate lower-rank child taxa""" ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/childTaxon>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/childTaxon>,
         schema:childTaxon,
         <https://w3id.org/bioschemas/terms/childTaxon> ;
     schema:domainIncludes bioschemas:Taxon ;
@@ -219,7 +219,7 @@ Inverse property: parentTaxon Direct, most proximate lower-rank child taxa""" ;
 bioschemas:collector a rdf:Property ;
     rdfs:label "collector" ;
     rdfs:comment "The Person or Organization who collected the Sample. " ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/collector>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/collector>,
         <https://w3id.org/bioschemas/terms/collector> ;
     schema:domainIncludes bioschemas:BioSample ;
     schema:rangeIncludes schema:Organization,
@@ -228,7 +228,7 @@ bioschemas:collector a rdf:Property ;
 bioschemas:custodian a rdf:Property ;
     rdfs:label "custodian" ;
     rdfs:comment "The Person or Organization who is responsible for the Sample." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/custodian>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/custodian>,
         <https://w3id.org/bioschemas/terms/custodian> ;
     schema:domainIncludes bioschemas:BioSample ;
     schema:rangeIncludes schema:Organization,
@@ -237,7 +237,7 @@ bioschemas:custodian a rdf:Property ;
 bioschemas:dateCreated a rdf:Property ;
     rdfs:label "dateCreated" ;
     rdfs:comment "The date on which the CreativeWork was created or the item was added to a DataFeed. " ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/dateCreated>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/dateCreated>,
         <https://w3id.org/bioschemas/terms/dateCreated> ;
     schema:domainIncludes bioschemas:BioSample ;
     schema:rangeIncludes schema:Date ;
@@ -246,7 +246,7 @@ bioschemas:dateCreated a rdf:Property ;
 bioschemas:defaultValue a rdf:Property ;
     rdfs:label "defaultValue" ;
     rdfs:comment "The default value for the FormalParameter. This is commonly only used for Inputs." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/defaultValue>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/defaultValue>,
         <https://w3id.org/bioschemas/terms/defaultValue> ;
     schema:domainIncludes bioschemas:FormalParameter ;
     schema:rangeIncludes schema:Text,
@@ -255,7 +255,7 @@ bioschemas:defaultValue a rdf:Property ;
 bioschemas:documentation a rdf:Property ;
     rdfs:label "documentation" ;
     rdfs:comment "Documentation describing the ComputationalWorkflow and its use." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/documentation>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/documentation>,
         <https://w3id.org/bioschemas/terms/documentation> ;
     schema:domainIncludes bioschemas:ComputationalWorkflow ;
     schema:rangeIncludes schema:CreativeWork,
@@ -264,7 +264,7 @@ bioschemas:documentation a rdf:Property ;
 bioschemas:encodesBioChemEntity a rdf:Property ;
     rdfs:label "encodesBioChemEntity" ;
     rdfs:comment "Another BioChemEntity encoded by this one. Inverse property: isEncodedByBioChemEntity." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/encodesBioChemEntity>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/encodesBioChemEntity>,
         schema:encodesBioChemEntity,
         <https://w3id.org/bioschemas/terms/encodesBioChemEntity> ;
     schema:domainIncludes bioschemas:Gene ;
@@ -273,7 +273,7 @@ bioschemas:encodesBioChemEntity a rdf:Property ;
 bioschemas:encodingFormat a rdf:Property ;
     rdfs:label "encodingFormat" ;
     rdfs:comment "URLs to accepted formats.  It is strongly recommented that this be specified. If it is not specified, then nothing should be assumed about the encoding formats of the FormalParameter. Recommended ontology: http://edamontology.org/format_1915" ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/encodingFormat>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/encodingFormat>,
         <https://w3id.org/bioschemas/terms/encodingFormat> ;
     schema:domainIncludes bioschemas:FormalParameter ;
     schema:rangeIncludes schema:Text,
@@ -282,7 +282,7 @@ bioschemas:encodingFormat a rdf:Property ;
 bioschemas:expressedIn a rdf:Property ;
     rdfs:label "expressedIn" ;
     rdfs:comment "Tissue, organ, biological sample, etc in which activity of this gene has been observed experimentally. For example brain, digestive system." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/expressedIn>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/expressedIn>,
         schema:expressedIn,
         <https://w3id.org/bioschemas/terms/expressedIn> ;
     schema:domainIncludes bioschemas:Gene ;
@@ -294,7 +294,7 @@ bioschemas:expressedIn a rdf:Property ;
 bioschemas:funding a rdf:Property ;
     rdfs:label "funding" ;
     rdfs:comment "The funding for the workflow" ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/funding>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/funding>,
         <https://w3id.org/bioschemas/terms/funding> ;
     schema:domainIncludes bioschemas:ComputationalWorkflow ;
     schema:rangeIncludes schema:Grant ;
@@ -303,7 +303,7 @@ bioschemas:funding a rdf:Property ;
 bioschemas:gender a rdf:Property ;
     rdfs:label "gender" ;
     rdfs:comment "Gender of the person. While http://schema.org/Male and http://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender" ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/gender>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/gender>,
         <https://w3id.org/bioschemas/terms/gender> ;
     schema:domainIncludes bioschemas:BioSample ;
     schema:rangeIncludes schema:GenderType,
@@ -313,7 +313,7 @@ bioschemas:gender a rdf:Property ;
 bioschemas:hasBioChemEntityPart a rdf:Property ;
     rdfs:label "hasBioChemEntityPart" ;
     rdfs:comment "Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part. Inverse property: isPartOfBioChemEntity" ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/hasBioChemEntityPart>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/hasBioChemEntityPart>,
         schema:hasBioChemEntityPart,
         <https://w3id.org/bioschemas/terms/hasBioChemEntityPart> ;
     schema:domainIncludes bioschemas:BioChemEntity ;
@@ -322,7 +322,7 @@ bioschemas:hasBioChemEntityPart a rdf:Property ;
 bioschemas:hasBioPolymerSequence a rdf:Property ;
     rdfs:label "hasBioPolymerSequence" ;
     rdfs:comment "A symbolic representation of a BioChemEnity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a Protein." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/hasBioPolymerSequence>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/hasBioPolymerSequence>,
         schema:hasBioPolymerSequence,
         <https://w3id.org/bioschemas/terms/hasBioPolymerSequence> ;
     schema:domainIncludes bioschemas:Gene,
@@ -332,7 +332,7 @@ bioschemas:hasBioPolymerSequence a rdf:Property ;
 bioschemas:hasMolecularFunction a rdf:Property ;
     rdfs:label "hasMolecularFunction" ;
     rdfs:comment "Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/hasMolecularFunction>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/hasMolecularFunction>,
         schema:hasMolecularFunction,
         <https://w3id.org/bioschemas/terms/hasMolecularFunction> ;
     schema:domainIncludes bioschemas:BioChemEntity ;
@@ -343,7 +343,7 @@ bioschemas:hasMolecularFunction a rdf:Property ;
 bioschemas:hasRepresentation a rdf:Property ;
     rdfs:label "hasRepresentation" ;
     rdfs:comment "A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/hasRepresentation>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/hasRepresentation>,
         schema:hasRepresentation,
         <https://w3id.org/bioschemas/terms/hasRepresentation> ;
     schema:domainIncludes bioschemas:BioChemEntity ;
@@ -352,7 +352,7 @@ bioschemas:hasRepresentation a rdf:Property ;
 bioschemas:hasStatus a rdf:Property ;
     rdfs:label "hasStatus" ;
     rdfs:comment "Schema:  One of pseudogene, dead, killed, live, predicted, suppressed." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/hasStatus>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/hasStatus>,
         <https://w3id.org/bioschemas/terms/hasStatus> ;
     schema:domainIncludes bioschemas:Gene ;
     schema:rangeIncludes schema:Text .
@@ -360,7 +360,7 @@ bioschemas:hasStatus a rdf:Property ;
 bioschemas:inChI a rdf:Property ;
     rdfs:label "inChI" ;
     rdfs:comment "Non-proprietary identifier for molecular entity that can be used in printed and electronic data sources thus enabling easier linking of diverse data compilations." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/inChI>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/inChI>,
         <https://w3id.org/bioschemas/terms/inChI> ;
     schema:domainIncludes bioschemas:MolecularEntity ;
     schema:rangeIncludes schema:Text .
@@ -368,7 +368,7 @@ bioschemas:inChI a rdf:Property ;
 bioschemas:inChIKey a rdf:Property ;
     rdfs:label "inChIKey" ;
     rdfs:comment "InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm)." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/inChIKey>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/inChIKey>,
         <https://w3id.org/bioschemas/terms/inChIKey> ;
     schema:domainIncludes bioschemas:MolecularEntity ;
     schema:rangeIncludes schema:Text .
@@ -376,7 +376,7 @@ bioschemas:inChIKey a rdf:Property ;
 bioschemas:input a rdf:Property ;
     rdfs:label "input" ;
     rdfs:comment "An input required to use the computational workflow (eg. Excel spreadsheet, BAM file)" ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/input>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/input>,
         <https://w3id.org/bioschemas/terms/input> ;
     schema:domainIncludes bioschemas:ComputationalWorkflow ;
     schema:rangeIncludes bioschemas:FormalParameter .
@@ -384,7 +384,7 @@ bioschemas:input a rdf:Property ;
 bioschemas:isControl a rdf:Property ;
     rdfs:label "isControl" ;
     rdfs:comment "Indicates whether the sample is being used as a normal control, may be in combination with another sample." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/isControl>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/isControl>,
         <https://w3id.org/bioschemas/terms/isControl> ;
     schema:domainIncludes bioschemas:BioSample ;
     schema:rangeIncludes schema:Boolean .
@@ -392,7 +392,7 @@ bioschemas:isControl a rdf:Property ;
 bioschemas:isEncodedByBioChemEntity a rdf:Property ;
     rdfs:label "isEncodedByBioChemEntity" ;
     rdfs:comment "Another BioChemEntity encoding this one. Inverse property: encodesBioChemEntity." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/isEncodedByBioChemEntity>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/isEncodedByBioChemEntity>,
         schema:isEncodedByBioChemEntity,
         <https://w3id.org/bioschemas/terms/isEncodedByBioChemEntity> ;
     schema:domainIncludes bioschemas:BioChemEntity ;
@@ -401,7 +401,7 @@ bioschemas:isEncodedByBioChemEntity a rdf:Property ;
 bioschemas:isInvolvedInBiologicalProcess a rdf:Property ;
     rdfs:label "isInvolvedInBiologicalProcess" ;
     rdfs:comment "Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/isInvolvedInBiologicalProcess>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/isInvolvedInBiologicalProcess>,
         schema:isInvolvedInBiologicalProcess,
         <https://w3id.org/bioschemas/terms/isInvolvedInBiologicalProcess> ;
     schema:domainIncludes bioschemas:BioChemEntity ;
@@ -412,7 +412,7 @@ bioschemas:isInvolvedInBiologicalProcess a rdf:Property ;
 bioschemas:isLocatedInSubcellularLocation a rdf:Property ;
     rdfs:label "isLocatedInSubcellularLocation" ;
     rdfs:comment "Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/isLocatedInSubcellularLocation>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/isLocatedInSubcellularLocation>,
         schema:isLocatedInSubcellularLocation,
         <https://w3id.org/bioschemas/terms/isLocatedInSubcellularLocation> ;
     schema:domainIncludes bioschemas:BioChemEntity ;
@@ -423,7 +423,7 @@ bioschemas:isLocatedInSubcellularLocation a rdf:Property ;
 bioschemas:isPartOfBioChemEntity a rdf:Property ;
     rdfs:label "isPartOfBioChemEntity" ;
     rdfs:comment "Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: hasBioChemEntityPart" ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/isPartOfBioChemEntity>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/isPartOfBioChemEntity>,
         schema:isPartOfBioChemEntity,
         <https://w3id.org/bioschemas/terms/isPartOfBioChemEntity> ;
     schema:domainIncludes bioschemas:BioChemEntity ;
@@ -432,7 +432,7 @@ bioschemas:isPartOfBioChemEntity a rdf:Property ;
 bioschemas:itemLocation a rdf:Property ;
     rdfs:label "itemLocation" ;
     rdfs:comment "Current location of the item. " ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/itemLocation>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/itemLocation>,
         <https://w3id.org/bioschemas/terms/itemLocation> ;
     schema:domainIncludes bioschemas:BioSample ;
     schema:rangeIncludes schema:Place,
@@ -442,7 +442,7 @@ bioschemas:itemLocation a rdf:Property ;
 bioschemas:iupacName a rdf:Property ;
     rdfs:label "iupacName" ;
     rdfs:comment "Systematic method of naming chemical compounds as recommended by the International Union of Pure and Applied Chemistry (IUPAC)." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/iupacName>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/iupacName>,
         schema:iupacName,
         <https://w3id.org/bioschemas/terms/iupacName> ;
     schema:domainIncludes bioschemas:MolecularEntity ;
@@ -451,7 +451,7 @@ bioschemas:iupacName a rdf:Property ;
 bioschemas:locationCreated a rdf:Property ;
     rdfs:label "locationCreated" ;
     rdfs:comment "The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork. " ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/locationCreated>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/locationCreated>,
         <https://w3id.org/bioschemas/terms/locationCreated> ;
     schema:domainIncludes bioschemas:BioSample ;
     schema:rangeIncludes schema:Place ;
@@ -460,7 +460,7 @@ bioschemas:locationCreated a rdf:Property ;
 bioschemas:molecularFormula a rdf:Property ;
     rdfs:label "molecularFormula" ;
     rdfs:comment "The empirical formula is the simplest whole number ratio of all the atoms in a molecule." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/molecularFormula>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/molecularFormula>,
         schema:molecularFormula,
         <https://w3id.org/bioschemas/terms/molecularFormula> ;
     schema:domainIncludes bioschemas:MolecularEntity ;
@@ -469,7 +469,7 @@ bioschemas:molecularFormula a rdf:Property ;
 bioschemas:molecularWeight a rdf:Property ;
     rdfs:label "molecularWeight" ;
     rdfs:comment "This is the molecular weight of the entity being described, not of the parent. Units should be included in the form '<Number> <unit>', for example '12 amu' or as '<QuantitativeValue>." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/molecularWeight>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/molecularWeight>,
         schema:molecularWeight,
         <https://w3id.org/bioschemas/terms/molecularWeight> ;
     schema:domainIncludes bioschemas:MolecularEntity ;
@@ -479,7 +479,7 @@ bioschemas:molecularWeight a rdf:Property ;
 bioschemas:monoisotopicMolecularWeight a rdf:Property ;
     rdfs:label "monoisotopicMolecularWeight" ;
     rdfs:comment "The monoisotopic mass is the sum of the masses of the atoms in a molecule using the unbound, ground-state, rest mass of the principal (most abundant) isotope for each element instead of the isotopic average mass. Please include the units the form '<Number> <unit>', for example '770.230488 g/mol' or as '<QuantitativeValue>." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/monoisotopicMolecularWeight>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/monoisotopicMolecularWeight>,
         schema:monoisotopicMolecularWeight,
         <https://w3id.org/bioschemas/terms/monoisotopicMolecularWeight> ;
     schema:domainIncludes bioschemas:MolecularEntity ;
@@ -489,7 +489,7 @@ bioschemas:monoisotopicMolecularWeight a rdf:Property ;
 bioschemas:output a rdf:Property ;
     rdfs:label "output" ;
     rdfs:comment "An output produced by the workflow" ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/output>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/output>,
         <https://w3id.org/bioschemas/terms/output> ;
     schema:domainIncludes bioschemas:ComputationalWorkflow ;
     schema:rangeIncludes bioschemas:FormalParameter .
@@ -498,7 +498,7 @@ bioschemas:parentTaxon a rdf:Property ;
     rdfs:label "parentTaxon" ;
     rdfs:comment """Closest parent taxon of the taxon in question.
 Inverse property: childTaxon Direct, most proximate higher-rank parent taxon""" ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/parentTaxon>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/parentTaxon>,
         schema:parentTaxon,
         <https://w3id.org/bioschemas/terms/parentTaxon> ;
     schema:domainIncludes bioschemas:Taxon ;
@@ -509,7 +509,7 @@ Inverse property: childTaxon Direct, most proximate higher-rank parent taxon""" 
 bioschemas:potentialUse a rdf:Property ;
     rdfs:label "potentialUse" ;
     rdfs:comment "Intended use of the BioChemEntity by humans. " ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/potentialUse>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/potentialUse>,
         schema:potentialUse,
         <https://w3id.org/bioschemas/terms/potentialUse> ;
     schema:domainIncludes bioschemas:ChemicalSubstance,
@@ -519,7 +519,7 @@ bioschemas:potentialUse a rdf:Property ;
 bioschemas:samplingAge a rdf:Property ;
     rdfs:label "samplingAge" ;
     rdfs:comment "The age of the object when the Sample was created. " ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/samplingAge>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/samplingAge>,
         <https://w3id.org/bioschemas/terms/samplingAge> ;
     schema:domainIncludes bioschemas:BioSample ;
     schema:rangeIncludes schema:Integer .
@@ -527,7 +527,7 @@ bioschemas:samplingAge a rdf:Property ;
 bioschemas:scientificName a rdf:Property ;
     rdfs:label "scientificName" ;
     rdfs:comment "A TaxonName representing the currently valid (zoological) or accepted (botanical) name for that taxon." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/scientificName>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/scientificName>,
         <https://w3id.org/bioschemas/terms/scientificName> ;
     schema:domainIncludes bioschemas:Taxon ;
     schema:rangeIncludes bioschemas:TaxonName,
@@ -537,7 +537,7 @@ bioschemas:scientificName a rdf:Property ;
 bioschemas:smiles a rdf:Property ;
     rdfs:label "smiles" ;
     rdfs:comment "A specification in form of a line notation for describing the structure of chemical species using short ASCII strings." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/smiles>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/smiles>,
         schema:smiles,
         <https://w3id.org/bioschemas/terms/smiles> ;
     schema:domainIncludes bioschemas:MolecularEntity ;
@@ -546,7 +546,7 @@ bioschemas:smiles a rdf:Property ;
 bioschemas:softwareRequirements a rdf:Property ;
     rdfs:label "softwareRequirements" ;
     rdfs:comment "Renaming schema.org/requirements as softwareRequirements. Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime). Supersedes requirements. " ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/softwareRequirements>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/softwareRequirements>,
         <https://w3id.org/bioschemas/terms/softwareRequirements> ;
     schema:domainIncludes bioschemas:ComputationalWorkflow ;
     schema:rangeIncludes schema:Text,
@@ -556,7 +556,7 @@ bioschemas:softwareRequirements a rdf:Property ;
 bioschemas:taxonRank a rdf:Property ;
     rdfs:label "taxonRank" ;
     rdfs:comment "The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary (e.g. the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs) " ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/taxonRank>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/taxonRank>,
         schema:taxonRank,
         <https://w3id.org/bioschemas/terms/taxonRank> ;
     schema:domainIncludes bioschemas:Taxon,
@@ -568,7 +568,7 @@ bioschemas:taxonRank a rdf:Property ;
 bioschemas:taxonomicRange a rdf:Property ;
     rdfs:label "taxonomicRange" ;
     rdfs:comment "The taxonomic grouping of the organism that expresses, encodes, or in someway related to the BioChemEntity." ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/taxonomicRange>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/taxonomicRange>,
         schema:taxonomicRange,
         <https://w3id.org/bioschemas/terms/taxonomicRange> ;
     schema:domainIncludes bioschemas:BioChemEntity ;
@@ -580,7 +580,7 @@ bioschemas:taxonomicRange a rdf:Property ;
 bioschemas:valueRequired a rdf:Property ;
     rdfs:label "valueRequired" ;
     rdfs:comment "If the FormalParameter must be specified. This is commonly only used for Inputs" ;
-    owl:equivalentProperty <https://discovery.biothings.io/view/bioschemastypes/valueRequired>,
+    owl:equivalentProperty <https://discovery.biothings.io/ns/bioschemastypes/valueRequired>,
         <https://w3id.org/bioschemas/terms/valueRequired> ;
     schema:domainIncludes bioschemas:FormalParameter ;
     schema:rangeIncludes schema:Boolean .
