@@ -65,16 +65,417 @@ version: '0.3-DRAFT'
          defined externally.
        </td>
      </tr>
-     <tr>
-       <th><a href="http://schema.org/alternateName">alternateName</a></th>
+      
+    <tr>
+       <th><a href="http://schema.org/alternateIdentifier">alternateIdentifier</a></th>
        <td>
          <a href="http://schema.org/Text">Text</a>
        </td>
        <td>
-         An alias for the item.
+            An additional identifier for the same instance of the resource.
+       </td>
+     </tr> 
+
+    <tr>
+       <th><a href="http://schema.org/alternateIdentifier">alternateIdentifier</a></th>
+       <td>
+         <a href="http://schema.org/Text">Text</a>
+       </td>
+       <td>
+            An additional identifier for the same instance of the resource.
+       </td>
+     </tr> 
+      
+     <tr>
+       <th><a href="https://schema.org/keywords">keywords</a></th>
+       <td>
+         <a href="http://schema.org/Text">Text</a>
+       </td>
+       <td>
+         Terms that capture the main subjects e.g. cancer, plant biology.
        </td>
      </tr>
-     <tr>
+
+   <tr>
+       <th><a href="https://schema.org/dateCollected">dateCollected</a></th>
+       <td>
+         <a href="https://schema.org/Date">Date</a>
+         <a href="https://schema.org/DateTime">DateTime</a>          
+       </td>
+       <td>
+         The date on which the sample was collected.
+       </td>
+     </tr>
+
+   <tr>
+       <th><a href="https://schema.org/datePublished">datePublished</a></th>
+       <td>
+         <a href="https://schema.org/Date">Date</a>
+         <a href="https://schema.org/DateTime">DateTime</a>          
+       </td>
+       <td>
+         The date when the record of the sample will be made publicly available.
+       </td>
+     </tr>
+
+   <tr>
+       <th><a href="https://schema.org/dateModified">dateModified</a></th>
+       <td>
+         <a href="https://schema.org/Date">Date</a>
+         <a href="https://schema.org/DateTime">DateTime</a>          
+       </td>
+       <td>
+         The date the sample record was last updated.
+       </td>
+     </tr>
+
+   <tr>
+       <th><a href="https://schema.org/dateCreated">dateCreated</a></th>
+       <td>
+         <a href="https://schema.org/Date">Date</a>
+         <a href="https://schema.org/DateTime">DateTime</a>          
+       </td>
+       <td>
+         The date the sample was created or added to a DataFeed.
+       </td>
+     </tr>
+
+   <tr>
+       <th><a href="https://schema.org/processingDate">processingDate</a></th>
+       <td>
+         <a href="https://schema.org/Date">Date</a>
+         <a href="https://schema.org/DateTime">DateTime</a>          
+       </td>
+       <td>
+         The date the sample was processed or used in a method.
+       </td>
+     </tr>
+
+   <tr>
+       <th><a href="https://schema.org/submitter">submitter</a></th>
+       <td>
+         <a href="https://schema.org/Person">Person</a>
+         <a href="https://schema.org/Organization">Organization</a>          
+       </td>
+       <td>
+         The person or organization that registers the sample.
+       </td>
+     </tr>
+
+   <tr>
+       <th><a href="https://schema.org/maintainer">maintainer</a></th>
+       <td>
+         <a href="https://schema.org/Person">Person</a>
+         <a href="https://schema.org/Organization">Organization</a>          
+       </td>
+       <td>
+         The Person or Organization who is responsible for the Sample.
+       </td>
+     </tr>
+
+      <tr>
+       <th><a href="https://schema.org/collector">collector</a></th>
+       <td>
+         <a href="https://schema.org/Person">Person</a>
+         <a href="https://schema.org/Organization">Organization</a>          
+       </td>
+       <td>
+         The Person or Organization who collected the Sample.
+       </td>
+     </tr>
+
+      <tr>
+       <th><a href="https://schema.org/contributor">contributor</a></th>
+       <td>
+         <a href="https://schema.org/Person">Person</a>
+         <a href="https://schema.org/Organization">Organization</a>          
+       </td>
+       <td>
+         A person or organization that contributes to the work.
+       </td>
+     </tr>
+
+      <tr>
+       <th><a href="https://schema.org/contactPoint">contactPoint</a></th>
+       <td>
+         <a href="https://schema.org/Person">Person</a>
+         <a href="https://schema.org/Organization">Organization</a>          
+       </td>
+       <td>
+         Person or organization that can be contacted for more information or support.
+       </td>
+     </tr>
+
+    <tr>
+       <th><a href="https://schema.org/collectionMethod">collectionMethod</a></th>
+       <td>
+         <a href="https://schema.org/Text">Text</a>
+       </td>
+       <td>
+         Provide information about the conditions and methods of acquisition of samples.
+       </td>
+     </tr>
+
+    <tr>
+       <th><a href="https://schema.org/instrument">instrument</a></th>
+       <td>
+         <a href="https://schema.org/Text">Text</a>
+         <a href="https://schema.org/URL">URL</a>
+       </td>
+       <td>
+         Provide description of instruments and devices used in collecting, processing and analysis of samples. 
+       </td>
+     </tr>
+
+    <tr>
+       <th><a href="https://schema.org/locationOfOrigin">locationOfOrigin</a></th>
+       <td>
+         <a href="https://schema.org/Place">Place</a>
+         <a href="https://schema.org/GeoCoordinates">GeoCoordinates</a>
+         <a href="https://schema.org/Text">Text</a>
+       </td>
+       <td>
+         The location from which the sample was originally collected. 
+       </td>
+     </tr>
+
+    <tr>
+       <th><a href="https://schema.org/environmentSystem">environmentSystem</a></th>
+       <td>
+         <a href="https://schema.org/Text">Text</a>
+        </td>
+       <td>
+         A category or description of the habitat that describes elements of an ecosystem where the sample was collected. Where possible use controlled vocabulary such as ENVO. 
+       </td>
+     </tr>
+
+    <tr>
+       <th><a href="https://schema.org/locationCreated">locationCreated</a></th>
+       <td>
+         <a href="https://schema.org/Place">Place</a>
+         <a href="https://schema.org/GeoCoordinates">GeoCoordinates</a>
+         <a href="https://schema.org/Text">Text</a>
+       </td>
+       <td>
+         The place where a sample underwent processing or creation, distinct from its original location. 
+       </td>
+     </tr>
+
+    <tr>
+       <th><a href="https://schema.org/itemLocation">itemLocation</a></th>
+       <td>
+         <a href="https://schema.org/Place">Place</a>
+         <a href="https://schema.org/GeoCoordinates">GeoCoordinates</a>
+         <a href="https://schema.org/Text">Text</a>
+       </td>
+       <td>
+         Current location of the item. 
+       </td>
+     </tr>
+
+    <tr>
+       <th><a href="https://schema.org/sampleQuantity">sampleQuantity/a></th>
+       <td>
+         <a href="https://schema.org/QuantitativeValue">Quantitativevalue</a>
+        </td>
+       <td>
+         A numeric value for a measurement of the size of a sample.
+       </td>
+     </tr>
+
+    <tr>
+       <th><a href="https://schema.org/sampleState">sampleState</a></th>
+       <td>
+         <a href="https://schema.org/Text">Text</a>
+        </td>
+       <td>
+         Specify the composition and state of the sample, indicating which form it exisits in, e.g. gas, liquid, solid. 
+       </td>
+     </tr>
+
+    <tr>
+       <th><a href="https://schema.org/sampleState">sampleState</a></th>
+       <td>
+         <a href="https://schema.org/Text">Text</a>
+       </td>
+       <td>
+         Specify the composition and state of the sample, indicating which form it exisits in, e.g. gas, liquid, solid. 
+       </td>
+     </tr>
+
+    <tr>
+       <th><a href="https://schema.org/sampleType">sampleType</a></th>
+       <td>
+         <a href="https://schema.org/Text">Text</a>
+         <a href="https://schema.org/URL">URL</a>
+       </td>
+       <td>
+        Indicate the type of sample. 
+       </td>
+     </tr>
+
+    <tr>
+       <th><a href="https://schema.org/sampleStorageTemperature">sampleStorageTemperature/a></th>
+       <td>
+         <a href="https://schema.org/QuantitativeValue">Quantitativevalue</a>
+        </td>
+       <td>
+         The temperature at which the sample is stored.
+       </td>
+     </tr>
+
+    <tr>
+       <th><a href="https://schema.org/sampleProcess">sampleProcess</a></th>
+       <td>
+         <a href="https://schema.org/Text">Text</a>
+       </td>
+       <td>
+         The processing technique that was applied to the sample, methods used to prepare the samples. 
+       </td>
+     </tr>
+
+    <tr>
+       <th><a href="https://schema.org/experimentalPurpose">experimentalPurpose</a></th>
+       <td>
+         <a href="https://schema.org/Text">Text</a>
+       </td>
+       <td>
+         Describe the planned or executed experimental procedures involving the samples. 
+       </td>
+     </tr>
+
+    <tr>
+       <th><a href="https://schema.org/funding">funding</a></th>
+       <td>
+         <a href="https://schema.org/Grant">Grant</a>
+       </td>
+       <td>
+         Provide funding information. 
+       </td>
+     </tr>
+      
+    <tr>
+       <th><a href="https://schema.org/project">project</a></th>
+       <td>
+         <a href="https://schema.org/ResearchProject">ResearchProject</a>
+       </td>
+       <td>
+         Information on the project. 
+       </td>
+     </tr>
+
+    <tr>
+       <th><a href="https://schema.org/accessConditions">accessConditions</a></th>
+       <td>
+         <a href="https://schema.org/Text">Text</a>
+       </td>
+       <td>
+         Sample access statement outlining conditions/requirements need to be fulfilled before access to the sample is granted. 
+       </td>
+     </tr>
+
+   <tr>
+       <th><a href="https://schema.org/ethics">ethics</a></th>
+       <td>
+         <a href="https://schema.org/Text">Text</a>
+       </td>
+       <td>
+         Indicate which ethics policies are associated with the sample. 
+       </td>
+     </tr>
+
+   <tr>
+       <th><a href="https://schema.org/studyTitle">studyTitle</a></th>
+       <td>
+         <a href="https://schema.org/Text">Text</a>
+       </td>
+       <td>
+         Title of the study to which the samples belong.
+       </td>
+     </tr>      
+
+   <tr>
+       <th><a href="https://schema.org/studyID">studyID</a></th>
+       <td>
+         <a href="https://schema.org/Text">Text</a>
+         <a href="https://schema.org/URL">URL</a>
+       </td>
+       <td>
+         Indicate the study ID.
+       </td>
+     </tr>    
+      
+   <tr>
+       <th><a href="https://schema.org/sampleAvailability">sampleAvailability</a></th>
+       <td>
+         <a href="https://schema.org/Boolean">Boolean</a>
+       </td>
+       <td>
+        Indicate whether this resource is available for reuse.
+       </td>
+     </tr>   
+
+   <tr>
+       <th><a href="https://schema.org/isRelatedTo">isRelatedTo</a></th>
+       <td>
+         <a href="https://schema.org/CreativeWork">CreativeWork</a>
+         <a href="https://schema.org/ImageObject">ImageObject</a>
+         <a href="https://schema.org/URL">URL</a>
+         <a href="https://schema.org/Text">Text</a>
+       </td>
+       <td>
+        Describe related items including other resources related to the samples.
+       </td>
+     </tr>   
+
+   <tr>
+       <th><a href="https://schema.org/hasPart">hasPart</a></th>
+       <td>
+         <a href="https://schema.org/CreativeWork">CreativeWork</a>
+         <a href="https://schema.org/ImageObject">ImageObject</a>
+         <a href="https://schema.org/URL">URL</a>
+         <a href="https://schema.org/Text">Text</a>
+       </td>
+       <td>
+        Describe related items including other resources related to the samples.
+       </td>
+     </tr>         
+
+   <tr>
+       <th><a href="https://schema.org/isPartOf">isPartOf</a></th>
+       <td>
+         <a href="https://schema.org/CreativeWork">CreativeWork</a>
+         <a href="https://schema.org/ImageObject">ImageObject</a>
+         <a href="https://schema.org/URL">URL</a>
+         <a href="https://schema.org/Text">Text</a>
+       </td>
+       <td>
+        Describe related items including other resources related to the samples.
+       </td>
+     </tr>     
+
+    <tr>
+       <th><a href="https://schema.org/citation">citation</a></th>
+       <td>
+         <a href="https://schema.org/CreativeWork">CreativeWork</a>
+         <a href="https://schema.org/Text">Text</a>
+       </td>
+       <td>
+        List publications where the sample is mentioned or described.
+       </td>
+     </tr>   
+
+   <tr>
+       <th><a href="https://schema.org/isControl">isConrol</a></th>
+       <td>
+         <a href="https://schema.org/Boolean">Boolean</a>
+       </td>
+       <td>
+        Indicates whether the sample is being used as a normal control, may be in combination with another sample.
+       </td>
+     </tr>   
+      
+      <tr>
        <th><a href="http://schema.org/description">description</a></th>
        <td>
          <a href="http://schema.org/Text">Text</a>
