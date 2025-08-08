@@ -50,31 +50,6 @@ version: '0.3-DRAFT'
          Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br />
       </td>
      </tr>
-     <tr class="reu_props_sdo">
-        <td colspan="3">Properties from <a href="http://schema.org/Thing">Thing</a></td>
-     </tr>
-     <tr>
-       <th><a href="http://schema.org/additionalType">additionalType</a></th>
-       <td>
-         <a href="http://schema.org/URL">URL</a>
-       </td>
-       <td>
-         An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax.
-         This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax -
-         the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those
-         defined externally.
-       </td>
-     </tr>
-      
-    <tr>
-       <th><a href="http://schema.org/alternateIdentifier">alternateIdentifier</a></th>
-       <td>
-         <a href="http://schema.org/Text">Text</a>
-       </td>
-       <td>
-            An additional identifier for the same instance of the resource.
-       </td>
-     </tr> 
 
     <tr>
        <th><a href="http://schema.org/alternateIdentifier">alternateIdentifier</a></th>
@@ -466,7 +441,7 @@ version: '0.3-DRAFT'
      </tr>   
 
    <tr>
-       <th><a href="https://schema.org/isControl">isConrol</a></th>
+       <th><a href="https://schema.org/isControl">isControl</a></th>
        <td>
          <a href="https://schema.org/Boolean">Boolean</a>
        </td>
@@ -475,6 +450,23 @@ version: '0.3-DRAFT'
        </td>
      </tr>   
       
+   
+     <tr class="reu_props_sdo">
+        <td colspan="3">Properties from <a href="http://schema.org/Thing">Thing</a></td>
+     </tr>
+     <tr>
+       <th><a href="http://schema.org/additionalType">additionalType</a></th>
+       <td>
+         <a href="http://schema.org/URL">URL</a>
+       </td>
+       <td>
+         An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax.
+         This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax -
+         the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those
+         defined externally.
+       </td>
+     </tr>
+
       <tr>
        <th><a href="http://schema.org/description">description</a></th>
        <td>
