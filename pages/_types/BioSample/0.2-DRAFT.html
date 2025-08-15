@@ -11,7 +11,7 @@ redirect_from:
 previous_version: '0.1-DRAFT-2019_06_14'
 previous_release:
 
-dateModified: 2025-08-01
+dateModified: 2025-08-15
 description: "A biological material entity that is representative of a whole. <br/> Comments: Typically samples are intended to be representative of the whole or aspects thereof. Examples of samples include biomedical samples (blood, urine) and plant specimens held at herbaria."
 hierarchy:
 - Thing
@@ -43,18 +43,51 @@ version: '0.2-DRAFT'
            Properties from <a style="color: #0B794B;" href="/{{page.name}}">{{page.name}}</a> (pending schema.org integration).
         </td>
      </tr>
-
-     <tr id="additionalProperty">
-       <th><a href="http://schema.org/additionalProperty">additionalProperty</a></th>
+     <tr id="scientificName">
+      <th style="color: #0B794B;">scientificName</th>
        <td>
-         <a href="http://schema.org/PropertyValue">PropertyValue</a>
+         <a href="http://schema.org/DefinedTerm">DefinedTerm</a>
+       <br/>
+         <a href="http://schema.org/Text">Text</a>
        </td>
-       <td>A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br/>
-         Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br />
+       <td>The full scientific name (order, family, subfamily, genus, specificEpithet). <br/>
       </td>
      </tr>
-     <tr id="collector">
-       <th style="color: #0B794B;">collector</th>
+     <tr>
+       <th><a href="https://schema.org/AnatomicalSystem">anatomicalSystem</a></th>
+       <td>
+         <a href="https://schema.org/AnatomicalSystem">AnatomicalSystem</a>          
+       </td>
+       <td>
+         Indicate the anatomical system from which the sample is collect, e.g. circulatory, digestive, endocrine, immune and other systems.
+       </td>
+     </tr>
+
+     <th><a href="https://schema.org/AnatomicalSystem">anatomicalSystem</a></th>
+       <td>
+         <a href="https://schema.org/AnatomicalStructure">AnatomicalStructure</a><br/>
+       </td>
+       <td>
+        Indicate the organ, tissues the sample was collected from.</td>
+     </tr>
+     <th><a>sex</a></th>
+       <td>
+         <a href="https://schema.org/Text">Text</a><br/>
+       </td>
+       <td>
+       The biological sex of the individual from which the sample was obtained.</td>
+     </tr>     
+     
+
+
+
+
+
+
+
+
+     <tr id="anatomicalSystem">
+       <th>anatomicalSystem</th>
        <td>
          <a href="http://schema.org/Organization">Organization</a> or <b/>
          <a href="http://schema.org/Person">Person</a>
