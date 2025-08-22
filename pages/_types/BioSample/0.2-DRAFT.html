@@ -10,7 +10,6 @@ redirect_from:
 
 previous_version: '0.1-DRAFT-2019_06_14'
 previous_release:
-
 dateModified: 2025-08-15
 description: "A biological material entity that is representative of a whole. <br/> Comments: Typically samples are intended to be representative of the whole or aspects thereof. Examples of samples include biomedical samples (blood, urine) and plant specimens held at herbaria."
 hierarchy:
@@ -21,7 +20,7 @@ group: samples
 name: BioSample
 parent_type: BioChemEntity
 spec_type: Type
-status: release #Revert to revision when working on the next version
+status: release # Revert to 'revision' when working on the next version
 version: '0.2-DRAFT'
 ---
 
@@ -48,34 +47,33 @@ version: '0.2-DRAFT'
      <tr id="scientificName">
       <th style="color: #0B794B;">scientificName</th>
        <td>
-         <a href="http://schema.org/DefinedTerm">DefinedTerm</a>
+         <a href="https://schema.org/DefinedTerm">DefinedTerm</a>
        <br/>
-         <a href="http://schema.org/Text">Text</a>
+         <a href="https://schema.org/Text">Text</a>
        </td>
        <td>The full scientific name (order, family, subfamily, genus, specificEpithet). <br/>
       </td>
      </tr>
 
-       <tr id="anatomicalSysten">
-        <th a href="https://schema.org/AnatomicalSystem">anatomicalSystem</a></th>
-    
+       <tr id="anatomicalSystem">
+        <th style="color: #0B794B;">anatomicalSystem</th>
        <td>
          <a href="https://schema.org/AnatomicalSystem">AnatomicalSystem</a> or<br/>
          <a href="https://schema.org/DefinedTerm">DefinedTerm</a><br/>          
        </td>
        <td>
-         Indicate the anatomical system from which the sample is collect, e.g. circulatory, digestive, endocrine, immune and other systems.
+         Indicate the anatomical system from which the sample was collected, e.g., circulatory, digestive, endocrine, immune.
        </td>
      </tr>
 
     <tr id="anatomicalStructure">
-       <th a href="https://schema.org/AnatomicalStructure">AnatomicalStructure</a></th>
+       <th style="color: #0B794B;">anatomicalStructure</th>
       <td>
          <a href="https://schema.org/AnatomicalStructure">AnatomicalStructure</a>or<br/>
          <a href="https://schema.org/DefinedTerm">DefinedTerm</a><br/>
        </td>
        <td>
-        Indicate the organ, tissues the sample was collected from.</td><br/>
+        Indicate the organ or tissues the sample was collected from.</td>
      </tr>
     <tr id="sex">
       <th style="color: #0B794B;">sex</th>
@@ -83,7 +81,7 @@ version: '0.2-DRAFT'
          <a href="https://schema.org/Text">Text</a><br/>
        </td>
        <td>
-       The biological sex of the individual from which the sample was obtained.</td><br/>
+       The biological sex of the individual from which the sample was obtained.</td>
      </tr>     
      <tr id="developmentalStage">
       <th style="color: #0B794B;">developmentalStage</th>
@@ -93,22 +91,21 @@ version: '0.2-DRAFT'
          <a href="https://schema.org/DefinedTerm">DefinedTerm</a><br/>
        </td>
        <td>
-       A temporal subdivision of a developmental process, indicating the age or stage of the object when the sample was created.</td><br/>
+       A temporal subdivision of a developmental process, indicating the age or stage of the object when the sample was created.</td>
      </tr>    
 
 
 
      <!-- BCE -->
      <tr class="reu_props_sdo">
-        <td colspan="3">Properties from <a href="https://pending.schema.org/BioChemEntity">BioChemEntity</a>
-    
+        <td colspan="3">Properties from <a href="https://pending.schema.org/BioChemEntity">BioChemEntity</a></td>
       </tr>
        <tr>
-       <th a href="https://pending.schema.org/associatedDisease" >associatedDisease</a></th>
+       <th><a href="https://pending.schema.org/associatedDisease">associatedDisease</a></th>
        <td>
-         <a href="http://schema.org/MedicalCondition">MedicalCondition</a> or<br/>
-         <a href="http://schema.org/PropertyValue">PropertyValue</a> or<br/>
-         <a href="http://schema.org/URL">URL</a>
+         <a href="https://schema.org/MedicalCondition">MedicalCondition</a> or<br/>
+         <a href="https://schema.org/PropertyValue">PropertyValue</a> or<br/>
+         <a href="https://schema.org/URL">URL</a>
        </td>
        <td>
          Disease associated to this BioChemEntity. Such a disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue.
@@ -116,9 +113,9 @@ version: '0.2-DRAFT'
      </tr>
      
      <tr>
-       <th a href="https://pending.schema.org/biologicalRole">biologicalRole</a></th>
+       <th><a href="https://pending.schema.org/biologicalRole">biologicalRole</a></th>
        <td>
-         <a style="color: #0000CC;" href="http://schema.org/DefinedTerm">DefinedTerm</a>
+         <a style="color: #0000CC;" href="https://schema.org/DefinedTerm">DefinedTerm</a>
        </td>
        <td>
         A role played by the molecular entity within a biological context.
@@ -127,11 +124,11 @@ version: '0.2-DRAFT'
 
      
      <tr>
-       <th a href="https://pending.schema.org/isInvolvedInBiologicalProcess">isInvolvedInBiologicalProcess</a></th>
+       <th><a href="https://pending.schema.org/isInvolvedInBiologicalProcess">isInvolvedInBiologicalProcess</a></th>
        <td>
-							<a style="color: #0000CC;" href="http://schema.org/DefinedTerm">DefinedTerm</a> or</b>
-							<a href="http://schema.org/PropertyValue">PropertyValue</a> or<br/>
-							<a href="http://schema.org/URL">URL</a>
+							<a style="color: #0000CC;" href="https://schema.org/DefinedTerm">DefinedTerm</a> or<br/>
+							<a href="https://schema.org/PropertyValue">PropertyValue</a> or<br/>
+							<a href="https://schema.org/URL">URL</a>
        </td>
        <td>
          Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.
@@ -139,11 +136,11 @@ version: '0.2-DRAFT'
      </tr>
      
      <tr>
-       <th a href="https://pending.schema.org/isLocatedInSubcellularLocation">isLocatedInSubcellularLocation</a></th>
+       <th><a href="https://pending.schema.org/isLocatedInSubcellularLocation">isLocatedInSubcellularLocation</a></th>
        <td>
-							<a style="color: #0000CC;" href="http://schema.org/DefinedTerm">DefinedTerm</a> or</b>
-							<a href="http://schema.org/PropertyValue">PropertyValue</a> or<br/>
-							<a href="http://schema.org/URL">URL</a>
+							<a style="color: #0000CC;" href="https://schema.org/DefinedTerm">DefinedTerm</a> or<br/>
+							<a href="https://schema.org/PropertyValue">PropertyValue</a> or<br/>
+							<a href="https://schema.org/URL">URL</a>
        </td>
        <td>
          Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.
@@ -151,39 +148,34 @@ version: '0.2-DRAFT'
      </tr>
 
      <tr>
-       <th a href="https://pending.schema.org/taxonomicRange">taxonomicRange</a></th>
+       <th><a href="https://pending.schema.org/taxonomicRange">taxonomicRange</a></th>
        <td>
-       	 <a style="color: #0000CC;" href="http://schema.org/DefinedTerm">DefinedTerm</a> or</b>
+       	 <a style="color: #0000CC;" href="https://schema.org/DefinedTerm">DefinedTerm</a> or<br/>
          <a style="color: #0000CC;" href="https://schema.org/Taxon">Taxon</a> or<br/>
-         <a href="http://schema.org/Text">Text</a> or<br/>
-         <a href="http://schema.org/URL">URL</a>
+         <a href="https://schema.org/Text">Text</a> or<br/>
+         <a href="https://schema.org/URL">URL</a>
        </td>
        <td>
-         The taxonomic grouping of the organism that expresses, encodes, or in someway related to the BioChemEntity.
+         The taxonomic grouping of the organism that expresses, encodes, or in some way related to the BioChemEntity.
        </td>
      </tr>
 
 					<!-- Sample -->
-    <tr class="new_props_sdo">
-        <td colspan="3">
-           Properties from <a style="color: #0B794B;" href="https://bioschemas.org/types/Sample/0.3-DRAFT.html">Sample 0.3-DRAFT </a> (pending schema.org integration).
-        </td>
-     </tr>
     <tr id="additionalProperty">
-       <th><a href="http://schema.org/additionalProperty">additionalProperty</th>
+       <th><a href="https://schema.org/additionalProperty">additionalProperty</a></th>
        <td>
-         <a href="http://schema.org/PropertyValue">PropertyValue</a>
+         <a href="https://schema.org/PropertyValue">PropertyValue</a>
        </td>
-       <td>A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br/>
+       <td>A property-value pair representing additional characteristics of the entity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br/>
          
-        Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br />
+        Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br />
       </td>
      </tr>
 
     <tr>
-       <th><a href="http://schema.org/alternateIdentifier">alternateIdentifier</a></th>
+       <th style="color: #0B794B;">alternateIdentifier</th>
        <td>
-         <a href="http://schema.org/Text">Text</a>
+         <a href="https://schema.org/Text">Text</a>
        </td>
        <td>
             An additional identifier for the same instance of the resource.
@@ -201,7 +193,7 @@ version: '0.2-DRAFT'
      </tr>
 
    <tr>
-       <th><a href="https://schema.org/dateCollected">dateCollected</a></th>
+       <th style="color: #0B794B;">dateCollected</th>
        <td>
          <a href="https://schema.org/Date">Date</a> or<br/>
          <a href="https://schema.org/DateTime">DateTime</a>          
@@ -245,7 +237,7 @@ version: '0.2-DRAFT'
      </tr>
 
    <tr>
-       <th><a href="https://schema.org/processingDate">processingDate</a></th>
+       <th style="color: #0B794B;">processingDate</th>
        <td>
          <a href="https://schema.org/Date">Date</a> or<br/>
          <a href="https://schema.org/DateTime">DateTime</a>          
@@ -256,7 +248,7 @@ version: '0.2-DRAFT'
      </tr>
 
    <tr>
-       <th><a href="https://schema.org/submitter">submitter</a></th>
+       <th style="color: #0B794B;">submitter</th>
        <td>
          <a href="https://schema.org/Person">Person</a> or<br/>
          <a href="https://schema.org/Organization">Organization</a>          
@@ -278,7 +270,7 @@ version: '0.2-DRAFT'
      </tr>
 
       <tr>
-       <th><a href="https://schema.org/collector">collector</a></th>
+       <th style="color: #0B794B;">collector</th>
        <td>
          <a href="https://schema.org/Person">Person</a> or<br/>
          <a href="https://schema.org/Organization">Organization</a>          
@@ -311,7 +303,7 @@ version: '0.2-DRAFT'
      </tr>
 
     <tr>
-       <th><a href="https://schema.org/collectionMethod">collectionMethod</a></th>
+       <th style="color: #0B794B;">collectionMethod</th>
        <td>
          <a href="https://schema.org/Text">Text</a>
        </td>
@@ -327,12 +319,12 @@ version: '0.2-DRAFT'
          <a href="https://schema.org/URL">URL</a>
        </td>
        <td>
-         Provide description of instruments and devices used in collecting, processing and analysis of samples. 
+         Description of instruments and devices used in collecting, processing, and analyzing samples.
        </td>
      </tr>
 
     <tr>
-       <th><a href="https://schema.org/locationOfOrigin">locationOfOrigin</a></th>
+       <th style="color: #0B794B;">locationOfOrigin</th>
        <td>
          <a href="https://schema.org/Place">Place</a> or<br/>
          <a href="https://schema.org/GeoCoordinates">GeoCoordinates</a> or<br/>
@@ -344,12 +336,12 @@ version: '0.2-DRAFT'
      </tr>
 
     <tr>
-       <th><a href="https://schema.org/environmentSystem">environmentSystem</a></th>
+       <th style="color: #0B794B;">environmentSystem</th>
        <td>
          <a href="https://schema.org/Text">Text</a>
         </td>
        <td>
-         A category or description of the habitat that describes elements of an ecosystem where the sample was collected. Where possible use controlled vocabulary such as ENVO. 
+         A category or description of the habitat that describes elements of an ecosystem where the sample was collected. Where possible use controlled vocabularies such as ENVO.
        </td>
      </tr>
 
@@ -378,7 +370,7 @@ version: '0.2-DRAFT'
      </tr>
 
     <tr>
-       <th><a href="https://schema.org/sampleQuantity">sampleQuantity<a></th>
+       <th style="color: #0B794B;">sampleQuantity</th>
        <td>
          <a href="https://schema.org/QuantitativeValue">QuantitativeValue</a>
         </td>
@@ -386,15 +378,13 @@ version: '0.2-DRAFT'
          A numeric value for a measurement of the size of a sample.
        </td>
      </tr>
-
-
     <tr>
-       <th><a href="https://schema.org/sampleState">sampleState</a></th>
+       <th style="color: #0B794B;">sampleState</th>
        <td>
          <a href="https://schema.org/Text">Text</a>
        </td>
        <td>
-         Specify the composition and state of the sample, indicating which form it exisits in, e.g. gas, liquid, solid. 
+         Specify the composition and state of the sample, indicating which form it exists in, e.g., gas, liquid, solid. 
        </td>
      </tr>
 
@@ -410,7 +400,7 @@ version: '0.2-DRAFT'
      </tr>
 
     <tr>
-       <th><a href="https://schema.org/sampleStorageTemperature">sampleStorageTemperature</a></th>
+       <th style="color: #0B794B;">sampleStorageTemperature</th>
        <td>
          <a href="https://schema.org/QuantitativeValue">QuantitativeValue</a>
         </td>
@@ -420,7 +410,7 @@ version: '0.2-DRAFT'
      </tr>
 
     <tr>
-       <th><a href="https://schema.org/sampleProcess">sampleProcess</a></th>
+       <th style="color: #0B794B;">sampleProcess</th>
        <td>
          <a href="https://schema.org/Text">Text</a>
        </td>
@@ -430,7 +420,7 @@ version: '0.2-DRAFT'
      </tr>
 
     <tr>
-       <th><a href="https://schema.org/experimentalPurpose">experimentalPurpose</a></th>
+       <th style="color: #0B794B;">experimentalPurpose</th>
        <td>
          <a href="https://schema.org/Text">Text</a>
        </td>
@@ -450,7 +440,7 @@ version: '0.2-DRAFT'
      </tr>
       
     <tr>
-       <th><a href="https://schema.org/project">project</a></th>
+       <th style="color: #0B794B;">project</th>
        <td>
          <a href="https://schema.org/ResearchProject">ResearchProject</a>
        </td>
@@ -460,17 +450,17 @@ version: '0.2-DRAFT'
      </tr>
 
     <tr>
-       <th><a href="https://schema.org/accessConditions">accessConditions</a></th>
+       <th style="color: #0B794B;">accessConditions</th>
        <td>
          <a href="https://schema.org/Text">Text</a>
        </td>
        <td>
-         Sample access statement outlining conditions/requirements need to be fulfilled before access to the sample is granted. 
+         Sample access statement outlining conditions/requirements that need to be fulfilled before access to the sample is granted. 
        </td>
      </tr>
 
    <tr>
-       <th><a href="https://schema.org/ethics">ethics</a></th>
+       <th style="color: #0B794B;">ethics</th>
        <td>
          <a href="https://schema.org/Text">Text</a>
        </td>
@@ -480,7 +470,7 @@ version: '0.2-DRAFT'
      </tr>
 
    <tr>
-       <th><a href="https://schema.org/studyTitle">studyTitle</a></th>
+       <th style="color: #0B794B;">studyTitle</th>
        <td>
          <a href="https://schema.org/Text">Text</a>
        </td>
@@ -490,7 +480,7 @@ version: '0.2-DRAFT'
      </tr>      
 
    <tr>
-       <th><a href="https://schema.org/studyID">studyID</a></th>
+       <th style="color: #0B794B;">studyID</th>
        <td>
          <a href="https://schema.org/Text">Text</a> or<br/>
          <a href="https://schema.org/URL">URL</a>
@@ -501,7 +491,7 @@ version: '0.2-DRAFT'
      </tr>    
       
    <tr>
-       <th><a href="https://schema.org/sampleAvailability">sampleAvailability</a></th>
+       <th style="color: #0B794B;">sampleAvailability</th>
        <td>
          <a href="https://schema.org/Boolean">Boolean</a>
        </td>
@@ -561,23 +551,23 @@ version: '0.2-DRAFT'
      </tr>   
 
    <tr>
-       <th><a href="https://schema.org/isControl">isControl</a></th>
+       <th style="color: #0B794B;">isControl</th>
        <td>
          <a href="https://schema.org/Boolean">Boolean</a>
        </td>
        <td>
         Indicates whether the sample is being used as a normal control, may be in combination with another sample.
        </td>
-     </tr>   
+     </tr>      
       
-   
+     <!----Thing--->
      <tr class="reu_props_sdo">
-        <td colspan="3">Properties from <a href="http://schema.org/Thing">Thing</a></td>
+        <td colspan="3">Properties from <a href="https://schema.org/Thing">Thing</a></td>
      </tr>
      <tr>
-       <th><a href="http://schema.org/additionalType">additionalType</a></th>
+       <th><a href="https://schema.org/additionalType">additionalType</a></th>
        <td>
-         <a href="http://schema.org/URL">URL</a>
+         <a href="https://schema.org/URL">URL</a>
        </td>
        <td>
          An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax.
@@ -588,102 +578,105 @@ version: '0.2-DRAFT'
      </tr>
 
       <tr>
-       <th><a href="http://schema.org/description">description</a></th>
+       <th><a href="https://schema.org/description">description</a></th>
        <td>
-         <a href="http://schema.org/Text">Text</a>
+         <a href="https://schema.org/Text">Text</a>
        </td>
        <td>
-         A descripton of the item.
-       </td>
-     </tr>
-     <tr>
-       <th><a href="http://schema.org/disambiguatingDescription">disambiguatingDescription</a></th>
-       <td>
-         <a href="http://schema.org/Text">Text</a>
-       </td>
-       <td>
-         A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+         A description of the item.
        </td>
      </tr>
      <tr>
-       <th><a href="http://schema.org/identifier">identifier</a></th>
+       <th><a href="https://schema.org/disambiguatingDescription">disambiguatingDescription</a></th>
        <td>
-         <a href="http://schema.org/PropertyValue">PropertyValue</a> or<br/>
-         <a href="http://schema.org/Text">Text</a> or<br/>
-         <a href="http://schema.org/URL">URL</a>
+         <a href="https://schema.org/Text">Text</a>
        </td>
        <td>
-         The identifier property represents any kind of identifier for any kind of <a href="http://schema.org/Thing">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc.
+         A subproperty of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.
+       </td>
+     </tr>
+     <tr>
+       <th><a href="https://schema.org/identifier">identifier</a></th>
+       <td>
+         <a href="https://schema.org/PropertyValue">PropertyValue</a> or<br/>
+         <a href="https://schema.org/Text">Text</a> or<br/>
+         <a href="https://schema.org/URL">URL</a>
+       </td>
+       <td>
+         The identifier property represents any kind of identifier for any kind of <a href="https://schema.org/Thing">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc.
          Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links.
-         See <a href="http://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.
+         See <a href="https://schema.org/docs/datamodel.html#identifierBg">background notes</a> for more details.
        </td>
      </tr>
      <tr>
-       <th><a href="http://schema.org/image">image</a></th>
+       <th><a href="https://schema.org/image">image</a></th>
        <td>
-         <a href="http://schema.org/ImageObject">ImageObject</a> or<br/>
-         <a href="http://schema.org/URL">URL</a>
+         <a href="https://schema.org/ImageObject">ImageObject</a> or<br/>
+         <a href="https://schema.org/URL">URL</a>
        </td>
        <td>
-         An image of the item. This can be a <a href="http://schema.org/URL">URL</a> or a fully described <a href="http://schema.org/ImageObject">ImageObject</a>.
+         An image of the item. This can be a <a href="https://schema.org/URL">URL</a> or a fully described <a href="https://schema.org/ImageObject">ImageObject</a>.
        </td>
      </tr>
      <tr>
-       <th><a href="http://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
+       <th><a href="https://schema.org/mainEntityOfPage">mainEntityOfPage</a></th>
        <td>
-         <a href="http://schema.org/CreativeWork">CreativeWork</a> or<br/>
-         <a href="http://schema.org/URL">URL</a>
+         <a href="https://schema.org/CreativeWork">CreativeWork</a> or<br/>
+         <a href="https://schema.org/URL">URL</a>
        </td>
        <td>
          Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See
-         <a href="http://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/>
-         Inverse property: <a href="http://schema.org/mainEntity">mainEntity</a>
+         <a href="https://schema.org/docs/datamodel.html#mainEntityBackground">background notes</a> for details.<br/>
+         Inverse property: <a href="https://schema.org/mainEntity">mainEntity</a>
        </td>
      </tr>
      <tr>
-       <th><a href="http://schema.org/name">name</a></th>
+       <th><a href="https://schema.org/name">name</a></th>
        <td>
-         <a href="http://schema.org/Text">Text</a>
+         <a href="https://schema.org/Text">Text</a>
        </td>
        <td>
          The name of the item.
        </td>
      </tr>
      <tr>
-       <th><a href="http://schema.org/potentialAction">potentialAction</a></th>
+       <th><a href="https://schema.org/potentialAction">potentialAction</a></th>
        <td>
-         <a href="http://schema.org/Action">Action</a>
+         <a href="https://schema.org/Action">Action</a>
        </td>
        <td>
          Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
        </td>
      </tr>
      <tr>
-       <th><a href="http://schema.org/sameAs">sameAs</a></th>
+       <th><a href="https://schema.org/sameAs">sameAs</a></th>
        <td>
-         <a href="http://schema.org/URL">URL</a>
+         <a href="https://schema.org/URL">URL</a>
        </td>
        <td>
          URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
        </td>
      </tr>
      <tr>
-       <th><a style="color: #0000CC;" href="http://pending.schema.org/subjectOf">subjectOf</a></th>
+       <th><a href="https://pending.schema.org/subjectOf">subjectOf</a></th>
        <td>
-         <a href="http://schema.org/CreativeWork">CreativeWork</a> or<br/>
-         <a href="http://schema.org/Event">Event</a>
+         <a href="https://schema.org/CreativeWork">CreativeWork</a> or<br/>
+         <a href="https://schema.org/Event">Event</a>
        </td>
        <td>
-         A CreativeWork or Event about this Thing..<br/>
-         Inverse property: <a href="http://schema.org/about">about</a>.
+         A CreativeWork or Event about this Thing.<br/>
+         Inverse property: <a href="https://schema.org/about">about</a>.
        </td>
      </tr>
      <tr>
-       <th><a href="http://schema.org/url">url</a></th>
+       <th><a href="https://schema.org/url">url</a></th>
        <td>
-         <a href="http://schema.org/URL">URL</a>
+         <a href="https://schema.org/URL">URL</a>
        </td>
        <td>
          URL of the item.
        </td>
      </tr>
+      </tbody>
+ </table>
+ </div>
