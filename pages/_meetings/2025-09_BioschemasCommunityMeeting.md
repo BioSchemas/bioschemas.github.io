@@ -19,4 +19,4 @@ Our Monthly Bioschemas call alternates between 'technical' meetings, targeting d
 
 Please do join us and add details to your calendar so you do not miss it!
 
-Please notice that we are entering into the summer break so no meeting on July or August 2025. Happy summer break! (winter for those in a different hemisphere :-)
+Please notice that we are entering into the summer break so no meeting on July or August 2025. Happy summer break! (winter for those in a different hemisphere :-) )
