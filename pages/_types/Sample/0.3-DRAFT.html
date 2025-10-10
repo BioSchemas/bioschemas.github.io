@@ -47,12 +47,13 @@ version: '0.3-DRAFT'
          <a href="http://schema.org/PropertyValue">PropertyValue</a>
        </td>
        <td>A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br/>
-         Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br />
+         
+        Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br />
       </td>
      </tr>
 
     <tr>
-       <th><a href="http://schema.org/alternateIdentifier">alternateIdentifier</a></th>
+       <th><a>alternateIdentifier</a></th>
        <td>
          <a href="http://schema.org/Text">Text</a>
        </td>
@@ -72,9 +73,9 @@ version: '0.3-DRAFT'
      </tr>
 
    <tr>
-       <th><a href="https://schema.org/dateCollected">dateCollected</a></th>
+       <th><a>dateCollected</a></th>
        <td>
-         <a href="https://schema.org/Date">Date</a>
+         <a href="https://schema.org/Date">Date</a> or<br/>
          <a href="https://schema.org/DateTime">DateTime</a>          
        </td>
        <td>
@@ -85,7 +86,7 @@ version: '0.3-DRAFT'
    <tr>
        <th><a href="https://schema.org/datePublished">datePublished</a></th>
        <td>
-         <a href="https://schema.org/Date">Date</a>
+         <a href="https://schema.org/Date">Date</a> or<br/>
          <a href="https://schema.org/DateTime">DateTime</a>          
        </td>
        <td>
@@ -96,7 +97,7 @@ version: '0.3-DRAFT'
    <tr>
        <th><a href="https://schema.org/dateModified">dateModified</a></th>
        <td>
-         <a href="https://schema.org/Date">Date</a>
+         <a href="https://schema.org/Date">Date</a> or<br/>
          <a href="https://schema.org/DateTime">DateTime</a>          
        </td>
        <td>
@@ -107,7 +108,7 @@ version: '0.3-DRAFT'
    <tr>
        <th><a href="https://schema.org/dateCreated">dateCreated</a></th>
        <td>
-         <a href="https://schema.org/Date">Date</a>
+         <a href="https://schema.org/Date">Date</a> or<br/>
          <a href="https://schema.org/DateTime">DateTime</a>          
        </td>
        <td>
@@ -116,9 +117,9 @@ version: '0.3-DRAFT'
      </tr>
 
    <tr>
-       <th><a href="https://schema.org/processingDate">processingDate</a></th>
+       <th><a>processingDate</a></th>
        <td>
-         <a href="https://schema.org/Date">Date</a>
+         <a href="https://schema.org/Date">Date</a> or<br/>
          <a href="https://schema.org/DateTime">DateTime</a>          
        </td>
        <td>
@@ -127,9 +128,9 @@ version: '0.3-DRAFT'
      </tr>
 
    <tr>
-       <th><a href="https://schema.org/submitter">submitter</a></th>
+       <th><a>submitter</a></th>
        <td>
-         <a href="https://schema.org/Person">Person</a>
+         <a href="https://schema.org/Person">Person</a> or<br/>
          <a href="https://schema.org/Organization">Organization</a>          
        </td>
        <td>
@@ -140,7 +141,7 @@ version: '0.3-DRAFT'
    <tr>
        <th><a href="https://schema.org/maintainer">maintainer</a></th>
        <td>
-         <a href="https://schema.org/Person">Person</a>
+         <a href="https://schema.org/Person">Person</a> or<br/>
          <a href="https://schema.org/Organization">Organization</a>          
        </td>
        <td>
@@ -149,9 +150,9 @@ version: '0.3-DRAFT'
      </tr>
 
       <tr>
-       <th><a href="https://schema.org/collector">collector</a></th>
+       <th><a>collector</a></th>
        <td>
-         <a href="https://schema.org/Person">Person</a>
+         <a href="https://schema.org/Person">Person</a> or<br/>
          <a href="https://schema.org/Organization">Organization</a>          
        </td>
        <td>
@@ -162,7 +163,7 @@ version: '0.3-DRAFT'
       <tr>
        <th><a href="https://schema.org/contributor">contributor</a></th>
        <td>
-         <a href="https://schema.org/Person">Person</a>
+         <a href="https://schema.org/Person">Person</a> or<br/>
          <a href="https://schema.org/Organization">Organization</a>          
        </td>
        <td>
@@ -173,7 +174,7 @@ version: '0.3-DRAFT'
       <tr>
        <th><a href="https://schema.org/contactPoint">contactPoint</a></th>
        <td>
-         <a href="https://schema.org/Person">Person</a>
+         <a href="https://schema.org/Person">Person</a> or<br/>
          <a href="https://schema.org/Organization">Organization</a>          
        </td>
        <td>
@@ -182,7 +183,7 @@ version: '0.3-DRAFT'
      </tr>
 
     <tr>
-       <th><a href="https://schema.org/collectionMethod">collectionMethod</a></th>
+       <th><a>collectionMethod</a></th>
        <td>
          <a href="https://schema.org/Text">Text</a>
        </td>
@@ -194,7 +195,7 @@ version: '0.3-DRAFT'
     <tr>
        <th><a href="https://schema.org/instrument">instrument</a></th>
        <td>
-         <a href="https://schema.org/Text">Text</a>
+         <a href="https://schema.org/Text">Text</a> or<br/>
          <a href="https://schema.org/URL">URL</a>
        </td>
        <td>
@@ -203,10 +204,10 @@ version: '0.3-DRAFT'
      </tr>
 
     <tr>
-       <th><a href="https://schema.org/locationOfOrigin">locationOfOrigin</a></th>
+       <th><a>locationOfOrigin</a></th>
        <td>
-         <a href="https://schema.org/Place">Place</a>
-         <a href="https://schema.org/GeoCoordinates">GeoCoordinates</a>
+         <a href="https://schema.org/Place">Place</a> or<br/>
+         <a href="https://schema.org/GeoCoordinates">GeoCoordinates</a> or<br/>
          <a href="https://schema.org/Text">Text</a>
        </td>
        <td>
@@ -215,7 +216,7 @@ version: '0.3-DRAFT'
      </tr>
 
     <tr>
-       <th><a href="https://schema.org/environmentSystem">environmentSystem</a></th>
+       <th><a>environmentSystem</a></th>
        <td>
          <a href="https://schema.org/Text">Text</a>
         </td>
@@ -227,8 +228,8 @@ version: '0.3-DRAFT'
     <tr>
        <th><a href="https://schema.org/locationCreated">locationCreated</a></th>
        <td>
-         <a href="https://schema.org/Place">Place</a>
-         <a href="https://schema.org/GeoCoordinates">GeoCoordinates</a>
+         <a href="https://schema.org/Place">Place</a> or<br/>
+         <a href="https://schema.org/GeoCoordinates">GeoCoordinates</a> or<br/>
          <a href="https://schema.org/Text">Text</a>
        </td>
        <td>
@@ -239,8 +240,8 @@ version: '0.3-DRAFT'
     <tr>
        <th><a href="https://schema.org/itemLocation">itemLocation</a></th>
        <td>
-         <a href="https://schema.org/Place">Place</a>
-         <a href="https://schema.org/GeoCoordinates">GeoCoordinates</a>
+         <a href="https://schema.org/Place">Place</a> or<br/>
+         <a href="https://schema.org/GeoCoordinates">GeoCoordinates</a> or<br/>
          <a href="https://schema.org/Text">Text</a>
        </td>
        <td>
@@ -249,27 +250,16 @@ version: '0.3-DRAFT'
      </tr>
 
     <tr>
-       <th><a href="https://schema.org/sampleQuantity">sampleQuantity/a></th>
+       <th><a>sampleQuantity</a></th>
        <td>
-         <a href="https://schema.org/QuantitativeValue">Quantitativevalue</a>
+         <a href="https://schema.org/QuantitativeValue">QuantitativeValue</a>
         </td>
        <td>
          A numeric value for a measurement of the size of a sample.
        </td>
      </tr>
-
     <tr>
-       <th><a href="https://schema.org/sampleState">sampleState</a></th>
-       <td>
-         <a href="https://schema.org/Text">Text</a>
-        </td>
-       <td>
-         Specify the composition and state of the sample, indicating which form it exisits in, e.g. gas, liquid, solid. 
-       </td>
-     </tr>
-
-    <tr>
-       <th><a href="https://schema.org/sampleState">sampleState</a></th>
+       <th><a>sampleState</a></th>
        <td>
          <a href="https://schema.org/Text">Text</a>
        </td>
@@ -281,7 +271,7 @@ version: '0.3-DRAFT'
     <tr>
        <th><a href="https://schema.org/sampleType">sampleType</a></th>
        <td>
-         <a href="https://schema.org/Text">Text</a>
+         <a href="https://schema.org/Text">Text</a> or<br/>
          <a href="https://schema.org/URL">URL</a>
        </td>
        <td>
@@ -290,9 +280,9 @@ version: '0.3-DRAFT'
      </tr>
 
     <tr>
-       <th><a href="https://schema.org/sampleStorageTemperature">sampleStorageTemperature/a></th>
+       <th><a>sampleStorageTemperature</a></th>
        <td>
-         <a href="https://schema.org/QuantitativeValue">Quantitativevalue</a>
+         <a href="https://schema.org/QuantitativeValue">QuantitativeValue</a>
         </td>
        <td>
          The temperature at which the sample is stored.
@@ -300,7 +290,7 @@ version: '0.3-DRAFT'
      </tr>
 
     <tr>
-       <th><a href="https://schema.org/sampleProcess">sampleProcess</a></th>
+       <th><a>sampleProcess</a></th>
        <td>
          <a href="https://schema.org/Text">Text</a>
        </td>
@@ -310,7 +300,7 @@ version: '0.3-DRAFT'
      </tr>
 
     <tr>
-       <th><a href="https://schema.org/experimentalPurpose">experimentalPurpose</a></th>
+       <th><a>experimentalPurpose</a></th>
        <td>
          <a href="https://schema.org/Text">Text</a>
        </td>
@@ -330,7 +320,7 @@ version: '0.3-DRAFT'
      </tr>
       
     <tr>
-       <th><a href="https://schema.org/project">project</a></th>
+       <th><a>project</a></th>
        <td>
          <a href="https://schema.org/ResearchProject">ResearchProject</a>
        </td>
@@ -340,7 +330,7 @@ version: '0.3-DRAFT'
      </tr>
 
     <tr>
-       <th><a href="https://schema.org/accessConditions">accessConditions</a></th>
+       <th><a>accessConditions</a></th>
        <td>
          <a href="https://schema.org/Text">Text</a>
        </td>
@@ -350,7 +340,7 @@ version: '0.3-DRAFT'
      </tr>
 
    <tr>
-       <th><a href="https://schema.org/ethics">ethics</a></th>
+       <th><a>ethics</a></th>
        <td>
          <a href="https://schema.org/Text">Text</a>
        </td>
@@ -360,7 +350,7 @@ version: '0.3-DRAFT'
      </tr>
 
    <tr>
-       <th><a href="https://schema.org/studyTitle">studyTitle</a></th>
+       <th><a>studyTitle</a></th>
        <td>
          <a href="https://schema.org/Text">Text</a>
        </td>
@@ -370,9 +360,9 @@ version: '0.3-DRAFT'
      </tr>      
 
    <tr>
-       <th><a href="https://schema.org/studyID">studyID</a></th>
+       <th><a>studyID</a></th>
        <td>
-         <a href="https://schema.org/Text">Text</a>
+         <a href="https://schema.org/Text">Text</a> or<br/>
          <a href="https://schema.org/URL">URL</a>
        </td>
        <td>
@@ -381,7 +371,7 @@ version: '0.3-DRAFT'
      </tr>    
       
    <tr>
-       <th><a href="https://schema.org/sampleAvailability">sampleAvailability</a></th>
+       <th><a>sampleAvailability</a></th>
        <td>
          <a href="https://schema.org/Boolean">Boolean</a>
        </td>
@@ -393,9 +383,9 @@ version: '0.3-DRAFT'
    <tr>
        <th><a href="https://schema.org/isRelatedTo">isRelatedTo</a></th>
        <td>
-         <a href="https://schema.org/CreativeWork">CreativeWork</a>
-         <a href="https://schema.org/ImageObject">ImageObject</a>
-         <a href="https://schema.org/URL">URL</a>
+         <a href="https://schema.org/CreativeWork">CreativeWork</a> or<br/>
+         <a href="https://schema.org/ImageObject">ImageObject</a> or<br/>
+         <a href="https://schema.org/URL">URL</a> or<br/>
          <a href="https://schema.org/Text">Text</a>
        </td>
        <td>
@@ -406,9 +396,9 @@ version: '0.3-DRAFT'
    <tr>
        <th><a href="https://schema.org/hasPart">hasPart</a></th>
        <td>
-         <a href="https://schema.org/CreativeWork">CreativeWork</a>
-         <a href="https://schema.org/ImageObject">ImageObject</a>
-         <a href="https://schema.org/URL">URL</a>
+         <a href="https://schema.org/CreativeWork">CreativeWork</a> or<br/>
+         <a href="https://schema.org/ImageObject">ImageObject</a> or<br/>
+         <a href="https://schema.org/URL">URL</a> or<br/>
          <a href="https://schema.org/Text">Text</a>
        </td>
        <td>
@@ -419,9 +409,9 @@ version: '0.3-DRAFT'
    <tr>
        <th><a href="https://schema.org/isPartOf">isPartOf</a></th>
        <td>
-         <a href="https://schema.org/CreativeWork">CreativeWork</a>
-         <a href="https://schema.org/ImageObject">ImageObject</a>
-         <a href="https://schema.org/URL">URL</a>
+         <a href="https://schema.org/CreativeWork">CreativeWork</a> or<br/>
+         <a href="https://schema.org/ImageObject">ImageObject</a> or<br/>
+         <a href="https://schema.org/URL">URL</a> or<br/>
          <a href="https://schema.org/Text">Text</a>
        </td>
        <td>
@@ -432,7 +422,7 @@ version: '0.3-DRAFT'
     <tr>
        <th><a href="https://schema.org/citation">citation</a></th>
        <td>
-         <a href="https://schema.org/CreativeWork">CreativeWork</a>
+         <a href="https://schema.org/CreativeWork">CreativeWork</a> or<br/>
          <a href="https://schema.org/Text">Text</a>
        </td>
        <td>
@@ -441,7 +431,7 @@ version: '0.3-DRAFT'
      </tr>   
 
    <tr>
-       <th><a href="https://schema.org/isControl">isControl</a></th>
+       <th><a>isControl</a></th>
        <td>
          <a href="https://schema.org/Boolean">Boolean</a>
        </td>
