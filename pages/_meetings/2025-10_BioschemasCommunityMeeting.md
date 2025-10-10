@@ -2,7 +2,7 @@
 layout: meeting
 name: Bioschemas Monhtly Call - Technical meeting
 title: Bioschemas Community Meeting
-dates: 15 September 2025
+dates: 20 October 2025
 start_date: 2025-10-20
 end_date: 2025-10-20
 venue: Online
