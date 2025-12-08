@@ -1,11 +1,11 @@
 ---
 layout: person-details
 id: LukasWeil
-first-name: Lukas
+first-name: H. Lukas
 last-name: Weil
 collection: people
-affiliation:
+affiliation: RPTU Kaiserslautern-Landau
 homepage:
-github_username: 
-orcid: 
+github_username: hlweil
+orcid: 0000-0003-1945-6342
 ---
