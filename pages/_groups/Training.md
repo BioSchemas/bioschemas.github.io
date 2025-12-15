@@ -58,6 +58,7 @@ members:
     - SarahMorgan    
     - VictoriaDominguezDelAngel
     - ChrisChild
+    - PhilReed
 
 former-members:    
     - ChrisTaylor
