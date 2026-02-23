@@ -59,6 +59,7 @@ members:
     - VictoriaDominguezDelAngel
     - ChrisChild
     - PhilReed
+    - TimDennis
 
 former-members:    
     - ChrisTaylor
