@@ -56,6 +56,8 @@ version: '0.3-DRAFT'
        <th><a>alternateIdentifier</a></th>
        <td>
          <a href="http://schema.org/Text">Text</a>
+         <a href="https://schema.org/URL">URL</a>
+         <a href="http://schema.org/PropertyValue">PropertyValue</a>
        </td>
        <td>
             An additional identifier for the same instance of the resource.
@@ -66,6 +68,8 @@ version: '0.3-DRAFT'
        <th><a href="https://schema.org/keywords">keywords</a></th>
        <td>
          <a href="http://schema.org/Text">Text</a>
+         <a href="http://schema.org/DefinedTerm">DefinedTerm</a>
+         <a href="http://schema.org/URL">URL</a>
        </td>
        <td>
          Terms that capture the main subjects e.g. cancer, plant biology.
@@ -117,7 +121,7 @@ version: '0.3-DRAFT'
      </tr>
 
    <tr>
-       <th><a>processingDate</a></th>
+       <th><a>dateProcessed</a></th>
        <td>
          <a href="https://schema.org/Date">Date</a> or<br/>
          <a href="https://schema.org/DateTime">DateTime</a>          
@@ -178,7 +182,7 @@ version: '0.3-DRAFT'
          <a href="https://schema.org/Organization">Organization</a>          
        </td>
        <td>
-         Person or organization that can be contacted for more information or support.
+         A person or organization that can be contacted for more information or support.
        </td>
      </tr>
 
@@ -197,6 +201,7 @@ version: '0.3-DRAFT'
        <td>
          <a href="https://schema.org/Text">Text</a> or<br/>
          <a href="https://schema.org/URL">URL</a>
+         <a href="https://schema.org/DefinedTerm">DefinedTerm</a>
        </td>
        <td>
          Provide description of instruments and devices used in collecting, processing and analysis of samples. 
@@ -219,6 +224,8 @@ version: '0.3-DRAFT'
        <th><a>environmentSystem</a></th>
        <td>
          <a href="https://schema.org/Text">Text</a>
+         <a href="https://schema.org/URL">URL</a>
+         <a href="https://schema.org/DefinedTerm">DefinedTerm</a>
         </td>
        <td>
          A category or description of the habitat that describes elements of an ecosystem where the sample was collected. Where possible use controlled vocabulary such as ENVO. 
@@ -273,9 +280,10 @@ version: '0.3-DRAFT'
        <td>
          <a href="https://schema.org/Text">Text</a> or<br/>
          <a href="https://schema.org/URL">URL</a>
+         <a href="https://schema.org/DefinedTerm">DefinedTerm</a>
        </td>
        <td>
-        Indicate the type of sample. 
+        Indicate the type of sample. Note that this is intentionally broad to allow different types of specimens, i.e. cells, rock, sand 
        </td>
      </tr>
 
@@ -295,7 +303,7 @@ version: '0.3-DRAFT'
          <a href="https://schema.org/Text">Text</a>
        </td>
        <td>
-         The processing technique that was applied to the sample, methods used to prepare the samples. 
+         The processing technique that was applied to the sample, methods used to prepare the samples, including SOPs (Standard Operating Procedures)
        </td>
      </tr>
 
