@@ -60,6 +60,7 @@ members:
     - ChrisChild
     - PhilReed
     - TimDennis
+    - AlexSmith
 
 former-members:    
     - ChrisTaylor
