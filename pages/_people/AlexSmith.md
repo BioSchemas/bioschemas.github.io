@@ -1,6 +1,6 @@
 ---
 layout: person-details
-id: AlesSmith
+id: AlexSmith
 first-name: Alexandra
 last-name: Smith
 collection: people
