@@ -46,7 +46,7 @@ version: '0.3-DRAFT'
        <td>
          <a href="http://schema.org/PropertyValue">PropertyValue</a>
        </td>
-       <td>A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br/>
+       <td>A property-value pair representing an additional characteristic of the entity, that is not representable by an existing property.<br/>
          
         Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br />
       </td>
@@ -221,7 +221,7 @@ version: '0.3-DRAFT'
      </tr>
 
     <tr>
-       <th><a>environmentSystem</a></th>
+       <th><a>environmentalSystem</a></th>
        <td>
          <a href="https://schema.org/Text">Text</a>
          <a href="https://schema.org/URL">URL</a>
@@ -252,7 +252,7 @@ version: '0.3-DRAFT'
          <a href="https://schema.org/Text">Text</a>
        </td>
        <td>
-         Current location of the item. 
+         Current location of the sample. 
        </td>
      </tr>
 
@@ -301,6 +301,7 @@ version: '0.3-DRAFT'
        <th><a>sampleProcess</a></th>
        <td>
          <a href="https://schema.org/Text">Text</a>
+          <a href="https://schema.org/URL">URL</a>
        </td>
        <td>
          The processing technique that was applied to the sample, methods used to prepare the samples, including SOPs (Standard Operating Procedures)
@@ -338,7 +339,7 @@ version: '0.3-DRAFT'
      </tr>
 
     <tr>
-       <th><a>accessConditions</a></th>
+       <th><a>conditionsOfAccess</a></th>
        <td>
          <a href="https://schema.org/Text">Text</a>
        </td>
@@ -395,6 +396,7 @@ version: '0.3-DRAFT'
          <a href="https://schema.org/ImageObject">ImageObject</a> or<br/>
          <a href="https://schema.org/URL">URL</a> or<br/>
          <a href="https://schema.org/Text">Text</a>
+         <a href="https://discovery.biothings.io/ns/bioschemastypesdrafts/bioschemastypesdrafts:Sample">bioschemastypesdrafts:Sample</a>
        </td>
        <td>
         Describe related items including other resources related to the samples.
@@ -408,9 +410,10 @@ version: '0.3-DRAFT'
          <a href="https://schema.org/ImageObject">ImageObject</a> or<br/>
          <a href="https://schema.org/URL">URL</a> or<br/>
          <a href="https://schema.org/Text">Text</a>
+         <a href="https://discovery.biothings.io/ns/bioschemastypesdrafts/bioschemastypesdrafts:Sample">bioschemastypesdrafts:Sample</a>
        </td>
        <td>
-        Describe related items including other resources related to the samples.
+        Describe related items including other resources related to the samples.For example a subsample of this sample.
        </td>
      </tr>         
 
@@ -421,9 +424,10 @@ version: '0.3-DRAFT'
          <a href="https://schema.org/ImageObject">ImageObject</a> or<br/>
          <a href="https://schema.org/URL">URL</a> or<br/>
          <a href="https://schema.org/Text">Text</a>
+         <a href="https://discovery.biothings.io/ns/bioschemastypesdrafts/bioschemastypesdrafts:Sample">bioschemastypesdrafts:Sample</a>
        </td>
        <td>
-        Describe related items including other resources related to the samples.
+        Describe related items including other resources related to the samples. For example a supersample of this sample.
        </td>
      </tr>     
 
