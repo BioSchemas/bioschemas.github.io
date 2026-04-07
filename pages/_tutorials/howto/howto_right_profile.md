@@ -6,6 +6,10 @@ previousTutorial:
 nextTutorial:
   link: howto/howto_add_markup
   title: How to add markup to your own resource
+breadcrumb:
+  link1: /tutorials/
+  title1: Getting Started
+  title2: "How to..."
 
 bioschemas:
   "@context": https://schema.org/

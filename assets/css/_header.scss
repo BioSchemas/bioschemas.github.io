@@ -31,18 +31,42 @@
         }
     }
 
+    .search-outer {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 1.625em;
+        z-index: 1050;
+        form {
+            padding: 0.5em 1.25em !important;
+            background: #0C794B;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .search-outer {
+            display: none;
+        }
+    }
+
     .btn-github {
         background-color: #4c7fe8;
         position: absolute;
         top: 0;
-        right: 1.625em;
+        right: 18.2em;
+    }
+
+    @media (max-width: 576px) {
+        .btn-github {
+            right: 1em;
+        }
     }
 
     .btn-twitter {
         background-color: #28a9e2;
         position: absolute;
         top: 0;
-        right: 8.875em;
+        right: 25.25em;
     }
 
     @media (max-width: 576px) {
@@ -50,4 +74,107 @@
             right: 4.875em;
         }
     }
+}
+
+$search-result-color: #0C794B;
+
+/*-----Search box top navigation-----*/
+
+.search-results {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    display: none;
+    width: 36em;
+    max-height: calc(90vh - 200%) !important;
+    overflow-y: auto;
+    background-color: $white;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    z-index: $zindex-dropdown;
+
+    ul {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    a {
+        display: block;
+        padding: 0.5rem 0.75rem;
+    }
+
+    a:hover,
+    a.active {
+        background-color: $light;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .search-results {
+        width: 100%;
+    }
+}
+
+.search-result-title {
+    display: inline-block;
+    width: 40%;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    vertical-align: top;
+}
+
+.search-result-doc {
+    display: flex;
+    align-items: center;
+    word-wrap: break-word;
+
+    .search-result-doc-parent {
+        font-size: 12px !important;
+        font-weight: 600;
+    }
+
+    .search-result-doc-title {
+        overflow: auto;
+        color: $body-color;
+    }
+}
+
+.search-result-section {
+    word-wrap: break-word;
+    color: $search-result-color;
+}
+
+.search-result-rel-url {
+    display: block;
+    overflow: hidden;
+    color: $gray-600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 10px !important;
+}
+
+.search-result-previews {
+    display: inline-block;
+    width: 60%;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    color: $gray-600;
+    word-wrap: break-word;
+    border-left: 1px solid $light;
+    font-size: 12px !important;
+    vertical-align: top;
+}
+
+.search-result-preview + .search-result-preview {
+    margin-top: 0.25rem;
+}
+
+.search-result-highlight {
+    font-weight: bold;
+}
+
+.search-no-result {
+    padding: 0.5rem 0.75rem;
+}
+
+.search-active .search-results {
+    display: block;
 }

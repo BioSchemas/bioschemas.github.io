@@ -1,8 +1,11 @@
 ---
 layout: default
 title: Bioschemas stories
+breadcrumb:
+  link1: /community/
+  title1: Community
 ---
-# Bioschemas stories
+# Bioschemas user stories
 
 Here are some short stories where Bioschemas has been succesfully used by communities to progress on making their resources more findable and reusable. 
 

@@ -3,6 +3,11 @@ title: Marking up clinical entities in the Rare Diseases community
 overviewTutorial:
   link: ./community/
   title: Return to community tutorials overview
+breadcrumb:
+  link1: /tutorials/
+  title1: Getting Started
+  link2: /tutorials/community/
+  title2: "Community-based"
 
 bioschemas:
   "@context": https://schema.org/

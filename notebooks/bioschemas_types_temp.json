@@ -1,0 +1,1021 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl/",
+        "dct": "http://purl.org/dc/terms/",
+        "@dateModified": "01/19/2024, 16:02:50",
+        "bioschemas": "https://bioschemas.org/terms/",
+        "schema": "https://schema.org/"
+    },
+    "@graph": [
+        {
+            "@id": "bioschemas:Taxon",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A set of organisms asserted to represent a natural cohesive biological unit. Version: 1.0-RELEASE",
+            "schema:schemaVersion": [
+                "https://github.com/BioSchemas/specifications/blob/master/Taxon/jsonld/type/Taxon_v1.0-RELEASE.json",
+                "https://bioschemas.org/types/Taxon/1.0-RELEASE"
+            ],
+            "rdfs:label": "Taxon",
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "bioschemas:BioChemEntity",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical. Note, this version (0.7-RELEASE) is the version that is currently pending on schema.org",
+            "rdfs:label": "BioChemEntity",
+            "schema:schemaVersion": [
+                "https://github.com/BioSchemas/specifications/tree/master/BioChemEntity/jsonld/type/BioChemEntity_v0.7-RELEASE.json",
+                "https://bioschemas.org/types/BioChemEntity/0.7-RELEASE"
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "bioschemas:BioSample",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A biological material entity that is representative of a whole.\nComments: Typically samples are intended to be representative of the whole or aspects thereof. Examples of samples include biomedical samples (blood, urine) and plant specimens held at herbaria. Version 0.1-RELEASE. Note, the parent class for this schema has been updated to a pending class in schema.org.",
+            "rdfs:label": "BioSample",
+            "schema:schemaVersion": [
+                "https://github.com/BioSchemas/specifications/tree/master/BioSample/jsonld/type/BioSample_v0.1-RELEASE.json",
+                "https://bioschemas.org/types/BioSample/0.1-RELEASE"
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:BioChemEntity"
+            }
+        },
+        {
+            "@id": "bioschemas:ChemicalSubstance",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A chemical substance is 'a portion of matter of constant composition, composed of molecular entities of the same type or of different types' (source: ChEBI:59999). Version: 0.3-RELEASE-2019_09_02. This version is was released as a pending class as of schema.org version 13",
+            "schema:schemaVersion": [
+                "https://github.com/BioSchemas/specifications/tree/master/ChemicalSubstance/jsonld/type/ChemicalSubstance_v0.3-RELEASE-2019_09_02.json",
+                "https://bioschemas.org/types/ChemicalSubstance/0.3-RELEASE-2019_09_02"
+            ],
+            "rdfs:label": "ChemicalSubstance",
+            "rdfs:subClassOf": {
+                "@id": "schema:BioChemEntity"
+            }
+        },
+        {
+            "@id": "bioschemas:Gene",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A discrete unit of inheritance which affects one or more biological traits (Source: https://en.wikipedia.org/wiki/Gene). Examples include FOXP2 (Forkhead box protein P2), SCARNA21 (small Cajal body-specific RNA 21), A- (agouti genotype). Note, this version of the type has been added as a pending class in schema.org.",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/types/Gene/0.3-RELEASE-2019_09_02",
+                "https://github.com/BioSchemas/specifications/tree/master/Gene/jsonld/type/Gene_v0.3-RELEASE-2019_09_02.json"
+            ],
+            "rdfs:label": "Gene",
+            "rdfs:subClassOf": {
+                "@id": "schema:BioChemEntity"
+            }
+        },
+        {
+            "@id": "bioschemas:MolecularEntity",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity. (Source: ChEBI:23367). Note, this version has been updated to a pending class in schema.org.",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/types/MolecularEntity/0.3-RELEASE-2019_09_02",
+                "https://github.com/BioSchemas/specifications/tree/master/MolecularEntity/jsonld/type/MolecularEntity_v0.3-RELEASE-2019_09_02.json"
+            ],
+            "rdfs:label": "MolecularEntity",
+            "rdfs:subClassOf": {
+                "@id": "schema:BioChemEntity"
+            }
+        },
+        {
+            "@id": "bioschemas:Protein",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Protein is here used in its widest possible definition, as classes of amino acid based molecules. Amyloid-beta Protein in human (UniProt P05067), eukaryota (e.g. an OrthoDB group) or even a single molecule that one can point to are all of type schema:Protein. A protein can thus be a subclass of another protein, e.g. schema:Protein as a UniProt record can have multiple isoforms inside it which would also be schema:Protein. They can be imagined, synthetic, hypothetical or naturally occurring. This version has been added to schema.org as a pending type.",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/types/Protein/0.3-RELEASE-2019_09_02",
+                "https://github.com/BioSchemas/specifications/tree/master/Protein/jsonld/type/Protein_v0.3-RELEASE-2019_09_02.json"
+            ],
+            "rdfs:label": "Protein",
+            "rdfs:subClassOf": {
+                "@id": "schema:BioChemEntity"
+            }
+        },
+        {
+            "@id": "bioschemas:FormalParameter",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A FormalParameter is an identified variable used to stand for the actual value(s) that are consumed/produced by a set of steps. Version: 1.0-RELEASE (09 March 2021) ",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/types/FormalParameter/1.0-RELEASE",
+                "https://github.com/BioSchemas/specifications/blob/master/FormalParameter/jsonld/type/FormalParameter_v1.0-RELEASE.json"
+            ],
+            "rdfs:label": "FormalParameter",
+            "rdfs:subClassOf": {
+                "@id": "schema:Intangible"
+            }
+        },
+        {
+            "@id": "bioschemas:ComputationalWorkflow",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A computational workflow consists of an orchestrated and repeatable pattern of activity enabled by the systematic organization of resources into processes that transform materials, provide services, or process information (source Wikipedia.org). It is executed by a computational process and is thus distinct from laboratory or business workflows. version 1.0-RELEASE",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/types/ComputationalWorkflow/1.0-RELEASE",
+                "https://github.com/BioSchemas/specifications/blob/master/ComputationalWorkflow/jsonld/type/ComputationalWorkflow_v1.0-RELEASE.json"
+            ],
+            "rdfs:label": "ComputationalWorkflow",
+            "rdfs:subClassOf": {
+                "@id": "schema:SoftwareSourceCode"
+            }
+        },
+        {
+            "@id": "bioschemas:TaxonName",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A name of a biological taxon, may it be valid (zoology) / accepted (botany) or not. Version: 1.0-RELEASE",
+            "schema:schemaVersion": [
+                "https://github.com/BioSchemas/specifications/blob/master/TaxonName/jsonld/type/TaxonName_v1.0-RELEASE.json",
+                "https://bioschemas.org/types/TaxonName/1.0-RELEASE"
+            ],
+            "rdfs:label": "TaxonName",
+            "rdfs:subClassOf": {
+                "@id": "schema:CreativeWork"
+            }
+        },
+        {
+            "@id": "bioschemas:childTaxon",
+            "rdfs:comment": "Closest child taxa of the taxon in question.\nInverse property: parentTaxon Direct, most proximate lower-rank child taxa",
+            "@type": "rdf:Property",
+            "rdfs:label": "childTaxon",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Taxon"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:parentTaxon",
+            "rdfs:comment": "Closest parent taxon of the taxon in question.\nInverse property: childTaxon Direct, most proximate higher-rank parent taxon",
+            "@type": "rdf:Property",
+            "rdfs:label": "parentTaxon",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Taxon"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:scientificName",
+            "rdfs:comment": "A TaxonName representing the currently valid (zoological) or accepted (botanical) name for that taxon.",
+            "@type": "rdf:Property",
+            "rdfs:label": "scientificName",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemas:TaxonName"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:alternateScientificName",
+            "rdfs:comment": "A TaxonName representing a scientific name, with authorship and date information if known, of a synonym of the currently valid (zoological) or accepted (botanical) name.",
+            "@type": "rdf:Property",
+            "rdfs:label": "alternateScientificName",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemas:TaxonName"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:associatedDisease",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Disease associated to this BioChemEntity. Such a disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue.",
+            "rdfs:label": "associatedDisease",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioChemEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:MedicalCondition"
+                },
+                {
+                    "@id": "schema:URL"
+                },
+                {
+                    "@id": "schema:PropertyValue"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:bioChemInteraction",
+            "@type": "rdf:Property",
+            "rdfs:comment": "A BioChemEntity that is know to interact with this item.",
+            "rdfs:label": "bioChemInteraction",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioChemEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemas:BioChemEntity"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:bioChemSimilarity",
+            "@type": "rdf:Property",
+            "rdfs:comment": "A similar molecular entity, e.g., obtained by fingerprint similarity algorithm.",
+            "rdfs:label": "bioChemSimilarity",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioChemEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemas:BioChemEntity"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:biologicalRole",
+            "@type": "rdf:Property",
+            "rdfs:comment": "A role played by the molecular entity within a biological context.",
+            "rdfs:label": "biologicalRole",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioChemEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:DefinedTerm"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:hasBioChemEntityPart",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part. Inverse property: isPartOfBioChemEntity",
+            "rdfs:label": "hasBioChemEntityPart",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioChemEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemas:BioChemEntity"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:hasMolecularFunction",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence.",
+            "rdfs:label": "hasMolecularFunction",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioChemEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:DefinedTerm"
+                },
+                {
+                    "@id": "schema:PropertyValue"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:hasRepresentation",
+            "@type": "rdf:Property",
+            "rdfs:comment": "A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.",
+            "rdfs:label": "hasRepresentation",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioChemEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemas:BioChemEntity"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:isEncodedByBioChemEntity",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Another BioChemEntity encoding this one. Inverse property: encodesBioChemEntity.",
+            "rdfs:label": "isEncodedByBioChemEntity",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioChemEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemas:Gene"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:isInvolvedInBiologicalProcess",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.",
+            "rdfs:label": "isInvolvedInBiologicalProcess",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioChemEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:DefinedTerm"
+                },
+                {
+                    "@id": "schema:PropertyValue"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:isLocatedInSubcellularLocation",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.",
+            "rdfs:label": "isLocatedInSubcellularLocation",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioChemEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:DefinedTerm"
+                },
+                {
+                    "@id": "schema:PropertyValue"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:isPartOfBioChemEntity",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: hasBioChemEntityPart",
+            "rdfs:label": "isPartOfBioChemEntity",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioChemEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemas:BioChemEntity"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:taxonomicRange",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The taxonomic grouping of the organism that expresses, encodes, or in someway related to the BioChemEntity.",
+            "rdfs:label": "taxonomicRange",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioChemEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:DefinedTerm"
+                },
+                {
+                    "@id": "schema:PropertyValue"
+                },
+                {
+                    "@id": "schema:URL"
+                },
+                {
+                    "@id": "bioschemas:Taxon"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:additionalProperty",
+            "@type": "rdf:Property",
+            "rdfs:comment": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.",
+            "rdfs:label": "additionalProperty",
+            "schema:sameAs": {
+                "@id": "schema:additionalProperty"
+            },
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioSample"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:PropertyValue"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:collector",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The Person or Organization who collected the Sample. ",
+            "rdfs:label": "collector",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioSample"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Organization"
+                },
+                {
+                    "@id": "schema:Person"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:custodian",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The Person or Organization who is responsible for the Sample.",
+            "rdfs:label": "custodian",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioSample"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Organization"
+                },
+                {
+                    "@id": "schema:Person"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:dateCreated",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The date on which the CreativeWork was created or the item was added to a DataFeed. ",
+            "rdfs:label": "dateCreated",
+            "schema:sameAs": {
+                "@id": "schema:dateCreated"
+            },
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioSample"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Date"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:gender",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Gender of the person. While http://schema.org/Male and http://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender",
+            "rdfs:label": "gender",
+            "schema:sameAs": {
+                "@id": "schema:gender"
+            },
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioSample"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:GenderType"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:isControl",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Indicates whether the sample is being used as a normal control, may be in combination with another sample.",
+            "rdfs:label": "isControl",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioSample"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Boolean"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:itemLocation",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Current location of the item. ",
+            "rdfs:label": "itemLocation",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioSample"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Place"
+                },
+                {
+                    "@id": "schema:PostalAddress"
+                },
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:locationCreated",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork. ",
+            "rdfs:label": "locationCreated",
+            "schema:sameAs": {
+                "@id": "schema:locationCreated"
+            },
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioSample"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Place"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:samplingAge",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The age of the object when the Sample was created. ",
+            "rdfs:label": "samplingAge",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:BioSample"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Integer"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:chemicalComposition",
+            "rdfs:comment": "The chemical composition describes the identity and relative ratio of the chemical elements that make up the substance. For substances this often cannot be accurately determined, an approximation is acceptable.",
+            "@type": "rdf:Property",
+            "rdfs:label": "chemicalComposition",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ChemicalSubstance"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:hasStatus",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Schema:  One of pseudogene, dead, killed, live, predicted, suppressed.",
+            "rdfs:label": "hasStatus",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Gene"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:alternativeOf",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Another gene which is a variation of this one.",
+            "rdfs:label": "alternativeOf",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Gene"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Gene"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:encodesBioChemEntity",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Another BioChemEntity encoded by this one. Inverse property: isEncodedByBioChemEntity.",
+            "rdfs:label": "encodesBioChemEntity",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Gene"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:BioChemEntity"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:expressedIn",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Tissue, organ, biological sample, etc in which activity of this gene has been observed experimentally. For example brain, digestive system.",
+            "rdfs:label": "expressedIn",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Gene"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:AnatomicalStructure"
+                },
+                {
+                    "@id": "schema:AnatomicalSystem"
+                },
+                {
+                    "@id": "schema:BioChemEntity"
+                },
+                {
+                    "@id": "schema:DefinedTerm"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:inChI",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Non-proprietary identifier for molecular entity that can be used in printed and electronic data sources thus enabling easier linking of diverse data compilations.",
+            "rdfs:label": "inChI",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:MolecularEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:inChIKey",
+            "@type": "rdf:Property",
+            "rdfs:comment": "InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm).",
+            "rdfs:label": "inChIKey",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:MolecularEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:iupacName",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Systematic method of naming chemical compounds as recommended by the International Union of Pure and Applied Chemistry (IUPAC).",
+            "rdfs:label": "iupacName",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:MolecularEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:molecularFormula",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The empirical formula is the simplest whole number ratio of all the atoms in a molecule.",
+            "rdfs:label": "molecularFormula",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:MolecularEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:molecularWeight",
+            "@type": "rdf:Property",
+            "rdfs:comment": "This is the molecular weight of the entity being described, not of the parent. Units should be included in the form '<Number> <unit>', for example '12 amu' or as '<QuantitativeValue>.",
+            "rdfs:label": "molecularWeight",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:MolecularEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:QuantitativeValue"
+                },
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:monoisotopicMolecularWeight",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The monoisotopic mass is the sum of the masses of the atoms in a molecule using the unbound, ground-state, rest mass of the principal (most abundant) isotope for each element instead of the isotopic average mass. Please include the units the form '<Number> <unit>', for example '770.230488 g/mol' or as '<QuantitativeValue>.",
+            "rdfs:label": "monoisotopicMolecularWeight",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:MolecularEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:QuantitativeValue"
+                },
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:smiles",
+            "@type": "rdf:Property",
+            "rdfs:comment": "A specification in form of a line notation for describing the structure of chemical species using short ASCII strings.",
+            "rdfs:label": "smiles",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:MolecularEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:defaultValue",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The default value for the FormalParameter. This is commonly only used for Inputs.",
+            "rdfs:label": "defaultValue",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:FormalParameter"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:Thing"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:valueRequired",
+            "@type": "rdf:Property",
+            "rdfs:comment": "If the FormalParameter must be specified. This is commonly only used for Inputs",
+            "rdfs:label": "valueRequired",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:FormalParameter"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Boolean"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:encodingFormat",
+            "@type": "rdf:Property",
+            "rdfs:comment": "URLs to accepted formats.  It is strongly recommented that this be specified. If it is not specified, then nothing should be assumed about the encoding formats of the FormalParameter. Recommended ontology: http://edamontology.org/format_1915",
+            "rdfs:label": "encodingFormat",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:FormalParameter"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:input",
+            "@type": "rdf:Property",
+            "rdfs:comment": "An input required to use the computational workflow (eg. Excel spreadsheet, BAM file)",
+            "rdfs:label": "input",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalWorkflow"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemas:FormalParameter"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:output",
+            "@type": "rdf:Property",
+            "rdfs:comment": "An output produced by the workflow",
+            "rdfs:label": "output",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalWorkflow"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemas:FormalParameter"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:documentation",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Documentation describing the ComputationalWorkflow and its use.",
+            "rdfs:label": "documentation",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalWorkflow"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:CreativeWork"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:funding",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The funding for the workflow",
+            "rdfs:label": "funding",
+            "schema:sameAs": {
+                "@id": "schema:funding"
+            },
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalWorkflow"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Grant"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:softwareRequirements",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Renaming schema.org/requirements as softwareRequirements. Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime). Supersedes requirements. ",
+            "rdfs:label": "softwareRequirements",
+            "schema:sameAs": {
+                "@id": "schema:softwareRequirements"
+            },
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalWorkflow"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:chemicalRole",
+            "rdfs:comment": "A role played by the BioChemEntity within a chemical context. A role played by the molecular entity within a chemical context.",
+            "@type": "rdf:Property",
+            "rdfs:label": "chemicalRole",
+            "schema:domainIncludes": [
+                {
+                    "@id": "bioschemas:ChemicalSubstance"
+                },
+                {
+                    "@id": "bioschemas:MolecularEntity"
+                }
+            ],
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:DefinedTerm"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:taxonRank",
+            "rdfs:comment": "The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary (e.g. the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs) ",
+            "@type": "rdf:Property",
+            "rdfs:label": "taxonRank",
+            "schema:domainIncludes": [
+                {
+                    "@id": "bioschemas:Taxon"
+                },
+                {
+                    "@id": "bioschemas:TaxonName"
+                }
+            ],
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:PropertyValue"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:hasBioPolymerSequence",
+            "rdfs:comment": "A symbolic representation of a BioChemEnity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a Protein.",
+            "@type": "rdf:Property",
+            "rdfs:label": "hasBioPolymerSequence",
+            "schema:domainIncludes": [
+                {
+                    "@id": "bioschemas:Gene"
+                },
+                {
+                    "@id": "bioschemas:Protein"
+                }
+            ],
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:potentialUse",
+            "rdfs:comment": "Intended use of the BioChemEntity by humans. ",
+            "@type": "rdf:Property",
+            "rdfs:label": "potentialUse",
+            "schema:domainIncludes": [
+                {
+                    "@id": "bioschemas:ChemicalSubstance"
+                },
+                {
+                    "@id": "bioschemas:MolecularEntity"
+                }
+            ],
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:DefinedTerm"
+                }
+            ]
+        },
+        {
+            "@id": "dct:conformsTo",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Used to state the Bioschemas profile that the markup relates to. The versioned URL of the profile must be used. Note that we use a CURIE in the table here but the full URL for Dublin Core terms must be used in the markup (http://purl.org/dc/terms/conformsTo), see example.",
+            "rdfs:label": "conformsTo",
+            "schema:domainIncludes": [
+                {
+                    "@id": "bioschemas:Taxon"
+                },
+                {
+                    "@id": "bioschemas:BioChemEntity"
+                },
+                {
+                    "@id": "bioschemas:BioSample"
+                },
+                {
+                    "@id": "bioschemas:ChemicalSubstance"
+                },
+                {
+                    "@id": "bioschemas:Gene"
+                },
+                {
+                    "@id": "bioschemas:MolecularEntity"
+                },
+                {
+                    "@id": "bioschemas:Protein"
+                },
+                {
+                    "@id": "bioschemas:FormalParameter"
+                },
+                {
+                    "@id": "bioschemas:ComputationalWorkflow"
+                },
+                {
+                    "@id": "bioschemas:TaxonName"
+                }
+            ],
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:CreativeWork"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:Thing"
+                }
+            ]
+        }
+    ]
+}

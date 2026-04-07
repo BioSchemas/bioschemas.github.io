@@ -10,8 +10,7 @@
 <h4>Expected values</h4>
 <ul>
   {% for v in page.expected_values_as_type %}
-  {%- assign typeName = '/types/' | append: v %}
-  <li><a href="{{ typeName | relative_url }}">{{ v }}</a></li>
+  <li><a href="{{ v[1] }}">{{ v[0] }}</a></li>
   {% endfor %}
   {% for v in page.expected_values_as_data %}
   <li>
