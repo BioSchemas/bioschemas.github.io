@@ -14,7 +14,7 @@ BioChemStructure:
 
 BioSample:
     name: "BioSample"
-    latest_publication:
+    latest_publication: "0.2-DRAFT"
     latest_release: "0.1-RELEASE-2019_06_19"
     status: "active"
 
@@ -99,7 +99,7 @@ RNA:
 
 Sample:
     name: "Sample"
-    latest_publication: "0.2-DRAFT-2018_11_09"
+    latest_publication: "0.3-DRAFT"
     latest_release:
     status: "active"
 
