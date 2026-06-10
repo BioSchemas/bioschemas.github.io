@@ -10,7 +10,7 @@ previous_version: '0.1-DRAFT-2018_11_07'
 previous_version: '0.2-DRAFT-2018_11_09'
 previous_release: 
 
-dateModified: 2025-08-01
+dateModified: 2026-04-10
 description: "A material entity that is representative of a whole. <p>Comments: Typically samples are intended to be representative of the whole or aspects thereof. Examples of samples include biomedical samples (blood, urine) and commercial samples (carpet, metal).</p>"
 hierarchy:
 - Thing
@@ -46,9 +46,7 @@ version: '0.3-DRAFT'
        <td>
          <a href="http://schema.org/PropertyValue">PropertyValue</a>
        </td>
-       <td>A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. <br/>
-         
-        Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.<br />
+       <td>A property-value pair representing an additional characteristic of the entity, that is not representable by an existing property.<br />
       </td>
      </tr>
 
@@ -56,6 +54,8 @@ version: '0.3-DRAFT'
        <th><a>alternateIdentifier</a></th>
        <td>
          <a href="http://schema.org/Text">Text</a>
+         <a href="https://schema.org/URL">URL</a>
+         <a href="http://schema.org/PropertyValue">PropertyValue</a>
        </td>
        <td>
             An additional identifier for the same instance of the resource.
@@ -66,6 +66,8 @@ version: '0.3-DRAFT'
        <th><a href="https://schema.org/keywords">keywords</a></th>
        <td>
          <a href="http://schema.org/Text">Text</a>
+         <a href="http://schema.org/DefinedTerm">DefinedTerm</a>
+         <a href="http://schema.org/URL">URL</a>
        </td>
        <td>
          Terms that capture the main subjects e.g. cancer, plant biology.
@@ -117,7 +119,7 @@ version: '0.3-DRAFT'
      </tr>
 
    <tr>
-       <th><a>processingDate</a></th>
+       <th><a>dateProcessed</a></th>
        <td>
          <a href="https://schema.org/Date">Date</a> or<br/>
          <a href="https://schema.org/DateTime">DateTime</a>          
@@ -178,7 +180,7 @@ version: '0.3-DRAFT'
          <a href="https://schema.org/Organization">Organization</a>          
        </td>
        <td>
-         Person or organization that can be contacted for more information or support.
+         A person or organization that can be contacted for more information or support.
        </td>
      </tr>
 
@@ -197,6 +199,7 @@ version: '0.3-DRAFT'
        <td>
          <a href="https://schema.org/Text">Text</a> or<br/>
          <a href="https://schema.org/URL">URL</a>
+         <a href="https://schema.org/DefinedTerm">DefinedTerm</a>
        </td>
        <td>
          Provide description of instruments and devices used in collecting, processing and analysis of samples. 
@@ -216,9 +219,11 @@ version: '0.3-DRAFT'
      </tr>
 
     <tr>
-       <th><a>environmentSystem</a></th>
+       <th><a>environmentalSystem</a></th>
        <td>
          <a href="https://schema.org/Text">Text</a>
+         <a href="https://schema.org/URL">URL</a>
+         <a href="https://schema.org/DefinedTerm">DefinedTerm</a>
         </td>
        <td>
          A category or description of the habitat that describes elements of an ecosystem where the sample was collected. Where possible use controlled vocabulary such as ENVO. 
@@ -245,7 +250,7 @@ version: '0.3-DRAFT'
          <a href="https://schema.org/Text">Text</a>
        </td>
        <td>
-         Current location of the item. 
+         Current location of the sample. 
        </td>
      </tr>
 
@@ -273,9 +278,10 @@ version: '0.3-DRAFT'
        <td>
          <a href="https://schema.org/Text">Text</a> or<br/>
          <a href="https://schema.org/URL">URL</a>
+         <a href="https://schema.org/DefinedTerm">DefinedTerm</a>
        </td>
        <td>
-        Indicate the type of sample. 
+        Indicate the type of sample. Note that this is intentionally broad to allow different types of specimens, i.e. cells, rock, sand 
        </td>
      </tr>
 
@@ -293,9 +299,10 @@ version: '0.3-DRAFT'
        <th><a>sampleProcess</a></th>
        <td>
          <a href="https://schema.org/Text">Text</a>
+          <a href="https://schema.org/URL">URL</a>
        </td>
        <td>
-         The processing technique that was applied to the sample, methods used to prepare the samples. 
+         The processing technique that was applied to the sample, methods used to prepare the samples, including SOPs (Standard Operating Procedures)
        </td>
      </tr>
 
@@ -330,7 +337,7 @@ version: '0.3-DRAFT'
      </tr>
 
     <tr>
-       <th><a>accessConditions</a></th>
+       <th><a>conditionsOfAccess</a></th>
        <td>
          <a href="https://schema.org/Text">Text</a>
        </td>
@@ -387,6 +394,7 @@ version: '0.3-DRAFT'
          <a href="https://schema.org/ImageObject">ImageObject</a> or<br/>
          <a href="https://schema.org/URL">URL</a> or<br/>
          <a href="https://schema.org/Text">Text</a>
+         <a href="https://discovery.biothings.io/ns/bioschemastypesdrafts/bioschemastypesdrafts:Sample">bioschemastypesdrafts:Sample</a>
        </td>
        <td>
         Describe related items including other resources related to the samples.
@@ -400,9 +408,10 @@ version: '0.3-DRAFT'
          <a href="https://schema.org/ImageObject">ImageObject</a> or<br/>
          <a href="https://schema.org/URL">URL</a> or<br/>
          <a href="https://schema.org/Text">Text</a>
+         <a href="https://discovery.biothings.io/ns/bioschemastypesdrafts/bioschemastypesdrafts:Sample">bioschemastypesdrafts:Sample</a>
        </td>
        <td>
-        Describe related items including other resources related to the samples.
+        Describe related items including other resources related to the samples.For example a subsample of this sample.
        </td>
      </tr>         
 
@@ -413,9 +422,10 @@ version: '0.3-DRAFT'
          <a href="https://schema.org/ImageObject">ImageObject</a> or<br/>
          <a href="https://schema.org/URL">URL</a> or<br/>
          <a href="https://schema.org/Text">Text</a>
+         <a href="https://discovery.biothings.io/ns/bioschemastypesdrafts/bioschemastypesdrafts:Sample">bioschemastypesdrafts:Sample</a>
        </td>
        <td>
-        Describe related items including other resources related to the samples.
+        Describe related items including other resources related to the samples. For example a supersample of this sample.
        </td>
      </tr>     
 

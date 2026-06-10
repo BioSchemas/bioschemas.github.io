@@ -10,11 +10,15 @@ redirect_from:
 
 previous_version: '0.1-DRAFT-2019_06_14'
 previous_release:
-dateModified: 2025-08-15
+dateModified: 2026-04-10
 description: "A biological material entity that is representative of a whole. <br/> Comments: Typically samples are intended to be representative of the whole or aspects thereof. Examples of samples include biomedical samples (blood, urine) and plant specimens held at herbaria."
 hierarchy:
 - Thing
 - BioChemEntity
+hierarchy:
+- Thing
+- Sample
+- BioSample
 gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20Sample
 group: samples
 name: BioSample
@@ -50,6 +54,8 @@ version: '0.2-DRAFT'
          <a href="https://schema.org/DefinedTerm">DefinedTerm</a>
        <br/>
          <a href="https://schema.org/Text">Text</a>
+       <br/>
+         <a href="https://bioschemas.org/types/TaxonName/1.0-RELEASE">TaxonName</a>    
        </td>
        <td>The full scientific name (order, family, subfamily, genus, specificEpithet). <br/>
       </td>
@@ -59,10 +65,11 @@ version: '0.2-DRAFT'
         <th style="color: #0B794B;">anatomicalSystem</th>
        <td>
          <a href="https://schema.org/AnatomicalSystem">AnatomicalSystem</a> or<br/>
-         <a href="https://schema.org/DefinedTerm">DefinedTerm</a><br/>          
+         <a href="https://schema.org/DefinedTerm">DefinedTerm</a><br/>
+         <a href="https://schema.org/URL">URL</a> <br/>          
        </td>
        <td>
-         Indicate the anatomical system from which the sample was collected, e.g., circulatory, digestive, endocrine, immune.
+         Indicate the anatomical system from which the sample was collected, e.g. circulatory, digestive, endocrine, immune and other systems.
        </td>
      </tr>
 
@@ -71,6 +78,7 @@ version: '0.2-DRAFT'
       <td>
          <a href="https://schema.org/AnatomicalStructure">AnatomicalStructure</a>or<br/>
          <a href="https://schema.org/DefinedTerm">DefinedTerm</a><br/>
+         <a href="https://schema.org/URL">URL</a> <br/>
        </td>
        <td>
         Indicate the organ or tissues the sample was collected from.</td>
@@ -79,6 +87,8 @@ version: '0.2-DRAFT'
       <th style="color: #0B794B;">sex</th>
        <td>
          <a href="https://schema.org/Text">Text</a><br/>
+         <a href="https://schema.org/DefinedTerm">DefinedTerm</a><br/>
+         <a href="https://schema.org/URL">URL</a><br/>
        </td>
        <td>
        The biological sex of the individual from which the sample was obtained.</td>
@@ -94,8 +104,27 @@ version: '0.2-DRAFT'
        A temporal subdivision of a developmental process, indicating the age or stage of the object when the sample was created.</td>
      </tr>    
 
-
-
+	<tr id="associatedPhenotype">
+      <th style="color: #0B794B;">associatedPhenotype</th>
+       <td>
+         <a href="https://schema.org/Text">Text</a><br/>  
+         <a href="https://schema.org/QuantitativeValue">QuantitativeValue</a><br/>
+         <a href="https://schema.org/DefinedTerm">DefinedTerm</a><br/>
+		<a href="https://bioschemas.org/types/Phenotype/0.3-DRAFT-2020_06_07">bioschemastypesdrafts:Phenotype</a><br/>
+       </td>
+       <td>
+       The relevant defining characteristic(s) expressed by the biological source of a typical sample, usually physical.</td>
+     </tr>
+	   	<tr id="cellType">
+      <th style="color: #0B794B;">cellType</th>
+       <td>
+         <a href="https://schema.org/Text">Text</a><br/>
+		 <a href="https://schema.org/URL">URL</a><br/>
+         <a href="https://schema.org/DefinedTerm">DefinedTerm</a><br/>
+       </td>
+       <td>
+       The cell line, lineage or biological/taxonomic classification of a cell.</td>
+     </tr>    
      <!-- BCE -->
      <tr class="reu_props_sdo">
         <td colspan="3">Properties from <a href="https://pending.schema.org/BioChemEntity">BioChemEntity</a></td>
@@ -122,7 +151,6 @@ version: '0.2-DRAFT'
        </td>
      </tr>
 
-     
      <tr>
        <th><a href="https://pending.schema.org/isInvolvedInBiologicalProcess">isInvolvedInBiologicalProcess</a></th>
        <td>
@@ -160,7 +188,13 @@ version: '0.2-DRAFT'
        </td>
      </tr>
 
-					<!-- Sample -->
+					
+	<!-- Sample -->
+    <tr class="new_props_sdo">
+        <td colspan="3">
+           Properties from <a style="color: #0B794B;" href="https://bioschemas.org/types/Sample/0.3-DRAFT.html">Sample 0.3-DRAFT </a> (pending schema.org integration).
+        </td>
+     </tr>
     <tr id="additionalProperty">
        <th><a href="https://schema.org/additionalProperty">additionalProperty</a></th>
        <td>
@@ -336,7 +370,7 @@ version: '0.2-DRAFT'
      </tr>
 
     <tr>
-       <th style="color: #0B794B;">environmentSystem</th>
+       <th style="color: #0B794B;">environmentalSystem</th>
        <td>
          <a href="https://schema.org/Text">Text</a>
         </td>

@@ -13,6 +13,8 @@ lead:
   start-date: 2023-12-11
 - person: LeylaGarcia
   start-date: 2023-12-11  
+- person: LukasWeil
+  start-date: 2025-12-03
 former-lead:
 - person: OlgaXimenaGiraldo
   start-date: 2020-10-01
@@ -52,7 +54,6 @@ members:
     - TimoMuehlhaus
     - StuartOwen
     - DominikBrilhaus
-    - LukasWeil
     - CyrilPommier
     - GajendraDoniparthi
     - DanielArend
