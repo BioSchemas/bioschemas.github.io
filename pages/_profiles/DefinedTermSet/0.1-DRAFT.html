@@ -1,0 +1,256 @@
+---
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+cross_walk_url: ''
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:DefinedTermSet
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20DefinedTermSet
+group: ''
+hierarchy: []
+json-ld_url: DefinedTermSet/jsonld/DefinedTermSet_v0.1-DRAFT.json
+live_deploy: /liveDeploys
+mapping:
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: URL of the item.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Minimum
+  property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The creator/author of this CreativeWork. This is the same as the Author
+    property for CreativeWork.
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Recommended
+  property: creator
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A license document that applies to this content, typically indicated
+    by URL.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - URL
+  marginality: Recommended
+  property: license
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The version of the CreativeWork embodied by a specified resource.
+  example: ''
+  expected_types:
+  - Text
+  - number
+  marginality: Recommended
+  property: version
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: An alias for the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: alternateName
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The name of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A Defined Term contained in this term set.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  marginality: Optional
+  property: hasDefinedTerm
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A citation or reference to another creative work, such as another publication,
+    web page, scholarly article, etc.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - Text
+  marginality: Optional
+  property: citation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'Conditions that affect the availability of, or method(s) of access
+    to, an item. Typically used for real world items such as an [[ArchiveComponent]]
+    held by an [[ArchiveOrganization]]. This property is not suitable for use as a
+    general Web access control mechanism. It is expressed only in natural language.\n\nFor
+    example "Available by appointment from the Reading Room" or "Accessible only from
+    logged-in accounts ". '
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: conditionsOfAccess
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The date on which the CreativeWork was created or the item was added
+    to a DataFeed.
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Optional
+  property: dateCreated
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The date on which the CreativeWork was most recently modified or when
+    the item's entry was modified within a DataFeed.
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Optional
+  property: dateModified
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Date of first broadcast/publication.
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Optional
+  property: datePublished
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A flag to signal that the item, event, or place is accessible for free.
+  example: ''
+  expected_types:
+  - Boolean
+  marginality: Optional
+  property: isAccessibleForFree
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Keywords or tags used to describe this content. Multiple entries in
+    a keywords list are typically delimited by commas.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  marginality: Optional
+  property: keywords
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: "A maintainer of a [[Dataset]], software package ([[SoftwareApplication]]),\
+    \ or other [[Project]]. A maintainer is a [[Person]] or [[Organization]] that\
+    \ manages contributions to, and/or publication of, some (typically complex) artifact.\
+    \ It is common for distributions of software and data to be based on \"upstream\"\
+    \ sources. When [[maintainer]] is applied to a specific version of something e.g.\
+    \ a particular version or packaging of a [[Dataset]], it is always  possible that\
+    \ the upstream source has a different maintainer. The [[isBasedOn]] property can\
+    \ be used to indicate such relationships between datasets to make the different\
+    \ maintenance roles clear. Similarly in the case of software, a package may have\
+    \ dedicated maintainers working on integration into software distributions such\
+    \ as Ubuntu, as well as upstream maintainers of the underlying work.\n      "
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Optional
+  property: maintainer
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A description of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: description
+  type: ''
+  type_url: ''
+name: DefinedTermSet
+parent_type: DefinedTermSet
+previous_release: ''
+previous_version: ''
+redirect_from: []
+spec_info:
+  description: 'A guide for how to describe a DefinedTermSet in the sciences using
+    Schema.org-like annotation. Version 0.1-DRAFT
+
+    <p>
+
+    <h4>Summary of Changes:</h4>
+
+    None -- first draft
+
+    '
+  full_example: https://github.com/BioSchemas/specifications/tree/master/DefinedTermSet/examples
+  official_type: DefinedTermSet
+  title: DefinedTermSet
+  version: 0.1-DRAFT
+  version_date: 2026622T18822
+spec_type: Profile
+status: revision
+use_cases_url: /useCases/DefinedTermSet
+---
