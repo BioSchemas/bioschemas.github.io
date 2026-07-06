@@ -1,0 +1,173 @@
+---
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+cross_walk_url: ''
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:LabProcess
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20LabProcess
+group: ''
+hierarchy: []
+json-ld_url: LabProcess/jsonld/LabProcess_v0.1-DRAFT.json
+live_deploy: /liveDeploys
+mapping:
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The name of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Minimum
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A parameter value of the experimental process, usually a key-value
+    pair using ontology terms.
+  example: ''
+  expected_types:
+  - PropertyValue
+  marginality: Recommended
+  property: parameterValue
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The lab protocol describes the experimental workflow and its parameters,
+    which is instantiated by this process.
+  example: ''
+  expected_types:
+  - Protocol
+  marginality: Recommended
+  property: executesLabProtocol
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The direct performer or driver of the action (animate or inanimate).
+    e.g. *John* wrote a book.
+  example: ''
+  expected_types:
+  - Organization
+  - person
+  marginality: Recommended
+  property: agent
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation),
+    the time that it is expected to end. For actions that span a period of time, when
+    the action was performed. e.g. John wrote a book from January to *December*. For
+    media, including audio and video, it's the time offset of the end of a clip within
+    a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime,
+    even when describing dates with times. This situation may be clarified in future
+    revisions.
+  example: ''
+  expected_types:
+  - DateTime
+  - time
+  marginality: Recommended
+  property: endTime
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The object upon which the action is carried out, whose state is kept
+    intact or changed. Also known as the semantic roles patient, affected or undergoer
+    (which change their state) or theme (which doesn't). e.g. John read *a book*.
+  example: ''
+  expected_types:
+  - Thing
+  marginality: Recommended
+  property: object
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The result produced in the action. e.g. John wrote *a book*.
+  example: ''
+  expected_types:
+  - Thing
+  marginality: Recommended
+  property: result
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The object that helped the agent perform the action. e.g. John wrote
+    a book with *a pen*.
+  example: ''
+  expected_types:
+  - Thing
+  marginality: Optional
+  property: instrument
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation),
+    the time that it is expected to start. For actions that span a period of time,
+    when the action was performed. e.g. John wrote a book from *January* to December.
+    For media, including audio and video, it's the time offset of the start of a clip
+    within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime,
+    even when describing dates with times. This situation may be clarified in future
+    revisions.
+  example: ''
+  expected_types:
+  - DateTime
+  - time
+  marginality: Optional
+  property: startTime
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A description of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A sub property of description. A short description of the item used
+    to disambiguate from other, similar items. Information from other properties (in
+    particular, name) may be necessary for the description to be useful for disambiguation.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Optional
+  property: disambiguatingDescription
+  type: ''
+  type_url: ''
+name: LabProcess
+parent_type: LabProcess
+previous_release: ''
+previous_version: ''
+redirect_from: []
+spec_info:
+  description: 'Bioschemas profile for annotating a retrospective description of the
+    application of experimental tasks and operations, given as a LabProcess. Version
+    1.0-DRAFT, prepared by: Florian Wetzels and H. Lukas Weil'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/LabProcess/examples
+  official_type: LabProcess
+  title: LabProcess
+  version: 0.1-DRAFT
+  version_date: 202676T181831
+spec_type: Profile
+status: revision
+use_cases_url: /useCases/LabProcess
+---
