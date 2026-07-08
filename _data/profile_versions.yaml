@@ -55,6 +55,11 @@ DefinedTerm:
   latest_release: null
   name: DefinedTerm
   status: active
+DefinedTermSet:
+  latest_publication: 0.1-DRAFT
+  latest_release: null
+  name: DefinedTermSet
+  status: active
 Disease:
   latest_publication: 0.2-DRAFT
   latest_release: null
