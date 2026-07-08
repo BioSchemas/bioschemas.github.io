@@ -85,6 +85,11 @@ Journal:
   latest_release: null
   name: Journal
   status: active
+LabProcess:
+  latest_publication: 0.1-DRAFT
+  latest_release: null
+  name: LabProcess
+  status: active
 LabProtocol:
   latest_publication: 0.9-DRAFT
   latest_release: null
