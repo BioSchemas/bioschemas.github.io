@@ -91,7 +91,7 @@ LabProcess:
   name: LabProcess
   status: active
 LabProtocol:
-  latest_publication: 0.8-DRAFT
+  latest_publication: 0.9-DRAFT
   latest_release: null
   name: LabProtocol
   status: active
