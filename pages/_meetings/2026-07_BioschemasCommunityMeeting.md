@@ -2,7 +2,7 @@
 layout: meeting
 name: Bioschemas Monthly Call - Community Call
 title: Bioschemas Community Meeting
-dates: 20 June 2026
+dates: 20 July 2026
 start_date: 2026-07-20
 end_date: 2026-07-20
 venue: Online
