@@ -21,6 +21,6 @@ Our next meeting will be a **community meeting on 2026.07.20 at 17:00 CEST**. Me
 - 2026.08.17 at 17:00 CEST. The next technical meeting with our usual roundtable on topics around the website and specifications development.
 - 2026.09.21 at 17:00 CEST. Community meeting with Nick Juty and Alban Gaignard will discuss Biodiversity topics including Sample and BioSample specifications.
 - 2026.10.19 at 17:00 CEST. Technical meeting with our usual roundtable on topics around the website and specifications development.
-- 2026.11.16 at 17:00 CEST (winter time!). Community meeting, topic to be decided.
+- 2026.11.16 at 17:00 CET (winter time!). Community meeting, topic to be decided.
 
 Please do join us and add details to your calendar so you do not miss it!
