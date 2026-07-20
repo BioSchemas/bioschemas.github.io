@@ -39,7 +39,7 @@ objectives:
 
 specifications:
   [
-    'LabProtocol'
+    'LabProcess', 'LabProtocol'
   ]
 
 types:
