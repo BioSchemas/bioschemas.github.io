@@ -39,6 +39,7 @@ members:
     - RomanBaum
     - CarlBoettiger
     - MattYoder
+    - MarcusErnst
 
 breadcrumb:
   link1: /community/

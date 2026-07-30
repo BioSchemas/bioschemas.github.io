@@ -48,6 +48,7 @@ members:
     - MarcoBradzini
     - GabrielSchneider
     - TonyBurdett
+    - MarcusErnst
 
 Former members:
     - HelenParkinson
