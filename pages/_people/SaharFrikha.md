@@ -4,6 +4,7 @@ id: SaharFrikha
 first-name: Sahar
 last-name: Frikha
 collection: people
+former: true
 affiliation: Institut Français de Bioinformatique (IFB), Nantes, France
 homepage: https://www.linkedin.com/in/sahar-frikha/
 github_username: sahar-frikha
