@@ -5,7 +5,7 @@ Beacon:
   name: Beacon
   status: deprecated
 BioSample:
-  latest_publication: 0.1-DRAFT-2019_11_12
+  latest_publication: 0.2-DRAFT
   latest_release: null
   name: BioSample
   status: active
