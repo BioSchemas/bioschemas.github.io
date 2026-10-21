@@ -1,0 +1,571 @@
+---
+# spec_info content generated using GOWeb
+# DO NOT MANUALLY EDIT THE CONTENT
+cross_walk_url: https://docs.google.com/spreadsheets/d/122y9X5ZxFN5sPDX63ox8UGQlHkddT6O69_e2b_eAv5Y/edit#gid=1483018794
+dde_ui_url: https://discovery.biothings.io/view/bioschemasdrafts/bioschemasdrafts:Sample
+gh_tasks: https://github.com/Bioschemas/specifications/labels/type%3A%20Sample
+group: samples
+hierarchy: []
+json-ld_url: Sample/jsonld/Sample_v0.4-DRAFT.json
+live_deploy: /liveDeploys
+mapping:
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Provide funding information.
+  example: ''
+  expected_types:
+  - Grant
+  marginality: Minimum
+  property: funding
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: "The identifier property represents any kind of identifier for any\
+    \ kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides\
+    \ dedicated properties for representing many of these, either as textual strings\
+    \ or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg)\
+    \ for more details.\n        "
+  example: ''
+  expected_types: []
+  marginality: Minimum
+  property: identifier
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: 'Provide information about the conditions and methods of acquisition
+    of samples. '
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: collectionMethod
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The Person or Organization who collected the Sample.
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Recommended
+  property: collector
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Sample access statement outlining conditions/requirements need to be
+    fulfilled before access to the sample is granted.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: conditionsOfAccess
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A person or organization that can be contacted for more information
+    or support.
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Recommended
+  property: contactPoint
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A person or organization that contributes to the work.
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Recommended
+  property: contributor
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The date on which the sample was collected.
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Recommended
+  property: dateCollected
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The date the sample was created or added to a DataFeed.
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Recommended
+  property: dateCreated
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The date the sample record was last updated.
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Recommended
+  property: dateModified
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The date the sample was processed or used in a method.
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Recommended
+  property: dateProcessed
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The date when the record of the sample will be made publicly available.
+  example: ''
+  expected_types:
+  - Date
+  - DateTime
+  marginality: Recommended
+  property: datePublished
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A category or description of the habitat that describes elements of
+    an ecosystem where the sample was collected. Where possible use controlled vocabulary
+    such as ENVO.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  marginality: Recommended
+  property: environmentalSystem
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Indicate which ethics policies and/or social considerations are associated
+    with the sample.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: ethics
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Describe the planned or executed experimental procedures involving
+    the samples.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: experimentalPurpose
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Provide description of instruments and devices used in collecting,
+    processing and analysis of samples.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  marginality: Recommended
+  property: instrument
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Current location of the sample.
+  example: ''
+  expected_types:
+  - GeoCoordinates
+  - Place
+  - Text
+  marginality: Recommended
+  property: itemLocation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Terms that capture the main topics e.g. cancer, plant biology.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  marginality: Recommended
+  property: keywords
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The place where a sample underwent processing or creation, distinct
+    from its original location.
+  example: ''
+  expected_types:
+  - GeoCoordinates
+  - Place
+  - Text
+  marginality: Recommended
+  property: locationCreated
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The location from which the sample was originally collected.
+  example: ''
+  expected_types:
+  - GeoCoordinates
+  - Place
+  - Text
+  marginality: Recommended
+  property: locationOfOrigin
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Information on the project.
+  example: ''
+  expected_types:
+  - ResearchProject
+  marginality: Recommended
+  property: project
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Indicate whether this resource is available for reuse.
+  example: ''
+  expected_types:
+  - Boolean
+  marginality: Recommended
+  property: sampleAvailability
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The processing technique that was applied to the sample, methods used
+    to prepare the samples, including SOPs (Standard Operating Procedures).
+  example: ''
+  expected_types:
+  - Text
+  - URL
+  marginality: Recommended
+  property: sampleProcess
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A numeric value for a measurement of the size  of a sample.
+  example: ''
+  expected_types:
+  - QuantitativeValue
+  marginality: Recommended
+  property: sampleQuantity
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Specify the composition and state of the sample. This can be used to
+    indicate its physical state (gas, liquid, solid), degradation status (deteriorated,
+    partially degraded) or passage number.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: sampleState
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The temperature at which the sample is stored.
+  example: ''
+  expected_types:
+  - QuantitativeValue
+  marginality: Recommended
+  property: sampleStorageTemperature
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Indicate the type of sample. Note that this is intentionally broad
+    to allow different types of specimens, i.e. cells, rock, sand.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  marginality: Recommended
+  property: sampleType
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Indicate the study ID.
+  example: ''
+  expected_types:
+  - Text
+  - URL
+  marginality: Recommended
+  property: studyID
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Title of the study to which the samples belong
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: studyTitle
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'The person or organization that registers the sample. '
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Recommended
+  property: submitter
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: A description of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: description
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The name of the item.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: name
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: URL of a reference Web page that unambiguously indicates the item's
+    identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
+    website.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: sameAs
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: URL of the item.
+  example: ''
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A property-value pair representing an additional characteristic of
+    the entity, that is not representable by an existing property.
+  example: ''
+  expected_types:
+  - PropertyValue
+  marginality: Optional
+  property: additionalProperty
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'An additional identifier for the same instance of the resource. '
+  example: ''
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
+  marginality: Optional
+  property: alternateIdentifier
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: List publications where the sample is mentioned or described.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - Text
+  marginality: Optional
+  property: citation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Describe related items including other resources related to the samples.
+    For example a subsample of this sample.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - ImageObject
+  - Sample
+  - Text
+  - URL
+  marginality: Optional
+  property: hasPart
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Indicates whether the sample is being used as a normal control, may
+    be in combination with another sample.
+  example: ''
+  expected_types:
+  - Boolean
+  - Text
+  marginality: Optional
+  property: isControl
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Describe related items including other resources related to the samples.
+    For example a supersample of this sample.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - ImageObject
+  - Sample
+  - Text
+  - URL
+  marginality: Optional
+  property: isPartOf
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Describe related items including other resources related to the samples.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - ImageObject
+  - Sample
+  - Text
+  - URL
+  marginality: Optional
+  property: isRelatedTo
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The Person or Organization who is responsible for the Sample.
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Optional
+  property: maintainer
+  type: ''
+  type_url: ''
+name: Sample
+parent_type: Sample
+previous_release: 0.2-RELEASE-2018_11_10
+previous_version: 0.3-DRAFT
+redirect_from:
+- /devSpecs/Sample/specification/
+- /devSpecs/Sample/specification
+- /devSpecs/Sample/
+- /devSpecs/Sample
+- /specifications/drafts/Sample/
+- /specifications/drafts/Sample
+- /specifications/Sample/
+- /specifications/Sample
+- /profiles/Sample/
+- /profiles/Sample
+spec_info:
+  description: 'This profile describes a material entity that is representative of
+    a whole.
+
+
+    Comments: Typically samples are intended to be representative of the whole or
+    aspects thereof. Examples of samples include biomedical samples (blood, urine)
+    and commercial samples (carpet, metal). <h4>Summary of Changes</h4>Profile updated
+    to be based off of updated Draft Sample Type which includes many new properties.
+    Updated by the Samples Working Group. <p> Version: 0.4-DRAFT'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/Sample/examples
+  official_type: Sample
+  title: Sample
+  version: 0.4-DRAFT
+  version_date: 20261021T162149
+spec_type: Profile
+status: revision
+use_cases_url: /useCases/Sample
+---
