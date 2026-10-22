@@ -9,30 +9,32 @@ hierarchy: []
 json-ld_url: BioSample/jsonld/BioSample_v0.2-DRAFT.json
 live_deploy: /liveDeploys
 mapping:
-- bsc_description: Dummy Bioschemas description for conformsTo.
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
-  description: Used to state the Bioschemas profile that the markup relates to. The
-    versioned URL of the profile must be used. Note that we use a CURIE in the table
-    here but the full URL for Dublin Core terms must be used in the markup (http://purl.org/dc/terms/conformsTo),
-    see example.
+  description: The full scientific name (order, family, subfamily, genus, specific
+    epithet).
   example: ''
-  expected_types: []
+  expected_types:
+  - DefinedTerm
+  - TaxonName
+  - Text
   marginality: Minimum
-  property: conformsTo
+  property: scientificName
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for funding.
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
   description: Provide funding information.
   example: ''
-  expected_types: []
+  expected_types:
+  - Grant
   marginality: Minimum
   property: funding
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for identifier.
+- bsc_description: ''
   cardinality: ONE
   controlled_vocab: ''
   description: "The identifier property represents any kind of identifier for any\
@@ -41,338 +43,665 @@ mapping:
     \ or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg)\
     \ for more details.\n        "
   example: ''
-  expected_types: []
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
   marginality: Minimum
   property: identifier
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for collectionMethod.
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Indicate the organ or tissues the sample was collected from.
+  example: ''
+  expected_types:
+  - AnatomicalStructure
+  - DefinedTerm
+  - URL
+  marginality: Recommended
+  property: anatomicalStructure
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Indicate the anatomical system from which the sample was collected,
+    e.g. circulatory, digestive, endocrine, immune and other systems.
+  example: ''
+  expected_types:
+  - AnatomicalSystem
+  - DefinedTerm
+  - URL
+  marginality: Recommended
+  property: anatomicalSystem
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The relevant defining characteristic(s) expressed by the biological
+    source of a typical sample, usually physical.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Phenotype
+  - QuantitativeValue
+  - Text
+  marginality: Recommended
+  property: associatedPhenotype
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The cell line, lineage or biological/taxonomic classification of a
+    cell.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  marginality: Recommended
+  property: cellType
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A temporal subdivision of a developmental process, indicating the age
+    or stage of the object when the sample was created.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - QuantitativeValue
+  - Text
+  marginality: Recommended
+  property: developmentalStage
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The biological sex of the individual from which the sample was obtained.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  marginality: Recommended
+  property: sex
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The taxonomic grouping of the organism that expresses, encodes, or
+    in some way related to the BioChemEntity.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Taxon
+  - Text
+  - URL
+  marginality: Recommended
+  property: taxonomicRange
+  type: ''
+  type_url: ''
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
   description: 'Provide information about the conditions and methods of acquisition
     of samples. '
   example: ''
-  expected_types: []
+  expected_types:
+  - Text
   marginality: Recommended
   property: collectionMethod
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for collector.
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
-  description: 'The Person or Organization who collected the Sample. '
+  description: The Person or Organization who collected the Sample.
   example: ''
-  expected_types: []
+  expected_types:
+  - Organization
+  - Person
   marginality: Recommended
   property: collector
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for conditionsOfAccess.
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
   description: Sample access statement outlining conditions/requirements need to be
     fulfilled before access to the sample is granted.
   example: ''
-  expected_types: []
+  expected_types:
+  - Text
   marginality: Recommended
   property: conditionsOfAccess
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for contactPoint.
+- bsc_description: ''
   cardinality: ONE
   controlled_vocab: ''
   description: A person or organization that can be contacted for more information
     or support.
   example: ''
-  expected_types: []
+  expected_types:
+  - Organization
+  - Person
   marginality: Recommended
   property: contactPoint
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for contributor.
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
   description: A person or organization that contributes to the work.
   example: ''
-  expected_types: []
+  expected_types:
+  - Organization
+  - Person
   marginality: Recommended
   property: contributor
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for dateCollected.
+- bsc_description: ''
   cardinality: ONE
   controlled_vocab: ''
   description: The date on which the sample was collected.
   example: ''
-  expected_types: []
+  expected_types:
+  - Date
+  - DateTime
   marginality: Recommended
   property: dateCollected
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for dateCreated.
+- bsc_description: ''
   cardinality: ONE
   controlled_vocab: ''
-  description: 'The date on which the CreativeWork was created or the item was added
-    to a DataFeed. '
+  description: The date the sample was created or added to a DataFeed.
   example: ''
-  expected_types: []
+  expected_types:
+  - Date
+  - DateTime
   marginality: Recommended
   property: dateCreated
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for dateModified.
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
   description: The date the sample record was last updated.
   example: ''
-  expected_types: []
+  expected_types:
+  - Date
+  - DateTime
   marginality: Recommended
   property: dateModified
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for dateProcessed.
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
   description: The date the sample was processed or used in a method.
   example: ''
-  expected_types: []
+  expected_types:
+  - Date
+  - DateTime
   marginality: Recommended
   property: dateProcessed
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for datePublished.
+- bsc_description: ''
   cardinality: ONE
   controlled_vocab: ''
   description: The date when the record of the sample will be made publicly available.
   example: ''
-  expected_types: []
+  expected_types:
+  - Date
+  - DateTime
   marginality: Recommended
   property: datePublished
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for environmentalSystem.
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
   description: A category or description of the habitat that describes elements of
     an ecosystem where the sample was collected. Where possible use controlled vocabulary
     such as ENVO.
   example: ''
-  expected_types: []
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
   marginality: Recommended
   property: environmentalSystem
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for ethics.
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
   description: Indicate which ethics policies and/or social considerations are associated
     with the sample.
   example: ''
-  expected_types: []
+  expected_types:
+  - Text
   marginality: Recommended
   property: ethics
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for experimentalPurpose.
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
   description: Describe the planned or executed experimental procedures involving
     the samples.
   example: ''
-  expected_types: []
+  expected_types:
+  - Text
   marginality: Recommended
   property: experimentalPurpose
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for instrument.
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
   description: Provide description of instruments and devices used in collecting,
     processing and analysis of samples.
   example: ''
-  expected_types: []
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
   marginality: Recommended
   property: instrument
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for locationCreated.
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Current location of the sample.
+  example: ''
+  expected_types:
+  - GeoCoordinates
+  - Place
+  - Text
+  marginality: Recommended
+  property: itemLocation
+  type: ''
+  type_url: ''
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
-  description: 'The location where the CreativeWork was created, which may not be
-    the same as the location depicted in the CreativeWork. '
+  description: Terms that capture the main topics e.g. cancer, plant biology.
   example: ''
-  expected_types: []
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  marginality: Recommended
+  property: keywords
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: The place where a sample underwent processing or creation, distinct
+    from its original location.
+  example: ''
+  expected_types:
+  - GeoCoordinates
+  - Place
+  - Text
   marginality: Recommended
   property: locationCreated
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for custodian.
-  cardinality: MANY
+- bsc_description: ''
+  cardinality: ONE
   controlled_vocab: ''
-  description: The Person or Organization who is responsible for the Sample.
+  description: The location from which the sample was originally collected.
   example: ''
-  expected_types: []
+  expected_types:
+  - GeoCoordinates
+  - Place
+  - Text
   marginality: Recommended
-  property: custodian
+  property: locationOfOrigin
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for gender.
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
-  description: Gender of the person. While http://schema.org/Male and http://schema.org/Female
-    may be used, text strings are also acceptable for people who do not identify as
-    a binary gender
+  description: Information on the project.
   example: ''
-  expected_types: []
+  expected_types:
+  - ResearchProject
   marginality: Recommended
-  property: gender
+  property: project
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for samplingAge.
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: Indicate whether this resource is available for reuse.
+  example: ''
+  expected_types:
+  - Boolean
+  marginality: Recommended
+  property: sampleAvailability
+  type: ''
+  type_url: ''
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
-  description: 'The age of the object when the Sample was created. '
+  description: The processing technique that was applied to the sample, methods used
+    to prepare the samples, including SOPs (Standard Operating Procedures).
   example: ''
-  expected_types: []
+  expected_types:
+  - Text
+  - URL
   marginality: Recommended
-  property: samplingAge
+  property: sampleProcess
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for description.
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A numeric value for a measurement of the size  of a sample.
+  example: ''
+  expected_types:
+  - QuantitativeValue
+  marginality: Recommended
+  property: sampleQuantity
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Specify the composition and state of the sample. This can be used to
+    indicate its physical state (gas, liquid, solid), degradation status (deteriorated,
+    partially degraded) or passage number.
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: sampleState
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: The temperature at which the sample is stored.
+  example: ''
+  expected_types:
+  - QuantitativeValue
+  marginality: Recommended
+  property: sampleStorageTemperature
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Indicate the type of sample. Note that this is intentionally broad
+    to allow different types of specimens, i.e. cells, rock, sand.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - Text
+  - URL
+  marginality: Recommended
+  property: sampleType
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Indicate the study ID.
+  example: ''
+  expected_types:
+  - Text
+  - URL
+  marginality: Recommended
+  property: studyID
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Title of the study to which the samples belong
+  example: ''
+  expected_types:
+  - Text
+  marginality: Recommended
+  property: studyTitle
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: ONE
+  controlled_vocab: ''
+  description: 'The person or organization that registers the sample. '
+  example: ''
+  expected_types:
+  - Organization
+  - Person
+  marginality: Recommended
+  property: submitter
+  type: ''
+  type_url: ''
+- bsc_description: ''
   cardinality: ONE
   controlled_vocab: ''
   description: A description of the item.
   example: ''
-  expected_types: []
+  expected_types:
+  - Text
   marginality: Recommended
   property: description
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for name.
-  cardinality: ONE
+- bsc_description: ''
+  cardinality: MANY
   controlled_vocab: ''
   description: The name of the item.
   example: ''
-  expected_types: []
+  expected_types:
+  - Text
   marginality: Recommended
   property: name
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for sameAs.
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
   description: URL of a reference Web page that unambiguously indicates the item's
     identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official
     website.
   example: ''
-  expected_types: []
+  expected_types:
+  - URL
   marginality: Recommended
   property: sameAs
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for additionalProperty.
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
-  description: 'A property-value pair representing an additional characteristics of
-    the entitity, e.g. a product feature or another characteristic for which there
-    is no matching property in schema.org. Note: Publishers should be aware that applications
-    designed to use specific schema.org properties (e.g. http://schema.org/width,
-    http://schema.org/color, http://schema.org/gtin13, ...) will typically expect
-    such data to be provided using those properties, rather than using the generic
-    property/value mechanism.'
+  description: URL of the item.
   example: ''
-  expected_types: []
+  expected_types:
+  - URL
+  marginality: Recommended
+  property: url
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Disease associated to this BioChemEntity. Such a disease can be a MedicalCondition
+    or a URL. If you want to add an evidence supporting the association, please use
+    PropertyValue.
+  example: ''
+  expected_types:
+  - MedicalCondition
+  - PropertyValue
+  - URL
+  marginality: Optional
+  property: associatedDisease
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A role played by the molecular entity within a biological context.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  marginality: Optional
+  property: biologicalRole
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Biological process this BioChemEntity is involved in; please use PropertyValue
+    if you want to include any evidence.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  marginality: Optional
+  property: isInvolvedInBiologicalProcess
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Subcellular location where this BioChemEntity is located; please use
+    PropertyValue if you want to include any evidence.
+  example: ''
+  expected_types:
+  - DefinedTerm
+  - PropertyValue
+  - URL
+  marginality: Optional
+  property: isLocatedInSubcellularLocation
+  type: ''
+  type_url: ''
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: A property-value pair representing an additional characteristic of
+    the entity, that is not representable by an existing property.
+  example: ''
+  expected_types:
+  - PropertyValue
   marginality: Optional
   property: additionalProperty
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for alternateIdentifier.
-  cardinality: MANY
+- bsc_description: ''
+  cardinality: ONE
   controlled_vocab: ''
   description: 'An additional identifier for the same instance of the resource. '
   example: ''
-  expected_types: []
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
   marginality: Optional
   property: alternateIdentifier
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for citation.
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
   description: List publications where the sample is mentioned or described.
   example: ''
-  expected_types: []
+  expected_types:
+  - CreativeWork
+  - Text
   marginality: Optional
   property: citation
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for hasPart.
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
   description: Describe related items including other resources related to the samples.
     For example a subsample of this sample.
   example: ''
-  expected_types: []
+  expected_types:
+  - CreativeWork
+  - ImageObject
+  - Sample
+  - Text
+  - URL
   marginality: Optional
   property: hasPart
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for isControl.
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
   description: Indicates whether the sample is being used as a normal control, may
     be in combination with another sample.
   example: ''
-  expected_types: []
+  expected_types:
+  - Boolean
+  - Text
   marginality: Optional
   property: isControl
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for itemLocation.
-  cardinality: ONE
+- bsc_description: ''
+  cardinality: MANY
   controlled_vocab: ''
-  description: 'Current location of the item. '
+  description: Describe related items including other resources related to the samples.
+    For example a supersample of this sample.
   example: ''
-  expected_types: []
+  expected_types:
+  - CreativeWork
+  - ImageObject
+  - Sample
+  - Text
+  - URL
   marginality: Optional
-  property: itemLocation
+  property: isPartOf
   type: ''
   type_url: ''
-- bsc_description: Dummy Bioschemas description for custodian.
+- bsc_description: ''
+  cardinality: MANY
+  controlled_vocab: ''
+  description: Describe related items including other resources related to the samples.
+  example: ''
+  expected_types:
+  - CreativeWork
+  - ImageObject
+  - Sample
+  - Text
+  - URL
+  marginality: Optional
+  property: isRelatedTo
+  type: ''
+  type_url: ''
+- bsc_description: ''
   cardinality: MANY
   controlled_vocab: ''
   description: The Person or Organization who is responsible for the Sample.
   example: ''
-  expected_types: []
+  expected_types:
+  - Organization
+  - Person
   marginality: Optional
-  property: custodian
-  type: ''
-  type_url: ''
-- bsc_description: Dummy Bioschemas description for additionalType.
-  cardinality: MANY
-  controlled_vocab: ''
-  description: "An additional type for the item, typically used for adding more specific\
-    \ types from external vocabularies in microdata syntax. This is a relationship\
-    \ between something and a class that the thing is in. Typically the value is a\
-    \ URI-identified RDF class, and in this case corresponds to the\n    use of rdf:type\
-    \ in RDF. Text values can be used sparingly, for cases where useful information\
-    \ can be added without their being an appropriate schema to reference. In the\
-    \ case of text values, the class label should follow the schema.org <a href=\"\
-    http://schema.org/docs/styleguide.html\">style guide</a>."
-  example: ''
-  expected_types: []
-  marginality: Optional
-  property: additionalType
-  type: ''
-  type_url: ''
-- bsc_description: Dummy Bioschemas description for alternateName.
-  cardinality: MANY
-  controlled_vocab: ''
-  description: An alias for the item.
-  example: ''
-  expected_types: []
-  marginality: Optional
-  property: alternateName
+  property: maintainer
   type: ''
   type_url: ''
 name: BioSample
@@ -391,12 +720,18 @@ redirect_from:
 - /profiles/BioSample/
 - /profiles/BioSample
 spec_info:
-  description: Drafting Biosample profile...
-  full_example: https://github.com/BioSchemas/specifications/tree/master/Biosample/examples
+  description: 'This profile describes a biological material that is representative
+    of a greater whole.
+
+
+    Comments: Typically biosamples are intended to be representative of the whole
+    or aspects thereof. Examples of biosamples include biomedical samples (blood,
+    urine) museum specimen samples, etc.'
+  full_example: https://github.com/BioSchemas/specifications/tree/master/BioSample/examples
   official_type: BioSample
-  title: Biosample
+  title: BioSample
   version: 0.2-DRAFT
-  version_date: 20261021T145458
+  version_date: 20261021T201242
 spec_type: Profile
 status: revision
 use_cases_url: /useCases/BioSample
