@@ -147,7 +147,7 @@ RNA:
   name: RNA
   status: active
 Sample:
-  latest_publication: 0.3-DRAFT
+  latest_publication: 0.4-DRAFT
   latest_release: 0.2-RELEASE-2018_11_10
   name: Sample
   status: active
