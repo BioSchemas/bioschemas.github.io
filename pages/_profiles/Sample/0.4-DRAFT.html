@@ -29,7 +29,10 @@ mapping:
     \ or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg)\
     \ for more details.\n        "
   example: ''
-  expected_types: []
+  expected_types:
+  - PropertyValue
+  - Text
+  - URL
   marginality: Minimum
   property: identifier
   type: ''
@@ -470,9 +473,9 @@ mapping:
     For example a subsample of this sample.
   example: ''
   expected_types:
+  - Bioschemastypesdrafts:Sample
   - CreativeWork
   - ImageObject
-  - Sample
   - Text
   - URL
   marginality: Optional
@@ -499,9 +502,9 @@ mapping:
     For example a supersample of this sample.
   example: ''
   expected_types:
+  - Bioschemastypesdrafts:Sample
   - CreativeWork
   - ImageObject
-  - Sample
   - Text
   - URL
   marginality: Optional
@@ -514,9 +517,9 @@ mapping:
   description: Describe related items including other resources related to the samples.
   example: ''
   expected_types:
+  - Bioschemastypesdrafts:Sample
   - CreativeWork
   - ImageObject
-  - Sample
   - Text
   - URL
   marginality: Optional
@@ -564,7 +567,7 @@ spec_info:
   official_type: Sample
   title: Sample
   version: 0.4-DRAFT
-  version_date: 20261021T162149
+  version_date: 20261022T142554
 spec_type: Profile
 status: revision
 use_cases_url: /useCases/Sample
