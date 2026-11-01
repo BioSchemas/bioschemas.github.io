@@ -95,6 +95,11 @@ LabProtocol:
   latest_release: null
   name: LabProtocol
   status: active
+LearningPath:
+  latest_publication: 0.1-DRAFT
+  latest_release: null
+  name: LearningPath
+  status: active
 MolecularEntity:
   latest_publication: 0.7-DRAFT
   latest_release: 0.5-RELEASE
