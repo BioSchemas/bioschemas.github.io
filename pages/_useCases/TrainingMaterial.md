@@ -1,6 +1,6 @@
 ---
 layout: use-case
-name: Training Materials, Course and CourseInstance
+name: Training Materials, Course, CourseInstance and LearningPath
 group: training
 active: true
 redirect_from:
@@ -14,13 +14,17 @@ redirect_from:
 - "/useCases/CourseInstance"
 ---
 
-These use cases apply to the following training profiles: Course, CourseInstance and TrainingMaterial. We distinguish two main users for these profiles: a learner user (someone who wants to learn something) and a trainer user (someone who wants to teach something).
+These use cases apply to the following training profiles: Course, CourseInstance, TrainingMaterial and LearningPath. We distinguish two main users for these profiles: a learner user (someone who wants to learn something) and a trainer user (someone who wants to teach something). Another user is a training registry manager (someone who provides and curates a collection of learning resources). 
 
 ## Findability
 
 As a learner user, I would like to find as many courses and associated offerings and training materials as possible matching the keywords associated with my topic of interest.
 
 As a trainer user, I would like to find as many courses and training materials as possible matching the keywords associated with my topic of interest.
+
+As a learner user, I would like to find specifically curated learning paths of courses and training materials curated to take me from beginner through to advanced competency on a particular topic. 
+
+As a training registry manager, I would like to exchange my collection of courses and training materials between the repository that I curate and designated additional repositories. 
 
 ## Summarization
 
@@ -35,3 +39,7 @@ As a trainer user I develop courses so when I look for a course on a specific to
 As a trainer user having identified courses relevant to my specific topic of interest, I then want to get structural details on instances of the course including: the delivery format, whether there is a fee to attend, who is delivering the course instance and in what language, who is organizing and who is funding the course instance, and a link to the course instance. I also want to learn about when instances of the course are offered. Ideally the course instance would also direct me to the training materials associated with the course instance.
 
 As a trainer user when I look for training material on a specific topic of interest, I would like to get the title and a brief description of the training material. Additionally, I would also like to know what the license is on the training material, the document type, the language it is presented in, when it was last updated and the link to the training material. I also want to identify what the learning objectives are for the training material, who the author is, who the anticipated audience is and the skill level expected for users of the training material, and the time required to go through the training material.
+
+As a trainer user, I would like to define a linear or non-linear learning path of courses and training materials curated to take a learner from beginner through to advanced competency on a particular topic. I also want the option of organizing these materials into sub-paths (such as modules or topics), where each organizational unit can be described with its own learning objectives, skill level expected, and time required.
+
+As a learner user, I would like to define a personalized learning path of training materials or courses matching the keywords associated with my topic of interest.
