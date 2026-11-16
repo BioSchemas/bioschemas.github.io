@@ -158,6 +158,7 @@ LabProtocol,labprotocols,"- ""/devSpecs/LabProtocol/specification/""
 - ""/specifications/LabProtocol""
 - ""/profiles/LabProtocol/""
 - ""/profiles/LabProtocol""",schema:CreativeWork,bioschemastypes:LabProtocol,https://docs.google.com/spreadsheets/d/1KfhBNetyt9xzI7cs3S6HwIWEsgWpPEKnGlqu19Q49vo/
+LearningPath,training,
 MolecularEntity,chemicals,"- ""/devSpecs/MolecularEntity/specification/""
 - ""/devSpecs/MolecularEntity/specification""
 - ""/devSpecs/MolecularEntity/""
