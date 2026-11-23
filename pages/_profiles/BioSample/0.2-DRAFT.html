@@ -16,12 +16,12 @@ mapping:
     epithet).
   example: ''
   expected_types:
+  - Bioschemastypesdrafts:TaxonName
   - DefinedTerm
-  - TaxonName
   - Text
   marginality: Minimum
   property: scientificName
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -62,7 +62,7 @@ mapping:
   - URL
   marginality: Recommended
   property: anatomicalStructure
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -76,7 +76,7 @@ mapping:
   - URL
   marginality: Recommended
   property: anatomicalSystem
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -91,7 +91,7 @@ mapping:
   - Text
   marginality: Recommended
   property: associatedPhenotype
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -105,7 +105,7 @@ mapping:
   - URL
   marginality: Recommended
   property: cellType
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -119,7 +119,7 @@ mapping:
   - Text
   marginality: Recommended
   property: developmentalStage
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -132,7 +132,7 @@ mapping:
   - URL
   marginality: Recommended
   property: sex
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -159,7 +159,7 @@ mapping:
   - Text
   marginality: Recommended
   property: collectionMethod
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -171,7 +171,7 @@ mapping:
   - Person
   marginality: Recommended
   property: collector
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -220,7 +220,7 @@ mapping:
   - DateTime
   marginality: Recommended
   property: dateCollected
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: ONE
@@ -256,7 +256,7 @@ mapping:
   - DateTime
   marginality: Recommended
   property: dateProcessed
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: ONE
@@ -283,7 +283,7 @@ mapping:
   - URL
   marginality: Recommended
   property: environmentalSystem
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -295,7 +295,7 @@ mapping:
   - Text
   marginality: Recommended
   property: ethics
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -307,7 +307,7 @@ mapping:
   - Text
   marginality: Recommended
   property: experimentalPurpose
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -334,7 +334,7 @@ mapping:
   - Text
   marginality: Recommended
   property: itemLocation
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -374,7 +374,7 @@ mapping:
   - Text
   marginality: Recommended
   property: locationOfOrigin
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -385,7 +385,7 @@ mapping:
   - ResearchProject
   marginality: Recommended
   property: project
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: ONE
@@ -396,7 +396,7 @@ mapping:
   - Boolean
   marginality: Recommended
   property: sampleAvailability
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -409,7 +409,7 @@ mapping:
   - URL
   marginality: Recommended
   property: sampleProcess
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -420,7 +420,7 @@ mapping:
   - QuantitativeValue
   marginality: Recommended
   property: sampleQuantity
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -433,7 +433,7 @@ mapping:
   - Text
   marginality: Recommended
   property: sampleState
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: ONE
@@ -444,7 +444,7 @@ mapping:
   - QuantitativeValue
   marginality: Recommended
   property: sampleStorageTemperature
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -458,7 +458,7 @@ mapping:
   - URL
   marginality: Recommended
   property: sampleType
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -470,7 +470,7 @@ mapping:
   - URL
   marginality: Recommended
   property: studyID
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -481,7 +481,7 @@ mapping:
   - Text
   marginality: Recommended
   property: studyTitle
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: ONE
@@ -618,7 +618,7 @@ mapping:
   - URL
   marginality: Optional
   property: alternateIdentifier
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -659,7 +659,7 @@ mapping:
   - Text
   marginality: Optional
   property: isControl
-  type: ''
+  type: bioschemas
   type_url: ''
 - bsc_description: ''
   cardinality: MANY
@@ -731,7 +731,7 @@ spec_info:
   official_type: BioSample
   title: BioSample
   version: 0.2-DRAFT
-  version_date: 20261021T201242
+  version_date: 20261123T84526
 spec_type: Profile
 status: revision
 use_cases_url: /useCases/BioSample
